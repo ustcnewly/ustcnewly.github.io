@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Li Niu&#39;s cheatsheet">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Li Niu&#39;s cheatsheet">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+
+
+
+
+
+  <title>Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Li Niu's cheatsheet</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/MarkdownPad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/software/MarkdownPad/" itemprop="url">MarkdownPad</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p><strong>Problem</strong>: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControl<br><strong>solution</strong>: Win+R to open regedit: change the following value from 1 to 0<br> <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled</code></p>
+</li>
+<li><p><strong>Problem</strong>: How to suppport Latex: MathJax?<br><strong>solution</strong>: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following:</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span></span><br><span class="line">   src=<span class="string">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:</p>
+<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script></li>
+</ol>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
+<li>resize image: <code>&lt;img src=&quot;http://....jpg&quot; width=&quot;200&quot; height50% &gt;</code></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/LaTeX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/software/LaTeX/" itemprop="url">LaTeX</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><ul>
+<li><p>Ubuntu</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	</span><br><span class="line">sudo apt-get install texmaker</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows</p>
+<ol>
+<li>Install Miktex: <a href="https://miktex.org/download" target="_blank" rel="noopener">https://miktex.org/download</a></li>
+<li>Install texmaker or texstudio</li>
+</ol>
+</li>
+</ul>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><ol>
+<li><p>\setlength\parindent{0pt} % Set the indentation in paragraphs</p>
+</li>
+<li><p>\setlength{\parskip}{10pt} % set the separation between paragraphs</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/wxPython/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/wxPython/" itemprop="url">wxPython</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Framework Code</strong></p>
+<ol>
+<li><p><a href="\code\wxPython\basic_frame\app.py">Simplest App</a>:  </p>
+<ul>
+<li><p><code>MyApp(False)</code>means noredirect while <code>MyApp(True, &#39;output.txt&#39;)</code> will redirect the output to the file output.txt.</p>
+</li>
+<li><p>Derivation from wx.App uses <code>def OnInit(self)</code> while others use <code>def __init__(self)</code></p>
+</li>
+<li><p>Donnot forget <code>return True</code></p>
+</li>
+</ul>
+</li>
+<li><p><a href="\code\wxPython\basic_frame\frame.py">Simplest Frame</a>: <code>frame.Show()</code>, <code>frame.Centre()</code> </p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\texteditor.py">A frame with menubar, toolbar, and statusbar</a>: UpdateUIEvents are sent periodically by the framework during idle time to allow the application to check if the state of a control needs to be updated.</p>
+<ul>
+<li><p>Append a menu_item with icon,   </p>
+   <pre><code>qmi = wx.MenuItem(fileMenu, APP_EXIT, '&Quit\tCtrl+Q')
+   qmi.SetBitmap(wx.Bitmap('exit.png'))
+   fileMenu.AppendItem(qmi)</code></pre>
+</li>
+<li><p>Menu check_item</p>
+   <pre><code>self.shtl = viewMenu.Append(wx.ID_ANY, 'Show toolbar', 'Show Toolbar', kind=wx.ITEM_CHECK)
+   self.Bind(wx.EVT_MENU, self.ToggleStatusBar, self.shst)
+   def ToggleStatusBar(self, e):        
+       if self.shst.IsChecked():
+        self.statusbar.Show()
+       else:
+           self.statusbar.Hide()</code></pre>
+</li>
+</ul>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\validators.py">Pop a Dialogue box with validator</a>: derivation from <code>wx.PyValidator</code></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\login.py">A login dialogue before main frame</a>: <code>wx.PyValidator</code></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\notebook.py">Notebook with multiple pages</a></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\flatbook.py">Advanced notebook, user can add new pages</a></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\foldpannelbar.py">Foldable Pannel</a></p>
+<p> <img src="http://i.imgur.com/84BZK8J.jpg" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\splash.py">Splash Screen</a>: splash before entering main frame <code>wx.SplashScreen</code></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\auiframe.py">Extendable Pannel</a></p>
+<p> <img src="http://i.imgur.com/mOSVdDk.jpg" alt=""></p>
+</li>
+<li><p>SplitPanel (<a href="\code\wxPython\advanced_frame\columnpage.py">hide</a>, <a href="\code\wxPython\advanced_frame\columnpage2.py">show</a>): a horizontally or vertically splited panel, loading html file</p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\FileDragDrop.py">File Drag Drop</a></p>
+<p> <img src="\code\wxPython\md_img\filedragdrop.jpg" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\filehunter.py">File Hunter</a></p>
+<p> <img src="\code\wxPython\md_img\filehunter.png" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\spreadsheet.py">SpreadSheet</a></p>
+<p> <img src="\code\wxPython\md_img\spreadsheet.png" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\mediaplayer.py">Media Player</a></p>
+<p> <img src="\code\wxPython\md_img\player.png" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\advanced_frame\web_browser.py">Web Browser</a></p>
+<p> <img src="\code\wxPython\md_img\browser.png" alt=""></p>
+</li>
+</ol>
+<hr>
+<p><strong>Component Code</strong></p>
+<ol>
+<li><p><a href="\code\wxPython\building_block\bitmaps.py">Bitmap</a>: use bitmap to beautify the appearance, or use the bitmap brush (transparent widgets may be a little troublesome <a href="\code\wxPython\building_block\transparent.py">here</a>)</p>
+ <pre><code>self.Bind(wx.EVT_PAINT, self.OnPaint)
+ def OnPaint(self, event):
+     dc = wx.PaintDC(self)
+     dc.SetBackgroundMode(wx.TRANSPARENT)
+     brush1 = wx.BrushFromBitmap(wx.Bitmap('pattern1.jpg'))
+     dc.SetBrush(brush1)
+     w, h =  self.GetSize()
+     dc.DrawRectangle(0, 0, w, h)</code></pre>
+</li>
+<li><p><a href="\code\wxPython\building_block\button_change_label.py">Simplest Button</a>: use lib to build advanced buttons</p>
+<ul>
+<li>Bind function with building blocks    <pre><code>self.Bind(wx.EVT_BUTTON, self.OnButton, button) 
+   def OnButton(self, event):</code></pre></li>
+<li>Note <code>GetChildren()</code>,  <code>GetParent()</code>, <code>GetId()</code>, <code>FindWindowById(self.btnId)</code></li>
+</ul>
+</li>
+<li><p><a href="\code\wxPython\building_block\advanced_buttons.py">Advanced button</a>: bitmap button, toggle button, gradient button</p>
+</li>
+<li><p><a href="\code\wxPython\building_block\frame_icon.py">Frame Icon</a>: personalize the frame icon</p>
+ <pre><code>con = wx.Icon(path, wx.BITMAP_TYPE_PNG)
+ self.SetIcon(icon):</code></pre>
+</li>
+<li><p><a href="\code\wxPython\building_block\clipboard.py">Interaction with Clipboard</a>: paste to and copy from system clipboard</p>
+</li>
+<li><p><a href="\code\wxPython\building_block\drag_and_drop.py">Drop Files to Frame</a>:   : <code>wx.PyDropTarget</code></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\two_stage_help.py">Help in Frame</a>: when initializing Frame</p>
+ <pre><code>pre = wx.PreFrame()
+ pre.SetExtraStyle(wx.FRAME_EX_CONTEXTHELP)
+ pre.Create(parent, *args, **kwargs)
+ self.PostCreate(pre)</code></pre>
+</li>
+<li><p><a href="\code\wxPython\building_block\checkbox.py">Checkbox</a>: use more general event detector to simplify code</p>
+<pre><code>`self.Bind(wx.EVT_CHECKBOX, self.OnCheck)`
+</code></pre><p> <code>e_obj = event.GetEventObject()</code></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\choice_ctrl.py">dropdown menu</a></p>
+</li>
+<li><p>MessageBox</p>
+ <pre><code>def ShowMessage(self,event):
+     wx.MessageBox('Download completed', 'Info', wx.OK | wx.ICON_INFORMATION)</code></pre>
+</li>
+<li><p>Open file_dialogue</p>
+ <pre><code>dlg = wx.FileDialog(self, "Open File", style=wx.FD_OPEN)
+ if dlg.ShowModal() == wx.ID_OK:
+     fname = dlg.GetPath()
+     handle = open(fname, 'r')
+     self.txtctrl.SetValue(handle.read())
+     handle.close()</code></pre>
+</li>
+<li><p><a href="\code\wxPython\building_block\popupmenu.py">popup menu</a>: right click to pop up the menu</p>
+</li>
+<li><p><a href="\code\wxPython\building_block\staticbox.py">static box</a>: a static box containing components</p>
+</li>
+<li><p><a href="\code\wxPython\building_block\listbasics.py">list ctrl</a>: multi-column list</p>
+<p> <img src="http://i.imgur.com/GjbWiwX.jpg" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\customtree.py">customtree</a>: a tree-structure file browser</p>
+</li>
+<li><p><a href="\code\wxPython\building_block\vlbox.py">virtual list box</a></p>
+<p> <img src="http://i.imgur.com/9DswQ5f.jpg" alt=""></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\stc_lexer.py">Styled Text</a>: i.e., python-style text</p>
+</li>
+<li><p><a href="\code\wxPython\building_block\downloader.py">Download Progressbar</a></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\about.py">About info</a>: info including name, version, copyright, and description</p>
+</li>
+<li><p>Choose Color Dialogue</p>
+ <pre><code>colour_data = wx.ColourData()
+ colour = self.GetBackgroundColour()
+ colour_data.SetColour(colour)
+ colour_data.SetChooseFull(True)
+
+ dlg = wx.ColourDialog(self, colour_data)
+ if dlg.ShowModal() == wx.ID_OK:
+     colour = dlg.GetColourData().GetColour()
+     self.SetBackgroundColour(colour)
+     self.Refresh()
+ dlg.Destroy()</code></pre>
+</li>
+<li><p><a href="\code\wxPython\building_block\imagedlg.py">Image Browser with simple editing</a></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\imageslide.py">Image Slide Show</a></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\searchbar.py">Search Bar</a></p>
+</li>
+<li><p>Timer</p>
+ <pre><code>self._timer = wx.Timer(self)
+ self.Bind(wx.EVT_TIMER, self.OnTimer, self._timer)
+ self._timer.Start(100)
+ self._timer.Stop()</code></pre>
+</li>
+<li><p>Execute Command Line</p>
+ <pre><code>import outputwin
+ self.output = outputwin.OutputWindow(self)
+ self.output.StartProcess("ping %s" % url, blocksize=64)</code></pre>
+</li>
+<li><p><a href="\code\wxPython\building_block\music_player.py">Music Player</a></p>
+</li>
+<li><p><a href="\code\wxPython\building_block\video_player.py">Video Player</a>: First, you need to install MplayerCtrl lib. Secondly, place the mplayer folder under the current working directory. </p>
+</li>
+</ol>
+<hr>
+<p><strong>Layout</strong></p>
+<ol>
+<li><p><a href="\code\wxPython\basic_frame\boxsizer.py"><code>wx.BoxSizer</code></a>: <code>proportion</code> is used to control main direction and <code>wx.EXPAND</code> is used to control the other direction. Note in BoxSizer, alignment is only valid in one direction. AddSpacer(50) is equal to Add((50,50)). AddStretchSpacer() is equal to Add((0,0),proportion=1).</p>
+ <pre><code>sizer = wx.BoxSizer(wx.HORIZONTAL)
+ sizer.AddSpacer(50)
+ sizer.Add(sth,proportion=0, flag=wx.ALL, border=5) #use flag to mark which side has border
+ sizer.Add((-1,10)) #add a black space, height=10
+ # sizer.Add(sth,proportion=0, wx.EXPAND|wx.RIGHT|wx.ALIGN_RIGHT, border=5)
+ sizer.AddSpacer((0,0)) #sizer.AddStretchSpacer()
+ self.SetSizer(sizer)
+ self.SetInitialSize()</code></pre>
+</li>
+<li><p><a href="\code\wxPython\basic_frame\gridsizer.py"><code>wx.GridSizer</code></a>:  <code>proportion</code> is usually set as 0, use <code>Add((20,20), 1, wx.EXPAND)</code> to take up space.</p>
+ <pre><code>wx.GridSizer(2, 2, vgap=0, hgap=0)
+ msizer.Add(sth, 0, wx.EXPAND)</code></pre>
+</li>
+<li><p><a href="\code\wxPython\basic_frame\flexgridsizer.py"><code>wx.FlexGridSizer</code></a>: make some rows and columns growable.</p>
+ <pre><code>fgs.AddGrowableRow(2)
+ fgs.AddGrowableCol(1)</code></pre>
+</li>
+<li><p><a href="\code\wxPython\basic_frame\gridbagsizer.py"><code>wx.GridBagSizer</code></a>: use <code>pos</code> and <code>span</code> to indicate the location and size.</p>
+ <pre><code>sizer = wx.GridBagSizer(vgap=8, hgap=8)
+ sizer.Add(sth, (1, 2), (1, 15), wx.EXPAND) </code></pre>
+
+
+
+
+
+
+
+</li>
+</ol>
+<hr>
+<p><strong>Notes</strong></p>
+<ol>
+<li><p>Event Propagation: When an event can intrigue multiple events, use <code>event.skip()</code> to guaranttee the occurrence of following events. Take <a href="\code\wxPython\building_block\keyevents.py">keyevents.py</a> for an example.</p>
+</li>
+<li><p>Virtual Ride: <code>wx.PyPannel</code></p>
+</li>
+<li><p>Bind function which will be checked in the idle time<br><code>self.Bind(wx.EVT_UPDATE_UI, self.OnUpdateEditMenu)</code></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/Python/" itemprop="url">Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>check type</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(n,int)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">t1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">t2 = [<span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span>];</span><br><span class="line">t1.extend(t2);</span><br><span class="line">t1.append(<span class="string">'g'</span>);</span><br><span class="line">t1 = t1+[<span class="string">'g'</span>]</span><br><span class="line">t1.sort();</span><br><span class="line"><span class="keyword">del</span> t1[<span class="number">1</span>:<span class="number">3</span>];</span><br><span class="line">t1.remove(<span class="string">'b'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dictionary</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">eng2sp = &#123;<span class="string">'one'</span>: <span class="string">'uno'</span>, <span class="string">'two'</span>: <span class="string">'dos'</span>, <span class="string">'three'</span>: <span class="string">'tres'</span>&#125;</span><br><span class="line">eng2sp.values() <span class="comment">#'uno','dos','tres'</span></span><br><span class="line">eng2sp.items()</span><br><span class="line"><span class="string">'one'</span> <span class="keyword">in</span> eng2sp <span class="comment">#true</span></span><br><span class="line">inverse = invert_dict(eng2sp)  </span><br><span class="line">d = dict(zip(<span class="string">'abc'</span>,range(<span class="number">3</span>)))</span><br><span class="line">d.get(word,<span class="number">0</span>) <span class="comment">#d[word] if word in d, 0 otherwise</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tupe: similar with list but immutable</p>
+</li>
+<li><p>file operation</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fout = os.getcwd()</span><br><span class="line">os.path.abspath(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.exists(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.isfile/isdir</span><br><span class="line">os.listdir(cwd)</span><br><span class="line">fout = open(<span class="string">'output.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">fout.write(<span class="string">'hehe'</span>)</span><br><span class="line">fout.close()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Python Draw Text on Image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/Python Draw Text on Image/" itemprop="url">Python Draw Text on Image</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Use-PIL"><a href="#Use-PIL" class="headerlink" title="Use PIL"></a>Use PIL</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.ImageDraw</span><br><span class="line"><span class="keyword">import</span> PIL.Image</span><br><span class="line"><span class="keyword">import</span> PIL.ImageFont</span><br><span class="line"></span><br><span class="line">pil_img = PIL.Image.fromarray(bb_img)</span><br><span class="line">draw = PIL.ImageDraw.Draw(pil_img)</span><br><span class="line">font = PIL.ImageFont.truetype(<span class="string">"/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf"</span>,<span class="number">20</span>)</span><br><span class="line">draw.text((<span class="number">10</span>, <span class="number">10</span>),<span class="string">"Frame: %09d"</span>%(iframe),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),font=font)</span><br></pre></td></tr></table></figure>
+<h3 id="Use-OpenCV"><a href="#Use-OpenCV" class="headerlink" title="Use OpenCV"></a>Use OpenCV</h3><p>—</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">cv2.putText(cv_img, <span class="string">'Frame: %d'</span>%(iframe), (<span class="number">10</span>,<span class="number">20</span>),  cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.65</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>), <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Fastest Way to Read Text, Image, and Video in Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/Fastest Way to Read Text, Image, and Video in Python/" itemprop="url">Fastest Way to Read Text, Image, and Video in Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>When comparing the efficiency of different libraries, there may exist a few orders of magnitude difference. In the implementation in demand of high efficiency, locate the time-consuming function and replace it with the most efficient library function.</p>
+<ol>
+<li><p>Text: Pandas<br>Installation: <code>pip install pandas</code> or <code>conda install pandas</code></p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_csv(text_name, sep=<span class="string">','</span>, header=<span class="keyword">None</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Image: Pillow-SIMD, skimage, OpenCV, imageio</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> skimage</span><br><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment">#read a 1280x720 image</span></span><br><span class="line">pil_im = Image.open(image_name) <span class="comment">#0.0057s</span></span><br><span class="line">pil_im = pil_im.resize((<span class="number">448</span>,<span class="number">448</span>)) <span class="comment">#0.025s</span></span><br><span class="line"></span><br><span class="line">sk_im = skimage.io.imread(image_name) <span class="comment">#0.026s</span></span><br><span class="line">sk_im = skimage.transform.resize(sk_im, (<span class="number">448</span>, <span class="number">448</span>)) <span class="comment">#0.060S</span></span><br><span class="line"></span><br><span class="line">cv_im = cv2.imread(image_name) <span class="comment">#0.021s</span></span><br><span class="line">cv_im = cv2.resize(cv_im, (<span class="number">448</span>, <span class="number">448</span>)) <span class="comment">#0.0016s</span></span><br><span class="line"></span><br><span class="line">im = imageio.imread(image_name) <span class="comment">#0.033s</span></span><br></pre></td></tr></table></figure>
+<p>Pillow-SIMD is faster than Pillow, which is not reported here. OpenCV is the most efficient one here.</p>
+</li>
+<li><p>Video: OpenCV, skvideo, imageio</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line"><span class="keyword">import</span> skvideo</span><br><span class="line"></span><br><span class="line"><span class="comment">#read 30fps video with each frame 1280x720 </span></span><br><span class="line">cap = cv2.VideoCapture(video_name)</span><br><span class="line">ret, frame = cap.read() <span class="comment">#0.002s</span></span><br><span class="line"></span><br><span class="line">vid = imageio.get_reader(video_name, <span class="string">'ffmpeg'</span>)</span><br><span class="line"><span class="keyword">for</span> image <span class="keyword">in</span> vid.iter_data(): <span class="comment">#0.004s</span></span><br><span class="line"></span><br><span class="line">skvideo.setFFmpegPath(os.path.dirname(sys.executable))</span><br><span class="line">videogen = skvideo.io.vreader(video_name)</span><br><span class="line"><span class="keyword">for</span> img <span class="keyword">in</span> videogen: <span class="comment">#0.073s</span></span><br></pre></td></tr></table></figure>
+<p>For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, <code>/usr/bin/python</code> is recommended. imageio and OpenCV are comparable here.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Eclipse for Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/Eclipse for Python/" itemprop="url">Eclipse for Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/IDE/" itemprop="url" rel="index">
+                    <span itemprop="name">IDE</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Eclipse-&gt;help-&gt;install new software. Work with <a href="http://pydev.org/updates" target="_blank" rel="noopener">http://pydev.org/updates</a>.</p>
+</li>
+<li><p>Eclipse-&gt;Window-&gt;Preferences-&gt;PyDev, modify the python interpreter, e.g., python.exe. </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/bottle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/bottle/" itemprop="url">Python bottle</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Use <code>route</code> to indicate path, 80 is the default port for HTTP. </p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bottle</span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.route('/hello')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello World!"</span></span><br><span class="line"></span><br><span class="line">bottle.run(host=<span class="string">'localhost'</span>, port=<span class="number">80</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Dynamic path V.S. static path. We can use filter such as <code>&lt;id:int&gt;</code> to convert input variables to certain type. </p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bottle</span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.route('/hello/&amp;lt;name&gt;/&amp;lt;address&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name,address)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello "</span>+name</span><br><span class="line"></span><br><span class="line">bottle.run(host=<span class="string">'localhost'</span>, port=<span class="number">80</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use local resources. Pay special attention to the path. Local resource names should start with ‘/‘. </p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bottle.route('/&lt;filename:path&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">server_static</span><span class="params">(filename)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> bottle.static_file(filename, root=<span class="string">'./resource/'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>The default HTTP request method for <code>route()</code> is <code>get()</code>, we can use other methods <code>post()</code>, <code>put()</code>, <code>delete()</code>, <code>patch()</code>. The <strong>POST</strong> method is commonly used for HTML form submission. When entering URL address, <strong>GET</strong> method is used.</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bottle</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_login</span><span class="params">(username, password)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> username==<span class="string">'niuli'</span> <span class="keyword">and</span> password==<span class="string">'niuli'</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">@bottle.get('/login') # or @route('/login')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'''</span></span><br><span class="line"><span class="string">        &amp;lt;form action="/login" method="post"&gt;</span></span><br><span class="line"><span class="string">            Username: &amp;lt;input name="username" type="text" /&gt;</span></span><br><span class="line"><span class="string">            Password: &amp;lt;input name="password" type="password" /&gt;</span></span><br><span class="line"><span class="string">            &amp;lt;input value="Login" type="submit" /&gt;</span></span><br><span class="line"><span class="string">        &amp;lt;/form&gt;</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.post('/login') # or @route('/login', method='POST')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_login</span><span class="params">()</span>:</span></span><br><span class="line">    username = bottle.request.forms.get(<span class="string">'username'</span>)</span><br><span class="line">    password = bottle.request.forms.get(<span class="string">'password'</span>)</span><br><span class="line">    <span class="keyword">if</span> check_login(username, password):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&amp;lt;p&gt;Your login information was correct.&amp;lt;/p&gt;"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&amp;lt;p&gt;Login failed.&amp;lt;/p&gt;"</span></span><br><span class="line"></span><br><span class="line">bottle.run(host=<span class="string">'localhost'</span>, port=<span class="number">80</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Return local files <code>localhost/filename</code>. Note <code>path:path</code> is important, otherwise the filename containing ‘/‘ may not be correctly recognized.</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bottle <span class="keyword">import</span> static_file</span><br><span class="line"></span><br><span class="line"><span class="meta">	@route(’/&lt;filepath:path&gt;’)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">server_static</span><span class="params">(filepath)</span>:</span></span><br><span class="line">	    <span class="keyword">return</span> static_file(filepath, root=’./resource’)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use <code>redirect</code> to jump to another page: <code>bottle.redirect(&#39;/login&#39;)</code></p>
+</li>
+<li><p>Use the HTML template. In the template file, the lines starting with <code>%</code> are python codes and others are HTML codes. We can include other templates in the current template by using <code>% include(&#39;header.tpl&#39;, title=&#39;Page Title&#39;)</code>. Cookies, HTTP header, HTML &lt;form&gt; fields and other request data is available through the global <code>request</code> object.</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bottle.route('/&lt;name&gt;')</span></span><br><span class="line"><span class="meta">@bottle.view('my_template.html')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">root</span><span class="params">(name=<span class="string">"default"</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> bottle.template(<span class="string">'my_template'</span>, name=name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.post('/login') # or @route('/login', method='POST')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_login</span><span class="params">()</span>:</span></span><br><span class="line">    username = bottle.request.forms.get(<span class="string">'username'</span>)</span><br><span class="line">    password = bottle.request.forms.get(<span class="string">'password'</span>)</span><br><span class="line">    bottle.redirect(<span class="string">'/'</span>+username)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Some tricks for helping development </p>
+<ul>
+<li><p><code>bottle.debug(True)</code> The default error page shows a traceback. Templates are not cached. Plugins are applied immediately.</p>
+</li>
+<li><p><code>run(reloader=True)</code> Every time you edit a module file, the reloader restarts the server process and loads the newest version of your code.</p>
+</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Anaconda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/Anaconda/" itemprop="url">Anaconda</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>python virtual environment: creat an isolated environment for each python version set, similar with pyenv.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><p><strong>For Windows:</strong></p>
+<p>Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment.</p>
+<p>Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment.</p>
+<p><strong>For Linux:</strong></p>
+<pre><code>bash Anaconda2-4.3.1-Linux-x86_64.sh
+</code></pre><h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p>create: conda create —name new_name python=2.7 anaconda</p>
+<p>activate: source activate snowflakes</p>
+<p>revert: source deactivate</p>
+<p>delete: conda remove —name flowers —all</p>
+<p>list: conda info —envs</p>
+<p>copy: conda create —name flowers —clone snowflakes</p>
+<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>list: conda list</p>
+<p>search: conda search pack</p>
+<p>install new packages:</p>
+<ol>
+<li>conda install pack</li>
+<li>conda install pack=1.8.2 # install certain version</li>
+<li>conda install —name env pack</li>
+<li>search on <a href="http://anaconda.org/" target="_blank" rel="noopener">http://anaconda.org/</a>, no need to register</li>
+<li>pip install pack</li>
+<li>install from local pack</li>
+</ol>
+<p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/MATLAB/MATLAB draw plot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/MATLAB/MATLAB draw plot/" itemprop="url">MATLAB draw plot</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/MATLAB/" itemprop="url" rel="index">
+                    <span itemprop="name">MATLAB</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% Set some nice settings.</span></span><br><span class="line">grid on;</span><br><span class="line">format long;</span><br><span class="line"></span><br><span class="line"><span class="comment">% Hold the graphics output until we are good to go.</span></span><br><span class="line">hold all;</span><br><span class="line"></span><br><span class="line"><span class="comment">% To create some random test data.</span></span><br><span class="line">x1 = <span class="number">100</span> : <span class="number">100</span> : <span class="number">1000</span>;</span><br><span class="line">raw_y1 = [<span class="number">0.76</span>,<span class="number">0.79</span>,<span class="number">0.80</span>,<span class="number">0.80</span>,<span class="number">0.81</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.81</span>];</span><br><span class="line">raw_y2 = [<span class="number">0.85</span>,<span class="number">0.81</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.79</span>,<span class="number">0.78</span>,<span class="number">0.80</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">raw_y3 = [<span class="number">0.85</span>,<span class="number">0.84</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">legendText = cell(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">plot(x1,y1,<span class="string">'--go'</span>,<span class="string">'MarkerSize'</span>,<span class="number">5</span>, <span class="string">'MarkerFaceColor'</span>,<span class="string">'g'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'CUB'</span> &#125;;</span><br><span class="line"></span><br><span class="line">plot(x1,y2,<span class="string">':bo'</span>, <span class="string">'MarkerSize'</span>,<span class="number">5</span>, <span class="string">'MarkerFaceColor'</span>,<span class="string">'b'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'SUN'</span> &#125;;</span><br><span class="line"></span><br><span class="line">plot(x1,y3,<span class="string">'-ro'</span>, <span class="string">'MarkerSize'</span>,<span class="number">5</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'Dogs'</span> &#125;;</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">100</span> <span class="number">1000</span>]);</span><br><span class="line">ylim([<span class="number">0.72</span> <span class="number">0.90</span>]);</span><br><span class="line"></span><br><span class="line">set(gca,<span class="string">'fontsize'</span>,<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% set sticks on x and y axis</span></span><br><span class="line">get(gca, <span class="string">'xtick'</span>);</span><br><span class="line">set(gca, <span class="string">'xtick'</span>, <span class="number">100</span>:<span class="number">100</span>:<span class="number">1000</span>);</span><br><span class="line">get(gca, <span class="string">'ytick'</span>);</span><br><span class="line">set(gca, <span class="string">'ytick'</span>, <span class="number">0.72</span>:<span class="number">0.02</span>:<span class="number">0.90</span>);</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">'# web training instances per category'</span>);</span><br><span class="line">ylabel(<span class="string">'Accuracy'</span>);</span><br><span class="line"></span><br><span class="line">legend(legendText,<span class="string">'location'</span>,<span class="string">'southeast'</span>);</span><br><span class="line"></span><br><span class="line">hold off;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Li Niu" />
+            
+              <p class="site-author-name" itemprop="name">Li Niu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">89</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ustcnewly" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/li-niu-b0905133/" target="_blank" title="Linkedin">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Niu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

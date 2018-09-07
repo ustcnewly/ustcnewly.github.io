@@ -1,0 +1,2984 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Li Niu&#39;s cheatsheet">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Li Niu&#39;s cheatsheet">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/3/"/>
+
+
+
+
+
+  <title>Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Li Niu's cheatsheet</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/HTML/HTML+CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/HTML/HTML+CSS/" itemprop="url">HTML+CSS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Website consists of three components: structure(HTML), representation(CSS), action(Javascript). XHTML is a strict version of HTML. The structure of webpage is previously done based on table, but currently via CSS.</p>
+</li>
+<li><p>Escape character in HTML source code: <code>&amp;lt;</code>:&lt;, <code>&amp;gt;</code>:&gt;, <code>&amp;nbsp;</code>:space</p>
+</li>
+<li><p><code>&lt;p&gt;</code>:paragraph, <code>&lt;br&gt;</code>:break, <code>&lt;blockquote&gt;</code>:indented paragraph, <code>&lt;b&gt;</code>:bold, <code>&lt;i&gt;</code>:italic, <code>&lt;u&gt;</code>:underline, <code>&lt;s&gt;</code>:deleteline, <code>&lt;strong&gt;</code>:emphasize, <code>&lt;ul&gt;&lt;li&gt;</code>:unordered list, <code>&lt;ol&gt;&lt;li&gt;</code>:ordered list. </p>
+</li>
+<li><p><code>&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</code>:hyperlink.  <code>&lt;a href=&quot;mailto:ustcnewly@gmail.com&quot;&gt;&lt;/a&gt;</code>. An area on the image can also be used to establish hyperlink based on <code>&lt;map&gt;</code> and <code>&lt;ared&gt;</code>. </p>
+</li>
+<li><p>Use <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> to split webpage. Note <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> belong to the the same level as <code>&lt;body&gt;</code>. <code>&lt;frameset cols=&quot;30%, 30%, *&quot;&gt;&lt;frame src=left.html&gt;</code>. <code>&lt;frame&gt;</code> is obsolete in HTML5. </p>
+</li>
+<li><p><code>&lt;table border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;6&quot; &gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/table&gt;</code>. Don’t miss any <code>&lt;tr&gt;</code> or <code>&lt;td&gt;</code>, otherwise the table will be messy. Use <code>&lt;colspan&gt;</code> or <code>&lt;rowspan&gt;</code> to merge cells. For professional table, we can use <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>. <code>&lt;table&gt;</code> is now rarely used for layout design. </p>
+</li>
+<li><p>Insert multimedia elements: </p>
+<ul>
+<li>image: <code>&lt;img src=&quot;a.jpg&quot; height=&quot;200&quot; width=&quot;200&quot; alt=&quot;desc&quot;/&gt;</code>  </li>
+<li>flash: <code>&lt;embed src=&quot;a.swf&quot;  width=&quot;490&quot; height=&quot;400&quot; wmode=&quot;transparent&quot; &gt;&lt;/embed&gt;</code> </li>
+<li>bgmusic: <code>&lt;audio src=&quot;a.mp3&quot; hidden=&quot;true&quot; autoplay=&quot;true&quot; loop=&quot;true&quot;&gt;&lt;/audio&gt;</code></li>
+<li>bgtile: <code>&lt;body background=&quot;a.png&quot;&gt;&lt;/body&gt;</code></li>
+</ul>
+</li>
+<li><p>Css: object, attribute, and value. Refer to <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">official website</a> for details.</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.myclass&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line">&amp;lt;p class="myclass"&gt;&amp;lt;/p&gt;</span><br><span class="line"></span><br><span class="line">#myid&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line">&amp;lt;p id="myid"&gt;&amp;lt;/p&gt;</span><br><span class="line"># one id name should be used only once in one html file.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Methods to use Css. </p>
+<ul>
+<li><p>a. Directly insert contents into <code>&lt;style&gt;&lt;/style&gt;</code>.</p>
+</li>
+<li><p>b. <code>&lt;link href=&quot;mycss.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+</li>
+<li><p>c. <code>&lt;style type=&quot;text/css&quot;&gt;@import &quot;mycss.css&quot;&lt;/style&gt;</code>. One html file can import more than one Css files. A Css file can also import other Css files.</p>
+<p> The priority of a is higher than b/c. The more special, the higher priority. For the methods with equal priority, override principle is applied. The difference between b and c is that c loads all the Css codes while b only loads the corresponding Css code when necessary. </p>
+</li>
+</ul>
+</li>
+<li><p>Some special usage of Css.</p>
+<ul>
+<li>class for specific tag: <code>p.special{}</code></li>
+<li>union of multiple tags: <code>h1,h2,p{}</code></li>
+<li>embeded tags: <code>p span{}</code> for descendents and <code>p&gt;span{}</code> for child. complex embedding mixing tags, classes, and ids: <code>td.out .inside strong{}</code>. The easiest way to recognize this kind of embedding is “(tag)(.class) (tag)(#id)”</li>
+<li>consecutive tags: <code>th+td+td+td{}</code>, the style is applied to the third <code>td</code>.</li>
+</ul>
+</li>
+<li><p>Css formats for some commonly used tags.</p>
+<ul>
+<li><p>body:</p>
+   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">    background-image:a.jpg;</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">    background-position:200px 100px;</span><br><span class="line">	background-attachment:fixed;</span><br><span class="line">	background-size: 20% 100%;</span><br><span class="line">	cursor:pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>text:</p>
+   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">p&#123;	    </span><br><span class="line">    float:left;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">    font-size:15px;</span><br><span class="line">    font-style:italic;</span><br><span class="line">    font-weight:bold;</span><br><span class="line">    color:red;</span><br><span class="line">    text-indent:2em;</span><br><span class="line">    text-decoration:underline;</span><br><span class="line">    text-transform:lowercase; #capitalize</span><br><span class="line">    text-align:justify; </span><br><span class="line">    margin:5px 0px #top/down margin left/right margin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>image:</p>
+   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img&#123;</span><br><span class="line">	float:left;</span><br><span class="line">	border:1px #9999CC dashed;</span><br><span class="line">	margin:5px; #margin-left/right/top/bottom</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;div&gt;</code> box layout from inside to outside: content, padding, border, margin. Note <code>width</code> and <code>height</code> are for content instead of the whole box. margin can be assigned negative values. Assigning attribute values in <strong>clock-wise</strong> order. Missing values are equal to the values of opposite side. We should first understand the standard flow without the constraints of boxes.</p>
+<ul>
+<li>block-level (vertical arrangement): <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;div&gt;</code></li>
+<li><p>inline (horizontal arrangement): <code>&lt;strong&gt;</code>,<code>&lt;a&gt;</code>, <code>&lt;span&gt;</code></p>
+<p><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are both blocks. <code>&lt;div&gt;</code> is vertial while <code>&lt;span&gt;</code> is horizontal. <code>&lt;span&gt;</code> can be used where no other proper tags can be used,s for instance, <code>&lt;span&gt;&lt;img src=&quot;a.jpg&quot;&gt;&lt;/span&gt;</code>.</p>
+<p>when using <code>&lt;div&gt;</code>, the margin between the top block and bottom block is max(top_block.bottom_margin,bottom_block.top_margin). when using <code>&lt;span&gt;</code>, the margin between the top block and bottom block is top_block.bottom_margin+bottom_block.top_margin.</p>
+</li>
+</ul>
+</li>
+<li><p>floating box: Arrange the non-floating boxes first and then float the floating box to the left or right in the father content. The stuff in the non-floating boxes surrounds the floating box. For floating box: <code>float:left</code>. For non-floating box: <code>clear:left</code>.</p>
+</li>
+<li><p>box location: static(default), relative, absolute</p>
+<ul>
+<li><p>relative: <code>position:relative; left:30px; top:30px</code>. Relative shift from original position. Relative has no impact on father box and sibling box.</p>
+</li>
+<li><p>absolute: <code>position:absolute; top:0px; right:0px</code>. Absolute coordinate in the nearest non-static ancestor. Other boxes treat this absolute box as non-existence.</p>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;div style=&quot;display:inline&quot;&gt;&lt;/div&gt;</code>, <code>&lt;span style=&quot;display:block&quot;&gt;&lt;/span&gt;</code>, use display to modifiy the vertical or horizontal order. Set as <code>none</code> to make it invisible. </p>
+</li>
+<li><p>For hyperlink, <code>a</code> has pseudo classes:<code>link</code>, <code>visited</code>, <code>hover</code>, for example:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#navigation li a:link, #navigation li a:visited</span><br><span class="line">&#123;</span><br><span class="line">	background-color:#1136c1;</span><br><span class="line">	color:#FFFFFF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use <code>div</code> to split columns</p>
+<ul>
+<li><p>absolute method: left column uses absolute position (Note to change the position of father div to relative) and right column use left margin. The drawback is that bottom row will ignore the left column.</p>
+</li>
+<li><p>float method: float left and float right. It is easy for fixed width or fixed ratio. For the mixed width such as <code>100%-30px</code>, use the wrapper trick (negative margin).</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> name =<span class="string">"newly"</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"my name is: "</span>+name)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>variable types</p>
+<ul>
+<li><code>null</code>: empty variable</li>
+<li>string: <code>parseFloat(string)</code>, <code>parseInt(string)</code>,  <code>str.substring(0,3)</code>, <code>str.slice(3,5)</code>, <code>str.charAt(0)</code>, <code>str.bold()</code>, <code>str.fontcolor(&quot;red&quot;)</code>, <code>str.length</code></li>
+<li>number: <code>Math.PI</code>, <code>Math.max</code>, <code>isNaN(value)</code>,</li>
+<li>bool: <code>true</code> or <code>false</code></li>
+<li><p>Array: can be a mixture of numbers and strings, <code>var a = new Array(10, 20, &quot;newly&quot;)</code></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(n <span class="keyword">in</span> actorAry)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"&amp;lt;li&amp;gt;"</span>+actorAry[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>myarr.toString()</code>, <code>myarr.join(&#39;-&#39;)</code>, <code>myarr.concat(tailarr)</code>, <code>myarr.reverse()</code>, <code>myarr.sort(cmpfunc)</code>, <code>slice</code>, <code>splice</code><br><br>stack&amp;&amp;queue operations: <code>myarr.push(&quot;newstr&quot;)</code>, <code>myarr.pop()</code>, <code>myarr.shift()</code>(dequeue), <code>myarr.unshift()</code>(pushfront)<br></p>
+</li>
+<li><p>Structure: There is no concept: class. Use function to construct an object. <code>var mycard = Card(&quot;newly&quot;, 20)</code>, <code>showCardInof.call(mycard,arg1,arg2)</code> or <code>mycard.showCardInfo(arg1,arg2)</code>, <code>mycard=null</code></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showCardInfo</span>(<span class="params">arg1,arg2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="keyword">this</span>.owner);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Card</span>(<span class="params">owner, rate</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.owner = owner;</span><br><span class="line">    <span class="keyword">this</span>.rate = rate;</span><br><span class="line">    <span class="keyword">this</span>.showCardInfo=<span class="function"><span class="keyword">function</span>(<span class="params">arg1,arg2</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="keyword">this</span>.owner);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>type related: <code>nameList instanceof Array</code>, <code>typeof(&quot;newly&quot;)</code></p>
+</li>
+</ul>
+</li>
+<li><p>commonly used built-in functions or classes</p>
+<ul>
+<li><p>alert dialogue: <code>alert(&quot;msg&quot;)</code></p>
+</li>
+<li><p>input diaglogue: <code>var age=prompt(&quot;Input your age&quot;, &quot;0&quot;)</code></p>
+</li>
+<li><p>confirm dialogue: <code>confirm(&quot;Are you sure?&quot;)</code></p>
+</li>
+<li><p>Date and time:</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cur = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">cur.setYear(<span class="number">2016</span>);</span><br><span class="line"><span class="keyword">var</span> seconds = cur.getSeconds();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Error:</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> e = <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line"><span class="built_in">document</span>.write(e.number&amp;<span class="number">0xFFFF</span>+e.description);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>operate on the html elements </p>
+<p> <code>&lt;img src=&quot;./images/web_fig.jpg&quot; width=500px&gt;</code></p>
+<p> The whole HTML page is a DOM tree. </p>
+<ul>
+<li><p>Visit the DOM elements</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.myform.elements[<span class="number">0</span>].value  <span class="comment">//myform is the form name</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myid"</span>).childNodes[<span class="number">0</span>].nodeName/nodeValue/nodeType</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myid"</span>).childNodes[<span class="number">0</span>].getAttribute(<span class="string">"attr"</span>)/setAttribute(<span class="string">"attr"</span>,<span class="string">"attval"</span>)	</span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">"tag"</span>)	</span><br><span class="line"><span class="built_in">document</span>.getElementsByName(<span class="string">"name"</span>)</span><br></pre></td></tr></table></figure>
+<p>Since <code>id</code> is unique, we use single form element for <code>Id</code>, but plural form elements for <code>Name</code> and <code>TagName</code>.</p>
+</li>
+<li><p>Change the DOM elements</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> docBody = <span class="built_in">document</span>.getElementById(<span class="string">"DocBody"</span>);</span><br><span class="line"><span class="keyword">var</span> imgObj = <span class="built_in">document</span>.createElement(<span class="string">"&lt;img&gt;"</span>);</span><br><span class="line"><span class="keyword">var</span> newTextNode = <span class="built_in">document</span>.createElement(<span class="string">"content"</span>);</span><br><span class="line">imgObj.src = url;</span><br><span class="line">docBody.appendChild(imgObj);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>use Javascript to modify the CSS style, <code>document.vlinkColor</code>, <code>document.linkColor</code>, <code>document.alinkColor</code>, <code>document.bgColor</code>, <code>document.fgColor</code>, <code>document.body.text</code>, <code>name1.vspace</code>, <code>name1.hspace</code>. </p>
+</li>
+<li><p>event handling: we can set event triggering function for certain element or a class of elements.</p>
+<ul>
+<li>commonly used events (case insensitive): <code>onblur</code>, <code>onchange</code>, <code>onclick</code>, <code>onfocus</code>, <code>onload</code>, <code>onmouseover</code>, <code>onmouseout</code>,  <code>onmousedown</code>, <code>onmouseup</code>, <code>onselect</code>, <code>onsubmit</code>, <code>onunload</code>. Form-related events: <code>myform.onReset</code>, <code>myform.onSubmit</code>, <code>myform.action=&quot;mailto:ustcnewly@gmail.com&quot;</code></li>
+<li><p>three approaches to trigger event function<br>a) directly embed function scripts: <code>onlick=&quot;javascript:alert(&quot;msg&quot;)&quot;</code>  //<code>javascript:</code> can be eliminated<br>   b) call the event function: <code>onkeyup = &quot;OnKeyUp()&quot;</code></p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">OnKeyUp</span>(<span class="params">_e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e = _e?_e:<span class="built_in">window</span>.event;</span><br><span class="line">    <span class="keyword">if</span> (event.keyCode==<span class="number">13</span>)</span><br><span class="line">    &#123;</span><br><span class="line">	    alert(<span class="string">"Your input is "</span>+Text1.value);</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>c) set the event attribute for certain elements:</p>
+<pre><code class="lang-javascript">   &lt;script for=&quot;document&quot; event=&quot;oncontextmenu&quot;&gt; 
+   window.event.returnValue = false;
+   document.oncontextmenu = hideContextMenu2;
+   &lt;/script&gt;;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>time control:<code>to=window.setTimeout(&quot;func()&quot;,3000)</code>, <code>clearTimeout(to)</code>, <code>tm=setInterval(&quot;func()&quot;,1000)</code>, <code>clearInterval(tm)</code></p>
+</li>
+<li><p>redirect href location or set anchor point:<code>window.location.href=&quot;www.baidu.com&quot;</code>, <code>&lt;a name=&quot;anchor1&quot;&gt;&lt;/a&gt;</code></p>
+</li>
+<li><p>history: <code>history.back()</code>,  <code>history.forward()</code>, <code>history.go(n)</code>, n&gt;0 means go back n pages, otherwise go forward n pages. </p>
+</li>
+<li><p>cookie contains key-value pairs: <code>document.cookie=&quot;user=newly;passwd=hehe;&quot;</code></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/cross-language/Call C++ in Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/cross-language/Call C++ in Python/" itemprop="url">Call C++ in Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/cross-language/" itemprop="url" rel="index">
+                    <span itemprop="name">cross-language</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-ctype"><a href="#1-ctype" class="headerlink" title="1.ctype"></a>1.ctype</h3><p>similar as in Python_call_C.md<br>add extern “C” before each function, otherwise an error ‘undefined symbol’ will be thrown.</p>
+<p>However, something might go wrong on terms with complicated Class.</p>
+<h3 id="2-Use-Boost-Python"><a href="#2-Use-Boost-Python" class="headerlink" title="2.Use Boost.Python"></a>2.Use Boost.Python</h3><p>more powerful and complicated</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/cross-language/Call C in Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/cross-language/Call C in Python/" itemprop="url">Call C in Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/cross-language/" itemprop="url" rel="index">
+                    <span itemprop="name">cross-language</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>C:</strong> build a library<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c -fPIC libtest.c</span><br><span class="line">gcc -shared libtest.o -o libtest.so</span><br></pre></td></tr></table></figure></p>
+<p><strong>Python:</strong> load the library<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</span><br><span class="line">libtest = cdll.LoadLibrary(libtest.so<span class="string">')</span></span><br><span class="line"><span class="string">print libtest.func(arg_list)</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="\code\call_C_in_Python\Makefile">Makefile sample</a> and <a href="\code\call_C_in_Python\sample.py">python sample code</a></p>
+<h3 id="c-void-p"><a href="#c-void-p" class="headerlink" title="c_void_p"></a>c_void_p</h3><p>For the types without need to know the detailed layout, we can just use <code>c_void_p</code>, especially when we cannot find the strictly matched self-defined type such as <code>LP_cfloat_1024</code>.</p>
+<h3 id="pointer-POINTER-byref"><a href="#pointer-POINTER-byref" class="headerlink" title="pointer, POINTER, byref"></a>pointer, POINTER, byref</h3><p>POINTER is used for defining type.</p>
+<p>pointer and byref function similarly. However, pointer does a lot more work since it constructs a real pointer object, so it is faster to use byref if you don’t need the pointer object in Python itself.</p>
+<h3 id="memory-issue"><a href="#memory-issue" class="headerlink" title="memory issue:"></a>memory issue:</h3><p>write free function in C code<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">freeme</span><span class="params">(<span class="keyword">char</span> *ptr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"freeing address: %p\n"</span>, ptr);</span><br><span class="line">    <span class="built_in">free</span>(ptr);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>call free function in Python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lib = cdll.LoadLibrary(<span class="string">'./string.so'</span>)</span><br><span class="line">lib.freeme.argtypes = c_void_p,</span><br><span class="line">lib.freeme.restype = <span class="keyword">None</span></span><br><span class="line">lib.freeme(ptr)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_tokenizer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_tokenizer/" itemprop="url">Boost_tokenizer</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt; boost/tokenizer.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>split string: default space</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"This is,  a test"</span>;  </span><br><span class="line">tokenizer&lt;&gt; tok(s);  </span><br><span class="line"><span class="keyword">for</span>(tokenizer&lt;&gt;::iterator beg=tok.begin(); beg!=tok.end();++beg)</span><br><span class="line">&#123;  </span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; *beg &lt;&lt; <span class="string">"\n"</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>split string: drop delimiter</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt;boost::char_separator&lt;<span class="keyword">char</span>&gt;&gt;  tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;|"</span>);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>split string: drop delimiter and keep delimiter</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt; boost::char_separator&lt; <span class="keyword">char</span>&gt; &gt; tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;"</span>, <span class="string">"|"</span>, boost::keep_empty_tokens);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>special kinds of tokenizer</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> offsets[] = &#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;   <span class="comment">//three segment length  </span></span><br><span class="line"><span class="function">offset_separator <span class="title">f</span><span class="params">(offsets, offsets+<span class="number">3</span>)</span></span>;  </span><br><span class="line">tokenizer&lt; offset_separator&gt; tok(s,f);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_regex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_regex/" itemprop="url">Boost_regex</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/regex.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>regex_match</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">regex <span class="title">expression</span><span class="params">(<span class="string">"^select ([a-zA-Z]*) from ([a-zA-Z]*)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> in=<span class="string">"select name from table"</span>;</span><br><span class="line">cmatch what;</span><br><span class="line"><span class="keyword">if</span>(regex_match(in.c_str(), what, expression))</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt; what.size();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; what[i].first&lt;&lt; <span class="string">"|"</span>&lt;&lt;what[i].second&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; <span class="string">"str :"</span>&lt;&lt; what[i].str()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>regex_search</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">r</span><span class="params">(<span class="string">"(a+)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> content = <span class="string">"bbbaaaaacccaaaaddddaaaeeeaaa"</span>;</span><br><span class="line">boost::smatch m;</span><br><span class="line"><span class="built_in">string</span>::const_iterator strstart = content.begin();</span><br><span class="line"><span class="built_in">string</span>::const_iterator strend = content.end();</span><br><span class="line"><span class="keyword">while</span>(boost::regex_search(strstart, strend, m, r))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//0 for the whole, m[i] is the i-th group</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; m[<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//m[i].first and m[i].second stands for the begin idx and end idx</span></span><br><span class="line">    strstart = m[<span class="number">0</span>].second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Note <code>regex_match(in.c_str(), what, expression)</code> is for complete match while <code>regex_match(in.c_str(), what, expression)</code> is for incomplete match.<br> <code>regex_match(in.c_str(), expression, target_exp).</code></p>
+</li>
+<li><p>special setting for regex</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">e2</span><span class="params">(my_expression, boost::regex::icase)</span></span>; \\<span class="keyword">case</span> insensitive</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/" itemprop="url">Boost_lexical_cast</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/lexical_cast.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>conversion between number and string: replace the atoi, itoa, and etc</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="built_in">string</span>&gt;(i)&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="keyword">double</span>&gt;(s)&lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mixed types: for type generalization</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/fusion/adapted/boost_tuple.hpp&gt;</span></span></span><br><span class="line">boost::tuple&lt;<span class="keyword">char</span>, <span class="keyword">int</span>, <span class="keyword">char</span>, <span class="keyword">int</span>&gt; decim(<span class="string">'-'</span>, <span class="number">10</span>, <span class="string">'e'</span>, <span class="number">5</span>);</span><br><span class="line">assert(stringize(decim) == <span class="string">"-10e5"</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_installation/" itemprop="url">Boost_installation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
+<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
+<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
+<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
+<hr>
+<p>If you have installed boost, using it in a VC project just takes two steps:</p>
+<ol>
+<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
+</li>
+<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
+</li>
+<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
+</li>
+</ol>
+<p>Notes:</p>
+<ol>
+<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
+<li>build-&gt;configuration manager</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_file_system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_file_system/" itemprop="url">Boost_file_system</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/filesystem.hpp&gt;  </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::filesystem;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>file name operation    </p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Note the difference between /= and +=, /= means appending directory， += means string concatenation </span></span><br><span class="line"><span class="function">path <span class="title">dir</span><span class="params">(<span class="string">"C:\\Windows"</span>)</span></span>;</span><br><span class="line">dir /= <span class="string">"System32"</span>;       </span><br><span class="line">dir /= <span class="string">"services.exe"</span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.<span class="built_in">string</span>() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           </span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.parent_path()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;        /C:\Windows\System32</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.filename()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           /services.exe</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.stem()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;               <span class="comment">//services</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.extension()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;          <span class="comment">//.exe</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>file operation: rename, remove, copy</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">exists(path);                               </span><br><span class="line">is_directory(path); </span><br><span class="line">is_regular_file(path);                    </span><br><span class="line">                                          </span><br><span class="line">remove_all(<span class="keyword">const</span> Path&amp; p);  <span class="comment">//remove all files recursively                                                              </span></span><br><span class="line">rename(<span class="keyword">const</span> Path1&amp; from_p, <span class="keyword">const</span> Path2&amp; to_p);                        </span><br><span class="line">copy_file(<span class="keyword">const</span> Path1&amp; from_fp, <span class="keyword">const</span> Path2&amp; to_fp);                    </span><br><span class="line">create_directory(<span class="keyword">const</span> Path &amp; p);</span><br><span class="line">create_directories(<span class="keyword">const</span> Path &amp; p); <span class="comment">//make directory recursively&lt;/pre&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>shallow visit directory</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">directory_iterator end;</span><br><span class="line"><span class="keyword">for</span> (directory_iterator pos(dir2); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *pos &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>deep visit directory: like DFS, stack push&amp;&amp;pop</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> recursive_directory_iterator rd_iterator;</span><br><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"E:\\Student"</span>)</span></span>;</span><br><span class="line">rd_iterator end;</span><br><span class="line"><span class="keyword">for</span> (rd_iterator pos(dir); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_directory(*pos) &amp;&amp; pos.level() &gt; <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.no_push();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*pos == <span class="string">"nofind.txt"</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.pop();</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; pos-&gt;path().filename().<span class="built_in">string</span>()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>catch error</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">    assert(is_directory(dir2));          </span><br><span class="line">    assert(exists(dir2));          </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(filesystem_error&amp; e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.path1() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.what() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_array/" itemprop="url">Boost_array</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"boost/array.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"boost/multi_array.hpp"</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>Array: similar with STL vector</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array&lt; std::string, 3&gt; a&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Multi-Array: refer to <a href="http://www.boost.org/doc/libs/1_59_0/libs/multi_array/doc/user.html" target="_blank" rel="noopener">this</a> for more details, similar with matlab matrix operation</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::multi_array&lt;<span class="keyword">double</span>, <span class="number">3</span>&gt; array_type;</span><br><span class="line"><span class="function">array_type <span class="title">A</span><span class="params">(boost::extents[<span class="number">3</span>][<span class="number">4</span>][<span class="number">2</span>])</span></span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Android/Android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/Android/Android/" itemprop="url">Android</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><ol>
+<li><p>Download and install <a href="https://developer.android.com/sdk/index.html" target="_blank" rel="noopener">SDK</a></p>
+</li>
+<li><p>Install via SDK manager and AVD manager</p>
+</li>
+<li><p>Add  <font color="green">C:\Program Files (x86)\Android\android-sdk\tools</font> to environment path</p>
+</li>
+<li><p>Install ADT plugin in Eclipse by entering “ADT Plugin” for the Name and the following URL for the Location: <a href="https://dl-ssl.google.com/android/eclipse/" target="_blank" rel="noopener">https://dl-ssl.google.com/android/eclipse/</a></p>
+</li>
+<li><p>The first time to lauch AVD may take rather long time, just be patient. Leave the launched AVD open until your project is finished.</p>
+</li>
+</ol>
+<p><strong>Possible problems during installation:</strong></p>
+<ol>
+<li><p>java basis is unresolved: Project-&gt;Properties-&gt;Java Build Path-&gt;Libraries, add JRE lib</p>
+</li>
+<li><p>Android is unresolved: Project-&gt;Properties-&gt;Android, choose project build target and apply. For some Eclipse versions, clean and rebuild.</p>
+</li>
+</ol>
+<h3 id="Resource"><a href="#Resource" class="headerlink" title="Resource:"></a>Resource:</h3><ol>
+<li><p><a href="http://developer.android.com/reference/packages.html" target="_blank" rel="noopener">Android API</a> </p>
+</li>
+<li><p><a href="http://zetcode.com/mob/android/" target="_blank" rel="noopener">http://zetcode.com/mob/android/</a></p>
+</li>
+<li><p><a href="https://www.embeddedlinux.org.cn/AndroidEssentials/" target="_blank" rel="noopener">https://www.embeddedlinux.org.cn/AndroidEssentials/</a></p>
+</li>
+<li><p>Begining Android2: code is downloaded from <a href="https://www.apress.com" target="_blank" rel="noopener">https://www.apress.com</a></p>
+</li>
+</ol>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application:"></a>Application:</h3><p><code>Application</code> consists of <code>Activity</code>, <code>Service</code>, <code>BroadcastReceiver</code>, and <code>Content Provider</code>, in which <code>Activity</code> is a regular App, <code>Service</code> can run independently in the background, such as MP3 player, <code>BroadcastReceiver</code> reacts to outcoming events, <code>Content Provider</code> save data via SQLite or share data with other applications.</p>
+<ol>
+<li><p><font color="red">activity</font>: Most common application. <a href="\code\android\AndroidManifest_activity.xml">[AndroidManifest example]</a> <a href="https://i.imgur.com/BPUcRFH.jpg" target="_blank" rel="noopener">[activity cycle]</a></p>
+</li>
+<li><p><font color="red">service</font>: Similar with activity but without user interface.   <a href="\code\android\AndroidManifest_service.xml">[AndroidManifest example]</a>    <a href="https://i.imgur.com/cira5BF.jpg" target="_blank" rel="noopener">[service cycle]</a></p>
+<ul>
+<li><p>independent service</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.service.FIRST_SERVICE&quot;);</span><br><span class="line">startService(intent);</span><br><span class="line">stopService(intent);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>service has connection with activity via <code>IBinder</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BindService.MyBinder binder;</span><br><span class="line">private ServiceConnection conn = new ServiceConnection()&#123;</span><br><span class="line">	public void onServiceConnected(ComponentName name, IBinder service)&#123;</span><br><span class="line">		binder = (BindService.MyBinder) service; </span><br><span class="line">	&#125;</span><br><span class="line">	public void onServiceDisconnected(ComponentName name)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">bindService(intent, conn, Service.BIND_AUTO_CREATE);</span><br><span class="line">unbindService(conn);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to create a new thread, extend class <code>IntentService</code></p>
+</li>
+<li><p>for interprocess communication, use AIDL, i.e., extends <code>Stub</code> as IBinder interface. The others are the same as <code>Service</code>.</p>
+</li>
+</ul>
+</li>
+<li><p><font color="red">receiver</font>: a global listener. <a href="\code\android\AndroidManifest_receiver.xml">AndroidManifest example</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.action.CRAZY_BROADCAST&quot;);</span><br><span class="line">intent.putExtra(&quot;msg&quot;, &quot;hello world&quot;);</span><br><span class="line">sendBroadcast(intent);</span><br></pre></td></tr></table></figure>
+<p>use IntentFilter to filter the received broadcast</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IntentFilter filter = new IntentFilter();</span><br><span class="line">filter.addAction(MusicBox.CTL_ACTION);</span><br><span class="line">registerReceiver(serviceReceiver, filter);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><font color="red">provider</font>: globally share data. <a href="\code\android\AndroidManifest_provider.xml">AndroidManifest example</a></p>
+<p> The joint point is Uri:  <code>content://org.crazyit.providers.dictprovider/words/id</code></p>
+<p> ContentProvider: an extended class <code>public class DictProvider extends ContentProvider</code> which provides <code>query</code>, <code>insert</code>, <code>delete</code>, <code>update</code> functions.</p>
+<p> ContentResolver: </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver contentResolver = getContentResolver();</span><br><span class="line">contentResolver.insert(Words.Word.DICT_CONTENT_URI, values);</span><br></pre></td></tr></table></figure>
+<p> Most system applications provide their own ContentProvider, we need to know their Uri. </p>
+</li>
+</ol>
+<h3 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter:"></a>Adapter:</h3><p>Adapters are the link between a set of data (ArrayList, Cursor) and the AdapterView (ListView, GridView, Spinner) that displays the data. AdapterViews are ViewGroups that display child views given to it by an adapter.</p>
+<ol>
+<li><p>ArrayAdapter: </p>
+<p> In the simplest case, just use the String array <code>items</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayAdapter&lt;String&gt;aa = new ArrayAdapter&lt;String&gt;(this, adnroid.R.layout.simple_spinner_item, items);</span><br><span class="line">aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</span><br><span class="line">spin.setAdapter(aa);</span><br></pre></td></tr></table></figure>
+<p> Extend ArrayAdapter to satisfy your own needs,</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.my_list_view, MyObjectItemData);</span><br><span class="line">ListView listViewItems = new ListView(this);</span><br><span class="line">listViewItems.setAdapter(adapter);</span><br><span class="line">listViewItems.setOnItemClickListener(new OnItemClickListenerListViewItem());</span><br></pre></td></tr></table></figure>
+<p> The code for class <code>MyArrayAdapter</code> is <a href="\code\android\MyArrayAdapter.java">here</a>. The code for class <code>OnItemClickListenerListViewItem</code> is <a href="\code\android\OnItemClickListenerListViewItem.java">here</a>. Note here <code>inflate</code> is used to convert XML format to View. One trick is to check whether convertView is null so that duplicated reflation could be avoided, otherwise your device would be slowed down when crolling the screen. ConvertView can be bined with a newly defined class by using <code>setTag</code> and <code>getTag</code>. When the adapter is changed (e.g., add a new row), <code>adapter.notifyDataSetChanged()</code>. </p>
+</li>
+<li><p>CursorAdapter:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SimpleCursorAdapter adapter=new SimpleCursorAdapter(this, R.layout.row, constantsCursor, new String[] &#123;&quot;tag&quot;, &quot;value&quot;&#125;, new int[] &#123;R.id,tag, R.id.value&#125;);</span><br><span class="line">listviewItems.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
+<p> Extend CursorAdapter, see <a href="\code\android\MyCursorAdapter.java">here</a></p>
+</li>
+</ol>
+<h3 id="XML-format"><a href="#XML-format" class="headerlink" title="XML format:"></a>XML format:</h3><ol>
+<li><p>Use XML to format Layout: In XML file, <code>android:id=&quot;@+id/button</code>. In Java, <code>btn=(Button)findViewById(R.id.button)</code>. Similarly,  in XML file, <code>android:id=&quot;@string/app_name</code>, in Java, <code>Resources myres = getResources(); myres.getString();</code>.</p>
+</li>
+<li><p>Use XML to format componenet style: in res\values\<a href="\code\android\text_style.xml">text_style.xml</a>,  in \res\layout\main.xml, <code>style=&quot;@style/style2&quot;</code>. </p>
+</li>
+<li><p>Use XML to format window style: in res\values\<a href="\code\android\window_style.xml">window_style.xml</a>, in <code>onCreate()</code> function, add <code>setTheme(R.style.crazytheme)</code>, or <code>&lt;application android:theme=&quot;@style/crazytheme&quot;&gt;</code>.</p>
+</li>
+<li><p>Use XML to format menu style: \res\menu\<a href="\code\android\contextmenu_style.xml">contextmenu_style.xml</a> <a href="\code\android\optionmenu_style.xml">optionmenu_style.xml</a>. </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MenuInflater inflator = new MenuInflater(this);</span><br><span class="line">inflator.inflate(R.menu.my_menu, menu);</span><br><span class="line">//return super.onCreateOptionsMenu(menu);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use XML to inflate a view and thus format dialogue style, click <a href="\code\android\login.xml">login.xml</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TableLayout loginForm = (TableLayout)getLayoutInflater().inflate(R.layout.login, null);</span><br><span class="line">ad.setView(loginForm);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Event"><a href="#Event" class="headerlink" title="Event:"></a>Event:</h3><ol>
+<li><p><font color="red">Add EventListener</font>: there exist several types of implement. We take the most common event “click” as an example to demonstrate five types of implements.</p>
+<ul>
+<li><p>Override function <code>onClick</code> in class <code>OnClickListener</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	button1.setOnClickListener(new OnClickListener()&#123; </span><br><span class="line">	    public void onClick(View v)&#123;</span><br><span class="line">	&#125;);</span><br><span class="line">	```	</span><br><span class="line">* Extend class `OnClickListener`, essentially equal to a)</span><br><span class="line">	```android</span><br><span class="line">	private Button1_OnClickListener mListener1 = new Button1_OnClickListener();</span><br><span class="line">	class Button1_OnClickListener implements OnClickListener &#123; </span><br><span class="line">		public void onClick(View v) &#123; </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	mButton1.setOnClickListener(mListener1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Bind event listener in XML</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android:onClick=&quot;clickHandler&quot;</span><br><span class="line"></span><br><span class="line">function clickHandler()&#123;</span><br></pre></td></tr></table></figure>
+<p>For key event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new OnKeyListener()&#123;</span><br><span class="line">	public boolean onKey(View source, int keyCode, KeyEvent event&#123;</span><br><span class="line">		switch(event.getKeyCode())</span><br></pre></td></tr></table></figure>
+<p>For long click:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new OnLongClickListener&#123;</span><br><span class="line">	public boolean onLongClick(View source)&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="red">Override Recall Function</font>: extend View or Activity class to override event recall functions.</p>
+<pre><code>* Extends Activity Class 
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class TestEvent2 extends Activity implements OnClickListener&#123;</span><br><span class="line">	public void onClick(View v) &#123; 			</span><br><span class="line"></span><br><span class="line">public class TestEvent2 extends Activity&#123; </span><br><span class="line">	boolean onKeyDown(int keycode, KeyEvent event)&#123;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li>Extends View Class  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyButton extends Button&#123;</span><br><span class="line">	public boolean onKeyDown(int keyCode, KeyEvent event)&#123;</span><br><span class="line"></span><br><span class="line">public class DrawView extends View&#123;</span><br><span class="line">	public boolean onTouchEvent(MotionEvent event)&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout:"></a>Layout:</h4><ol>
+<li><p>Common attributes</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:layout_width|height=&quot;fill_parent&quot;|&quot;wrap_content&quot;|&quot;10dip&quot;	</span><br><span class="line">	android:gravity=&quot;center_horizontal&quot;|&quot;right&quot;</span><br><span class="line">	android:background=&quot;#FF909090&quot;</span><br><span class="line">	android:padding=&quot;3dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FrameLayout: fundamental layout, allow overlap or replacement for flexible usage.</p>
+</li>
+<li><p>LinearLayout: <a href="\code\android\linear.xml">example code</a>    </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_weight=&quot;1&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AbsoluteLayout: <a href="\code\android\absolute.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_x|layout_y=&quot;250dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RelativeLayout: <a href="\code\android\relative.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android:layout_below=&quot;@id/label&quot;</span><br><span class="line">android:layout_toLeftOf=&quot;@id/ok&quot;</span><br><span class="line">android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">android:layout_alignTop=&quot;@id/ok&quot;</span><br><span class="line">android:layout_marginLeft=&quot;10dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TableLayout: <a href="\code\android\table.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:layout_span=&quot;3&quot;</span><br><span class="line">android:layout_column=&quot;2&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make the layout scrollable, add <code>&lt;ScrollView&gt;</code> as in <a href="\code\android\scroll.xml">example code</a></p>
+</li>
+</ol>
+<h3 id="Componenet"><a href="#Componenet" class="headerlink" title="Componenet:"></a>Componenet:</h3><ol>
+<li><p>EditText | TextView <a href="\code\android\TextView.java">example code</a> </p>
+</li>
+<li><p>RadioGroup <a href="\code\android\RadioGroupDemo.java">example code</a> </p>
+</li>
+<li><p>CheckBox <a href="\code\android\CheckBoxDemo.java">example code</a></p>
+</li>
+<li><p>Spinner: dropdown menu <a href="\code\android\SpinnerDemo.java">example code</a></p>
+</li>
+<li><p>ListView: <a href="\code\android\ListViewDemo.java">example code</a></p>
+</li>
+<li><p>GridView: <a href="\code\android\GridDemo.java">example code</a></p>
+</li>
+<li><p>OptionsMenu: in the corner of screen <a href="\code\android\OptionsMenu.java">example code</a></p>
+</li>
+<li><p>ContextMenu: long press to show the menu. <a href="\code\android\MenuDemo.java">example code</a>.</p>
+</li>
+</ol>
+<h3 id="Advanced-Componenet"><a href="#Advanced-Componenet" class="headerlink" title="Advanced Componenet:"></a>Advanced Componenet:</h3><ol>
+<li><p><font color="red">Picker</font>: The DatePicker code is as follows and the TimePicker code is similar.</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Calendar dateAndTime=Calendar.getInstance();</span><br><span class="line">DatePickerDialog.OnDateSetListener mydiag=new DatePickerDialog.OnDateSetListener() &#123;</span><br><span class="line">	public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) &#123;</span><br><span class="line">		dateAndTime.set(Calendar.YEAR, year);</span><br><span class="line">		dateAndTime.set(Calendar.MONTH, monthOfYear);</span><br><span class="line">		dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);</span><br><span class="line">		updateLabel();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Button btn=(Button)findViewById(R.id.dateBtn);</span><br><span class="line">	</span><br><span class="line">btn.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		new DatePickerDialog(ChronoDemo.this, mydiag, year, month, day).show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Number picker</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">NumberPicker np = (NumberPicker) findViewById(R.id.npId);</span><br><span class="line"></span><br><span class="line">np.setOnValueChangedListener(new OnValueChangeListener()</span><br><span class="line">&#123;</span><br><span class="line">    public void onValueChange(NumberPicker picker, int oldVal, int newVal)</span><br><span class="line">    &#123;</span><br><span class="line">        tv.setText(String.valueOf(newVal)); </span><br><span class="line">    &#125;        </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">np.setMaxValue(100);</span><br><span class="line">np.setMinValue(0);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Toast</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">Toast.makeText(Demo.this, &quot;warning msg&quot;, Toast.LENGTH_LONG).show();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Notification <a href="\code\android\Notification.java">example code</a></p>
+</li>
+<li><p>Alert dialog <a href="\code\android\Dialog.java">example code</a></p>
+</li>
+<li><p>Dial phone number</p>
+<ul>
+<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;&gt;&lt;/uses-permission&gt;</code></p>
+</li>
+<li><p>java code</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent phoneIntent = new Intent(&quot;android.intent.action.CALL&quot;, Uri.parse(&quot;tel:&quot; + inputStr));</span><br><span class="line">startActivity(phoneIntent);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Send message</p>
+<ul>
+<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&gt;</code></p>
+</li>
+<li><p>java code</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SmsManager smsManager = SmsManager.getDefault();</span><br><span class="line">PendingIntent sentIntent = PendingIntent.getBroadcast(act, 0, new Intent(), 0);</span><br><span class="line">smsManager.sendTextMessage(addressStr, null,contentStr, sentIntent, null);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Gallary <a href="\code\android\Gallary.java">example code</a></p>
+</li>
+<li><p>Timer</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">new Timer().schedule(new TimerTask()</span><br><span class="line">&#123;</span><br><span class="line">	public void run()</span><br><span class="line">	&#123;</span><br><span class="line">		handler.sendEmptyMessage(0x123);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;, 0, 200);</span><br><span class="line"></span><br><span class="line">Handler handler = new Handler()</span><br><span class="line">&#123;</span><br><span class="line">	public void handleMessage(Message msg)</span><br><span class="line">	&#123;</span><br><span class="line">		if (msg.what == 0x123)&#123;</span><br><span class="line">		&#125;</span><br><span class="line">		super.handleMessage(msg);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><ol>
+<li><p><code>&lt;uses-sdk android:minSdkVersion=&quot;2&quot; /&gt;</code> indicates the minimum requirement of SDK. <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&gt;</code> indicates the required permission.</p>
+</li>
+<li><p>To utilize the resouce in res/values: in java code, , R.id….R.string….; in XML file, @id/…..@string/……</p>
+</li>
+<li><p>Set no title or fullscreen, add the following code in <code>AndroidManifest.xml</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	&lt;activity android:theme=&quot;@android:style/Theme.NoTitleBar.Fullscreen&quot;</span><br><span class="line">	```  </span><br><span class="line"></span><br><span class="line">1. There are two types of intents: explicit and implicit. In explicit intents you provide the name of the Activity class. In implicit intents, you tell the system what to do rather than name the Activity class to launch.</span><br><span class="line"></span><br><span class="line">## Game Development ##</span><br><span class="line"></span><br><span class="line">1. Prepare music and image resources uder folder &quot;res&quot;</span><br><span class="line"></span><br><span class="line">1. Use Handler in the MainActivity</span><br><span class="line">	```android</span><br><span class="line">	hd=new Handler()&#123;</span><br><span class="line">		public void handleMessage(Message msg)&#123;</span><br><span class="line">	    	super.handleMessage(msg);        		</span><br><span class="line">	    	switch(msg.what)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MenuView</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class ViewMainMenu extends SurfaceView implements SurfaceHolder.Callback&#123;</span><br><span class="line">	public void onDraw(Canvas canvas)&#123;</span><br><span class="line">	public void surfaceCreated(SurfaceHolder holder) &#123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create on thread for each function</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class KeyThread extends Thread&#123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use GLRender for GameView, android opengl</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MySurfaceView extends GLSurfaceView &#123;</span><br><span class="line">	public MySurfaceView(Context context) &#123;</span><br><span class="line">			super(context);</span><br><span class="line">	        mRenderer = new SceneRenderer();</span><br><span class="line">	        setRenderer(mRenderer);						</span><br><span class="line">	        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);</span><br><span class="line">	&#125;	 </span><br><span class="line">	class SceneRenderer implements GLSurfaceView.Renderer&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Li Niu" />
+            
+              <p class="site-author-name" itemprop="name">Li Niu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">89</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ustcnewly" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/li-niu-b0905133/" target="_blank" title="Linkedin">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Niu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

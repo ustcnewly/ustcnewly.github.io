@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<EditText 
+    android:text="Welcome to Mr Wei's blog"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+/> 
+<Button 
+    android:layout_x="250px" //设置按钮的X坐标
+    android:layout_y="40px" //设置按钮的Y坐标
+    android:layout_width="70px" //设置按钮的宽度
+    android:layout_height="wrap_content"
+    android:text="Button" 
+/> 
+</AbsoluteLayout>

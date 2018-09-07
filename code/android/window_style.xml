@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<style name="crazytheme"> 
+		<item name="android:windowNoTitle">true</item> 
+		<item name="android:windowFullScreen">true</item>
+		<item name="android:windowFrame">@drawable/window_border</item>
+		<item name="android:windowBackground">@drawable/star</item>
+	</style>	
+</resources>

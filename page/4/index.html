@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Li Niu&#39;s cheatsheet">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Li Niu&#39;s cheatsheet">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/4/"/>
+
+
+
+
+
+  <title>Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Li Niu's cheatsheet</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Zero-Shot Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) inductive ZSL v.s. semi-supervised/transductive ZSL</p>
+<p>2) standard ZSL v.s. generalized ZSL (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
+<p><strong>Ideas:</strong></p>
+<ol>
+<li><p>Mapping: dictionary learning, metric learning, etc</p>
+</li>
+<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
+</li>
+<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
+</li>
+</ol>
+<p><strong>Datasets:</strong></p>
+<ol>
+<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
+</li>
+<li><p>large-scale dataset: ImageNet</p>
+</li>
+</ol>
+<p><strong>Survey and Resource:</strong></p>
+<ol>
+<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Word Vector/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Word Vector/" itemprop="url">Word Vector</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><p>For a brief survey summarizing word2vec, GloVe, etc, please refer to <a href="https://sites.google.com/site/ustcnewly/download/word%20vector%20%20survey.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">this</a>.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>word2vec: <a href="https://github.com/tensorflow/models/tree/master/tutorials/embedding" target="_blank" rel="noopener">TensorFlow</a></p>
+<p>GloVe: <a href="https://github.com/stanfordnlp/GloVe" target="_blank" rel="noopener">C</a>, <a href="https://github.com/shashankg7/glove-tensorflow" target="_blank" rel="noopener">TensorFlow</a></p>
+<h2 id="WikiCorpus"><a href="#WikiCorpus" class="headerlink" title="WikiCorpus"></a>WikiCorpus</h2><p>Download the <a href="https://dumps.wikimedia.org/enwiki/" target="_blank" rel="noopener">WikiCorpus</a> and use the <a href="\code\shellscript\get-wikimedia.sh">shellscript</a> to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Weakly-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Weakly-supervised Learning/" itemprop="url">Weakly-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>bag-level multi-instance learning: average each bag <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.127.277&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>update labels<ul>
+<li>instance-level multi-instance learning: label constraint within each bag <a href="https://pdfs.semanticscholar.org/3447/fe054f6af70403cfc39b4d21076337a71128.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.lxduan.info/papers/LiICCV2011.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>flip labels based on the category similarities: <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1505.01554.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>learn mapping from noisy labels to clean labels: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Veit_Learning_From_Noisy_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>learn weights for epochs: <a href="https://arxiv.org/pdf/1806.02612.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li>add weights on training losses: implicitly update labels<ul>
+<li>gradient-based <a href="https://arxiv.org/pdf/1803.09050.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>use side information, e.g., privileged information</li>
+<li>curriculum learning: <a href="http://proceedings.mlr.press/v80/jiang18c/jiang18c.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li>select confident samples<ul>
+<li>outlier detection: aunto-encoder based <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Xia_Learning_Discriminative_Reconstructions_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>active learning</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Vote Aggregation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
+<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
+<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
+<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
+<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Visual Object Tracking/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Visual Object Tracking/" itemprop="url">Visual Object Tracking</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Tracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect</p>
+<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><p>Tracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. </p>
+<ul>
+<li>Meanshift: density based, ASMS <a href="https://github.com/vojirt/asms" target="_blank" rel="noopener">https://github.com/vojirt/asms</a></li>
+<li>Particle filter: particle based statistical method</li>
+<li>Optical flow: match feature points between neighboring frames</li>
+<li>correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect.</li>
+<li>deep learning: GOTURN, MDNet, TCNN, SiamFC</li>
+</ul>
+<p>Two research groups contribute to CF methods most:</p>
+<ul>
+<li>Oxford: <a href="https://www.robots.ox.ac.uk/~luca/" target="_blank" rel="noopener">https://www.robots.ox.ac.uk/~luca/</a>, </li>
+<li>Linkoping: <a href="http://users.isy.liu.se/en/cvl/marda26/" target="_blank" rel="noopener">http://users.isy.liu.se/en/cvl/marda26/</a></li>
+</ul>
+<p><strong>Comparison of Speed and Performance</strong><br><img src="https://i.imgur.com/LsTWGvk.jpg" alt=""></p>
+<h3 id="Survey-papers"><a href="#Survey-papers" class="headerlink" title="Survey papers"></a>Survey papers</h3><ul>
+<li>Object tracking: A survey, 2006</li>
+<li>Object tracking benchmark, 2015</li>
+</ul>
+<h3 id="Benchmark"><a href="#Benchmark" class="headerlink" title="Benchmark"></a>Benchmark</h3><ul>
+<li>OTB50/100: <a href="http://cvlab.hanyang.ac.kr/tracker_benchmark/" target="_blank" rel="noopener">http://cvlab.hanyang.ac.kr/tracker_benchmark/</a></li>
+<li>VOT2016: <a href="http://www.votchallenge.net/vot2016/dataset.html" target="_blank" rel="noopener">http://www.votchallenge.net/vot2016/dataset.html</a> </li>
+</ul>
+<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><ul>
+<li>Visual Object Tracking (VOT) challenge:<br><a href="http://www.votchallenge.net/challenges.html" target="_blank" rel="noopener">http://www.votchallenge.net/challenges.html</a><br>VOT2016 has released the code of many trackers: <a href="http://votchallenge.net/vot2016/trackers.html" target="_blank" rel="noopener">http://votchallenge.net/vot2016/trackers.html</a></li>
+<li>Multiple Object Tracking Challenge (MOT) challenge:<br><a href="https://motchallenge.net/" target="_blank" rel="noopener">https://motchallenge.net/</a></li>
+</ul>
+<h3 id="Detection-based-Tracking"><a href="#Detection-based-Tracking" class="headerlink" title="Detection based Tracking"></a>Detection based Tracking</h3><p>Detection based tracking is also named as  tracking by detection or multiple object tracking. (MOT Challenge)</p>
+<p>TLD (tracking-learning-detection): update tracker and detector during learning<br><a href="http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html" target="_blank" rel="noopener">http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Simple Bayesian Optimization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Simple Bayesian Optimization/" itemprop="url">Simple Bayesian Optimization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We release a light-weighted user-friendly Bayesian optimization tool for tuning hyper-parameters based on Gaussian profess. The code is modified based on <a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">https://github.com/fmfn/BayesianOptimization</a> and released on <a href="https://github.com/ustcnewly/simple_Bayesian_optimization" target="_blank" rel="noopener">https://github.com/ustcnewly/simple_Bayesian_optimization</a>, in which README shows the dependency and usage of the tool. </p>
+<ul>
+<li><p>bo = BayesianOptimization(func, param_bound_dict): ‘func’ is a function with parameters as input and performance as output, ‘param_dict’ is a dictionary containing the upper/lower bound of each parameter.</p>
+</li>
+<li><p>bo.explore(param_value_dict, eager=True): ‘param_value_dict’ is a dictionary containing multiple parameter values. This function does no calculate the performance corresponding to the parameter values, does not add items into bo.X and bo.Y, only add new parameters. Do not forget to set eager as True to make the added parameters take effect.</p>
+</li>
+<li><p>bo.initialize(param_value_target_dict): compared with ‘param_value_dict’, ‘param_value_target_dict’ additionally contains the performance corresponding to the parameter values. This function does not add items into bo.X and bo.Y.</p>
+</li>
+<li><p>bo.maximize(init_points=5, n_iter=15, **kwargs): ‘init_points’ is to include extra points for fitting. ‘n_iter’ indicates the iterative process of inferring the next point and add it for fitting. All the init points and inferred points will be added into bo.X and bo.Y. The model is fitted on bo.X and bo.Y. </p>
+<p>The algorithm requires at least two initial points. When setting ‘init_points=0’, we can use ‘bo.explore’ and ‘bo.initialization’ for initialization. </p>
+<p>For inference, acq=’ucb’ (upper confidence bound), ‘ei’ (expected improvement) or ‘poi’ (probability of improvement). ‘poi’ and ‘ucb’ work better empirically. There is a trade-off beteween exploitation and exploration. When acq=’ucb’,  smaller kappa prefers exploitation while larger kappa prefers exploration. When acq=’poi’, similarly, smaller xi prefers exploitation while larger xi prefers exploration. kappa and xi can be set within [10^-3, 10^-2, …, 10^3].</p>
+<p>For the Gaussian process model itself, it contains parameters like ‘kernel’ and ‘alpha’. Refer to <a href="http://scikit-learn.org/stable/modules/gaussian_process.html" target="_blank" rel="noopener">scikit-learn</a> for the details. When warnings occur in ‘gpr.py’, you can try using larger alpha, i.e., 10^-3. </p>
+</li>
+<li><p>bo.gp.fit(bo.X, bo.Y): use Gaussian process regression to fit bo.X and bo.Y.</p>
+</li>
+<li><p>mu, sigma = bo.gp.predict(x, return_std=True): use the learnt model to predict x, output mean and variance.</p>
+</li>
+<li><p>utility = bo.util.utility(test_params, bo.gp): return the utility of test parameters, based on which the next point is recommended.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Self-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Self-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Nothing new, just a wraper of existing concepts. Extract partial information from holistic information, and learn a mapping from partial information to holistic information or the other way around. A good tutorial is <a href="https://sites.google.com/site/ustcnewly/download/self_supervised_learning_tutorial.pdf?attredirects=0" target="_blank" rel="noopener">here</a>.</p>
+<ul>
+<li><p>compression(auto-encoder)</p>
+</li>
+<li><p>colorization</p>
+</li>
+<li><p>inpainting</p>
+</li>
+<li><p>patches from images: relative position</p>
+</li>
+<li><p>frames from videos: smoothness</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Reasons to Kill a Paper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Reasons to Kill a Paper/" itemprop="url">Reasons to Kill a Paper</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Strong reasons: (it is on you, bro)</strong> </p>
+<ol>
+<li>promise more than they deliver (this is the first work….)</li>
+<li>miss important references (closely related)</li>
+<li>results are too incremental or too unconvincing</li>
+<li>poorly written or oraganized</li>
+<li>incorrect statements</li>
+</ol>
+<p><strong>Weak reasons: (not lucky)</strong></p>
+<ol>
+<li>novelty is minor or incremental</li>
+<li>no technical contribution: too few formulations or the synthesis of formulations is too straightforward</li>
+<li>improvement is insignificant: less than 2 percent</li>
+<li>no component analysis/ablation study: lack self-study</li>
+<li>no qualitative analysis: only quantative analysis</li>
+<li>unfair or insufficient comparison with state-of-the-art</li>
+<li>parameter analysis: too many parameters, unclear how to set parameter, sensitive to parameters</li>
+<li>formulations are too dense and hard to follow</li>
+</ol>
+<p><strong>No reasons: (bad luck)</strong></p>
+<p>if a reviewer is determined to kill your paper, he/she can  easily make up a thousand reasons based on the gists listed above and below.</p>
+<ol>
+<li>although everything is there, I still don’t understand (all papers assusme reviewers have more or less background)</li>
+<li>the improvement is very minor, only 5 percent (all improvements are minor except elevating from traditional learning to deep learning)</li>
+<li>just an extension of XXX, or combination of XXX and XXX (90% papers fall into this scope. generally speaking, most papers today are extensions of the first deep learning paper.)</li>
+<li>miss some details (paper space is limited, so always missing details)</li>
+<li>blablabla</li>
+</ol>
+<h2 id="Key-Notes"><a href="#Key-Notes" class="headerlink" title="Key Notes:"></a>Key Notes:</h2><p>Keep readers in your mind. It should be easy to read the paper in a big hurry and still learn the main points. Treat the reviewer like a guest and show him/her around the room to see our precious.</p>
+<ol>
+<li>motivation, problem significance </li>
+<li>highlight contributions, difference from previous works</li>
+<li>the key sentence should appear at least 3 times at different places</li>
+<li>hierarchical structure like a folder tree, subtree can be easily folded or unfolded. </li>
+</ol>
+<h2 id="Proofread"><a href="#Proofread" class="headerlink" title="Proofread:"></a>Proofread:</h2><ol>
+<li><p>typo</p>
+<ul>
+<li>use word or other softwares (e.g., grammarly, ESLwriter) to check spelling or grammar mistakes.</li>
+</ul>
+</li>
+<li><p>maths</p>
+<ul>
+<li>glossary</li>
+<li>each symbol is defined before used</li>
+<li>reuse the same symbol for different meanings</li>
+<li>the variables to be optimized: min<em>{XXX}, max</em>{XXX}</li>
+<li>comma or period after each formulation</li>
+<li>demon lies in the details (bold, script, etc)</li>
+</ul>
+</li>
+<li><p>check reference and citation </p>
+</li>
+<li>check important parts: title, figure, table, captions</li>
+</ol>
+<h2 id="Paper-Types"><a href="#Paper-Types" class="headerlink" title="Paper Types"></a>Paper Types</h2><p>Higher accuracy, significant speed-up, scale-up, ease to implement, generalization, wide application domain, connection among seemingly unrelated topics, …</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Privileged Information/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Privileged Information/" itemprop="url">Privileged Information</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik <a href="http://www.engr.uconn.edu/~jinbo/doc/vladimir_newparadiam.pdf" target="_blank" rel="noopener">[pdf]</a>.</p>
+<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications:"></a>Applications:</h3><ul>
+<li><p>SVM for binary classification</p>
+<ul>
+<li>model the slack variable : SVM+ <a href="https://pdfs.semanticscholar.org/5805/9409e131f2a854367052636138e835f14f60.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>model the margin: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Sharmanska_Learning_to_Rank_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1410.0389.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>structural SVM: <a href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>theoretical analysis: <a href="http://papers.nips.cc/paper/3960-on-the-theory-of-learnining-with-privileged-information.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.765.6609&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+</li>
+<li><p>Gaussian process classification</p>
+<ul>
+<li>GPC <a href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>L2 loss for classification/Hash</p>
+<ul>
+<li>multi-labeling <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>Hash ITQ <a href="https://arxiv.org/pdf/1605.04034.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>clustering</p>
+<ul>
+<li>clustering <a href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>metric learning for verification/classification</p>
+<ul>
+<li>ITML+ <a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_TNNLS2015.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/2412/9967f9e6c4fca95165a7b9e6745c9debe0dd.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>DML+ <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246" target="_blank" rel="noopener">[pdf]</a></li>
+<li>OITML <a href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf" target="_blank" rel="noopener">[pdf]</a>: ordinal-based ITML</li>
+</ul>
+</li>
+<li><p>CRF</p>
+<ul>
+<li>probilistic inference <a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[pdf]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
+</ul>
+</li>
+<li><p>random forest</p>
+<ul>
+<li>conditional regression forest <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766" target="_blank" rel="noopener">[pdf]</a>: design node splitting criterion</li>
+</ul>
+</li>
+<li><p>matrix factorization for collaborative filtering</p>
+<ul>
+<li>PriMF <a href="https://www.ijcai.org/proceedings/2017/0223.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>Maximum Entropy Discrimination</p>
+<ul>
+<li>MED <a href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings:"></a>Settings:</h3><ul>
+<li>multi-view <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811" target="_blank" rel="noopener">[pdf]</a>: unify SVM+ with LUPI</li>
+<li>multi-task multi-class <a href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>multi-instance <a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnx1c3RjbmV3bHl8Z3g6NWIxNmY0YWU5ZGM1ODU3Mg" target="_blank" rel="noopener">[pdf]</a></li>
+<li>active learning + LUPI <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533" target="_blank" rel="noopener">[pdf]</a></li>
+<li>distillation + LUPI <a href="https://arxiv.org/pdf/1511.03643.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Parameter Tuning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Parameter Tuning/" itemprop="url">Parameter Tuning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="Parameter-searching"><a href="#Parameter-searching" class="headerlink" title="Parameter searching:"></a>Parameter searching:</h5><ul>
+<li><p>grid search</p>
+</li>
+<li><p><a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf" target="_blank" rel="noopener">random search</a></p>
+</li>
+<li><p>Bayesian Optimization: <a href="https://sigopt.com/" target="_blank" rel="noopener">SigOpt</a> is providing parameter tuning service based on Bayesian optimization. <a href="https://ustcnewly.github.io/2018/07/18/paper_note/Simple%20Bayesian%20Optimization/" target="_blank" rel="noopener">This</a> is a good place to start.</p>
+<ul>
+<li><a href="https://github.com/hyperopt/hyperopt" target="_blank" rel="noopener">hyperopt</a> (tree parzen estimator)</li>
+<li><a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">BayesianOptimization</a>, <a href="https://github.com/JasperSnoek/spearmint" target="_blank" rel="noopener">Spearmint</a>, <a href="https://github.com/Yelp/MOE" target="_blank" rel="noopener">MOE</a> (Gaussian process) </li>
+<li><p><a href="http://www.cs.ubc.ca/labs/beta/Projects/SMAC/" target="_blank" rel="noopener">SMAC</a> (random forest regression)</p>
+<p>related papers:  <a href="http://papers.nips.cc/paper/5086-multi-task-bayesian-optimization.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/f6c3/ba9e1ccb7931ab1bacb806c7e314ab4d8b06.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://proceedings.mlr.press/v37/snoek15.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+</ul>
+</li>
+<li><p>Spectral Optimization: <a href="https://arxiv.org/pdf/1706.00764.pdf" target="_blank" rel="noopener">Harmonica</a> <a href="https://github.com/callowbird/Harmonica" target="_blank" rel="noopener">[github]</a> currently only supports tuning binary parameters.</p>
+</li>
+</ul>
+<h4 id="Model-ensembling"><a href="#Model-ensembling" class="headerlink" title="Model ensembling:"></a>Model ensembling:</h4><ul>
+<li>different initialization</li>
+<li>different epochs</li>
+<li>different hyperparameters</li>
+</ul>
+<p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Li Niu" />
+            
+              <p class="site-author-name" itemprop="name">Li Niu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">89</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ustcnewly" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/li-niu-b0905133/" target="_blank" title="Linkedin">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li Niu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

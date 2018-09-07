@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Install VirtualBox Guest Addition]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FVirtualBox%2FInstall%20VirtualBox%20Guest%20Addition%2F</url>
+    <content type="text"><![CDATA[Before install guest addition from CD, do the following sudo apt-get install dkms build-essential linux-headers-generic linux-headers-$(uname -r) For missing linux kernel headers or other common problems, refer to this. use uname -r or uname -a to look up the kernel version, use dpkg --get-selections | grep linux to check the installed linux kernels. If you click the sharefolder item in the menubar and get the follwing error: ‘The VirtualBox Guest Additions do not seem to be available on this virtual machine, and shared folders cannot be used without them’, the following commands may be helpful. 1234sudo apt-get install virtualbox-guest-additions-isosudo apt-get update sudo apt-get dist-upgradesudo apt-get install virtualbox-guest-x11]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>VirtualBox</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Enlarge VirtualBox vdi]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FVirtualBox%2FEnlarge%20VirtualBox%20vdi%2F</url>
+    <content type="text"><![CDATA[Go to virtualbox installation directory and execute the following command: D:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyhd &quot;F:\VirtualBox\my ubuntu.vdi&quot; --resize 15360 Note 15360 is the new size (M), this command can only enlarge the size. Install gparted by sudo apt-get install gparted and make the extended disk space available to use. Remount /home to the new disk. For concrete steps, refer to this link.]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>VirtualBox</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2Fversion_control%2FGit%2F</url>
+    <content type="text"><![CDATA[Initialize center and local repository 123456789#init from scratchgit init &lt;local_dir&gt;#for central repository without working directory, use --baregit init --bare &lt;local_dir&gt;#clone from GitHub, can just clone a subdirectory XXX/XXXgit clone &lt;remote_repo&gt; &lt;remote_dir&gt;#pull from other local repositorygit remote add &lt;remote_repo&gt; &lt;remote_address&gt;git pull &lt;remote_repo&gt; &lt;remote_branch&gt; Configuration 12345git config --global user.name $namegit config --global user.email $emailgit config --global alias.$alias-name $git-commandgit config --system core.editor $editor # e.g., vimgit config --global --edit .git/config Repository-specific settings.~/.gitconfig User-specific settings. This is where options set with the —global flag are stored./etc/gitconfig System-wide settings. Staged snapshot in the staging areaoperations on tracked files: 123456789101112131415161718git add &lt;file&gt;git add &lt;dir&gt;git add . #add all the files in the current directorygit add * #add all the files and folders in the current directory#reversion for addgit reset &lt;file&gt; #lead to untracked &lt;file&gt;rm &lt;file&gt; #del &lt;file&gt;git rm &lt;file&gt; #remove from both staging area and working directory #reversion for rmgit reset HEAD &lt;file&gt; #lead to unstaged rm &lt;file&gt;git checkout &lt;file&gt; #recover &lt;file&gt;#mv = rm+add, so its reversion is the combination of those for add and rmgit mv &lt;old name&gt; &lt;new name&gt;#clear the entire staging areagit reset HEAD before using git add . or git add *, we can exclude the untracked files in .gitignore (e.g., *.&lt;ext&gt;, &lt;dir&gt;/, use !&lt;file&gt; for exception).to untrack added files, use git rm --cached &lt;filename&gt; Commit the staged snapshot 12345git commit -m "&lt;message&gt;" #new commit nodegit commit --amend #old commit node#`-a` means staging all the modifications of tracked filesgit commit -a -m "&lt;message&gt;" git commit -a --amend Branch 12345git branch #list local branches git branch &lt;new_branch&gt; #create a new branch git branch -d &lt;old_branch&gt; #use -D enforce deletegit checkout &lt;old_branch&gt; #switch to branch $branch git checkout -b &lt;new_branch&gt; #switch to a new branch $branch (a) Imaging there exists a hash table of key:value pairs with branch name as key and commit node as value. When checkout a new branch b1, b1:current-commit-code will be stored in the hash table. When checkout an existing branch b1, you will reach the hashed commit code. In both cases, b1 (HEAD) will be used as the hash key for the next commit node, that is, when you commit next time, b1:new-commit-code will be updated in the hash table. (b) Another perspective is treating the branch name as a pointer to the commit node and each branch is a retrospective history dating back from that node, which is essentially the same as (a). When checkout to another branch, git status (staged or unstaged modifications) will be transferred to that branch. If there exists file conflicts (operations on common yet different files), checkout will be forbidden. Besides branch, users can also add tag to each commit node. 1234567891011#assume the current branch is master#merge: merge experiment into master#master moves one step forward, both experiment and original master are its parentsgit merge experiment#assume the current branch is experiment#rebase: base experiment on master#duplicate the nodes between C2 and experiment after master, move experiment to up-to-dategit rebase master#in the simple fast-forward case, assume &lt;branch&gt; is ahead of &lt;branch1&gt;#then, `merge &lt;branch1&gt; &lt;branch2&gt;` and `rebase &lt;branch1&gt; &lt;branch2&gt;` work the same, just move &lt;branch1&gt; to &lt;branch2&gt;.#whereas, `merge &lt;branch2&gt; &lt;branch1&gt;` or `rebase &lt;branch2&gt; &lt;branch1&gt;` are not allowed. Tracking changes 123456789git status git log #commit historygit log -n &lt;limit&gt; --statgit log --grep="&lt;pattern&gt;"git log --author="John Smith" -p hello.pygit diff #view unstaged modificationgit diff --cached #view staged modificationgit diff &lt;branch1&gt;..&lt;branch2&gt;git diff &lt;repo&gt;/&lt;branch1&gt;..&lt;branch2&gt; when using git log, it will only show the ancestral commit nodes of current node. Date back to history 1234567891011#revert the operations in &lt;commit&gt; and add one commit node ahead of HEAD#revert does not work on filegit revert &lt;commit&gt;#go back to &lt;commit&gt;#git checkout &lt;commit&gt; &lt;file&gt; is just copying the &lt;file&gt; in &lt;commit&gt;git checkout &lt;commit&gt; #git reset &lt;commit&gt; changes branch name, working directory, and staged index#git reset &lt;file&gt; is removing the staged filegit reset --mixed &lt;commit&gt; #default, save the working directorygit reset --soft &lt;commit&gt; #save both working directory and staged indexgit reset --hard &lt;commit&gt; #save none, dangerous! (a) For reset file, there are no options --hard and --soft.(b) For reset commit, after reset --mixed or reset --hard, there are no staged snapshots. After reset --soft, staged snapshots enable the staged index to remain the same. More specifically, at the time before or after reset --soft, if you run git commit, the generated commit node should be the same. Communicate with remote repositories 123456789git remote -v #list remote repositoriesgit remote add &lt;remote_repo&gt; &lt;remote_address&gt;git branch -r #list the fetched branches of remote repositoriesgit fetch &lt;repo&gt; # fetch all of the remote branchesgit fetch &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;git checkout -b &lt;new_branch&gt; &lt;repo&gt;/&lt;remote_branch&gt; # Checking out a local copy of specific branchgit pull &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;git push &lt;origin&gt; &lt;local_branch&gt;:&lt;remote_branch&gt; after merging code to address the conflict, use git commit -a -m &quot;$message&quot;, then git push. git pull is equal to a git fetch followed by a git merge. Clean working directory 123git clean -f/d #clean untracked files/directorygit clean -f $path #clean untracked files in $path#`git clean` is often used togther with `git reset —hard` Stashing If you are working in your repository, and your workflow is interrupted by another project, you can save the current state of your repository (the working directory and the staging index) in the Git stash. When you are ready to start working where you left off, you can restore the stashed repository state. Note that doing a stash gives you a clean working directory, and leaves you at the last commit. 1234git stash save # stash the current stategit stash list # see what is in the Git stash:git stash apply # return your stashed state to the working directorygit stash pop # return your stashed state to the working directory and delete it from the stash Note the commit-tree grows. “git log” prints the path from root to current node. “leave behind” prints the path from current node to the first common ancestor between current node and new node. Detached head will be off any branch, so create a new branch for the detached head. Tips: checkout and reset work on both file and commit with different meanings and usages, while revert only works on commit. reset is often used for cancelling uncommited changes while revert is often used for cancelling commited changes. Compared with reset, checkout and revert focus on the modification, so they are forbidden in many cases. Resources:A good Chinese tutorial for git is here.A good English tutorial for git is here.]]></content>
+      <categories>
+        <category>software</category>
+        <category>version control</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu JDK]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2Flibrary%2FUbuntu%20JDK%2F</url>
+    <content type="text"><![CDATA[Remove default OpenJDK 1sudo apt-get purge openjdk-\* download jdk(containing jre) and tar. add into /etc/profile 12JAVA_HOME=&quot;/home/newly/Program_Files/Java/jdk1.8.0_65&quot;PATH=&quot;$PATH:$JAVA_HOME/jre/bin:$JAVA_HOME/bin&quot; set newly installed jdk as default jdk. 123sudo update-alternatives --install "/usr/bin/java" "java" "$JAVA_HOME/bin/java" 1sudo update-alternatives --install "/usr/bin/javac" "javac" "$JAVA_HOME/bin/javac" 1sudo update-alternatives --install "/usr/bin/javaws" "javaws" "$JAVA_HOME/bin/javaws" 1]]></content>
+      <categories>
+        <category>software</category>
+        <category>library</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>JDK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[OpenCV]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2Flibrary%2FOpenCV%2F</url>
+    <content type="text"><![CDATA[Locate OpenCV:123pkg-config --modversion opencv //versionpkg-config --cflags opencv //include file pathpkg-config --libs opencv //library path Uninstall OpenCV: go to the compile package and make uninstall if cannot find the compile package, sudo find / -name &quot;*opencv*&quot; -exec rm -i {} \; Install OpenCV:For Windows: C++(Visual Studio) Download latest OpenCV from http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect. Make a dir named build. Use cmake to generate OpenCV.sln in build. Click OpenCV.sln and CMakeTargets-&gt;INSTALL-&gt;build. You can build it in both debug and release modes. In the environmental variables, add D:\Program Files\OpenCV_3.0.0\build\install\x64\vc11 as OPENCV_DIR, add Path with %OPENCV_DIR%\bin. Create a OpenCV project. C/C++-&gt;General-&gt;Additional Include Directories: $(OPENCV_DIR)\..\..\include Linker-&gt;General-&gt;Additional Library Directories: $(OPENCV_DIR)\lib Linker-&gt;Input-&gt;Additional Dependencies: copy all the lib files. *d.lib means debug mode. Note that there may be some problems for visual studio to recognize the updated environmental variable. Try to restart the visual studio or recreate the project. For Linux: install for C++ pre-install packages[compiler] sudo apt-get install build-essential[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev download the required version on https://sourceforge.net/projects/opencvlibrary/ make and install 12345mkdir buildcd buildcmake .. //cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..makesudo make install Tips: if you want to install multiple versions of OpenCV, set CMAKE_INSTALL_PREFIX differently for different versions of OpenCV. cmake -D CMAKE_BUILD_TYPE=RELEASE \ -D CMAKE_INSTALL_PREFIX=/usr/local \ -D INSTALL_PYTHON_EXAMPLES=ON \ -D INSTALL_C_EXAMPLES=ON \ -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \ -D PYTHON_EXECUTABLE=/usr/bin/python \ -D BUILD_EXAMPLES=ON .. If want to turn off some modules, use -D BUILD_opencv_xfeatures2d=OFF Switch between different versions of OpenCV: switch from version 3.2 to version 2.4 shell switch from version 2.4 to version 3.2 shell For Linux: Python(Anaconda) source activate tgt_env conda install -c https://conda.binstar.org/menpo opencv spyder Then try import cv2]]></content>
+      <categories>
+        <category>software</category>
+        <category>library</category>
+      </categories>
+      <tags>
+        <tag>OpenCV</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GStreamer+FFmpeg for Ubuntu14.04]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2Flibrary%2FGStreamer%2BFFmpeg%20for%20Ubuntu14.04%2F</url>
+    <content type="text"><![CDATA[Install gst-plugin 12sudo add-apt-repository ppa:ddalex/gstreamersudo apt-get install gstreamer0.10-* Install gstffmpeg 123sudo add-apt-repository ppa:mc3man/gstffmpeg-keepsudo apt-get updatesudo apt-get install gstreamer0.10-ffmpeg]]></content>
+      <categories>
+        <category>software</category>
+        <category>library</category>
+      </categories>
+      <tags>
+        <tag>GStreamer</tag>
+        <tag>FFmpeg</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Install JDK and Eclipse]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FIDE%2FInstall%20JDK%20and%20Eclipse%2F</url>
+    <content type="text"><![CDATA[For Windows Download Java JDK from http://www.oracle.com/technetwork/java/javase/downloads/index.html and install. Note that JDK contains JRE. Modify the following environment variables: add JAVAHOME D:\Program Files (x86)\Java\jdk1.7.051 add Path %JAVA_HOME%\bin;\%JAVA_HOME%\jre\bin; add CLASSPATH %JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\rt.jar Download Eclipse from http://www.eclipse.org/downloads/ and click eclipse.exe For Linux Install JDK 1234sudo add-apt-repository ppa:webupd8team/javasudo apt-get update // depending on the needed java versionsudo apt-get install openjdk-7-jdkor sudo apt-get install openjdk-8-jre openjdk-8-jdk Download Eclipse and unpack Create a new file eclipse.desktop in /usr/share/applications/ and add the below code 12345678 [Desktop Entry] Name=EclipseComment=Eclipse IDEExec=/home/liniu/Program_Files/Eclipse/eclipse/eclipseIcon=/home/ivan/Eclipse/icon.xpmCategories=Application;Development;Java;IDEType=ApplicationTerminal=0 and then run 1sudo desktop-file-install /usr/share/applications/eclipse.desktop Add to the path: sudo ln -s /opt/eclipse/eclipse /usr/local/bin/]]></content>
+      <categories>
+        <category>software</category>
+        <category>IDE</category>
+      </categories>
+      <tags>
+        <tag>Eclipse</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu MATLAB]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FUbuntu%20MATLAB%2F</url>
+    <content type="text"><![CDATA[install by running the sh file refer to the crack folder After installation, create a shortcuta) sudo ln -s /usr/local/MATLAB/R2012a/bin/matlab /usr/bin/matlabb) copy the matlab.desktop to /usr/share/applications and matlab.png to /usr/share/icons. Problem: /tmp/mathworks……. permission denied 12$cd /Matlab.R2012a.UNIX/sys/java/jre/glnxa64/jre/binchmod +x ./java warning: usr/local/MATLAB/R2012a/bin/util/oscheck.sh: /lib/libc.so.6: not found 1sudo ln -s /lib/x86_64-linux-gnu/libc.so.6 /lib64/libc.so.6]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Medical Image Format]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FMedical%20Image%20Format%2F</url>
+    <content type="text"><![CDATA[Format DICOM: (Digital Imaging and COmmunications in Medicine) meta info + raw data nrrd: meta info (e.g., sizes, dimension, encoding, endian) + raw data The meta info in nrrd mainly consists of the format of raw data while the meta info in DICOM contains the detailed information of patient, study, and series.There exist matlab and python functions to read DICOM and nrdd files. MATLAB DICOM: dicominfo, dicomread nrrd: nrrdread conversion from DICOM to nrrd: Dicom2nrrd DICOM is generally a directory containing a sequence of slices while nrrd is a single file. The meta info of DICOM is more complicated and thus more error-prone than that of nrrd. Use DICOMPatcher to fix up DICOM files if errors occur when loading them to 3D Slicer. Software 3D Slicer: cross-platform, compatible with different formats (e.g., DICOM and nrrd), and convert between them. Other softwares to view medical images: http://www.cabiatl.com/mricro/dicom/#links]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>medical</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MATLAB]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FMATLAB%2F</url>
+    <content type="text"><![CDATA[run MATLAB using shellscript 1matlab -nodisplay -r "vid2frames('../data/regular_videos/', 'RiceCam106.MP4', '../data/frames/', '.png');exit" VideoReader: NumberOfFrames is 0, cannot read frames. something is wrong with gstreamer, first get the right version of gstreamer (0.10 for MATLAB R2015b) install gst-plugins 12sudo add-apt-repository ppa:ddalex/gstreamersudo apt-get install gstreamer0.10-* install gstffmpeg 123sudo add-apt-repository ppa:mc3man/gstffmpeg-keepsudo apt-get updatesudo apt-get install gstreamer0.10-ffmpeg]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MarkdownPad]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FMarkdownPad%2F</url>
+    <content type="text"><![CDATA[Problem: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControlsolution: Win+R to open regedit: change the following value from 1 to 0 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled Problem: How to suppport Latex: MathJax?solution: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following: 123&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt; After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are: x = {-b \pm \sqrt{b^2-4ac} \over 2a} Tips: resize image: &lt;img src=&quot;http://....jpg&quot; width=&quot;200&quot; height50% &gt;]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>MarkdownPad</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LaTeX]]></title>
+    <url>%2F2018%2F09%2F07%2Fsoftware%2FLaTeX%2F</url>
+    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Notes: \setlength\parindent{0pt} % Set the indentation in paragraphs \setlength{\parskip}{10pt} % set the separation between paragraphs]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>LaTeX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[wxPython]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FwxPython%2F</url>
+    <content type="text"><![CDATA[Framework Code Simplest App: MyApp(False)means noredirect while MyApp(True, &#39;output.txt&#39;) will redirect the output to the file output.txt. Derivation from wx.App uses def OnInit(self) while others use def __init__(self) Donnot forget return True Simplest Frame: frame.Show(), frame.Centre() A frame with menubar, toolbar, and statusbar: UpdateUIEvents are sent periodically by the framework during idle time to allow the application to check if the state of a control needs to be updated. Append a menu_item with icon, qmi = wx.MenuItem(fileMenu, APP_EXIT, '&Quit\tCtrl+Q') qmi.SetBitmap(wx.Bitmap('exit.png')) fileMenu.AppendItem(qmi) Menu check_item self.shtl = viewMenu.Append(wx.ID_ANY, 'Show toolbar', 'Show Toolbar', kind=wx.ITEM_CHECK) self.Bind(wx.EVT_MENU, self.ToggleStatusBar, self.shst) def ToggleStatusBar(self, e): if self.shst.IsChecked(): self.statusbar.Show() else: self.statusbar.Hide() Pop a Dialogue box with validator: derivation from wx.PyValidator A login dialogue before main frame: wx.PyValidator Notebook with multiple pages Advanced notebook, user can add new pages Foldable Pannel Splash Screen: splash before entering main frame wx.SplashScreen Extendable Pannel SplitPanel (hide, show): a horizontally or vertically splited panel, loading html file File Drag Drop File Hunter SpreadSheet Media Player Web Browser Component Code Bitmap: use bitmap to beautify the appearance, or use the bitmap brush (transparent widgets may be a little troublesome here) self.Bind(wx.EVT_PAINT, self.OnPaint) def OnPaint(self, event): dc = wx.PaintDC(self) dc.SetBackgroundMode(wx.TRANSPARENT) brush1 = wx.BrushFromBitmap(wx.Bitmap('pattern1.jpg')) dc.SetBrush(brush1) w, h = self.GetSize() dc.DrawRectangle(0, 0, w, h) Simplest Button: use lib to build advanced buttons Bind function with building blocks self.Bind(wx.EVT_BUTTON, self.OnButton, button) def OnButton(self, event): Note GetChildren(), GetParent(), GetId(), FindWindowById(self.btnId) Advanced button: bitmap button, toggle button, gradient button Frame Icon: personalize the frame icon con = wx.Icon(path, wx.BITMAP_TYPE_PNG) self.SetIcon(icon): Interaction with Clipboard: paste to and copy from system clipboard Drop Files to Frame: : wx.PyDropTarget Help in Frame: when initializing Frame pre = wx.PreFrame() pre.SetExtraStyle(wx.FRAME_EX_CONTEXTHELP) pre.Create(parent, *args, **kwargs) self.PostCreate(pre) Checkbox: use more general event detector to simplify code `self.Bind(wx.EVT_CHECKBOX, self.OnCheck)` e_obj = event.GetEventObject() dropdown menu MessageBox def ShowMessage(self,event): wx.MessageBox('Download completed', 'Info', wx.OK | wx.ICON_INFORMATION) Open file_dialogue dlg = wx.FileDialog(self, "Open File", style=wx.FD_OPEN) if dlg.ShowModal() == wx.ID_OK: fname = dlg.GetPath() handle = open(fname, 'r') self.txtctrl.SetValue(handle.read()) handle.close() popup menu: right click to pop up the menu static box: a static box containing components list ctrl: multi-column list customtree: a tree-structure file browser virtual list box Styled Text: i.e., python-style text Download Progressbar About info: info including name, version, copyright, and description Choose Color Dialogue colour_data = wx.ColourData() colour = self.GetBackgroundColour() colour_data.SetColour(colour) colour_data.SetChooseFull(True) dlg = wx.ColourDialog(self, colour_data) if dlg.ShowModal() == wx.ID_OK: colour = dlg.GetColourData().GetColour() self.SetBackgroundColour(colour) self.Refresh() dlg.Destroy() Image Browser with simple editing Image Slide Show Search Bar Timer self._timer = wx.Timer(self) self.Bind(wx.EVT_TIMER, self.OnTimer, self._timer) self._timer.Start(100) self._timer.Stop() Execute Command Line import outputwin self.output = outputwin.OutputWindow(self) self.output.StartProcess("ping %s" % url, blocksize=64) Music Player Video Player: First, you need to install MplayerCtrl lib. Secondly, place the mplayer folder under the current working directory. Layout wx.BoxSizer: proportion is used to control main direction and wx.EXPAND is used to control the other direction. Note in BoxSizer, alignment is only valid in one direction. AddSpacer(50) is equal to Add((50,50)). AddStretchSpacer() is equal to Add((0,0),proportion=1). sizer = wx.BoxSizer(wx.HORIZONTAL) sizer.AddSpacer(50) sizer.Add(sth,proportion=0, flag=wx.ALL, border=5) #use flag to mark which side has border sizer.Add((-1,10)) #add a black space, height=10 # sizer.Add(sth,proportion=0, wx.EXPAND|wx.RIGHT|wx.ALIGN_RIGHT, border=5) sizer.AddSpacer((0,0)) #sizer.AddStretchSpacer() self.SetSizer(sizer) self.SetInitialSize() wx.GridSizer: proportion is usually set as 0, use Add((20,20), 1, wx.EXPAND) to take up space. wx.GridSizer(2, 2, vgap=0, hgap=0) msizer.Add(sth, 0, wx.EXPAND) wx.FlexGridSizer: make some rows and columns growable. fgs.AddGrowableRow(2) fgs.AddGrowableCol(1) wx.GridBagSizer: use pos and span to indicate the location and size. sizer = wx.GridBagSizer(vgap=8, hgap=8) sizer.Add(sth, (1, 2), (1, 15), wx.EXPAND) Notes Event Propagation: When an event can intrigue multiple events, use event.skip() to guaranttee the occurrence of following events. Take keyevents.py for an example. Virtual Ride: wx.PyPannel Bind function which will be checked in the idle timeself.Bind(wx.EVT_UPDATE_UI, self.OnUpdateEditMenu)]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>wxPython</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FPython%2F</url>
+    <content type="text"><![CDATA[check type 1isinstance(n,int) list 12345678t1 = ['a', 'b', 'c'];t2 = ['d', 'e', 'f'];t1.extend(t2);t1.append('g');t1 = t1+['g']t1.sort();del t1[1:3];t1.remove('b'); dictionary 1234567eng2sp = &#123;'one': 'uno', 'two': 'dos', 'three': 'tres'&#125;eng2sp.values() #'uno','dos','tres'eng2sp.items()'one' in eng2sp #trueinverse = invert_dict(eng2sp) d = dict(zip('abc',range(3)))d.get(word,0) #d[word] if word in d, 0 otherwise tupe: similar with list but immutable file operation 12345678fout = os.getcwd()os.path.abspath('tmp.txt')os.path.exists('tmp.txt')os.path.isfile/isdiros.listdir(cwd)fout = open('output.txt','w')fout.write('hehe')fout.close()]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python Draw Text on Image]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FPython%20Draw%20Text%20on%20Image%2F</url>
+    <content type="text"><![CDATA[Use PIL12345678import PIL.ImageDrawimport PIL.Imageimport PIL.ImageFontpil_img = PIL.Image.fromarray(bb_img)draw = PIL.ImageDraw.Draw(pil_img)font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf",20)draw.text((10, 10),"Frame: %09d"%(iframe),(255,0,0),font=font) Use OpenCV— 12import cv2cv2.putText(cv_img, 'Frame: %d'%(iframe), (10,20), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0,0,255), 3)]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Fastest Way to Read Text, Image, and Video in Python]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FFastest%20Way%20to%20Read%20Text%2C%20Image%2C%20and%20Video%20in%20Python%2F</url>
+    <content type="text"><![CDATA[When comparing the efficiency of different libraries, there may exist a few orders of magnitude difference. In the implementation in demand of high efficiency, locate the time-consuming function and replace it with the most efficient library function. Text: PandasInstallation: pip install pandas or conda install pandas 12import pandas as pddata = pd.read_csv(text_name, sep=',', header=None) Image: Pillow-SIMD, skimage, OpenCV, imageio 12345678910111213141516import cv2import skimageimport imageiofrom PIL import Image#read a 1280x720 imagepil_im = Image.open(image_name) #0.0057spil_im = pil_im.resize((448,448)) #0.025ssk_im = skimage.io.imread(image_name) #0.026ssk_im = skimage.transform.resize(sk_im, (448, 448)) #0.060Scv_im = cv2.imread(image_name) #0.021scv_im = cv2.resize(cv_im, (448, 448)) #0.0016sim = imageio.imread(image_name) #0.033s Pillow-SIMD is faster than Pillow, which is not reported here. OpenCV is the most efficient one here. Video: OpenCV, skvideo, imageio 1234567891011121314import cv2import imageioimport skvideo#read 30fps video with each frame 1280x720 cap = cv2.VideoCapture(video_name)ret, frame = cap.read() #0.002svid = imageio.get_reader(video_name, 'ffmpeg')for image in vid.iter_data(): #0.004sskvideo.setFFmpegPath(os.path.dirname(sys.executable))videogen = skvideo.io.vreader(video_name)for img in videogen: #0.073s For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, /usr/bin/python is recommended. imageio and OpenCV are comparable here.]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Eclipse for Python]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FEclipse%20for%20Python%2F</url>
+    <content type="text"><![CDATA[Eclipse-&gt;help-&gt;install new software. Work with http://pydev.org/updates. Eclipse-&gt;Window-&gt;Preferences-&gt;PyDev, modify the python interpreter, e.g., python.exe.]]></content>
+      <categories>
+        <category>software</category>
+        <category>IDE</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Eclipse</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python bottle]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2Fbottle%2F</url>
+    <content type="text"><![CDATA[Use route to indicate path, 80 is the default port for HTTP. 1234567import bottle@bottle.route('/hello')def hello(): return "Hello World!"bottle.run(host='localhost', port=80, debug=True) Dynamic path V.S. static path. We can use filter such as &lt;id:int&gt; to convert input variables to certain type. 1234567import bottle@bottle.route('/hello/&amp;lt;name&gt;/&amp;lt;address&gt;')def hello(name,address): return "Hello "+namebottle.run(host='localhost', port=80, debug=True) Use local resources. Pay special attention to the path. Local resource names should start with ‘/‘. 123@bottle.route('/&lt;filename:path&gt;')def server_static(filename): return bottle.static_file(filename, root='./resource/') The default HTTP request method for route() is get(), we can use other methods post(), put(), delete(), patch(). The POST method is commonly used for HTML form submission. When entering URL address, GET method is used. 12345678910111213141516171819202122232425262728import bottledef check_login(username, password): if username=='niuli' and password=='niuli': return True else: return False @bottle.get('/login') # or @route('/login')def login(): return ''' &amp;lt;form action="/login" method="post"&gt; Username: &amp;lt;input name="username" type="text" /&gt; Password: &amp;lt;input name="password" type="password" /&gt; &amp;lt;input value="Login" type="submit" /&gt; &amp;lt;/form&gt; '''@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') if check_login(username, password): return "&amp;lt;p&gt;Your login information was correct.&amp;lt;/p&gt;" else: return "&amp;lt;p&gt;Login failed.&amp;lt;/p&gt;"bottle.run(host='localhost', port=80, debug=True) Return local files localhost/filename. Note path:path is important, otherwise the filename containing ‘/‘ may not be correctly recognized. 12345from bottle import static_file @route(’/&lt;filepath:path&gt;’) def server_static(filepath): return static_file(filepath, root=’./resource’) Use redirect to jump to another page: bottle.redirect(&#39;/login&#39;) Use the HTML template. In the template file, the lines starting with % are python codes and others are HTML codes. We can include other templates in the current template by using % include(&#39;header.tpl&#39;, title=&#39;Page Title&#39;). Cookies, HTTP header, HTML &lt;form&gt; fields and other request data is available through the global request object. 12345678910@bottle.route('/&lt;name&gt;')@bottle.view('my_template.html')def root(name="default"): return bottle.template('my_template', name=name)@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') bottle.redirect('/'+username) Some tricks for helping development bottle.debug(True) The default error page shows a traceback. Templates are not cached. Plugins are applied immediately. run(reloader=True) Every time you edit a module file, the reloader restarts the server process and loads the newest version of your code.]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>bottle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Anaconda]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FAnaconda%2F</url>
+    <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentcreate: conda create —name new_name python=2.7 anaconda activate: source activate snowflakes revert: source deactivate delete: conda remove —name flowers —all list: conda info —envs copy: conda create —name flowers —clone snowflakes packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MATLAB draw plot]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FMATLAB%2FMATLAB%20draw%20plot%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940% Set some nice settings.grid on;format long;% Hold the graphics output until we are good to go.hold all;% To create some random test data.x1 = 100 : 100 : 1000;raw_y1 = [0.76,0.79,0.80,0.80,0.81,0.82,0.82,0.82,0.82,0.81];raw_y2 = [0.85,0.81,0.83,0.83,0.82,0.79,0.78,0.80,0.82,0.82];raw_y3 = [0.85,0.84,0.83,0.83,0.83,0.83,0.82,0.82,0.82,0.82];legendText = cell(0);plot(x1,y1,'--go','MarkerSize',5, 'MarkerFaceColor','g', 'LineWidth',3);legendText(end+1) = &#123; 'CUB' &#125;;plot(x1,y2,':bo', 'MarkerSize',5, 'MarkerFaceColor','b', 'LineWidth',3);legendText(end+1) = &#123; 'SUN' &#125;;plot(x1,y3,'-ro', 'MarkerSize',5, 'MarkerFaceColor','r', 'LineWidth',3);legendText(end+1) = &#123; 'Dogs' &#125;;xlim([100 1000]);ylim([0.72 0.90]);set(gca,'fontsize',15)% set sticks on x and y axisget(gca, 'xtick');set(gca, 'xtick', 100:100:1000);get(gca, 'ytick');set(gca, 'ytick', 0.72:0.02:0.90);xlabel('# web training instances per category');ylabel('Accuracy');legend(legendText,'location','southeast');hold off;]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML+CSS]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FHTML%2FHTML%2BCSS%2F</url>
+    <content type="text"><![CDATA[Website consists of three components: structure(HTML), representation(CSS), action(Javascript). XHTML is a strict version of HTML. The structure of webpage is previously done based on table, but currently via CSS. Escape character in HTML source code: &amp;lt;:&lt;, &amp;gt;:&gt;, &amp;nbsp;:space &lt;p&gt;:paragraph, &lt;br&gt;:break, &lt;blockquote&gt;:indented paragraph, &lt;b&gt;:bold, &lt;i&gt;:italic, &lt;u&gt;:underline, &lt;s&gt;:deleteline, &lt;strong&gt;:emphasize, &lt;ul&gt;&lt;li&gt;:unordered list, &lt;ol&gt;&lt;li&gt;:ordered list. &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;:hyperlink. &lt;a href=&quot;mailto:ustcnewly@gmail.com&quot;&gt;&lt;/a&gt;. An area on the image can also be used to establish hyperlink based on &lt;map&gt; and &lt;ared&gt;. Use &lt;frameset&gt; and &lt;frame&gt; to split webpage. Note &lt;frameset&gt; and &lt;frame&gt; belong to the the same level as &lt;body&gt;. &lt;frameset cols=&quot;30%, 30%, *&quot;&gt;&lt;frame src=left.html&gt;. &lt;frame&gt; is obsolete in HTML5. &lt;table border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;6&quot; &gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/table&gt;. Don’t miss any &lt;tr&gt; or &lt;td&gt;, otherwise the table will be messy. Use &lt;colspan&gt; or &lt;rowspan&gt; to merge cells. For professional table, we can use &lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt;. &lt;table&gt; is now rarely used for layout design. Insert multimedia elements: image: &lt;img src=&quot;a.jpg&quot; height=&quot;200&quot; width=&quot;200&quot; alt=&quot;desc&quot;/&gt; flash: &lt;embed src=&quot;a.swf&quot; width=&quot;490&quot; height=&quot;400&quot; wmode=&quot;transparent&quot; &gt;&lt;/embed&gt; bgmusic: &lt;audio src=&quot;a.mp3&quot; hidden=&quot;true&quot; autoplay=&quot;true&quot; loop=&quot;true&quot;&gt;&lt;/audio&gt; bgtile: &lt;body background=&quot;a.png&quot;&gt;&lt;/body&gt; Css: object, attribute, and value. Refer to official website for details. 1234567891011121314h1&#123; font-family:Calibri;&#125;.myclass&#123; font-family:Calibri;&#125;&amp;lt;p class="myclass"&gt;&amp;lt;/p&gt;#myid&#123; font-family:Calibri;&#125;&amp;lt;p id="myid"&gt;&amp;lt;/p&gt;# one id name should be used only once in one html file. Methods to use Css. a. Directly insert contents into &lt;style&gt;&lt;/style&gt;. b. &lt;link href=&quot;mycss.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt; c. &lt;style type=&quot;text/css&quot;&gt;@import &quot;mycss.css&quot;&lt;/style&gt;. One html file can import more than one Css files. A Css file can also import other Css files. The priority of a is higher than b/c. The more special, the higher priority. For the methods with equal priority, override principle is applied. The difference between b and c is that c loads all the Css codes while b only loads the corresponding Css code when necessary. Some special usage of Css. class for specific tag: p.special{} union of multiple tags: h1,h2,p{} embeded tags: p span{} for descendents and p&gt;span{} for child. complex embedding mixing tags, classes, and ids: td.out .inside strong{}. The easiest way to recognize this kind of embedding is “(tag)(.class) (tag)(#id)” consecutive tags: th+td+td+td{}, the style is applied to the third td. Css formats for some commonly used tags. body: 12345678body&#123; background-image:a.jpg; background-repeat:no-repeat; background-position:200px 100px; background-attachment:fixed; background-size: 20% 100%; cursor:pointer;&#125; text: 12345678910111213p&#123; float:left; font-family:Calibri; font-size:15px; font-style:italic; font-weight:bold; color:red; text-indent:2em; text-decoration:underline; text-transform:lowercase; #capitalize text-align:justify; margin:5px 0px #top/down margin left/right margin&#125; image: 12345img&#123; float:left; border:1px #9999CC dashed; margin:5px; #margin-left/right/top/bottom&#125; &lt;div&gt; box layout from inside to outside: content, padding, border, margin. Note width and height are for content instead of the whole box. margin can be assigned negative values. Assigning attribute values in clock-wise order. Missing values are equal to the values of opposite side. We should first understand the standard flow without the constraints of boxes. block-level (vertical arrangement): &lt;ul&gt;, &lt;li&gt;, &lt;div&gt; inline (horizontal arrangement): &lt;strong&gt;,&lt;a&gt;, &lt;span&gt; &lt;div&gt; and &lt;span&gt; are both blocks. &lt;div&gt; is vertial while &lt;span&gt; is horizontal. &lt;span&gt; can be used where no other proper tags can be used,s for instance, &lt;span&gt;&lt;img src=&quot;a.jpg&quot;&gt;&lt;/span&gt;. when using &lt;div&gt;, the margin between the top block and bottom block is max(top_block.bottom_margin,bottom_block.top_margin). when using &lt;span&gt;, the margin between the top block and bottom block is top_block.bottom_margin+bottom_block.top_margin. floating box: Arrange the non-floating boxes first and then float the floating box to the left or right in the father content. The stuff in the non-floating boxes surrounds the floating box. For floating box: float:left. For non-floating box: clear:left. box location: static(default), relative, absolute relative: position:relative; left:30px; top:30px. Relative shift from original position. Relative has no impact on father box and sibling box. absolute: position:absolute; top:0px; right:0px. Absolute coordinate in the nearest non-static ancestor. Other boxes treat this absolute box as non-existence. &lt;div style=&quot;display:inline&quot;&gt;&lt;/div&gt;, &lt;span style=&quot;display:block&quot;&gt;&lt;/span&gt;, use display to modifiy the vertical or horizontal order. Set as none to make it invisible. For hyperlink, a has pseudo classes:link, visited, hover, for example: 12345#navigation li a:link, #navigation li a:visited&#123; background-color:#1136c1; color:#FFFFFF;&#125; Use div to split columns absolute method: left column uses absolute position (Note to change the position of father div to relative) and right column use left margin. The drawback is that bottom row will ignore the left column. float method: float left and float right. It is easy for fixed width or fixed ratio. For the mixed width such as 100%-30px, use the wrapper trick (negative margin). JavaScript1234&lt;script&gt;var name ="newly"document.write("my name is: "+name)&lt;/script&gt; variable types null: empty variable string: parseFloat(string), parseInt(string), str.substring(0,3), str.slice(3,5), str.charAt(0), str.bold(), str.fontcolor(&quot;red&quot;), str.length number: Math.PI, Math.max, isNaN(value), bool: true or false Array: can be a mixture of numbers and strings, var a = new Array(10, 20, &quot;newly&quot;) 1234for(n in actorAry)&#123; document.write("&amp;lt;li&amp;gt;"+actorAry[n]);&#125; myarr.toString(), myarr.join(&#39;-&#39;), myarr.concat(tailarr), myarr.reverse(), myarr.sort(cmpfunc), slice, splicestack&amp;&amp;queue operations: myarr.push(&quot;newstr&quot;), myarr.pop(), myarr.shift()(dequeue), myarr.unshift()(pushfront) Structure: There is no concept: class. Use function to construct an object. var mycard = Card(&quot;newly&quot;, 20), showCardInof.call(mycard,arg1,arg2) or mycard.showCardInfo(arg1,arg2), mycard=null 12345678910111213function showCardInfo(arg1,arg2)&#123; document.write(this.owner);&#125;function Card(owner, rate)&#123; this.owner = owner; this.rate = rate; this.showCardInfo=function(arg1,arg2) &#123; document.write(this.owner); &#125;&#125; type related: nameList instanceof Array, typeof(&quot;newly&quot;) commonly used built-in functions or classes alert dialogue: alert(&quot;msg&quot;) input diaglogue: var age=prompt(&quot;Input your age&quot;, &quot;0&quot;) confirm dialogue: confirm(&quot;Are you sure?&quot;) Date and time: 123var cur = new Date();cur.setYear(2016);var seconds = cur.getSeconds(); Error: 12var e = new Error();document.write(e.number&amp;0xFFFF+e.description); operate on the html elements &lt;img src=&quot;./images/web_fig.jpg&quot; width=500px&gt; The whole HTML page is a DOM tree. Visit the DOM elements 12345document.myform.elements[0].value //myform is the form namedocument.getElementById("myid").childNodes[0].nodeName/nodeValue/nodeTypedocument.getElementById("myid").childNodes[0].getAttribute("attr")/setAttribute("attr","attval") document.getElementsByTagName("tag") document.getElementsByName("name") Since id is unique, we use single form element for Id, but plural form elements for Name and TagName. Change the DOM elements 12345var docBody = document.getElementById("DocBody");var imgObj = document.createElement("&lt;img&gt;");var newTextNode = document.createElement("content");imgObj.src = url;docBody.appendChild(imgObj); use Javascript to modify the CSS style, document.vlinkColor, document.linkColor, document.alinkColor, document.bgColor, document.fgColor, document.body.text, name1.vspace, name1.hspace. event handling: we can set event triggering function for certain element or a class of elements. commonly used events (case insensitive): onblur, onchange, onclick, onfocus, onload, onmouseover, onmouseout, onmousedown, onmouseup, onselect, onsubmit, onunload. Form-related events: myform.onReset, myform.onSubmit, myform.action=&quot;mailto:ustcnewly@gmail.com&quot; three approaches to trigger event functiona) directly embed function scripts: onlick=&quot;javascript:alert(&quot;msg&quot;)&quot; //javascript: can be eliminated b) call the event function: onkeyup = &quot;OnKeyUp()&quot; 12345678function OnKeyUp(_e)&#123; var e = _e?_e:window.event; if (event.keyCode==13) &#123; alert("Your input is "+Text1.value); &#125; &#125; c) set the event attribute for certain elements: &lt;script for=&quot;document&quot; event=&quot;oncontextmenu&quot;&gt; window.event.returnValue = false; document.oncontextmenu = hideContextMenu2; &lt;/script&gt;; time control:to=window.setTimeout(&quot;func()&quot;,3000), clearTimeout(to), tm=setInterval(&quot;func()&quot;,1000), clearInterval(tm) redirect href location or set anchor point:window.location.href=&quot;www.baidu.com&quot;, &lt;a name=&quot;anchor1&quot;&gt;&lt;/a&gt; history: history.back(), history.forward(), history.go(n), n&gt;0 means go back n pages, otherwise go forward n pages. cookie contains key-value pairs: document.cookie=&quot;user=newly;passwd=hehe;&quot;]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Call C++ in Python]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fcross-language%2FCall%20C%2B%2B%20in%20Python%2F</url>
+    <content type="text"><![CDATA[1.ctypesimilar as in Python_call_C.mdadd extern “C” before each function, otherwise an error ‘undefined symbol’ will be thrown. However, something might go wrong on terms with complicated Class. 2.Use Boost.Pythonmore powerful and complicated]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>cross-language</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Call C in Python]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fcross-language%2FCall%20C%20in%20Python%2F</url>
+    <content type="text"><![CDATA[C: build a library12gcc -c -fPIC libtest.cgcc -shared libtest.o -o libtest.so Python: load the library123from ctypes import *libtest = cdll.LoadLibrary(libtest.so')print libtest.func(arg_list) Makefile sample and python sample code c_void_pFor the types without need to know the detailed layout, we can just use c_void_p, especially when we cannot find the strictly matched self-defined type such as LP_cfloat_1024. pointer, POINTER, byrefPOINTER is used for defining type. pointer and byref function similarly. However, pointer does a lot more work since it constructs a real pointer object, so it is faster to use byref if you don’t need the pointer object in Python itself. memory issue:write free function in C code12345void freeme(char *ptr)&#123; printf("freeing address: %p\n", ptr); free(ptr);&#125; call free function in Python1234lib = cdll.LoadLibrary('./string.so')lib.freeme.argtypes = c_void_p,lib.freeme.restype = Nonelib.freeme(ptr)]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>cross-language</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Boost_tokenizer]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FC%2B%2B%2Fboost%2FBoost_tokenizer%2F</url>
+    <content type="text"><![CDATA[1#include&lt; boost/tokenizer.hpp&gt; split string: default space 123456string s = "This is, a test"; tokenizer&lt;&gt; tok(s); for(tokenizer&lt;&gt;::iterator beg=tok.begin(); beg!=tok.end();++beg)&#123; cout &lt;&lt; *beg &lt;&lt; "\n"; &#125; split string: drop delimiter 123typedef boost::tokenizer&lt;boost::char_separator&lt;char&gt;&gt; tokenizer;boost::char_separator&lt; char&gt; sep("-;|");tokenizer tokens(str, sep); split string: drop delimiter and keep delimiter 123typedef boost::tokenizer&lt; boost::char_separator&lt; char&gt; &gt; tokenizer;boost::char_separator&lt; char&gt; sep("-;", "|", boost::keep_empty_tokens);tokenizer tokens(str, sep); special kinds of tokenizer 123int offsets[] = &#123;2,2,4&#125;; //three segment length offset_separator f(offsets, offsets+3); tokenizer&lt; offset_separator&gt; tok(s,f);]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+        <category>Boost</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Boost_regex]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FC%2B%2B%2Fboost%2FBoost_regex%2F</url>
+    <content type="text"><![CDATA[12#include &lt; boost/regex.hpp&gt;using namespace boost; regex_match 123456789101112regex expression("^select ([a-zA-Z]*) from ([a-zA-Z]*)");std::string in="select name from table";cmatch what;if(regex_match(in.c_str(), what, expression))&#123; for(int i=0;i&lt; what.size();i++) &#123; cout&lt;&lt; what[i].first&lt;&lt; "|"&lt;&lt;what[i].second&lt;&lt; endl; cout&lt;&lt; "str :"&lt;&lt; what[i].str()&lt;&lt; endl; &#125;&#125; regex_search 123456789101112boost::regex r("(a+)");string content = "bbbaaaaacccaaaaddddaaaeeeaaa";boost::smatch m;string::const_iterator strstart = content.begin();string::const_iterator strend = content.end();while(boost::regex_search(strstart, strend, m, r))&#123; //0 for the whole, m[i] is the i-th group cout &lt;&lt; m[0] &lt;&lt; endl; //m[i].first and m[i].second stands for the begin idx and end idx strstart = m[0].second;&#125; Note regex_match(in.c_str(), what, expression) is for complete match while regex_match(in.c_str(), what, expression) is for incomplete match. regex_match(in.c_str(), expression, target_exp). special setting for regex 1boost::regex e2(my_expression, boost::regex::icase); \\case insensitive]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+        <category>Boost</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Boost_lexical_cast]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FC%2B%2B%2Fboost%2FBoost_lexical_cast%2F</url>
+    <content type="text"><![CDATA[12#include &lt; boost/lexical_cast.hpp&gt;using namespace boost; conversion between number and string: replace the atoi, itoa, and etc 12cout&lt;&lt; lexical_cast&lt; string&gt;(i)&lt;&lt; endl;cout&lt;&lt; lexical_cast&lt; double&gt;(s)&lt;&lt; endl; mixed types: for type generalization 123#include &lt; boost/fusion/adapted/boost_tuple.hpp&gt;boost::tuple&lt;char, int, char, int&gt; decim('-', 10, 'e', 5);assert(stringize(decim) == "-10e5");]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+        <category>Boost</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Boost_installation]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FC%2B%2B%2Fboost%2FBoost_installation%2F</url>
+    <content type="text"><![CDATA[Problem: When installing boost, “cl not found”. Or unresolved reference. Solution: cd Microsoft Visual Studio 11.0\VC, run vcvarsall.bat amd64. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html for installation details. Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage. For 64 bit, run b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage. To put it simple, download binary files from http://sourceforge.net/projects/boost/files/boost-binaries/. Boost is auto-link which means you don’t need to add all lib files manually. If you have installed boost, using it in a VC project just takes two steps: C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost; Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0; Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path. Notes: x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine build-&gt;configuration manager]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+        <category>Boost</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Boost_file_system]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FC%2B%2B%2Fboost%2FBoost_file_system%2F</url>
+    <content type="text"><![CDATA[12#include &lt; boost/filesystem.hpp&gt; using namespace boost::filesystem; file name operation 123456789//Note the difference between /= and +=, /= means appending directory， += means string concatenation path dir("C:\\Windows");dir /= "System32"; dir /= "services.exe";std::cout &lt;&lt; dir.string() &lt;&lt; std::endl; std::cout &lt;&lt; dir.parent_path()&lt;&lt; std::endl; /C:\Windows\System32std::cout &lt;&lt; dir.filename()&lt;&lt; std::endl; /services.exestd::cout &lt;&lt; dir.stem()&lt;&lt; std::endl; //servicesstd::cout &lt;&lt; dir.extension()&lt;&lt; std::endl; //.exe file operation: rename, remove, copy 123456789exists(path); is_directory(path); is_regular_file(path); remove_all(const Path&amp; p); //remove all files recursively rename(const Path1&amp; from_p, const Path2&amp; to_p); copy_file(const Path1&amp; from_fp, const Path2&amp; to_fp); create_directory(const Path &amp; p);create_directories(const Path &amp; p); //make directory recursively&lt;/pre&gt; shallow visit directory 123456path dir2("c:\\Windows\\System32");directory_iterator end;for (directory_iterator pos(dir2); pos != end; pos++)&#123; std::cout &lt;&lt; *pos &lt;&lt; std::endl;&#125; deep visit directory: like DFS, stack push&amp;&amp;pop 123456789101112131415161718typedef recursive_directory_iterator rd_iterator;path dir2("E:\\Student");rd_iterator end;for (rd_iterator pos(dir); pos != end; pos++)&#123; if (is_directory(*pos) &amp;&amp; pos.level() &gt; 4) &#123; pos.no_push(); &#125; if (*pos == "nofind.txt") &#123; pos.pop(); &#125; else &#123; cout&lt;&lt; pos-&gt;path().filename().string()&lt;&lt; endl; &#125;&#125; catch error 1234567891011try&#123; path dir2("c:\\Windows\\System32"); assert(is_directory(dir2)); assert(exists(dir2)); &#125;catch(filesystem_error&amp; e)&#123; std::cout &lt;&lt; e.path1() &lt;&lt; std::endl; std::cout &lt;&lt; e.what() &lt;&lt; std::endl;&#125;]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+        <category>Boost</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Boost_array]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FC%2B%2B%2Fboost%2FBoost_array%2F</url>
+    <content type="text"><![CDATA[12#include "boost/array.hpp"#include "boost/multi_array.hpp" Array: similar with STL vector 1array&lt; std::string, 3&gt; a&lt;/pre&gt; Multi-Array: refer to this for more details, similar with matlab matrix operation 12typedef boost::multi_array&lt;double, 3&gt; array_type;array_type A(boost::extents[3][4][2]);]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+        <category>Boost</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android]]></title>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FAndroid%2FAndroid%2F</url>
+    <content type="text"><![CDATA[Installation: Download and install SDK Install via SDK manager and AVD manager Add C:\Program Files (x86)\Android\android-sdk\tools to environment path Install ADT plugin in Eclipse by entering “ADT Plugin” for the Name and the following URL for the Location: https://dl-ssl.google.com/android/eclipse/ The first time to lauch AVD may take rather long time, just be patient. Leave the launched AVD open until your project is finished. Possible problems during installation: java basis is unresolved: Project-&gt;Properties-&gt;Java Build Path-&gt;Libraries, add JRE lib Android is unresolved: Project-&gt;Properties-&gt;Android, choose project build target and apply. For some Eclipse versions, clean and rebuild. Resource: Android API http://zetcode.com/mob/android/ https://www.embeddedlinux.org.cn/AndroidEssentials/ Begining Android2: code is downloaded from https://www.apress.com Application:Application consists of Activity, Service, BroadcastReceiver, and Content Provider, in which Activity is a regular App, Service can run independently in the background, such as MP3 player, BroadcastReceiver reacts to outcoming events, Content Provider save data via SQLite or share data with other applications. activity: Most common application. [AndroidManifest example] [activity cycle] service: Similar with activity but without user interface. [AndroidManifest example] [service cycle] independent service 1234final Intent intent = new Intent();intent.setAction(&quot;org.crazyit.service.FIRST_SERVICE&quot;);startService(intent);stopService(intent); service has connection with activity via IBinder 123456789BindService.MyBinder binder;private ServiceConnection conn = new ServiceConnection()&#123; public void onServiceConnected(ComponentName name, IBinder service)&#123; binder = (BindService.MyBinder) service; &#125; public void onServiceDisconnected(ComponentName name)&#123;&#125;&#125;;bindService(intent, conn, Service.BIND_AUTO_CREATE);unbindService(conn); to create a new thread, extend class IntentService for interprocess communication, use AIDL, i.e., extends Stub as IBinder interface. The others are the same as Service. receiver: a global listener. AndroidManifest example 1234Intent intent = new Intent();intent.setAction(&quot;org.crazyit.action.CRAZY_BROADCAST&quot;);intent.putExtra(&quot;msg&quot;, &quot;hello world&quot;);sendBroadcast(intent); use IntentFilter to filter the received broadcast 123IntentFilter filter = new IntentFilter();filter.addAction(MusicBox.CTL_ACTION);registerReceiver(serviceReceiver, filter); provider: globally share data. AndroidManifest example The joint point is Uri: content://org.crazyit.providers.dictprovider/words/id ContentProvider: an extended class public class DictProvider extends ContentProvider which provides query, insert, delete, update functions. ContentResolver: 12ContentResolver contentResolver = getContentResolver();contentResolver.insert(Words.Word.DICT_CONTENT_URI, values); Most system applications provide their own ContentProvider, we need to know their Uri. Adapter:Adapters are the link between a set of data (ArrayList, Cursor) and the AdapterView (ListView, GridView, Spinner) that displays the data. AdapterViews are ViewGroups that display child views given to it by an adapter. ArrayAdapter: In the simplest case, just use the String array items 123ArrayAdapter&lt;String&gt;aa = new ArrayAdapter&lt;String&gt;(this, adnroid.R.layout.simple_spinner_item, items);aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);spin.setAdapter(aa); Extend ArrayAdapter to satisfy your own needs, 1234MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.my_list_view, MyObjectItemData);ListView listViewItems = new ListView(this);listViewItems.setAdapter(adapter);listViewItems.setOnItemClickListener(new OnItemClickListenerListViewItem()); The code for class MyArrayAdapter is here. The code for class OnItemClickListenerListViewItem is here. Note here inflate is used to convert XML format to View. One trick is to check whether convertView is null so that duplicated reflation could be avoided, otherwise your device would be slowed down when crolling the screen. ConvertView can be bined with a newly defined class by using setTag and getTag. When the adapter is changed (e.g., add a new row), adapter.notifyDataSetChanged(). CursorAdapter: 12SimpleCursorAdapter adapter=new SimpleCursorAdapter(this, R.layout.row, constantsCursor, new String[] &#123;&quot;tag&quot;, &quot;value&quot;&#125;, new int[] &#123;R.id,tag, R.id.value&#125;);listviewItems.setAdapter(adapter); Extend CursorAdapter, see here XML format: Use XML to format Layout: In XML file, android:id=&quot;@+id/button. In Java, btn=(Button)findViewById(R.id.button). Similarly, in XML file, android:id=&quot;@string/app_name, in Java, Resources myres = getResources(); myres.getString();. Use XML to format componenet style: in res\values\text_style.xml, in \res\layout\main.xml, style=&quot;@style/style2&quot;. Use XML to format window style: in res\values\window_style.xml, in onCreate() function, add setTheme(R.style.crazytheme), or &lt;application android:theme=&quot;@style/crazytheme&quot;&gt;. Use XML to format menu style: \res\menu\contextmenu_style.xml optionmenu_style.xml. 123MenuInflater inflator = new MenuInflater(this);inflator.inflate(R.menu.my_menu, menu);//return super.onCreateOptionsMenu(menu); Use XML to inflate a view and thus format dialogue style, click login.xml 12TableLayout loginForm = (TableLayout)getLayoutInflater().inflate(R.layout.login, null);ad.setView(loginForm); Event: Add EventListener: there exist several types of implement. We take the most common event “click” as an example to demonstrate five types of implements. Override function onClick in class OnClickListener 123456789101112 button1.setOnClickListener(new OnClickListener()&#123; public void onClick(View v)&#123; &#125;); ``` * Extend class `OnClickListener`, essentially equal to a) ```android private Button1_OnClickListener mListener1 = new Button1_OnClickListener(); class Button1_OnClickListener implements OnClickListener &#123; public void onClick(View v) &#123; &#125; mButton1.setOnClickListener(mListener1); Bind event listener in XML 123android:onClick=&quot;clickHandler&quot;function clickHandler()&#123; For key event: 123new OnKeyListener()&#123; public boolean onKey(View source, int keyCode, KeyEvent event&#123; switch(event.getKeyCode()) For long click: 12new OnLongClickListener&#123; public boolean onLongClick(View source)&#123; Override Recall Function: extend View or Activity class to override event recall functions. * Extends Activity Class 12345public class TestEvent2 extends Activity implements OnClickListener&#123; public void onClick(View v) &#123; public class TestEvent2 extends Activity&#123; boolean onKeyDown(int keycode, KeyEvent event)&#123; Extends View Class 12345public class MyButton extends Button&#123; public boolean onKeyDown(int keyCode, KeyEvent event)&#123;public class DrawView extends View&#123; public boolean onTouchEvent(MotionEvent event)&#123; Layout: Common attributes 1234android:layout_width|height=&quot;fill_parent&quot;|&quot;wrap_content&quot;|&quot;10dip&quot; android:gravity=&quot;center_horizontal&quot;|&quot;right&quot; android:background=&quot;#FF909090&quot; android:padding=&quot;3dip&quot; FrameLayout: fundamental layout, allow overlap or replacement for flexible usage. LinearLayout: example code 1android:layout_weight=&quot;1&quot; AbsoluteLayout: example code 1android:layout_x|layout_y=&quot;250dip&quot; RelativeLayout: example code 12345android:layout_below=&quot;@id/label&quot;android:layout_toLeftOf=&quot;@id/ok&quot;android:layout_alignParentRight=&quot;true&quot;android:layout_alignTop=&quot;@id/ok&quot;android:layout_marginLeft=&quot;10dip&quot; TableLayout: example code 12android:layout_span=&quot;3&quot;android:layout_column=&quot;2&quot; Make the layout scrollable, add &lt;ScrollView&gt; as in example code Componenet: EditText | TextView example code RadioGroup example code CheckBox example code Spinner: dropdown menu example code ListView: example code GridView: example code OptionsMenu: in the corner of screen example code ContextMenu: long press to show the menu. example code. Advanced Componenet: Picker: The DatePicker code is as follows and the TimePicker code is similar. 1234567891011121314151617Calendar dateAndTime=Calendar.getInstance();DatePickerDialog.OnDateSetListener mydiag=new DatePickerDialog.OnDateSetListener() &#123; public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) &#123; dateAndTime.set(Calendar.YEAR, year); dateAndTime.set(Calendar.MONTH, monthOfYear); dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth); updateLabel(); &#125;&#125;;Button btn=(Button)findViewById(R.id.dateBtn); btn.setOnClickListener(new View.OnClickListener() &#123; public void onClick(View v) &#123; new DatePickerDialog(ChronoDemo.this, mydiag, year, month, day).show(); &#125;&#125;); Number picker 123456789101112NumberPicker np = (NumberPicker) findViewById(R.id.npId);np.setOnValueChangedListener(new OnValueChangeListener()&#123; public void onValueChange(NumberPicker picker, int oldVal, int newVal) &#123; tv.setText(String.valueOf(newVal)); &#125; &#125;);np.setMaxValue(100);np.setMinValue(0); Toast 123import android.widget.Toast;Toast.makeText(Demo.this, &quot;warning msg&quot;, Toast.LENGTH_LONG).show(); Notification example code Alert dialog example code Dial phone number add permission in AndroidManifest.xml &lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;&gt;&lt;/uses-permission&gt; java code 12Intent phoneIntent = new Intent(&quot;android.intent.action.CALL&quot;, Uri.parse(&quot;tel:&quot; + inputStr));startActivity(phoneIntent); Send message add permission in AndroidManifest.xml &lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&gt; java code 123SmsManager smsManager = SmsManager.getDefault();PendingIntent sentIntent = PendingIntent.getBroadcast(act, 0, new Intent(), 0);smsManager.sendTextMessage(addressStr, null,contentStr, sentIntent, null); Gallary example code Timer 1234567891011121314151617new Timer().schedule(new TimerTask()&#123; public void run() &#123; handler.sendEmptyMessage(0x123); &#125;&#125;, 0, 200);Handler handler = new Handler()&#123; public void handleMessage(Message msg) &#123; if (msg.what == 0x123)&#123; &#125; super.handleMessage(msg); &#125;&#125;; Gist &lt;uses-sdk android:minSdkVersion=&quot;2&quot; /&gt; indicates the minimum requirement of SDK. &lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&gt; indicates the required permission. To utilize the resouce in res/values: in java code, , R.id….R.string….; in XML file, @id/…..@string/…… Set no title or fullscreen, add the following code in AndroidManifest.xml 123456789101112131415 &lt;activity android:theme=&quot;@android:style/Theme.NoTitleBar.Fullscreen&quot; ``` 1. There are two types of intents: explicit and implicit. In explicit intents you provide the name of the Activity class. In implicit intents, you tell the system what to do rather than name the Activity class to launch.## Game Development ##1. Prepare music and image resources uder folder &quot;res&quot;1. Use Handler in the MainActivity ```android hd=new Handler()&#123; public void handleMessage(Message msg)&#123; super.handleMessage(msg); switch(msg.what) MenuView 123public class ViewMainMenu extends SurfaceView implements SurfaceHolder.Callback&#123; public void onDraw(Canvas canvas)&#123; public void surfaceCreated(SurfaceHolder holder) &#123; Create on thread for each function 1public class KeyThread extends Thread&#123; Use GLRender for GameView, android opengl 12345678class MySurfaceView extends GLSurfaceView &#123; public MySurfaceView(Context context) &#123; super(context); mRenderer = new SceneRenderer(); setRenderer(mRenderer); setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY); &#125; class SceneRenderer implements GLSurfaceView.Renderer&#123;]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Adroid</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Zero-Shot Learning]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FZero-Shot%20Learning%2F</url>
+    <content type="text"><![CDATA[Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups: 1) X-&gt;Y (semantic similarity; write classifier) 2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space) Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups: 1) inductive ZSL v.s. semi-supervised/transductive ZSL 2) standard ZSL v.s. generalized ZSL (novelty detection, calibrated stacking) Ideas: Mapping: dictionary learning, metric learning, etc Embedding: multiple embedding [1], free embedding [1], self-defined embedding [1] Application: video-&gt;object(attribute)-&gt;action [1], image-&gt;object(attribute)-&gt;scene Combination: with active learning [1] [2], online learning [1] External knowledge graph: WordNet-based [1], NELL-based [2] Deep learning: graph neural network [1], RNN [2] Generate synthetic exemplars for unseen categories: synthetic images [SP-AEN] or synthetic features [SE-ZSL] [GAZSL] [f-xGAN] Datasets: small-scale datasets: CUB, AwA, SUN, aPY, Dogs, FLO large-scale dataset: ImageNet Survey and Resource: Recent Advances in Zero-Shot Recognition Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly [code]]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Word Vector]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FWord%20Vector%2F</url>
+    <content type="text"><![CDATA[SurveyFor a brief survey summarizing word2vec, GloVe, etc, please refer to this. Codeword2vec: TensorFlow GloVe: C, TensorFlow WikiCorpusDownload the WikiCorpus and use the shellscript to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Weakly-supervised Learning]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FWeakly-supervised%20Learning%2F</url>
+    <content type="text"><![CDATA[bag-level multi-instance learning: average each bag [1] update labels instance-level multi-instance learning: label constraint within each bag [1][2] flip labels based on the category similarities: [1][2][3] learn mapping from noisy labels to clean labels: [1] learn weights for epochs: [1] add weights on training losses: implicitly update labels gradient-based [1] use side information, e.g., privileged information curriculum learning: [1] select confident samples outlier detection: aunto-encoder based [1] active learning]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vote Aggregation]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FVote%20Aggregation%2F</url>
+    <content type="text"><![CDATA[We use the Dawid-Skene vote aggregation algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm. 1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet. 2) Based on the estimated correct answer for each object, compute the error rates for each annotator. 3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object. 4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Visual Object Tracking]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FVisual%20Object%20Tracking%2F</url>
+    <content type="text"><![CDATA[ProblemTracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect HistoryTracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. Meanshift: density based, ASMS https://github.com/vojirt/asms Particle filter: particle based statistical method Optical flow: match feature points between neighboring frames correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect. deep learning: GOTURN, MDNet, TCNN, SiamFC Two research groups contribute to CF methods most: Oxford: https://www.robots.ox.ac.uk/~luca/, Linkoping: http://users.isy.liu.se/en/cvl/marda26/ Comparison of Speed and Performance Survey papers Object tracking: A survey, 2006 Object tracking benchmark, 2015 Benchmark OTB50/100: http://cvlab.hanyang.ac.kr/tracker_benchmark/ VOT2016: http://www.votchallenge.net/vot2016/dataset.html Challenge Visual Object Tracking (VOT) challenge:http://www.votchallenge.net/challenges.htmlVOT2016 has released the code of many trackers: http://votchallenge.net/vot2016/trackers.html Multiple Object Tracking Challenge (MOT) challenge:https://motchallenge.net/ Detection based TrackingDetection based tracking is also named as tracking by detection or multiple object tracking. (MOT Challenge) TLD (tracking-learning-detection): update tracker and detector during learninghttp://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+        <tag>object tracking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Simple Bayesian Optimization]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FSimple%20Bayesian%20Optimization%2F</url>
+    <content type="text"><![CDATA[We release a light-weighted user-friendly Bayesian optimization tool for tuning hyper-parameters based on Gaussian profess. The code is modified based on https://github.com/fmfn/BayesianOptimization and released on https://github.com/ustcnewly/simple_Bayesian_optimization, in which README shows the dependency and usage of the tool. bo = BayesianOptimization(func, param_bound_dict): ‘func’ is a function with parameters as input and performance as output, ‘param_dict’ is a dictionary containing the upper/lower bound of each parameter. bo.explore(param_value_dict, eager=True): ‘param_value_dict’ is a dictionary containing multiple parameter values. This function does no calculate the performance corresponding to the parameter values, does not add items into bo.X and bo.Y, only add new parameters. Do not forget to set eager as True to make the added parameters take effect. bo.initialize(param_value_target_dict): compared with ‘param_value_dict’, ‘param_value_target_dict’ additionally contains the performance corresponding to the parameter values. This function does not add items into bo.X and bo.Y. bo.maximize(init_points=5, n_iter=15, **kwargs): ‘init_points’ is to include extra points for fitting. ‘n_iter’ indicates the iterative process of inferring the next point and add it for fitting. All the init points and inferred points will be added into bo.X and bo.Y. The model is fitted on bo.X and bo.Y. The algorithm requires at least two initial points. When setting ‘init_points=0’, we can use ‘bo.explore’ and ‘bo.initialization’ for initialization. For inference, acq=’ucb’ (upper confidence bound), ‘ei’ (expected improvement) or ‘poi’ (probability of improvement). ‘poi’ and ‘ucb’ work better empirically. There is a trade-off beteween exploitation and exploration. When acq=’ucb’, smaller kappa prefers exploitation while larger kappa prefers exploration. When acq=’poi’, similarly, smaller xi prefers exploitation while larger xi prefers exploration. kappa and xi can be set within [10^-3, 10^-2, …, 10^3]. For the Gaussian process model itself, it contains parameters like ‘kernel’ and ‘alpha’. Refer to scikit-learn for the details. When warnings occur in ‘gpr.py’, you can try using larger alpha, i.e., 10^-3. bo.gp.fit(bo.X, bo.Y): use Gaussian process regression to fit bo.X and bo.Y. mu, sigma = bo.gp.predict(x, return_std=True): use the learnt model to predict x, output mean and variance. utility = bo.util.utility(test_params, bo.gp): return the utility of test parameters, based on which the next point is recommended.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Self-supervised Learning]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FSelf-supervised%20Learning%2F</url>
+    <content type="text"><![CDATA[Nothing new, just a wraper of existing concepts. Extract partial information from holistic information, and learn a mapping from partial information to holistic information or the other way around. A good tutorial is here. compression(auto-encoder) colorization inpainting patches from images: relative position frames from videos: smoothness]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Reasons to Kill a Paper]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FReasons%20to%20Kill%20a%20Paper%2F</url>
+    <content type="text"><![CDATA[Strong reasons: (it is on you, bro) promise more than they deliver (this is the first work….) miss important references (closely related) results are too incremental or too unconvincing poorly written or oraganized incorrect statements Weak reasons: (not lucky) novelty is minor or incremental no technical contribution: too few formulations or the synthesis of formulations is too straightforward improvement is insignificant: less than 2 percent no component analysis/ablation study: lack self-study no qualitative analysis: only quantative analysis unfair or insufficient comparison with state-of-the-art parameter analysis: too many parameters, unclear how to set parameter, sensitive to parameters formulations are too dense and hard to follow No reasons: (bad luck) if a reviewer is determined to kill your paper, he/she can easily make up a thousand reasons based on the gists listed above and below. although everything is there, I still don’t understand (all papers assusme reviewers have more or less background) the improvement is very minor, only 5 percent (all improvements are minor except elevating from traditional learning to deep learning) just an extension of XXX, or combination of XXX and XXX (90% papers fall into this scope. generally speaking, most papers today are extensions of the first deep learning paper.) miss some details (paper space is limited, so always missing details) blablabla Key Notes:Keep readers in your mind. It should be easy to read the paper in a big hurry and still learn the main points. Treat the reviewer like a guest and show him/her around the room to see our precious. motivation, problem significance highlight contributions, difference from previous works the key sentence should appear at least 3 times at different places hierarchical structure like a folder tree, subtree can be easily folded or unfolded. Proofread: typo use word or other softwares (e.g., grammarly, ESLwriter) to check spelling or grammar mistakes. maths glossary each symbol is defined before used reuse the same symbol for different meanings the variables to be optimized: min{XXX}, max{XXX} comma or period after each formulation demon lies in the details (bold, script, etc) check reference and citation check important parts: title, figure, table, captions Paper TypesHigher accuracy, significant speed-up, scale-up, ease to implement, generalization, wide application domain, connection among seemingly unrelated topics, …]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Privileged Information]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FPrivileged%20Information%2F</url>
+    <content type="text"><![CDATA[Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik [pdf]. Applications: SVM for binary classification model the slack variable : SVM+ [pdf] model the margin: [1] [2] structural SVM: [pdf] theoretical analysis: [1] [2] Gaussian process classification GPC [pdf] L2 loss for classification/Hash multi-labeling [pdf] Hash ITQ [pdf] clustering clustering [pdf] metric learning for verification/classification ITML+ [1] [2] DML+ [pdf] OITML [pdf]: ordinal-based ITML CRF probilistic inference [pdf]: similar with multi-view, but integral over the latent privileged information space during testing random forest conditional regression forest [pdf]: design node splitting criterion matrix factorization for collaborative filtering PriMF [pdf] Maximum Entropy Discrimination MED [pdf] Settings: multi-view [pdf]: unify SVM+ with LUPI multi-task multi-class [pdf] multi-instance [pdf] active learning + LUPI [pdf] distillation + LUPI [pdf]]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>LUPI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Parameter Tuning]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FParameter%20Tuning%2F</url>
+    <content type="text"><![CDATA[Parameter searching: grid search random search Bayesian Optimization: SigOpt is providing parameter tuning service based on Bayesian optimization. This is a good place to start. hyperopt (tree parzen estimator) BayesianOptimization, Spearmint, MOE (Gaussian process) SMAC (random forest regression) related papers: [1] [2] [3] [4] Spectral Optimization: Harmonica [github] currently only supports tuning binary parameters. Model ensembling: different initialization different epochs different hyperparameters A toolkit sealing all types of parameter tuning methods: Google Vizier]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Outlier Detection]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FOutlier%20Detection%2F</url>
+    <content type="text"><![CDATA[Statistical methods use a model (e.g., Gaussian) to fit the distribution of all data use two models to fit the distributions of non-outliers and outliers separately Grubbs’ test Distance based methods the density within a neighborhood the distance from a nearest neighbor Learning based method clustering, the smallest cluster is likely to contain outliers one-class classifier (e.g., one-class SVM) binary classifier (e.g., naive bayes for spam filtering, weighted binary SVM)]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Make Presentation]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FMake%20Presentation%2F</url>
+    <content type="text"><![CDATA[The organization of slides should be hierarchical. By only reading the titles on each slide, the reader should capture the whole story. Use as many pictures, animations, videos as possible. These are called hooks, which are more enticing than text and formulas. Do not stuff too many words, or even worse, too many formulas on each slide. One point per slide and one slide per point. Unify the font, color, etc. At most three different colors (e.g., pure blue, pure red, pure black), one font type (e.g., Times New Roman (good for PDF), Arial) and three different font sizes (e.g., 32, 24, 18) to distinguish title, subtitle, and context. For non-professional readers, use as few jargons as possible. Make sure each jargon should be used before well defined. Try to replace jargons with plain words.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Incremental SVM]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FIncremental%20SVM%2F</url>
+    <content type="text"><![CDATA[1) Approximate incremental SVM: pass through the dataset many times Pegasos: select a training batch in each iteration python: https://github.com/ejlb/pegasos https://github.com/avaitla/Pegasos C: https://www.cs.huji.ac.il/~shais/code/index.html matlab: https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function sklearn.linear_model: SGD 123456clf= sklearn.linear_model.SGDClassifier(learning_rate = 'constant', eta0 = 0.1, shuffle = False, n_iter = 1)# get x1, y1 as a new instanceclf.partial_fit(x1, y1)# get x2, y2# update accuracy if neededclf.partial_fit(x2, y2) 2) Exact incremental or decremental SVM: only pass through the dataset once Incremental and Decremental Support Vector Machine Learninghttp://www.isn.ucsd.edu/svm/incremental SVM Incremental Learning, Adaptation and Optimization: extend the work abovematlab: https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB Incremental and decremental training for linear classification: extension of liblinear focusing on linear problemhttp://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+        <tag>SVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Generate Trivial Ideas]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FGenerate%20Trivial%20Ideas%2F</url>
+    <content type="text"><![CDATA[learn weights: assign different weights on different features or samples to cater for specific goal. Basically, the essence of machine learning is learning weights. e.g., KMM discrete to continous: for discrete samples or subspaces, try using integral e.g., SGF-&gt;GFK coarse-grained to fine-grained: e.g., LapGAN single to multiple single view-&gt;multi view single task-&gt;multi task single label-&gt;multi label single instance-&gt;multi instance local v.s. global common v.s. specific domain-specific category-specific flat to hierachical sequence-&gt;tree-&gt;graph vector-&gt;matrix-&gt;tensor combination A+B naive combination (a sequence of regularizers) advanced combination use auxiliary information use basis. e.g., SYNC [pdf] kernelize: project from low to high (e.g., infinite) dimension, but may not apply to deep learning methods. fill in the holes in the matrix]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Gaze Estimation]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FGaze%20Estimation%2F</url>
+    <content type="text"><![CDATA[Approaches Corneal reflection-based methods NIR or LED illumination, learning the mapping (e.g., regression, ) between glint vector and gaze direction. Appearance based methods Limbus model [pdf]: fit a limbus model (a fixed-diameter disc) to detected iris edges. Auxiliary Tools Calibration: obtain the visual axis and kappa angle for each person. Facial landmarks detection One Millisecond Face Alignment with an Ensemble of Regression Trees [pdf] [code] Continuous Conditional Neural Fields for Structured Regression [pdf] Head Pose Estimation EPnP algorithm [pdf] Dataset [MPIIGaze]: fine-grained annotation [Eyediap]: RGB-D]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[From Weak to Strong Supervision]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FFrom%20Weak%20to%20Strong%20Supervision%2F</url>
+    <content type="text"><![CDATA[Object Detection: image label: [WSDDN] points that indicate the location of the object bounding boxes Segmentation: image label: [SEC] points that indicate the location of the object scribbles that imply the extent of the object bounding boxes segmentation masks]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Euler Angle (yaw,pitch,roll)]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FEuler%20Angle%20(yaw%2Cpitch%2Croll)%2F</url>
+    <content type="text"><![CDATA[Borrowing aviation terminology, these rotations will be referred to as yaw, pitch, and roll: A yaw is a counterclockwise rotation of \( \alpha\) about the \(z\)-axis. The rotation matrix is given by \displaystyle R_z(\alpha) = \begin{pmatrix}\cos\alpha & -\sin\alpha & 0 \\\\ \sin\alpha & \cos\alpha & 0 \\\\ 0 & 0 & 1 \end{pmatrix} .A pitch is a counterclockwise rotation of \( \beta\) about the \( y\)-axis. The rotation matrix is given by \displaystyle R_y(\beta) = \begin{pmatrix}\cos\beta & 0 & \sin\beta \\\\ 0 & 1 & 0 \\\\ -\sin\beta & 0 & \cos\beta \end{pmatrix} .A roll is a counterclockwise rotation of \( \gamma\) about the \( x\)-axis. The rotation matrix is given by \displaystyle R_x(\gamma) = \begin{pmatrix}1 & 0 & 0 \\\\ 0 & \cos\gamma & -\sin\gamma \\\\ 0 & \sin\gamma & \cos\gamma \end{pmatrix} .Note that \( R(\alpha,\beta,\gamma)\) performs the roll first, then the pitch, and finally the yaw. If the order of these operations is changed, a different rotation matrix would result. For gaze direction, roll does not change gaze direction, so only yaw and pitch affect gaze direction. Given a normalized 3D vector (x,y,z), how to determine the yaw and pitch angles?The problem should be discussed based on the order of doing yaw/pitch. Consider an eye rigid model (bound with a head rigid model), aligned with original coordinate system, is facing x positive direction. Since roll has no effect on eye direction, we only perform yaw and pitch. For coordinate transformation, we consider the reverse process. The eye direction in new coordinate system is \(c_1 = (1,0,0)\) but \(c_2 = (x_0,y_0,z_0)\) in the original coordinate system. If true rotation order is yaw-&gt;pitch, then c\_2=R\_z(-\alpha)R\_y (-\beta)c\_1.. Then, \(\beta=arsin(z_0),\alpha=-artan(y_0/x_0)\). If true rotation order is pitch-&gt;yaw, then c\_2=R\_y(-\beta)R\_z (-\alpha)c\_1.. Then, \(\alpha=-arsin(y_0),\beta=artan(z_0/x_0)\). If we insert \(R_x(\gamma)\) before \(c_1\), the results won’t change, which demonstrates that roll will not influence eye direction. In other words, if the true rotation order is yaw-&gt;pitch-&gt;roll or pitch-&gt;yaw-&gt;roll, the above analysis still holds. Notice:- we used right-hand coordinate system, that is, thumb along the z-axis and fingers from x-axis to y-axis. rotation \(\theta\) around some axis means rotating counter clockwise \(\theta\) when looking along the positive direction of that axis when doing rotations in sequence, each rotation is based on the up-to-date coordinate system (x-axis, y-axis, z-axis).]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Endovascular Surgery]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FEndovascular%20Surgery%2F</url>
+    <content type="text"><![CDATA[Key words:catheter, cannulation, EM tracking (enhance visualization and provide objective metric) Endovascular Technique:Early endovascular technique: real-time fluoroscopy and 2D angiography: ionizing radiation and repeated injection of a nephrotoxic contrast agent. Image fusion techniques: project 3D CT and magnetic resonance imaging to real-time 2D fluoroscopic images, still require real-time fluroscopy. Electromagnetic (EM) tracking: an EM field is generated by the Aurora Window Field Generator, and sensors on the tips measure and transmit the roll orientation and forward motion. The veracity of EM tracking is evaluated on the basis of target registration error (TRE). System: manual simulator 2. virtual simulator (virtual reality) Task:Different locations of vessels correspond to the tasks with different difficult levels. Metric:Certain metric is required to evaluate or augment the skills of surgeon (novice, intermediate, expert). 1.expert observation and subjective score 2.number of cases 3.kinematic metrics: mapping from kinematic data to skill (classification) 3D path length spectral arc length: change of acceleration in frequency domain root mean dimensionless jerk: movement smoothness submovement number and duration catheter turn: measure the task difficulty View: 2D or 3D real-time or stored (using stored image can reduce fluoroscopy time and radiation exposure) anteroposterior/lateral/endoluminal view]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>surgery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Domain Generalization]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FDomain%20Generalization%2F</url>
+    <content type="text"><![CDATA[a) When the domain labels are known: reduce the distance between different domains: MMD [1][2], mutual information domain-invariant and domain-specific components: [1][2] b) When the domain labels are unkown: first discover multiple latent domains: cluster [1][2], max margin separation [1]]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>DA</tag>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Domain Adaptation]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FDomain%20Adaptation%2F</url>
+    <content type="text"><![CDATA[learn projection matrix: F(PXs, QXt) project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2] interpolation on the manifold SGF [pdf] GFK [pdf] sample selection: learn sample weights KMM [pdf] STM [pdf] DASVM [pdf] weighted adversarial network [1][2] domain-invariant and domain-specific components SDDL [pdf] Domain Separation Network [pdf] low-rank DL [pdf] low-rank reconstruction LTSL [pdf] RDALR [pdf] pixel-level image to image translation pair input: pixe-level domain adaptation [pdf] unpaired input: cycling GAN [pdf] combine with feature-based method: GraspGAN [pdf] A unified framework [pdf] adversarial network [1]: classification and domain confusion. The domain separation and confusion problem, which is a min-max problem, can be solved like GAN or using reverse gradient (RevGrad) algorithm. meta-learning gradients on two domains should be consistent [pdf] domain alignment layer (batch normalization): [1] [2] new setting when the categories of the source domain and the target domain do not match: open-set domain adaptation[1] or partial transfer learning[1] An old survey of deep learning domain adaptation methods [pdf] To measure data distribution mismatch, we can use MMD or KL divergence. For MMD, there are some extensions such as fast MMD, conditional MMD and joint MMD.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>DA</tag>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Camera Survey]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FCamera%20survey%2F</url>
+    <content type="text"><![CDATA[Interface Type: GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission. Color v.s. MonochromeWhen the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file. Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution. Sensor Type: CCD (Charged Coupling Devices): special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light. CMOS (Complimentary Metal Oxide Semiconductor): use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption Readout Method:Global v.s. rolling shutter: originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities. Advantage of global shutter: global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. Quantum EfficiencyThe ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity. Field of ViewFOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV. Pixel SizeA small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>optics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Bibliography Collection]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FBibliography%20Collection%2F</url>
+    <content type="text"><![CDATA[For the full name of journals and venue information of conferences, click Conference and Journal Info. For the collected full-length bib, click egbib collection.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Software Management]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Software%20Management%2F</url>
+    <content type="text"><![CDATA[raw: dpkg123456dpkg -i xxx.debdpkg -r xxx.debdpkg --purge xxx.debdpkg -L xxx.debdpkg --info xxx.debdpkg -reconfigure xxx dkpg is raw method to install without solving dependencies and existing software. mature: apt-get12345678910111213141516apt-get install softname1 softname2 softname3……apt-get remove softname1 softname2 softname3……apt-get remove --purge softname1apt-get autoremoveapt-get clean //clean /var/cache/apt/archives apt-get autoclean //clean the out-of-date files in /var/cache/apt/archivesapt-get update //update software information and database commandapt-get upgrade //update the systemapt-cache search rough_nameapt-cache show exact_namepkg-config --libs opencvpkg-config --cflags opencv pkg-config --modversion opencv apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg. more mature: aptitude (GUI)12aptitude install softname1aptitude remove softname1 aptitude is also built on dkpg and more powerful than apt-get.]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Shell Scripts]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Shell%20Scripts%2F</url>
+    <content type="text"><![CDATA[#!/bin/bash at the head of file indicates shell type strict format For if [[ $input == &quot;hello&quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression arguments $@: stores all the arguments in a list of string $*: stores all the arguments as a single string $#: stores the number of arguments shift: remove the first argument When starting login or interative shells, certain files will be executed based on the following tables: For bash:login-y interactive-y: profilelogin-y interactive-n: profilelogin-n interactive-y: bashrc For zsh:login-y interactive-y: zshenv zprofile zshrc zloginlogin-y interactive-n: zshenv zprofile zloginlogin-n interactive-y: zshenv zshrclogin-n interactive-n: zshenv]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Mount]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Mount%2F</url>
+    <content type="text"><![CDATA[Mount remote folder on Windows/Linux:12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount sharefolder between host machine and virtualbox:1sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) share_name tgt_dir]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>mount</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Log-in Failure]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Log-in%20Failure%2F</url>
+    <content type="text"><![CDATA[You may fail to log in Ubuntu due to the following reasons: /etc/environment or /etc/profile is modified to a wrong format: Just modify them back. startX is used improperly: run sudo rm -r .Xauthority* Tips: use Ctr+Alt+F1~6 corresponding to tty 1~6 to use command line]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu language]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Language%2F</url>
+    <content type="text"><![CDATA[$sudo gedit /etc/default/locale modify as follows, 12LANG=&quot;en_US.UTF-8&quot;LANGUAGE=&quot;en_US:en&quot; $locale-gen -en_US:en log out or reboot]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Environment Variable]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Environment%20Variable%2F</url>
+    <content type="text"><![CDATA[For user-wide: ~/.profile or ~/.bashrcFor system-wide: /etc/profile source ~/.bashrc or source /etc/profile can make the newly added (not the removed) environment variables for the current cmd window available immediately. However, you need to re-login to make them user-wide or system-wide. Note that after you sudo su (not using sudo privilege), the environment variables will be lost. You need to re-login. Because sudo su will erase newly exported variables. For permanent system-wide change even after sudo su, you should modify /etc/environment, which is not recommended. Because /etc/environment cannot recognize intermediate variable such as $JAVA_HOME. Sometimes misusing /etc/environment may result in your failure in login. Not recommend running sudo su and then modifying ~/.profile or ~/.bashrc.]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Crontab]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Crontab%2F</url>
+    <content type="text"><![CDATA[crontab -l //list crontab crontab -r //remove crontab crontab -e //edit crontab minute hour day-of-month month day-of-week cmd each term can be a single number, e.g., 3, or a range, e.g., 3-6, or a set, e.g., 3,5,7, or interval, e.g., */10 for example, “ /10 * sh ~/cmd.sh” means executing cmd.sh every 10 minutes.]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>crontab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu Command Lines]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FLinux%20Command%20Lines%2F</url>
+    <content type="text"><![CDATA[Sudo Management: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom. list 123list -a #including hidden fileslist -S #arrange by sizelist -t #arrange by time view text 123cathead/tail -n 10 tmp.txt #view the first/last 10 linesless #more powerful than more Change the privilege 12chmod 777 ./chmod a+x ./ Check disk or file size 12df -h du ./ --max-depth 2 -h Compress or uncompress files, refer to this link. Grep + regular expression 1grep [xyz] Search file 12345locate "keyword" #fastfind ./ -maxdepth 1 -name "*keyword*" find ./ -name "*keyword*" -size +50M -size -100M find ./ -name "*keyword*" -mmin -10 #m:modify min:minute find ./ -name "*keyword*" -exec rm -r &#123;&#125; \; Pipe commands 123ls -l | tr -s ' ' | cut -d ' ' -f 2 #tr to truncate spacels -l | sort -rnk2 #-r:reverse -n:numerical -k:k-th columnls -l | wc -l #count line xargs: 123cat python/requirements.txt | xargs -L 1 sudo pip installfind . -name "*.c" | xargs rm -rffind . -name '*.c' | xargs grep 'stdlib.h' alias: temporary alias command 12alias lnew="cd /home/niuli/caffe"unalias lnew export: The export command is one of the bash shell built-in commands, which means it is part of your shell. 123456export a=linux.comecho $aexport -n a #remove variableprintname () &#123; echo "Linuxcareer.com"; &#125;export -f printname #export function add LD_LIBRARY_PATH 12echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib' &gt;&gt; ~/.bashrcsource ~/.bashrc shellscript sample 12345678910111213141516171819202122232425#!/bin/bashread -p "Please input your first name: " echo -e "\nYour full name is: $firstname $lastname" test ! -e $filename &amp;&amp; echo "The filename '$filename' DO NOT exist" &amp;&amp; exit 0test -f $filename &amp;&amp; filetype="regulare file" test -d $filename &amp;&amp; filetype="directory" [ "$yn" == "Y" -o "$yn" == "y" ] &amp;&amp; echo "OK, continue" &amp;&amp; exit 0if [ "$yn" == "Y" ] || [ "$yn" == "y" ]; then echo "OK, continue" elif [ "$yn" == "N" ] || [ "$yn" == "n" ]; then echo "Oh, interrupt!" else echo "I don't know what your choice is" fiwhile [ "$yn" != "yes" -a "$yn" != "YES" ] do read -p "Please input yes/YES to stop this program: " yn donefor animal in dog cat elephant do echo "There are $&#123;animal&#125;s.... " done]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows Command Lines]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FWindows%20Command%20Lines%2F</url>
+    <content type="text"><![CDATA[zip/unzip winrar x -y -ibck zip_file_name unzip_file_name //x means unzip, -y means yes to interrupted queries, -ibck means running in the background generate the file list under one folder dir D:\test /b &gt;list.txt or dir D:\test /b &gt;list.xls combine multiple compressed volumes copy /b logs.tar.gza* logs.tar.gz]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Install Ubuntu under Windows]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FInstall%20Ubuntu%20under%20Windows%2F</url>
+    <content type="text"><![CDATA[For MRB file system Install from CD: the simplest way, but many desktops don’t have CD-ROM nowadays. Install from memory disk: use universal USB installer or refus to write .iso file into memory disk. to enable booting from USB installer, we should turn off fast booting in the OS and disable secure boot in the BIOS. Install from hard disk: copy .iso along with vmlinuz.efi and initrd.lz in Casper as well as .disk under Disk C. Make sure Disk C is (hd0,N) in the disk manager. Open easyBCD and configure NeoGrub by editing the menu.lst as follows: 1234title Install Ubuntu 14.04 LTS root (hd0,N) kernel (hd0,N)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8initrd.lz (hd0,N)/initrd.lz Remember to modify N and iso file name. install Ubuntu after entering the NeoGrub term. Remember to execute sudo umount –l /isodevice first. add the Linux/BSD boot term in easyBCD and choose grub2 instead of grub(legacy), otherwise the screen may be black. if grub command line appears after booting Ubuntu system. Try to type the following codes: 1234root (hd1,1)kernel /boot/vmlinuz-3.19.0-25-generic root=/dev/sdb2initrd /boot/initrd.img-3.19.0-25-genericboot Pay attention to (hd1,1), /dev/sdb2, and the linux kernel version. After typing root (hd1,1), x83 should be returned.Or configure NeoGrub by adding the following codes and use the NeoGrub to boot Ubuntu. You may want to know more about grub and MBR, this blog is a good start. Tips: Windows disks have basic ones and dynamic ones. Don’t install Ubuntu on dynamic ones. Converting basic disk to dynamic disk is easy while the opposite is time-consuming and needs formatting. In Windows7, one disk can have 3 primary zones and 1 extended zones (containing logic zones). Installing Ubuntu on extended zones may be possible, but installing it on primary zones is preferred. Change the boot order under Ubuntu: /boot/grub/grub.cfg is generated from /etc/grub.d and /etc/default/grub. So we have two ways: a) reset GRUB_DEFAULT=N in /etc/default/grub. b) mv /etc/grub.d/30_os-prober /etc/grub.d/06_os-prober. Don’t forget sudo update-grub Change the boot order under Windows7: use easyBCD. For the Ubuntu disk partition, generally, / and swap are enough. Sometimes, we need /home and /boot. The size of swap is comparable with the memory size. The size of /boot is less than 1G. Note that when parting disk for installing Ubuntu, we have two choices for booting management device in the bottom dropdown menu. First, by default, then Windows guides Ubuntu when booting. Second, change to the boot folder of Ubuntu, then Ubuntu guides Windows when booting. For UEFI file systemNo need to make a partition for boot. Keep the booting mangement device in the bottom dropdown menu the default EFI (EPS) partition of Windows. For booting problem, we can use rEFInd to locate the efi file. tips: In Windows, we can assign a disk index to the EPS partition and operate on it via notebook with administrative privilege. For Windows, the key efi files are bootx64.efi and bootmgfw.efi]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BIOS]]></title>
+    <url>%2F2018%2F09%2F07%2FOS%2FBIOS%2F</url>
+    <content type="text"><![CDATA[If something is wrong when attempting to enter the BIOS, try the following approaches: press F2, F12, ESC, DEL change the cable, adaptor, interface, etc (hardware reason) update BIOS to the latest version for Windows10, settings-&gt;recover-&gt;firmware close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>BIOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu VNC]]></title>
+    <url>%2F2018%2F09%2F07%2Fnetwork%2FUbuntu%20VNC%2F</url>
+    <content type="text"><![CDATA[Server: Install VNC server under Ubuntu: $sudo apt-get install vnc4server Configure the VNC server, $vi ~/.vnc/xstartupchange the style to gnome-session &amp; in the last line. start the VNC server: $vncserver Client: Install VNC client under Windows: use http:\IP:580$ID to log in. Tips: For 10060 error, run $iptables -F to close firewall.]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>VNC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu SSH]]></title>
+    <url>%2F2018%2F09%2F07%2Fnetwork%2FUbuntu%20SSH%2F</url>
+    <content type="text"><![CDATA[Server: run $sudo apt-get install openssh-server run $ps -A |grep ssh.If there is sshd, then ssh-server has been started,else run $sudo /etc/init.d/ssh start to start ssh-server. Tips: To stop ssh-server, execute $sudo /etc/init.d/ssh stop.To modify the configuration, edit /etc/ssh/sshd_config. Client: ssh-client is usually already installed. If not, run$sudo apt-get install openssh-client. After installing ssh-client, run $ssh username@192.168.1.112.]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Remote Desktop Connection]]></title>
+    <url>%2F2018%2F09%2F07%2Fnetwork%2FRemote%20Desktop%20Connection%2F</url>
+    <content type="text"><![CDATA[Remote Connect to Ubuntu in Windows a) cmdline: putty, secureCRT b) window: xrdp: http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html12345sudo apt-get install xrdpsudo apt-get install vnc4serversudo apt-get install xubuntu-desktopecho "xfce4-session" &gt;~/.xsessionsudo service xrdp restart xrdp mm process login response login failedWhen this error occurs, try the following methods, followed by “sudo service xrdp restart”. delete vnc processes 12ps -ef | grep vnckill -9 XXX delete X sessions, .xrdp, .X11-unix, .X0-20 1cd /tmp &amp;&amp; ls -a modify “MaxSessions” number sudo vim /etc/xrdp/sesman.ini]]></content>
+      <categories>
+        <category>network</category>
+      </categories>
+      <tags>
+        <tag>remote desktop connection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[kinit]]></title>
+    <url>%2F2018%2F09%2F07%2Fnetwork%2Fkinit%2F</url>
+    <content type="text"><![CDATA[Credential ticket for principles without need to type in password, from MIT Kerberos.A ticket has ticket lifetime and renewable lifetime.Ticket lifetime is shorter than renewable lifetime.For liniu@ANT.AMAZON.COM, the default ticket lifetime is 10h (resp., 6h40m) when using kinit -l (resp., -r), why? From KDC server side: modify the max_life in /etc/krb5kdc/kdc.conf and restart the KDC daemon /var/kerberos/krb5kdc/kdc.conf Via “kadmin”, changed the “maxlife” for a test principal via “modprinc -maxlife 14hours “ From Kerberos client side:modify in /etc/krb5.conf In fact, the ticket lifetime is the minimum of the following values: max_life in kdc.conf on the KDC servers. ticket_lifetime in krb5.conf on the client machine. maxlife for the user principal. maxlife for the service principal “krbtgt/[REALM_in_CAPS]” requested lifetime in the ticket request. For example: kinit -l 14h maxlife for the AFS service principal “afs/[realm_in_lower_case]”, if you want to increase the lifetime of your AFS token. commonly used commands:12klistkdestroy An example: Ticket cache: FILE:/tmp/krb5cc_4126574_GM19CtDefault principal: liniu@ANT.AMAZON.COM Valid starting Expires Service principal08/18/16 08:13:20 08/18/16 18:13:20 krbtgt/ANT.AMAZON.COM@ANT.AMAZON.COM time format is like 4d5h30m 123456kinit -l lifetime //request a ticket with ticket lifetime of lifetime-r renewable-life //request renewable ticket with a total lifetime of renewable-life//I'm still unclear about the difference between -l and -r-f //forwardable-F //non-forwardable-R //requests renewal of the ticket-granting ticket. No need for password but must be within ticket lifetime instead of renewable lifetime. Automatically renew tickets: Since you need to renew a ticket before its ticket lifetime expires, the easiest way to renew tickets is to put it in a cron job since renewing a ticket is non-interactive. Run ‘crontab -e’ to edit the file in /var/spool/cron/. Use ‘crontab -l’ to see the file. 123456789# Renew the kerberos ticket every 8 hours, this will extend the lifetime of # the ticket until the renew lifetime expiers, after that this command will # fail to renew the ticket and you will need to interactively # run `kinit -f -l 86400 -r 2592000`## minute hour day_of_month month weekday command59 00,08,16 * * * /usr/kerberos/bin/kinit -R//59 minute, 0 or 8 or 16 o&apos;clock, any, any, any, the command to be executed is &apos;/usr/kerberos/bin/kinit -R&apos;//some short notations: 1-3 means 1,2,3; */15 means every 15 Key Notes: do not use sudo kinit when no credential ticket can be found, add -c $KRB5CCNAME, where KRB5CCNAME is the environment variable recording the path of credential ticket.]]></content>
+      <categories>
+        <category>network</category>
+      </categories>
+      <tags>
+        <tag>kinit</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GitHub+Hexo for Personal Blog]]></title>
+    <url>%2F2018%2F09%2F07%2Fnetwork%2FGitHub%2BHexo%20for%20Personal%20Blog%2F</url>
+    <content type="text"><![CDATA[Preinstallation install Node.js https://nodejs.org/en/download/ install git https://git-scm.com/download/win install hexo: right click “git bash here”, $npm install hexo-cli -g SSH keys check whether ssh exists $cd ~/.ssh. If not, $ssh-keygen -t rsa -C &quot;your_email@example.com&quot; to generate key file get the SSH key $cat ~/.ssh/id_rsa.pub create the key in github: account setting-&gt;SSH check the SSH key $ ssh -T git@github.com create an empty folder as Hexo folder 123$hexo init$hexo generate$hexo server local test: http://localhost:4000/ deploy local Hexo folder in Hexo folder, modify the _config.yml file as follows, 1234deploy: type: git repository: $(SSH address from github) branch: master in Hexo folder, install the deployer by $npm install hexo-deployer-git --save type $hexo g and $hexo d, or $hexo d -g. change theme: go to the folder “/themes” and git clone https://github.com/iissnan/hexo-theme-next. config the theme in the file “/themes/XXXX/_config.yml”. local search $npm install hexo-generator-searchdb --save in the site _config.yml file, set local_search: enable: true. paste the following lines anywhere. 12345search: path: search.xml field: post #post, page, all format: html limit: 10000 add new page for some subcategory (e.g., write): in the theme _config.yml file 12menu: write: /categories/write add social links: in the theme _config.yml file 1234# Social linkssocial: GitHub: https://github.com/ustcnewly Linkedin: https://www.linkedin.com/in/li-niu-b0905133/ latex: install $npm install hexo-math --save and restart Hexo in the theme _config.yml file, modify as follows (notice that cdn may change) 12345# MathJax Supportmathjax: enable: true per_page: false cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML to address the conflict between MathJax and Hexo 12$npm uninstall hexo-renderer-marked --save$npm install hexo-renderer-kramed --save push posts to the top $ npm install hexo-generator-index-pin-top --save. for the target post, add top: true in Front-matter, or top: 10 with larger number indicating higher priority. insert code block 123&#123;% codeblock lang:python %&#125;code snippet&#123;% endcodeblock %&#125; insert image 1&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt; Tips: If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats). Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors. set ignorecase as false in the file .deploy_git/.git/config clean the folder .deploy_git hexo clean and hexo d -g]]></content>
+      <categories>
+        <category>network</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GPU Cuda and CuDNN]]></title>
+    <url>%2F2018%2F09%2F07%2Fhardware%2FGPU%2FGPU%20Cuda%20and%20CuDNN%2F</url>
+    <content type="text"><![CDATA[GPU look up GPU information: lspci or lshw -C display NVIDIA system management interface, monitor GPU usage: nvidia-smi Driver check the latest driver information on http://www.nvidia.com/Download/index.aspx. Then, look up driver information on local machine: cat /proc/driver/nvidia/version Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers Install NVIDIA GPU driver using apt-get 123sudo add-apt-repository ppa:Ubuntu-x-swat/x-updatessudo apt-get updatesudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings Install NVIDIA GPU driver using *.run file downloaded from http://www.nvidia.com/Download/index.aspx Hit CTRL+ALT+F1 and login using your credentials. kill your current X server session by typing sudo service lightdm stop or sudo stop lightdm Enter runlevel 3 by typing sudo init 3 and install your *.run file. You might be required to reboot when the installation finishes. If not, run sudo service lightdm start or sudo start lightdm to start your X server again. CUDA Install Cuda Download the latest version from NVIDIA websitehttps://developer.nvidia.com/cuda-downloads 1sudo dpkg -i cuda-repo-ubuntu1404-7*amd64.deb or use the following way which is not recommended 12sudo apt-get updatesudo apt-get install cuda and then add into PATH and LD_LIBRARY_PATH 123echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrcecho 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrcsource ~/.bashrc check Cuda version after installation: nvcc -V CuDNNCuDNN is to accelerate Cuda, from https://developer.nvidia.com/rdp/form/cudnn-download-survey, just download compressed package.Email: ustcnewly@gmail.compasswd: the same for RICE netID123cd $CUDNN_PATH sudo cp include/* /usr/local/cuda/include/sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links]]></content>
+      <categories>
+        <category>hardware</category>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>GPU</tag>
+        <tag>CUDA</tag>
+        <tag>CuDNN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow Learning Note]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FTensorFlow%20Learning%20Note%2F</url>
+    <content type="text"><![CDATA[Initialization shape = [batch,height,width,channel]constant:1234tf.zeros(shape)tf.constant(0.4, shape)tf.random_norm(shape, stddev=1e-1)tf.truncated_norm(shape, stddev=1e-1) variable:12345tf.get_variable(varname, shape=[5,5,64,192], initializer=XXX)initializer=tf.zeros_initializer() # biasinitializer=tf.random_normal_initializer(0.0, 0.02) initializer=tf.truncated_normal_initializer(0.0, 0.02)initializer=tf.contrib.layers.xavier_initializer() # weight Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal. Summary for tensorboard 1234tf.summary.scalar('total_loss', total_loss) #scalar, histogram, etcself.merged = tf.summary.merge_all()train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) #include the sess graphtrain_writer.add_summary(summary, ibatch) after running the code, open tensorboard tensorboard --logdir=&#39;./train&#39; Checkpoint 12345678910# save all the variablessaver = tf.train.Saver() # save partial variables saver = tf.train.Saver(&#123;"my_v2": v2&#125;)# save and restoresaver.save(sess, "/tmp/model.ckpt")saver.restore(sess, "/tmp/model.ckpt")# restore partial variablesinit_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())init_fn(sess) inspect the checkpoint file1234567from tensorflow.python import pywrap_tensorflow checkpoint_path = os.path.join(model_dir, "model.ckpt") reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path) var_to_shape_map = reader.get_variable_to_shape_map() for key in var_to_shape_map: print("tensor_name: ", key) print(reader.get_tensor(key)) # Remove this is you want to print only variable names Layer convolutional layer 1234kernel = tf.Variable(tf.zeros([5,5,64,192]))tf.nn.conv2d(x, kernel, strides=[1, 1, 1, 1], padding='SAME') # padding is 'SAME' or 'VALID' depending on stride is 1 or largertf.nn.bias_add(prev_layer, bias) dropout layer 123keep_prob = tf.placeholder(tf.float32)# set keep_prob as 0.5 during training and 1 during testingtf.nn.dropout(h_fc1, keep_prob) pooling layer 1tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='VALID') loss layer 12tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y)) tf.nn.l2_loss(prev_layer) metric layer 12# calculate top-k accuracytf.nn.in_top_k(logits, label_holder, k) # the accuracy of top k activation layer1tf.nn.relu(prev_layer) other layers123tf.one_hot(self.input_class, self.n_class)tf.nn.embedding_lookup(codebook, indices)tf.nn.lrn() # legacy Common Operations1234567891011121314151617tf.matmultf.powtf.diag_parttf.reduce_sumtf.reduce_meantf.nn.softmaxtf.tile(a,(2,2)) tf.nn.embedding_lookupsim.flattentf.squeezetf.reshapetf.concat(values=[a,b,c], axis=3)tf.gather #get indexed value, only on 0-dimtf.gather_ndtf.map_fntf.scan_fntf.fold1/foldr Training and testing training stage 1234optimizer = tf.train.GradientDescentOptimizer(0.01)train = optimizer.minimize(loss)for i in range(1000): #note the iteration number here sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;) testing stage 12acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125; Queue For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details. ``python with tf.Session(config=config) as sess: coord = tf.train.Coordinator() threads = tf.train.start_queue_runners(sess=sess, coord=coord) sess.run(tf.initialize_local_variables()) #main code coord.request_stop() coord.join(threads) 123456789* With tfrecord and slim, using queue is much easier by using `slim.queues.QueueRunners` ```python with tf.Session(config=config) as sess: with slim.queues.QueueRunners(sess): ``` or `sv.managed_session` ```python sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None) with sv.managed_session() as sess: Sample code of generating tfrecord dataset and reading data via queue can downloaded here Utils check tensorflow version 1tf.__version__.split('.')[0] != "1" count parameter numbers 1parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) for v in tf.trainable_variables()])]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow Input Data with Queue]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FTensorFlow%20Input%20Data%20with%20Queue%2F</url>
+    <content type="text"><![CDATA[Input raw data (e.g., text, image address). There are many different implementations of queue. feature-label pair: [enqueue-op] [fetch-func] [slice-input-producer] [string-input-producer] image-image pair: [slice-input-producer][string-input-producer] A more elegant way is converting raw data to tfrecord format. Tips: setting large number_of_threading (e.g., 10) is helpful. shuffle the training samples to avoid homogenuity when necessary. place the training data in local disk instead of removable disk (consider I/O speed).]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow GPU Usage]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FTensorFlow%20GPU%20Usage%2F</url>
+    <content type="text"><![CDATA[All the GPU memory will be notoriously filled up even if you designate one GPU device. maximum fractiongpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) automatic growthconfig = tf.ConfigProto()config.gpu_options.allow_growth=Truesess = tf.Session(config=config) visible GPU: os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables use multiple GPUsOne typical to use mulitple GPU is to average gradients, please refer to the sample code.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>TensorFlow</tag>
+        <tag>GPU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Slim Learning Note]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FSlim%20Learning%20Note%2F</url>
+    <content type="text"><![CDATA[slim = tf.contrib.slim Layersfor certain functions, assign default values to certain parameters with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....) https://www.tensorflow.org/api_docs/python/tf/contrib/layers slim.conv2d slim.max_pool2d slim.avg_pool2d slim.dropout slim.batch_norm slim.softmax tf.repeat(inputs, repetitions, layer, args, *kwargs) class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])): net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net) Load pretrained modelNote that initialization function must be associated with sess.12init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())init_fn(sess) Batch normalizationWith slim:123456789batch_norm_params = &#123; # Decay for the moving averages. 'decay': batch_norm_decay, # epsilon to prevent 0s in variance. 'epsilon': batch_norm_epsilon, # collection containing update_ops. 'updates_collections': tf.GraphKeys.UPDATE_OPS, &#125;slim.arg_scope([slim.conv2d], normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params) For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded moving-mean an moving_variance are used. To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways. The first method:12345678update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)variables_to_train = _get_variables_to_train()grads_and_vars = optimizer.compute_gradients(total_loss, variables_to_train)grad_updates = optimizer.apply_gradients(grads_and_vars)update_ops.append(grad_updates)update_op = tf.group(*update_ops)with tf.control_dependencies([update_op]): train_op = tf.identity(total_loss) The second method:123update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)with tf.control_dependencies(update_ops): train_op = optimizer.minimize(loss) The third method:1train_op = slim.learning.create_train_op(total_loss, optimizer) Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings. However, when trained on small-scale datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue: in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch. decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs. without slim: tf.nn.batch_normalization, no moving_mean/variance1234567891011def batchnorm(bn_input): with tf.variable_scope("batchnorm"): # this block looks like it has 3 inputs on the graph unless we do this bn_input = tf.identity(bn_input) channels = bn_input.get_shape()[3] offset = tf.get_variable("offset", [channels], dtype=tf.float32, initializer=tf.zeros_initializer()) scale = tf.get_variable("scale", [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(1.0, 0.02)) mean, variance = tf.nn.moments(bn_input, axes=[0, 1, 2], keep_dims=False) normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=1e-5) return normalized Utilsprint all model variables12345tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) # all the global variablesslim.get_model_variables() or tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) #variables defined by slim (tf.contrib.framework.model_variable)#excluding gradient variablestf.trainable_variables() #excluding graident variables and batch_norm variables (moving_mean and moving_variance) print regularization losses(weight decay) and other losses123slim.losses.get_regularization_losses()slim.losses.get_losses() # losses except weight decayslim.losses.get_total_loss(add_regularization_losses=False)]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>TensorFlow</tag>
+        <tag>slim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[YOLO Code Note]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FYOLO%20Code%20Note%2F</url>
+    <content type="text"><![CDATA[note net.batch = net.batch * net.subdivisions // the input batch number is divided by subdivision. preconfigured file 123cfg/voc.data -&gt; list *optionscfg/yolo-voc.cfg -&gt; char *cfgfiledarknet19_448.conv23 -&gt; char* weightfile every 10 times, change the input size the maximum number of bounding boxes in one image is hard coded as 30 each training image is tweaked by jitter, hue, crop, and etc. multiple threads create multiple threads when using multiple GPUs: -gpus 0,1 12345if(ngpus == 1)&#123; loss = train_network(net, train);&#125; else &#123; loss = train_networks(nets, ngpus, train, 4);&#125; use additional thread to load data to save time 12pthread_t load_thread = load_data(args);pthread_join(load_thread, 0); // wait for the thread to end load partial weights// load partial weights up to certain layerparser.c: load_weights_upto(network *net, char *filename, int start, int cutoff) loading bounding boxes// note that bounding box path is obtained based on image path, e.g., change “images” to “labels”. bounding box format: class_id x y w h. For the detaill, check data.c: fill_truth_detection detection/region layer all the pred/truth boxes coordinates (x,y,w,h) are scaled to (0,1) scalar 1234outputs = h * w * n * (coords + 1 + classes); // h=13,w=13,n=5,classes=20, coords=4// top-down layout: n-&gt;coords(x,y,w,h)+ obj_score + class_probs&gt;h&gt;wtruths = 30 * (coords + 1); // 30 is the max number of ground-truth boxes, which is hard coded//top-down layout: 30-&gt;coords(x,y,w,h)+class_id the size of vectors 1234output: batch*outputstruth: batch*truthsdelta: the same as outputbiases: 2*#anchor scales detection idea Each feature map pixel is associated with 10 anchor scales, the detection bounding box can be obtained based on the feature map pixel location and anchor scale, followed by being corrected by bounding box regression as follows. Assume output is ($\Delta i, \Delta j, \Delta w, \Delta h$), then the corrected prediction box isx'=(i+\Delta i)/w, y'=(j+\Delta j)/h, w'=\exp(\Delta w)*aw/w, h'=\exp(\Delta h) * ah/h. For each feature map pixel and each anchor scale, calculate its overlap with any ground-truth bounding boxes to get its object score, then update gradients w.r.t. obj_score. For each ground-truth bounding box, find the corresponding feature map pixel with the most fittable anchor scale, then update gradients w.r.t. box regression and class probabilities. update gradient most of the loss terms are square loss, which can be easily computed obj_score: if best_iou&gt;thresh, set as 0, otherwise 1l.delta[obj_index] = l.noobject_scale * (0 - l.output[obj_index]); box regression// add higher weights on small regions 1delta_region_box(box truth, float *x, float *biases, int n, int index, int i, int j, int w, int h, float *delta, float scale, int stride) class probabilities 1delta_region_class(l.output, l.delta, class_index, class, l.classes, l.softmax_tree, l.class_scale, l.w*l.h, &amp;avg_cat); experimental observation reducing the number of layers may improve the performance due to the enlarged feature map. increasing the number of anchors does not help (5 or 10 is adequate enough). the dynamic version (dynamically shrink or expand the network scale) is better than the static version the default hyper parameters are pretty good. No significant improvement is obtained by tuning hyper parameters.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Object Detection Loss]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FObject%20Detection%20Loss%2F</url>
+    <content type="text"><![CDATA[Fast RCNNL(p,u,t^u,v) L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v), where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is a smooth L1 loss. Faster RCNNL(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*), where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen) and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN. fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes. SSD By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box. l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g), where $L_{conf}$ is a (K+1)-class softmax loss, and L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.YOLO\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2 + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2Note that for the noobj anchorboxes, there is only one loss term involved.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Multi-scale Problem for Object Detection]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FMulti-scale%20Problem%20for%20Object%20Detection%2F</url>
+    <content type="text"><![CDATA[This problem is well discussed in https://arxiv.org/pdf/1506.01497.pdf. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map. (a) The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. (b) The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. (c) As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[From Anchor to ROI]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FFrom%20Anchor%20to%20ROI%2F</url>
+    <content type="text"><![CDATA[layer areaFrom layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, r_{i+1} = (r_i+2p_i-k_i)/s_i+1.In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area. coordinate mapNow consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$, x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.The above coordinate system starts from 1. When the coordinate system starts from 0, x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,which can be simplified as x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case. By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution x_1 = \alpha_L x_{L}+\beta_L,in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ anchor box to ROIGiven two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Caffe]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fcaffe%2FCaffe%2F</url>
+    <content type="text"><![CDATA[Fundamental Stuff: Caffe Tutorial Caffe Official Slides Key Notes: Required Packages: CUDA OpenCV BLAS: (Basic Linear Algebra Subprograms)operations like matrix multiplication, matrix addition,both implementation for CPU(cBLAS) and GPU(cuBLAS).provided by MKL(INTEL), ATLAS, openBLAS, etc. Boost: a c++ library, use some of its math functions and shared_pointer. glog,gflags:provide logging &amp; command line utilities. Essential for debugging. leveldblmdb: database io for your program. Need to know this for preparing your own data. protobuf: an efficient and flexible way to define data structure. Need to know this for defining new layers.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>Caffe</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Variants of Convolution in Deep Learning]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FVariants%20of%20Convolution%20in%20Deep%20Learning%2F</url>
+    <content type="text"><![CDATA[Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$. Pointwise convolution: pointwise fully connected across all the channels. Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in ShuffleNet. Depthwise separable convolution = depthwise convolution + pointwise convolution Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for segmentation. Deformable convolution (left) and spatial transformation network (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation. Squeeze-and-Excitation: learn different weights for each channel.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Tricky Back Propagation]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FTricky%20Back%20Propagation%2F</url>
+    <content type="text"><![CDATA[Some operations are indifferentiable, which causes difficulties for back propagation. sample from distribution: reparameterization trickAuto-Encoding Variational Bayes argmax: soft argmaxGradient Descent Optimization of Smoothed Information Retrieval Metrics crop: two-dimension boxcar functionLook Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-grained Image Recognition delta function: lookup table+blur kernelReblur2Deblur: Deblurring Videos via Self-Supervised Learning]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Image to Image with Deep Learning]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FImage%20to%20Image%20with%20Deep%20Learning%2F</url>
+    <content type="text"><![CDATA[Learn the input image: texture synthesis Texture synthesis using convolutional neural networks. [pdf] feature inversion Understanding Deep Image Representations by Inverting Them. style transfer = feature inversion + texture synthesis Image style transfer using convolutional neural networks. [pdf] [code] (no training, test is slow) Perceptual Losses for Real-Time Style Transfer and Super-Resolution. [pdf] (train a network for each style using style image and content image as inputs, real-time test, belong to one-to-one image mapping) Texture Networks: Feed-forward Synthesis of Textures and Stylized Image. [pdf] A learned representation for artistic style. [pdf] (train a unified network for multiple styles) Learn the mapping from image to image super-resolution Learning a deep convolutional network for image super-resolution. [pdf] Accurate Image Super-Resolution Using Very Deep Convolutional Networks [pdf] [code] (VGG learns residual) Accelerating the Super-Resolution Convolutional Neural Network. [pdf] (hourglass structure, deconv) Deeply-recursive convolutional network for image super-resolution. [pdf] Photo-realistic single image super-resolution using a generative adversarial network. [pdf] (content_loss, adversarial loss) inpainting or hole-filling Deep Image Inpainting. [pdf] Context Encoders: Feature Learning by Inpainting [pdf] [code] colorization Colorful image colorization. [pdf] [code] Learning Representations for Automatic Colorization. [pdf] [code denoising Image Restoration Using Very Deep Convolutional EncoderDecoder Networks with Symmetric Skip Connections [pdf] [code]:(conv and deconv) decompression Compression Artifacts Reduction by a Deep Convolutional Network [pdf] dehaze Dehazenet: An end-to-end system for single image haze removal [pdf] demosaicking Deep joint demosaicking and denoising [pdf] pixel-level domain adaptation Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network. [pdf] [code] feature learning DCGAN: Unsupervised representation learning with deep convolutional generative adversarial networks. [pdf] [code] general Image-to-Image Translation with Conditional Adversarial Nets. [pdf] [code] (pixelGAN) For unpair training samples, the following three GANs, i.e., dualGAN, cycleGAN, and discoGAN, are almost the same. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. [pdf][code] (CycleGAN) DualGAN: Unsupervised Dual Learning for Image-to-Image Translation [pdf] Learning to Discover Cross-Domain Relations with Generative Adversarial Networks. [pdf] (discoGAN) HD GAN High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs. [pdf]: extend pixel2pixel GAN with coarse-to-fine strategy.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GAN]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FGAN%2F</url>
+    <content type="text"><![CDATA[The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo problems: oscillation: can train for a very long time without clearly generating better samples. mode collapse: min-max is not equal to max-min Trickstricks for training GAN: https://github.com/soumith/ganhacks soft label: replace 1 with 0.9 and 0 with 0.3 train discriminator more times (e.g., 2X) than generator use labels: auxiliary tasks normalize inputs to [-1, 1] use tanh before output use batchnorm (not for the first and last layer) use spherical distribution instead of uniform distribution leaky relu stability tricks from RL Variants: EBGAN: replace discriminator with autoencoder LSGAN: replace cross-entropy loss with least square loss Wasserstein GAN: replace discriminator with a critic function LAPGAN: coarse-to-fine using laplacian pyramid seqGAN: generate discrete sequences Materials:A good tutorial: https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>GAN</tag>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Face Verification and Recognition]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FFace%20Verification%20and%20Recognition%2F</url>
+    <content type="text"><![CDATA[Framework:The similarity between two faces Ia and Ib can be unified in the following formulation: M[W(F(S(Ia))), W(F(S(Ib)))] in which S is synthesis operation (e.g., face alignment, frontalization), F is robust feature extraction, W is transformation subspace learning, M means face matching algorithm (e.g., NN, SVM, metric learning). Paper:DeepID 1,2,3: Deep learning face representation from predicting 10,000 classes FaceNet: A Unified Embedding for Face Recognition and Clusteringcode: https://cmusatyalab.github.io/openface/ (triplet loss) DeepFace: Closing the Gap to Human-Level Performance in Face Verification (3D face alignment) A Discriminative Feature Learning Approach for Deep Face Recognitioncode: https://github.com/ydwen/caffe-face Unconstrained Face Verification using Deep CNN Features (Joint Bayesian Metric Learning)code: https://github.com/happynear/FaceVerification A Light CNN for Deep Face Representation with Noisy Labelcode: https://github.com/AlfredXiangWu/face_verification_experiment Dataset:LFW: http://vis-www.cs.umass.edu/lfw/ IJB-A: (free upon request) https://www.nist.gov/itl/iad/image-group/ijba-dataset-request-form FERET: (free upon request) https://www.nist.gov/itl/iad/image-group/color-feret-database CMU Multi-Pie: (not free) http://www.cs.cmu.edu/afs/cs/project/PIE/MultiPie/Multi-Pie/Home.html CASIA WebFace Database: (free upon request) http://www.cbsr.ia.ac.cn/english/CASIA-WebFace-Database.html MS-Celeb-1M: https://www.microsoft.com/en-us/research/project/ms-celeb-1m-challenge-recognizing-one-million-celebrities-real-world/ MegaFace: (free upon request) http://megaface.cs.washington.edu/dataset/download_training.html Cross-Age Celebrity Dataset: http://bcsiriuschen.github.io/CARC/ VGG face: http://www.robots.ox.ac.uk/~vgg/data/vgg_face/]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>face verification</tag>
+        <tag>face recognition</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Energy Efficient Deep Learning]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FEnergy%20Efficient%20Deep%20Learning%2F</url>
+    <content type="text"><![CDATA[Light-weighted network structure Xception: strictly speaking, not light-weighted CNN SqueezeNet MobileNet ShuffleNet SqueezeNet, MobileNet, and ShuffleNet share the same idea: decouple the temporal convolution and spatial convolution to reduce the nummber of parameters, sharing the similar spirit with Pseudo-3D Residual Networks. SqueezeNet is serial while MobileNet and ShuffleNet are parrallel. MobileNet is a special case of ShuffleNet when using only one group. Low-rank approximation ($k\times k \times c\times d = k\times k\times c\times d’ + 1\times 1\times d’\times d$) also falls into the above scope. The difference between MobileNet and Low-rank approximation is layerwise convolution or not. Tweak network structure prune nodes based on certain criteria (e.g., response value, Fisher information): require special implementation and take up more space than expected due to irregular network structure. Compress weights Quantization (fixed bit number): learn codebook and encode weights. Fine-tune codebook after quantizatizing weights, which averages the gradient of weights belonging to the same cluster. Extreme cases are binary net and ternary net. Binary (resp, ternary) net are quantized to [-1, 1] (resp, [-1, 0, 1]), with different weights $\alpha$ for different layers. Huffman Coding (flexible bit number): applied after quantization for further compression. Computation spatial domain to frequency domain: convert convolution to pointwise multiplication by using FFT Sparsity regularization L0 norm Good introduction slides: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Deep Learning Platform]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FDeep%20Learning%20Platform%2F</url>
+    <content type="text"><![CDATA[Ready-made DevBox: Dell Alienware: at most 2 GPUs newegg: 4 GPUs Lambda Labs: 4 GPUs Assemble: cheap, but no warranty part list: most things are out of date. Tom’s hardware is a good website for comparison. Nvidia microarchitecture: maxwell-&gt;pascal-&gt;volta DGX-systems GPU cloud]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Attention RNN]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FAttention%20RNN%2F</url>
+    <content type="text"><![CDATA[survey paper: survey on the attention based RNN model and its applications in computer vision [pdf] soft/hard attention: binary weight or soft weight item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise. earliest papers: Neural Machine Translation by Jointly Learning to Align and Translate [pdf] Grammar as a Foreign Language [pdf] 1 and 2 are basically the same except design specs of RNN unit.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>attention model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Makefile]]></title>
+    <url>%2F2018%2F09%2F07%2Fcompiler%2FMakefile%2F</url>
+    <content type="text"><![CDATA[Notes use nemiver to debug. gcc/g++ -g hello.c -o hello.o #-g for debug nemiver hello #bin file The comment character # does not introduce a make comment in the text of commands. Wildcards: . expands to all the files containing a period. A question mark represents any single character, and […] represents a character class. .PHONY: clean Automatic Variables: $@ The name of the current target. $% The filename element of an archive member specification. $&lt; The name of the first prerequisite. $? The names of all prerequisites that are newer than the target, separated by spaces. $^ The names of all the prerequisites, separated by spaces. This list has duplicate names removed since for most uses, such as compiling, copying, etc., duplicates are not wanted. $+ The names of all the prerequisites separated by spaces, including duplicates. This variable was created for specific situations such as arguments to linkers where duplicate values have meaning. $* The stem of the target filename. A stem is typically a filename without its suffix. Its use outside of pattern rules is discouraged. run makefile with —just-print option to view the execution process How to write Makefile single C-file 12hello: hello.c gcc -g hello.c -o hello&lt;/code&gt;&lt;/pre&gt; multiple C-files 12345678count_words: count_words.o lexer.o -lfl gcc count_words.o lexer.o -lfl -ocount_wordscount_words.o: count_words.c gcc -g -c count_words.clexer.o: lexer.c gcc -g -c lexer.clexer.c: lexer.l flex -t lexer.l &gt; lexer.c set VPATH and CPPFLAGS in implicit rules 1234567VPATH = src includeCPPFLAGS = -I includecount_words: counter.o lexer.o -lflcount_words.o: counter.hcounter.o: counter.h lexer.hlexer.o: lexer.h VPATH can be used in a more advanced fashion as follows, 123vpath %.c srcvpath %.l srcvpath %.h include Use library .a. pack .o files into .a, similar as .lib in Windows. 12345libcounter.a: libcounter.a(lexer.o) libcounter.a(counter.o)libcounter.a(lexer.o): lexer.o $(AR) $(ARFLAGS) $@ $&lt;libcounter.a(counter.o): counter.o $(AR) $(ARFLAGS) $@ $&lt;]]></content>
+      <categories>
+        <category>compiler</category>
+      </categories>
+      <tags>
+        <tag>Makefile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CMake]]></title>
+    <url>%2F2018%2F09%2F07%2Fcompiler%2FCMake%2F</url>
+    <content type="text"><![CDATA[in-source make out-of-source make Write Basic CMakeLists.txt common head 12PROJECT(projectname [CXX] [C] [Java]) # project namecmake_minimum_required(VERSION 2.8.12) # minimum cmake version variable assignment 1SET(VAR [VALUE] [CACHE TYPE DOCSTRING [FORCE]]) variable should be used by ${VAR} except for IF condition.commonly used path variables are listed as follows: 1234&lt;projectname&gt;_BINARY_DIR = PROJECT_BINARY_DIR=CMAKE_BINARY_DIR&lt;projectname&gt;_SOURCE_DIR = PROJECT__SOURCE_DIR=CMAKE_SOURCE_DIRSET(EXECUTABLE_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;/bin)SET(LIBRARY_OUTPUT_PATH $&#123;PROJECT_BINARY_DIR&#125;/lib) display message 1MESSAGE([SEND_ERROR | STATUS | FATAL_ERROR] "message to display") generate output binary/library 12345678ADD_EXECUTABLE(hello $&#123;SRC_LIST&#125;)ADD_LIBRARY(libname [SHARED|STATIC|MODULE] [EXCLUDE_FROM_ALL] source1 source2 ... sourceN)TARGET_LINK_LIBRARIES(target library1 &lt;debug | optimized&gt; library2 ...) /#target-specific// change the name, version, and so on of the output (*e.g.*, library, binary)SET_TARGET_PROPERTIES(target1 target2 ... PROPERTIES prop1 value1 prop2 value2 ...) Finding search source 12INCLUDE_DIRECTORIES([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...) #include filesLINK_DIRECTORIES(directory1 directory2 ...) CMAKE_INCLUDE_PATH, CMAKE_LIBRARY_PATH, CMAKE_MODULE_PATH are environment variables instead of CMake variables. when using FIND_***, CMAKE_INCLUDE_PATH, the above paths will be searched. 1234FIND_PATH(myHeader hello.h)IF(myHeader)INCLUDE_DIRECTORIES($&#123;myHeader&#125;)ENDIF(myHeader) search commands 12345FIND_FILE(&lt;VAR&gt; name1 path1 path2 ...)FIND_LIBRARY(&lt;VAR&gt; name1 path1 path2 ...)FIND_PATH(&lt;VAR&gt; name1 path1 path2 ...)FIND_PROGRAM(&lt;VAR&gt; name1 path1 path2 ...)FIND_PACKAGE(&lt;name&gt; [major.minor] [QUIET] [NO_MODULE] [[REQUIRED|COMPONENTS] [componets...]]) # find \*.cmake Compactness include the content of other files 1include(FILE) # load the content of FILE hierarchical binary tree 1ADD_SUBDIRECTORY(source_dir [binary_dir][EXCLUDE_FROM_ALL]) macro definition 1234MACRO(add_example name) ADD_EXECUTABLE($&#123;name&#125; $&#123;name&#125;.cpp) TARGET_LINK_LIBRARIES($&#123;name&#125; dlib::dlib )ENDMACRO() CMake Module define FindHELLO.cmake module 12345678FIND_PATH(HELLO_INCLUDE_DIR hello.h /usr/include/hello /usr/local/include/hello)FIND_LIBRARY(HELLO_LIBRARY NAMES hello PATH /usr/lib/usr/local/lib)IF (HELLO_INCLUDE_DIR AND HELLO_LIBRARY)SET(HELLO_FOUND TRUE)ENDIF (HELLO_INCLUDE_DIR AND HELLO_LIBRARY)IF (HELLO_FOUND)IF (NOT HELLO_FIND_QUIETLY)MESSAGE(STATUS "Found Hello: $&#123;HELLO_LIBRARY&#125;") Installationcmake -DCMAKE_INSTALL_PREFIX=/usr # the default install target is /usr/local install library and binary 123456789INSTALL(TARGETS targets... [[ARCHIVE|LIBRARY|RUNTIME] [DESTINATION &lt;dir&gt;] [PERMISSIONS permissions...] [CONFIGURATIONS [Debug|Release|...]] [COMPONENT &lt;component&gt;] [OPTIONAL] ] [...]) ARCHIVE is static library *.a; LIBRARY is dynamic library *.so; RUNTIME is executable binary install regular file 12345INSTALL(FILES files... DESTINATION &lt;dir&gt; [PERMISSIONS permissions...] [CONFIGURATIONS [Debug|Release|...]] [COMPONENT &lt;component&gt;] [RENAME &lt;name&gt;] [OPTIONAL]) install script file (e.g., *.sh), almost the same with installing files except for permission 12345INSTALL(PROGRAMS files... DESTINATION &lt;dir&gt; [PERMISSIONS permissions...] [CONFIGURATIONS [Debug|Release|...]] [COMPONENT &lt;component&gt;] [RENAME &lt;name&gt;] [OPTIONAL]) install folders 12345678INSTALL(DIRECTORY dirs... DESTINATION &lt;dir&gt; [FILE_PERMISSIONS permissions...] [DIRECTORY_PERMISSIONS permissions...] [USE_SOURCE_PERMISSIONS] [CONFIGURATIONS [Debug|Release|...]] [COMPONENT &lt;component&gt;] [[PATTERN &lt;pattern&gt; | REGEX &lt;regex&gt;] [EXCLUDE] [PERMISSIONS permissions...]] [...]) install *.cmake 1INSTALL([[SCRIPT &lt;file&gt;] [CODE &lt;code&gt;]] [...]) Testing12ADD_TEST(mytest $&#123;PROJECT_BINARY_DIR&#125;/bin/main)ENABLE_TESTING() After generating Makefile, run make test]]></content>
+      <categories>
+        <category>compiler</category>
+      </categories>
+      <tags>
+        <tag>CMake</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CMake with Eclipse]]></title>
+    <url>%2F2018%2F09%2F07%2Fcompiler%2FCMake%20with%20Eclipse%2F</url>
+    <content type="text"><![CDATA[Cmake supports CDT4 and higher versions.1cmake -help # check the supported generator Install CDT to Eclipse: http://www.eclipse.org/cdt/downloads.php The eclipse build directory should be sibling directory of the source directory. 123mkdir eclipsecd eclipsecmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug ../src_folder # note that CMAKE_BUILD_TYPE can be set as Debug or Release cmake --build . --config Release is equivalent to make cmake --build . --target install --config Release is equivalent to make install]]></content>
+      <categories>
+        <category>compiler</category>
+      </categories>
+      <tags>
+        <tag>cmake</tag>
+        <tag>eclipse</tag>
+      </tags>
+  </entry>
+</search>
