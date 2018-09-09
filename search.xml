@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Remote Folder Amount]]></title>
+    <url>%2F2018%2F09%2F09%2Fnetwork%2FRemote%20Folder%20Amount%2F</url>
+    <content type="text"><![CDATA[Mount Linux folder under Linux12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount Windows folder under Windowsadd network device Mount Linux folder under Windows Install Dokan and WinSSHFS: for Win10, recommend 1.6.1.13 win-sshfs and 1.0.3 Dokan. Open WinSSHFS, fill in the drive name, host, port, username, password, directory. The other entries can be left blank.]]></content>
+      <categories>
+        <category>network</category>
+      </categories>
+      <tags>
+        <tag>remote folder amount</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Install VirtualBox Guest Addition]]></title>
     <url>%2F2018%2F09%2F07%2Fsoftware%2FVirtualBox%2FInstall%20VirtualBox%20Guest%20Addition%2F</url>
     <content type="text"><![CDATA[Before install guest addition from CD, do the following sudo apt-get install dkms build-essential linux-headers-generic linux-headers-$(uname -r) For missing linux kernel headers or other common problems, refer to this. use uname -r or uname -a to look up the kernel version, use dpkg --get-selections | grep linux to check the installed linux kernels. If you click the sharefolder item in the menubar and get the follwing error: ‘The VirtualBox Guest Additions do not seem to be available on this virtual machine, and shared folders cannot be used without them’, the following commands may be helpful. 1234sudo apt-get install virtualbox-guest-additions-isosudo apt-get update sudo apt-get dist-upgradesudo apt-get install virtualbox-guest-x11]]></content>
@@ -220,7 +231,7 @@
   <entry>
     <title><![CDATA[Anaconda]]></title>
     <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FAnaconda%2F</url>
-    <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentcreate: conda create —name $newenv python=2.7 activate: source activate $enewenv revert: source deactivate delete: conda remove —name $newenv —all list: conda info —envs copy: conda create —name $newenv —clone $oldenv packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
+    <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentcreate: conda create —name $newenv python=2.7 activate: source activate $newenv revert: source deactivate delete: conda remove —name $newenv —all list: conda info —envs copy: conda create —name $newenv —clone $oldenv packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
       <categories>
         <category>software</category>
       </categories>
