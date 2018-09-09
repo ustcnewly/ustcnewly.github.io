@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Remote Debugging for Eclipse+PyDev]]></title>
+    <url>%2F2018%2F09%2F09%2Fsoftware%2FIDE%2FRemote%20Debugging%20for%20Eclipse%2BPyDev%2F</url>
+    <content type="text"><![CDATA[For Windows Download Java JDK from http://www.oracle.com/technetwork/java/javase/downloads/index.html and install. Note that JDK contains JRE. Modify the following environment variables: add JAVAHOME D:\Program Files (x86)\Java\jdk1.7.051 add Path %JAVA_HOME%\bin;\%JAVA_HOME%\jre\bin; add CLASSPATH %JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\rt.jar Download Eclipse from http://www.eclipse.org/downloads/ and click eclipse.exe For Linux Install JDK 1234sudo add-apt-repository ppa:webupd8team/javasudo apt-get update // depending on the needed java versionsudo apt-get install openjdk-7-jdkor sudo apt-get install openjdk-8-jre openjdk-8-jdk Download Eclipse and unpack Create a new file eclipse.desktop in /usr/share/applications/ and add the below code 12345678 [Desktop Entry] Name=EclipseComment=Eclipse IDEExec=/home/liniu/Program_Files/Eclipse/eclipse/eclipseIcon=/home/ivan/Eclipse/icon.xpmCategories=Application;Development;Java;IDEType=ApplicationTerminal=0 and then run 1sudo desktop-file-install /usr/share/applications/eclipse.desktop Add to the path: sudo ln -s /opt/eclipse/eclipse /usr/local/bin/]]></content>
+      <categories>
+        <category>software</category>
+        <category>IDE</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Eclipse</tag>
+        <tag>remote debugging</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Remote Folder Amount]]></title>
     <url>%2F2018%2F09%2F09%2Fnetwork%2FRemote%20Folder%20Amount%2F</url>
     <content type="text"><![CDATA[Mount Linux folder under Linux12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount Windows folder under Windowsadd network device Mount Linux folder under Windows Install Dokan and WinSSHFS: for Win10, recommend 1.6.1.13 win-sshfs and 1.0.3 Dokan. Open WinSSHFS, fill in the drive name, host, port, username, password, directory. The other entries can be left blank.]]></content>
@@ -231,7 +245,7 @@
   <entry>
     <title><![CDATA[Anaconda]]></title>
     <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FAnaconda%2F</url>
-    <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentcreate: conda create —name $newenv python=2.7 activate: source activate $newenv revert: source deactivate delete: conda remove —name $newenv —all list: conda info —envs copy: conda create —name $newenv —clone $oldenv packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
+    <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentlist: conda info —envs create: conda create —name $newenv python=2.7 (if copy, use —clone $oldenv) activate: source activate $newenv revert: source deactivate delete: conda remove —name $newenv —all packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
       <categories>
         <category>software</category>
       </categories>
