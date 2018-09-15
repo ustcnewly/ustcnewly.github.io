@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Training Categories and Test Categories]]></title>
     <url>%2F2018%2F09%2F15%2Fpaper_note%2FTraining%20Categories%20and%20Test%20Categories%2F</url>
-    <content type="text"><![CDATA[Let us use $S$ to denote the set of training categories and $T$ to denote the set of testing categories.]]></content>
+    <content type="text"><![CDATA[Let us use $S$ to denote the set of training categories and $T$ to denote the set of testing categories. $S=T$: the most common case $S\cap T=\empty$: zero-shot learning $S\subset T$: generalized zero-shot learning $T\subset S$: pretrained model]]></content>
       <categories>
         <category>paper note</category>
       </categories>
