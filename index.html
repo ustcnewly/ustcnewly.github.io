@@ -281,6 +281,226 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>Preinstallation<ul>
+<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
+<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
+<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
+</ul>
+</li>
+<li>SSH keys<ul>
+<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
+<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
+<li>create the key in github: account setting-&gt;SSH</li>
+<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
+</ul>
+</li>
+<li><p>create an empty folder as Hexo folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
+<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
+</li>
+<li><p>deploy local Hexo folder</p>
+<ul>
+<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
+</li>
+<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
+</ul>
+</li>
+<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
+<li><p>local search</p>
+<ul>
+<li><code>$npm install hexo-generator-searchdb --save</code></li>
+<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add social links: in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latex: </p>
+<ul>
+<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
+<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to address the conflict between MathJax and Hexo</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>push posts to the top</p>
+<ul>
+<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
+<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
+</ul>
+</li>
+<li><p>insert code block</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert image</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Tips:</strong> </p>
+<ol>
+<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+</li>
+<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
+<ul>
+<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
+<li>clean the folder <code>.deploy_git</code></li>
+<li><code>hexo clean</code> and <code>hexo d -g</code></li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/programming_language/python/Python Send Email/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -392,13 +612,12 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> win32serviceutil</span><br><span class="line"><span class="keyword">import</span> win32service</span><br><span class="line"><span class="keyword">import</span> win32event</span><br><span class="line"><span class="keyword">import</span> servicemanager</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Getmyip</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">visit</span><span class="params">(self,url)</span>:</span></span><br><span class="line">        opener = urllib2.urlopen(url)</span><br><span class="line">        <span class="keyword">if</span> url == opener.geturl():</span><br><span class="line">            IPstr = opener.read()</span><br><span class="line">        <span class="keyword">return</span> re.search(<span class="string">'\d+\.\d+\.\d+\.\d+'</span>,IPstr).group(<span class="number">0</span>)</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getip</span><span class="params">(self)</span>:</span></span><br><span class="line">        myip = self.visit(<span class="string">"http://www.net.cn/static/customercare/yourip.asp"</span>)</span><br><span class="line">        <span class="keyword">return</span> myip</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppServerSvc</span> <span class="params">(win32serviceutil.ServiceFramework)</span>:</span></span><br><span class="line">    _svc_name_ = <span class="string">"TestService"</span></span><br><span class="line">    _svc_display_name_ = <span class="string">"Test Service"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,args)</span>:</span></span><br><span class="line">        win32serviceutil.ServiceFramework.__init__(self,args)</span><br><span class="line">        self.hWaitStop = win32event.CreateEvent(<span class="keyword">None</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">None</span>)</span><br><span class="line">        socket.setdefaulttimeout(<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">SvcStop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)</span><br><span class="line">        win32event.SetEvent(self.hWaitStop)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">SvcDoRun</span><span class="params">(self)</span>:</span></span><br><span class="line">        servicemanager.LogMsg(servicemanager.EVENTLOG_INFORMATION_TYPE,</span><br><span class="line">                              servicemanager.PYS_SERVICE_STARTED,</span><br><span class="line">                              (self._svc_name_,<span class="string">''</span>))</span><br><span class="line">        self.main()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></span><br><span class="line">        fromaddr = <span class="string">'XXX@qq.com'</span></span><br><span class="line">        toaddrs  = <span class="string">'XXX@qq.com'</span> </span><br><span class="line">        </span><br><span class="line">        server = smtplib.SMTP_SSL(<span class="string">'smtp.qq.com'</span>)</span><br><span class="line">        username = <span class="string">'XXX'</span> </span><br><span class="line">        password = <span class="string">'XXX'</span> </span><br><span class="line">        server.login(username, password)</span><br><span class="line">        </span><br><span class="line">        prev_msg = <span class="string">''</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">True</span>):</span><br><span class="line">            getmyip=Getmyip()</span><br><span class="line">            msg = getmyip.getip()</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> msg==prev_msg:</span><br><span class="line">                server.sendmail(fromaddr, toaddrs, msg)</span><br><span class="line">                prev_msg = msg</span><br><span class="line">            time.sleep(<span class="number">10</span>)</span><br><span class="line">        </span><br><span class="line">        server.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">if</span> len(sys.argv) == <span class="number">1</span>:</span><br><span class="line">        servicemanager.Initialize()</span><br><span class="line">        servicemanager.PrepareToHostSingle(AppServerSvc)</span><br><span class="line">        servicemanager.StartServiceCtrlDispatcher()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32serviceutil.HandleCommandLine(AppServerSvc)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Make python file into an exe</p>
-</li>
-</ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -F MyService.py</span><br></pre></td></tr></table></figure>
-<ol>
-<li>Make exe into a Windows service</li>
+</li>
+<li><p>Make exe into a Windows service</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sc create MyServer binPath=$exe_path</span><br><span class="line">sc start MyServer</span><br><span class="line">sc stop MyServer</span><br><span class="line">sc delete MyServer</span><br></pre></td></tr></table></figure></li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sc create MyServer binPath=$exe_path</span><br><span class="line">sc start MyServer</span><br><span class="line">sc stop MyServer</span><br><span class="line">sc delete MyServer</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -1738,183 +1957,6 @@ spyder
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/IDE/Install JDK and Eclipse/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/IDE/Install JDK and Eclipse/" itemprop="url">Install JDK and Eclipse</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/IDE/" itemprop="url" rel="index">
-                    <span itemprop="name">IDE</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="For-Windows"><a href="#For-Windows" class="headerlink" title="For Windows"></a>For Windows</h3><ol>
-<li><p>Download Java JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> and install. Note that JDK contains JRE. Modify the following environment variables:</p>
-<ul>
-<li>add JAVAHOME D:\Program Files (x86)\Java\jdk1.7.051</li>
-<li>add Path %JAVA_HOME%\bin;\%JAVA_HOME%\jre\bin;</li>
-<li>add CLASSPATH %JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\rt.jar</li>
-</ul>
-</li>
-<li><p>Download Eclipse from <a href="http://www.eclipse.org/downloads/" target="_blank" rel="noopener">http://www.eclipse.org/downloads/</a> and click eclipse.exe</p>
-</li>
-</ol>
-<h3 id="For-Linux"><a href="#For-Linux" class="headerlink" title="For Linux"></a>For Linux</h3><ol>
-<li><p>Install JDK</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update // depending on the needed java version</span><br><span class="line">sudo apt-get install openjdk-7-jdk</span><br><span class="line">or sudo apt-get install openjdk-8-jre openjdk-8-jdk</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Download Eclipse and unpack</p>
-</li>
-<li><p>Create a new file eclipse.desktop in /usr/share/applications/ and add the below code </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   [Desktop Entry]</span><br><span class="line">   Name=Eclipse</span><br><span class="line">Comment=Eclipse IDE</span><br><span class="line">Exec=/home/liniu/Program_Files/Eclipse/eclipse/eclipse</span><br><span class="line">Icon=/home/ivan/Eclipse/icon.xpm</span><br><span class="line">Categories=Application;Development;Java;IDE</span><br><span class="line">Type=Application</span><br><span class="line">Terminal=0</span><br></pre></td></tr></table></figure>
-<p>and then run</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo desktop-file-install /usr/share/applications/eclipse.desktop</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Add to the path:  <code>sudo ln -s /opt/eclipse/eclipse /usr/local/bin/</code></p>
-</li>
-</ol>
 
           
         
