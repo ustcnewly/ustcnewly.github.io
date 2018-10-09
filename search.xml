@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Commonly Used Words in Paper Writing]]></title>
+    <url>%2F2018%2F09%2F28%2Fpaper_note%2FCommonly%20Used%20Words%20in%20Paper%20Writing%2F</url>
+    <content type="text"><![CDATA[important, significant, crucial, vital, critical necessary, imperative, demanding better, outperform, superior, favorable, compelling, remarkable, excellent, impressive degrade, impair, hinder, eliminate, compromise address, solve, handle, mitigate, tackle with, cope with, overcome, circumvent lead to, yield, produce, induce, result in, give rise to, form, introduce, bring in great, significant, considerable, massive, facilitate, fuel, advance popular, prevail, attract, myriads of, a variety of, a wide range of comparable, on par with demonstrate, show, indicate, prove, justify]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Unsupervised Attribute Learning]]></title>
     <url>%2F2018%2F09%2F22%2Fpaper_note%2FUnsupervised%20Attribute%20Learning%2F</url>
     <content type="text"><![CDATA[Given a bunch of images from many categories without attribute information, how to discover attributes and learn category-level attribute vector? learn attribute vector based on the relation and difference between different categories (each dimension if uninterpretable): [1] (Laplacian matrix), [2] (triplet loss) exploit local information and encode them into attribute vector (each dimension is interpretable): [1] (discriminative cluster, doublets), [2] (joint attribute learning and feature learning)]]></content>
