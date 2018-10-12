@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Paper Proofread]]></title>
+    <url>%2F2018%2F10%2F12%2Fpaper_note%2FPaper%20Proofread%2F</url>
+    <content type="text"><![CDATA[Print out the paper and read the paper character by character (not word by word). Use Grammarly or other auxiliary tools to help you check spelling and grammar mistakes, but they are not omnipotent. The easily made mistakes are including but not limited to: single/plural form, third-person singular, etc. From the perspective of maths, all the variables are defined before used. Check optimized variables, brackets, and punctuations (e.g., ‘,’ and ‘.’) in the formulations. Check the reference list. Check the citation and anchor reference (Table XXX, Figure XXX, Equation XXX, Section XXX). Check the most notable parts in the paper: figure and captions, table captions, section titles. Check the format and consistency of experimental results. No question mark ‘?’ Check the paper title and author names.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Clothes Dataset]]></title>
     <url>%2F2018%2F10%2F12%2Fpaper_note%2FClothes%20Dataset%2F</url>
     <content type="text"><![CDATA[deepfashion: http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html (attribute, bounding box, landmark) Colorful-Fashion: https://sites.google.com/site/fashionparsing/home (pixel-level color-category label) CCP (Clothing Co-Parsing): https://github.com/bearpaw/clothing-co-parsing (parsing label) fashionistas: http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/(parsing label) HPW (Human Parsing in the Wild): https://github.com/lemondan/HumanParsing-Dataset (parsing label) modaNet: https://github.com/eBay/modanet (polygon annotations)]]></content>
