@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Clothes Dataset]]></title>
+    <url>%2F2018%2F10%2F12%2Fpaper_note%2FClothes%20Dataset%2F</url>
+    <content type="text"><![CDATA[deepfashion: http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html (attribute, bounding box, landmark) Colorful-Fashion: https://sites.google.com/site/fashionparsing/home (pixel-level color-category label) CCP (Clothing Co-Parsing): https://github.com/bearpaw/clothing-co-parsing (parsing label) fashionistas: http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/(parsing label) HPW (Human Parsing in the Wild): https://github.com/lemondan/HumanParsing-Dataset (parsing label) modaNet: https://github.com/eBay/modanet (polygon annotations)]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Commonly Used Words in Paper Writing]]></title>
     <url>%2F2018%2F09%2F28%2Fpaper_note%2FCommonly%20Used%20Words%20in%20Paper%20Writing%2F</url>
     <content type="text"><![CDATA[important, significant, crucial, vital, critical, notable necessary, imperative, demanding better, outperform, superior, favorable, compelling, remarkable, excellent, impressive degrade, impair, hinder, eliminate, compromise address, solve, handle, mitigate, tackle with, cope with, overcome, circumvent lead to, yield, produce, induce, result in, give rise to, form, introduce, bring in great, significant, considerable, massive, facilitate, fuel, advance popular, prevail, attract, myriads of, a variety of, a wide range of, substantial, adequate, a plethora of comparable, on par with demonstrate, show, indicate, prove, justify alleviate, suppress, mitigate, assuage particularly, in particular, specifically, to be exact that is, that being said, in other words, from another point of view, from another perspective prove, show, indicate, demonstrate, verify]]></content>
