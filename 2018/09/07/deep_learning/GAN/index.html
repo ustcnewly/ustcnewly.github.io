@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-11T20:06:01.816Z">
+<meta property="og:updated_time" content="2018-10-19T11:33:54.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN">
 <meta name="twitter:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
@@ -381,7 +381,7 @@
 <li><p>mode collapse: min-max is not equal to max-min</p>
 </li>
 </ul>
-<h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h3><p>tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
+<h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h3><p>17 tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
 <ul>
 <li><p>soft label: replace 1 with 0.9 and 0 with 0.3</p>
 </li>
@@ -402,6 +402,19 @@
 <li><p>stability tricks from RL</p>
 </li>
 </ul>
+<p>Tricks from the <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">BigGAN</a> </p>
+<ul>
+<li><p>class-conditional BatchNorm</p>
+</li>
+<li><p>Spectral norm</p>
+</li>
+<li><p>orthogonal initialization</p>
+</li>
+<li><p>truncated prior (truncation trick to seek the trade-off between fidelity and variety)</p>
+</li>
+<li><p>enforce orthogonality on weights to improve the model smoothness</p>
+</li>
+</ul>
 <h3 id="Variants"><a href="#Variants" class="headerlink" title="Variants:"></a>Variants:</h3><ul>
 <li><p>EBGAN: replace discriminator with autoencoder</p>
 </li>
@@ -414,6 +427,8 @@
 <li><p>seqGAN: generate discrete sequences</p>
 </li>
 </ul>
+<h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
+<p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">this paper</a>.</p>
 <h3 id="Materials"><a href="#Materials" class="headerlink" title="Materials:"></a>Materials:</h3><p>A good tutorial: <a href="https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf" target="_blank" rel="noopener">https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf</a></p>
 
       
@@ -540,7 +555,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">99</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -611,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#problems"><span class="nav-number">1.</span> <span class="nav-text">problems:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tricks"><span class="nav-number">2.</span> <span class="nav-text">Tricks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variants"><span class="nav-number">3.</span> <span class="nav-text">Variants:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Materials"><span class="nav-number">4.</span> <span class="nav-text">Materials:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#problems"><span class="nav-number">1.</span> <span class="nav-text">problems:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tricks"><span class="nav-number">2.</span> <span class="nav-text">Tricks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variants"><span class="nav-number">3.</span> <span class="nav-text">Variants:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Measurement："><span class="nav-number">4.</span> <span class="nav-text">Measurement：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Materials"><span class="nav-number">5.</span> <span class="nav-text">Materials:</span></a></li></ol></div>
             
 
           </div>

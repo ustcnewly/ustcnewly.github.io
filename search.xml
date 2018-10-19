@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Conference Rebuttal]]></title>
+    <url>%2F2018%2F10%2F19%2Fpaper_note%2FConference%20Rebuttal%2F</url>
+    <content type="text"><![CDATA[To determine whether the rebuttal is necessary. If the scores are too low, just give up. Summarize the questions from reviewers and rank them based on the importance. Pick out the questions which call for experiments and conduct those experiments immediately. When running experiments, draft the response file. Pay attention to the format of response file (e.g., limited characters or one page of pdf, URL allowed or not). In the response file, try to cover all the questions if possible. Otherwise, igore the questions with least importance. The tone of response file cannot be rude and offensive. Be cool and confident. If the maximum number of characters is quite limited, there are many tricks to save space.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Causal Inference]]></title>
     <url>%2F2018%2F10%2F15%2Fpaper_note%2FCausal%20Inference%2F</url>
     <content type="text"><![CDATA[Judy Pearl: [Tutorial] [slides] [textbook] James Robin: [Textbook] [slides]]]></content>
@@ -30,7 +38,7 @@
   <entry>
     <title><![CDATA[Commonly Used Words in Paper Writing]]></title>
     <url>%2F2018%2F09%2F28%2Fpaper_note%2FCommonly%20Used%20Words%20in%20Paper%20Writing%2F</url>
-    <content type="text"><![CDATA[important, significant, crucial, vital, critical, notable necessary, imperative, demanding better, outperform, superior, favorable, compelling, remarkable, excellent, impressive degrade, impair, hinder, eliminate, compromise address, solve, handle, mitigate, tackle with, cope with, overcome, circumvent lead to, yield, produce, induce, result in, give rise to, form, introduce, bring in great, significant, considerable, massive, facilitate, fuel, advance popular, prevail, attract, myriads of, a variety of, a wide range of, substantial, adequate, a plethora of comparable, on par with demonstrate, show, indicate, prove, justify alleviate, suppress, mitigate, assuage particularly, in particular, specifically, to be exact that is, that being said, in other words, from another point of view, from another perspective prove, show, indicate, demonstrate, verify]]></content>
+    <content type="text"><![CDATA[Between Logical Blocks: because, since, as, so, consequentlyl, therefore, thus, hence but, however, nevertheless, nonetheless, despite, whereas, while particularly, in particular, specifically, to be exact, in detail lead to, yield, produce, result in, give rise to, form in other words, that is, that being said besides, furthermore, moreover Within Logical Blocks: important, significant, crucial, vital, critical, notable, considerable, massive, myriads of, a variety of, a wide range of, substantial, adequate, a plethora of necessary, imperative, demanding better, outperform, superior, favorable, compelling, remarkable, excellent, impressive degrade, impair, hinder, eliminate, compromise address, solve, handle, mitigate, tackle with, cope with, overcome, circumvent facilitate, fuel, advance, aid in, assist in, benefit popular, prevail, attract, enticing, inviting comparable, on par with demonstrate, show, indicate, prove, justify, verify alleviate, suppress, mitigate, assuage, relieve introduce, describe, discuss, elaborate]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -1029,7 +1037,7 @@
   <entry>
     <title><![CDATA[GAN]]></title>
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FGAN%2F</url>
-    <content type="text"><![CDATA[The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo problems: oscillation: can train for a very long time without clearly generating better samples. mode collapse: min-max is not equal to max-min Trickstricks for training GAN: https://github.com/soumith/ganhacks soft label: replace 1 with 0.9 and 0 with 0.3 train discriminator more times (e.g., 2X) than generator use labels: auxiliary tasks normalize inputs to [-1, 1] use tanh before output use batchnorm (not for the first and last layer) use spherical distribution instead of uniform distribution leaky relu stability tricks from RL Variants: EBGAN: replace discriminator with autoencoder LSGAN: replace cross-entropy loss with least square loss Wasserstein GAN: replace discriminator with a critic function LAPGAN: coarse-to-fine using laplacian pyramid seqGAN: generate discrete sequences Materials:A good tutorial: https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf]]></content>
+    <content type="text"><![CDATA[The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo problems: oscillation: can train for a very long time without clearly generating better samples. mode collapse: min-max is not equal to max-min Tricks17 tricks for training GAN: https://github.com/soumith/ganhacks soft label: replace 1 with 0.9 and 0 with 0.3 train discriminator more times (e.g., 2X) than generator use labels: auxiliary tasks normalize inputs to [-1, 1] use tanh before output use batchnorm (not for the first and last layer) use spherical distribution instead of uniform distribution leaky relu stability tricks from RL Tricks from the BigGAN class-conditional BatchNorm Spectral norm orthogonal initialization truncated prior (truncation trick to seek the trade-off between fidelity and variety) enforce orthogonality on weights to improve the model smoothness Variants: EBGAN: replace discriminator with autoencoder LSGAN: replace cross-entropy loss with least square loss Wasserstein GAN: replace discriminator with a critic function LAPGAN: coarse-to-fine using laplacian pyramid seqGAN: generate discrete sequences Measurement：Results: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance. Stability: for the stability of generator and discriminator, refer to this paper. Materials:A good tutorial: https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
