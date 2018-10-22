@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Interpretable Machine Learning]]></title>
+    <url>%2F2018%2F10%2F20%2Fpaper_note%2FInterpretable%20Machine%20Learning%2F</url>
+    <content type="text"><![CDATA[Manipulate each layer/neuron, and observe the change of network parameters/activations. Saliency map Adversarial attack Correlation Information gain/loss]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Conference Rebuttal]]></title>
     <url>%2F2018%2F10%2F19%2Fpaper_note%2FConference%20Rebuttal%2F</url>
     <content type="text"><![CDATA[To determine whether the rebuttal is necessary. If the scores are too low, just give up. Summarize the questions from reviewers and rank them based on the importance. Pick out the questions which call for experiments and conduct those experiments immediately. When running experiments, draft the response file. Pay attention to the format of response file (e.g., limited characters or one page of pdf, URL allowed or not). In the response file, try to cover all the questions if possible. Otherwise, igore the questions with least importance. The tone of response file cannot be rude and offensive. Be cool and confident. If the maximum number of characters is quite limited, there are many tricks to save space.]]></content>
