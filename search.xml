@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Proposal Generation]]></title>
+    <url>%2F2018%2F10%2F24%2Fpaper_note%2FProposal%20Generation%2F</url>
+    <content type="text"><![CDATA[Selective search: hierarchical grouping based on different similarity metrics[code] Salient object detection: identify the segment which is easy to compose from itselfbut hard from remaining parts of the image. EdgeBox: identify the boxes that tightly enclose a set of edges are likely to contain an object. Region Proposal Network (RPN) from faster-RCNN]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Interpretable Machine Learning]]></title>
     <url>%2F2018%2F10%2F20%2Fpaper_note%2FInterpretable%20Machine%20Learning%2F</url>
     <content type="text"><![CDATA[Manipulate each layer/neuron, and observe the change of network parameters/activations. Saliency map Adversarial attack Correlation Information gain/loss]]></content>
