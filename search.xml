@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Memory Network]]></title>
+    <url>%2F2018%2F10%2F25%2Fdeep_learning%2FMemory%20Network%2F</url>
+    <content type="text"><![CDATA[First paper of memory network: I(input feature map), G(generalization), O(output feature map), R(response), use the following objective function to optimize the variables in I,G,O,R. end-to-end memory network: easy back-propagation More memory modules semi-supervised learning with memory module [pdf] few-shot learning with memory module [pdf]]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Proposal Generation]]></title>
     <url>%2F2018%2F10%2F24%2Fpaper_note%2FProposal%20Generation%2F</url>
     <content type="text"><![CDATA[Selective search: hierarchical grouping based on different similarity metrics[code] Salient object detection: identify the segment which is easy to compose from itselfbut hard from remaining parts of the image. EdgeBox: identify the boxes that tightly enclose a set of edges are likely to contain an object. Region Proposal Network (RPN) from faster-RCNN]]></content>
