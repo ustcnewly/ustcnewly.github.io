@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ensure the Novelty of Your Idea]]></title>
+    <url>%2F2018%2F10%2F31%2Fpaper_note%2FEnsure%20the%20Novelty%20of%20Your%20Idea%2F</url>
+    <content type="text"><![CDATA[There is no automatic system that can tell you whether your idea has been done or the similarity between your idea and the most similar previous work. Search all possible keywords (e.g., synonym) in Google/Google Scholar. If there exist old and recent surveys, carefully read them. Otherwise, make a survey on your own. Quickly go through previous works to ensure that your idea has not been done. You do not need to understand the details of their methods. Actually, telling whether their methods are close to yours is much simpler. For instance, you can just pay attention to the most obvious parts (e.g., flowchart, objective function, and abstract) in their papers. Through the above steps, identify the most related work, think about the difference and your advantage. If you cannot clearly state the difference and advantage of your idea, do not work on it.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Entering a New Research Field]]></title>
     <url>%2F2018%2F10%2F31%2Fpaper_note%2FEntering%20a%20New%20Research%20Field%2F</url>
     <content type="text"><![CDATA[See the large picture Search keyword + ‘survey/tutorial’ in google/google scholar. For example, if you want to work on zero-shot learning, search ‘zero-shot learning’ + ‘survey/tutorial’. Find recent survey/tutorial on top conference/journal or conjunct workshop. You need to know the list of top conferences/journals in the related field (e.g., computer vision, machine learning). Know the state-of-the-art Search keyword in the most recent top conferences (e.g., CVPR2018). Journal is generally lagging behind the conference, so focus on conference papers. You collect the paper list and will have a sense whether this topic is popular or crowded (e.g., only 1 paper or more than 20 papers on one conference). Summarize existing methods You need to collect a paper list. Initiate the paper list following Step 2. Read the related works in these papers and add them to the paper list. Repeat this procedure to enrich the paper list. Try to categorize the used methods in these papers based on certain taxonomy.]]></content>

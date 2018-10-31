@@ -281,6 +281,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/python/Python/" itemprop="url">Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>check type</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(n,int)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">t1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">t2 = [<span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span>];</span><br><span class="line">t1.extend(t2);</span><br><span class="line">t1.append(<span class="string">'g'</span>);</span><br><span class="line">t1 = t1+[<span class="string">'g'</span>]</span><br><span class="line">t1.sort();</span><br><span class="line"><span class="keyword">del</span> t1[<span class="number">1</span>:<span class="number">3</span>];</span><br><span class="line">t1.remove(<span class="string">'b'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dictionary</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">eng2sp = &#123;<span class="string">'one'</span>: <span class="string">'uno'</span>, <span class="string">'two'</span>: <span class="string">'dos'</span>, <span class="string">'three'</span>: <span class="string">'tres'</span>&#125;</span><br><span class="line">eng2sp.values() <span class="comment">#'uno','dos','tres'</span></span><br><span class="line">eng2sp.items()</span><br><span class="line"><span class="string">'one'</span> <span class="keyword">in</span> eng2sp <span class="comment">#true</span></span><br><span class="line">inverse = invert_dict(eng2sp)  </span><br><span class="line">d = dict(zip(<span class="string">'abc'</span>,range(<span class="number">3</span>)))</span><br><span class="line">d.get(word,<span class="number">0</span>) <span class="comment">#d[word] if word in d, 0 otherwise</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tupe: similar with list but immutable</p>
+</li>
+<li><p>file operation</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fout = os.getcwd()</span><br><span class="line">os.path.abspath(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.exists(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.isfile/isdir</span><br><span class="line">os.listdir(cwd)</span><br><span class="line">fout = open(<span class="string">'output.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">fout.write(<span class="string">'hehe'</span>)</span><br><span class="line">fout.close()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Python Draw Text on Image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1874,184 +2042,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_tokenizer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_tokenizer/" itemprop="url">Boost_tokenizer</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
-                    <span itemprop="name">Boost</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt; boost/tokenizer.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>split string: default space</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"This is,  a test"</span>;  </span><br><span class="line">tokenizer&lt;&gt; tok(s);  </span><br><span class="line"><span class="keyword">for</span>(tokenizer&lt;&gt;::iterator beg=tok.begin(); beg!=tok.end();++beg)</span><br><span class="line">&#123;  </span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; *beg &lt;&lt; <span class="string">"\n"</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>split string: drop delimiter</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt;boost::char_separator&lt;<span class="keyword">char</span>&gt;&gt;  tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;|"</span>);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>split string: drop delimiter and keep delimiter</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt; boost::char_separator&lt; <span class="keyword">char</span>&gt; &gt; tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;"</span>, <span class="string">"|"</span>, boost::keep_empty_tokens);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>special kinds of tokenizer</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> offsets[] = &#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;   <span class="comment">//three segment length  </span></span><br><span class="line"><span class="function">offset_separator <span class="title">f</span><span class="params">(offsets, offsets+<span class="number">3</span>)</span></span>;  </span><br><span class="line">tokenizer&lt; offset_separator&gt; tok(s,f);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2106,7 +2096,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">104</span>
+                  <span class="site-state-item-count">105</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
