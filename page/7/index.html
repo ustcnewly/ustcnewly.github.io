@@ -376,49 +376,30 @@
           
             <p><u>Non-trivial ideas</u> require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. <u>Trivial ideas</u> are much easier with the aid of some short formulas. We do not encourage students to generate trivial ideas based on short formulas, but this can help beginners take the first step and gain confidence.</p>
 <ol>
-<li><p>learn weights: assign different weights  on different features or samples to cater for specific goal. Basically, the essence of machine learning is learning weights.<br> e.g., KMM</p>
+<li><p>naive combination: e.g., combine regularizers, combine network modules</p>
 </li>
-<li><p>discrete to continous: for discrete samples or subspaces, try using integral<br> e.g., SGF-&gt;GFK</p>
+<li><p>from single to multiple: create multiple-XXX learning setting, e.g., multi-view learning, multi-instance learning, multi-label learning, multi-task learning.</p>
 </li>
-<li><p>coarse-grained to fine-grained:<br> e.g., LapGAN</p>
+<li><p>separate common and specific components: in multi-XXX learning setting, we can separate XXX-invariant components from XXX-specific components. e.g., for multiple domains (resp, categories), we can separate domain (resp., category)-invariant components from domain (resp., category)-specific components.</p>
 </li>
-<li><p>single to multiple</p>
-<ul>
-<li>single view-&gt;multi view</li>
-<li>single task-&gt;multi task</li>
-<li>single label-&gt;multi label</li>
-<li>single instance-&gt;multi instance</li>
-</ul>
+<li><p>combine local information with global information: jointly use local and global information from images/videos.</p>
 </li>
-<li><p>local v.s. global</p>
+<li><p>from  discrete to continous (e.g., using integral) or from continuous to discrete (e.g., using basis).</p>
 </li>
-<li><p>common v.s. specific</p>
-<ul>
-<li>domain-specific</li>
-<li>category-specific</li>
-</ul>
+<li><p>from coarse-grained to fine-grained: generate a coarse-grained result first and then refine the coarse-grained result to fine-grained result.</p>
 </li>
-<li><p>flat to hierachical</p>
-<ul>
-<li>sequence-&gt;tree-&gt;graph</li>
-<li>vector-&gt;matrix-&gt;tensor</li>
-</ul>
+<li><p>from simple structure to advanced structure: e.g., from sequence network to tree network to graph network, form vector representation to matrix representation to tensor representation.</p>
 </li>
-<li><p>combination A+B</p>
-<ul>
-<li>naive combination (a sequence of regularizers)</li>
-<li>advanced combination</li>
-</ul>
+<li><p>kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. </p>
 </li>
-<li><p>use auxiliary information </p>
+<li><p>introduce auxiliary/side information to help the original task: the auxiliary/side information is usually more accessible.</p>
 </li>
-<li><p>use basis.<br>   e.g., SYNC <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Changpinyo_Synthesized_Classifiers_for_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a></p>
+<li><p>learn different weights on different components: the essence of machine learning is learning weights, e.g., assign different weights on different feature dimensions (linear classifier), on different kernels (multiple-kernel learning), on different training samples (sample reweighting).</p>
 </li>
-<li><p>kernelize: project from low to high (e.g., infinite) dimension, but may not apply to deep learning methods. </p>
-</li>
-<li><p>fill in the holes in the matrix</p>
+<li><p>fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method, as illustrated below.</p>
 </li>
 </ol>
+<p><img src="https://i.imgur.com/mGTLNur.jpg" alt=""></p>
 
           
         
