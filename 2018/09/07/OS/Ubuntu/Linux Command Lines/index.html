@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Sudo Management: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  list  123list -a #including hidden fileslist -S #arrange by sizelist -t #arrange by time  view text  123cathead/tail">
+<meta name="description" content="create new user with home folder  1adduser XXX  sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  start ssh on the server, the default port is 22  12sudo apt-get insta">
 <meta name="keywords" content="Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu Command Lines">
 <meta property="og:url" content="http://yoursite.com/2018/09/07/OS/Ubuntu/Linux Command Lines/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Sudo Management: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  list  123list -a #including hidden fileslist -S #arrange by sizelist -t #arrange by time  view text  123cathead/tail">
+<meta property="og:description" content="create new user with home folder  1adduser XXX  sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  start ssh on the server, the default port is 22  12sudo apt-get insta">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T02:29:22.913Z">
+<meta property="og:updated_time" content="2018-11-02T01:10:20.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu Command Lines">
-<meta name="twitter:description" content="Sudo Management: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  list  123list -a #including hidden fileslist -S #arrange by sizelist -t #arrange by time  view text  123cathead/tail">
+<meta name="twitter:description" content="create new user with home folder  1adduser XXX  sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  start ssh on the server, the default port is 22  12sudo apt-get insta">
 
 
 
@@ -376,7 +376,13 @@
       
         <hr>
 <ol>
-<li><p>Sudo Management: <code>vim /etc/sudoers</code> and add <code>$username ALL=(ALL) ALL</code> at the bottom.</p>
+<li><p>create new user with home folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser XXX</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sudo privilege: <code>vim /etc/sudoers</code> and add <code>$username ALL=(ALL) ALL</code> at the bottom.</p>
+</li>
+<li><p>start ssh on the server, the default port is 22</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo/etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>list</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list -a #including hidden files</span><br><span class="line">list -S #arrange by size</span><br><span class="line">list -t #arrange by time</span><br></pre></td></tr></table></figure>
