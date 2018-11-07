@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Webly Supervised Learning]]></title>
     <url>%2F2018%2F11%2F07%2Fpaper_note%2FWebly%20Supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[Two problems: Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web data and consumer data. Solutions without human annotation: label flip layer: [1][2][3] multi-instance learning: [1] Solutions with human annotation: active learning (select training samples to annotate): [1] reinforcement learning (learn labeling policies): [1] analogous to semi-supervised learning partial data with both noisy labels and clean labels as well as partial data with only noisy labels partial data with noisy labels and partial data with clean labels]]></content>
+    <content type="text"><![CDATA[Two problems: Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web data and consumer data. Solutions: label flip layer: [1] [2] [3] multi-instance learning: [1] reweight training samples: [1] curriculumn learning: [1] [2] Use clean data: active learning (select training samples to annotate): [1] reinforcement learning (learn labeling policies): [1] analogous to semi-supervised learning partial data with both noisy labels and clean labels as well as partial data with only noisy labels [1] [2] [3] partial data with noisy labels and partial data with clean labels [1]]]></content>
       <categories>
         <category>paper note</category>
       </categories>

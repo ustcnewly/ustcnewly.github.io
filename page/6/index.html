@@ -281,6 +281,184 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Zero-Shot Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) inductive ZSL v.s. semi-supervised/transductive ZSL</p>
+<p>2) standard ZSL v.s. generalized ZSL (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
+<p><strong>Ideas:</strong></p>
+<ol>
+<li><p>Mapping: dictionary learning, metric learning, etc</p>
+</li>
+<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
+</li>
+<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
+</li>
+</ol>
+<p><strong>Datasets:</strong></p>
+<ol>
+<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
+</li>
+<li><p>large-scale dataset: ImageNet</p>
+</li>
+</ol>
+<p><strong>Survey and Resource:</strong></p>
+<ol>
+<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Word Vector/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1734,161 +1912,6 @@
 <li>different hyperparameters</li>
 </ul>
 <p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Outlier Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/paper_note/Outlier Detection/" itemprop="url">Outlier Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Statistical-methods"><a href="#Statistical-methods" class="headerlink" title="Statistical methods"></a>Statistical methods</h3><ul>
-<li>use a model (e.g., Gaussian) to fit the distribution of all data </li>
-<li>use two models to fit the distributions of non-outliers and outliers separately</li>
-<li>Grubbs’ test</li>
-</ul>
-<h3 id="Distance-based-methods"><a href="#Distance-based-methods" class="headerlink" title="Distance based methods"></a>Distance based methods</h3><ul>
-<li>the density within a neighborhood</li>
-<li>the distance from a nearest neighbor</li>
-</ul>
-<h3 id="Learning-based-method"><a href="#Learning-based-method" class="headerlink" title="Learning based method"></a>Learning based method</h3><ul>
-<li>clustering, the smallest cluster is likely to contain outliers</li>
-<li>one-class classifier (e.g., one-class SVM)</li>
-<li>binary classifier (e.g., naive bayes for spam filtering, weighted binary SVM)</li>
-</ul>
 
           
         
