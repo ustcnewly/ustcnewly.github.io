@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="C++," />
+  <meta name="keywords" content="deep learning," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Problem: When installing boost, “cl not found”. Or unresolved reference. Solution: cd Microsoft Visual Studio 11.0\VC, run vcvarsall.bat amd64. add Microsoft Visual Studio 11.0\VC\bin into environment">
-<meta name="keywords" content="C++">
+<meta name="description" content="A comprehensive survey can be found here. Terminology: black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.  targeted/non-t">
+<meta name="keywords" content="deep learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Boost_installation">
-<meta property="og:url" content="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/index.html">
+<meta property="og:title" content="Adversarial Attack">
+<meta property="og:url" content="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Problem: When installing boost, “cl not found”. Or unresolved reference. Solution: cd Microsoft Visual Studio 11.0\VC, run vcvarsall.bat amd64. add Microsoft Visual Studio 11.0\VC\bin into environment">
+<meta property="og:description" content="A comprehensive survey can be found here. Terminology: black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.  targeted/non-t">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T03:38:25.124Z">
+<meta property="og:updated_time" content="2018-11-11T10:28:47.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boost_installation">
-<meta name="twitter:description" content="Problem: When installing boost, “cl not found”. Or unresolved reference. Solution: cd Microsoft Visual Studio 11.0\VC, run vcvarsall.bat amd64. add Microsoft Visual Studio 11.0\VC\bin into environment">
+<meta name="twitter:title" content="Adversarial Attack">
+<meta name="twitter:description" content="A comprehensive survey can be found here. Terminology: black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.  targeted/non-t">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/"/>
 
 
 
 
 
-  <title>Boost_installation | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Adversarial Attack | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Boost_installation</h1>
+          <h1 class="post-title" itemprop="name headline">Adversarial Attack</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-11T15:40:12+08:00">
+                2018-11-11
               </time>
             
 
@@ -337,30 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
-                    <span itemprop="name">Boost</span>
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
                   </a>
                 </span>
 
@@ -396,24 +374,40 @@
       
 
       
-        <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
-<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
-<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
-<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
-<hr>
-<p>If you have installed boost, using it in a VC project just takes two steps:</p>
-<ol>
-<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
+        <p>A comprehensive survey can be found <a href="https://arxiv.org/pdf/1801.00553.pdf" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology:"></a>Terminology:</h2><ul>
+<li><p>black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.</p>
 </li>
-<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
+<li><p>targeted/non-targeted attack: whether predicting a specific label for the adversarial example.</p>
 </li>
-<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
+<li><p>universal perturbation: fool a given model on any image with high probability. </p>
+</li>
+</ul>
+<h2 id="Attack"><a href="#Attack" class="headerlink" title="Attack"></a>Attack</h2><ol>
+<li><p>Backward Update</p>
+<ul>
+<li><p>add imperceptible distortion and increase the classification loss</p>
+</li>
+<li><p>universal adversarial perturbation: learn a residual perturbation that works on most clean images</p>
+</li>
+</ul>
+</li>
+<li><p>Forward Update</p>
+<ul>
+<li><p><a href="https://arxiv.org/pdf/1710.08864.pdf" target="_blank" rel="noopener">one-pixel attack</a>: use differential evolution algorithm</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.09387.pdf" target="_blank" rel="noopener">Adversarial Transformation Networks</a>: learn a network to translate clean image to adversarial example.</p>
+</li>
+</ul>
 </li>
 </ol>
-<p>Notes:</p>
-<ol>
-<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
-<li>build-&gt;configuration manager</li>
+<h2 id="Defense"><a href="#Defense" class="headerlink" title="Defense"></a>Defense</h2><ol>
+<li><p>Use modified training samples during training or modified test samples during testing</p>
+</li>
+<li><p>Modify network: model parameters regularization, add a layer/module</p>
+</li>
+<li><p>Adversarial example detector: classify an example as adversarial or clean based on certain statistics</p>
+</li>
 </ol>
 
       
@@ -432,7 +426,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag"># C++</a>
+            <a href="/tags/deep-learning/" rel="tag"># deep learning</a>
           
         </div>
       
@@ -445,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/07/programming_language/C++/boost/Boost_file_system/" rel="next" title="Boost_file_system">
-                <i class="fa fa-chevron-left"></i> Boost_file_system
+              <a href="/2018/11/07/paper_note/Webly Supervised Learning/" rel="next" title="Webly Supervised Learning">
+                <i class="fa fa-chevron-left"></i> Webly Supervised Learning
               </a>
             
           </div>
@@ -454,10 +448,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/" rel="prev" title="Boost_lexical_cast">
-                Boost_lexical_cast <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -509,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,6 +589,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">1.</span> <span class="nav-text">Terminology:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attack"><span class="nav-number">2.</span> <span class="nav-text">Attack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Defense"><span class="nav-number">3.</span> <span class="nav-text">Defense</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

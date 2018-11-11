@@ -281,6 +281,257 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Image to Image with Deep Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Image to Image with Deep Learning/" itemprop="url">Image to Image with Deep Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Learn-the-input-image"><a href="#Learn-the-input-image" class="headerlink" title="Learn the input image:"></a>Learn the input image:</h3><ul>
+<li><p>texture synthesis</p>
+<ul>
+<li>Texture synthesis using convolutional neural networks. <a href="http://papers.nips.cc/paper/5633-texture-synthesis-using-convolutional-neural-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>feature inversion</p>
+<ul>
+<li>Understanding Deep Image Representations by Inverting Them. </li>
+</ul>
+</li>
+<li><p>style transfer = feature inversion + texture synthesis</p>
+<ul>
+<li><p>Image style transfer using convolutional neural networks. <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/hwalsuklee/tensorflow-style-transfer" target="_blank" rel="noopener">[code]</a> (no training, test is slow)</p>
+</li>
+<li><p>Perceptual Losses for Real-Time Style Transfer and Super-Resolution. <a href="https://arxiv.org/pdf/1603.08155.pdf%7C" target="_blank" rel="noopener">[pdf]</a> (train a network for each style using style image and content image as inputs, real-time test, belong to one-to-one image mapping)</p>
+</li>
+<li><p>Texture Networks: Feed-forward Synthesis of Textures and Stylized Image. <a href="http://proceedings.mlr.press/v48/ulyanov16.pdf" target="_blank" rel="noopener">[pdf]</a></p>
+</li>
+<li><p>A learned representation for artistic style. <a href="https://arxiv.org/pdf/1610.07629.pdf" target="_blank" rel="noopener">[pdf]</a> (train a unified network for multiple styles)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Learn-the-mapping-from-image-to-image"><a href="#Learn-the-mapping-from-image-to-image" class="headerlink" title="Learn the mapping from image to image"></a>Learn the mapping from image to image</h3><ul>
+<li><p>super-resolution</p>
+<ul>
+<li><p>Learning a deep convolutional network for image super-resolution. <a href="http://ai2-s2-pdfs.s3.amazonaws.com/5763/c2c62463c61926c7e192dcc340c4691ee3aa.pdf" target="_blank" rel="noopener">[pdf]</a></p>
+</li>
+<li><p>Accurate Image Super-Resolution Using Very Deep Convolutional Networks <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kim_Accurate_Image_Super-Resolution_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/Jongchan/tensorflow-vdsr" target="_blank" rel="noopener">[code]</a> (VGG learns residual)</p>
+</li>
+<li><p>Accelerating the Super-Resolution Convolutional Neural Network. <a href="https://arxiv.org/pdf/1608.00367.pdf" target="_blank" rel="noopener">[pdf]</a> (hourglass structure, deconv)</p>
+</li>
+<li><p>Deeply-recursive convolutional network for image super-resolution. <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kim_Deeply-Recursive_Convolutional_Network_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a></p>
+</li>
+<li><p>Photo-realistic single image super-resolution using a generative adversarial network. <a href="https://arxiv.org/pdf/1609.04802.pdf" target="_blank" rel="noopener">[pdf]</a> (content_loss, adversarial loss)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>inpainting or hole-filling</p>
+<ul>
+<li>Deep Image Inpainting. <a href="http://cs231n.stanford.edu/reports/2017/pdfs/328.pdf" target="_blank" rel="noopener">[pdf]</a> </li>
+<li>Context Encoders: Feature Learning by Inpainting <a href="http://people.eecs.berkeley.edu/~pathak/papers/cvpr16.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/pathak22/context-encoder" target="_blank" rel="noopener">[code]</a></li>
+</ul>
+</li>
+<li><p>colorization</p>
+<ul>
+<li><p>Colorful image colorization. <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/richzhang/colorization" target="_blank" rel="noopener">[code]</a></p>
+</li>
+<li><p>Learning Representations for Automatic Colorization. <a href="https://arxiv.org/pdf/1603.06668.pdf" target="_blank" rel="noopener">[pdf]</a> [<a href="https://github.com/gustavla/autocolorize" target="_blank" rel="noopener">code</a></p>
+</li>
+</ul>
+</li>
+<li><p>denoising</p>
+<ul>
+<li>Image Restoration Using Very Deep Convolutional EncoderDecoder Networks with Symmetric Skip Connections <a href="https://arxiv.org/pdf/1603.09056.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://bitbucket.org/chhshen/image-denoising/" target="_blank" rel="noopener">[code]</a>:(conv and deconv)</li>
+</ul>
+</li>
+<li><p>decompression</p>
+<ul>
+<li>Compression Artifacts Reduction by a Deep Convolutional Network <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Dong_Compression_Artifacts_Reduction_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li></li>
+</ul>
+</li>
+<li><p>dehaze</p>
+<ul>
+<li>Dehazenet: An end-to-end system for single image haze removal <a href="https://arxiv.org/pdf/1601.07661.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>demosaicking</p>
+<ul>
+<li>Deep joint demosaicking and denoising <a href="http://delivery.acm.org.ezproxy.rice.edu/10.1145/2990000/2982399/a191-gharbi.pdf?ip=128.42.202.150&amp;id=2982399&amp;acc=ACTIVE%20SERVICE&amp;key=B63ACEF81C6334F5%2EBB994C37505169BD%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;CFID=1002713420&amp;CFTOKEN=54421672&amp;__acm__=1509998099_5a382ee2ab7d300c852e5055dcf99b99" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>pixel-level domain adaptation</p>
+<ul>
+<li>Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network. <a href="Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network">[pdf]</a> <a href="https://github.com/tensorflow/models/tree/master/research/domain_adaptation/pixel_domain_adaptation" target="_blank" rel="noopener">[code]</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>feature learning<ul>
+<li>DCGAN: Unsupervised representation learning with deep convolutional generative adversarial networks. <a href="https://arxiv.org/pdf/1511.06434.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/carpedm20/DCGAN-tensorflow" target="_blank" rel="noopener">[code]</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>general </p>
+<ul>
+<li><p>Image-to-Image Translation with Conditional Adversarial Nets. <a href="https://arxiv.org/pdf/1611.07004v1.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://phillipi.github.io/pix2pix/" target="_blank" rel="noopener">[code]</a>  (pixelGAN)</p>
+<p>   For unpair training samples, the following three GANs, i.e., dualGAN, cycleGAN, and discoGAN, are almost the same.</p>
+</li>
+<li><p>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. <a href="https://arxiv.org/pdf/1703.10593.pdf" target="_blank" rel="noopener">[pdf]</a><a href="https://github.com/junyanz/CycleGAN" target="_blank" rel="noopener">[code]</a> (CycleGAN)</p>
+</li>
+<li><p>DualGAN: Unsupervised Dual Learning for Image-to-Image Translation <a href="https://arxiv.org/pdf/1704.02510.pdf" target="_blank" rel="noopener">[pdf]</a></p>
+</li>
+<li><p>Learning to Discover Cross-Domain Relations with Generative Adversarial Networks. <a href="https://arxiv.org/pdf/1703.05192.pdf" target="_blank" rel="noopener">[pdf]</a> (discoGAN)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>HD GAN</p>
+<ul>
+<li>High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs. <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[pdf]</a>: extend pixel2pixel GAN with coarse-to-fine strategy.</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/GAN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1722,7 +1973,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">108</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
