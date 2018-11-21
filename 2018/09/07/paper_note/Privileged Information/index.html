@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik [pdf]. Applications: SVM for binary classification  model the slack variable : SVM+ [pdf] model the margin: [1] [2] structur">
+<meta name="description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in [the first paper]. High-level ideas: Use privileged information in the same way as for multi-view learning Transfer betwe">
 <meta name="keywords" content="LUPI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Privileged Information">
 <meta property="og:url" content="http://yoursite.com/2018/09/07/paper_note/Privileged Information/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik [pdf]. Applications: SVM for binary classification  model the slack variable : SVM+ [pdf] model the margin: [1] [2] structur">
+<meta property="og:description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in [the first paper]. High-level ideas: Use privileged information in the same way as for multi-view learning Transfer betwe">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-10T17:31:50.123Z">
+<meta property="og:updated_time" content="2018-11-21T10:10:14.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Privileged Information">
-<meta name="twitter:description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik [pdf]. Applications: SVM for binary classification  model the slack variable : SVM+ [pdf] model the margin: [1] [2] structur">
+<meta name="twitter:description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in [the first paper]. High-level ideas: Use privileged information in the same way as for multi-view learning Transfer betwe">
 
 
 
@@ -374,66 +374,78 @@
       
 
       
-        <p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik <a href="http://www.engr.uconn.edu/~jinbo/doc/vladimir_newparadiam.pdf" target="_blank" rel="noopener">[pdf]</a>.</p>
+        <p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in <a href="http://www.engr.uconn.edu/~jinbo/doc/vladimir_newparadiam.pdf" target="_blank" rel="noopener">[the first paper]</a>.</p>
+<h3 id="High-level-ideas"><a href="#High-level-ideas" class="headerlink" title="High-level ideas:"></a>High-level ideas:</h3><ul>
+<li>Use privileged information in the same way as for multi-view learning</li>
+<li>Transfer between privileged information and primary information</li>
+<li>Use privileged information to control the uncertainty or difficulty (e.g., training loss, noise). </li>
+</ul>
 <h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications:"></a>Applications:</h3><ul>
 <li><p>SVM for binary classification</p>
 <ul>
-<li>model the slack variable : SVM+ <a href="https://pdfs.semanticscholar.org/5805/9409e131f2a854367052636138e835f14f60.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>model the slack variable : SVM+ <a href="https://pdfs.semanticscholar.org/5805/9409e131f2a854367052636138e835f14f60.pdf" target="_blank" rel="noopener">[1]</a></li>
 <li>model the margin: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Sharmanska_Learning_to_Rank_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1410.0389.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>structural SVM: <a href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>structural SVM: <a href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf" target="_blank" rel="noopener">[1]</a></li>
 <li>theoretical analysis: <a href="http://papers.nips.cc/paper/3960-on-the-theory-of-learnining-with-privileged-information.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.765.6609&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a></li>
 </ul>
 </li>
 <li><p>Gaussian process classification</p>
 <ul>
-<li>GPC <a href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>GPC <a href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 </li>
 <li><p>L2 loss for classification/Hash</p>
 <ul>
-<li>multi-labeling <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>Hash ITQ <a href="https://arxiv.org/pdf/1605.04034.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>multi-labeling <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Hash ITQ <a href="https://arxiv.org/pdf/1605.04034.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 </li>
 <li><p>clustering</p>
 <ul>
-<li>clustering <a href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>clustering <a href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 </li>
 <li><p>metric learning for verification/classification</p>
 <ul>
 <li>ITML+ <a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_TNNLS2015.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/2412/9967f9e6c4fca95165a7b9e6745c9debe0dd.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>DML+ <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246" target="_blank" rel="noopener">[pdf]</a></li>
-<li>OITML <a href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf" target="_blank" rel="noopener">[pdf]</a>: ordinal-based ITML</li>
+<li>DML+ <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246" target="_blank" rel="noopener">[1]</a></li>
+<li>OITML <a href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf" target="_blank" rel="noopener">[1]</a>: ordinal-based ITML</li>
 </ul>
 </li>
 <li><p>CRF</p>
 <ul>
-<li>probilistic inference <a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[pdf]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
+<li>probilistic inference <a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
 </ul>
 </li>
 <li><p>random forest</p>
 <ul>
-<li>conditional regression forest <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766" target="_blank" rel="noopener">[pdf]</a>: design node splitting criterion</li>
+<li>conditional regression forest <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766" target="_blank" rel="noopener">[1]</a>: design node splitting criterion</li>
 </ul>
 </li>
 <li><p>matrix factorization for collaborative filtering</p>
 <ul>
-<li>PriMF <a href="https://www.ijcai.org/proceedings/2017/0223.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>PriMF <a href="https://www.ijcai.org/proceedings/2017/0223.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 </li>
 <li><p>Maximum Entropy Discrimination</p>
 <ul>
-<li>MED <a href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>MED <a href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>Deep Learning</p>
+<ul>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hoffman_Learning_With_Side_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Hallucination network</a></li>
+<li>classification loss <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>model drop-out <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Lambert_Deep_Learning_Under_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings:"></a>Settings:</h3><ul>
-<li>multi-view <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811" target="_blank" rel="noopener">[pdf]</a>: unify SVM+ with LUPI</li>
-<li>multi-task multi-class <a href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>multi-instance <a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnx1c3RjbmV3bHl8Z3g6NWIxNmY0YWU5ZGM1ODU3Mg" target="_blank" rel="noopener">[pdf]</a></li>
-<li>active learning + LUPI <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533" target="_blank" rel="noopener">[pdf]</a></li>
-<li>distillation + LUPI <a href="https://arxiv.org/pdf/1511.03643.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>multi-view <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811" target="_blank" rel="noopener">[1]</a>: unify SVM+ with LUPI</li>
+<li>multi-task multi-class <a href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>multi-instance <a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnx1c3RjbmV3bHl8Z3g6NWIxNmY0YWU5ZGM1ODU3Mg" target="_blank" rel="noopener">[1]</a></li>
+<li>active learning + LUPI <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533" target="_blank" rel="noopener">[1]</a></li>
+<li>distillation + LUPI <a href="https://arxiv.org/pdf/1511.03643.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 
       
@@ -629,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Applications"><span class="nav-number">1.</span> <span class="nav-text">Applications:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Settings"><span class="nav-number">2.</span> <span class="nav-text">Settings:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#High-level-ideas"><span class="nav-number">1.</span> <span class="nav-text">High-level ideas:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Applications"><span class="nav-number">2.</span> <span class="nav-text">Applications:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Settings"><span class="nav-number">3.</span> <span class="nav-text">Settings:</span></a></li></ol></div>
             
 
           </div>
