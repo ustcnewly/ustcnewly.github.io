@@ -601,7 +601,7 @@
   <entry>
     <title><![CDATA[Word Vector]]></title>
     <url>%2F2018%2F09%2F07%2Fpaper_note%2FWord%20Vector%2F</url>
-    <content type="text"><![CDATA[SurveyFor a brief survey summarizing word2vec, GloVe, etc, please refer to this. Codeword2vec: TensorFlow GloVe: C, TensorFlow WikiCorpusDownload the WikiCorpus and use the shellscript to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.]]></content>
+    <content type="text"><![CDATA[SurveyFor a brief survey summarizing skip-gram, CBOW, GloVe, etc, please refer to this. Codeword2vec: TensorFlow GloVe: C, TensorFlow WikiCorpusDownload the WikiCorpus and use the shellscript to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
