@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Nothing new, just a wraper of existing concepts. Extract partial information from holistic information, and learn a mapping from partial information to holistic information or the other way around. A">
+<meta name="description" content="Design a proxy task using unlabeled data to help  the original task. Please refer to the surveys [1] [2].  image-to-image  generate complementary information: colorization [1], inpainting [2], cross-c">
 <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Self-supervised Learning">
 <meta property="og:url" content="http://yoursite.com/2018/09/07/paper_note/Self-supervised Learning/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Nothing new, just a wraper of existing concepts. Extract partial information from holistic information, and learn a mapping from partial information to holistic information or the other way around. A">
+<meta property="og:description" content="Design a proxy task using unlabeled data to help  the original task. Please refer to the surveys [1] [2].  image-to-image  generate complementary information: colorization [1], inpainting [2], cross-c">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-17T09:49:48.506Z">
+<meta property="og:updated_time" content="2018-11-24T05:39:51.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Self-supervised Learning">
-<meta name="twitter:description" content="Nothing new, just a wraper of existing concepts. Extract partial information from holistic information, and learn a mapping from partial information to holistic information or the other way around. A">
+<meta name="twitter:description" content="Design a proxy task using unlabeled data to help  the original task. Please refer to the surveys [1] [2].  image-to-image  generate complementary information: colorization [1], inpainting [2], cross-c">
 
 
 
@@ -374,19 +374,29 @@
       
 
       
-        <p>Nothing new, just a wraper of existing concepts. Extract partial information from holistic information, and learn a mapping from partial information to holistic information or the other way around. A good tutorial is <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial.pdf" target="_blank" rel="noopener">here</a>.</p>
+        <p>Design a proxy task using unlabeled data to help  the original task. Please refer to the surveys <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_naiyanwang.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_zisserman" target="_blank" rel="noopener">[2]</a>.</p>
+<ol>
+<li><p>image-to-image</p>
 <ul>
-<li><p>compression(auto-encoder)</p>
+<li><p>generate complementary information: colorization <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[1]</a>, inpainting <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Pathak_Context_Encoders_Feature_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a>, cross-channel generation <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_Split-Brain_Autoencoders_Unsupervised_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
 </li>
-<li><p>colorization</p>
+<li><p>order of local information: relative location <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Doersch_Unsupervised_Visual_Representation_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, jigsaw <a href="https://arxiv.org/pdf/1603.09246.pdf" target="_blank" rel="noopener">[2]</a>, predicting rotation <a href="https://arxiv.org/pdf/1803.07728.pdf" target="_blank" rel="noopener">[3]</a></p>
 </li>
-<li><p>inpainting</p>
-</li>
-<li><p>patches from images: relative position</p>
-</li>
-<li><p>frames from videos: smoothness</p>
+<li><p>clustering: <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
 </ul>
+</li>
+<li><p>video-to-image</p>
+<ul>
+<li><p>smoothness between neighboring frames: <a href="http://people.csail.mit.edu/hmobahi/pubs/embedvideo.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.386.1586&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wang_Unsupervised_Learning_of_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>predict motion: optical flow <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1609.05420.pdf" target="_blank" rel="noopener">[2]</a>, foreground movement <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>order of frames: <a href="https://arxiv.org/pdf/1603.08561.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -501,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">112</span>
+                  <span class="site-state-item-count">114</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
