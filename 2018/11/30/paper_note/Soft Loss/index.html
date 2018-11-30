@@ -80,14 +80,14 @@
 <meta name="description" content="Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$.  weighted softmax loss: $-\sum_{i} w_i \log p_i$  EMD softmax loss: $-\sum_{i} w_i p_i$  softmax loss">
 <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Word Vector">
+<meta property="og:title" content="Soft Loss">
 <meta property="og:url" content="http://yoursite.com/2018/11/30/paper_note/Soft Loss/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$.  weighted softmax loss: $-\sum_{i} w_i \log p_i$  EMD softmax loss: $-\sum_{i} w_i p_i$  softmax loss">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-30T11:44:14.670Z">
+<meta property="og:updated_time" content="2018-11-30T11:49:22.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Word Vector">
+<meta name="twitter:title" content="Soft Loss">
 <meta name="twitter:description" content="Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$.  weighted softmax loss: $-\sum_{i} w_i \log p_i$  EMD softmax loss: $-\sum_{i} w_i p_i$  softmax loss">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>Word Vector | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Soft Loss | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Word Vector</h1>
+          <h1 class="post-title" itemprop="name headline">Soft Loss</h1>
         
 
         <div class="post-meta">
@@ -382,7 +382,7 @@
 </li>
 <li><p>softmax loss after <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">label flip layer</a>: $-\log{\sum_{i} w_i p_i}$</p>
 </li>
-<li><p><a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">knowledge distillation</a>: $\sum_{i} p_i-w_i$</p>
+<li><p><a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">knowledge distillation</a>: $\sum_{i} (p_i-w_i)$</p>
 </li>
 </ol>
 

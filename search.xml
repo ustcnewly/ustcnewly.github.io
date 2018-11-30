@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Word Vector]]></title>
+    <title><![CDATA[Soft Loss]]></title>
     <url>%2F2018%2F11%2F30%2Fpaper_note%2FSoft%20Loss%2F</url>
-    <content type="text"><![CDATA[Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$. weighted softmax loss: $-\sum_{i} w_i \log p_i$ EMD softmax loss: $-\sum_{i} w_i p_i$ softmax loss after label flip layer: $-\log{\sum_{i} w_i p_i}$ knowledge distillation: $\sum_{i} p_i-w_i$]]></content>
+    <content type="text"><![CDATA[Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$. weighted softmax loss: $-\sum_{i} w_i \log p_i$ EMD softmax loss: $-\sum_{i} w_i p_i$ softmax loss after label flip layer: $-\log{\sum_{i} w_i p_i}$ knowledge distillation: $\sum_{i} (p_i-w_i)$]]></content>
       <categories>
         <category>paper note</category>
       </categories>
