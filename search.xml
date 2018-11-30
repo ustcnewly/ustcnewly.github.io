@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Word Vector]]></title>
+    <url>%2F2018%2F11%2F30%2Fpaper_note%2FSoft%20Loss%2F</url>
+    <content type="text"><![CDATA[Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$. weighted softmax loss: $-\sum_{i} w_i \log p_i$ EMD softmax loss: $-\sum_{i} w_i p_i$ softmax loss after label flip layer: $-\log{\sum_{i} w_ik p_i}$ knowledge distillation: $\sum_{i} p_i-w_i$]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Zoom in]]></title>
+    <url>%2F2018%2F11%2F30%2Fdeep_learning%2FZoom%20in%2F</url>
+    <content type="text"><![CDATA[Zoom in and crop [1] Zoom in and deform [1]]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Differential Programming]]></title>
+    <url>%2F2018%2F11%2F29%2Fdeep_learning%2FDifferential%20Programming%2F</url>
+    <content type="text"><![CDATA[The first work of differential programming is using network to approximate sparse coding. [pdf] Introduction tutorials: [1] [2]]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Memory Network]]></title>
     <url>%2F2018%2F11%2F27%2Fdeep_learning%2FImage%20Inpainting%2F</url>
     <content type="text"><![CDATA[pixels: valid pixels, invalid pixels, synthesized pixels holes: regular holes, irregular holes, free-form holes visual artifacts: color discrepancy, blurriness, obvious edge response user guidance: dot, sketch losses: perceptual loss, style lossw partial convolution: hard-gating single-channel unlearnable layer gated convolution: soft-gating multi-channel learnable layer, use detected edges as user guidance isophote-driven image sampling: Priority is the product of confidence term (a measure of the amount of reliable information surrounding the pixel) and data term (a function of the strength of isophotes hitting the front). Select the patch to be filled based on the priority, similar to patch-based texture synthesis. &lt;img src=&quot;https://i.imgur.com/bO5YXEQ.jpg&quot; width=&quot;40%&quot;&gt;]]></content>

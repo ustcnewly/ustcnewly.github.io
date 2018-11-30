@@ -281,6 +281,519 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/cross-language/Call C in Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/cross-language/Call C in Python/" itemprop="url">Call C in Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/cross-language/" itemprop="url" rel="index">
+                    <span itemprop="name">cross-language</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>C:</strong> build a library<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c -fPIC libtest.c</span><br><span class="line">gcc -shared libtest.o -o libtest.so</span><br></pre></td></tr></table></figure></p>
+<p><strong>Python:</strong> load the library<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</span><br><span class="line">libtest = cdll.LoadLibrary(libtest.so<span class="string">')</span></span><br><span class="line"><span class="string">print libtest.func(arg_list)</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="\code\call_C_in_Python\Makefile">Makefile sample</a> and <a href="\code\call_C_in_Python\sample.py">python sample code</a></p>
+<h3 id="c-void-p"><a href="#c-void-p" class="headerlink" title="c_void_p"></a>c_void_p</h3><p>For the types without need to know the detailed layout, we can just use <code>c_void_p</code>, especially when we cannot find the strictly matched self-defined type such as <code>LP_cfloat_1024</code>.</p>
+<h3 id="pointer-POINTER-byref"><a href="#pointer-POINTER-byref" class="headerlink" title="pointer, POINTER, byref"></a>pointer, POINTER, byref</h3><p>POINTER is used for defining type.</p>
+<p>pointer and byref function similarly. However, pointer does a lot more work since it constructs a real pointer object, so it is faster to use byref if you don’t need the pointer object in Python itself.</p>
+<h3 id="memory-issue"><a href="#memory-issue" class="headerlink" title="memory issue:"></a>memory issue:</h3><p>write free function in C code<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">freeme</span><span class="params">(<span class="keyword">char</span> *ptr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"freeing address: %p\n"</span>, ptr);</span><br><span class="line">    <span class="built_in">free</span>(ptr);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>call free function in Python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lib = cdll.LoadLibrary(<span class="string">'./string.so'</span>)</span><br><span class="line">lib.freeme.argtypes = c_void_p,</span><br><span class="line">lib.freeme.restype = <span class="keyword">None</span></span><br><span class="line">lib.freeme(ptr)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_tokenizer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_tokenizer/" itemprop="url">Boost_tokenizer</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt; boost/tokenizer.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>split string: default space</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"This is,  a test"</span>;  </span><br><span class="line">tokenizer&lt;&gt; tok(s);  </span><br><span class="line"><span class="keyword">for</span>(tokenizer&lt;&gt;::iterator beg=tok.begin(); beg!=tok.end();++beg)</span><br><span class="line">&#123;  </span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; *beg &lt;&lt; <span class="string">"\n"</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>split string: drop delimiter</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt;boost::char_separator&lt;<span class="keyword">char</span>&gt;&gt;  tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;|"</span>);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>split string: drop delimiter and keep delimiter</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt; boost::char_separator&lt; <span class="keyword">char</span>&gt; &gt; tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;"</span>, <span class="string">"|"</span>, boost::keep_empty_tokens);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>special kinds of tokenizer</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> offsets[] = &#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;   <span class="comment">//three segment length  </span></span><br><span class="line"><span class="function">offset_separator <span class="title">f</span><span class="params">(offsets, offsets+<span class="number">3</span>)</span></span>;  </span><br><span class="line">tokenizer&lt; offset_separator&gt; tok(s,f);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_regex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_regex/" itemprop="url">Boost_regex</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
+                    <span itemprop="name">Boost</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/regex.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>regex_match</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">regex <span class="title">expression</span><span class="params">(<span class="string">"^select ([a-zA-Z]*) from ([a-zA-Z]*)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> in=<span class="string">"select name from table"</span>;</span><br><span class="line">cmatch what;</span><br><span class="line"><span class="keyword">if</span>(regex_match(in.c_str(), what, expression))</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt; what.size();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; what[i].first&lt;&lt; <span class="string">"|"</span>&lt;&lt;what[i].second&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; <span class="string">"str :"</span>&lt;&lt; what[i].str()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>regex_search</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">r</span><span class="params">(<span class="string">"(a+)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> content = <span class="string">"bbbaaaaacccaaaaddddaaaeeeaaa"</span>;</span><br><span class="line">boost::smatch m;</span><br><span class="line"><span class="built_in">string</span>::const_iterator strstart = content.begin();</span><br><span class="line"><span class="built_in">string</span>::const_iterator strend = content.end();</span><br><span class="line"><span class="keyword">while</span>(boost::regex_search(strstart, strend, m, r))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//0 for the whole, m[i] is the i-th group</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; m[<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//m[i].first and m[i].second stands for the begin idx and end idx</span></span><br><span class="line">    strstart = m[<span class="number">0</span>].second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Note <code>regex_match(in.c_str(), what, expression)</code> is for complete match while <code>regex_match(in.c_str(), what, expression)</code> is for incomplete match.<br> <code>regex_match(in.c_str(), expression, target_exp).</code></p>
+</li>
+<li><p>special setting for regex</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">e2</span><span class="params">(my_expression, boost::regex::icase)</span></span>; \\<span class="keyword">case</span> insensitive</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1654,484 +2167,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Weakly-supervised Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/paper_note/Weakly-supervised Learning/" itemprop="url">Weakly-supervised Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>bag-level multi-instance learning: average each bag <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.127.277&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>update labels<ul>
-<li>instance-level multi-instance learning: label constraint within each bag <a href="https://pdfs.semanticscholar.org/3447/fe054f6af70403cfc39b4d21076337a71128.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.lxduan.info/papers/LiICCV2011.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>flip labels based on the category similarities: <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1505.01554.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>learn mapping from noisy labels to clean labels: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Veit_Learning_From_Noisy_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>learn weights for epochs: <a href="https://arxiv.org/pdf/1806.02612.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li>add weights on training losses: implicitly update labels<ul>
-<li>gradient-based <a href="https://arxiv.org/pdf/1803.09050.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>use side information, e.g., privileged information</li>
-<li>curriculum learning: <a href="http://proceedings.mlr.press/v80/jiang18c/jiang18c.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li>select confident samples<ul>
-<li>outlier detection: aunto-encoder based <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Xia_Learning_Discriminative_Reconstructions_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>active learning</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Vote Aggregation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/paper_note/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
-<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
-<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
-<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
-<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Visual Object Tracking/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/paper_note/Visual Object Tracking/" itemprop="url">Visual Object Tracking</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Tracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect</p>
-<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><p>Tracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. </p>
-<ul>
-<li>Meanshift: density based, ASMS <a href="https://github.com/vojirt/asms" target="_blank" rel="noopener">https://github.com/vojirt/asms</a></li>
-<li>Particle filter: particle based statistical method</li>
-<li>Optical flow: match feature points between neighboring frames</li>
-<li>correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect.</li>
-<li>deep learning: GOTURN, MDNet, TCNN, SiamFC</li>
-</ul>
-<p>Two research groups contribute to CF methods most:</p>
-<ul>
-<li>Oxford: <a href="https://www.robots.ox.ac.uk/~luca/" target="_blank" rel="noopener">https://www.robots.ox.ac.uk/~luca/</a>, </li>
-<li>Linkoping: <a href="http://users.isy.liu.se/en/cvl/marda26/" target="_blank" rel="noopener">http://users.isy.liu.se/en/cvl/marda26/</a></li>
-</ul>
-<p><strong>Comparison of Speed and Performance</strong><br><img src="https://i.imgur.com/LsTWGvk.jpg" alt=""></p>
-<h3 id="Survey-papers"><a href="#Survey-papers" class="headerlink" title="Survey papers"></a>Survey papers</h3><ul>
-<li>Object tracking: A survey, 2006</li>
-<li>Object tracking benchmark, 2015</li>
-</ul>
-<h3 id="Benchmark"><a href="#Benchmark" class="headerlink" title="Benchmark"></a>Benchmark</h3><ul>
-<li>OTB50/100: <a href="http://cvlab.hanyang.ac.kr/tracker_benchmark/" target="_blank" rel="noopener">http://cvlab.hanyang.ac.kr/tracker_benchmark/</a></li>
-<li>VOT2016: <a href="http://www.votchallenge.net/vot2016/dataset.html" target="_blank" rel="noopener">http://www.votchallenge.net/vot2016/dataset.html</a> </li>
-</ul>
-<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><ul>
-<li>Visual Object Tracking (VOT) challenge:<br><a href="http://www.votchallenge.net/challenges.html" target="_blank" rel="noopener">http://www.votchallenge.net/challenges.html</a><br>VOT2016 has released the code of many trackers: <a href="http://votchallenge.net/vot2016/trackers.html" target="_blank" rel="noopener">http://votchallenge.net/vot2016/trackers.html</a></li>
-<li>Multiple Object Tracking Challenge (MOT) challenge:<br><a href="https://motchallenge.net/" target="_blank" rel="noopener">https://motchallenge.net/</a></li>
-</ul>
-<h3 id="Detection-based-Tracking"><a href="#Detection-based-Tracking" class="headerlink" title="Detection based Tracking"></a>Detection based Tracking</h3><p>Detection based tracking is also named as  tracking by detection or multiple object tracking. (MOT Challenge)</p>
-<p>TLD (tracking-learning-detection): update tracker and detector during learning<br><a href="http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html" target="_blank" rel="noopener">http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2186,7 +2221,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">114</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

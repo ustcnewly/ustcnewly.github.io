@@ -281,6 +281,512 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Incremental SVM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Incremental SVM/" itemprop="url">Incremental SVM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1) Approximate incremental SVM: pass through the dataset many times</p>
+<ul>
+<li><p>Pegasos: select a training batch in each iteration</p>
+<ul>
+<li>python: <a href="https://github.com/ejlb/pegasos" target="_blank" rel="noopener">https://github.com/ejlb/pegasos</a><pre><code>   https://github.com/avaitla/Pegasos
+</code></pre></li>
+<li>C: <a href="https://www.cs.huji.ac.il/~shais/code/index.html" target="_blank" rel="noopener">https://www.cs.huji.ac.il/~shais/code/index.html</a></li>
+<li>matlab: <a href="https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function" target="_blank" rel="noopener">https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function</a></li>
+</ul>
+</li>
+<li><p>sklearn.linear_model: SGD</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clf= sklearn.linear_model.SGDClassifier(learning_rate = <span class="string">'constant'</span>, eta0 = <span class="number">0.1</span>, shuffle = <span class="keyword">False</span>, n_iter = <span class="number">1</span>)</span><br><span class="line"><span class="comment"># get x1, y1 as a new instance</span></span><br><span class="line">clf.partial_fit(x1, y1)</span><br><span class="line"><span class="comment"># get x2, y2</span></span><br><span class="line"><span class="comment"># update accuracy if needed</span></span><br><span class="line">clf.partial_fit(x2, y2)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2) Exact incremental or decremental SVM: only pass through the dataset once</p>
+<ul>
+<li><p>Incremental and Decremental Support Vector Machine Learning<br><a href="http://www.isn.ucsd.edu/svm/incremental" target="_blank" rel="noopener">http://www.isn.ucsd.edu/svm/incremental</a></p>
+</li>
+<li><p>SVM Incremental Learning, Adaptation and Optimization: extend the work above<br>matlab: <a href="https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB" target="_blank" rel="noopener">https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB</a></p>
+</li>
+<li><p>Incremental and decremental training for linear classification: extension of liblinear focusing on linear problem<br><a href="http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/How to Come up with Ideas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/How to Come up with Ideas/" itemprop="url">How to Come up with Ideas</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><u>Non-trivial ideas</u> require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. <u>Trivial ideas</u> are much easier with the aid of some short formulas. We do not encourage students to generate trivial ideas based on short formulas, but this can help beginners take the first step and gain confidence.</p>
+<ol>
+<li><p>naive combination: e.g., combine regularizers, combine network modules</p>
+</li>
+<li><p>from single to multiple: create multiple-XXX learning setting, e.g., multi-view learning, multi-instance learning, multi-label learning, multi-task learning.</p>
+</li>
+<li><p>separate common and specific components: in multi-XXX learning setting, we can separate XXX-invariant components from XXX-specific components. e.g., for multiple domains (resp, categories), we can separate domain (resp., category)-invariant components from domain (resp., category)-specific components.</p>
+</li>
+<li><p>combine local information with global information: jointly use local and global information from images/videos.</p>
+</li>
+<li><p>from  discrete to continous (e.g., using integral) or from continuous to discrete (e.g., using basis).</p>
+</li>
+<li><p>from coarse-grained to fine-grained: generate a coarse-grained result first and then refine the coarse-grained result to fine-grained result.</p>
+</li>
+<li><p>from simple structure to advanced structure: e.g., from sequence network to tree network to graph network, form vector representation to matrix representation to tensor representation.</p>
+</li>
+<li><p>kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. </p>
+</li>
+<li><p>introduce auxiliary/side information to help the original task: the auxiliary/side information is usually more accessible.</p>
+</li>
+<li><p>learn different weights on different components: the essence of machine learning is learning weights, e.g., assign different weights on different feature dimensions (linear classifier), on different kernels (multiple-kernel learning), on different training samples (sample reweighting).</p>
+</li>
+<li><p>fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method, as illustrated below.</p>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/mGTLNur.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/Gaze Estimation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/paper_note/Gaze Estimation/" itemprop="url">Gaze Estimation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://i.imgur.com/VDw1UW6.jpg" width="50%" height="50%"></p>
+<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><ol>
+<li><p>Corneal reflection-based methods</p>
+<ul>
+<li>NIR or LED illumination, learning the mapping (e.g., regression, ) between glint vector and gaze direction.</li>
+</ul>
+</li>
+<li><p>Appearance based methods</p>
+<ul>
+<li>Limbus model <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.486.489&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a>: fit a limbus model (a fixed-diameter disc) to detected iris edges.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Auxiliary-Tools"><a href="#Auxiliary-Tools" class="headerlink" title="Auxiliary Tools"></a>Auxiliary Tools</h3><ol>
+<li><p>Calibration: obtain the visual axis and kappa angle for each person.</p>
+</li>
+<li><p>Facial landmarks detection</p>
+<ul>
+<li>One Millisecond Face Alignment with an Ensemble of Regression Trees <a href="http://openaccess.thecvf.com/content_cvpr_2014/papers/Kazemi_One_Millisecond_Face_2014_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/cheind/dest" target="_blank" rel="noopener">[code]</a></li>
+<li>Continuous Conditional Neural Fields for Structured Regression <a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=1133&amp;context=lti" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>Head Pose Estimation</p>
+<ul>
+<li>EPnP algorithm <a href="https://infoscience.epfl.ch/record/160138/files/top.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><ol>
+<li><p><a href="https://www.mpi-inf.mpg.de/de/abteilungen/computer-vision-and-multimodal-computing/research/gaze-based-human-computer-interaction/appearance-based-gaze-estimation-in-the-wild-mpiigaze/" target="_blank" rel="noopener">[MPIIGaze]</a>: fine-grained annotation</p>
+</li>
+<li><p><a href="https://www.idiap.ch/dataset/eyediap" target="_blank" rel="noopener">[Eyediap]</a>: RGB-D </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/paper_note/From Weak to Strong Supervision/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1436,454 +1942,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Software Management/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/OS/Ubuntu/Ubuntu Software Management/" itemprop="url">Ubuntu Software Management</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="raw-dpkg"><a href="#raw-dpkg" class="headerlink" title="raw: dpkg"></a>raw: dpkg</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i xxx.deb</span><br><span class="line">dpkg -r xxx.deb</span><br><span class="line">dpkg --purge xxx.deb</span><br><span class="line">dpkg -L xxx.deb</span><br><span class="line">dpkg --info xxx.deb</span><br><span class="line">dpkg -reconfigure xxx</span><br></pre></td></tr></table></figure>
-<p>dkpg is raw method to install without solving dependencies and existing software.</p>
-<h3 id="mature-apt-get"><a href="#mature-apt-get" class="headerlink" title="mature: apt-get"></a>mature: apt-get</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-get install softname1 softname2 softname3……</span><br><span class="line">apt-get remove softname1 softname2 softname3……</span><br><span class="line">apt-get remove --purge softname1</span><br><span class="line">apt-get autoremove</span><br><span class="line">apt-get clean //clean /var/cache/apt/archives </span><br><span class="line">apt-get autoclean //clean the out-of-date files in /var/cache/apt/archives</span><br><span class="line"></span><br><span class="line">apt-get update //update software information and database command</span><br><span class="line">apt-get upgrade //update the system</span><br><span class="line"></span><br><span class="line">apt-cache search rough_name</span><br><span class="line">apt-cache show exact_name</span><br><span class="line"></span><br><span class="line">pkg-config --libs opencv</span><br><span class="line">pkg-config --cflags opencv </span><br><span class="line">pkg-config --modversion opencv</span><br></pre></td></tr></table></figure>
-<p>apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg.</p>
-<h3 id="more-mature-aptitude-GUI"><a href="#more-mature-aptitude-GUI" class="headerlink" title="more mature: aptitude (GUI)"></a>more mature: aptitude (GUI)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aptitude install softname1</span><br><span class="line">aptitude remove softname1</span><br></pre></td></tr></table></figure>
-<p>aptitude is also built on dkpg and more powerful than apt-get.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/" itemprop="url">Ubuntu Shell Scripts</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><code>#!/bin/bash</code> at the head of file indicates shell type</p>
-<ol>
-<li><p>strict format</p>
-<p> For <code>if [[ $input == &quot;hello&quot; ]]</code>, note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression</p>
-</li>
-<li><p>arguments</p>
-<ul>
-<li>$@: stores all the arguments in a list of string</li>
-<li>$*: stores all the arguments as a single string</li>
-<li>$#: stores the number of arguments</li>
-<li>shift: remove the first argument</li>
-</ul>
-</li>
-</ol>
-<p>When starting login or interative shells, certain files will be executed based on the following tables:</p>
-<p>For bash:<br>login-y interactive-y: profile<br>login-y interactive-n: profile<br>login-n interactive-y: bashrc</p>
-<p>For zsh:<br>login-y interactive-y: zshenv zprofile zshrc zlogin<br>login-y interactive-n: zshenv zprofile zlogin<br>login-n interactive-y: zshenv zshrc<br>login-n interactive-n: zshenv</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Mount/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/OS/Ubuntu/Ubuntu Mount/" itemprop="url">Ubuntu Mount</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Mount-remote-folder-on-Windows-Linux"><a href="#Mount-remote-folder-on-Windows-Linux" class="headerlink" title="Mount remote folder on Windows/Linux:"></a>Mount remote folder on Windows/Linux:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cifs-utils</span><br><span class="line">sudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir</span><br></pre></td></tr></table></figure>
-<h3 id="Mount-sharefolder-between-host-machine-and-virtualbox"><a href="#Mount-sharefolder-between-host-machine-and-virtualbox" class="headerlink" title="Mount sharefolder between host machine and virtualbox:"></a>Mount sharefolder between host machine and virtualbox:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) share_name tgt_dir</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1938,7 +1996,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">114</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
