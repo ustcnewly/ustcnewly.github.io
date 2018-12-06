@@ -281,6 +281,182 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/11/deep_learning/Adversarial Attack/" itemprop="url">Adversarial Attack</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-11T15:40:12+08:00">
+                2018-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>A comprehensive survey can be found <a href="https://arxiv.org/pdf/1801.00553.pdf" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology:"></a>Terminology:</h2><ul>
+<li><p>black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.</p>
+</li>
+<li><p>targeted/non-targeted attack: whether predicting a specific label for the adversarial example.</p>
+</li>
+<li><p>universal perturbation: fool a given model on any image with high probability. </p>
+</li>
+</ul>
+<h2 id="Attack"><a href="#Attack" class="headerlink" title="Attack"></a>Attack</h2><ol>
+<li><p>Backward Update</p>
+<ul>
+<li><p>add imperceptible distortion and increase the classification loss</p>
+</li>
+<li><p>universal adversarial perturbation: learn a residual perturbation that works on most clean images</p>
+</li>
+</ul>
+</li>
+<li><p>Forward Update</p>
+<ul>
+<li><p><a href="https://arxiv.org/pdf/1710.08864.pdf" target="_blank" rel="noopener">one-pixel attack</a>: use differential evolution algorithm</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.09387.pdf" target="_blank" rel="noopener">Adversarial Transformation Networks</a>: learn a network to translate clean image to adversarial example.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Defense"><a href="#Defense" class="headerlink" title="Defense"></a>Defense</h2><ol>
+<li><p>Use modified training samples during training or modified test samples during testing</p>
+</li>
+<li><p>Modify network: model parameters regularization, add a layer/module</p>
+</li>
+<li><p>Adversarial example detector: classify an example as adversarial or clean based on certain statistics</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/paper_note/Webly Supervised Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1673,163 +1849,6 @@
 <li><p>Correlation</p>
 </li>
 <li><p>Information gain/loss</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/19/paper_note/Conference Rebuttal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/19/paper_note/Conference Rebuttal/" itemprop="url">Conference Rebuttal</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-19T15:31:55+08:00">
-                2018-10-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>To determine whether the rebuttal is necessary. If the scores are too low, just give up.</p>
-</li>
-<li><p>Summarize the questions from reviewers and rank them based on the importance. </p>
-</li>
-<li><p>Pick out the questions which call for experiments and conduct those experiments immediately.</p>
-</li>
-<li><p>When running experiments, draft the response file. Pay attention to the format of response file (e.g., limited characters or one page of pdf, URL allowed or not).</p>
-</li>
-<li><p>In the response file, try to cover all the questions if possible. Otherwise, igore the questions with least importance.</p>
-</li>
-<li><p>The tone of response file cannot be rude and offensive. Be cool and confident.</p>
-</li>
-<li><p>If the maximum number of characters is quite limited, there are many tricks to save space.</p>
 </li>
 </ol>
 
