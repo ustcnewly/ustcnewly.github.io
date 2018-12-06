@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   Driver check the latest driver information on http://www.nvidia.com/Download">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-07T03:56:35.827Z">
+<meta property="og:updated_time" content="2018-12-06T09:53:32.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GPU Cuda and CuDNN">
 <meta name="twitter:description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   Driver check the latest driver information on http://www.nvidia.com/Download">
@@ -402,22 +402,27 @@
 <li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
 <ol>
 <li>Hit CTRL+ALT+F1 and login using your credentials.</li>
-<li>kill your current X server session by typing <code>sudo service lightdm stop</code> or <code>sudo stop lightdm</code></li>
+<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
 <li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
 <li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
 </ol>
 </li>
 </ul>
 <h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><ol>
+<li><p>Preprocessing</p>
+<ul>
+<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
+<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
+<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
+</ul>
+</li>
 <li><p>Install Cuda</p>
-<p> Download the latest version from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i cuda-repo-ubuntu1404-7*amd64.deb</span><br></pre></td></tr></table></figure>
-<p> or use the following way which is not recommended</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install cuda</span><br></pre></td></tr></table></figure>
+<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
 <p> and then add into PATH and LD_LIBRARY_PATH</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>check Cuda version after installation: <code>nvcc -V</code></p>
+<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
 </li>
 </ol>
 <h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
@@ -548,7 +553,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">117</span>
+                  <span class="site-state-item-count">118</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
