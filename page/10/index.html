@@ -1523,7 +1523,7 @@
 <li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
 </li>
 </ul>
-<h3 id="Driver"><a href="#Driver" class="headerlink" title="Driver"></a>Driver</h3><ul>
+<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
 <li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
 </li>
 <li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
@@ -1558,6 +1558,7 @@
 </li>
 </ol>
 <h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+<h3 id="Deep-learning-platform"><a href="#Deep-learning-platform" class="headerlink" title="Deep learning platform"></a>Deep learning platform</h3><p>When using conda, installing Tensorflow and Pytorch can be as  easy as <code>conda install tensorflow-gpu</code> and <code>conda install pytorch</code>, which can automatically install compatible cuda and cudnn. </p>
 
           
         
