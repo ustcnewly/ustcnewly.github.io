@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Few-Shot Learning]]></title>
+    <url>%2F2018%2F12%2F11%2Fpaper_note%2FFew-Shot%20Learning%2F</url>
+    <content type="text"><![CDATA[One-shot/few-shot learningThe first one-shot learning paper dates back to 2006, but becomes more popular recently. Conceptstraining/validation/test categories: Training categories and test categories have no overlap support(sample)/query(batch) set: In the testing stage, for each test category, we preserve some instances to form the support set and sample from the remaining instances to form the query set C-way K-shot: The test set has C categories. For each test category, we preserve K instances as the support set episode: Episode-based strategy used in the training stage to match the inference in the testing stage. First sample some categories and then sample the suppport/query set for each category Methods Metric-learning based: transfer metric Siamese network: the earliest and simplest Matching network: map a support set to a classification function p(y|x,S) (KNN or LSTM). For the LSTM version, there is another similar work using memory module. Relation network: calculate the relation score for 1-shot, calculate the average of relation scores for k-shot Prototypical network: compare with the prototype representations of each class. There is a previous similar work others: [1] Meta-learning based: transfer meta-information: Meta-Learner LSTM: gradient update [learnet] [2] [3]: generate classifiers for novel categories]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu SSH]]></title>
+    <url>%2F2018%2F12%2F07%2Fnetwork%2FUbuntu%20VPN%2F</url>
+    <content type="text"><![CDATA[Sometimes Ubuntu fails to connect VPN. Open the PPTP advanced options, uncheck EAP and check MPPE.]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Knowledge Graph]]></title>
     <url>%2F2018%2F12%2F02%2Fpaper_note%2FKnowledge%20Graph%2F</url>
     <content type="text"><![CDATA[Definition: entities, attributes, and relationships Two ways to construct knowledge graph: probabilistic models (graphical model/random walk) embedding based models]]></content>
@@ -53,14 +76,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Image Harmonization]]></title>
-    <url>%2F2018%2F11%2F27%2Fdeep_learning%2FImage%20Blending%20and%20Harmonization%2F</url>
-    <content type="text"><![CDATA[old name: realism in composite images [1][2] Image harmonizationDeep image harmonization [code]]]></content>
+    <title><![CDATA[Image Composition and Harmonization]]></title>
+    <url>%2F2018%2F11%2F27%2Fpaper_note%2FImage%20Composition%20and%20Harmonization%2F</url>
+    <content type="text"><![CDATA[Image realismStatistics: illuminance, color temperature, saturation, local contrast, hue, texture, tone Realism discriminator based on real images and fake images [1] Global and local statistics: distance to neighboring realistic image, similarity between foreground and background [1] Image harmonizationAfter stitching foreground and background, harmonize the foreground. Traditional methods: color, illumination, and texture transfer: mean/variance matching, histogram matching, linear color mapping [1] [2] [3] [4]; smooth histogram matching [5]; 2D histogram matching [6] Gradient-domain compositing: seamless cloning, Poisson blending [1] [2] alpha matting: fuse foreground and background with alpha mask $\mathbf{I}=\mathbf{\alpha}\mathbf{F}+(1-\mathbf{\alpha}) \mathbf{B}$ [1] [2] [3] Deep learning methods: The first end-to-end deep learning method for harmonization: [paper] [code] Image compositionNot only adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground, which is more challenging task with much larger searching space.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>machine learning</tag>
       </tags>
   </entry>
   <entry>
