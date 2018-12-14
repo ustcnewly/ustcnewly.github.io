@@ -610,15 +610,17 @@
 </li>
 <li><p><a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">Prototypical network</a>: compare with the prototype representations of each class. There is a previous similar <a href="https://link.springer.com/chapter/10.1007/978-3-642-33709-3_35" target="_blank" rel="noopener">work</a>  </p>
 </li>
-<li><p>others: <a href="">[1]</a></p>
-</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p>Meta-learning based: transfer meta-information: </p>
 <ul>
 <li><p><a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">Meta-Learner LSTM</a>: gradient update</p>
 </li>
-<li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a>: generate classifiers for novel categories </p>
+<li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>: predict the parameters of classifiers for novel categories. </p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>: predict the parameters of feature extractor by virtue of memory module.</p>
 </li>
 </ul>
 </li>
@@ -1670,7 +1672,7 @@
 <ul>
 <li>color, illumination, and texture transfer:  mean/variance matching, histogram matching, linear color mapping <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.491.4250&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.682.3987&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[4]</a>; smooth histogram matching <a href="https://people.csail.mit.edu/wojciech/Harmonization/Harmonization.pdf" target="_blank" rel="noopener">[5]</a>; 2D histogram matching <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[6]</a></li>
 <li>Gradient-domain compositing: seamless cloning, Poisson blending <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>alpha matting: fuse foreground and background with alpha mask $\mathbf{I}=\mathbf{\alpha}\mathbf{F}+(1-\mathbf{\alpha}) \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a></li>
+<li><a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a>: separate foreground from background given some user annotation (e.g., trimask, scribble), solve $\mathbf{\alpha}$ (main target), $\mathbf{F}$, $\mathbf{B}$ in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a></li>
 </ul>
 </li>
 <li><p><strong>Deep learning methods:</strong></p>
