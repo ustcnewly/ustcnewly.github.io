@@ -281,6 +281,226 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>Preinstallation<ul>
+<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
+<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
+<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
+</ul>
+</li>
+<li>SSH keys<ul>
+<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
+<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
+<li>create the key in github: account setting-&gt;SSH</li>
+<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
+</ul>
+</li>
+<li><p>create an empty folder as Hexo folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
+<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
+</li>
+<li><p>deploy local Hexo folder</p>
+<ul>
+<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
+</li>
+<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
+</ul>
+</li>
+<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
+<li><p>local search</p>
+<ul>
+<li><code>$npm install hexo-generator-searchdb --save</code></li>
+<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add social links: in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latex: </p>
+<ul>
+<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
+<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to address the conflict between MathJax and Hexo</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>push posts to the top</p>
+<ul>
+<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
+<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
+</ul>
+</li>
+<li><p>insert code block</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert image</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Tips:</strong> </p>
+<ol>
+<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+</li>
+<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
+<ul>
+<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
+<li>clean the folder <code>.deploy_git</code></li>
+<li><code>hexo clean</code> and <code>hexo d -g</code></li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/paper_note/Few-Shot Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1439,30 +1659,35 @@
       
         
           
-            <h2 id="Image-realism"><a href="#Image-realism" class="headerlink" title="Image realism"></a>Image realism</h2><p><u>Image Statistics</u>: illuminance, color temperature, saturation, local contrast, hue, texture, tone</p>
-<ol>
+            <h2 id="Fundamental"><a href="#Fundamental" class="headerlink" title="Fundamental"></a>Fundamental</h2><p><u>Image Statistics</u>: illuminance, color temperature, saturation, local contrast, hue, texture, tone</p>
+<p><u>Color spaces</u>: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).</p>
+<h2 id="Image-realism"><a href="#Image-realism" class="headerlink" title="Image realism"></a>Image realism</h2><ol>
 <li><p>Predict the realism using the discriminator learnt based on real images and fake images <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zhu_Learning_a_Discriminative_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
 <li><p>Predict the realism based on global and local statistics: distance to neighboring realistic image, similarity between foreground and background <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.2272&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
 </ol>
-<h2 id="Image-harmonization"><a href="#Image-harmonization" class="headerlink" title="Image harmonization"></a>Image harmonization</h2><p>After stitching foreground and background, harmonize the foreground. </p>
-<ol>
-<li><p><strong>Traditional methods</strong></p>
+<h2 id="Image-harmonization"><a href="#Image-harmonization" class="headerlink" title="Image harmonization"></a>Image harmonization</h2><p>After pasting the foreground on the background, harmonize the foreground. </p>
 <ul>
-<li>color, illumination, and texture transfer:  mean/variance matching, histogram matching, linear color mapping <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.491.4250&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.682.3987&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[4]</a>; smooth histogram matching <a href="https://people.csail.mit.edu/wojciech/Harmonization/Harmonization.pdf" target="_blank" rel="noopener">[5]</a>; 2D histogram matching <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[6]</a></li>
+<li><strong>Traditional methods:</strong> match the foreground with the background; match the foreground with other semantically or statistically close realistic images.<ul>
+<li>histogram matching: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[1]</a> <a href="https://people.csail.mit.edu/wojciech/Harmonization/Harmonization.pdf" target="_blank" rel="noopener">[2]</a> <a href="(https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf">[3]</a>) </li>
+<li>Gaussian model matching: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.491.4250&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>pixel-level classification: MRF<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[1]</a></li>
+<li>gamma correction <a href="(https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf">[1]</a>) <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[2]</a> </li>
 </ul>
 </li>
-<li><p><strong>Deep learning methods</strong></p>
-<p> The first end-to-end deep learning method for harmonization: <a href="https://arxiv.org/pdf/1703.00069.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/wasidennis/DeepHarmonization" target="_blank" rel="noopener">[code]</a></p>
+</ul>
+<ul>
+<li><p><strong>Deep learning methods:</strong> learn the mapping from fake images to real images.</p>
+<p>  The first end-to-end deep learning method for harmonization: <a href="https://arxiv.org/pdf/1703.00069.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/wasidennis/DeepHarmonization" target="_blank" rel="noopener">[code]</a></p>
 </li>
-</ol>
+</ul>
 <h2 id="Other-related-concepts"><a href="#Other-related-concepts" class="headerlink" title="Other related concepts:"></a>Other related concepts:</h2><ol>
-<li><p><strong>Image blending</strong>: The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poissan equation. In image harmonization, </p>
+<li><p><strong>Image blending</strong>: The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable.</p>
 </li>
-<li><p><strong>Image matting</strong>: The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>. In image harmonization, we already know the ground-truth mask of foreground.</p>
+<li><p><strong>Image matting</strong>: The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>. In image harmonization, we already know the ground-truth mask of foreground. The first end-to-end method for image matting<br>is <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">here</a>.</p>
 </li>
-<li><p><strong>Image composition</strong>: Not only adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. In image harmonization, we do not need to perform advanced transformation.</p>
+<li><p><strong>Image composition</strong>: The target is not only to adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. In image harmonization, we do not need to perform geometric adjustment.</p>
 </li>
 </ol>
 
@@ -1614,249 +1839,6 @@
 <p> <img src="https://i.imgur.com/h7GQbIH.jpg" widt="90%" width="50%"></p>
 </li>
 </ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/paper_note/Scene Text Recognition/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/19/paper_note/Scene Text Recognition/" itemprop="url">Scene Text Recognition</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T15:40:54+08:00">
-                2018-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
-<h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
-<p><strong>Paper list (in chronological order):</strong></p>
-<ol>
-<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.187&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Detecting Text in Natural Scenes with<br>Stroke Width Transform</a>, CVPR 2010: assume consistent stroke width within each character</p>
-</li>
-<li><p><a href="http://www.iapr-tc11.org/dataset/MSRA-TD500/Detecting_Texts_of_Arbitrary_Orientations_in_Natural_Images.pdf" target="_blank" rel="noopener">Detecting Texts of Arbitrary Orientations in Natural Images</a>, CVPR 2012: design rotation-invariant features</p>
-</li>
-<li><p><a href="http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/jaderberg14deep.pdf" target="_blank" rel="noopener">Deep Features for Text Spotting</a>, ECCV 2014: add three branches for prediction</p>
-</li>
-<li><p><a href="http://www.whuang.org/papers/whuang2014_eccv.pdf" target="_blank" rel="noopener">Robust scene text detection with convolution neural network induced mser trees</a>, ECCV 2014</p>
-</li>
-<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.4947&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Real-time Lexicon-free Scene Text<br>Localization and Recognition</a>, T-PAMI 2016</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gupta_Synthetic_Data_for_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Synthetic Data for Text Localisation in Natural Images</a>, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Multi-Oriented_Text_Detection_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Multi-oriented text detection with fully convolutional networks</a>, CVPR 2016</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1609.03605.pdf" target="_blank" rel="noopener">Detecting Text in Natural Image with Connectionist Text Proposal Network</a>, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM.</p>
-</li>
-<li><p><a href="https://scholar.google.com/scholar?hl=zh-CN&amp;as_sdt=0%2C5&amp;q=SSD%3A+single+shot+multibox+detector&amp;btnG=" target="_blank" rel="noopener">SSD: single shot multibox detector</a>, ECCV 2016</p>
-</li>
-<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12256/12121" target="_blank" rel="noopener">Reading Scene Text in Deep Convolutional Sequences</a>, AAAI 2016</p>
-</li>
-<li><p><a href="Scene text detection via holistic, multi-channel prediction">Scene text detection via holistic, multi-channel prediction</a>, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linking<br>orientation map</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Deep_Direct_Regression_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep Direct Regression for Multi-Oriented Scene Text Detection</a>, ICCV 2017</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_WordSup_Exploiting_Word_ICCV_2017_paper.pdf" target="_blank" rel="noopener">WordSup: Exploiting Word Annotations for Character based Text Detection</a>, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training</p>
-</li>
-<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14202/14295" target="_blank" rel="noopener">TextBoxes: A Fast Text Detector with a Single Deep Neural Network</a>, AAAI 2017</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1801.02765.pdf" target="_blank" rel="noopener">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf" target="_blank" rel="noopener">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
-</li>
-</ol>
-<h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>
-<p><strong>Paper list (in chronological order):</strong></p>
-<ol>
-<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.354&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">End-to-End Scene Text Recognition</a>, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon</p>
-</li>
-<li><p><a href="https://hal.inria.fr/hal-00818178/document" target="_blank" rel="noopener">Top-down and bottom-up cues for scene text recognition</a>, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shi_Scene_Text_Recognition_2013_CVPR_paper.pdf" target="_blank" rel="noopener">Scene text recognition using part-based tree-structured character detection</a>, CVPR 2013:  build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Bissacco_PhotoOCR_Reading_Text_2013_ICCV_paper.pdf" target="_blank" rel="noopener">PhotoOCR: Reading text in uncontrolled conditions</a>, ICCV 2013: automatically generate training data and perform OCR on web images</p>
-</li>
-<li><p><a href="https://link.springer.com/article/10.1007/s11263-014-0793-6" target="_blank" rel="noopener">Label embedding: A frugal baseline for text recognition</a>, IJCV 2015: learn a common space for image and word</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016 </p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Robust_Scene_Text_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Robust Scene Text Recognition with Automatic Rectification</a>, CVPR 2016</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Recursive Recurrent Nets with Attention Modeling for OCR in the Wild</a>, CVPR 2016: character-level language model embodied in a recurrent neural network</p>
-</li>
-<li><p><a href="https://ieeexplore.ieee.org/abstract/document/7801919" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI 2017</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Cheng_Focusing_Attention_Towards_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Focusing Attention: Towards Accurate Text Recognition in Natural Images</a>, ICCV 2017: Focusing Network to handle the attention drift</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1706.01487.pdf" target="_blank" rel="noopener">Visual attention models for scene text recognition</a>, 2017 arxiv</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">AON: Towards Arbitrarily-Oriented Text Recognition
-</a>, CVPR 2018</p>
-</li>
-</ol>
-<h2 id="End-to-end"><a href="#End-to-end" class="headerlink" title="End-to-end"></a>End-to-end</h2><p>Integrate scene text detection and recognition in an end-to-end system.</p>
-<p><strong>Paper list (in chronological order):</strong></p>
-<ol>
-<li><p><a href="http://cmp.felk.cvut.cz/~matas/papers/neumann-text-accv10.pdf" target="_blank" rel="noopener">A method for text localization and recognition in real-world images</a>, ACCV 2010</p>
-</li>
-<li><p><a href="http://fadaei.semnan.ac.ir/uploads/MV7.pdf" target="_blank" rel="noopener">Real-Time Scene Text Localization and Recognition</a>, CVPR 2012</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Towards_End-To-End_Text_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Towards End-to-end Text Spotting with Convolutional<br>Recurrent Neural Networks</a>, ICCV 2017: designed for horizontal scene text</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busta_Deep_TextSpotter_An_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework</a>, ICCV 2017:  detect and recognize horizontal and multioriented<br>scene text</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf" target="_blank" rel="noopener">FOTS: Fast Oriented Text Spotting with a Unified Network</a>, CVPR 2018: using EAST as text detector and CRNN as text recognizer</p>
-</li>
-</ol>
-<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
-<li><a href="http://mclab.eic.hust.edu.cn/icdar2017chinese/" target="_blank" rel="noopener">RCTW-17</a></li>
-<li><a href="http://rrc.cvc.uab.es/?ch=8" target="_blank" rel="noopener">MLT</a> </li>
-<li><a href="https://github.com/Yuliang-Liu/Curve-Text-Detector" target="_blank" rel="noopener">SCUT-CTW1500</a></li>
-<li><a href="https://github.com/cs-chan/Total-Text-Dataset" target="_blank" rel="noopener">Total-Text</a></li>
-<li><a href="http://rrc.cvc.uab.es/?ch=4&amp;com=introduction" target="_blank" rel="noopener">ICDAR 2015</a></li>
-<li><a href="http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500" target="_blank" rel="noopener">MSRA-TD500</a>)</li>
-<li><a href="http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html" target="_blank" rel="noopener">IIIT 5K-Word</a></li>
-<li><a href="https://vision.cornell.edu/se3/coco-text-2/" target="_blank" rel="noopener">COCO-Text</a></li>
-</ul>
-<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h2><ul>
-<li><a href="http://www.vlrlab.net/admin/uploads/avatars/FCS_TextSurvey_2015.pdf" target="_blank" rel="noopener">Scene text detection and recognition: Recent advances and future trends</a>, FCS 2015</li>
-<li><a href="https://ieeexplore.ieee.org/abstract/document/6945320" target="_blank" rel="noopener">Text detection and recognition in imagery: A survey</a>, T-PAMI 2015</li>
-</ul>
 
           
         
