@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="One-shot/few-shot learningThe first one-shot learning paper dates back to 2006, but becomes more popular recently. Conceptstraining/validation/test categories: Training categories and test categories">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-14T07:40:33.900Z">
+<meta property="og:updated_time" content="2018-12-15T09:22:47.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-Shot Learning">
 <meta name="twitter:description" content="One-shot/few-shot learningThe first one-shot learning paper dates back to 2006, but becomes more popular recently. Conceptstraining/validation/test categories: Training categories and test categories">
@@ -382,13 +382,13 @@
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
 <li><p>Metric-learning based: transfer metric </p>
 <ul>
-<li><p><a href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf" target="_blank" rel="noopener">Siamese network</a>: the earliest and simplest</p>
+<li><p><a href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf" target="_blank" rel="noopener">Siamese network</a>: the earliest and simplest metric-learning based few-shot learning, standard verification problem.</p>
 </li>
 <li><p><a href="https://arxiv.org/abs/1606.04080" target="_blank" rel="noopener">Matching network</a>: map a support set to a classification function p(y|x,S) (KNN or LSTM). For the LSTM version, there is another similar <a href="https://arxiv.org/pdf/1605.06065.pdf" target="_blank" rel="noopener">work</a> using memory module. </p>
 </li>
 <li><p><a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">Relation network</a>: calculate the relation score for 1-shot, calculate the average of relation scores for k-shot</p>
 </li>
-<li><p><a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">Prototypical network</a>: compare with the prototype representations of each class. There is a previous similar <a href="https://link.springer.com/chapter/10.1007/978-3-642-33709-3_35" target="_blank" rel="noopener">work</a>  </p>
+<li><p><a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">Prototypical network</a>: compare with the prototype representations of each class. Each class can have more than one prototype representation. There are some other prototype-based methods <a href="https://link.springer.com/chapter/10.1007/978-3-642-33709-3_35" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Linchao_Zhu_Compound_Memory_Networks_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a>.</p>
 </li>
 </ul>
 </li>
@@ -398,7 +398,7 @@
 <ul>
 <li><p><a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">Meta-Learner LSTM</a>: gradient update</p>
 </li>
-<li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>: predict the parameters of classifiers for novel categories. </p>
+<li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-01267-0_2" target="_blank" rel="noopener">[5]</a>: predict the parameters of classifiers for novel categories. </p>
 </li>
 <li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>: predict the parameters of CNN feature extractor by virtue of memory module.</p>
 </li>
@@ -444,6 +444,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/19/paper_note/Fine-grained Dataset/" rel="prev" title="Fine-grained Dataset">
+                Fine-grained Dataset <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -524,7 +528,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">120</span>
+                  <span class="site-state-item-count">121</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
