@@ -456,7 +456,7 @@
   <entry>
     <title><![CDATA[LaTeX]]></title>
     <url>%2F2018%2F09%2F07%2Fsoftware%2FLaTeX%2F</url>
-    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Notes: \setlength\parindent{0pt} % Set the indentation in paragraphs \setlength{\parskip}{10pt} % set the separation between paragraphs]]></content>
+    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Tips: Set the indentation in paragraphs: \setlength\parindent{0pt} set the separation between paragraphs: \setlength{\parskip}{10pt} set color: \usepackage{xcolor} and \textcolor{red}{}]]></content>
       <categories>
         <category>software</category>
       </categories>
