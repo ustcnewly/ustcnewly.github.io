@@ -456,7 +456,7 @@
   <entry>
     <title><![CDATA[LaTeX]]></title>
     <url>%2F2018%2F09%2F07%2Fsoftware%2FLaTeX%2F</url>
-    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Tips: Set the indentation in paragraphs: \setlength\parindent{0pt} set the separation between paragraphs: \setlength{\parskip}{10pt} set color: \usepackage{xcolor} and \textcolor{red}{}]]></content>
+    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Tips: Set the indentation in paragraphs: \setlength\parindent{0pt} set the separation between paragraphs: \setlength{\parskip}{10pt} set color: \usepackage{xcolor} and \textcolor{red}{} expectation symbol: \usepackage{amsfonts} and \mathbb{E} cannot infer: \usepackage{amssymb} and \nRightarrow]]></content>
       <categories>
         <category>software</category>
       </categories>
@@ -759,7 +759,7 @@
   <entry>
     <title><![CDATA[Self-supervised Learning]]></title>
     <url>%2F2018%2F09%2F07%2Fpaper_note%2FSelf-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[Design a proxy task using unlabeled data to help the original task. Please refer to the surveys [1] [2]. image-to-image generate complementary information: colorization [1], inpainting [2], cross-channel generation [3] order of local information: relative location [1], jigsaw [2], predicting rotation [3] clustering: [1] video-to-image smoothness between neighboring frames: [1] [2] [3] predict motion: optical flow [1] [2], foreground movement [3] order of frames: [1] [2][3] Muti-task self-supervised learning: integrate multiple proxy tasks [1] [2]]]></content>
+    <content type="text"><![CDATA[Design a proxy task using unlabeled data to help the original task. Please refer to the surveys [1] [2]. image-to-image generate complementary information: colorization [1], inpainting [2], cross-channel generation [3] order of local information: relative location [1], jigsaw [2], predicting rotation [3] clustering: [1] video-to-image smoothness between neighboring frames: [1] [2] [3] predict motion: optical flow [1] [2], foreground movement [3] order of frames: [1] [2] [3] Muti-task self-supervised learning: integrate multiple proxy tasks [1] [2]]]></content>
       <categories>
         <category>paper note</category>
       </categories>
