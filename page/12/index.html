@@ -281,6 +281,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/From Anchor to ROI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/object_detection/From Anchor to ROI/" itemprop="url">From Anchor to ROI</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="layer-area"><a href="#layer-area" class="headerlink" title="layer area"></a>layer area</h2><p>From layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, </p>
+<script type="math/tex; mode=display">r_{i+1} = (r_i+2p_i-k_i)/s_i+1.</script><p>In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area.</p>
+<p><img src="http://i.imgur.com/5oklFvo.png" alt=""></p>
+<h2 id="coordinate-map"><a href="#coordinate-map" class="headerlink" title="coordinate map"></a>coordinate map</h2><p>Now consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$,</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.</script><p>The above coordinate system starts from 1. When the coordinate system starts from 0, </p>
+<script type="math/tex; mode=display">x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,</script><p>which can be simplified as</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).</script><p>when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case.</p>
+<p>By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution</p>
+<script type="math/tex; mode=display">x_1 = \alpha_L x_{L}+\beta_L,</script><p>in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ </p>
+<p><img src="http://i.imgur.com/acLbSez.png" alt=""></p>
+<h2 id="anchor-box-to-ROI"><a href="#anchor-box-to-ROI" class="headerlink" title="anchor box to ROI"></a>anchor box to ROI</h2><p>Given two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/caffe/Caffe/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1849,191 +2001,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/Makefile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/compiler/Makefile/" itemprop="url">Makefile</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/compiler/" itemprop="url" rel="index">
-                    <span itemprop="name">compiler</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li><p>use nemiver to debug. </p>
-<ul>
-<li>gcc/g++ <strong>-g</strong> hello.c -o hello.o <font color="green">#-g for debug</font></li>
-<li>nemiver hello <font color="green">#bin file</font></li>
-</ul>
-</li>
-<li><p>The comment character # does not introduce a make comment in the text of commands.</p>
-</li>
-<li><p><strong>Wildcards</strong>: <em>.</em> expands to all the files containing a period. A question mark represents any single character, and […] represents a character class.</p>
-</li>
-<li><p>.PHONY: clean</p>
-</li>
-<li><p><strong>Automatic Variables</strong>:</p>
-<ul>
-<li>$@ The name of the current target.</li>
-<li>$% The filename element of an archive member specification.</li>
-<li>$&lt; The name of the first prerequisite.</li>
-<li>$? The names of all prerequisites that are newer than the target, separated by spaces.</li>
-<li>$^ The names of all the prerequisites, separated by spaces. This list has duplicate names removed since for most uses, such as compiling, copying, etc., duplicates are not wanted.</li>
-<li>$+ The names of all the prerequisites separated by spaces, including duplicates. This variable was created for specific situations such as arguments to linkers where duplicate values have meaning.</li>
-<li>$* The stem of the target filename. A stem is typically a filename without its suffix. Its use outside of pattern rules is discouraged.</li>
-</ul>
-</li>
-<li><p>run makefile with —just-print option to view the execution process</p>
-</li>
-</ol>
-<h2 id="How-to-write-Makefile"><a href="#How-to-write-Makefile" class="headerlink" title="How to write Makefile"></a>How to write Makefile</h2><ol>
-<li><p>single C-file</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">hello: hello.c</span></span><br><span class="line">	gcc -g hello.c -o hello&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>multiple C-files</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">count_words: count_words.o lexer.o -lfl</span></span><br><span class="line">	gcc count_words.o lexer.o -lfl -ocount_words</span><br><span class="line"><span class="section">count_words.o: count_words.c</span></span><br><span class="line">	gcc -g -c count_words.c</span><br><span class="line"><span class="section">lexer.o: lexer.c</span></span><br><span class="line">	gcc -g -c lexer.c</span><br><span class="line"><span class="section">lexer.c: lexer.l</span></span><br><span class="line">	flex -t lexer.l &gt; lexer.c</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>set <strong>VPATH</strong> and <strong>CPPFLAGS</strong> in implicit rules</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">VPATH    = src <span class="keyword">include</span></span><br><span class="line">CPPFLAGS = -I <span class="keyword">include</span></span><br><span class="line"></span><br><span class="line"><span class="section">count_words: counter.o lexer.o -lfl</span></span><br><span class="line"><span class="section">count_words.o: counter.h</span></span><br><span class="line"><span class="section">counter.o: counter.h lexer.h</span></span><br><span class="line"><span class="section">lexer.o: lexer.h</span></span><br></pre></td></tr></table></figure>
-<p>VPATH can be used in a more advanced fashion as follows,</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vpath</span> %.c src</span><br><span class="line"><span class="keyword">vpath</span> %.l src</span><br><span class="line"><span class="keyword">vpath</span> %.h <span class="keyword">include</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use library <strong>.a</strong>. pack <strong>.o</strong> files into <strong>.a</strong>, similar as <strong>.lib</strong> in Windows.</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">libcounter.a: libcounter.a(lexer.o) libcounter.a(counter.o)</span></span><br><span class="line"><span class="section">libcounter.a(lexer.o): lexer.o</span></span><br><span class="line">	<span class="variable">$(AR)</span> <span class="variable">$(ARFLAGS)</span> <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">libcounter.a(counter.o): counter.o</span></span><br><span class="line">	<span class="variable">$(AR)</span> <span class="variable">$(ARFLAGS)</span> <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2088,7 +2055,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-count">123</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2110,7 +2077,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
