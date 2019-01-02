@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Visual Dialogue]]></title>
     <url>%2F2018%2F12%2F27%2Fdeep_learning%2FVisual%20Dialogue%2F</url>
-    <content type="text"><![CDATA[Visual dialogue [1]: a dialogue with one image Multimodal Dialogue [2]: a dialogue with multiple images [1] Visual Dialog [2] Knowledge-aware Multimodal Dialogue Systems]]></content>
+    <content type="text"><![CDATA[Visual dialogue [1]: a dialogue with one image Multimodal Dialogue [2][3]: a dialogue with multiple images [1] Visual Dialog [2] Towards Building Large Scale Multimodal Domain-Aware Conversation Systems [3] Knowledge-aware Multimodal Dialogue Systems]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
@@ -811,8 +811,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Parameter Tuning]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FParameter%20Tuning%2F</url>
+    <title><![CDATA[Hyper Parameter Tuning]]></title>
+    <url>%2F2018%2F09%2F07%2Fpaper_note%2FHyper%20Parameter%20Tuning%2F</url>
     <content type="text"><![CDATA[Parameter searching: grid search random search Bayesian Optimization: SigOpt is providing parameter tuning service based on Bayesian optimization. This is a good place to start. hyperopt (tree parzen estimator) BayesianOptimization, Spearmint, MOE (Gaussian process) SMAC (random forest regression) related papers: [1] [2] [3] [4] Spectral Optimization: Harmonica [github] currently only supports tuning binary parameters. Model ensembling: different initialization different epochs different hyperparameters A toolkit sealing all types of parameter tuning methods: Google Vizier]]></content>
       <categories>
         <category>paper note</category>
