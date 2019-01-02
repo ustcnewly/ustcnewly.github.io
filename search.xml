@@ -439,8 +439,8 @@
       </categories>
       <tags>
         <tag>Eclipse</tag>
-        <tag>JDK</tag>
         <tag>Java</tag>
+        <tag>JDK</tag>
       </tags>
   </entry>
   <entry>
@@ -620,8 +620,8 @@
         <category>cross-language</category>
       </categories>
       <tags>
-        <tag>C++</tag>
         <tag>Python</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -633,8 +633,8 @@
         <category>cross-language</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -951,7 +951,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Software Management]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Software%20Management%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Software%20Management%2F</url>
     <content type="text"><![CDATA[raw: dpkg123456dpkg -i xxx.debdpkg -r xxx.debdpkg --purge xxx.debdpkg -L xxx.debdpkg --info xxx.debdpkg -reconfigure xxx dkpg is raw method to install without solving dependencies and existing software. mature: apt-get12345678910111213141516apt-get install softname1 softname2 softname3……apt-get remove softname1 softname2 softname3……apt-get remove --purge softname1apt-get autoremoveapt-get clean //clean /var/cache/apt/archives apt-get autoclean //clean the out-of-date files in /var/cache/apt/archivesapt-get update //update software information and database commandapt-get upgrade //update the systemapt-cache search rough_nameapt-cache show exact_namepkg-config --libs opencvpkg-config --cflags opencv pkg-config --modversion opencv apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg. more mature: aptitude (GUI)12aptitude install softname1aptitude remove softname1 aptitude is also built on dkpg and more powerful than apt-get.]]></content>
       <categories>
         <category>OS</category>
@@ -962,7 +962,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Shell Scripts]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Shell%20Scripts%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Shell%20Scripts%2F</url>
     <content type="text"><![CDATA[#!/bin/bash at the head of file indicates shell type strict format For if [[ $input == &quot;hello&quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression arguments $@: stores all the arguments in a list of string $*: stores all the arguments as a single string $#: stores the number of arguments shift: remove the first argument When starting login or interative shells, certain files will be executed based on the following tables: For bash:login-y interactive-y: profilelogin-y interactive-n: profilelogin-n interactive-y: bashrc For zsh:login-y interactive-y: zshenv zprofile zshrc zloginlogin-y interactive-n: zshenv zprofile zloginlogin-n interactive-y: zshenv zshrclogin-n interactive-n: zshenv]]></content>
       <categories>
         <category>OS</category>
@@ -974,7 +974,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Mount]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Mount%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Mount%2F</url>
     <content type="text"><![CDATA[Mount remote folder on Windows/Linux:12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount sharefolder between host machine and virtualbox:1sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) share_name tgt_dir]]></content>
       <categories>
         <category>OS</category>
@@ -986,7 +986,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Log-in Failure]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Log-in%20Failure%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Log-in%20Failure%2F</url>
     <content type="text"><![CDATA[You may fail to log in Ubuntu due to the following reasons: /etc/environment or /etc/profile is modified to a wrong format: Just modify them back. startX is used improperly: run sudo rm -r .Xauthority* Tips: use Ctr+Alt+F1~6 corresponding to tty 1~6 to use command line]]></content>
       <categories>
         <category>OS</category>
@@ -997,7 +997,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu language]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Language%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Language%2F</url>
     <content type="text"><![CDATA[$sudo gedit /etc/default/locale modify as follows, 12LANG=&quot;en_US.UTF-8&quot;LANGUAGE=&quot;en_US:en&quot; $locale-gen -en_US:en log out or reboot]]></content>
       <categories>
         <category>OS</category>
@@ -1008,7 +1008,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Environment Variable]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Environment%20Variable%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Environment%20Variable%2F</url>
     <content type="text"><![CDATA[For user-wide: ~/.profile or ~/.bashrcFor system-wide: /etc/profile source ~/.bashrc or source /etc/profile can make the newly added (not the removed) environment variables for the current cmd window available immediately. However, you need to re-login to make them user-wide or system-wide. Note that after you sudo su (not using sudo privilege), the environment variables will be lost. You need to re-login. Because sudo su will erase newly exported variables. For permanent system-wide change even after sudo su, you should modify /etc/environment, which is not recommended. Because /etc/environment cannot recognize intermediate variable such as $JAVA_HOME. Sometimes misusing /etc/environment may result in your failure in login. Not recommend running sudo su and then modifying ~/.profile or ~/.bashrc.]]></content>
       <categories>
         <category>OS</category>
@@ -1019,7 +1019,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Crontab]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FUbuntu%20Crontab%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FUbuntu%20Crontab%2F</url>
     <content type="text"><![CDATA[crontab -l //list crontab crontab -r //remove crontab crontab -e //edit crontab minute hour day-of-month month day-of-week cmd each term can be a single number, e.g., 3, or a range, e.g., 3-6, or a set, e.g., 3,5,7, or interval, e.g., */10 for example, “ /10 * sh ~/cmd.sh” means executing cmd.sh every 10 minutes.]]></content>
       <categories>
         <category>OS</category>
@@ -1031,7 +1031,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Command Lines]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FUbuntu%2FLinux%20Command%20Lines%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FUbuntu%2FLinux%20Command%20Lines%2F</url>
     <content type="text"><![CDATA[create new user with home folder 1adduser XXX sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom. start ssh on the server, the default port is 22 12sudo apt-get install openssh-serversudo/etc/init.d/ssh start list 123list -a #including hidden fileslist -S #arrange by sizelist -t #arrange by time view text 123cathead/tail -n 10 tmp.txt #view the first/last 10 linesless #more powerful than more Change the privilege 12chmod 777 ./chmod a+x ./ Check disk or file size 12df -h du ./ --max-depth 2 -h Compress or uncompress files, refer to this link. Grep + regular expression 1grep [xyz] Search file 12345locate "keyword" #fastfind ./ -maxdepth 1 -name "*keyword*" find ./ -name "*keyword*" -size +50M -size -100M find ./ -name "*keyword*" -mmin -10 #m:modify min:minute find ./ -name "*keyword*" -exec rm -r &#123;&#125; \; Pipe commands 123ls -l | tr -s ' ' | cut -d ' ' -f 2 #tr to truncate spacels -l | sort -rnk2 #-r:reverse -n:numerical -k:k-th columnls -l | wc -l #count line xargs: 123cat python/requirements.txt | xargs -L 1 sudo pip installfind . -name "*.c" | xargs rm -rffind . -name '*.c' | xargs grep 'stdlib.h' alias: temporary alias command 12alias lnew="cd /home/niuli/caffe"unalias lnew export: The export command is one of the bash shell built-in commands, which means it is part of your shell. 123456export a=linux.comecho $aexport -n a #remove variableprintname () &#123; echo "Linuxcareer.com"; &#125;export -f printname #export function add LD_LIBRARY_PATH 12echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib' &gt;&gt; ~/.bashrcsource ~/.bashrc shellscript sample 12345678910111213141516171819202122232425#!/bin/bashread -p "Please input your first name: " echo -e "\nYour full name is: $firstname $lastname" test ! -e $filename &amp;&amp; echo "The filename '$filename' DO NOT exist" &amp;&amp; exit 0test -f $filename &amp;&amp; filetype="regulare file" test -d $filename &amp;&amp; filetype="directory" [ "$yn" == "Y" -o "$yn" == "y" ] &amp;&amp; echo "OK, continue" &amp;&amp; exit 0if [ "$yn" == "Y" ] || [ "$yn" == "y" ]; then echo "OK, continue" elif [ "$yn" == "N" ] || [ "$yn" == "n" ]; then echo "Oh, interrupt!" else echo "I don't know what your choice is" fiwhile [ "$yn" != "yes" -a "$yn" != "YES" ] do read -p "Please input yes/YES to stop this program: " yn donefor animal in dog cat elephant do echo "There are $&#123;animal&#125;s.... " done]]></content>
       <categories>
         <category>OS</category>
@@ -1042,7 +1042,7 @@
   </entry>
   <entry>
     <title><![CDATA[Windows Command Lines]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FWindows%20Command%20Lines%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FWindows%20Command%20Lines%2F</url>
     <content type="text"><![CDATA[zip/unzip winrar x -y -ibck zip_file_name unzip_file_name //x means unzip, -y means yes to interrupted queries, -ibck means running in the background generate the file list under one folder dir D:\test /b &gt;list.txt or dir D:\test /b &gt;list.xls combine multiple compressed volumes copy /b logs.tar.gza* logs.tar.gz]]></content>
       <categories>
         <category>OS</category>
@@ -1053,19 +1053,19 @@
   </entry>
   <entry>
     <title><![CDATA[Install Ubuntu under Windows]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FInstall%20Ubuntu%20under%20Windows%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FInstall%20Ubuntu%20under%20Windows%2F</url>
     <content type="text"><![CDATA[For MRB file system Install from CD: the simplest way, but many desktops don’t have CD-ROM nowadays. Install from memory disk: use universal USB installer or refus to write .iso file into memory disk. to enable booting from USB installer, we should turn off fast booting in the OS and disable secure boot in the BIOS. Install from hard disk: copy .iso along with vmlinuz.efi and initrd.lz in Casper as well as .disk under Disk C. Make sure Disk C is (hd0,N) in the disk manager. Open easyBCD and configure NeoGrub by editing the menu.lst as follows: 1234title Install Ubuntu 14.04 LTS root (hd0,N) kernel (hd0,N)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8initrd.lz (hd0,N)/initrd.lz Remember to modify N and iso file name. install Ubuntu after entering the NeoGrub term. Remember to execute sudo umount –l /isodevice first. add the Linux/BSD boot term in easyBCD and choose grub2 instead of grub(legacy), otherwise the screen may be black. if grub command line appears after booting Ubuntu system. Try to type the following codes: 1234root (hd1,1)kernel /boot/vmlinuz-3.19.0-25-generic root=/dev/sdb2initrd /boot/initrd.img-3.19.0-25-genericboot Pay attention to (hd1,1), /dev/sdb2, and the linux kernel version. After typing root (hd1,1), x83 should be returned.Or configure NeoGrub by adding the following codes and use the NeoGrub to boot Ubuntu. You may want to know more about grub and MBR, this blog is a good start. Tips: Windows disks have basic ones and dynamic ones. Don’t install Ubuntu on dynamic ones. Converting basic disk to dynamic disk is easy while the opposite is time-consuming and needs formatting. In Windows7, one disk can have 3 primary zones and 1 extended zones (containing logic zones). Installing Ubuntu on extended zones may be possible, but installing it on primary zones is preferred. Change the boot order under Ubuntu: /boot/grub/grub.cfg is generated from /etc/grub.d and /etc/default/grub. So we have two ways: a) reset GRUB_DEFAULT=N in /etc/default/grub. b) mv /etc/grub.d/30_os-prober /etc/grub.d/06_os-prober. Don’t forget sudo update-grub Change the boot order under Windows7: use easyBCD. For the Ubuntu disk partition, generally, / and swap are enough. Sometimes, we need /home and /boot. The size of swap is comparable with the memory size. The size of /boot is less than 1G. Note that when parting disk for installing Ubuntu, we have two choices for booting management device in the bottom dropdown menu. First, by default, then Windows guides Ubuntu when booting. Second, change to the boot folder of Ubuntu, then Ubuntu guides Windows when booting. For UEFI file systemNo need to make a partition for boot. Keep the booting mangement device in the bottom dropdown menu the default EFI (EPS) partition of Windows. For booting problem, we can use rEFInd to locate the efi file. tips: In Windows, we can assign a disk index to the EPS partition and operate on it via notebook with administrative privilege. For Windows, the key efi files are bootx64.efi and bootmgfw.efi]]></content>
       <categories>
         <category>OS</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>Ubuntu</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[BIOS]]></title>
-    <url>%2F2018%2F09%2F07%2FOS%2FBIOS%2F</url>
+    <url>%2F2018%2F09%2F07%2Foperation_system%2FBIOS%2F</url>
     <content type="text"><![CDATA[If something is wrong when attempting to enter the BIOS, try the following approaches: press F2, F12, ESC, DEL change the cable, adaptor, interface, etc (hardware reason) update BIOS to the latest version for Windows10, settings-&gt;recover-&gt;firmware close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage]]></content>
       <categories>
         <category>OS</category>
@@ -1179,8 +1179,8 @@
       </categories>
       <tags>
         <tag>deep learning</tag>
-        <tag>GPU</tag>
         <tag>TensorFlow</tag>
+        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>

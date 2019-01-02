@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Ubuntu," />
+  <meta name="keywords" content="Windows," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="raw: dpkg123456dpkg -i xxx.debdpkg -r xxx.debdpkg --purge xxx.debdpkg -L xxx.debdpkg --info xxx.debdpkg -reconfigure xxx dkpg is raw method to install without solving dependencies and existing softwar">
-<meta name="keywords" content="Ubuntu">
+<meta name="description" content="zip/unzip  winrar x -y -ibck zip_file_name unzip_file_name //x means unzip, -y means yes to interrupted queries, -ibck means running in the background  generate the file list under one folder  dir D:">
+<meta name="keywords" content="Windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu Software Management">
-<meta property="og:url" content="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Software Management/index.html">
+<meta property="og:title" content="Windows Command Lines">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/operation_system/Windows Command Lines/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="raw: dpkg123456dpkg -i xxx.debdpkg -r xxx.debdpkg --purge xxx.debdpkg -L xxx.debdpkg --info xxx.debdpkg -reconfigure xxx dkpg is raw method to install without solving dependencies and existing softwar">
+<meta property="og:description" content="zip/unzip  winrar x -y -ibck zip_file_name unzip_file_name //x means unzip, -y means yes to interrupted queries, -ibck means running in the background  generate the file list under one folder  dir D:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T05:08:51.160Z">
+<meta property="og:updated_time" content="2018-03-23T15:52:00.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu Software Management">
-<meta name="twitter:description" content="raw: dpkg123456dpkg -i xxx.debdpkg -r xxx.debdpkg --purge xxx.debdpkg -L xxx.debdpkg --info xxx.debdpkg -reconfigure xxx dkpg is raw method to install without solving dependencies and existing softwar">
+<meta name="twitter:title" content="Windows Command Lines">
+<meta name="twitter:description" content="zip/unzip  winrar x -y -ibck zip_file_name unzip_file_name //x means unzip, -y means yes to interrupted queries, -ibck means running in the background  generate the file list under one folder  dir D:">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Software Management/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/operation_system/Windows Command Lines/"/>
 
 
 
 
 
-  <title>Ubuntu Software Management | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Windows Command Lines | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Software Management/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Windows Command Lines/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Ubuntu Software Management</h1>
+          <h1 class="post-title" itemprop="name headline">Windows Command Lines</h1>
         
 
         <div class="post-meta">
@@ -374,12 +374,17 @@
       
 
       
-        <h3 id="raw-dpkg"><a href="#raw-dpkg" class="headerlink" title="raw: dpkg"></a>raw: dpkg</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i xxx.deb</span><br><span class="line">dpkg -r xxx.deb</span><br><span class="line">dpkg --purge xxx.deb</span><br><span class="line">dpkg -L xxx.deb</span><br><span class="line">dpkg --info xxx.deb</span><br><span class="line">dpkg -reconfigure xxx</span><br></pre></td></tr></table></figure>
-<p>dkpg is raw method to install without solving dependencies and existing software.</p>
-<h3 id="mature-apt-get"><a href="#mature-apt-get" class="headerlink" title="mature: apt-get"></a>mature: apt-get</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-get install softname1 softname2 softname3……</span><br><span class="line">apt-get remove softname1 softname2 softname3……</span><br><span class="line">apt-get remove --purge softname1</span><br><span class="line">apt-get autoremove</span><br><span class="line">apt-get clean //clean /var/cache/apt/archives </span><br><span class="line">apt-get autoclean //clean the out-of-date files in /var/cache/apt/archives</span><br><span class="line"></span><br><span class="line">apt-get update //update software information and database command</span><br><span class="line">apt-get upgrade //update the system</span><br><span class="line"></span><br><span class="line">apt-cache search rough_name</span><br><span class="line">apt-cache show exact_name</span><br><span class="line"></span><br><span class="line">pkg-config --libs opencv</span><br><span class="line">pkg-config --cflags opencv </span><br><span class="line">pkg-config --modversion opencv</span><br></pre></td></tr></table></figure>
-<p>apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg.</p>
-<h3 id="more-mature-aptitude-GUI"><a href="#more-mature-aptitude-GUI" class="headerlink" title="more mature: aptitude (GUI)"></a>more mature: aptitude (GUI)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aptitude install softname1</span><br><span class="line">aptitude remove softname1</span><br></pre></td></tr></table></figure>
-<p>aptitude is also built on dkpg and more powerful than apt-get.</p>
+        <ol>
+<li><p>zip/unzip</p>
+<p> <code>winrar x -y -ibck zip_file_name unzip_file_name</code> //x means unzip, -y means yes to interrupted queries, -ibck means running in the background</p>
+</li>
+<li><p>generate the file list under one folder</p>
+<p> <code>dir D:\test /b &gt;list.txt</code> or <code>dir D:\test /b &gt;list.xls</code></p>
+</li>
+<li><p>combine multiple compressed volumes</p>
+<p> <code>copy /b logs.tar.gza* logs.tar.gz</code></p>
+</li>
+</ol>
 
       
     </div>
@@ -397,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+            <a href="/tags/Windows/" rel="tag"># Windows</a>
           
         </div>
       
@@ -410,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/" rel="next" title="Ubuntu Shell Scripts">
-                <i class="fa fa-chevron-left"></i> Ubuntu Shell Scripts
+              <a href="/2018/09/07/operation_system/Install Ubuntu under Windows/" rel="next" title="Install Ubuntu under Windows">
+                <i class="fa fa-chevron-left"></i> Install Ubuntu under Windows
               </a>
             
           </div>
@@ -420,8 +425,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/07/others/Bibliography Collection/" rel="prev" title="Bibliography Collection">
-                Bibliography Collection <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/07/operation_system/Ubuntu/Linux Command Lines/" rel="prev" title="Ubuntu Command Lines">
+                Ubuntu Command Lines <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,17 +479,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -564,22 +560,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#raw-dpkg"><span class="nav-number">1.</span> <span class="nav-text">raw: dpkg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mature-apt-get"><span class="nav-number">2.</span> <span class="nav-text">mature: apt-get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#more-mature-aptitude-GUI"><span class="nav-number">3.</span> <span class="nav-text">more mature: aptitude (GUI)</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

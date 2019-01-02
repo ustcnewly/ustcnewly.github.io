@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="BIOS," />
+  <meta name="keywords" content="Ubuntu,Shell," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="If something is wrong when attempting to enter the BIOS, try the following approaches:  press F2, F12, ESC, DEL change the cable, adaptor, interface, etc (hardware reason) update BIOS to the latest ve">
-<meta name="keywords" content="BIOS">
+<meta name="description" content="#!/bin/bash at the head of file indicates shell type  strict format  For if [[ $input == &amp;quot;hello&amp;quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for mat">
+<meta name="keywords" content="Ubuntu,Shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BIOS">
-<meta property="og:url" content="http://yoursite.com/2018/09/07/OS/BIOS/index.html">
+<meta property="og:title" content="Ubuntu Shell Scripts">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="If something is wrong when attempting to enter the BIOS, try the following approaches:  press F2, F12, ESC, DEL change the cable, adaptor, interface, etc (hardware reason) update BIOS to the latest ve">
+<meta property="og:description" content="#!/bin/bash at the head of file indicates shell type  strict format  For if [[ $input == &amp;quot;hello&amp;quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for mat">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T03:23:36.454Z">
+<meta property="og:updated_time" content="2018-02-06T20:16:05.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BIOS">
-<meta name="twitter:description" content="If something is wrong when attempting to enter the BIOS, try the following approaches:  press F2, F12, ESC, DEL change the cable, adaptor, interface, etc (hardware reason) update BIOS to the latest ve">
+<meta name="twitter:title" content="Ubuntu Shell Scripts">
+<meta name="twitter:description" content="#!/bin/bash at the head of file indicates shell type  strict format  For if [[ $input == &amp;quot;hello&amp;quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for mat">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/07/OS/BIOS/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/"/>
 
 
 
 
 
-  <title>BIOS | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Ubuntu Shell Scripts | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/BIOS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">BIOS</h1>
+          <h1 class="post-title" itemprop="name headline">Ubuntu Shell Scripts</h1>
         
 
         <div class="post-meta">
@@ -374,14 +374,23 @@
       
 
       
-        <p>If something is wrong when attempting to enter the BIOS, try the following approaches:</p>
+        <p><code>#!/bin/bash</code> at the head of file indicates shell type</p>
+<ol>
+<li><p>strict format</p>
+<p> For <code>if [[ $input == &quot;hello&quot; ]]</code>, note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression</p>
+</li>
+<li><p>arguments</p>
 <ul>
-<li>press F2, F12, ESC, DEL</li>
-<li>change the cable, adaptor, interface, etc (hardware reason)</li>
-<li>update BIOS to the latest version</li>
-<li>for Windows10, settings-&gt;recover-&gt;firmware</li>
-<li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
+<li>$@: stores all the arguments in a list of string</li>
+<li>$*: stores all the arguments as a single string</li>
+<li>$#: stores the number of arguments</li>
+<li>shift: remove the first argument</li>
 </ul>
+</li>
+</ol>
+<p>When starting login or interative shells, certain files will be executed based on the following tables:</p>
+<p>For bash:<br>login-y interactive-y: profile<br>login-y interactive-n: profile<br>login-n interactive-y: bashrc</p>
+<p>For zsh:<br>login-y interactive-y: zshenv zprofile zshrc zlogin<br>login-y interactive-n: zshenv zprofile zlogin<br>login-n interactive-y: zshenv zshrc<br>login-n interactive-n: zshenv</p>
 
       
     </div>
@@ -399,7 +408,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/BIOS/" rel="tag"># BIOS</a>
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
           
         </div>
       
@@ -412,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/07/network/Ubuntu VNC/" rel="next" title="Ubuntu VNC">
-                <i class="fa fa-chevron-left"></i> Ubuntu VNC
+              <a href="/2018/09/07/operation_system/Ubuntu/Ubuntu Mount/" rel="next" title="Ubuntu Mount">
+                <i class="fa fa-chevron-left"></i> Ubuntu Mount
               </a>
             
           </div>
@@ -422,8 +433,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/07/OS/Install Ubuntu under Windows/" rel="prev" title="Install Ubuntu under Windows">
-                Install Ubuntu under Windows <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/07/operation_system/Ubuntu/Ubuntu Software Management/" rel="prev" title="Ubuntu Software Management">
+                Ubuntu Software Management <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

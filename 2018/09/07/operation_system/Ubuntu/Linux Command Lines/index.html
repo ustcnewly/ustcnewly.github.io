@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Ubuntu,Shell," />
+  <meta name="keywords" content="Ubuntu," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="#!/bin/bash at the head of file indicates shell type  strict format  For if [[ $input == &amp;quot;hello&amp;quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for mat">
-<meta name="keywords" content="Ubuntu,Shell">
+<meta name="description" content="create new user with home folder  1adduser XXX  sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  start ssh on the server, the default port is 22  12sudo apt-get insta">
+<meta name="keywords" content="Ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu Shell Scripts">
-<meta property="og:url" content="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/index.html">
+<meta property="og:title" content="Ubuntu Command Lines">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Linux Command Lines/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="#!/bin/bash at the head of file indicates shell type  strict format  For if [[ $input == &amp;quot;hello&amp;quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for mat">
+<meta property="og:description" content="create new user with home folder  1adduser XXX  sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  start ssh on the server, the default port is 22  12sudo apt-get insta">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T20:16:05.954Z">
+<meta property="og:updated_time" content="2018-11-02T01:10:20.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu Shell Scripts">
-<meta name="twitter:description" content="#!/bin/bash at the head of file indicates shell type  strict format  For if [[ $input == &amp;quot;hello&amp;quot; ]], note that the space after [[ and before ]] is very strict, since [[]] can be used for mat">
+<meta name="twitter:title" content="Ubuntu Command Lines">
+<meta name="twitter:description" content="create new user with home folder  1adduser XXX  sudo privilege: vim /etc/sudoers and add $username ALL=(ALL) ALL at the bottom.  start ssh on the server, the default port is 22  12sudo apt-get insta">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Linux Command Lines/"/>
 
 
 
 
 
-  <title>Ubuntu Shell Scripts | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Ubuntu Command Lines | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Linux Command Lines/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Ubuntu Shell Scripts</h1>
+          <h1 class="post-title" itemprop="name headline">Ubuntu Command Lines</h1>
         
 
         <div class="post-meta">
@@ -374,23 +374,54 @@
       
 
       
-        <p><code>#!/bin/bash</code> at the head of file indicates shell type</p>
+        <hr>
 <ol>
-<li><p>strict format</p>
-<p> For <code>if [[ $input == &quot;hello&quot; ]]</code>, note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression</p>
+<li><p>create new user with home folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser XXX</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>arguments</p>
-<ul>
-<li>$@: stores all the arguments in a list of string</li>
-<li>$*: stores all the arguments as a single string</li>
-<li>$#: stores the number of arguments</li>
-<li>shift: remove the first argument</li>
-</ul>
+<li><p>sudo privilege: <code>vim /etc/sudoers</code> and add <code>$username ALL=(ALL) ALL</code> at the bottom.</p>
+</li>
+<li><p>start ssh on the server, the default port is 22</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo/etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list -a #including hidden files</span><br><span class="line">list -S #arrange by size</span><br><span class="line">list -t #arrange by time</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>view text</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat</span><br><span class="line">head/tail -n 10 tmp.txt #view the first/last 10 lines</span><br><span class="line">less #more powerful than more</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Change the privilege</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 ./</span><br><span class="line">chmod a+x ./</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Check disk or file size</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df -h </span><br><span class="line">du ./ --max-depth 2 -h</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Compress or uncompress files, refer to this <a href="http://www.cnblogs.com/eoiioe/archive/2008/09/20/1294681.html" target="_blank" rel="noopener">link</a>.</p>
+</li>
+<li><p>Grep + regular expression</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [xyz]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Search file</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">locate "keyword" #fast</span><br><span class="line">find ./ -maxdepth 1 -name "*keyword*" </span><br><span class="line">find ./ -name "*keyword*" -size +50M -size -100M </span><br><span class="line">find ./ -name "*keyword*" -mmin -10 #m:modify min:minute </span><br><span class="line">find ./ -name "*keyword*" -exec rm -r &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pipe commands</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tr -s ' ' | cut -d ' ' -f 2 #tr to truncate space</span><br><span class="line">ls -l | sort -rnk2 #-r:reverse -n:numerical -k:k-th column</span><br><span class="line">ls -l | wc -l #count line</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xargs:</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat python/requirements.txt | xargs -L 1 sudo pip install</span><br><span class="line">find . -name "*.c" | xargs rm -rf</span><br><span class="line">find . -name '*.c' | xargs grep 'stdlib.h'</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>alias: temporary alias command </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias lnew="cd /home/niuli/caffe"</span><br><span class="line">unalias lnew</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>export: The export command is one of the bash shell built-in commands, which means it is part of your shell.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export a=linux.com</span><br><span class="line">echo $a</span><br><span class="line">export -n a #remove variable</span><br><span class="line"></span><br><span class="line">printname () &#123; echo "Linuxcareer.com"; &#125;</span><br><span class="line">export -f printname #export function</span><br></pre></td></tr></table></figure>
+<p>add LD_LIBRARY_PATH</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>shellscript sample</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">read -p "Please input your first name: " </span><br><span class="line">echo -e "\nYour full name is: $firstname $lastname" </span><br><span class="line">test ! -e $filename &amp;&amp; echo "The filename '$filename' DO NOT exist" &amp;&amp; exit 0</span><br><span class="line">test -f $filename &amp;&amp; filetype="regulare file" </span><br><span class="line">test -d $filename &amp;&amp; filetype="directory" </span><br><span class="line">[ "$yn" == "Y" -o "$yn" == "y" ] &amp;&amp; echo "OK, continue" &amp;&amp; exit 0</span><br><span class="line"></span><br><span class="line">if [ "$yn" == "Y" ] || [ "$yn" == "y" ]; then </span><br><span class="line">	echo "OK, continue" </span><br><span class="line">elif [ "$yn" == "N" ] || [ "$yn" == "n" ]; then </span><br><span class="line">	echo "Oh, interrupt!" </span><br><span class="line">else </span><br><span class="line">	echo "I don't know what your choice is" </span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">while [ "$yn" != "yes" -a "$yn" != "YES" ] </span><br><span class="line">do </span><br><span class="line">	read -p "Please input yes/YES to stop this program: " yn </span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for animal in dog cat elephant </span><br><span class="line">do </span><br><span class="line">	echo "There are $&#123;animal&#125;s.... " </span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>When starting login or interative shells, certain files will be executed based on the following tables:</p>
-<p>For bash:<br>login-y interactive-y: profile<br>login-y interactive-n: profile<br>login-n interactive-y: bashrc</p>
-<p>For zsh:<br>login-y interactive-y: zshenv zprofile zshrc zlogin<br>login-y interactive-n: zshenv zprofile zlogin<br>login-n interactive-y: zshenv zshrc<br>login-n interactive-n: zshenv</p>
 
       
     </div>
@@ -410,8 +441,6 @@
           
             <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
-            <a href="/tags/Shell/" rel="tag"># Shell</a>
-          
         </div>
       
 
@@ -423,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/07/OS/Ubuntu/Ubuntu Mount/" rel="next" title="Ubuntu Mount">
-                <i class="fa fa-chevron-left"></i> Ubuntu Mount
+              <a href="/2018/09/07/operation_system/Windows Command Lines/" rel="next" title="Windows Command Lines">
+                <i class="fa fa-chevron-left"></i> Windows Command Lines
               </a>
             
           </div>
@@ -433,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/07/OS/Ubuntu/Ubuntu Software Management/" rel="prev" title="Ubuntu Software Management">
-                Ubuntu Software Management <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/07/operation_system/Ubuntu/Ubuntu Crontab/" rel="prev" title="Ubuntu Crontab">
+                Ubuntu Crontab <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

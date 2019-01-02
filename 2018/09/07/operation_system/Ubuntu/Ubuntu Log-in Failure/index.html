@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Ubuntu,mount," />
+  <meta name="keywords" content="Ubuntu," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Mount remote folder on Windows/Linux:12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount sharefolder between host machine and virtualbox">
-<meta name="keywords" content="Ubuntu,mount">
+<meta name="description" content="You may fail to log in Ubuntu due to the following reasons:  /etc/environment or /etc/profile is modified to a wrong format: Just modify them back.  startX is used improperly: run sudo rm -r .Xauthori">
+<meta name="keywords" content="Ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu Mount">
-<meta property="og:url" content="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Mount/index.html">
+<meta property="og:title" content="Ubuntu Log-in Failure">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Log-in Failure/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Mount remote folder on Windows/Linux:12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount sharefolder between host machine and virtualbox">
+<meta property="og:description" content="You may fail to log in Ubuntu due to the following reasons:  /etc/environment or /etc/profile is modified to a wrong format: Just modify them back.  startX is used improperly: run sudo rm -r .Xauthori">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-06T03:13:49.735Z">
+<meta property="og:updated_time" content="2018-02-06T02:05:49.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu Mount">
-<meta name="twitter:description" content="Mount remote folder on Windows/Linux:12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount sharefolder between host machine and virtualbox">
+<meta name="twitter:title" content="Ubuntu Log-in Failure">
+<meta name="twitter:description" content="You may fail to log in Ubuntu due to the following reasons:  /etc/environment or /etc/profile is modified to a wrong format: Just modify them back.  startX is used improperly: run sudo rm -r .Xauthori">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Mount/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Log-in Failure/"/>
 
 
 
 
 
-  <title>Ubuntu Mount | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Ubuntu Log-in Failure | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/OS/Ubuntu/Ubuntu Mount/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Log-in Failure/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Ubuntu Mount</h1>
+          <h1 class="post-title" itemprop="name headline">Ubuntu Log-in Failure</h1>
         
 
         <div class="post-meta">
@@ -374,8 +374,14 @@
       
 
       
-        <h3 id="Mount-remote-folder-on-Windows-Linux"><a href="#Mount-remote-folder-on-Windows-Linux" class="headerlink" title="Mount remote folder on Windows/Linux:"></a>Mount remote folder on Windows/Linux:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cifs-utils</span><br><span class="line">sudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir</span><br></pre></td></tr></table></figure>
-<h3 id="Mount-sharefolder-between-host-machine-and-virtualbox"><a href="#Mount-sharefolder-between-host-machine-and-virtualbox" class="headerlink" title="Mount sharefolder between host machine and virtualbox:"></a>Mount sharefolder between host machine and virtualbox:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) share_name tgt_dir</span><br></pre></td></tr></table></figure>
+        <p>You may fail to log in Ubuntu due to the following reasons:</p>
+<ol>
+<li><p>/etc/environment or /etc/profile is modified to a wrong format: Just modify them back.</p>
+</li>
+<li><p>startX is used improperly: run <code>sudo rm -r .Xauthority*</code> </p>
+</li>
+</ol>
+<p>Tips: use Ctr+Alt+F1~6 corresponding to tty 1~6 to use command line</p>
 
       
     </div>
@@ -395,8 +401,6 @@
           
             <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
-            <a href="/tags/mount/" rel="tag"># mount</a>
-          
         </div>
       
 
@@ -408,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/07/OS/Ubuntu/Ubuntu Log-in Failure/" rel="next" title="Ubuntu Log-in Failure">
-                <i class="fa fa-chevron-left"></i> Ubuntu Log-in Failure
+              <a href="/2018/09/07/operation_system/Ubuntu/Ubuntu Language/" rel="next" title="Ubuntu language">
+                <i class="fa fa-chevron-left"></i> Ubuntu language
               </a>
             
           </div>
@@ -418,8 +422,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/07/OS/Ubuntu/Ubuntu Shell Scripts/" rel="prev" title="Ubuntu Shell Scripts">
-                Ubuntu Shell Scripts <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/07/operation_system/Ubuntu/Ubuntu Mount/" rel="prev" title="Ubuntu Mount">
+                Ubuntu Mount <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -472,17 +476,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -562,22 +557,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mount-remote-folder-on-Windows-Linux"><span class="nav-number">1.</span> <span class="nav-text">Mount remote folder on Windows/Linux:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mount-sharefolder-between-host-machine-and-virtualbox"><span class="nav-number">2.</span> <span class="nav-text">Mount sharefolder between host machine and virtualbox:</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
