@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Network Structure]]></title>
+    <url>%2F2019%2F01%2F02%2Fdeep_learning%2FNetwork%20Structure%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Visual Dialogue]]></title>
     <url>%2F2018%2F12%2F27%2Fdeep_learning%2FVisual%20Dialogue%2F</url>
     <content type="text"><![CDATA[Visual dialogue [1]: a dialogue with one image Multimodal Dialogue [2][3]: a dialogue with multiple images [1] Visual Dialog [2] Towards Building Large Scale Multimodal Domain-Aware Conversation Systems [3] Knowledge-aware Multimodal Dialogue Systems]]></content>
@@ -14,7 +25,7 @@
   </entry>
   <entry>
     <title><![CDATA[Attribute Disentangle Datasets]]></title>
-    <url>%2F2018%2F12%2F25%2Fpaper_note%2FAttribute%20Disentangle%20Datasets%2F</url>
+    <url>%2F2018%2F12%2F25%2Fdeep_learning%2FAttribute%20Disentangle%2F</url>
     <content type="text"><![CDATA[CelebA [14] (dataset for human faces): [12, 2, 11, 17, 13, 8, 13, 18] MNIST [10], MNIST-M [4] (digits): [16, 15, 12, 5, 2, 11, 9, 17, 6, 8, 13, 3] Yosemite [19] (summer and winter scenes): [11] Artworks [19] (Monet and Van Gogh): [11] 2D Sprites (game characters): [15, 9, 6, 8, 3] LineMod [7] (3D object): [9] 11k Hands [1] (hand gestures): [17] [1] M. Afifi. Gender recognition and biometric identification using a large dataset of hand images. arXiv preprint arXiv:1711.04322, 2017.[2] E. Dupont. Learning disentangled joint continuous and discrete representations. In S. Bengio, H.Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 708–718. Curran Associates, Inc., 2018.[3] Z. Feng, X. Wang, C. Ke, A.-X. Zeng, D. Tao, and M. Song. Dual swap disentangling. In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 5898–5908. Curran Associates, Inc., 2018.[4] Y. Ganin, E. Ustinova, H. Ajakan, P. Germain, H. Larochelle, F. Laviolette, M. Marchand, and V. Lempitsky. Domain-adversarial training of neural networks. The Journal of Machine Learning Research, 17(1):2096–2030, 2016.[5] A. Gonzalez-Garcia, J. van de Weijer, and Y. Bengio. Image-to-image translation for cross-domain disentanglement. In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 1294–1305. Curran Associates, Inc., 2018.[6] N. Hadad, L. Wolf, and M. Shahar. A two-step disentanglement method. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.[7] S. Hinterstoisser, V. Lepetit, S. Ilic, S. Holzer, G. Bradski, K. Konolige, and N. Navab. Model based training, detection and pose estimation of texture-less 3d objects in heavily cluttered scenes. In Asian conference on computer vision, pages 548–562. Springer, 2012.[8] Q. Hu, A. Szab, T. Portenier, P. Favaro, and M. Zwicker. Disentangling factors of variation by mixing them. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.[9] A. H. Jha, S. Anand, M. Singh, and V. Veeravasarapu. Disentangling factors of variation with cycle-consistent variational autoencoders. In The European Conference on Computer Vision (ECCV), September 2018.[10] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278–2324, 1998.[11] H.-Y. Lee, H.-Y. Tseng, J.-B. Huang, M. Singh, and M.-H. Yang. Diverse image-to-image translation via disentangled representations. In The European Conference on Computer Vision (ECCV), September 2018.[12] A. H. Liu, Y.-C. Liu, Y.-Y. Yeh, and Y.-C. F. Wang. A unified feature disentangler for multi-domain image translation and manipulation. In S. Bengio, H.Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 2595–2604. Curran Associates, Inc., 2018.[13] Y. Liu, F. Wei, J. Shao, L. Sheng, J. Yan, and X. Wang. Exploring disentangled feature representation beyond face identification. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.[14] Z. Liu, P. Luo, X.Wang, and X. Tang. Deep learning face attributes in the wild. In Proceedings of the IEEE International Conference on Computer Vision, pages 3730–3738, 2015.[15] M. F. Mathieu, J. J. Zhao, J. Zhao, A. Ramesh, P. Sprechmann, and Y. LeCun. Disentangling factors of variation in deep representation using adversarial training. In D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, editors, Advances in Neural Information Processing Systems 29, pages 5040–5048. Curran Associates, Inc., 2016.[16] S. Narayanaswamy, T. B. Paige, J.-W. van de Meent, A. Desmaison, N. Goodman, P. Kohli, F. Wood, and P. Torr. Learning disentangled representations with semi-supervised deep generative models. In I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus,S. Vishwanathan, and R. Garnett, editors, Advances in Neural Information Processing Systems 30, pages 5925–5935. Curran Associates, Inc., 2017.[17] Z. Shu, M. Sahasrabudhe, R. Alp Guler, D. Samaras, N. Paragios, and I. Kokkinos. Deforming autoencoders: Unsupervised disentangling of shape and appearance. In The European Conference on Computer Vision (ECCV), September 2018.[18] Z. Shu, E. Yumer, S. Hadap, K. Sunkavalli, E. Shechtman, and D. Samaras. Neural face editing with intrinsic image disentangling. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), July 2017.[19] J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. arXiv preprint, 2017.]]></content>
       <categories>
         <category>paper note</category>
@@ -26,15 +37,15 @@
   </entry>
   <entry>
     <title><![CDATA[Fine-grained Dataset]]></title>
-    <url>%2F2018%2F12%2F19%2Fpaper_note%2FFine-grained%20Dataset%2F</url>
-    <content type="text"><![CDATA[clothing dataset car dataset bird dataset: CUB, Birdsnap scene dataset dog dataset flower dataset aircraft dataset]]></content>
+    <url>%2F2018%2F12%2F19%2Fdeep_learning%2FFine-grained%20Classification%2F</url>
+    <content type="text"><![CDATA[Papers:Datasets: clothing dataset car dataset CUB, Birdsnap scene dataset dog dataset flower dataset aircraft dataset Food-101 dataset]]></content>
       <categories>
         <category>paper note</category>
       </categories>
   </entry>
   <entry>
     <title><![CDATA[Few-Shot Learning]]></title>
-    <url>%2F2018%2F12%2F11%2Fpaper_note%2FFew-Shot%20Learning%2F</url>
+    <url>%2F2018%2F12%2F11%2Fdeep_learning%2FFew-Shot%20Learning%2F</url>
     <content type="text"><![CDATA[One-shot/few-shot learningThe first one-shot learning paper dates back to 2006, but becomes more popular recently. Conceptstraining/validation/test categories: Training categories and test categories have no overlap support(sample)/query(batch) set: In the testing stage, for each test category, we preserve some instances to form the support set and sample from the remaining instances to form the query set C-way K-shot: The test set has C categories. For each test category, we preserve K instances as the support set episode: Episode-based strategy used in the training stage to match the inference in the testing stage. First sample some categories and then sample the suppport/query set for each category Methods Metric-learning based: transfer metric Siamese network: the earliest and simplest metric-learning based few-shot learning, standard verification problem. Matching network: map a support set to a classification function p(y|x,S) (KNN or LSTM). For the LSTM version, there is another similar work using memory module. Relation network: calculate the relation score for 1-shot, calculate the average of relation scores for k-shot Prototypical network: compare with the prototype representations of each class. Each class can have more than one prototype representation. There are some other prototype-based methods [1] [2]. Meta-learning based: transfer meta-information: Meta-Learner LSTM: gradient update [learnet] [2] [3] [4] [5]: predict the parameters of classifiers for novel categories. [1]: predict the parameters of CNN feature extractor by virtue of memory module.]]></content>
       <categories>
         <category>paper note</category>
@@ -57,7 +68,7 @@
   </entry>
   <entry>
     <title><![CDATA[Knowledge Graph]]></title>
-    <url>%2F2018%2F12%2F02%2Fpaper_note%2FKnowledge%20Graph%2F</url>
+    <url>%2F2018%2F12%2F02%2Fmachine_learning%2FKnowledge%20Graph%2F</url>
     <content type="text"><![CDATA[Definition: entities, attributes, and relationships Two ways to construct knowledge graph: probabilistic models (graphical model/random walk) embedding based models]]></content>
       <categories>
         <category>paper note</category>
@@ -65,7 +76,7 @@
   </entry>
   <entry>
     <title><![CDATA[Soft Loss]]></title>
-    <url>%2F2018%2F11%2F30%2Fpaper_note%2FSoft%20Loss%2F</url>
+    <url>%2F2018%2F11%2F30%2Fmachine_learning%2FSoft%20Loss%2F</url>
     <content type="text"><![CDATA[Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$. weighted softmax loss: $-\sum_{i} w_i \log p_i$ EMD softmax loss: $-\sum_{i} w_i p_i$ softmax loss after label flip layer: $-\log{\sum_{i} w_i p_i}$ knowledge distillation: $\sum_{i} (p_i-w_i)$]]></content>
       <categories>
         <category>paper note</category>
@@ -109,7 +120,7 @@
   </entry>
   <entry>
     <title><![CDATA[Image Harmonization]]></title>
-    <url>%2F2018%2F11%2F27%2Fpaper_note%2FImage%20Harmonization%2F</url>
+    <url>%2F2018%2F11%2F27%2Fdeep_learning%2FImage%20Harmonization%2F</url>
     <content type="text"><![CDATA[FundamentalImage Statistics: illuminance, color temperature, saturation, local contrast, hue, texture, tone Color spaces: RGB color space, CIELab color space (saturation/chrominance, hue, luminance). Image realism Predict the realism using the discriminator learnt based on real images and fake images [1] Predict the realism based on global and local statistics: distance to neighboring realistic image, similarity between foreground and background [1] Image harmonizationAfter pasting the foreground on the background, harmonize the foreground. Traditional methods: match the foreground with the background; match the foreground with other semantically or statistically close realistic images. histogram matching: [1] [2] [3] Gaussian model matching: [1] [2] [3] pixel-level classification: MRF[1] gamma correction [1] [2] Deep learning methods: learn the mapping from fake images to real images. The first end-to-end deep learning method for harmonization: [paper] [code] Other related concepts: Image blending: The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique Poisson blending [1] [2], also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable. Image matting: The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ [1] [2] [3]. In image harmonization, we already know the ground-truth mask of foreground. The first end-to-end method for image mattingis here. Image composition: The target is not only to adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground [1]. In image harmonization, we do not need to perform geometric adjustment.]]></content>
       <categories>
         <category>paper note</category>
@@ -131,7 +142,7 @@
   </entry>
   <entry>
     <title><![CDATA[Scene Text Recognition]]></title>
-    <url>%2F2018%2F11%2F19%2Fpaper_note%2FScene%20Text%20Recognition%2F</url>
+    <url>%2F2018%2F11%2F19%2Fdeep_learning%2FScene%20Text%20Recognition%2F</url>
     <content type="text"><![CDATA[Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. Scene text detection:The detection methods can be grouped into proposal-based method and part-based method. Paper list (in chronological order): Detecting Text in Natural Scenes withStroke Width Transform, CVPR 2010: assume consistent stroke width within each character Detecting Texts of Arbitrary Orientations in Natural Images, CVPR 2012: design rotation-invariant features Deep Features for Text Spotting, ECCV 2014: add three branches for prediction Robust scene text detection with convolution neural network induced mser trees, ECCV 2014 Real-time Lexicon-free Scene TextLocalization and Recognition, T-PAMI 2016 Reading Text in the Wild with Convolutional Neural Networks, IJCV 2016 Synthetic Data for Text Localisation in Natural Images, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset Multi-oriented text detection with fully convolutional networks, CVPR 2016 Detecting Text in Natural Image with Connectionist Text Proposal Network, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM. SSD: single shot multibox detector, ECCV 2016 Reading Scene Text in Deep Convolutional Sequences, AAAI 2016 Scene text detection via holistic, multi-channel prediction, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linkingorientation map Deep Direct Regression for Multi-Oriented Scene Text Detection, ICCV 2017 WordSup: Exploiting Word Annotations for Character based Text Detection, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training TextBoxes: A Fast Text Detector with a Single Deep Neural Network, AAAI 2017 Detecting Oriented Text in Natural Images by Linking Segments, CVPR 2017: detect text with segments and links EAST: An Efficient and Accurate Scene Text Detector, CVPR 2017 TextBoxes++: A Single-Shot Oriented Scene Text Detector, TIP 2018: extension of TextBoxes Rotation-sensitive Regression for Oriented Scene Text Detection, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation, CVPR 2018: combine corner localization and region segmentation Scene text recognition:The recognition methods can be grouped into character-level, word-level, and sequence-level. Paper list (in chronological order): End-to-End Scene Text Recognition, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon Top-down and bottom-up cues for scene text recognition, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues Scene text recognition using part-based tree-structured character detection, CVPR 2013: build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework PhotoOCR: Reading text in uncontrolled conditions, ICCV 2013: automatically generate training data and perform OCR on web images Label embedding: A frugal baseline for text recognition, IJCV 2015: learn a common space for image and word Reading Text in the Wild with Convolutional Neural Networks, IJCV 2016 Robust Scene Text Recognition with Automatic Rectification, CVPR 2016 Recursive Recurrent Nets with Attention Modeling for OCR in the Wild, CVPR 2016: character-level language model embodied in a recurrent neural network An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition, T-PAMI 2017 Focusing Attention: Towards Accurate Text Recognition in Natural Images, ICCV 2017: Focusing Network to handle the attention drift Visual attention models for scene text recognition, 2017 arxiv AON: Towards Arbitrarily-Oriented Text Recognition , CVPR 2018 End-to-endIntegrate scene text detection and recognition in an end-to-end system. Paper list (in chronological order): A method for text localization and recognition in real-world images, ACCV 2010 Real-Time Scene Text Localization and Recognition, CVPR 2012 Towards End-to-end Text Spotting with ConvolutionalRecurrent Neural Networks, ICCV 2017: designed for horizontal scene text Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework, ICCV 2017: detect and recognize horizontal and multiorientedscene text FOTS: Fast Oriented Text Spotting with a Unified Network, CVPR 2018: using EAST as text detector and CRNN as text recognizer Datasets RCTW-17 MLT SCUT-CTW1500 Total-Text ICDAR 2015 MSRA-TD500) IIIT 5K-Word COCO-Text Surveys Scene text detection and recognition: Recent advances and future trends, FCS 2015 Text detection and recognition in imagery: A survey, T-PAMI 2015 Special Sessions Use Spatial Transformation Network (STN) [1] [2] [3] [4] Use Deformable Convolution Network (DCN) [1]]]></content>
       <categories>
         <category>paper note</category>
@@ -142,7 +153,7 @@
   </entry>
   <entry>
     <title><![CDATA[How to Conduct Experiments]]></title>
-    <url>%2F2018%2F11%2F18%2Fpaper_note%2FHow%20to%20Conduct%20Experiments%2F</url>
+    <url>%2F2018%2F11%2F18%2Fothers%2FHow%20to%20Conduct%20Experiments%2F</url>
     <content type="text"><![CDATA[Experimental setting: Select more than 3 popular benchmark datasets. Most papers perform evaluation on 3~5 datasets. Determine the training/testing split. By default, strictly follow the setting in recent papers. If their settings are not applicable, we can determine our own setting reasonably and fully describe the details in the paper. Experimental implementation: For the commonly used model, avoid unnecessary reimplementation. Just use the released code and model. If closely related papers release their code, modify based on their code and avoid starting from scratch. Document your code with readable and meaningful comments. Otherwise, even your cannot understand your own code after a long time. Manage different versions of code carefully, otherwise your code will get messy very rapidly. Use advanced tool such as github to create branches, revert to old version, etc. The brutal approach is to create an individual folder for each version, which is not recommended. Experimental running: Avoid redundant or unncessary experiments. Run experiments parallelly using all available computing resources. Tune hyper-parameters wisely. Save final output and important intermediate output for future analysis. Experimental record: Make a to-do list for what experiments you are going to do. For the experiments you have done, summarize your observation and conclusion. Then, adjust the remaining to-do list accordingly.]]></content>
       <categories>
         <category>paper note</category>
@@ -161,7 +172,7 @@
   </entry>
   <entry>
     <title><![CDATA[Webly Supervised Learning]]></title>
-    <url>%2F2018%2F11%2F07%2Fpaper_note%2FWebly%20Supervised%20Learning%2F</url>
+    <url>%2F2018%2F11%2F07%2Fdeep_learning%2FWebly%20Supervised%20Learning%2F</url>
     <content type="text"><![CDATA[Two problems: Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web data and consumer data. Solutions: label flip layer: [1] [2] [3] multi-instance learning: [1](group attention) [2] [3] reweight training samples: [1] curriculumn learning: [1] [2] Use clean data: active learning (select training samples to annotate): [1] reinforcement learning (learn labeling policies): [1] analogous to semi-supervised learning partial data with both noisy labels and clean labels as well as partial data with only noisy labels [1] [2] [3] partial data with noisy labels and partial data with clean labels [1] Datasets: large-scale web datasets: webvision fine-grained web datasets: clothing dataset, car dataset synthetic noisy datasets via label flipping: CIFAR-10/100]]></content>
       <categories>
         <category>paper note</category>
@@ -172,7 +183,7 @@
   </entry>
   <entry>
     <title><![CDATA[My Clumsy Research Experience]]></title>
-    <url>%2F2018%2F11%2F01%2Fpaper_note%2FMy%20Clumsy%20Research%20Experience%2F</url>
+    <url>%2F2018%2F11%2F01%2Fothers%2FMy%20Clumsy%20Research%20Experience%2F</url>
     <content type="text"><![CDATA[Entering a new research field How to come up with ideas Ensure the novelty of your idea Determine experimental setting and conduct experiments Paper writing Paper proofread]]></content>
       <categories>
         <category>paper note</category>
@@ -180,7 +191,7 @@
   </entry>
   <entry>
     <title><![CDATA[Paper Writing]]></title>
-    <url>%2F2018%2F10%2F31%2Fpaper_note%2FPaper%20Writing%2F</url>
+    <url>%2F2018%2F10%2F31%2Fothers%2FPaper%20Writing%2F</url>
     <content type="text"><![CDATA[Paper is an information carrier to present and sell your work，so the paper should be well-written, well-organized, and easily understood. You should make the reviewer happy and buy your contribution. Overall Abstract is the extension of title. Introduction is the extension of abstract. Conclusion is the rewritten version of abstract. Language Make sure there is no typo and syntax mistake (you can use Grammarly https://app.grammarly.com/ to assist you with this tedious job). For technical term, unify them throughout the paper, use at most two sayings throughout the paper. For non-technical term, use at least two sayings alternatively throughout the paper and avoid simple words. Substitutions for common simple words can be found here. Your technical writing may look amateur and unprofessional. This problem should be addressed from the following two aspects: domain-invariant writing and domain-specific writing. Even if you have already written dozens of papers in one domain but plan to write a paper in another domain, you also need domain adaptation to fit the new domain. Domain-invariant writing: read CV/ML papers in a wide range of fields and learn their paper writing. Domain-specific writing: read papers in the related narrow field annd learn their paper writing. Generally, before I write or revise a paper in a new field, I will read at least 10 recent papers and jot down the well-written key words/phrases as raw corpus. Merge fragmented short sentences into a coherent long sentence. Use connective words/phrases to glue neighboring sentences to make the transition smoother. StructureWriting paper is not randomly putting together what you have in mind. Intuitively, the left subimage is a poorly-written paper and the right one is a well-written paper. Imagine you can enter a cake store and the waitress serves you the left cake, the feeling is the same as that of reviewer when reading a poorly-written paper. The logic relation can be roughly categorized into “and”, “or”, “then”, “but”, “so”, “specifically”. One paper should be well-structured, composed of hierarchical logic blocks. Writing paper is writing logic flow. Generally speaking, abstract is the extension of title, introduction is the extension of abstract, conclusion is rewritten abstract. In each section, the sentences should be clustered as hierarchical logic blocks in an agglomerative manner. Content Accuracy: Each sentence should exactly present what you want to present and cannot be ambiguous with multiple versions of interpretations. Completeness: Your paper should be self-explanatory. You have to ensure that readers do not have to read extra materials to understand your paper. With all necessary ingredients, the remaining problem is the struture issue: how to organize all these ingredients. Brevity: Remove redundant expressions and keep it simple. Brevity is the spirit. Related work Classify existing works into several groups. For example, “the existing works can be roughly categorized into XXX, XXX, and XXX.” Compared with each group of existing works, state your difference and advantage. For example, “All these methods XXX, but XXX. In contrast, our method XXX”. Experiment For baselines in experimental section, compare with state-of-the-art baselines and yourself (e.g., ablation study or component analysis) qualitatively or quantitatively. It would be great to offer in-depth qualitative analysis. When comparing with state-of-the-art baselines, the most important thing is fair comparison. Check whether the experimental settings (e.g., train/test split, features, backbone network) are the same. If the results reported in original papers are from different experimental settings, you need to run their code or even implement their method by yourself. If one baseline uses more information and underperforms your method, that is OK. If one baseline uses less information and outperforms your method, that is a serious problem. If one baseline uses more information and outperforms your method, remove their extra information and compare with it again. Do not leave a better baseline using more information on your paper, which is extremely risky. If one baseline uses less information and underperforms your method, see whether this baseline can use the extra information easily. If this baseline can incorporate the extra information in a simple way, compare with it with extra information again. Math Sometimes when it is hard to describe something using natural language, try describing it using math. For each variable, please define it before using it. Merge unncessarily duplicated variables and keep as few variables as possible. Think clearly about the meaning of each variable. Math expressions should be regulated and rigorous. For mathematically dense paper, it would be better to start with a general instruction before entering math. For example, “a vector/matrix is denoted by a lowercase/uppercase letter in boldface. The transpose of a vector/matrix is denoted by the superscript ‘. Moreover, $A^{-1}$ is used to denote the inverse matrix of A.We use $\langle A,B\rangle$ (resp., $A\circ B$) to denote the inner product (resp., element-wise product) of two matrices”. Show and Hide For your contribution, you should highlight it multiple times (e.g., abstract, introduction, related work, method, experiment, and conclusion). Otherwise, the reviewer will claim your contribution is minor. For your weakness, try to hide it if possible. If you could not hide it, provide a reasonable and compromising explanation. Attack and defendImagine you are the reviewer, what questions are you going to ask and how the paper could be defended.]]></content>
       <categories>
         <category>paper note</category>
@@ -188,7 +199,7 @@
   </entry>
   <entry>
     <title><![CDATA[Ensure the Novelty of Your Idea]]></title>
-    <url>%2F2018%2F10%2F31%2Fpaper_note%2FEnsure%20the%20Novelty%20of%20Your%20Idea%2F</url>
+    <url>%2F2018%2F10%2F31%2Fothers%2FEnsure%20the%20Novelty%20of%20Your%20Idea%2F</url>
     <content type="text"><![CDATA[There is no automatic system that can tell you whether your idea has been done or the similarity between your idea and the most similar previous work. Search all possible keywords (e.g., synonym) in Google/Google Scholar. If there exist old and recent surveys, carefully read them. Otherwise, make a survey on your own. Quickly go through previous works to ensure that your idea has not been done. You do not need to understand the details of their methods. Actually, telling whether their methods are close to yours is much simpler. For instance, you can just pay attention to the most obvious parts (e.g., flowchart, objective function, and abstract) in their papers. Through the above steps, identify the most related work, think about the difference and your advantage. If you cannot clearly state the difference and advantage of your idea, do not work on it.]]></content>
       <categories>
         <category>paper note</category>
@@ -196,7 +207,7 @@
   </entry>
   <entry>
     <title><![CDATA[Entering a New Research Field]]></title>
-    <url>%2F2018%2F10%2F31%2Fpaper_note%2FEntering%20a%20New%20Research%20Field%2F</url>
+    <url>%2F2018%2F10%2F31%2Fothers%2FEntering%20a%20New%20Research%20Field%2F</url>
     <content type="text"><![CDATA[See the large picture Search keyword + ‘survey/tutorial’ in google/google scholar. For example, if you want to work on zero-shot learning, search ‘zero-shot learning’ + ‘survey/tutorial’. Find recent survey/tutorial on top conference/journal or conjunct workshop. You need to know the list of top conferences/journals in the related field (e.g., computer vision, machine learning). Know the state-of-the-art Search keyword in the most recent top conferences (e.g., CVPR2018). Journal is generally lagging behind the conference, so focus on conference papers. You collect the paper list and will have a sense whether this topic is popular or crowded (e.g., only 1 paper or more than 20 papers on one conference). Summarize existing methods You need to collect a paper list. Initiate the paper list following Step 2. Read the related works in these papers and add them to the paper list. Repeat this procedure to enrich the paper list. Try to categorize the used methods in these papers based on certain taxonomy.]]></content>
       <categories>
         <category>paper note</category>
@@ -227,7 +238,7 @@
   </entry>
   <entry>
     <title><![CDATA[Proposal Generation]]></title>
-    <url>%2F2018%2F10%2F24%2Fpaper_note%2FProposal%20Generation%2F</url>
+    <url>%2F2018%2F10%2F24%2Fmachine_learning%2FProposal%20Generation%2F</url>
     <content type="text"><![CDATA[Selective search: hierarchical grouping based on different similarity metrics[code] Salient object detection: identify the segment which is easy to compose from itselfbut hard from remaining parts of the image. EdgeBox: identify the boxes that tightly enclose a set of edges are likely to contain an object. ACF detector: compute gradient histograms on image pyramids Region Proposal Network (RPN) from faster-RCNN]]></content>
       <categories>
         <category>paper note</category>
@@ -238,7 +249,7 @@
   </entry>
   <entry>
     <title><![CDATA[Interpretable Machine Learning]]></title>
-    <url>%2F2018%2F10%2F20%2Fpaper_note%2FInterpretable%20Machine%20Learning%2F</url>
+    <url>%2F2018%2F10%2F20%2Fdeep_learning%2FInterpretable%20Machine%20Learning%2F</url>
     <content type="text"><![CDATA[Manipulate each layer/neuron, and observe the change of network parameters/activations. Saliency map Adversarial attack Correlation Information gain/loss]]></content>
       <categories>
         <category>paper note</category>
@@ -246,7 +257,7 @@
   </entry>
   <entry>
     <title><![CDATA[Conference Rebuttal]]></title>
-    <url>%2F2018%2F10%2F19%2Fpaper_note%2FConference%20Rebuttal%2F</url>
+    <url>%2F2018%2F10%2F19%2Fothers%2FConference%20Rebuttal%2F</url>
     <content type="text"><![CDATA[To determine whether the rebuttal is necessary. If the scores are too low, just give up. Summarize the questions from reviewers and rank them based on the importance. Pick out the questions which call for experiments and conduct those experiments immediately. When running experiments, draft the response file. Pay attention to the format of response file (e.g., limited characters or one page of pdf, URL allowed or not). In the response file, try to cover all the questions if possible. Otherwise, igore the questions with least importance. The tone of response file cannot be rude and offensive. Be cool and confident. If the maximum number of characters is quite limited, there are many tricks to save space.]]></content>
       <categories>
         <category>paper note</category>
@@ -254,7 +265,7 @@
   </entry>
   <entry>
     <title><![CDATA[Causal Inference]]></title>
-    <url>%2F2018%2F10%2F15%2Fpaper_note%2FCausal%20Inference%2F</url>
+    <url>%2F2018%2F10%2F15%2Fmachine_learning%2FCausal%20Inference%2F</url>
     <content type="text"><![CDATA[Judy Pearl: [Tutorial] [slides] [textbook] James Robin: [Textbook] [slides]]]></content>
       <categories>
         <category>paper note</category>
@@ -265,7 +276,7 @@
   </entry>
   <entry>
     <title><![CDATA[Paper Proofread]]></title>
-    <url>%2F2018%2F10%2F12%2Fpaper_note%2FPaper%20Proofread%2F</url>
+    <url>%2F2018%2F10%2F12%2Fothers%2FPaper%20Proofread%2F</url>
     <content type="text"><![CDATA[Print out the paper and read the paper character by character (not word by word). Use Grammarly or other auxiliary tools to help you check spelling and grammar mistakes, but they are not omnipotent. The easily made mistakes are including but not limited to: single/plural form, third-person singular, etc. From the perspective of maths, all the variables are defined before used. Check optimized variables, brackets, and punctuations (e.g., ‘,’ and ‘.’) in the formulations. Check the reference list. Check the citation and anchor reference (Table XXX, Figure XXX, Equation XXX, Section XXX). Check the most notable parts in the paper: figure and captions, table captions, section titles. Check the format and consistency of experimental results. No question mark ‘?’]]></content>
       <categories>
         <category>paper note</category>
@@ -273,7 +284,7 @@
   </entry>
   <entry>
     <title><![CDATA[Clothes Dataset]]></title>
-    <url>%2F2018%2F10%2F12%2Fpaper_note%2FClothes%20Dataset%2F</url>
+    <url>%2F2018%2F10%2F12%2Fmachine_learning%2FClothes%20Dataset%2F</url>
     <content type="text"><![CDATA[deepfashion: http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html (attribute, bounding box, landmark) Colorful-Fashion: https://sites.google.com/site/fashionparsing/home (pixel-level color-category label) CCP (Clothing Co-Parsing): https://github.com/bearpaw/clothing-co-parsing (parsing label) fashionistas: http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/(parsing label) HPW (Human Parsing in the Wild): https://github.com/lemondan/HumanParsing-Dataset (parsing label) modaNet: https://github.com/eBay/modanet (polygon annotations)]]></content>
       <categories>
         <category>paper note</category>
@@ -281,7 +292,7 @@
   </entry>
   <entry>
     <title><![CDATA[Commonly Used Words in Paper Writing]]></title>
-    <url>%2F2018%2F09%2F28%2Fpaper_note%2FCommonly%20Used%20Words%20in%20Paper%20Writing%2F</url>
+    <url>%2F2018%2F09%2F28%2Fothers%2FCommonly%20Used%20Words%20in%20Paper%20Writing%2F</url>
     <content type="text"><![CDATA[Between Logical Blocks 因果: because, since, as, so, consequently, therefore, thus, hence 转折: but, however, nevertheless, nonetheless, despite, whereas, although, while, albeit 结果: generate, produce, yield, lead to, result in, give rise to 递进: besides, furthermore, moreover 顺承: following, followed by, prior to, in the wake of 相反: on the contrary, in constrast with, in opposition to, as opposed to, vice versa, the other way around 换言之: in other words, that is, that being said 具体来说: particularly, in particular, specifically, to be exact, in detail, concretely Within Logical Blocks 促进: facilitate, fuel, advance, benefit, aid in, assist in 损害: degrade, impair, hinder, eliminate, compromise, harm 解决: address, solve, handle, mitigate, tackle, cope with, overcome, circumvent, bypass 缓解: alleviate, suppress, mitigate, assuage, relieve, ameliorate 介绍: introduce, describe, discuss, elaborate, review 展示: demonstrate, show, indicate, exhibit, display 验证: prove, justify, verify 代替: instead of, in lieu of 相似: similar to, analogous to, in analogy to, resemble, bear resemblance to, is reminiscent of 重要的: important, significant, crucial, vital, critical 明显的: notable, evident 大量的: considerable, massive, vast, myriads of, a variety of, a wide range of, substantial, adequate, plenty of, a plethora of 必需的: necessary, imperative, demanding, in high demand 良好的: superior, favorable, compelling, competitive, remarkable, excellent, impressive 有害的: harmful, detrimental 流行的: popular, prevailing, prevalent, attractive, enticing, inviting, dominant 差不多的: comparable, on par with 鲁棒的: robust, agnostic, insensitive, insusceptible 敏感的: sensitive, susceptible, brittle 适合的: well-suited/ill-suited, suitable, applicable, tailored 艰难的: tough, challenging, formidable 笨拙的: cumbersome, unwieldy]]></content>
       <categories>
         <category>paper note</category>
@@ -289,7 +300,7 @@
   </entry>
   <entry>
     <title><![CDATA[Unsupervised Attribute Learning]]></title>
-    <url>%2F2018%2F09%2F22%2Fpaper_note%2FUnsupervised%20Attribute%20Learning%2F</url>
+    <url>%2F2018%2F09%2F22%2Fmachine_learning%2FUnsupervised%20Attribute%20Learning%2F</url>
     <content type="text"><![CDATA[Given a bunch of images from many categories without attribute information, how to discover attributes and learn category-level attribute vector? learn attribute vector based on the relation and difference between different categories (each dimension if uninterpretable): [1] (Laplacian matrix), [2] (triplet loss) exploit local information and encode them into attribute vector (each dimension is interpretable): [1] (discriminative cluster, doublets), [2] (joint attribute learning and feature learning)]]></content>
       <categories>
         <category>paper note</category>
@@ -300,7 +311,7 @@
   </entry>
   <entry>
     <title><![CDATA[Training Categories and Test Categories]]></title>
-    <url>%2F2018%2F09%2F15%2Fpaper_note%2FTraining%20Categories%20and%20Test%20Categories%2F</url>
+    <url>%2F2018%2F09%2F15%2Fmachine_learning%2FTraining%20Categories%20and%20Test%20Categories%2F</url>
     <content type="text"><![CDATA[Let us use $S$ to denote the set of training categories and $T$ to denote the set of testing categories. $S=T$: the most common case $S\cap T=\emptyset$: zero-shot learning $S\subset T$: generalized zero-shot learning $S\supset T$: pretrained model]]></content>
       <categories>
         <category>paper note</category>
@@ -609,8 +620,8 @@
         <category>cross-language</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C++</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -718,8 +729,8 @@
   </entry>
   <entry>
     <title><![CDATA[Zero-Shot Learning]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FZero-Shot%20Learning%2F</url>
-    <content type="text"><![CDATA[Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups: 1) X-&gt;Y (semantic similarity; write classifier) 2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space) Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups: 1) inductive ZSL v.s. semi-supervised/transductive ZSL 2) standard ZSL v.s. generalized ZSL (novelty detection, calibrated stacking) Ideas: Mapping: dictionary learning, metric learning, etc Embedding: multiple embedding [1], free embedding [1], self-defined embedding [1] Application: video-&gt;object(attribute)-&gt;action [1], image-&gt;object(attribute)-&gt;scene Combination: with active learning [1] [2], online learning [1] External knowledge graph: WordNet-based [1], NELL-based [2] Deep learning: graph neural network [1], RNN [2] Generate synthetic exemplars for unseen categories: synthetic images [SP-AEN] or synthetic features [SE-ZSL] [GAZSL] [f-xGAN] Datasets: small-scale datasets: CUB, AwA, SUN, aPY, Dogs, FLO large-scale dataset: ImageNet Survey and Resource: Recent Advances in Zero-Shot Recognition Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly [code]]]></content>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FZero-Shot%20Learning%2F</url>
+    <content type="text"><![CDATA[Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups: 1) X-&gt;Y (semantic similarity; write classifier) 2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space) Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups: 1) inductive ZSL v.s. semi-supervised/transductive ZSL 2) standard ZSL v.s. generalized ZSL (novelty detection, calibrated stacking) Ideas: Mapping: dictionary learning, metric learning, etc Embedding: multiple embedding [1], free embedding [1], self-defined embedding [1] Application: video-&gt;object(attribute)-&gt;action [1], image-&gt;object(attribute)-&gt;scene Combination: with active learning [1] [2], online learning [1] External knowledge graph: WordNet-based [1], NELL-based [2] Deep learning: graph neural network [1], RNN [2] Generate synthetic exemplars for unseen categories: synthetic images [SP-AEN] or synthetic features [SE-ZSL] [GAZSL] [f-xGAN] Datasets: small-scale datasets: CUB, AwA, SUN, aPY, Dogs, FLO large-scale dataset: ImageNet Survey and Resource: Recent Advances in Zero-Shot Recognition Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly [code] List of paper and datasets]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -729,7 +740,7 @@
   </entry>
   <entry>
     <title><![CDATA[Word Vector]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FWord%20Vector%2F</url>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FWord%20Vector%2F</url>
     <content type="text"><![CDATA[SurveyFor a brief survey summarizing skip-gram, CBOW, GloVe, etc, please refer to this. Codeword2vec: TensorFlow GloVe: C, TensorFlow WikiCorpusDownload the WikiCorpus and use the shellscript to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.]]></content>
       <categories>
         <category>paper note</category>
@@ -740,8 +751,8 @@
   </entry>
   <entry>
     <title><![CDATA[Weakly-supervised Learning]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FWeakly-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[bag-level multi-instance learning: average each bag [1] update labels instance-level multi-instance learning: label constraint within each bag [1][2] flip labels based on the category similarities: [1][2][3] learn mapping from noisy labels to clean labels: [1] learn weights for epochs: [1] add weights on training losses: implicitly update labels gradient-based [1] use side information, e.g., privileged information curriculum learning: [1] select confident samples outlier detection: aunto-encoder based [1] active learning]]></content>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FWeakly-supervised%20Learning%2F</url>
+    <content type="text"><![CDATA[bag-level multi-instance learning: average each bag [1] update labels instance-level multi-instance learning: label constraint within each bag [1][2] flip labels based on the category similarities: [1][2][3] learn mapping from noisy labels to clean labels: [1] learn weights for epochs: [1] add weights on training losses: implicitly update labels gradient-based [1] use side information, e.g., privileged information curriculum learning: [1] select confident samples outlier detection: aunto-encoder based [1] active learning For 3,4, the problem is how to learn the weights or how to select samples. a. determined by the final task loss b. based on other measurement (e.g., reconstruction error, density, distance, etc)]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -751,7 +762,7 @@
   </entry>
   <entry>
     <title><![CDATA[Vote Aggregation]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FVote%20Aggregation%2F</url>
+    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FVote%20Aggregation%2F</url>
     <content type="text"><![CDATA[We use the Dawid-Skene vote aggregation algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm. 1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet. 2) Based on the estimated correct answer for each object, compute the error rates for each annotator. 3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object. 4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).]]></content>
       <categories>
         <category>paper note</category>
@@ -759,7 +770,7 @@
   </entry>
   <entry>
     <title><![CDATA[Visual Object Tracking]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FVisual%20Object%20Tracking%2F</url>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FVisual%20Object%20Tracking%2F</url>
     <content type="text"><![CDATA[ProblemTracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect HistoryTracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. Meanshift: density based, ASMS https://github.com/vojirt/asms Particle filter: particle based statistical method Optical flow: match feature points between neighboring frames correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect. deep learning: GOTURN, MDNet, TCNN, SiamFC Two research groups contribute to CF methods most: Oxford: https://www.robots.ox.ac.uk/~luca/, Linkoping: http://users.isy.liu.se/en/cvl/marda26/ Comparison of Speed and Performance Survey papers Object tracking: A survey, 2006 Object tracking benchmark, 2015 Benchmark OTB50/100: http://cvlab.hanyang.ac.kr/tracker_benchmark/ VOT2016: http://www.votchallenge.net/vot2016/dataset.html Challenge Visual Object Tracking (VOT) challenge:http://www.votchallenge.net/challenges.htmlVOT2016 has released the code of many trackers: http://votchallenge.net/vot2016/trackers.html Multiple Object Tracking Challenge (MOT) challenge:https://motchallenge.net/ Detection based TrackingDetection based tracking is also named as tracking by detection or multiple object tracking. (MOT Challenge) TLD (tracking-learning-detection): update tracker and detector during learninghttp://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html]]></content>
       <categories>
         <category>paper note</category>
@@ -771,7 +782,7 @@
   </entry>
   <entry>
     <title><![CDATA[Simple Bayesian Optimization]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FSimple%20Bayesian%20Optimization%2F</url>
+    <url>%2F2018%2F09%2F07%2Fothers%2FSimple%20Bayesian%20Optimization%2F</url>
     <content type="text"><![CDATA[We release a light-weighted user-friendly Bayesian optimization tool for tuning hyper-parameters based on Gaussian profess. The code is modified based on https://github.com/fmfn/BayesianOptimization and released on https://github.com/ustcnewly/simple_Bayesian_optimization, in which README shows the dependency and usage of the tool. bo = BayesianOptimization(func, param_bound_dict): ‘func’ is a function with parameters as input and performance as output, ‘param_dict’ is a dictionary containing the upper/lower bound of each parameter. bo.explore(param_value_dict, eager=True): ‘param_value_dict’ is a dictionary containing multiple parameter values. This function does no calculate the performance corresponding to the parameter values, does not add items into bo.X and bo.Y, only add new parameters. Do not forget to set eager as True to make the added parameters take effect. bo.initialize(param_value_target_dict): compared with ‘param_value_dict’, ‘param_value_target_dict’ additionally contains the performance corresponding to the parameter values. This function does not add items into bo.X and bo.Y. bo.maximize(init_points=5, n_iter=15, **kwargs): ‘init_points’ is to include extra points for fitting. ‘n_iter’ indicates the iterative process of inferring the next point and add it for fitting. All the init points and inferred points will be added into bo.X and bo.Y. The model is fitted on bo.X and bo.Y. The algorithm requires at least two initial points. When setting ‘init_points=0’, we can use ‘bo.explore’ and ‘bo.initialization’ for initialization. For inference, acq=’ucb’ (upper confidence bound), ‘ei’ (expected improvement) or ‘poi’ (probability of improvement). ‘poi’ and ‘ucb’ work better empirically. There is a trade-off beteween exploitation and exploration. When acq=’ucb’, smaller kappa prefers exploitation while larger kappa prefers exploration. When acq=’poi’, similarly, smaller xi prefers exploitation while larger xi prefers exploration. kappa and xi can be set within [10^-3, 10^-2, …, 10^3]. For the Gaussian process model itself, it contains parameters like ‘kernel’ and ‘alpha’. Refer to scikit-learn for the details. When warnings occur in ‘gpr.py’, you can try using larger alpha, i.e., 10^-3. bo.gp.fit(bo.X, bo.Y): use Gaussian process regression to fit bo.X and bo.Y. mu, sigma = bo.gp.predict(x, return_std=True): use the learnt model to predict x, output mean and variance. utility = bo.util.utility(test_params, bo.gp): return the utility of test parameters, based on which the next point is recommended.]]></content>
       <categories>
         <category>paper note</category>
@@ -782,8 +793,8 @@
   </entry>
   <entry>
     <title><![CDATA[Self-supervised Learning]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FSelf-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[Design a proxy task using unlabeled data to help the original task. Please refer to the surveys [1] [2]. image-to-image generate complementary information: colorization [1], inpainting [2], cross-channel generation [3] order of local information: relative location [1], jigsaw [2], predicting rotation [3] clustering: [1] video-to-image smoothness between neighboring frames: [1] [2] [3] predict motion: optical flow [1] [2], foreground movement [3] order of frames: [1] [2] [3] Muti-task self-supervised learning: integrate multiple proxy tasks [1] [2]]]></content>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FSelf-supervised%20Learning%2F</url>
+    <content type="text"><![CDATA[Design a proxy task using unlabeled data to help the original task. Please refer to the surveys [1] [2]. image-to-image generate complementary information: colorization [1], inpainting [2], cross-channel generation [3] order of local information: relative location [1], jigsaw [2], predicting rotation [3] clustering: [1] video-to-image smoothness between neighboring frames: [1] [2] [3] predict motion: optical flow [1] [2], foreground movement [3] order of frames: [1] [2] [3] Muti-task self-supervised learning: integrate multiple proxy tasks [1] [2] Combined with other frameworks: self-supervised GAN [1]]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -793,7 +804,7 @@
   </entry>
   <entry>
     <title><![CDATA[Reasons to Kill a Paper]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FReasons%20to%20Kill%20a%20Paper%2F</url>
+    <url>%2F2018%2F09%2F07%2Fothers%2FReasons%20to%20Kill%20a%20Paper%2F</url>
     <content type="text"><![CDATA[Strong reasons: (it is on you, bro) promise more than they deliver (this is the first work….) miss important references (closely related) results are too incremental or too unconvincing poorly written or oraganized incorrect statements Weak reasons: (not lucky) novelty is minor or incremental no technical contribution: too few formulations or the new method is too straightforward improvement is insignificant: less than 1 percent no component analysis/ablation study: do not know which component works no qualitative analysis: only quantative analysis unfair or insufficient comparison with state-of-the-art: too few state-of-the-baselines or the comparison is unfair hyper-parameter analysis: too many hyper-parameters, unclear how to set hyper-parameter, sensitivity to hyper-parameters formulations are too dense and hard to follow: maybe move to supplementary or appendix No reasons: (bad luck) If a reviewer is determined to kill your paper (in a bad mood, or not happy with your paper, or your idea collides with his/her own), he/she can easily make up a thousand execuses. I do not know what is missing, but still cannot understand it (actually all papers require reviewers to have certain background knowledge, just like you cannot count on a primary school student to understand calculus). the improvement is very minor, only 5 percent (most improvements are minor except elevating from traditional machine learning to deep learning) just an extension of XXX, or combination of XXX and XXX (90% papers fall into this scope. generally speaking, most papers today are extensions of the first deep learning paper.) miss some details (the paper space is limited, so there is no space to provide all the details)]]></content>
       <categories>
         <category>paper note</category>
@@ -801,7 +812,7 @@
   </entry>
   <entry>
     <title><![CDATA[Privileged Information]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FPrivileged%20Information%2F</url>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FPrivileged%20Information%2F</url>
     <content type="text"><![CDATA[Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in [the first paper]. High-level ideas: Use privileged information in the same way as for multi-view learning Transfer between privileged information and primary information Use privileged information to control the training process like training uncertainty or training difficulty (e.g., training loss, noise). Applications: SVM for binary classification model the slack variable : SVM+ [1] model the margin: [1] [2] structural SVM: [1] theoretical analysis: [1] [2] Gaussian process classification GPC [1] L2 loss for classification/Hash multi-labeling [1] Hash ITQ [1] clustering clustering [1] metric learning for verification/classification ITML+ [1] [2] DML+ [1] OITML [1]: ordinal-based ITML CRF probilistic inference [1]: similar with multi-view, but integral over the latent privileged information space during testing random forest conditional regression forest [1]: design node splitting criterion matrix factorization for collaborative filtering PriMF [1] Maximum Entropy Discrimination MED [1] Deep Learning Hallucination network classification loss [1] model drop-out [1] Settings: multi-view + LUPI [1] multi-task multi-class LUPI [1] multi-instance LUPI [1] active learning + LUPI [1] distillation + LUPI [1] domain adaptation + LUPI [1]]]></content>
       <categories>
         <category>paper note</category>
@@ -812,7 +823,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hyper Parameter Tuning]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FHyper%20Parameter%20Tuning%2F</url>
+    <url>%2F2018%2F09%2F07%2Fothers%2FHyper%20Parameter%20Tuning%2F</url>
     <content type="text"><![CDATA[Parameter searching: grid search random search Bayesian Optimization: SigOpt is providing parameter tuning service based on Bayesian optimization. This is a good place to start. hyperopt (tree parzen estimator) BayesianOptimization, Spearmint, MOE (Gaussian process) SMAC (random forest regression) related papers: [1] [2] [3] [4] Spectral Optimization: Harmonica [github] currently only supports tuning binary parameters. Model ensembling: different initialization different epochs different hyperparameters A toolkit sealing all types of parameter tuning methods: Google Vizier]]></content>
       <categories>
         <category>paper note</category>
@@ -823,7 +834,7 @@
   </entry>
   <entry>
     <title><![CDATA[Outlier Detection]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FOutlier%20Detection%2F</url>
+    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FOutlier%20Detection%2F</url>
     <content type="text"><![CDATA[Statistical methods use a model (e.g., Gaussian) to fit the distribution of all data use two models to fit the distributions of non-outliers and outliers separately Grubbs’ test Distance based methods the density within a neighborhood the distance from a nearest neighbor Learning based method clustering, the smallest cluster is likely to contain outliers one-class classifier (e.g., one-class SVM) binary classifier (e.g., naive bayes for spam filtering, weighted binary SVM)]]></content>
       <categories>
         <category>paper note</category>
@@ -831,7 +842,7 @@
   </entry>
   <entry>
     <title><![CDATA[Make Presentation]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FMake%20Presentation%2F</url>
+    <url>%2F2018%2F09%2F07%2Fothers%2FMake%20Presentation%2F</url>
     <content type="text"><![CDATA[The organization of slides should be hierarchical. By only reading the titles on each slide, the reader should capture the whole story. Use as many pictures, animations, videos as possible. These are called hooks, which are more enticing than text and formulas. Do not stuff too many words, or even worse, too many formulas on each slide. One point per slide and one slide per point. Unify the font, color, etc. At most three different colors (e.g., pure blue, pure red, pure black), one font type (e.g., Times New Roman (good for PDF), Arial) and three different font sizes (e.g., 32, 24, 18) to distinguish title, subtitle, and context. For non-professional readers, use as few jargons as possible. Make sure each jargon should be used before well defined. Try to replace jargons with plain words.]]></content>
       <categories>
         <category>paper note</category>
@@ -839,7 +850,7 @@
   </entry>
   <entry>
     <title><![CDATA[Incremental SVM]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FIncremental%20SVM%2F</url>
+    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FIncremental%20SVM%2F</url>
     <content type="text"><![CDATA[1) Approximate incremental SVM: pass through the dataset many times Pegasos: select a training batch in each iteration python: https://github.com/ejlb/pegasos https://github.com/avaitla/Pegasos C: https://www.cs.huji.ac.il/~shais/code/index.html matlab: https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function sklearn.linear_model: SGD 123456clf= sklearn.linear_model.SGDClassifier(learning_rate = 'constant', eta0 = 0.1, shuffle = False, n_iter = 1)# get x1, y1 as a new instanceclf.partial_fit(x1, y1)# get x2, y2# update accuracy if neededclf.partial_fit(x2, y2) 2) Exact incremental or decremental SVM: only pass through the dataset once Incremental and Decremental Support Vector Machine Learninghttp://www.isn.ucsd.edu/svm/incremental SVM Incremental Learning, Adaptation and Optimization: extend the work abovematlab: https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB Incremental and decremental training for linear classification: extension of liblinear focusing on linear problemhttp://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html]]></content>
       <categories>
         <category>paper note</category>
@@ -851,7 +862,7 @@
   </entry>
   <entry>
     <title><![CDATA[How to Come up with Ideas]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FHow%20to%20Come%20up%20with%20Ideas%2F</url>
+    <url>%2F2018%2F09%2F07%2Fothers%2FHow%20to%20Come%20up%20with%20Ideas%2F</url>
     <content type="text"><![CDATA[Non-trivial ideas require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. Trivial ideas are much easier with the aid of some short formulas. We do not encourage students to generate trivial ideas based on short formulas, but this can help beginners take the first step and gain confidence. naive combination: e.g., combine regularizers, combine network modules from single to multiple: create multiple-XXX learning setting, e.g., multi-view learning, multi-instance learning, multi-label learning, multi-task learning. separate common and specific components: in multi-XXX learning setting, we can separate XXX-invariant components from XXX-specific components. e.g., for multiple domains (resp, categories), we can separate domain (resp., category)-invariant components from domain (resp., category)-specific components. combine local information with global information: jointly use local and global information from images/videos. from discrete to continous (e.g., using integral) or from continuous to discrete (e.g., using basis). from coarse-grained to fine-grained: generate a coarse-grained result first and then refine the coarse-grained result to fine-grained result. from simple structure to advanced structure: e.g., from sequence network to tree network to graph network, form vector representation to matrix representation to tensor representation. kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. introduce auxiliary/side information to help the original task: the auxiliary/side information is usually more accessible. learn different weights on different components: the essence of machine learning is learning weights, e.g., assign different weights on different feature dimensions (linear classifier), on different kernels (multiple-kernel learning), on different training samples (sample reweighting). fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method, as illustrated below.]]></content>
       <categories>
         <category>paper note</category>
@@ -859,7 +870,7 @@
   </entry>
   <entry>
     <title><![CDATA[Gaze Estimation]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FGaze%20Estimation%2F</url>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FGaze%20Estimation%2F</url>
     <content type="text"><![CDATA[Approaches Corneal reflection-based methods NIR or LED illumination, learning the mapping (e.g., regression, ) between glint vector and gaze direction. Appearance based methods Limbus model [pdf]: fit a limbus model (a fixed-diameter disc) to detected iris edges. Auxiliary Tools Calibration: obtain the visual axis and kappa angle for each person. Facial landmarks detection One Millisecond Face Alignment with an Ensemble of Regression Trees [pdf] [code] Continuous Conditional Neural Fields for Structured Regression [pdf] Head Pose Estimation EPnP algorithm [pdf] Dataset [MPIIGaze]: fine-grained annotation [Eyediap]: RGB-D]]></content>
       <categories>
         <category>paper note</category>
@@ -870,7 +881,7 @@
   </entry>
   <entry>
     <title><![CDATA[From Weak to Strong Supervision]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FFrom%20Weak%20to%20Strong%20Supervision%2F</url>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FFrom%20Weak%20to%20Strong%20Supervision%2F</url>
     <content type="text"><![CDATA[Object Detection: image label: [WSDDN] points that indicate the location of the object bounding boxes Segmentation: image label: [SEC] points that indicate the location of the object scribbles that imply the extent of the object bounding boxes segmentation masks]]></content>
       <categories>
         <category>paper note</category>
@@ -878,7 +889,7 @@
   </entry>
   <entry>
     <title><![CDATA[Euler Angle (yaw,pitch,roll)]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FEuler%20Angle%20(yaw%2Cpitch%2Croll)%2F</url>
+    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FEuler%20Angle%20(yaw%2Cpitch%2Croll)%2F</url>
     <content type="text"><![CDATA[Borrowing aviation terminology, these rotations will be referred to as yaw, pitch, and roll: A yaw is a counterclockwise rotation of \( \alpha\) about the \(z\)-axis. The rotation matrix is given by \displaystyle R_z(\alpha) = \begin{pmatrix}\cos\alpha & -\sin\alpha & 0 \\\\ \sin\alpha & \cos\alpha & 0 \\\\ 0 & 0 & 1 \end{pmatrix} .A pitch is a counterclockwise rotation of \( \beta\) about the \( y\)-axis. The rotation matrix is given by \displaystyle R_y(\beta) = \begin{pmatrix}\cos\beta & 0 & \sin\beta \\\\ 0 & 1 & 0 \\\\ -\sin\beta & 0 & \cos\beta \end{pmatrix} .A roll is a counterclockwise rotation of \( \gamma\) about the \( x\)-axis. The rotation matrix is given by \displaystyle R_x(\gamma) = \begin{pmatrix}1 & 0 & 0 \\\\ 0 & \cos\gamma & -\sin\gamma \\\\ 0 & \sin\gamma & \cos\gamma \end{pmatrix} .Note that \( R(\alpha,\beta,\gamma)\) performs the roll first, then the pitch, and finally the yaw. If the order of these operations is changed, a different rotation matrix would result. For gaze direction, roll does not change gaze direction, so only yaw and pitch affect gaze direction. Given a normalized 3D vector (x,y,z), how to determine the yaw and pitch angles?The problem should be discussed based on the order of doing yaw/pitch. Consider an eye rigid model (bound with a head rigid model), aligned with original coordinate system, is facing x positive direction. Since roll has no effect on eye direction, we only perform yaw and pitch. For coordinate transformation, we consider the reverse process. The eye direction in new coordinate system is \(c_1 = (1,0,0)\) but \(c_2 = (x_0,y_0,z_0)\) in the original coordinate system. If true rotation order is yaw-&gt;pitch, then c\_2=R\_z(-\alpha)R\_y (-\beta)c\_1.. Then, \(\beta=arsin(z_0),\alpha=-artan(y_0/x_0)\). If true rotation order is pitch-&gt;yaw, then c\_2=R\_y(-\beta)R\_z (-\alpha)c\_1.. Then, \(\alpha=-arsin(y_0),\beta=artan(z_0/x_0)\). If we insert \(R_x(\gamma)\) before \(c_1\), the results won’t change, which demonstrates that roll will not influence eye direction. In other words, if the true rotation order is yaw-&gt;pitch-&gt;roll or pitch-&gt;yaw-&gt;roll, the above analysis still holds. Notice:- we used right-hand coordinate system, that is, thumb along the z-axis and fingers from x-axis to y-axis. rotation \(\theta\) around some axis means rotating counter clockwise \(\theta\) when looking along the positive direction of that axis when doing rotations in sequence, each rotation is based on the up-to-date coordinate system (x-axis, y-axis, z-axis).]]></content>
       <categories>
         <category>paper note</category>
@@ -886,7 +897,7 @@
   </entry>
   <entry>
     <title><![CDATA[Endovascular Surgery]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FEndovascular%20Surgery%2F</url>
+    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FEndovascular%20Surgery%2F</url>
     <content type="text"><![CDATA[Key words:catheter, cannulation, EM tracking (enhance visualization and provide objective metric) Endovascular Technique:Early endovascular technique: real-time fluoroscopy and 2D angiography: ionizing radiation and repeated injection of a nephrotoxic contrast agent. Image fusion techniques: project 3D CT and magnetic resonance imaging to real-time 2D fluoroscopic images, still require real-time fluroscopy. Electromagnetic (EM) tracking: an EM field is generated by the Aurora Window Field Generator, and sensors on the tips measure and transmit the roll orientation and forward motion. The veracity of EM tracking is evaluated on the basis of target registration error (TRE). System: manual simulator 2. virtual simulator (virtual reality) Task:Different locations of vessels correspond to the tasks with different difficult levels. Metric:Certain metric is required to evaluate or augment the skills of surgeon (novice, intermediate, expert). 1.expert observation and subjective score 2.number of cases 3.kinematic metrics: mapping from kinematic data to skill (classification) 3D path length spectral arc length: change of acceleration in frequency domain root mean dimensionless jerk: movement smoothness submovement number and duration catheter turn: measure the task difficulty View: 2D or 3D real-time or stored (using stored image can reduce fluoroscopy time and radiation exposure) anteroposterior/lateral/endoluminal view]]></content>
       <categories>
         <category>paper note</category>
@@ -897,7 +908,7 @@
   </entry>
   <entry>
     <title><![CDATA[Domain Generalization]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FDomain%20Generalization%2F</url>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FDomain%20Generalization%2F</url>
     <content type="text"><![CDATA[a) When the domain labels are known: reduce the distance between different domains: MMD [1][2], mutual information domain-invariant and domain-specific components: [1][2] b) When the domain labels are unkown: first discover multiple latent domains: cluster [1][2], max margin separation [1]]]></content>
       <categories>
         <category>paper note</category>
@@ -909,8 +920,8 @@
   </entry>
   <entry>
     <title><![CDATA[Domain Adaptation]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FDomain%20Adaptation%2F</url>
-    <content type="text"><![CDATA[learn projection matrix: F(PXs, QXt) project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2] interpolation on the manifold SGF [pdf] GFK [pdf] sample selection: learn sample weights KMM [pdf] STM [pdf] DASVM [pdf] weighted adversarial network [1][2] domain-invariant and domain-specific components SDDL [pdf] Domain Separation Network [pdf] low-rank DL [pdf] low-rank reconstruction LTSL [pdf] RDALR [pdf] pixel-level image to image translation pair input: pixe-level domain adaptation [pdf] unpaired input: cycling GAN [pdf] combine with feature-based method: GraspGAN [pdf] A unified framework [pdf] adversarial network [1]: classification and domain confusion. The domain separation and confusion problem, which is a min-max problem, can be solved like GAN or using reverse gradient (RevGrad) algorithm. meta-learning gradients on two domains should be consistent [pdf] domain alignment layer (batch normalization): [1] [2] new setting when the categories of the source domain and the target domain do not match: open-set domain adaptation[1] or partial transfer learning[1] guided learning: tutor guides students and get feedback from students. ACM-MM18 paper Domain adaptation for diverse applications pose estimation [1] person re-identification [1] objection detection [1] segmentation [1] VQA [1] Domain difference metric: To measure data distribution mismatch, the most commonly used metric is MMD and its extensions such as fast MMD, conditional MMD and joint MMD. There are also some other metrics like KL divergence, HSIC criterion, Bregman divergence, manifold criterion, and second-order statistic. Survey: An old survey of deep learning domain adaptation methods [pdf].]]></content>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FDomain%20Adaptation%2F</url>
+    <content type="text"><![CDATA[learn projection matrix: F(PXs, QXt) project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2] interpolation on the manifold SGF [pdf] GFK [pdf] sample selection: learn sample weights KMM [pdf] STM [pdf] DASVM [pdf] weighted adversarial network [1][2] domain-invariant and domain-specific components SDDL [pdf] Domain Separation Network [pdf] low-rank DL [pdf] low-rank reconstruction LTSL [pdf] RDALR [pdf] pixel-level image to image translation pair input: pixe-level domain adaptation [pdf] unpaired input: cycling GAN [pdf] combine with feature-based method: GraspGAN [pdf] A unified framework [pdf] adversarial network [1]: classification and domain confusion. The domain separation and confusion problem, which is a min-max problem, can be solved like GAN or using reverse gradient (RevGrad) algorithm. meta-learning gradients on two domains should be consistent [pdf] domain alignment layer (batch normalization): [1] [2] open-set domain adaptation [1] (the categories of the source domain and the target domain do not match) or partial transfer learning [1] guided learning: tutor guides students and get feedback from students. ACM-MM18 paper ensemble transfer learning: aggregate multiple transfer learning approaches [1] Domain adaptation for diverse applications pose estimation [1] person re-identification [1] objection detection [1] segmentation [1] VQA [1] Domain difference metric: To measure data distribution mismatch, the most commonly used metric is MMD and its extensions such as fast MMD, conditional MMD and joint MMD. There are also some other metrics like KL divergence, HSIC criterion, Bregman divergence, manifold criterion, and second-order statistic. Survey: An old survey of transfer learning [pdf] Recent advance on domain adaptation [pdf] My survey of old deep learning domain adaptation methods [pdf]]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -921,7 +932,7 @@
   </entry>
   <entry>
     <title><![CDATA[Camera Survey]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FCamera%20survey%2F</url>
+    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FCamera%20survey%2F</url>
     <content type="text"><![CDATA[Interface Type: GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission. Color v.s. MonochromeWhen the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file. Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution. Sensor Type: CCD (Charged Coupling Devices): special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light. CMOS (Complimentary Metal Oxide Semiconductor): use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption Readout Method:Global v.s. rolling shutter: originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities. Advantage of global shutter: global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. Quantum EfficiencyThe ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity. Field of ViewFOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV. Pixel SizeA small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio.]]></content>
       <categories>
         <category>paper note</category>
@@ -932,7 +943,7 @@
   </entry>
   <entry>
     <title><![CDATA[Bibliography Collection]]></title>
-    <url>%2F2018%2F09%2F07%2Fpaper_note%2FBibliography%20Collection%2F</url>
+    <url>%2F2018%2F09%2F07%2Fothers%2FBibliography%20Collection%2F</url>
     <content type="text"><![CDATA[For the full name of journals and venue information of conferences, click Conference and Journal Info. For the collected full-length bib, click egbib collection.]]></content>
       <categories>
         <category>paper note</category>
@@ -1168,8 +1179,8 @@
       </categories>
       <tags>
         <tag>deep learning</tag>
-        <tag>TensorFlow</tag>
         <tag>GPU</tag>
+        <tag>TensorFlow</tag>
       </tags>
   </entry>
   <entry>
