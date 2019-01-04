@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Self-supervised Learning]]></title>
+    <url>%2F2019%2F01%2F02%2Fdeep_learning%2FSemi-supervised%20Learning%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Network Structure]]></title>
     <url>%2F2019%2F01%2F02%2Fdeep_learning%2FNetwork%20Structure%2F</url>
     <content type="text"></content>
@@ -38,7 +49,7 @@
   <entry>
     <title><![CDATA[Fine-grained Dataset]]></title>
     <url>%2F2018%2F12%2F19%2Fdeep_learning%2FFine-grained%20Classification%2F</url>
-    <content type="text"><![CDATA[Papers: bilinear pooling [16] Datasets: clothing dataset car dataset CUB, Birdsnap scene dataset dog dataset flower dataset aircraft dataset Food-101 dataset [1] Wah C, Branson S, Welinder P, et al. The Caltech-UCSD Birds-200-2011 Dataset[J]. Advances in Water Resources, 2011. [2].Bo, et al. “A survey on deep learning-based fine-grained object classification and semantic segmentation.” International Journal of Automation and Computing (2017): 1-17. [8] Hu J, Shen L, Sun G. Squeeze-and-Excitation Networks[C]. // Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2018 [9]. ZHANG, Xiaofan, et al. Embedding label structures for fine-grained feature representation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016. p. 1114-1123. [10] Lin T Y, Roychowdhury A, Maji S. Bilinear Convolutional Neural Networks for Fine-grained Visual Recognition[J]. IEEE Transactions on Pattern Analysis &amp; Machine Intelligence, 2017, PP(99):1-1. [11] Zhang N, Donahue J, Girshick R B, et al. Part-Based R-CNNs for Fine-Grained Category Detection[J]. European Conference on Computer Vision (ECCV), 2014: 834-849. [12] Girshick R, Donahue J, Darrell T, et al. Rich feature hierarchies for accurate object detection and semantic segmentation[C]//Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR). 2014: 580-587. [13].Uijlings J R, De Sande K E, Gevers T, et al. Selective Search for Object Recognition[J]. International Journal of Computer, 2013, 104(2): 154-171. [14] Ren S, He K, Girshick R, et al. Faster r-cnn: Towards real-time object detection with region proposal networks[C]//Advances in neural information processing systems (NIPS). 2015: 91-99. [15] Jianlong Fu, Heliang Zheng, Tao Mei. Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-Grained Image Recognition[C]// IEEE Conference on Computer Vision and Pattern Recognition. 2017,4476-4484. [16] Lin T, Roychowdhury A, Maji S, et al. Bilinear CNN Models for Fine-Grained Visual Recognition[C]. International Conference on Computer Vision, 2015: 1449-1457.]]></content>
+    <content type="text"><![CDATA[Papers: bilinear pooling [1] use object proposal [2] (refine generated object proposals) [3] (zoom in region of interest) use attention map [4] Datasets: clothing dataset car dataset CUB, Birdsnap scene dataset dog dataset flower dataset aircraft dataset Food-101 dataset [1] Lin T, Roychowdhury A, Maji S, et al. Bilinear CNN Models for Fine-Grained Visual Recognition, ICCV, 2015. [2] Zhang N, Donahue J, Girshick R B, et al. Part-Based R-CNNs for Fine-Grained Category Detection, ECCV, 2014. [3] Jianlong Fu, Heliang Zheng, Tao Mei. Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-Grained Image Recognition, CVPR 2017. [4] Zhao B, Wu X, Feng J, et al. Diversified visual attention networks for fine-grained object classification, T-MM, 2017.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
