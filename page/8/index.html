@@ -281,6 +281,642 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Zero-Shot Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) inductive ZSL v.s. semi-supervised/transductive ZSL</p>
+<p>2) standard ZSL v.s. generalized ZSL (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
+<p><strong>Ideas:</strong></p>
+<ol>
+<li><p>Mapping: dictionary learning, metric learning, etc</p>
+</li>
+<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
+</li>
+<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
+</li>
+</ol>
+<p><strong>Datasets:</strong></p>
+<ol>
+<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
+</li>
+<li><p>large-scale dataset: ImageNet</p>
+</li>
+</ol>
+<p><strong>Survey and Resource:</strong></p>
+<ol>
+<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
+</li>
+<li><p><a href="https://github.com/chichilicious/awesome-zero-shot-learning" target="_blank" rel="noopener">List of paper and datasets</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Word Vector/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Word Vector/" itemprop="url">Word Vector</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><p>For a brief survey summarizing <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf" target="_blank" rel="noopener">skip-gram</a>, <a href="https://arxiv.org/pdf/1301.3781.pdf?" target="_blank" rel="noopener">CBOW</a>, <a href="http://www.aclweb.org/anthology/D14-1162" target="_blank" rel="noopener">GloVe</a>, etc, please refer to <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/word_vector_survey.pdf" target="_blank" rel="noopener">this</a>.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>word2vec: <a href="https://github.com/tensorflow/models/tree/master/tutorials/embedding" target="_blank" rel="noopener">TensorFlow</a></p>
+<p>GloVe: <a href="https://github.com/stanfordnlp/GloVe" target="_blank" rel="noopener">C</a>, <a href="https://github.com/shashankg7/glove-tensorflow" target="_blank" rel="noopener">TensorFlow</a></p>
+<h2 id="WikiCorpus"><a href="#WikiCorpus" class="headerlink" title="WikiCorpus"></a>WikiCorpus</h2><p>Download the <a href="https://dumps.wikimedia.org/enwiki/" target="_blank" rel="noopener">WikiCorpus</a> and use the <a href="\code\shellscript\get-wikimedia.sh">shellscript</a> to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Weakly-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Weakly-supervised Learning/" itemprop="url">Weakly-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>bag-level multi-instance learning: average each bag <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.127.277&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>update labels<ul>
+<li>instance-level multi-instance learning: label constraint within each bag <a href="https://pdfs.semanticscholar.org/3447/fe054f6af70403cfc39b4d21076337a71128.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.lxduan.info/papers/LiICCV2011.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>flip labels based on the category similarities: <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1505.01554.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>learn mapping from noisy labels to clean labels: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Veit_Learning_From_Noisy_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>learn weights for epochs: <a href="https://arxiv.org/pdf/1806.02612.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li>add weights on training losses: implicitly update labels<ul>
+<li>gradient-based <a href="https://arxiv.org/pdf/1803.09050.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>use side information, e.g., privileged information</li>
+<li>curriculum learning: <a href="http://proceedings.mlr.press/v80/jiang18c/jiang18c.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li>select confident samples<ul>
+<li>outlier detection: aunto-encoder based <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Xia_Learning_Discriminative_Reconstructions_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>active learning</li>
+</ul>
+</li>
+</ol>
+<p>For 3,4, the problem is how to learn the weights or how to select samples.</p>
+<p>a. determined by the final task loss</p>
+<p>b. based on other measurement (e.g., reconstruction error, density, distance, etc)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Vote Aggregation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/machine_learning/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
+<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
+<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
+<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
+<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Visual Object Tracking/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1309,645 +1945,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Outlier Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Outlier Detection/" itemprop="url">Outlier Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Statistical-methods"><a href="#Statistical-methods" class="headerlink" title="Statistical methods"></a>Statistical methods</h3><ul>
-<li>use a model (e.g., Gaussian) to fit the distribution of all data </li>
-<li>use two models to fit the distributions of non-outliers and outliers separately</li>
-<li>Grubbs’ test</li>
-</ul>
-<h3 id="Distance-based-methods"><a href="#Distance-based-methods" class="headerlink" title="Distance based methods"></a>Distance based methods</h3><ul>
-<li>the density within a neighborhood</li>
-<li>the distance from a nearest neighbor</li>
-</ul>
-<h3 id="Learning-based-method"><a href="#Learning-based-method" class="headerlink" title="Learning based method"></a>Learning based method</h3><ul>
-<li>clustering, the smallest cluster is likely to contain outliers</li>
-<li>one-class classifier (e.g., one-class SVM)</li>
-<li>binary classifier (e.g., naive bayes for spam filtering, weighted binary SVM)</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Make Presentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/others/Make Presentation/" itemprop="url">Make Presentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>The organization of slides should be hierarchical. By only reading the titles on each slide, the reader should capture the whole story. </p>
-</li>
-<li><p>Use as many pictures, animations, videos as possible. These are called hooks, which are more enticing than text and formulas.</p>
-</li>
-<li><p>Do not stuff too many words, or even worse, too many formulas on each slide. One point per slide and one slide per point.</p>
-</li>
-<li><p>Unify the font, color, etc. At most three different colors (e.g., pure blue, pure red, pure black), one font type (e.g., Times New Roman (good for PDF), Arial) and three different font sizes (e.g., 32, 24, 18) to distinguish title, subtitle, and context.</p>
-</li>
-<li><p>For non-professional readers, use as few jargons as possible. Make sure each jargon should be used before well defined. Try to replace jargons with plain words.</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Incremental SVM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Incremental SVM/" itemprop="url">Incremental SVM</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1) Approximate incremental SVM: pass through the dataset many times</p>
-<ul>
-<li><p>Pegasos: select a training batch in each iteration</p>
-<ul>
-<li>python: <a href="https://github.com/ejlb/pegasos" target="_blank" rel="noopener">https://github.com/ejlb/pegasos</a><pre><code>   https://github.com/avaitla/Pegasos
-</code></pre></li>
-<li>C: <a href="https://www.cs.huji.ac.il/~shais/code/index.html" target="_blank" rel="noopener">https://www.cs.huji.ac.il/~shais/code/index.html</a></li>
-<li>matlab: <a href="https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function" target="_blank" rel="noopener">https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function</a></li>
-</ul>
-</li>
-<li><p>sklearn.linear_model: SGD</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clf= sklearn.linear_model.SGDClassifier(learning_rate = <span class="string">'constant'</span>, eta0 = <span class="number">0.1</span>, shuffle = <span class="keyword">False</span>, n_iter = <span class="number">1</span>)</span><br><span class="line"><span class="comment"># get x1, y1 as a new instance</span></span><br><span class="line">clf.partial_fit(x1, y1)</span><br><span class="line"><span class="comment"># get x2, y2</span></span><br><span class="line"><span class="comment"># update accuracy if needed</span></span><br><span class="line">clf.partial_fit(x2, y2)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>2) Exact incremental or decremental SVM: only pass through the dataset once</p>
-<ul>
-<li><p>Incremental and Decremental Support Vector Machine Learning<br><a href="http://www.isn.ucsd.edu/svm/incremental" target="_blank" rel="noopener">http://www.isn.ucsd.edu/svm/incremental</a></p>
-</li>
-<li><p>SVM Incremental Learning, Adaptation and Optimization: extend the work above<br>matlab: <a href="https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB" target="_blank" rel="noopener">https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB</a></p>
-</li>
-<li><p>Incremental and decremental training for linear classification: extension of liblinear focusing on linear problem<br><a href="http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html</a></p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/How to Come up with Ideas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/others/How to Come up with Ideas/" itemprop="url">How to Come up with Ideas</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><u>Non-trivial ideas</u> require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. <u>Trivial ideas</u> are much easier with the aid of some short formulas. We do not encourage students to generate trivial ideas based on short formulas, but this can help beginners take the first step and gain confidence.</p>
-<ol>
-<li><p>naive combination: e.g., combine regularizers, combine network modules</p>
-</li>
-<li><p>from single to multiple: create multiple-XXX learning setting, e.g., multi-view learning, multi-instance learning, multi-label learning, multi-task learning.</p>
-</li>
-<li><p>separate common and specific components: in multi-XXX learning setting, we can separate XXX-invariant components from XXX-specific components. e.g., for multiple domains (resp, categories), we can separate domain (resp., category)-invariant components from domain (resp., category)-specific components.</p>
-</li>
-<li><p>combine local information with global information: jointly use local and global information from images/videos.</p>
-</li>
-<li><p>from  discrete to continous (e.g., using integral) or from continuous to discrete (e.g., using basis).</p>
-</li>
-<li><p>from coarse-grained to fine-grained: generate a coarse-grained result first and then refine the coarse-grained result to fine-grained result.</p>
-</li>
-<li><p>from simple structure to advanced structure: e.g., from sequence network to tree network to graph network, form vector representation to matrix representation to tensor representation.</p>
-</li>
-<li><p>kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. </p>
-</li>
-<li><p>introduce auxiliary/side information to help the original task: the auxiliary/side information is usually more accessible.</p>
-</li>
-<li><p>learn different weights on different components: the essence of machine learning is learning weights, e.g., assign different weights on different feature dimensions (linear classifier), on different kernels (multiple-kernel learning), on different training samples (sample reweighting).</p>
-</li>
-<li><p>fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method, as illustrated below.</p>
-</li>
-</ol>
-<p><img src="https://i.imgur.com/mGTLNur.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2002,7 +1999,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">128</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

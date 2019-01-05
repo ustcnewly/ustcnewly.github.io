@@ -281,6 +281,649 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Windows Command Lines/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/Windows Command Lines/" itemprop="url">Windows Command Lines</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>zip/unzip</p>
+<p> <code>winrar x -y -ibck zip_file_name unzip_file_name</code> //x means unzip, -y means yes to interrupted queries, -ibck means running in the background</p>
+</li>
+<li><p>generate the file list under one folder</p>
+<p> <code>dir D:\test /b &gt;list.txt</code> or <code>dir D:\test /b &gt;list.xls</code></p>
+</li>
+<li><p>combine multiple compressed volumes</p>
+<p> <code>copy /b logs.tar.gza* logs.tar.gz</code></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Install Ubuntu under Windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/Install Ubuntu under Windows/" itemprop="url">Install Ubuntu under Windows</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="For-MRB-file-system"><a href="#For-MRB-file-system" class="headerlink" title="For MRB file system"></a>For MRB file system</h3><ol>
+<li><p>Install from CD: the simplest way, but many desktops don’t have CD-ROM nowadays.</p>
+</li>
+<li><p>Install from memory disk: use universal USB installer or refus to write .iso file into memory disk. to enable booting from USB  installer, we should turn off fast booting in the OS and disable secure boot in the BIOS.</p>
+</li>
+<li><p>Install from hard disk: </p>
+<ul>
+<li><p>copy .iso along with vmlinuz.efi and initrd.lz in Casper as well as .disk under Disk C. Make sure Disk C is (hd0,N) in the disk manager.</p>
+</li>
+<li><p>Open easyBCD and configure NeoGrub by editing the menu.lst as follows:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title Install Ubuntu 14.04 LTS </span><br><span class="line">root (hd0,N) </span><br><span class="line">kernel (hd0,N)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</span><br><span class="line">initrd.lz (hd0,N)/initrd.lz</span><br></pre></td></tr></table></figure>
+<p>Remember to modify N and iso file name.</p>
+</li>
+<li><p>install Ubuntu after entering the NeoGrub term. Remember to execute <code>sudo umount –l /isodevice</code> first. </p>
+</li>
+<li><p>add the Linux/BSD boot term in easyBCD and choose grub2 instead of grub(legacy), otherwise the screen may be black.</p>
+</li>
+<li><p>if grub command line appears after booting Ubuntu system. Try to type the following codes:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root (hd1,1)</span><br><span class="line">kernel /boot/vmlinuz-3.19.0-25-generic root=/dev/sdb2</span><br><span class="line">initrd /boot/initrd.img-3.19.0-25-generic</span><br><span class="line">boot</span><br></pre></td></tr></table></figure>
+<p>Pay attention to (hd1,1), /dev/sdb2, and the linux kernel version. After typing <code>root (hd1,1)</code>, x83 should be returned.<br>Or configure NeoGrub by adding the following codes and use the NeoGrub to boot Ubuntu. You may want to know more about grub and MBR, <a href="http://www.cnblogs.com/moonlove/archive/2012/06/05/2537238.html" target="_blank" rel="noopener">this blog</a> is a good start.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Tips:</p>
+<ol>
+<li><p>Windows disks have basic ones and dynamic ones. Don’t install Ubuntu on dynamic ones. Converting basic disk to dynamic disk is easy while the opposite is time-consuming and needs formatting.</p>
+</li>
+<li><p>In Windows7, one disk can have 3 primary zones and 1 extended zones (containing logic zones). Installing Ubuntu on extended zones may be possible, but installing it on primary zones is preferred.</p>
+</li>
+<li><p>Change the boot order under Ubuntu: /boot/grub/grub.cfg is generated from /etc/grub.d and /etc/default/grub. So we have two ways: a) reset GRUB_DEFAULT=N in /etc/default/grub. b) <code>mv /etc/grub.d/30_os-prober /etc/grub.d/06_os-prober</code>. Don’t forget <code>sudo update-grub</code></p>
+</li>
+<li><p>Change the boot order under Windows7: use easyBCD.</p>
+</li>
+<li><p>For the Ubuntu disk partition, generally, / and swap are enough. Sometimes, we need /home and /boot. The size of swap is comparable with the memory size. The size of /boot is less than 1G. </p>
+</li>
+<li><p>Note that when parting disk for installing Ubuntu, we have two choices for booting management device in the bottom dropdown menu. First, by default, then Windows guides Ubuntu when booting. Second, change to the boot folder of Ubuntu, then Ubuntu guides Windows when booting. </p>
+</li>
+</ol>
+<h3 id="For-UEFI-file-system"><a href="#For-UEFI-file-system" class="headerlink" title="For UEFI file system"></a>For UEFI file system</h3><p>No need to make a partition for boot. Keep the booting mangement device in the bottom dropdown menu the default EFI (EPS) partition of Windows.</p>
+<p>For booting problem, we can use <a href="https://sourceforge.net/projects/refind" target="_blank" rel="noopener">rEFInd</a> to locate the efi file.</p>
+<p>tips:</p>
+<ol>
+<li><p>In Windows, we can assign a disk index to the EPS partition and operate on it via notebook with administrative privilege. </p>
+</li>
+<li><p>For Windows, the key efi files are bootx64.efi and bootmgfw.efi</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/BIOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/BIOS/" itemprop="url">BIOS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>If something is wrong when attempting to enter the BIOS, try the following approaches:</p>
+<ul>
+<li>press F2, F12, ESC, DEL</li>
+<li>change the cable, adaptor, interface, etc (hardware reason)</li>
+<li>update BIOS to the latest version</li>
+<li>for Windows10, settings-&gt;recover-&gt;firmware</li>
+<li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu VNC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/Ubuntu VNC/" itemprop="url">Ubuntu VNC</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Server"><a href="#Server" class="headerlink" title="Server:"></a>Server:</h3><ol>
+<li><p>Install VNC server under Ubuntu: $sudo apt-get install vnc4server</p>
+</li>
+<li><p>Configure the VNC server, $vi ~/.vnc/xstartup<br>change the style to gnome-session &amp; in the last line.</p>
+</li>
+<li><p>start the VNC server: $vncserver</p>
+</li>
+</ol>
+<h3 id="Client"><a href="#Client" class="headerlink" title="Client:"></a>Client:</h3><ol>
+<li>Install VNC client under Windows: use http:\IP:580$ID to log in.</li>
+</ol>
+<p><strong>Tips:</strong> For 10060 error, run <code>$iptables -F</code> to close firewall.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu SSH/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -720,226 +1363,6 @@
 <li><p>do not use sudo kinit</p>
 </li>
 <li><p>when no credential ticket can be found, add -c $KRB5CCNAME, where KRB5CCNAME is the environment variable recording the path of credential ticket.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>Preinstallation<ul>
-<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
-<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
-<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
-</ul>
-</li>
-<li>SSH keys<ul>
-<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
-<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
-<li>create the key in github: account setting-&gt;SSH</li>
-<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
-</ul>
-</li>
-<li><p>create an empty folder as Hexo folder</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
-<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
-</li>
-<li><p>deploy local Hexo folder</p>
-<ul>
-<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
-</li>
-<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
-</ul>
-</li>
-<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
-<li><p>local search</p>
-<ul>
-<li><code>$npm install hexo-generator-searchdb --save</code></li>
-<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>add social links: in the theme _config.yml file</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>latex: </p>
-<ul>
-<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
-<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>to address the conflict between MathJax and Hexo</p>
-   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>push posts to the top</p>
-<ul>
-<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
-<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
-</ul>
-</li>
-<li><p>insert code block</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>insert image</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>Tips:</strong> </p>
-<ol>
-<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
-</li>
-<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
-<ul>
-<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
-<li>clean the folder <code>.deploy_git</code></li>
-<li><code>hexo clean</code> and <code>hexo d -g</code></li>
-</ul>
 </li>
 </ol>
 
@@ -1542,535 +1965,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/tensorflow/TensorFlow GPU Usage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/tensorflow/TensorFlow GPU Usage/" itemprop="url">TensorFlow GPU Usage</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
-<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
-<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
-<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
-<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/tensorflow/Slim Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/tensorflow/Slim Learning Note/" itemprop="url">Slim Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>slim = tf.contrib.slim</p>
-<h3 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h3><p>for certain functions, assign default values to certain parameters</p>
-<pre><code>with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....)
-</code></pre><p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib/layers" target="_blank" rel="noopener">https://www.tensorflow.org/api_docs/python/tf/contrib/layers</a></p>
-<ul>
-<li>slim.conv2d </li>
-<li>slim.max_pool2d</li>
-<li>slim.avg_pool2d</li>
-<li>slim.dropout</li>
-<li>slim.batch_norm</li>
-<li>slim.softmax</li>
-<li>tf.repeat(inputs, repetitions, layer, <em>args, *</em>kwargs)</li>
-</ul>
-<p>class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])):<br> net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net)</p>
-<h3 id="Load-pretrained-model"><a href="#Load-pretrained-model" class="headerlink" title="Load pretrained model"></a>Load pretrained model</h3><p>Note that initialization function must be associated with sess.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure></p>
-<h3 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a>Batch normalization</h3><p><strong>With slim</strong>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">batch_norm_params = &#123;</span><br><span class="line">	    <span class="comment"># Decay for the moving averages.</span></span><br><span class="line">	    <span class="string">'decay'</span>: batch_norm_decay,</span><br><span class="line">	    <span class="comment"># epsilon to prevent 0s in variance.</span></span><br><span class="line">	    <span class="string">'epsilon'</span>: batch_norm_epsilon,</span><br><span class="line">	    <span class="comment"># collection containing update_ops.</span></span><br><span class="line">	    <span class="string">'updates_collections'</span>: tf.GraphKeys.UPDATE_OPS,</span><br><span class="line"> &#125;</span><br><span class="line">slim.arg_scope([slim.conv2d],  normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params)</span><br></pre></td></tr></table></figure></p>
-<p>For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded  moving-mean an moving_variance are used.</p>
-<p>To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways.</p>
-<p>The first method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line">variables_to_train = _get_variables_to_train()</span><br><span class="line">grads_and_vars = optimizer.compute_gradients(total_loss,  variables_to_train)</span><br><span class="line">grad_updates = optimizer.apply_gradients(grads_and_vars)</span><br><span class="line">update_ops.append(grad_updates)</span><br><span class="line">update_op = tf.group(*update_ops)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies([update_op]):</span><br><span class="line">    train_op = tf.identity(total_loss)</span><br></pre></td></tr></table></figure></p>
-<p>The second method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies(update_ops):</span><br><span class="line">	train_op = optimizer.minimize(loss)</span><br></pre></td></tr></table></figure></p>
-<p>The third method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_op = slim.learning.create_train_op(total_loss, optimizer)</span><br></pre></td></tr></table></figure></p>
-<p>Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings.</p>
-<p>However, when trained on small-scale  datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue:</p>
-<ul>
-<li><p>in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch.</p>
-</li>
-<li><p>decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs.</p>
-</li>
-</ul>
-<p><strong>without slim</strong>: tf.nn.batch_normalization, no moving_mean/variance<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">batchnorm</span><span class="params">(bn_input)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> tf.variable_scope(<span class="string">"batchnorm"</span>):</span><br><span class="line">		<span class="comment"># this block looks like it has 3 inputs on the graph unless we do this</span></span><br><span class="line">		bn_input = tf.identity(bn_input)</span><br><span class="line">		</span><br><span class="line">		channels = bn_input.get_shape()[<span class="number">3</span>]</span><br><span class="line">		offset = tf.get_variable(<span class="string">"offset"</span>, [channels], dtype=tf.float32, initializer=tf.zeros_initializer())</span><br><span class="line">		scale = tf.get_variable(<span class="string">"scale"</span>, [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(<span class="number">1.0</span>, <span class="number">0.02</span>))</span><br><span class="line">		mean, variance = tf.nn.moments(bn_input, axes=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], keep_dims=<span class="keyword">False</span>)</span><br><span class="line">		normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=<span class="number">1e-5</span>)</span><br><span class="line">		<span class="keyword">return</span> normalized	</span><br></pre></td></tr></table></figure></p>
-<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><p>print all model variables<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) <span class="comment"># all the global variables</span></span><br><span class="line">slim.get_model_variables() <span class="keyword">or</span> tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) </span><br><span class="line"><span class="comment">#variables defined by slim (tf.contrib.framework.model_variable)</span></span><br><span class="line"><span class="comment">#excluding gradient variables</span></span><br><span class="line">tf.trainable_variables() <span class="comment">#excluding graident variables and batch_norm variables (moving_mean and moving_variance)</span></span><br></pre></td></tr></table></figure></p>
-<p>print regularization losses(weight decay) and other losses<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slim.losses.get_regularization_losses()</span><br><span class="line">slim.losses.get_losses() <span class="comment"># losses except weight decay</span></span><br><span class="line">slim.losses.get_total_loss(add_regularization_losses=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/YOLO Code Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/object_detection/YOLO Code Note/" itemprop="url">YOLO Code Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>note</strong></p>
-<ul>
-<li><p><code>net.batch  = net.batch * net.subdivisions</code> // the input batch number is divided by subdivision.</p>
-</li>
-<li><p>preconfigured file</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cfg/voc.data -&gt; list *options</span><br><span class="line">cfg/yolo-voc.cfg -&gt; char *cfgfile</span><br><span class="line">darknet19_448.conv23 -&gt; char* weightfile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>every 10 times, change the input size </p>
-</li>
-<li><p>the maximum number of bounding boxes in one image is hard coded as 30</p>
-</li>
-<li><p>each training image is tweaked by jitter, hue, crop, and etc.</p>
-</li>
-</ul>
-<p><strong>multiple threads</strong></p>
-<ul>
-<li><p>create multiple threads when using multiple GPUs: -gpus 0,1</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ngpus == <span class="number">1</span>)&#123;</span><br><span class="line">    loss = train_network(net, train);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    loss = train_networks(nets, ngpus, train, <span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>use additional thread to load data to save time</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pthread_t</span> load_thread = load_data(args);</span><br><span class="line">pthread_join(load_thread, <span class="number">0</span>); <span class="comment">// wait for the thread to end</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>load partial weights</strong><br>// load partial weights up to certain layer<br>parser.c: <code>load_weights_upto(network *net, char *filename, int start, int cutoff)</code></p>
-<p><strong>loading bounding boxes</strong><br>// note that bounding box path is obtained based on image path, e.g., change “images” to “labels”. bounding box format: class_id x y w h. For the detaill, check data.c: fill_truth_detection</p>
-<p><strong>detection/region layer</strong></p>
-<p>all the pred/truth boxes coordinates (x,y,w,h) are scaled to (0,1)</p>
-<ul>
-<li><p>scalar</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">outputs = h * w * n * (coords + 1 + classes); // h=13,w=13,n=5,classes=20, coords=4</span><br><span class="line">// top-down layout: n-&gt;coords(x,y,w,h)+ obj_score + class_probs&gt;h&gt;w</span><br><span class="line">truths = 30 * (coords + 1); // 30 is the max number of ground-truth boxes, which is hard coded</span><br><span class="line">//top-down layout: 30-&gt;coords(x,y,w,h)+class_id</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>the size of vectors</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">output: batch*outputs</span><br><span class="line">truth: batch*truths</span><br><span class="line">delta: the same as output</span><br><span class="line">biases: 2*#anchor scales</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>detection idea</strong></p>
-<ul>
-<li><p>Each feature map pixel is associated with 10 anchor scales, the detection bounding box can be obtained based on the feature map pixel location and anchor scale, followed by being corrected by bounding box regression as follows. Assume output is ($\Delta i, \Delta j, \Delta w, \Delta h$), then the corrected prediction box is<br><script type="math/tex">x'=(i+\Delta i)/w, y'=(j+\Delta j)/h, w'=\exp(\Delta w)*aw/w, h'=\exp(\Delta h) * ah/h</script>.</p>
-</li>
-<li><p>For each feature map pixel and each anchor scale, calculate its overlap with any ground-truth bounding boxes to get its object score, then update gradients w.r.t. obj_score.</p>
-</li>
-<li><p>For each ground-truth bounding box, find the corresponding feature map pixel with the most fittable anchor scale, then update gradients w.r.t. box regression and class probabilities.</p>
-</li>
-</ul>
-<p><strong>update gradient</strong></p>
-<p>most of the loss terms are square loss, which can be easily computed</p>
-<ul>
-<li><p>obj_score: if best_iou&gt;thresh, set as 0, otherwise</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l.delta[obj_index] = l.noobject_scale * (<span class="number">0</span> - l.output[obj_index]);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>box regression<br>// add higher weights on small regions</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delta_region_box(box truth, <span class="keyword">float</span> *x, <span class="keyword">float</span> *biases, <span class="keyword">int</span> n, <span class="keyword">int</span> index, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> w, <span class="keyword">int</span> h, <span class="keyword">float</span> *delta, <span class="keyword">float</span> scale, <span class="keyword">int</span> stride)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>class probabilities</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delta_region_class(l.output, l.delta, class_index, class, l.classes, l.softmax_tree, l.class_scale, l.w*l.h, &amp;avg_cat);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>experimental observation</strong></p>
-<ul>
-<li><p>reducing the number of layers may improve the performance due to the enlarged feature map.</p>
-</li>
-<li><p>increasing the number of anchors does not help (5 or 10 is adequate enough).</p>
-</li>
-<li><p>the dynamic version (dynamically shrink or expand the network scale) is better than the static version</p>
-</li>
-<li><p>the default hyper parameters are pretty good. No significant improvement is obtained by tuning hyper parameters.</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2125,7 +2019,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">128</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

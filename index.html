@@ -281,6 +281,711 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>Preinstallation<ul>
+<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
+<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
+<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
+</ul>
+</li>
+<li>SSH keys<ul>
+<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
+<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
+<li>create the key in github: account setting-&gt;SSH</li>
+<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
+</ul>
+</li>
+<li><p>create an empty folder as Hexo folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
+<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
+</li>
+<li><p>deploy local Hexo folder</p>
+<ul>
+<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
+</li>
+<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
+</ul>
+</li>
+<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
+<li><p>local search</p>
+<ul>
+<li><code>$npm install hexo-generator-searchdb --save</code></li>
+<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add social links: in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latex: </p>
+<ul>
+<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
+<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to address the conflict between MathJax and Hexo</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>push posts to the top</p>
+<ul>
+<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
+<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
+</ul>
+</li>
+<li><p>insert code block</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert image</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Tips:</strong> </p>
+<ol>
+<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+</li>
+<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
+<ul>
+<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
+<li>clean the folder <code>.deploy_git</code></li>
+<li><code>hexo clean</code> and <code>hexo d -g</code></li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/others/Fair Comparison/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/others/Fair Comparison/" itemprop="url">Fair comparison</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T14:12:32+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>Carefully compare your experiments settings with those described in previous papers. The experimental settings include training/testing split, input format (e.g., image size), evaluation metric, backbone network, etc. If they are not exactly the same, you need to re-run their methods with exactly the same experimental settings as yours for fair comparison. For example, if the baseline uses 32x32 image size while you use 244x244 image size, that is unfair comparison. If the baseline uses AlexNet as backbone while you use ResNet as backbone, that is unfair comparison.</p>
+</li>
+<li><p>The baseline methods may use more or less information, compared with your method. Based on using more/less information and their performance is better/worse than yours, we could have the following table. </p>
+<ul>
+<li>If the baseline uses more information but achieves worse results, never mind. Just brag your own method.</li>
+<li>If the baseline uses less information but achieves better results, it is a serious problem. You have to check your method.</li>
+<li>If the baseline uses less information and achieves worse results, that is reasonable. But you may be accused of unfair comparison because your method uses more information. For safety, please augment the baseline with extra information and compare again. </li>
+<li><p>If the baseline uses more information and achieves better results, that is reasonable. But do not casually put them in the paper because dumb reviewers may ignore these details and point out your method is not good enough. That is very risky! Please remove the extra information from the baseline and compare again.</p>
+<p><img src="https://i.imgur.com/Its6ekq.jpg" width="80%"></p>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/others/Determine Baselines/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/others/Determine Baselines/" itemprop="url">Determine baselines</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T14:10:23+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Generally speaking, for the baselines, you need to compare with other (i.e., state-of-the-art) and compare with yourself (i.e., component analysis or ablation study).</p>
+<h2 id="Compare-with-others"><a href="#Compare-with-others" class="headerlink" title="Compare with others"></a>Compare with others</h2><ul>
+<li><p>How to select baselines?</p>
+<ul>
+<li>Select the baselines from top conferences. You can refer to related paper published on recent top conferences and find out which baselines they compare with. The intersection of their baselines should be the most popular ones.</li>
+<li>The selected baselines should be discussed in the related work in your paper.</li>
+<li>The selected baselines should cover at least several ones from the most recent top conferences.</li>
+<li>The selected baselines should cover the researchers who are very famous in this field or has many publications in this field. If you do not cite his/her paper and your paper unfortunately goes under his/her review, then you are doomed.</li>
+</ul>
+</li>
+<li><p>Could we directly copy the results from previous papers?</p>
+<ul>
+<li>Carefully compare your experiments settings with those described in previous papers. The experimental settings include training/testing split, input format (e.g., image size), evaluation metric, backbone network, etc. If they are exactly the same, just copy the results. </li>
+<li>Otherwise, you need to re-run their methods with exactly the same experimental settings as yours for fair comparison.  </li>
+</ul>
+</li>
+<li><p>Need we implement the baselines?</p>
+<ul>
+<li>Search the code online and contact the authors for code.</li>
+<li>If you could not get the code, you need to implement the baseline by yourself according to the details provided in the paper. Theoretically, it is impossible to completely re-implement the baseline unless the method is frustratingly easy (e.g., 10 lines of matlab code), so just follow your understanding and implement a reasonable version.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Compare-with-yourself"><a href="#Compare-with-yourself" class="headerlink" title="Compare with yourself"></a>Compare with yourself</h2><ul>
+<li><p>Why is it necessary?</p>
+<ul>
+<li>Because you need to understand which component of your method really works.</li>
+<li>If you do not compare with yourself, you provide a perfect reason for reviewers to reject your paper.</li>
+</ul>
+</li>
+<li><p>How many special cases do we need?</p>
+<ul>
+<li>That mainly depends on the technical contribution of your paper. If you claim regularizer XXX or strategy XXX or subnetwork XXX is proposed by yourself and very effective, you have to verify that in the experiments.</li>
+<li>For some naive special cases, you may just need to set certain hyper-parameter as 0 or freeze some components in your network, so the experiments will be quite simple. For other advanced special cases, that will take some more work. </li>
+</ul>
+</li>
+</ul>
+<h2 id="Checklist"><a href="#Checklist" class="headerlink" title="Checklist"></a>Checklist</h2><p>Please select and compare with baselines meticulously. You can summarize and check your baseline information in the following table:</p>
+<p><img src="https://i.imgur.com/UHKtu7Y.jpg" width="100%"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/machine_learning/Latent Variable Regulation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/machine_learning/Latent Variable Regulation/" itemprop="url">Latent Variable Regulation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T13:38:16+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Regulating latent variables or latent features can improve the generalizability of classifier and lower the error bound. </p>
+<p>Regulating latent variables is essentially decrease the entropy of latent variables. There are some common tricks to decrease the entropy of latent variables, for example,</p>
+<ol>
+<li>dropout</li>
+<li>weight decay</li>
+<li>add random noise to the latent variables in VAE and GAN.</li>
+<li>add random perturbation to model parameters</li>
+</ol>
+<p>For theoretical proof, please refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/information_theory_for_latent_variable_regulation.pdf" target="_blank" rel="noopener">here</a>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/02/deep_learning/Semi-supervised Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -300,7 +1005,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/02/deep_learning/Semi-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
+                <a class="post-title-link" href="/2019/01/02/deep_learning/Semi-supervised Learning/" itemprop="url">semi-supervised Learning</a></h1>
         
 
         <div class="post-meta">
@@ -374,7 +1079,16 @@
       
         
           
-            
+            <h2 id="co-training-for-semi-supervised-Learning"><a href="#co-training-for-semi-supervised-Learning" class="headerlink" title="co-training for semi-supervised Learning"></a>co-training for semi-supervised Learning</h2><ol>
+<li><p>multi-view: <a href="https://arxiv.org/pdf/1803.05984.pdf" target="_blank" rel="noopener">co-training</a>, <a href="https://www.ijcai.org/proceedings/2018/0278.pdf" target="_blank" rel="noopener">tri-net</a></p>
+</li>
+<li><p>multi-graph: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaohang_Zhan_Consensus-Driven_Propagation_in_ECCV_2018_paper.pdf" target="_blank" rel="noopener">label propagation</a></p>
+</li>
+</ol>
+<p>[1] Deep Co-Training for Semi-Supervised Image Recognition</p>
+<p>[2] Tri-net for Semi-Supervised Deep Learning</p>
+<p>[3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition</p>
+
           
         
       
@@ -1187,597 +1901,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/07/network/Ubuntu VPN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/07/network/Ubuntu VPN/" itemprop="url">Ubuntu SSH</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-07T13:54:33+08:00">
-                2018-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Sometimes Ubuntu fails to connect VPN. Open the PPTP advanced options, uncheck EAP and check MPPE.</p>
-<p><img src="https://i.imgur.com/cr0lyNn.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/machine_learning/Knowledge Graph/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/02/machine_learning/Knowledge Graph/" itemprop="url">Knowledge Graph</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-02T11:32:15+08:00">
-                2018-12-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Definition: entities, attributes, and relationships</p>
-<p>Two ways to construct knowledge graph:</p>
-<ol>
-<li><p>probabilistic models (graphical model/random walk)</p>
-</li>
-<li><p>embedding based models</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/machine_learning/Soft Loss/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/30/machine_learning/Soft Loss/" itemprop="url">Soft Loss</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T19:26:13+08:00">
-                2018-11-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$.</p>
-<ol>
-<li><p>weighted softmax loss: $-\sum_{i} w_i \log p_i$</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1611.05916.pdf" target="_blank" rel="noopener">EMD softmax loss</a>: $-\sum_{i} w_i p_i$</p>
-</li>
-<li><p>softmax loss after <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">label flip layer</a>: $-\log{\sum_{i} w_i p_i}$</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">knowledge distillation</a>: $\sum_{i} (p_i-w_i)$</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/deep_learning/Zoom in/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/30/deep_learning/Zoom in/" itemprop="url">Zoom in</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T11:18:06+08:00">
-                2018-11-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Zoom in and crop <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Look_Closer_to_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>Zoom in and deform <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Adria_Recasens_Learning_to_Zoom_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1832,7 +1955,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">128</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

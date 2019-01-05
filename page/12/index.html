@@ -281,6 +281,535 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/tensorflow/TensorFlow GPU Usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/tensorflow/TensorFlow GPU Usage/" itemprop="url">TensorFlow GPU Usage</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
+<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
+<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
+<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
+<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/tensorflow/Slim Learning Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/tensorflow/Slim Learning Note/" itemprop="url">Slim Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>slim = tf.contrib.slim</p>
+<h3 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h3><p>for certain functions, assign default values to certain parameters</p>
+<pre><code>with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....)
+</code></pre><p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib/layers" target="_blank" rel="noopener">https://www.tensorflow.org/api_docs/python/tf/contrib/layers</a></p>
+<ul>
+<li>slim.conv2d </li>
+<li>slim.max_pool2d</li>
+<li>slim.avg_pool2d</li>
+<li>slim.dropout</li>
+<li>slim.batch_norm</li>
+<li>slim.softmax</li>
+<li>tf.repeat(inputs, repetitions, layer, <em>args, *</em>kwargs)</li>
+</ul>
+<p>class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])):<br> net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net)</p>
+<h3 id="Load-pretrained-model"><a href="#Load-pretrained-model" class="headerlink" title="Load pretrained model"></a>Load pretrained model</h3><p>Note that initialization function must be associated with sess.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a>Batch normalization</h3><p><strong>With slim</strong>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">batch_norm_params = &#123;</span><br><span class="line">	    <span class="comment"># Decay for the moving averages.</span></span><br><span class="line">	    <span class="string">'decay'</span>: batch_norm_decay,</span><br><span class="line">	    <span class="comment"># epsilon to prevent 0s in variance.</span></span><br><span class="line">	    <span class="string">'epsilon'</span>: batch_norm_epsilon,</span><br><span class="line">	    <span class="comment"># collection containing update_ops.</span></span><br><span class="line">	    <span class="string">'updates_collections'</span>: tf.GraphKeys.UPDATE_OPS,</span><br><span class="line"> &#125;</span><br><span class="line">slim.arg_scope([slim.conv2d],  normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params)</span><br></pre></td></tr></table></figure></p>
+<p>For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded  moving-mean an moving_variance are used.</p>
+<p>To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways.</p>
+<p>The first method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line">variables_to_train = _get_variables_to_train()</span><br><span class="line">grads_and_vars = optimizer.compute_gradients(total_loss,  variables_to_train)</span><br><span class="line">grad_updates = optimizer.apply_gradients(grads_and_vars)</span><br><span class="line">update_ops.append(grad_updates)</span><br><span class="line">update_op = tf.group(*update_ops)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies([update_op]):</span><br><span class="line">    train_op = tf.identity(total_loss)</span><br></pre></td></tr></table></figure></p>
+<p>The second method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies(update_ops):</span><br><span class="line">	train_op = optimizer.minimize(loss)</span><br></pre></td></tr></table></figure></p>
+<p>The third method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_op = slim.learning.create_train_op(total_loss, optimizer)</span><br></pre></td></tr></table></figure></p>
+<p>Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings.</p>
+<p>However, when trained on small-scale  datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue:</p>
+<ul>
+<li><p>in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch.</p>
+</li>
+<li><p>decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs.</p>
+</li>
+</ul>
+<p><strong>without slim</strong>: tf.nn.batch_normalization, no moving_mean/variance<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">batchnorm</span><span class="params">(bn_input)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> tf.variable_scope(<span class="string">"batchnorm"</span>):</span><br><span class="line">		<span class="comment"># this block looks like it has 3 inputs on the graph unless we do this</span></span><br><span class="line">		bn_input = tf.identity(bn_input)</span><br><span class="line">		</span><br><span class="line">		channels = bn_input.get_shape()[<span class="number">3</span>]</span><br><span class="line">		offset = tf.get_variable(<span class="string">"offset"</span>, [channels], dtype=tf.float32, initializer=tf.zeros_initializer())</span><br><span class="line">		scale = tf.get_variable(<span class="string">"scale"</span>, [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(<span class="number">1.0</span>, <span class="number">0.02</span>))</span><br><span class="line">		mean, variance = tf.nn.moments(bn_input, axes=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], keep_dims=<span class="keyword">False</span>)</span><br><span class="line">		normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=<span class="number">1e-5</span>)</span><br><span class="line">		<span class="keyword">return</span> normalized	</span><br></pre></td></tr></table></figure></p>
+<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><p>print all model variables<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) <span class="comment"># all the global variables</span></span><br><span class="line">slim.get_model_variables() <span class="keyword">or</span> tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) </span><br><span class="line"><span class="comment">#variables defined by slim (tf.contrib.framework.model_variable)</span></span><br><span class="line"><span class="comment">#excluding gradient variables</span></span><br><span class="line">tf.trainable_variables() <span class="comment">#excluding graident variables and batch_norm variables (moving_mean and moving_variance)</span></span><br></pre></td></tr></table></figure></p>
+<p>print regularization losses(weight decay) and other losses<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slim.losses.get_regularization_losses()</span><br><span class="line">slim.losses.get_losses() <span class="comment"># losses except weight decay</span></span><br><span class="line">slim.losses.get_total_loss(add_regularization_losses=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/YOLO Code Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/object_detection/YOLO Code Note/" itemprop="url">YOLO Code Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>note</strong></p>
+<ul>
+<li><p><code>net.batch  = net.batch * net.subdivisions</code> // the input batch number is divided by subdivision.</p>
+</li>
+<li><p>preconfigured file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cfg/voc.data -&gt; list *options</span><br><span class="line">cfg/yolo-voc.cfg -&gt; char *cfgfile</span><br><span class="line">darknet19_448.conv23 -&gt; char* weightfile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>every 10 times, change the input size </p>
+</li>
+<li><p>the maximum number of bounding boxes in one image is hard coded as 30</p>
+</li>
+<li><p>each training image is tweaked by jitter, hue, crop, and etc.</p>
+</li>
+</ul>
+<p><strong>multiple threads</strong></p>
+<ul>
+<li><p>create multiple threads when using multiple GPUs: -gpus 0,1</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ngpus == <span class="number">1</span>)&#123;</span><br><span class="line">    loss = train_network(net, train);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    loss = train_networks(nets, ngpus, train, <span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>use additional thread to load data to save time</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pthread_t</span> load_thread = load_data(args);</span><br><span class="line">pthread_join(load_thread, <span class="number">0</span>); <span class="comment">// wait for the thread to end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>load partial weights</strong><br>// load partial weights up to certain layer<br>parser.c: <code>load_weights_upto(network *net, char *filename, int start, int cutoff)</code></p>
+<p><strong>loading bounding boxes</strong><br>// note that bounding box path is obtained based on image path, e.g., change “images” to “labels”. bounding box format: class_id x y w h. For the detaill, check data.c: fill_truth_detection</p>
+<p><strong>detection/region layer</strong></p>
+<p>all the pred/truth boxes coordinates (x,y,w,h) are scaled to (0,1)</p>
+<ul>
+<li><p>scalar</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">outputs = h * w * n * (coords + 1 + classes); // h=13,w=13,n=5,classes=20, coords=4</span><br><span class="line">// top-down layout: n-&gt;coords(x,y,w,h)+ obj_score + class_probs&gt;h&gt;w</span><br><span class="line">truths = 30 * (coords + 1); // 30 is the max number of ground-truth boxes, which is hard coded</span><br><span class="line">//top-down layout: 30-&gt;coords(x,y,w,h)+class_id</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>the size of vectors</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">output: batch*outputs</span><br><span class="line">truth: batch*truths</span><br><span class="line">delta: the same as output</span><br><span class="line">biases: 2*#anchor scales</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>detection idea</strong></p>
+<ul>
+<li><p>Each feature map pixel is associated with 10 anchor scales, the detection bounding box can be obtained based on the feature map pixel location and anchor scale, followed by being corrected by bounding box regression as follows. Assume output is ($\Delta i, \Delta j, \Delta w, \Delta h$), then the corrected prediction box is<br><script type="math/tex">x'=(i+\Delta i)/w, y'=(j+\Delta j)/h, w'=\exp(\Delta w)*aw/w, h'=\exp(\Delta h) * ah/h</script>.</p>
+</li>
+<li><p>For each feature map pixel and each anchor scale, calculate its overlap with any ground-truth bounding boxes to get its object score, then update gradients w.r.t. obj_score.</p>
+</li>
+<li><p>For each ground-truth bounding box, find the corresponding feature map pixel with the most fittable anchor scale, then update gradients w.r.t. box regression and class probabilities.</p>
+</li>
+</ul>
+<p><strong>update gradient</strong></p>
+<p>most of the loss terms are square loss, which can be easily computed</p>
+<ul>
+<li><p>obj_score: if best_iou&gt;thresh, set as 0, otherwise</p>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l.delta[obj_index] = l.noobject_scale * (<span class="number">0</span> - l.output[obj_index]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>box regression<br>// add higher weights on small regions</p>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delta_region_box(box truth, <span class="keyword">float</span> *x, <span class="keyword">float</span> *biases, <span class="keyword">int</span> n, <span class="keyword">int</span> index, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> w, <span class="keyword">int</span> h, <span class="keyword">float</span> *delta, <span class="keyword">float</span> scale, <span class="keyword">int</span> stride)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>class probabilities</p>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delta_region_class(l.output, l.delta, class_index, class, l.classes, l.softmax_tree, l.class_scale, l.w*l.h, &amp;avg_cat);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p><strong>experimental observation</strong></p>
+<ul>
+<li><p>reducing the number of layers may improve the performance due to the enlarged feature map.</p>
+</li>
+<li><p>increasing the number of anchors does not help (5 or 10 is adequate enough).</p>
+</li>
+<li><p>the dynamic version (dynamically shrink or expand the network scale) is better than the static version</p>
+</li>
+<li><p>the default hyper parameters are pretty good. No significant improvement is obtained by tuning hyper parameters.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/Object Detection Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1437,542 +1966,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/GAN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/GAN/" itemprop="url">GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>The GAN zoo: <a href="https://github.com/hindupuravinash/the-gan-zoo" target="_blank" rel="noopener">https://github.com/hindupuravinash/the-gan-zoo</a></p>
-<h3 id="problems"><a href="#problems" class="headerlink" title="problems:"></a>problems:</h3><ul>
-<li><p>oscillation: can train for a very long time without clearly generating better samples.</p>
-</li>
-<li><p>mode collapse: min-max is not equal to max-min</p>
-</li>
-</ul>
-<h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h3><p>17 tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
-<ul>
-<li><p>soft label: replace 1 with 0.9 and 0 with 0.3</p>
-</li>
-<li><p>train discriminator more times (e.g., 2X) than generator</p>
-</li>
-<li><p>use labels: auxiliary tasks</p>
-</li>
-<li><p>normalize inputs to [-1, 1]</p>
-</li>
-<li><p>use tanh before output</p>
-</li>
-<li><p>use batchnorm (not for the first and last layer)</p>
-</li>
-<li><p>use spherical distribution instead of uniform distribution</p>
-</li>
-<li><p>leaky relu</p>
-</li>
-<li><p>stability tricks from RL</p>
-</li>
-</ul>
-<p>Tricks from the <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">BigGAN</a> </p>
-<ul>
-<li><p>class-conditional BatchNorm</p>
-</li>
-<li><p>Spectral norm</p>
-</li>
-<li><p>orthogonal initialization</p>
-</li>
-<li><p>truncated prior (truncation trick to seek the trade-off between fidelity and variety)</p>
-</li>
-<li><p>enforce orthogonality on weights to improve the model smoothness</p>
-</li>
-</ul>
-<h3 id="Variants"><a href="#Variants" class="headerlink" title="Variants:"></a>Variants:</h3><ul>
-<li><p>EBGAN: replace discriminator with autoencoder</p>
-</li>
-<li><p>LSGAN: replace cross-entropy loss with least square loss</p>
-</li>
-<li><p>Wasserstein GAN: replace discriminator with a critic function</p>
-</li>
-<li><p>LAPGAN: coarse-to-fine using laplacian pyramid</p>
-</li>
-<li><p>seqGAN: generate discrete sequences</p>
-</li>
-</ul>
-<h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
-<p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">this paper</a>.</p>
-<h3 id="Materials"><a href="#Materials" class="headerlink" title="Materials:"></a>Materials:</h3><p>A good tutorial: <a href="https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf" target="_blank" rel="noopener">https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Face Verification and Recognition/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Face Verification and Recognition/" itemprop="url">Face Verification and Recognition</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Framework"><a href="#Framework" class="headerlink" title="Framework:"></a>Framework:</h3><p>The similarity between two faces Ia and Ib can be unified in the following formulation:</p>
-<p><strong>M[W(F(S(Ia))), W(F(S(Ib)))]</strong></p>
-<p>in which <strong>S</strong> is synthesis operation (<em>e.g.</em>, face alignment, frontalization), <strong>F</strong> is robust feature extraction, <strong>W</strong> is transformation subspace learning, <strong>M</strong> means face matching algorithm (<em>e.g.</em>, NN, SVM, metric learning).</p>
-<h3 id="Paper"><a href="#Paper" class="headerlink" title="Paper:"></a>Paper:</h3><p>DeepID 1,2,3: Deep learning face representation from predicting 10,000 classes</p>
-<p>FaceNet: A Unified Embedding for Face Recognition and Clustering<br>code: <a href="https://cmusatyalab.github.io/openface/" target="_blank" rel="noopener">https://cmusatyalab.github.io/openface/</a> (triplet loss)</p>
-<p>DeepFace: Closing the Gap to Human-Level Performance in Face Verification (3D face alignment)</p>
-<p>A Discriminative Feature Learning Approach for Deep Face Recognition<br>code: <a href="https://github.com/ydwen/caffe-face" target="_blank" rel="noopener">https://github.com/ydwen/caffe-face</a></p>
-<p>Unconstrained Face Verification using Deep CNN Features (Joint Bayesian Metric Learning)<br>code: <a href="https://github.com/happynear/FaceVerification" target="_blank" rel="noopener">https://github.com/happynear/FaceVerification</a></p>
-<p>A Light CNN for Deep Face Representation with Noisy Label<br>code: <a href="https://github.com/AlfredXiangWu/face_verification_experiment" target="_blank" rel="noopener">https://github.com/AlfredXiangWu/face_verification_experiment</a></p>
-<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset:"></a>Dataset:</h3><p>LFW: <a href="http://vis-www.cs.umass.edu/lfw/" target="_blank" rel="noopener">http://vis-www.cs.umass.edu/lfw/</a></p>
-<p>IJB-A: (free upon request) <a href="https://www.nist.gov/itl/iad/image-group/ijba-dataset-request-form" target="_blank" rel="noopener">https://www.nist.gov/itl/iad/image-group/ijba-dataset-request-form</a></p>
-<p>FERET: (free upon request) <a href="https://www.nist.gov/itl/iad/image-group/color-feret-database" target="_blank" rel="noopener">https://www.nist.gov/itl/iad/image-group/color-feret-database</a></p>
-<p>CMU Multi-Pie: (not free) <a href="http://www.cs.cmu.edu/afs/cs/project/PIE/MultiPie/Multi-Pie/Home.html" target="_blank" rel="noopener">http://www.cs.cmu.edu/afs/cs/project/PIE/MultiPie/Multi-Pie/Home.html</a></p>
-<p>CASIA WebFace Database: (free upon request) <a href="http://www.cbsr.ia.ac.cn/english/CASIA-WebFace-Database.html" target="_blank" rel="noopener">http://www.cbsr.ia.ac.cn/english/CASIA-WebFace-Database.html</a></p>
-<p>MS-Celeb-1M: <a href="https://www.microsoft.com/en-us/research/project/ms-celeb-1m-challenge-recognizing-one-million-celebrities-real-world/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/project/ms-celeb-1m-challenge-recognizing-one-million-celebrities-real-world/</a></p>
-<p>MegaFace: (free upon request) <a href="http://megaface.cs.washington.edu/dataset/download_training.html" target="_blank" rel="noopener">http://megaface.cs.washington.edu/dataset/download_training.html</a></p>
-<p>Cross-Age Celebrity Dataset: <a href="http://bcsiriuschen.github.io/CARC/" target="_blank" rel="noopener">http://bcsiriuschen.github.io/CARC/</a></p>
-<p>VGG face: <a href="http://www.robots.ox.ac.uk/~vgg/data/vgg_face/" target="_blank" rel="noopener">http://www.robots.ox.ac.uk/~vgg/data/vgg_face/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Energy Efficient Deep Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Energy Efficient Deep Learning/" itemprop="url">Energy Efficient Deep Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Light-weighted network structure</p>
-<ul>
-<li><a href="https://arxiv.org/abs/1610.02357" target="_blank" rel="noopener">Xception</a>: strictly speaking, not light-weighted CNN</li>
-<li><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></li>
-<li><a href="https://arxiv.org/abs/1704.04861" target="_blank" rel="noopener">MobileNet</a></li>
-<li><a href="https://arxiv.org/abs/1707.01083" target="_blank" rel="noopener">ShuffleNet</a></li>
-</ul>
-<p>SqueezeNet, MobileNet, and ShuffleNet share the same idea: decouple the temporal convolution and spatial convolution to reduce the nummber of parameters, sharing the similar spirit with <a href="https://arxiv.org/pdf/1711.10305.pdf" target="_blank" rel="noopener">Pseudo-3D Residual Networks</a>. SqueezeNet is serial while MobileNet and ShuffleNet are parrallel. MobileNet is a special case of ShuffleNet when using only one group.</p>
-<p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Zhang_Efficient_and_Accurate_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Low-rank approximation</a> ($k\times k \times c\times d = k\times k\times c\times d’ + 1\times 1\times d’\times d$) also falls into the above scope. The difference between MobileNet and Low-rank approximation is layerwise convolution or not.</p>
-</li>
-<li><p>Tweak network structure</p>
-<ul>
-<li>prune nodes based on certain criteria (e.g., <a href="https://arxiv.org/pdf/1510.00149.pdf" target="_blank" rel="noopener">response value</a>, <a href="https://arxiv.org/pdf/1801.05787.pdf" target="_blank" rel="noopener">Fisher information</a>): require special implementation and take up more space than expected due to irregular network structure.</li>
-</ul>
-</li>
-<li><p>Compress weights</p>
-<ul>
-<li>Quantization (fixed bit number): learn codebook and encode weights. Fine-tune codebook after quantizatizing weights, which averages the gradient of weights belonging to the same cluster. Extreme cases are <a href="https://arxiv.org/pdf/1510.03009.pdf" target="_blank" rel="noopener">binary net</a> and <a href="https://arxiv.org/pdf/1612.01064.pdf" target="_blank" rel="noopener">ternary net</a>. Binary (resp, ternary) net are quantized to [-1, 1] (resp, [-1, 0, 1]), with different weights $\alpha$ for different layers.</li>
-<li>Huffman Coding (flexible bit number): applied after quantization for further compression.</li>
-</ul>
-</li>
-<li><p>Computation</p>
-<ul>
-<li>spatial domain to frequency domain: convert convolution to pointwise multiplication by using FFT</li>
-</ul>
-</li>
-<li><p>Sparsity regularization</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/1712.01312.pdf" target="_blank" rel="noopener">L0 norm</a></li>
-</ul>
-</li>
-<li><p>Efficient Inference</p>
-<ul>
-<li>cascade of networks, early exit network (predict whether to exit or not after each layer) <a href="https://arxiv.org/pdf/1702.07811.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://papers.nips.cc/paper/7058-adaptive-classification-for-prediction-under-a-budget.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-</li>
-</ol>
-<p>Good introduction slides: <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf" target="_blank" rel="noopener">http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2027,7 +2020,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">128</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
