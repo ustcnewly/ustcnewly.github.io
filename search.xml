@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Normalization]]></title>
+    <url>%2F2019%2F01%2F06%2Fmachine_learning%2FNormalization%2F</url>
+    <content type="text"><![CDATA[Normalize weights: weight normalization [1]: $\mathbf{w}=\frac{g}{|\mathbf{v}|} \mathbf{v}$, weight normalization can be viewed as a cheaper and less noisy approximation to batch normalization Normalize outputs: batch normalization [2]: make the input and output have the same variance layer normalization [3] instance normalization [4] group normalization [5] N as the batch axis, C as the channel axis, and (H, W)as the spatial axes [1] Salimans T, Kingma D P. Weight normalization: A simple reparameterization to accelerate training of deep neural networks[C]//Advances in Neural Information Processing Systems. 2016: 901-909. [2] Ioffe S, Szegedy C. Batch normalization: Accelerating deep network training by reducing internal covariate shift[J]. arXiv preprint arXiv:1502.03167, 2015. [3] Ba J L, Kiros J R, Hinton G E. Layer normalization[J]. arXiv preprint arXiv:1607.06450, 2016. [4] D. Ulyanov, A. Vedaldi, and V. Lempitsky. Instance normalization: The missing ingredient for fast stylization. arXiv:1607.08022, 2016. [5] Wu Y, He K. Group normalization[J]. arXiv preprint arXiv:1803.08494, 2018.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Capsule Network]]></title>
+    <url>%2F2019%2F01%2F06%2Fdeep_learning%2FCapsule%20Network%2F</url>
+    <content type="text"><![CDATA[CapsNet [1] CapProNet [2] [code] [1] Sabour S, Frosst N, Hinton G E. Dynamic routing between capsules[C]//Advances in Neural Information Processing Systems. 2017: 3856-3866. [2] Zhang L, Edraki M, Qi G J. CapProNet: Deep feature learning via orthogonal projections onto capsule subspaces[J]. arXiv preprint arXiv:1805.07621, 2018.]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Fair comparison]]></title>
     <url>%2F2019%2F01%2F05%2Fothers%2FFair%20Comparison%2F</url>
     <content type="text"><![CDATA[Carefully compare your experiments settings with those described in previous papers. The experimental settings include training/testing split, input format (e.g., image size), evaluation metric, backbone network, etc. If they are not exactly the same, you need to re-run their methods with exactly the same experimental settings as yours for fair comparison. For example, if the baseline uses 32x32 image size while you use 244x244 image size, that is unfair comparison. If the baseline uses AlexNet as backbone while you use ResNet as backbone, that is unfair comparison. The baseline methods may use more or less information, compared with your method. Based on using more/less information and their performance is better/worse than yours, we could have the following table. If the baseline uses more information but achieves worse results, never mind. Just brag your own method. If the baseline uses less information but achieves better results, it is a serious problem. You have to check your method. If the baseline uses less information and achieves worse results, that is reasonable. But you may be accused of unfair comparison because your method uses more information. For safety, please augment the baseline with extra information and compare again. If the baseline uses more information and achieves better results, that is reasonable. But do not casually put them in the paper because dumb reviewers may ignore these details and point out your method is not good enough. That is very risky! Please remove the extra information from the baseline and compare again.]]></content>
@@ -515,7 +537,7 @@
   <entry>
     <title><![CDATA[MarkdownPad]]></title>
     <url>%2F2018%2F09%2F07%2Fsoftware%2FMarkdownPad%2F</url>
-    <content type="text"><![CDATA[Problem: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControlsolution: Win+R to open regedit: change the following value from 1 to 0 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled Problem: How to suppport Latex: MathJax?solution: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following: 123&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt; After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are: x = {-b \pm \sqrt{b^2-4ac} \over 2a} Tips: resize image: &lt;img src=&quot;http://....jpg&quot; width=&quot;200&quot; height50% &gt;]]></content>
+    <content type="text"><![CDATA[Problem: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControlsolution: Win+R to open regedit: change the following value from 1 to 0 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled Problem: How to suppport Latex: MathJax?solution: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following: 123&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt; After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are: x = {-b \pm \sqrt{b^2-4ac} \over 2a} Tips: resize image: &lt;img src=&quot;http://....jpg&quot; width=50% &gt;]]></content>
       <categories>
         <category>software</category>
       </categories>
