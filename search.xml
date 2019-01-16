@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Subjective Annotation]]></title>
+    <url>%2F2019%2F01%2F16%2Fmachine_learning%2FSubjective%20Annotation%2F</url>
+    <content type="text"><![CDATA[As mentioned in [1] One major concern of subjective annotation is that the annotations provided by different workers for each image may not be reliable, which calls for consistency analysis on the annotations. We use Spearman’s rank correlation ρ between pairs of workers to measure consistency and estimate p-values to evaluate statistical significance of the correlation relative to a null hypothesis of uncorrelated responses. We use the Benjamini-Hochbergprocedure to control the false discovery rate (FDR) for multiple comparisons [2]. At an FDR level of 0.05, we find 98.45% batches have significant agreement among raters. Further consistency analysis of the dataset can be found in the supplementary material of [1]. [1] Kong, Shu, et al. “Photo aesthetics ranking network with attributes and content adaptation.” European Conference on Computer Vision. Springer, Cham, 2016. [2] Benjamini, Yoav, and Daniel Yekutieli. “The control of the false discovery rate in multiple testing under dependency.” Annals of statistics (2001): 1165-1188.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Video Object Segmentation]]></title>
+    <url>%2F2019%2F01%2F16%2Fdeep_learning%2FVideo%20Object%20Segmentation%2F</url>
+    <content type="text"><![CDATA[Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. Davis challenge https://davischallenge.org/ held since 2017, related papers [1][2] Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016. Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>segmentation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PyTorch Learning Note]]></title>
+    <url>%2F2019%2F01%2F07%2Fdeep_learning%2FPyTorch%20Learning%20Note%2F</url>
+    <content type="text"><![CDATA[Using multiple GPUsdevice = torch.device(“cuda:gpu_id1”) model = nn.DataParallel(model, [gpu_id1, gpu_id2, …])model.to(device) input = input.to(device) Note that gpu_id1 must be the first gpu in the gpu_list in model.DataParallel(arg1, gpu_list)]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Normalization]]></title>
     <url>%2F2019%2F01%2F06%2Fmachine_learning%2FNormalization%2F</url>
     <content type="text"><![CDATA[Normalize weights: weight normalization [1]: $\mathbf{w}=\frac{g}{|\mathbf{v}|} \mathbf{v}$, weight normalization can be viewed as a cheaper and less noisy approximation to batch normalization Normalize outputs: batch normalization [2]: make the input and output have the same variance layer normalization [3] instance normalization [4] group normalization [5] N as the batch axis, C as the channel axis, and (H, W)as the spatial axes [1] Salimans T, Kingma D P. Weight normalization: A simple reparameterization to accelerate training of deep neural networks[C]//Advances in Neural Information Processing Systems. 2016: 901-909. [2] Ioffe S, Szegedy C. Batch normalization: Accelerating deep network training by reducing internal covariate shift[J]. arXiv preprint arXiv:1502.03167, 2015. [3] Ba J L, Kiros J R, Hinton G E. Layer normalization[J]. arXiv preprint arXiv:1607.06450, 2016. [4] D. Ulyanov, A. Vedaldi, and V. Lempitsky. Instance normalization: The missing ingredient for fast stylization. arXiv:1607.08022, 2016. [5] Wu Y, He K. Group normalization[J]. arXiv preprint arXiv:1803.08494, 2018.]]></content>
@@ -322,8 +354,8 @@
   </entry>
   <entry>
     <title><![CDATA[Causal Inference]]></title>
-    <url>%2F2018%2F10%2F15%2Fmachine_learning%2FCausal%20Inference%2F</url>
-    <content type="text"><![CDATA[Judy Pearl: [Tutorial] [slides] [textbook] James Robin: [Textbook] [slides]]]></content>
+    <url>%2F2018%2F10%2F15%2Fmachine_learning%2FCausality%2F</url>
+    <content type="text"><![CDATA[Big names: Judy Pearl: [Tutorial] [slides] [textbook] James Robin: [Textbook] [slides] Materials: NIPS workshop on causal learning Papers: [1] Chalupka K, Perona P, Eberhardt F. Visual causal feature learning. arXiv preprint arXiv:1412.2309, 2014. [2] Lopez-Paz D, Nishihara R, Chintala S, et al. Discovering causal signals in images. CVPR, 2017. [3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks. arXiv preprint arXiv:1811.10597, 2018.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -548,7 +580,7 @@
   <entry>
     <title><![CDATA[LaTeX]]></title>
     <url>%2F2018%2F09%2F07%2Fsoftware%2FLaTeX%2F</url>
-    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Tips: Set the indentation in paragraphs: \setlength\parindent{0pt} set the separation between paragraphs: \setlength{\parskip}{10pt} set color: \usepackage{xcolor} and \textcolor{red}{} expectation symbol: \usepackage{amsfonts} and \mathbb{E} cannot infer: \usepackage{amssymb} and \nRightarrow]]></content>
+    <content type="text"><![CDATA[Installation: Ubuntu 12sudo apt-get install texlive-full sudo apt-get install texmaker Windows Install Miktex: https://miktex.org/download Install texmaker or texstudio Tips: Refer to this for commonly used symbols Set the indentation in paragraphs: \setlength\parindent{0pt} set the separation between paragraphs: \setlength{\parskip}{10pt} set color: \usepackage{xcolor} and \textcolor{red}{} expectation symbol: \usepackage{amsfonts} and \mathbb{E} cannot infer: \usepackage{amssymb} and \nRightarrow]]></content>
       <categories>
         <category>software</category>
       </categories>
@@ -1278,9 +1310,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Multi-scale Problem for Object Detection]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FMulti-scale%20Problem%20for%20Object%20Detection%2F</url>
-    <content type="text"><![CDATA[This problem is well discussed in https://arxiv.org/pdf/1506.01497.pdf. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map. (a) The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. (b) The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. (c) As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales.]]></content>
+    <title><![CDATA[Scale Variation for Object Detection]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FScale%20Variation%20for%20Object%20Detection%2F</url>
+    <content type="text"><![CDATA[This problem is well discussed in https://arxiv.org/pdf/1506.01497.pdf. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map. (a) The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. (b) The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. (c) As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales. (d) use different dilation rates to vary receptive fields]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
