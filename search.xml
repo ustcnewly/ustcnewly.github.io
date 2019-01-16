@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Gradient-based Works]]></title>
+    <url>%2F2019%2F01%2F16%2Fdeep_learning%2FGradient-based%20Works%2F</url>
+    <content type="text"><![CDATA[Gradient harmonization: [1] [1] Gradient Harmonized Single-stage Detector, AAAI, 2019]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Subjective Annotation]]></title>
     <url>%2F2019%2F01%2F16%2Fmachine_learning%2FSubjective%20Annotation%2F</url>
     <content type="text"><![CDATA[As mentioned in [1] One major concern of subjective annotation is that the annotations provided by different workers for each image may not be reliable, which calls for consistency analysis on the annotations. We use Spearman’s rank correlation ρ between pairs of workers to measure consistency and estimate p-values to evaluate statistical significance of the correlation relative to a null hypothesis of uncorrelated responses. We use the Benjamini-Hochbergprocedure to control the false discovery rate (FDR) for multiple comparisons [2]. At an FDR level of 0.05, we find 98.45% batches have significant agreement among raters. Further consistency analysis of the dataset can be found in the supplementary material of [1]. [1] Kong, Shu, et al. “Photo aesthetics ranking network with attributes and content adaptation.” European Conference on Computer Vision. Springer, Cham, 2016. [2] Benjamini, Yoav, and Daniel Yekutieli. “The control of the false discovery rate in multiple testing under dependency.” Annals of statistics (2001): 1165-1188.]]></content>
