@@ -281,6 +281,308 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/BIOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/BIOS/" itemprop="url">BIOS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>If something is wrong when attempting to enter the BIOS, try the following approaches:</p>
+<ul>
+<li>press F2, F12, ESC, DEL</li>
+<li>change the cable, adaptor, interface, etc (hardware reason)</li>
+<li>update BIOS to the latest version</li>
+<li>for Windows10, settings-&gt;recover-&gt;firmware</li>
+<li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu VNC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/Ubuntu VNC/" itemprop="url">Ubuntu VNC</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Server"><a href="#Server" class="headerlink" title="Server:"></a>Server:</h3><ol>
+<li><p>Install VNC server under Ubuntu: $sudo apt-get install vnc4server</p>
+</li>
+<li><p>Configure the VNC server, $vi ~/.vnc/xstartup<br>change the style to gnome-session &amp; in the last line.</p>
+</li>
+<li><p>start the VNC server: $vncserver</p>
+</li>
+</ol>
+<h3 id="Client"><a href="#Client" class="headerlink" title="Client:"></a>Client:</h3><ol>
+<li>Install VNC client under Windows: use http:\IP:580$ID to log in.</li>
+</ol>
+<p><strong>Tips:</strong> For 10060 error, run <code>$iptables -F</code> to close firewall.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu SSH/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1641,363 +1943,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/YOLO Code Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/object_detection/YOLO Code Note/" itemprop="url">YOLO Code Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>note</strong></p>
-<ul>
-<li><p><code>net.batch  = net.batch * net.subdivisions</code> // the input batch number is divided by subdivision.</p>
-</li>
-<li><p>preconfigured file</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cfg/voc.data -&gt; list *options</span><br><span class="line">cfg/yolo-voc.cfg -&gt; char *cfgfile</span><br><span class="line">darknet19_448.conv23 -&gt; char* weightfile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>every 10 times, change the input size </p>
-</li>
-<li><p>the maximum number of bounding boxes in one image is hard coded as 30</p>
-</li>
-<li><p>each training image is tweaked by jitter, hue, crop, and etc.</p>
-</li>
-</ul>
-<p><strong>multiple threads</strong></p>
-<ul>
-<li><p>create multiple threads when using multiple GPUs: -gpus 0,1</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ngpus == <span class="number">1</span>)&#123;</span><br><span class="line">    loss = train_network(net, train);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    loss = train_networks(nets, ngpus, train, <span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>use additional thread to load data to save time</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pthread_t</span> load_thread = load_data(args);</span><br><span class="line">pthread_join(load_thread, <span class="number">0</span>); <span class="comment">// wait for the thread to end</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>load partial weights</strong><br>// load partial weights up to certain layer<br>parser.c: <code>load_weights_upto(network *net, char *filename, int start, int cutoff)</code></p>
-<p><strong>loading bounding boxes</strong><br>// note that bounding box path is obtained based on image path, e.g., change “images” to “labels”. bounding box format: class_id x y w h. For the detaill, check data.c: fill_truth_detection</p>
-<p><strong>detection/region layer</strong></p>
-<p>all the pred/truth boxes coordinates (x,y,w,h) are scaled to (0,1)</p>
-<ul>
-<li><p>scalar</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">outputs = h * w * n * (coords + 1 + classes); // h=13,w=13,n=5,classes=20, coords=4</span><br><span class="line">// top-down layout: n-&gt;coords(x,y,w,h)+ obj_score + class_probs&gt;h&gt;w</span><br><span class="line">truths = 30 * (coords + 1); // 30 is the max number of ground-truth boxes, which is hard coded</span><br><span class="line">//top-down layout: 30-&gt;coords(x,y,w,h)+class_id</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>the size of vectors</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">output: batch*outputs</span><br><span class="line">truth: batch*truths</span><br><span class="line">delta: the same as output</span><br><span class="line">biases: 2*#anchor scales</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>detection idea</strong></p>
-<ul>
-<li><p>Each feature map pixel is associated with 10 anchor scales, the detection bounding box can be obtained based on the feature map pixel location and anchor scale, followed by being corrected by bounding box regression as follows. Assume output is ($\Delta i, \Delta j, \Delta w, \Delta h$), then the corrected prediction box is<br><script type="math/tex">x'=(i+\Delta i)/w, y'=(j+\Delta j)/h, w'=\exp(\Delta w)*aw/w, h'=\exp(\Delta h) * ah/h</script>.</p>
-</li>
-<li><p>For each feature map pixel and each anchor scale, calculate its overlap with any ground-truth bounding boxes to get its object score, then update gradients w.r.t. obj_score.</p>
-</li>
-<li><p>For each ground-truth bounding box, find the corresponding feature map pixel with the most fittable anchor scale, then update gradients w.r.t. box regression and class probabilities.</p>
-</li>
-</ul>
-<p><strong>update gradient</strong></p>
-<p>most of the loss terms are square loss, which can be easily computed</p>
-<ul>
-<li><p>obj_score: if best_iou&gt;thresh, set as 0, otherwise</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l.delta[obj_index] = l.noobject_scale * (<span class="number">0</span> - l.output[obj_index]);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>box regression<br>// add higher weights on small regions</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delta_region_box(box truth, <span class="keyword">float</span> *x, <span class="keyword">float</span> *biases, <span class="keyword">int</span> n, <span class="keyword">int</span> index, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> w, <span class="keyword">int</span> h, <span class="keyword">float</span> *delta, <span class="keyword">float</span> scale, <span class="keyword">int</span> stride)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>class probabilities</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delta_region_class(l.output, l.delta, class_index, class, l.classes, l.softmax_tree, l.class_scale, l.w*l.h, &amp;avg_cat);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>experimental observation</strong></p>
-<ul>
-<li><p>reducing the number of layers may improve the performance due to the enlarged feature map.</p>
-</li>
-<li><p>increasing the number of anchors does not help (5 or 10 is adequate enough).</p>
-</li>
-<li><p>the dynamic version (dynamically shrink or expand the network scale) is better than the static version</p>
-</li>
-<li><p>the default hyper parameters are pretty good. No significant improvement is obtained by tuning hyper parameters.</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/Object Detection Loss/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/object_detection/Object Detection Loss/" itemprop="url">Object Detection Loss</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Fast-RCNN"><a href="#Fast-RCNN" class="headerlink" title="Fast RCNN"></a>Fast RCNN</h3><script type="math/tex; mode=display">L(p,u,t^u,v)  L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v),</script><p>   where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is  a smooth L1 loss.</p>
-<h3 id="Faster-RCNN"><a href="#Faster-RCNN" class="headerlink" title="Faster RCNN"></a>Faster RCNN</h3><script type="math/tex; mode=display">L(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*),</script><p> where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen)  and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN.</p>
-<p> fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes.</p>
-<h3 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h3><p> By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box.</p>
-<script type="math/tex; mode=display">l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g),</script><p> where $L_{conf}$ is a (K+1)-class softmax loss, and </p>
-<script type="math/tex; mode=display">L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.</script><h3 id="YOLO"><a href="#YOLO" class="headerlink" title="YOLO"></a>YOLO</h3><script type="math/tex; mode=display">\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2  + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2</script><p>Note that for the noobj anchorboxes, there is only one loss term involved. </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2052,7 +1997,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">134</span>
+                  <span class="site-state-item-count">136</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

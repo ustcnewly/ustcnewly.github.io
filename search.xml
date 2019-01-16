@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vote Aggregation]]></title>
+    <url>%2F2019%2F01%2F16%2Fmachine_learning%2FLabel%20Vector%20Interpolation%2F</url>
+    <content type="text"><![CDATA[label smoothing: [1] interpolating ground-truth label and uniform label bootstrapping: [2] interpolate noisy label and label from previous iteration noisy data+clean data: [3] interpolate noisy label and distilled label [1] Szegedy, Christian, et al. “Rethinking the inception architecture for computer vision.” CVPR, 2016. [2] Reed, Scott, et al. “Training deep neural networks on noisy labels with bootstrapping.” arXiv preprint arXiv:1412.6596 (2014). [3] Li, Yuncheng, et al. “Learning from noisy labels with distillation.” ICCV, 2017.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Distillation]]></title>
+    <url>%2F2019%2F01%2F16%2Fmachine_learning%2FDistillation%2F</url>
+    <content type="text"><![CDATA[knowledge/model distillation [1] data distillation [2] [1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015). [2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Gradient-based Works]]></title>
     <url>%2F2019%2F01%2F16%2Fdeep_learning%2FGradient-based%20Works%2F</url>
     <content type="text"><![CDATA[Gradient harmonization: [1] [1] Gradient Harmonized Single-stage Detector, AAAI, 2019]]></content>
@@ -273,7 +289,7 @@
   <entry>
     <title><![CDATA[Webly Supervised Learning]]></title>
     <url>%2F2018%2F11%2F07%2Fdeep_learning%2FWebly%20Supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[Two problems: Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web data and consumer data. Solutions: label flip layer: [1] [2] [3] multi-instance learning: [1](group attention) [2] [3] reweight training samples: [1] curriculumn learning: [1] [2] Use clean data: active learning (select training samples to annotate): [1] reinforcement learning (learn labeling policies): [1] analogous to semi-supervised learning partial data with both noisy labels and clean labels as well as partial data with only noisy labels [1] [2] [3] partial data with noisy labels and partial data with clean labels [1] Datasets: large-scale web datasets: webvision fine-grained web datasets: clothing dataset, car dataset synthetic noisy datasets via label flipping: CIFAR-10/100]]></content>
+    <content type="text"><![CDATA[Two problems: Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web data and consumer data. Solutions: label flip layer: [1] [2] [3] multi-instance learning: [1](group attention) [2] [3] reweight training samples: [1] [2] curriculumn learning: [1] [2] bootstrapping: [1] Use clean data: active learning (select training samples to annotate): [1] reinforcement learning (learn labeling policies): [1] analogous to semi-supervised learning partial data with both noisy labels and clean labels as well as partial data with only noisy labels [1] [2] [3] partial data with noisy labels and partial data with clean labels [1] [2] Datasets: large-scale web datasets: webvision fine-grained web datasets: clothing dataset, car dataset synthetic noisy datasets via label flipping: CIFAR-10/100]]></content>
       <categories>
         <category>paper note</category>
       </categories>
