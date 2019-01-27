@@ -281,6 +281,364 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/VirtualBox/Enlarge VirtualBox vdi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/software/VirtualBox/Enlarge VirtualBox vdi/" itemprop="url">Enlarge VirtualBox vdi</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Go to virtualbox installation directory and execute the following command:</p>
+<p>  <code>D:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyhd &quot;F:\VirtualBox\my ubuntu.vdi&quot; --resize 15360</code></p>
+<p> Note 15360 is the new size (M), this command can only enlarge the size.</p>
+</li>
+<li><p>Install gparted by <code>sudo apt-get install gparted</code> and make the extended disk space available to use.</p>
+</li>
+<li><p>Remount <code>/home</code> to the new disk. For concrete steps, refer to this <a href="https://help.ubuntu.com/community/Partitioning/Home/Moving" target="_blank" rel="noopener">link</a>. </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/version_control/Git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/software/version_control/Git/" itemprop="url">Git</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/version-control/" itemprop="url" rel="index">
+                    <span itemprop="name">version control</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://i.imgur.com/t0IXoZq.jpg" width="50%" height="50%"></p>
+<ol>
+<li><p><strong>Initialize center and local repository</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>init from scratch</span><br><span class="line">git init &lt;local_dir&gt;</span><br><span class="line"><span class="meta">#</span>for central repository without working directory, use --bare</span><br><span class="line">git init --bare &lt;local_dir&gt;</span><br><span class="line"><span class="meta">#</span>clone from GitHub, can just clone a subdirectory XXX/XXX</span><br><span class="line">git clone &lt;remote_repo&gt; &lt;remote_dir&gt;</span><br><span class="line"><span class="meta">#</span>pull from other local repository</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Configuration</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name $name</span><br><span class="line">git config --global user.email $email</span><br><span class="line">git config --global alias.$alias-name $git-command</span><br><span class="line">git config --system core.editor $editor # e.g., vim</span><br><span class="line">git config --global --edit</span><br></pre></td></tr></table></figure>
+<p><code>.git/config</code>  Repository-specific settings.<br><code>~/.gitconfig</code>  User-specific settings. This is where options set with the —global flag are stored.<br><code>/etc/gitconfig</code> System-wide settings.</p>
+</li>
+<li><p><strong>Staged snapshot in the staging area</strong><br>operations on tracked files:</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br><span class="line">git add &lt;dir&gt;</span><br><span class="line">git add . #add all the files in the current directory</span><br><span class="line">git add * #add  all the files and folders in the current directory</span><br><span class="line"><span class="meta">#</span>reversion for add</span><br><span class="line">git reset &lt;file&gt; #lead to untracked &lt;file&gt;</span><br><span class="line">rm &lt;file&gt; #del &lt;file&gt;</span><br><span class="line"></span><br><span class="line">git rm &lt;file&gt; #remove from both staging area and working directory  	</span><br><span class="line"><span class="meta">#</span>reversion for rm</span><br><span class="line">git reset HEAD &lt;file&gt; #lead to unstaged rm &lt;file&gt;</span><br><span class="line">git checkout &lt;file&gt; #recover &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>mv = rm+add, so its reversion is the combination of those for add and rm</span><br><span class="line">git mv &lt;old name&gt; &lt;new name&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>clear the entire staging area</span><br><span class="line">git reset HEAD</span><br></pre></td></tr></table></figure>
+<p>before using <code>git add .</code> or <code>git add *</code>, we can exclude the untracked files in <code>.gitignore</code> (e.g., <code>*.&lt;ext&gt;</code>, <code>&lt;dir&gt;/</code>, use <code>!&lt;file&gt;</code> for exception).<br>to untrack added files, use <code>git rm --cached &lt;filename&gt;</code></p>
+</li>
+<li><p><strong>Commit the staged snapshot</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "&lt;message&gt;"  #new commit node</span><br><span class="line">git commit --amend #old commit node</span><br><span class="line"><span class="meta">#</span>`-a` means staging all the modifications of tracked files</span><br><span class="line">git commit -a -m "&lt;message&gt;" </span><br><span class="line">git commit -a --amend</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Branch</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch #list local branches		</span><br><span class="line">git branch &lt;new_branch&gt; #create a new branch </span><br><span class="line">git branch -d &lt;old_branch&gt; #use -D enforce delete</span><br><span class="line">git checkout &lt;old_branch&gt; #switch to branch $branch </span><br><span class="line">git checkout -b &lt;new_branch&gt; #switch to a new branch $branch</span><br></pre></td></tr></table></figure>
+<p> (a) Imaging there exists a hash table of <code>key:value</code> pairs with branch name as key and commit node as value. When checkout a new branch b1, <code>b1:current-commit-code</code> will be stored in the hash table. When checkout an existing branch b1, you will reach the hashed commit code. In both cases, b1 (HEAD) will be used as the hash key for the next commit node, that is, when you commit next time, <code>b1:new-commit-code</code> will be updated in the hash table.<br> (b) Another perspective is treating the branch name as a pointer to the commit node and each branch is a retrospective history dating back from that node, which is essentially the same as (a).</p>
+<p> When checkout to another branch, git status (staged or unstaged modifications) will be transferred to that branch. If there exists file conflicts (operations on common yet different files), checkout will be forbidden. </p>
+<p> Besides <code>branch</code>, users can also add <code>tag</code> to each commit node.</p>
+<p> <img src="https://i.imgur.com/eZBhlc6.jpg" alt=""></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>assume the current branch is master</span><br><span class="line"><span class="meta">#</span>merge: merge experiment into master</span><br><span class="line"><span class="meta">#</span>master moves one step forward, both experiment and original master are its parents</span><br><span class="line">git merge experiment</span><br><span class="line"><span class="meta">#</span>assume the current branch is experiment</span><br><span class="line"><span class="meta">#</span>rebase: base experiment on master</span><br><span class="line"><span class="meta">#</span>duplicate the nodes between C2 and experiment after master, move experiment to up-to-date</span><br><span class="line">git rebase master</span><br><span class="line"><span class="meta">#</span>in the simple fast-forward case, assume &lt;branch&gt; is ahead of &lt;branch1&gt;</span><br><span class="line"><span class="meta">#</span>then, `merge &lt;branch1&gt; &lt;branch2&gt;` and `rebase &lt;branch1&gt; &lt;branch2&gt;` work the same, just move &lt;branch1&gt; to &lt;branch2&gt;.</span><br><span class="line"><span class="meta">#</span>whereas, `merge &lt;branch2&gt; &lt;branch1&gt;` or `rebase &lt;branch2&gt; &lt;branch1&gt;` are not allowed.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Tracking changes</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status </span><br><span class="line">git log #commit history</span><br><span class="line">git log -n &lt;limit&gt; --stat</span><br><span class="line">git log --grep="&lt;pattern&gt;"</span><br><span class="line">git log --author="John Smith" -p hello.py</span><br><span class="line">git diff #view unstaged modification</span><br><span class="line">git diff --cached #view staged modification</span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line">git diff &lt;repo&gt;/&lt;branch1&gt;..&lt;branch2&gt;</span><br></pre></td></tr></table></figure>
+<p>when using <code>git log</code>, it will only show the ancestral commit nodes of current node. </p>
+</li>
+<li><p><strong>Date back to history</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>revert the operations in &lt;commit&gt; and add one commit node ahead of HEAD</span><br><span class="line"><span class="meta">#</span>revert does not work on file</span><br><span class="line">git revert &lt;commit&gt;</span><br><span class="line"><span class="meta">#</span>go back to &lt;commit&gt;</span><br><span class="line"><span class="meta">#</span>git checkout &lt;commit&gt; &lt;file&gt; is just copying the &lt;file&gt; in &lt;commit&gt;</span><br><span class="line">git checkout &lt;commit&gt;  		</span><br><span class="line"><span class="meta">#</span>git reset &lt;commit&gt; changes branch name, working directory, and staged index</span><br><span class="line"><span class="meta">#</span>git reset &lt;file&gt; is removing the staged file</span><br><span class="line">git reset --mixed &lt;commit&gt; #default, save the working directory</span><br><span class="line">git reset --soft &lt;commit&gt; #save both working directory and staged index</span><br><span class="line">git reset --hard &lt;commit&gt; #save none, dangerous!</span><br></pre></td></tr></table></figure>
+<p>(a) For reset file, there are no options <code>--hard</code> and <code>--soft</code>.<br>(b) For reset commit, after <code>reset --mixed</code> or <code>reset --hard</code>, there are no staged snapshots. After <code>reset --soft</code>, staged snapshots enable the staged index to remain the same. More specifically, at the time before or after <code>reset --soft</code>, if you run <code>git commit</code>, the generated commit node should be the same. </p>
+</li>
+</ol>
+<ol>
+<li><p><strong>Communicate with remote repositories</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git remote -v #list remote repositories</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git branch -r #list the fetched branches of remote repositories</span><br><span class="line"></span><br><span class="line">git fetch &lt;repo&gt;  # fetch all of the remote branches</span><br><span class="line">git fetch &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git checkout -b &lt;new_branch&gt; &lt;repo&gt;/&lt;remote_branch&gt; # Checking out a local copy of specific branch</span><br><span class="line">git pull &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git push &lt;origin&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
+<p>after merging code to address the conflict, use <code>git commit -a -m &quot;$message&quot;</code>, then <code>git push</code>.</p>
+<p> <code>git pull</code> is equal to a <code>git fetch</code> followed by a <code>git merge</code>.</p>
+</li>
+<li><p><strong>Clean working directory</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clean -f/d #clean untracked files/directory</span><br><span class="line">git clean -f $path #clean untracked files in $path</span><br><span class="line"><span class="meta">#</span>`git clean` is often used togther with `git reset —hard`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Stashing</strong></p>
+<p>If you are working in your repository, and your workflow is interrupted by another project, you can save the current state of your repository (the working directory and the staging index) in the Git stash. When you are ready to start working where you left off, you can restore the stashed repository state. Note that doing a stash gives you a clean working directory, and leaves you at the last commit. </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git stash save # stash the current state</span><br><span class="line">git stash list # see what is in the Git stash:</span><br><span class="line">git stash apply # return your stashed state to the working directory</span><br><span class="line">git stash pop # return your stashed state to the working directory and delete it from the stash</span><br></pre></td></tr></table></figure>
+<p>Note the commit-tree grows. “git log” prints the path from root to current node. “leave behind” prints the path from current node to the first common ancestor between current node and new node. Detached head will be off any branch, so create a new branch for the detached head. </p>
+</li>
+</ol>
+<p><strong>Tips:</strong></p>
+<ol>
+<li><code>checkout</code> and <code>reset</code> work on both file and commit with different meanings and usages, while <code>revert</code> only works on commit.</li>
+<li><code>reset</code> is often used for cancelling uncommited changes while <code>revert</code> is often used for cancelling commited changes.</li>
+<li>Compared with <code>reset</code>, <code>checkout</code> and <code>revert</code> focus on the modification, so they are forbidden in many cases.</li>
+</ol>
+<p><strong>Resources:</strong><br>A good Chinese tutorial for git is <a href="http://git.oschina.net/progit/index.html" target="_blank" rel="noopener">here</a>.<br>A good English tutorial for git is <a href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank" rel="noopener">here</a>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/library/Ubuntu JDK/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1588,540 +1946,6 @@ spyder
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/LaTeX/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/LaTeX/" itemprop="url">LaTeX</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><ul>
-<li><p>Ubuntu</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	</span><br><span class="line">sudo apt-get install texmaker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Windows</p>
-<ol>
-<li>Install Miktex: <a href="https://miktex.org/download" target="_blank" rel="noopener">https://miktex.org/download</a></li>
-<li>Install texmaker or texstudio</li>
-</ol>
-</li>
-</ul>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
-<li><p>Refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/latex_symbols.pdf" target="_blank" rel="noopener">this</a> for commonly used symbols</p>
-</li>
-<li><p>Set the indentation in paragraphs: <code>\setlength\parindent{0pt}</code> </p>
-</li>
-<li><p>set the separation between paragraphs: <code>\setlength{\parskip}{10pt}</code></p>
-</li>
-<li><p>set color: <code>\usepackage{xcolor}</code> and <code>\textcolor{red}{}</code></p>
-</li>
-<li><p>expectation symbol: <code>\usepackage{amsfonts}</code> and <code>\mathbb{E}</code></p>
-</li>
-<li><p>cannot infer: <code>\usepackage{amssymb}</code> and <code>\nRightarrow</code></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/wxPython/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/python/wxPython/" itemprop="url">wxPython</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Framework Code</strong></p>
-<ol>
-<li><p><a href="\code\wxPython\basic_frame\app.py">Simplest App</a>:  </p>
-<ul>
-<li><p><code>MyApp(False)</code>means noredirect while <code>MyApp(True, &#39;output.txt&#39;)</code> will redirect the output to the file output.txt.</p>
-</li>
-<li><p>Derivation from wx.App uses <code>def OnInit(self)</code> while others use <code>def __init__(self)</code></p>
-</li>
-<li><p>Donnot forget <code>return True</code></p>
-</li>
-</ul>
-</li>
-<li><p><a href="\code\wxPython\basic_frame\frame.py">Simplest Frame</a>: <code>frame.Show()</code>, <code>frame.Centre()</code> </p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\texteditor.py">A frame with menubar, toolbar, and statusbar</a>: UpdateUIEvents are sent periodically by the framework during idle time to allow the application to check if the state of a control needs to be updated.</p>
-<ul>
-<li><p>Append a menu_item with icon,   </p>
-   <pre><code>qmi = wx.MenuItem(fileMenu, APP_EXIT, '&Quit\tCtrl+Q')
-   qmi.SetBitmap(wx.Bitmap('exit.png'))
-   fileMenu.AppendItem(qmi)</code></pre>
-</li>
-<li><p>Menu check_item</p>
-   <pre><code>self.shtl = viewMenu.Append(wx.ID_ANY, 'Show toolbar', 'Show Toolbar', kind=wx.ITEM_CHECK)
-   self.Bind(wx.EVT_MENU, self.ToggleStatusBar, self.shst)
-   def ToggleStatusBar(self, e):        
-       if self.shst.IsChecked():
-        self.statusbar.Show()
-       else:
-           self.statusbar.Hide()</code></pre>
-</li>
-</ul>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\validators.py">Pop a Dialogue box with validator</a>: derivation from <code>wx.PyValidator</code></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\login.py">A login dialogue before main frame</a>: <code>wx.PyValidator</code></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\notebook.py">Notebook with multiple pages</a></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\flatbook.py">Advanced notebook, user can add new pages</a></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\foldpannelbar.py">Foldable Pannel</a></p>
-<p> <img src="http://i.imgur.com/84BZK8J.jpg" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\splash.py">Splash Screen</a>: splash before entering main frame <code>wx.SplashScreen</code></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\auiframe.py">Extendable Pannel</a></p>
-<p> <img src="http://i.imgur.com/mOSVdDk.jpg" alt=""></p>
-</li>
-<li><p>SplitPanel (<a href="\code\wxPython\advanced_frame\columnpage.py">hide</a>, <a href="\code\wxPython\advanced_frame\columnpage2.py">show</a>): a horizontally or vertically splited panel, loading html file</p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\FileDragDrop.py">File Drag Drop</a></p>
-<p> <img src="\code\wxPython\md_img\filedragdrop.jpg" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\filehunter.py">File Hunter</a></p>
-<p> <img src="\code\wxPython\md_img\filehunter.png" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\spreadsheet.py">SpreadSheet</a></p>
-<p> <img src="\code\wxPython\md_img\spreadsheet.png" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\mediaplayer.py">Media Player</a></p>
-<p> <img src="\code\wxPython\md_img\player.png" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\advanced_frame\web_browser.py">Web Browser</a></p>
-<p> <img src="\code\wxPython\md_img\browser.png" alt=""></p>
-</li>
-</ol>
-<hr>
-<p><strong>Component Code</strong></p>
-<ol>
-<li><p><a href="\code\wxPython\building_block\bitmaps.py">Bitmap</a>: use bitmap to beautify the appearance, or use the bitmap brush (transparent widgets may be a little troublesome <a href="\code\wxPython\building_block\transparent.py">here</a>)</p>
- <pre><code>self.Bind(wx.EVT_PAINT, self.OnPaint)
- def OnPaint(self, event):
-     dc = wx.PaintDC(self)
-     dc.SetBackgroundMode(wx.TRANSPARENT)
-     brush1 = wx.BrushFromBitmap(wx.Bitmap('pattern1.jpg'))
-     dc.SetBrush(brush1)
-     w, h =  self.GetSize()
-     dc.DrawRectangle(0, 0, w, h)</code></pre>
-</li>
-<li><p><a href="\code\wxPython\building_block\button_change_label.py">Simplest Button</a>: use lib to build advanced buttons</p>
-<ul>
-<li>Bind function with building blocks    <pre><code>self.Bind(wx.EVT_BUTTON, self.OnButton, button) 
-   def OnButton(self, event):</code></pre></li>
-<li>Note <code>GetChildren()</code>,  <code>GetParent()</code>, <code>GetId()</code>, <code>FindWindowById(self.btnId)</code></li>
-</ul>
-</li>
-<li><p><a href="\code\wxPython\building_block\advanced_buttons.py">Advanced button</a>: bitmap button, toggle button, gradient button</p>
-</li>
-<li><p><a href="\code\wxPython\building_block\frame_icon.py">Frame Icon</a>: personalize the frame icon</p>
- <pre><code>con = wx.Icon(path, wx.BITMAP_TYPE_PNG)
- self.SetIcon(icon):</code></pre>
-</li>
-<li><p><a href="\code\wxPython\building_block\clipboard.py">Interaction with Clipboard</a>: paste to and copy from system clipboard</p>
-</li>
-<li><p><a href="\code\wxPython\building_block\drag_and_drop.py">Drop Files to Frame</a>:   : <code>wx.PyDropTarget</code></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\two_stage_help.py">Help in Frame</a>: when initializing Frame</p>
- <pre><code>pre = wx.PreFrame()
- pre.SetExtraStyle(wx.FRAME_EX_CONTEXTHELP)
- pre.Create(parent, *args, **kwargs)
- self.PostCreate(pre)</code></pre>
-</li>
-<li><p><a href="\code\wxPython\building_block\checkbox.py">Checkbox</a>: use more general event detector to simplify code</p>
-<pre><code>`self.Bind(wx.EVT_CHECKBOX, self.OnCheck)`
-</code></pre><p> <code>e_obj = event.GetEventObject()</code></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\choice_ctrl.py">dropdown menu</a></p>
-</li>
-<li><p>MessageBox</p>
- <pre><code>def ShowMessage(self,event):
-     wx.MessageBox('Download completed', 'Info', wx.OK | wx.ICON_INFORMATION)</code></pre>
-</li>
-<li><p>Open file_dialogue</p>
- <pre><code>dlg = wx.FileDialog(self, "Open File", style=wx.FD_OPEN)
- if dlg.ShowModal() == wx.ID_OK:
-     fname = dlg.GetPath()
-     handle = open(fname, 'r')
-     self.txtctrl.SetValue(handle.read())
-     handle.close()</code></pre>
-</li>
-<li><p><a href="\code\wxPython\building_block\popupmenu.py">popup menu</a>: right click to pop up the menu</p>
-</li>
-<li><p><a href="\code\wxPython\building_block\staticbox.py">static box</a>: a static box containing components</p>
-</li>
-<li><p><a href="\code\wxPython\building_block\listbasics.py">list ctrl</a>: multi-column list</p>
-<p> <img src="http://i.imgur.com/GjbWiwX.jpg" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\customtree.py">customtree</a>: a tree-structure file browser</p>
-</li>
-<li><p><a href="\code\wxPython\building_block\vlbox.py">virtual list box</a></p>
-<p> <img src="http://i.imgur.com/9DswQ5f.jpg" alt=""></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\stc_lexer.py">Styled Text</a>: i.e., python-style text</p>
-</li>
-<li><p><a href="\code\wxPython\building_block\downloader.py">Download Progressbar</a></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\about.py">About info</a>: info including name, version, copyright, and description</p>
-</li>
-<li><p>Choose Color Dialogue</p>
- <pre><code>colour_data = wx.ColourData()
- colour = self.GetBackgroundColour()
- colour_data.SetColour(colour)
- colour_data.SetChooseFull(True)
-
- dlg = wx.ColourDialog(self, colour_data)
- if dlg.ShowModal() == wx.ID_OK:
-     colour = dlg.GetColourData().GetColour()
-     self.SetBackgroundColour(colour)
-     self.Refresh()
- dlg.Destroy()</code></pre>
-</li>
-<li><p><a href="\code\wxPython\building_block\imagedlg.py">Image Browser with simple editing</a></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\imageslide.py">Image Slide Show</a></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\searchbar.py">Search Bar</a></p>
-</li>
-<li><p>Timer</p>
- <pre><code>self._timer = wx.Timer(self)
- self.Bind(wx.EVT_TIMER, self.OnTimer, self._timer)
- self._timer.Start(100)
- self._timer.Stop()</code></pre>
-</li>
-<li><p>Execute Command Line</p>
- <pre><code>import outputwin
- self.output = outputwin.OutputWindow(self)
- self.output.StartProcess("ping %s" % url, blocksize=64)</code></pre>
-</li>
-<li><p><a href="\code\wxPython\building_block\music_player.py">Music Player</a></p>
-</li>
-<li><p><a href="\code\wxPython\building_block\video_player.py">Video Player</a>: First, you need to install MplayerCtrl lib. Secondly, place the mplayer folder under the current working directory. </p>
-</li>
-</ol>
-<hr>
-<p><strong>Layout</strong></p>
-<ol>
-<li><p><a href="\code\wxPython\basic_frame\boxsizer.py"><code>wx.BoxSizer</code></a>: <code>proportion</code> is used to control main direction and <code>wx.EXPAND</code> is used to control the other direction. Note in BoxSizer, alignment is only valid in one direction. AddSpacer(50) is equal to Add((50,50)). AddStretchSpacer() is equal to Add((0,0),proportion=1).</p>
- <pre><code>sizer = wx.BoxSizer(wx.HORIZONTAL)
- sizer.AddSpacer(50)
- sizer.Add(sth,proportion=0, flag=wx.ALL, border=5) #use flag to mark which side has border
- sizer.Add((-1,10)) #add a black space, height=10
- # sizer.Add(sth,proportion=0, wx.EXPAND|wx.RIGHT|wx.ALIGN_RIGHT, border=5)
- sizer.AddSpacer((0,0)) #sizer.AddStretchSpacer()
- self.SetSizer(sizer)
- self.SetInitialSize()</code></pre>
-</li>
-<li><p><a href="\code\wxPython\basic_frame\gridsizer.py"><code>wx.GridSizer</code></a>:  <code>proportion</code> is usually set as 0, use <code>Add((20,20), 1, wx.EXPAND)</code> to take up space.</p>
- <pre><code>wx.GridSizer(2, 2, vgap=0, hgap=0)
- msizer.Add(sth, 0, wx.EXPAND)</code></pre>
-</li>
-<li><p><a href="\code\wxPython\basic_frame\flexgridsizer.py"><code>wx.FlexGridSizer</code></a>: make some rows and columns growable.</p>
- <pre><code>fgs.AddGrowableRow(2)
- fgs.AddGrowableCol(1)</code></pre>
-</li>
-<li><p><a href="\code\wxPython\basic_frame\gridbagsizer.py"><code>wx.GridBagSizer</code></a>: use <code>pos</code> and <code>span</code> to indicate the location and size.</p>
- <pre><code>sizer = wx.GridBagSizer(vgap=8, hgap=8)
- sizer.Add(sth, (1, 2), (1, 15), wx.EXPAND) </code></pre>
-
-
-
-
-
-
-
-</li>
-</ol>
-<hr>
-<p><strong>Notes</strong></p>
-<ol>
-<li><p>Event Propagation: When an event can intrigue multiple events, use <code>event.skip()</code> to guaranttee the occurrence of following events. Take <a href="\code\wxPython\building_block\keyevents.py">keyevents.py</a> for an example.</p>
-</li>
-<li><p>Virtual Ride: <code>wx.PyPannel</code></p>
-</li>
-<li><p>Bind function which will be checked in the idle time<br><code>self.Bind(wx.EVT_UPDATE_UI, self.OnUpdateEditMenu)</code></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2176,7 +2000,7 @@ spyder
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">136</span>
+                  <span class="site-state-item-count">137</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

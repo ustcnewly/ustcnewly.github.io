@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-06T02:16:52.556Z">
+<meta property="og:updated_time" content="2019-01-23T08:00:32.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN">
 <meta name="twitter:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
@@ -416,8 +416,6 @@
 </li>
 </ul>
 <h3 id="Interesting-variants"><a href="#Interesting-variants" class="headerlink" title="Interesting variants:"></a>Interesting variants:</h3><ul>
-<li><p>EBGAN: replace discriminator with autoencoder</p>
-</li>
 <li><p>LSGAN: replace cross-entropy loss with least square loss</p>
 </li>
 <li><p>Wasserstein GAN: replace discriminator with a critic function</p>
@@ -430,6 +428,14 @@
 </li>
 <li><p>Dissection GAN <a href="https://arxiv.org/pdf/1811.10597.pdf" target="_blank" rel="noopener">[3]</a>: use intervention for causality</p>
 </li>
+<li><p>CoGAN <a href="https://papers.nips.cc/paper/6544-coupled-generative-adversarial-networks.pdf" target="_blank" rel="noopener">[4]</a>: two generators and discriminators softly share parameters</p>
+</li>
+<li><p>DCGAN <a href="https://arxiv.org/pdf/1511.06434.pdf%C3%AF%C2%BC%E2%80%B0" target="_blank" rel="noopener">[5]</a></p>
+</li>
+<li><p>Progressive GAN  <a href="https://arxiv.org/pdf/1710.10196.pdf?__hstc=200028081.1bb630f9cde2cb5f07430159d50a3c91.1524009600081.1524009600082.1524009600083.1&amp;__hssc=200028081.1.1524009600084&amp;__hsfp=1773666937" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>Style-based GAN <a href="https://arxiv.org/pdf/1812.04948.pdf?utm_campaign=nathan.ai%20newsletter&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" rel="noopener">[7]</a></p>
+</li>
 </ul>
 <h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
 <p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a>.</p>
@@ -437,6 +443,10 @@
 <p>[1] Brock A, Donahue J, Simonyan K. Large scale gan training for high fidelity natural image synthesis[J]. arXiv preprint arXiv:1809.11096, 2018.</p>
 <p>[2] Wang C, Xu C, Yao X, et al. Evolutionary Generative Adversarial Networks[J]. arXiv preprint arXiv:1803.00657, 2018.</p>
 <p>[3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks[J]. arXiv preprint arXiv:1811.10597, 2018.</p>
+<p>[4] Liu M Y, Tuzel O. Coupled generative adversarial networks[C]//Advances in neural information processing systems. 2016: 469-477.</p>
+<p>[5] Radford, Alec, Luke Metz, and Soumith Chintala. “Unsupervised representation learning with deep convolutional generative adversarial networks.” arXiv preprint arXiv:1511.06434 (2015).</p>
+<p>[6] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017).</p>
+<p>[7] Karras, Tero, Samuli Laine, and Timo Aila. “A Style-Based Generator Architecture for Generative Adversarial Networks.” arXiv preprint arXiv:1812.04948 (2018).</p>
 
       
     </div>
@@ -562,7 +572,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">136</span>
+                  <span class="site-state-item-count">137</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
