@@ -281,161 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/others/Fair Comparison/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/05/others/Fair Comparison/" itemprop="url">Fair comparison</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T14:12:32+08:00">
-                2019-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>Carefully compare your experiments settings with those described in previous papers. The experimental settings include training/testing split, input format (e.g., image size), evaluation metric, backbone network, etc. If they are not exactly the same, you need to re-run their methods with exactly the same experimental settings as yours for fair comparison. For example, if the baseline uses 32x32 image size while you use 244x244 image size, that is unfair comparison. If the baseline uses AlexNet as backbone while you use ResNet as backbone, that is unfair comparison.</p>
-</li>
-<li><p>The baseline methods may use more or less information, compared with your method. Based on using more/less information and their performance is better/worse than yours, we could have the following table. </p>
-<ul>
-<li>If the baseline uses more information but achieves worse results, never mind. Just brag your own method.</li>
-<li>If the baseline uses less information but achieves better results, it is a serious problem. You have to check your method.</li>
-<li>If the baseline uses less information and achieves worse results, that is reasonable. But you may be accused of unfair comparison because your method uses more information. For safety, please augment the baseline with extra information and compare again. </li>
-<li><p>If the baseline uses more information and achieves better results, that is reasonable. But do not casually put them in the paper because dumb reviewers may ignore these details and point out your method is not good enough. That is very risky! Please remove the extra information from the baseline and compare again.</p>
-<p><img src="https://i.imgur.com/Its6ekq.jpg" width="80%"></p>
-</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/others/Determine Baselines/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1305,7 +1150,7 @@
 <p>  Swapping attribute representation with the supervision of attribute annotation such as Dual Swap GAN [7] and DNA-GAN [8].</p>
 </li>
 <li><p>Disentangle representation and domain adaptation</p>
-<p>  In [9], the authors combine the disentanglement objective with image-to-image translation between a pair of domains by disentangling the embeddings into three parts: one shared part including all the factors that the two domain share and two exclusive parts including all the factors that the two domains exclude.</p>
+<p>  In [9], the authors combine the disentanglement objective with image-to-image translation between a pair of domains by disentangling the embeddings into three parts: one shared part including all the factors that the two domain share and two exclusive parts including all the factors that the two domains exclude, which disentangles content from domain attribute.</p>
 </li>
 </ul>
 <p>[1] <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">Image-to-Image Translation with Conditional Adversarial Nets</a><br>[2] <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle-consistent adversarial networks</a><br>[3] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Choi_StarGAN_Unified_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks<br>for Multi-Domain Image-to-Image Translation</a><br>[4] <a href="https://arxiv.org/pdf/1206.5538.pdf" target="_blank" rel="noopener">Representation learning: A review and new perspectives</a><br>[5] <a href="http://papers.nips.cc/paper/6399-infogan-interpretable-representation-learning-by-information-maximizing-generative-adversarial-nets.pdf" target="_blank" rel="noopener">Infogan: Interpretable representation learning by information maximizing generative adversarial nets</a><br>[6] <a href="https://arxiv.org/pdf/1710.05050.pdf" target="_blank" rel="noopener">Learning Independent Features with adversarial Nets for Non-linear ICA</a><br>[7] <a href="http://papers.nips.cc/paper/7830-dual-swap-disentangling.pdf" target="_blank" rel="noopener">Dual Swap Disentangling</a><br>[8] <a href="https://arxiv.org/pdf/1711.05415.pdf" target="_blank" rel="noopener">DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images</a><br>[9] <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">Image-to-image translation for cross-domain disentanglement</a></p>
@@ -1802,6 +1647,155 @@
           
             <p>Sometimes Ubuntu fails to connect VPN. Open the PPTP advanced options, uncheck EAP and check MPPE.</p>
 <p><img src="https://i.imgur.com/cr0lyNn.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/machine_learning/Knowledge Graph/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/02/machine_learning/Knowledge Graph/" itemprop="url">Knowledge Graph</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-02T11:32:15+08:00">
+                2018-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Definition: entities, attributes, and relationships</p>
+<p>Two ways to construct knowledge graph:</p>
+<ol>
+<li><p>probabilistic models (graphical model/random walk)</p>
+</li>
+<li><p>embedding based models</p>
+</li>
+</ol>
 
           
         
