@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual.  Scene text detection:The">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-21T07:37:11.791Z">
+<meta property="og:updated_time" content="2019-02-11T11:46:45.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scene Text Recognition">
 <meta name="twitter:description" content="Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual.  Scene text detection:The">
@@ -410,13 +410,19 @@
 </li>
 <li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
 </li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017</p>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017: use <a href="https://arxiv.org/pdf/1509.04874.pdf" target="_blank" rel="noopener">DenseBox</a> to generate quadrangle proposals</p>
 </li>
 <li><p><a href="https://arxiv.org/pdf/1801.02765.pdf" target="_blank" rel="noopener">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
 </li>
 <li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
 </li>
 <li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf" target="_blank" rel="noopener">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.01315.pdf" target="_blank" rel="noopener">PixelLink: Detecting Scene Text via Instance Segmentation</a>, AAAI 2018: rectangle enclosing instance segmentation mask, which is obtained based on text/non-text prediction and link prediction.</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.01086.pdf" target="_blank" rel="noopener">Arbitrary-Oriented Scene Text Detection via Rotation Proposals</a>, TMM 2018: generate rotated proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1807.01544.pdf" target="_blank" rel="noopener">TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes</a>, ECCV 2018: infer the center line area (TCL) and associated circle radius/rotation</p>
 </li>
 </ol>
 <h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>

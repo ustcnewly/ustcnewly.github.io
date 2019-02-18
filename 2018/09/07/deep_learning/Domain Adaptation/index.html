@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="learn projection matrix: F(PXs, QXt)  project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2]   inter">
+<meta name="description" content="Methods  learn projection matrix: F(PXs, QXt)  project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2]">
 <meta name="keywords" content="machine learning,DA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Domain Adaptation">
 <meta property="og:url" content="http://yoursite.com/2018/09/07/deep_learning/Domain Adaptation/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="learn projection matrix: F(PXs, QXt)  project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2]   inter">
+<meta property="og:description" content="Methods  learn projection matrix: F(PXs, QXt)  project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2]">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-27T09:50:16.408Z">
+<meta property="og:updated_time" content="2019-02-12T05:16:18.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Domain Adaptation">
-<meta name="twitter:description" content="learn projection matrix: F(PXs, QXt)  project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2]   inter">
+<meta name="twitter:description" content="Methods  learn projection matrix: F(PXs, QXt)  project to common subspace TCA [pdf] SA [pdf] LSSA: extension of SA [pdf] DIP [pdf] CORAL [pdf] deep CORAL [pdf] other deep feature-based methods [1] [2]">
 
 
 
@@ -374,7 +374,8 @@
       
 
       
-        <ol>
+        <p><strong>Methods</strong></p>
+<ol>
 <li><p>learn projection matrix: F(PXs, QXt)</p>
 <ul>
 <li>project to common subspace<ul>
@@ -432,11 +433,16 @@
 </li>
 <li><p>domain alignment layer (batch normalization): <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Carlucci_AutoDIAL_Automatic_DomaIn_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1603.04779" target="_blank" rel="noopener">[2]</a></p>
 </li>
-<li><p>open-set domain adaptation <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busto_Open_Set_Domain_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> (the categories of the source domain and the target domain do not match) or partial transfer learning <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_Partial_Transfer_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
 <li><p>guided learning: tutor guides students and get feedback from students. <a href="http://www.leizhang.tk/publications%20and%20codes.html" target="_blank" rel="noopener">ACM-MM18 paper</a></p>
 </li>
 <li><p>ensemble transfer learning: aggregate multiple transfer learning approaches <a href="https://arxiv.org/pdf/1708.05629.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+</ol>
+<p><strong>Settings</strong></p>
+<ol>
+<li><p>open-set domain adaptation or partial transfer learning: <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busto_Open_Set_Domain_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_Partial_Transfer_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Tzeng_Simultaneous_Deep_Transfer_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>distant domain adaptation (two domains are too distant, so the transfer between them relies on transition domains): <a href="https://dl.acm.org/ft_gateway.cfm?id=2783295&amp;ftid=1613048&amp;dwn=1&amp;CFID=49856439&amp;CFTOKEN=825d8eea3c707e8-BF658D58-A3BB-2ACB-19DC13C6B3291336" target="_blank" rel="noopener">Transitive transfer learning</a>, <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14446/14451" target="_blank" rel="noopener">distant domain transfer learning</a>  </p>
 </li>
 </ol>
 <p><strong>Domain adaptation for diverse applications</strong></p>
@@ -458,6 +464,8 @@
 <li>An old survey of transfer learning <a href="http://www.cs.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf" target="_blank" rel="noopener">[pdf]</a></li>
 <li>Recent advance on domain adaptation <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7078994" target="_blank" rel="noopener">[pdf]</a></li>
 <li>My survey of old deep learning domain adaptation methods <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/deep_learning_for_domain_adaptation.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>A Chinese version of transfer learning tutorial <a href="http://jd92.wang/assets/files/transfer_learning_tutorial_wjd.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>Datasets and code: <a href="https://github.com/jindongwang/transferlearning" target="_blank" rel="noopener">[1]</a></li>
 </ol>
 
       

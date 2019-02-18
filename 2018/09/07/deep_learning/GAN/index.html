@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-23T08:00:32.755Z">
+<meta property="og:updated_time" content="2019-02-12T04:12:54.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN">
 <meta name="twitter:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
@@ -402,11 +402,11 @@
 <li><p>stability tricks from RL</p>
 </li>
 </ul>
-<p>More tricks from the BigGAN <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a> </p>
+<p>Tricks from the BigGAN <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a> </p>
 <ul>
 <li><p>class-conditional BatchNorm</p>
 </li>
-<li><p>Spectral norm</p>
+<li><p>Spectral normalization</p>
 </li>
 <li><p>orthogonal initialization</p>
 </li>
@@ -414,6 +414,14 @@
 </li>
 <li><p>enforce orthogonality on weights to improve the model smoothness</p>
 </li>
+</ul>
+<p>More tricks</p>
+<ul>
+<li><p>gradient penalty <a href="https://papers.nips.cc/paper/7159-improved-training-of-wasserstein-gans.pdf" target="_blank" rel="noopener">[8]</a></p>
+</li>
+<li><p>unrolling <a href="https://arxiv.org/pdf/1611.02163.pdf" target="_blank" rel="noopener">[9]</a> and packing <a href="https://papers.nips.cc/paper/7423-pacgan-the-power-of-two-samples-in-generative-adversarial-networks.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+<li></li>
 </ul>
 <h3 id="Interesting-variants"><a href="#Interesting-variants" class="headerlink" title="Interesting variants:"></a>Interesting variants:</h3><ul>
 <li><p>LSGAN: replace cross-entropy loss with least square loss</p>
@@ -447,6 +455,9 @@
 <p>[5] Radford, Alec, Luke Metz, and Soumith Chintala. “Unsupervised representation learning with deep convolutional generative adversarial networks.” arXiv preprint arXiv:1511.06434 (2015).</p>
 <p>[6] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017).</p>
 <p>[7] Karras, Tero, Samuli Laine, and Timo Aila. “A Style-Based Generator Architecture for Generative Adversarial Networks.” arXiv preprint arXiv:1812.04948 (2018).</p>
+<p>[8] Gulrajani, Ishaan, et al. “Improved training of wasserstein gans.” Advances in Neural Information Processing Systems. 2017.</p>
+<p>[9] Metz, Luke, et al. “Unrolled generative adversarial networks.” arXiv preprint arXiv:1611.02163 (2016).</p>
+<p>[10] Lin, Zinan, et al. “PacGAN: The power of two samples in generative adversarial networks.” Advances in Neural Information Processing Systems. 2018.</p>
 
       
     </div>
