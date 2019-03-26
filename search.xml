@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Synthetic Text Images]]></title>
     <url>%2F2019%2F03%2F26%2Fmachine_learning%2FSynthetic%20Text%20Images%2F</url>
-    <content type="text"><![CDATA[Blend text and background images. text image (font, color, border, blending): [1] scene-text image: [2] Reference: Jaderberg, Max, et al. “Synthetic data and artificial neural networks for natural scene text recognition.” arXiv preprint arXiv:1406.2227 (2014). Gupta, Ankush, Andrea Vedaldi, and Andrew Zisserman. “Synthetic data for text localisation in natural images.” CVPR, 2016.]]></content>
+    <content type="text"><![CDATA[Blend text and background images. text image (font, color, border, blending): [1] scene-text image (font, color, border, blending, geometry): [2] Reference: Jaderberg, Max, et al. “Synthetic data and artificial neural networks for natural scene text recognition.” arXiv preprint arXiv:1406.2227 (2014). Gupta, Ankush, Andrea Vedaldi, and Andrew Zisserman. “Synthetic data for text localisation in natural images.” CVPR, 2016.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
