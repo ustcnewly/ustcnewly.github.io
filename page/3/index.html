@@ -281,170 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/deep_learning/Attribute Disentangle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/25/deep_learning/Attribute Disentangle/" itemprop="url">Disentangled Representation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-25T20:20:20+08:00">
-                2018-12-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods:"></a>Methods:</h2><p>The goal of Disentangled Representation [4] is to extract explanatory factors of the data in the input distribution and generate a more meaningful representation. disentangle codes/encodings/representations/latent factors/latent variables. single-dimension attribute encoding or multi-dimension attribute encoding.</p>
-<ul>
-<li><p>Unsupervised disentanglement</p>
-<p>  Recently, InfoGAN [5] utilizes GAN framework and maximizes the mutual information between a subset of the latent variables to learn disentangled representations in an unsupervised manner. Different latent variables are enforced to be independent based on the independence assumption [6].  </p>
-</li>
-<li><p>Supervised disentanglement</p>
-<p>  Swapping attribute representation with the supervision of attribute annotation such as Dual Swap GAN [7] and DNA-GAN [8].</p>
-</li>
-<li><p>Disentangle representation and domain adaptation</p>
-<p>  In [9], the authors combine the disentanglement objective with image-to-image translation between a pair of domains by disentangling the embeddings into three parts: one shared part including all the factors that the two domain share and two exclusive parts including all the factors that the two domains exclude, which disentangles content from domain attribute.</p>
-</li>
-</ul>
-<p>[1] <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">Image-to-Image Translation with Conditional Adversarial Nets</a><br>[2] <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle-consistent adversarial networks</a><br>[3] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Choi_StarGAN_Unified_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks<br>for Multi-Domain Image-to-Image Translation</a><br>[4] <a href="https://arxiv.org/pdf/1206.5538.pdf" target="_blank" rel="noopener">Representation learning: A review and new perspectives</a><br>[5] <a href="http://papers.nips.cc/paper/6399-infogan-interpretable-representation-learning-by-information-maximizing-generative-adversarial-nets.pdf" target="_blank" rel="noopener">Infogan: Interpretable representation learning by information maximizing generative adversarial nets</a><br>[6] <a href="https://arxiv.org/pdf/1710.05050.pdf" target="_blank" rel="noopener">Learning Independent Features with adversarial Nets for Non-linear ICA</a><br>[7] <a href="http://papers.nips.cc/paper/7830-dual-swap-disentangling.pdf" target="_blank" rel="noopener">Dual Swap Disentangling</a><br>[8] <a href="https://arxiv.org/pdf/1711.05415.pdf" target="_blank" rel="noopener">DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images</a><br>[9] <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">Image-to-image translation for cross-domain disentanglement</a></p>
-<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets:"></a>Datasets:</h2><ul>
-<li>CelebA <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Liu_Deep_Learning_Face_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[14]</a> (dataset for human faces): [12, 2, 11, 17, 13, 8, 13, 18]</li>
-<li>MNIST <a href="http://www.dengfanxin.cn/wp-content/uploads/2016/03/1998Lecun.pdf" target="_blank" rel="noopener">[10]</a>, MNIST-M <a href="http://www.jmlr.org/papers/volume17/15-239/15-239.pdf" target="_blank" rel="noopener">[4]</a> (digits): [16, 15, 12, 5, 2, 11, 9, 17, 6, 8, 13, 3]</li>
-<li>Yosemite <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[19]</a> (summer and winter scenes): [11]</li>
-<li>Artworks <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[19]</a> (Monet and Van Gogh): [11]</li>
-<li><a href="http://lpc.opengameart.org/" target="_blank" rel="noopener">2D Sprites</a> (game characters): [15, 9, 6, 8, 3]</li>
-<li>LineMod <a href="https://pdfs.semanticscholar.org/5142/39d0323bbcc36f6fa806c3a35a00f697c7aa.pdf" target="_blank" rel="noopener">[7]</a> (3D object): [9]</li>
-<li>11k Hands <a href="https://arxiv.org/pdf/1711.04322.pdf" target="_blank" rel="noopener">[1]</a> (hand gestures): [17]</li>
-</ul>
-<p>[1] M. Afifi. Gender recognition and biometric identification using a large dataset of hand images. arXiv preprint arXiv:1711.04322, 2017.<br>[2] E. Dupont. Learning disentangled joint continuous and discrete representations. In S. Bengio, H.Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 708–718. Curran Associates, Inc., 2018.<br>[3] Z. Feng, X. Wang, C. Ke, A.-X. Zeng, D. Tao, and M. Song. Dual swap disentangling. In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 5898–5908. Curran Associates, Inc., 2018.<br>[4] Y. Ganin, E. Ustinova, H. Ajakan, P. Germain, H. Larochelle, F. Laviolette, M. Marchand, and V. Lempitsky. Domain-adversarial training of neural networks. The Journal of Machine Learning Research, 17(1):2096–2030, 2016.<br>[5] A. Gonzalez-Garcia, J. van de Weijer, and Y. Bengio. Image-to-image translation for cross-domain disentanglement. In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 1294–1305. Curran Associates, Inc., 2018.<br>[6] N. Hadad, L. Wolf, and M. Shahar. A two-step disentanglement method. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.<br>[7] S. Hinterstoisser, V. Lepetit, S. Ilic, S. Holzer, G. Bradski, K. Konolige, and N. Navab. Model based training, detection and pose estimation of texture-less 3d objects in heavily cluttered scenes. In Asian conference on computer vision, pages 548–562. Springer, 2012.<br>[8] Q. Hu, A. Szab, T. Portenier, P. Favaro, and M. Zwicker. Disentangling factors of variation by mixing them. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.<br>[9] A. H. Jha, S. Anand, M. Singh, and V. Veeravasarapu. Disentangling factors of variation with cycle-consistent variational autoencoders. In The European Conference on Computer Vision (ECCV), September 2018.<br>[10] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278–2324, 1998.<br>[11] H.-Y. Lee, H.-Y. Tseng, J.-B. Huang, M. Singh, and M.-H. Yang. Diverse image-to-image translation via disentangled representations. In The European Conference on Computer Vision (ECCV), September 2018.<br>[12] A. H. Liu, Y.-C. Liu, Y.-Y. Yeh, and Y.-C. F. Wang. A unified feature disentangler for multi-domain image translation and manipulation. In S. Bengio, H.Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, editors, Advances in Neural Information Processing Systems 31, pages 2595–2604. Curran Associates, Inc., 2018.<br>[13] Y. Liu, F. Wei, J. Shao, L. Sheng, J. Yan, and X. Wang. Exploring disentangled feature representation beyond face identification. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.<br>[14] Z. Liu, P. Luo, X.Wang, and X. Tang. Deep learning face attributes in the wild. In Proceedings of the IEEE International Conference on Computer Vision, pages 3730–3738, 2015.<br>[15] M. F. Mathieu, J. J. Zhao, J. Zhao, A. Ramesh, P. Sprechmann, and Y. LeCun. Disentangling factors of variation in deep representation using adversarial training. In D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, editors, Advances in Neural Information Processing Systems 29, pages 5040–5048. Curran Associates, Inc., 2016.<br>[16] S. Narayanaswamy, T. B. Paige, J.-W. van de Meent, A. Desmaison, N. Goodman, P. Kohli, F. Wood, and P. Torr. Learning disentangled representations with semi-supervised deep generative models. In I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus,<br>S. Vishwanathan, and R. Garnett, editors, Advances in Neural Information Processing Systems 30, pages 5925–5935. Curran Associates, Inc., 2017.<br>[17] Z. Shu, M. Sahasrabudhe, R. Alp Guler, D. Samaras, N. Paragios, and I. Kokkinos. Deforming autoencoders: Unsupervised disentangling of shape and appearance. In The European Conference on Computer Vision (ECCV), September 2018.<br>[18] Z. Shu, E. Yumer, S. Hadap, K. Sunkavalli, E. Shechtman, and D. Samaras. Neural face editing with intrinsic image disentangling. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), July 2017.<br>[19] J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. arXiv preprint, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/19/deep_learning/Fine-grained Classification/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1800,6 +1636,155 @@
 <li><p><strong>Image matting</strong>: The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>. In image harmonization, we already know the ground-truth mask of foreground. The first end-to-end method for image matting<br>is <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">here</a>.</p>
 </li>
 <li><p><strong>Image composition</strong>: The target is not only to adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. In image harmonization, we do not need to perform geometric adjustment.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/deep_learning/Upsampling Layer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/22/deep_learning/Upsampling Layer/" itemprop="url">Deconvolution Layer</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-22T14:35:36+08:00">
+                2018-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>unpooling</p>
+<p> <img src="https://i.imgur.com/Ot61UEE.jpg" widt="80%" width="50%"></p>
+</li>
+<li><p>transpose convolution (learnable upsampling)</p>
+<p> <img src="https://i.imgur.com/h7GQbIH.jpg" widt="90%" width="50%"></p>
 </li>
 </ol>
 
