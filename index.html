@@ -501,6 +501,348 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/machine_learning/Meta Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/machine_learning/Meta Learning/" itemprop="url">Meta Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T10:25:39+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Taxonomy"><a href="#Taxonomy" class="headerlink" title="Taxonomy"></a>Taxonomy</h3><ol>
+<li><p><strong>metric-based:</strong>  learn a good metric</p>
+<ul>
+<li>matching network <a href="https://arxiv.org/pdf/1606.04080.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>relation network <a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>prototypical network <a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.00676.pdf" target="_blank" rel="noopener">[4]</a></li>
+</ul>
+</li>
+<li><p><strong>optimization-based:</strong> gradient</p>
+<ul>
+<li>Meta-Learner LSTM <a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">[5]</a></li>
+<li>MAML <a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://arxiv.org/pdf/1710.11622.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1801.08930.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li>REPTILE (an approximation of MAML) <a href="https://arxiv.org/abs/1803.02999" target="_blank" rel="noopener">[9]</a></li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p><strong>model-based:</strong> predict model parameters</p>
+<ul>
+<li>MANN <a href="http://proceedings.mlr.press/v48/santoro16.pdf" target="_blank" rel="noopener">10</a></li>
+<li>MetaNet <a href="https://arxiv.org/pdf/1703.00837.pdf" target="_blank" rel="noopener">[11]</a></li>
+</ul>
+</li>
+</ol>
+<p><strong>Reference:</strong></p>
+<ol>
+<li>Vinyals, Oriol, et al. “Matching networks for one shot learning.” NIPS, 2016.</li>
+<li>Sung, Flood, et al. “Learning to compare: Relation network for few-shot learning.” CVPR, 2018.</li>
+<li>Snell, Jake, Kevin Swersky, and Richard Zemel. “Prototypical networks for few-shot learning.” NIPS, 2017.</li>
+<li>Ren, Mengye, et al. “Meta-learning for semi-supervised few-shot classification.” arXiv preprint arXiv:1803.00676 (2018).</li>
+<li>Sachin Ravi and Hugo Larochelle. “Optimization as a Model for Few-Shot Learning.” ICLR, 2017.</li>
+<li>Chelsea Finn, Pieter Abbeel, and Sergey Levine. “Model-agnostic meta-learning for fast adaptation of deep networks.” ICML, 2017.</li>
+<li>Finn, Chelsea, and Sergey Levine. “Meta-learning and universality: Deep representations and gradient descent can approximate any learning algorithm.” arXiv preprint arXiv:1710.11622 (2017).</li>
+<li>Grant, Erin, et al. “Recasting gradient-based meta-learning as hierarchical bayes.” arXiv preprint arXiv:1801.08930 (2018).</li>
+<li>A. Nichol, J. Achiam, and J. Schulman. On first-order meta-learning algorithms. arXiv, 1803.02999v2, 2018.</li>
+<li>Adam Santoro, et al. “Meta-learning with memory-augmented neural networks.” ICML. 2016.</li>
+<li>Munkhdalai, Tsendsuren, and Hong Yu. “Meta networks.” ICML, 2017.</li>
+</ol>
+<h3 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials:"></a>Tutorials:</h3><ul>
+<li><p><a href="http://metalearning-symposium.ml/files/vinyals.pdf" target="_blank" rel="noopener">http://metalearning-symposium.ml/files/vinyals.pdf</a></p>
+</li>
+<li><p><a href="https://github.com/floodsung/Meta-Learning-Papers" target="_blank" rel="noopener">https://github.com/floodsung/Meta-Learning-Papers</a></p>
+</li>
+<li><p>A more comprehensive survey: <a href="https://arxiv.org/pdf/1810.03548.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1810.03548.pdf</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/machine_learning/Graph Neural Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/machine_learning/Graph Neural Network/" itemprop="url">Graph Neural Network</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T08:38:48+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>GNN for zero-shot learning <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a>: treat each category as a graph node</p>
+</li>
+<li><p>GNN for multi-view learning <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Dongang_Wang_Dividing_and_Aggregating_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a>: treat each view as a graph node</p>
+</li>
+</ol>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ol>
+<li><p>Wang, Xiaolong, Yufei Ye, and Abhinav Gupta. “Zero-shot recognition via semantic embeddings and knowledge graphs.” CVPR, 2018.</p>
+</li>
+<li><p>Lee, Chung-Wei, et al. “Multi-label zero-shot learning with structured knowledge graphs.” CVPR, 2018.</p>
+</li>
+<li><p>Wang, Dongang, et al. “Dividing and aggregating network for multi-view action recognition.” ECCV, 2018.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/machine_learning/Synthetic Text Images/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1543,305 +1885,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/deep_learning/Video Object Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/deep_learning/Video Object Segmentation/" itemprop="url">Video Object Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T08:18:09+08:00">
-                2019-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. </p>
-<p>Davis challenge <a href="https://davischallenge.org/" target="_blank" rel="noopener">https://davischallenge.org/</a> held since 2017, related papers <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a><br><a href="https://arxiv.org/pdf/1704.00675.pdf" target="_blank" rel="noopener">[2]</a></p>
-<ol>
-<li><p>Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016.</p>
-</li>
-<li><p>Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/deep_learning/PyTorch Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/07/deep_learning/PyTorch Learning Note/" itemprop="url">PyTorch Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T21:23:21+08:00">
-                2019-01-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Using-multiple-GPUs"><a href="#Using-multiple-GPUs" class="headerlink" title="Using multiple GPUs"></a>Using multiple GPUs</h3><p>device = torch.device(“cuda:gpu_id1”)</p>
-<p>model = nn.DataParallel(model, [gpu_id1, gpu_id2, …])<br>model.to(device)</p>
-<p>input = input.to(device)</p>
-<p>Note that gpu_id1 must be the first gpu in the gpu_list in model.DataParallel(arg1, gpu_list)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1891,7 +1939,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">139</span>
+                  <span class="site-state-item-count">141</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

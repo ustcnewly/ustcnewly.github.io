@@ -281,6 +281,409 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/hardware/GPU/GPU Cuda and CuDNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/hardware/GPU/GPU Cuda and CuDNN/" itemprop="url">GPU Cuda and CuDNN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/" itemprop="url" rel="index">
+                    <span itemprop="name">hardware</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/GPU/" itemprop="url" rel="index">
+                    <span itemprop="name">GPU</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
+<li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
+</li>
+<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
+</li>
+</ul>
+<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
+<li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
+</li>
+<li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
+</li>
+<li><p>Install NVIDIA GPU driver using apt-get</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:Ubuntu-x-swat/x-updates</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
+<ol>
+<li>Hit CTRL+ALT+F1 and login using your credentials.</li>
+<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
+<li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
+<li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
+</ol>
+</li>
+</ul>
+<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><ol>
+<li><p>Preprocessing</p>
+<ul>
+<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
+<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
+<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
+</ul>
+</li>
+<li><p>Install Cuda</p>
+<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
+<p> and then add into PATH and LD_LIBRARY_PATH</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
+</li>
+</ol>
+<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+<h3 id="Deep-learning-platform"><a href="#Deep-learning-platform" class="headerlink" title="Deep learning platform"></a>Deep learning platform</h3><p>When using conda, installing Tensorflow and Pytorch can be as  easy as <code>conda install tensorflow-gpu</code> and <code>conda install pytorch</code>, which can automatically install compatible cuda and cudnn. </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/tensorflow/TensorFlow Learning Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/tensorflow/TensorFlow Learning Note/" itemprop="url">TensorFlow Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><hr>
+<p>shape = [batch,height,width,channel]<br><strong>constant:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.zeros(shape)</span><br><span class="line">tf.constant(<span class="number">0.4</span>, shape)</span><br><span class="line">tf.random_norm(shape, stddev=<span class="number">1e-1</span>)</span><br><span class="line">tf.truncated_norm(shape, stddev=<span class="number">1e-1</span>)</span><br></pre></td></tr></table></figure></p>
+<p><strong>variable:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_variable(varname, shape=[<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>], initializer=XXX)</span><br><span class="line">initializer=tf.zeros_initializer() <span class="comment"># bias</span></span><br><span class="line">initializer=tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>) </span><br><span class="line">initializer=tf.truncated_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">initializer=tf.contrib.layers.xavier_initializer() <span class="comment"># weight</span></span><br></pre></td></tr></table></figure></p>
+<p>Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal.</p>
+<h3 id="Summary-for-tensorboard"><a href="#Summary-for-tensorboard" class="headerlink" title="Summary for tensorboard"></a>Summary for tensorboard</h3><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.scalar(<span class="string">'total_loss'</span>, total_loss) <span class="comment">#scalar, histogram, etc</span></span><br><span class="line">self.merged = tf.summary.merge_all()</span><br><span class="line">train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) <span class="comment">#include the sess graph</span></span><br><span class="line">train_writer.add_summary(summary, ibatch)</span><br></pre></td></tr></table></figure>
+<p>after running the code, open tensorboard <code>tensorboard --logdir=&#39;./train&#39;</code></p>
+<h3 id="Checkpoint"><a href="#Checkpoint" class="headerlink" title="Checkpoint"></a>Checkpoint</h3><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># save all the variables</span></span><br><span class="line">saver = tf.train.Saver() </span><br><span class="line"><span class="comment"># save partial variables </span></span><br><span class="line">saver = tf.train.Saver(&#123;<span class="string">"my_v2"</span>: v2&#125;)</span><br><span class="line"><span class="comment"># save and restore</span></span><br><span class="line">saver.save(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line">saver.restore(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line"><span class="comment"># restore partial variables</span></span><br><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure>
+<p>inspect the checkpoint file<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python <span class="keyword">import</span> pywrap_tensorflow  </span><br><span class="line">checkpoint_path = os.path.join(model_dir, <span class="string">"model.ckpt"</span>)  </span><br><span class="line">reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path)  </span><br><span class="line">var_to_shape_map = reader.get_variable_to_shape_map()  </span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> var_to_shape_map:  </span><br><span class="line">    print(<span class="string">"tensor_name: "</span>, key)  </span><br><span class="line">    print(reader.get_tensor(key)) <span class="comment"># Remove this is you want to print only variable names</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h3><hr>
+<ul>
+<li><p>convolutional layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kernel = tf.Variable(tf.zeros([<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>]))</span><br><span class="line">tf.nn.conv2d(x, kernel, strides=[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>) <span class="comment"># padding is 'SAME' or 'VALID' depending on stride is 1 or larger</span></span><br><span class="line"></span><br><span class="line">tf.nn.bias_add(prev_layer, bias)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dropout layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line"><span class="comment"># set keep_prob as 0.5 during training and 1 during testing</span></span><br><span class="line">tf.nn.dropout(h_fc1, keep_prob)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pooling layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(x, ksize=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>],  strides=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], padding=<span class="string">'VALID'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>loss layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))</span><br><span class="line">	tf.nn.l2_loss(prev_layer)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>metric layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculate top-k accuracy</span></span><br><span class="line">tf.nn.in_top_k(logits, label_holder, k) <span class="comment"># the accuracy of top k</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>activation layer<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(prev_layer)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>other layers<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tf.one_hot(self.input_class, self.n_class)</span><br><span class="line">tf.nn.embedding_lookup(codebook, indices)</span><br><span class="line">tf.nn.lrn() <span class="comment"># legacy</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Common-Operations"><a href="#Common-Operations" class="headerlink" title="Common Operations"></a>Common Operations</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tf.matmul</span><br><span class="line">tf.pow</span><br><span class="line">tf.diag_part</span><br><span class="line">tf.reduce_sum</span><br><span class="line">tf.reduce_mean</span><br><span class="line">tf.nn.softmax</span><br><span class="line">tf.tile(a,(<span class="number">2</span>,<span class="number">2</span>)) </span><br><span class="line">tf.nn.embedding_lookup</span><br><span class="line">sim.flatten</span><br><span class="line">tf.squeeze</span><br><span class="line">tf.reshape</span><br><span class="line">tf.concat(values=[a,b,c], axis=<span class="number">3</span>)</span><br><span class="line">tf.gather  <span class="comment">#get indexed value, only on 0-dim</span></span><br><span class="line">tf.gather_nd</span><br><span class="line">tf.map_fn</span><br><span class="line">tf.scan_fn</span><br><span class="line">tf.fold1/foldr</span><br></pre></td></tr></table></figure>
+<h3 id="Training-and-testing"><a href="#Training-and-testing" class="headerlink" title="Training and testing"></a>Training and testing</h3><hr>
+<ul>
+<li><p>training stage</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">optimizer = tf.train.GradientDescentOptimizer(<span class="number">0.01</span>)</span><br><span class="line">train = optimizer.minimize(loss)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>): <span class="comment">#note the iteration number here</span></span><br><span class="line">    sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>testing stage</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)</span><br><span class="line">sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><hr>
+<ul>
+<li><p>For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details.<br>  ``python<br>  with tf.Session(config=config) as sess:      </p>
+<pre><code>  coord = tf.train.Coordinator()
+  threads = tf.train.start_queue_runners(sess=sess, coord=coord)
+  sess.run(tf.initialize_local_variables())
+  #main code
+  coord.request_stop()
+  coord.join(threads)
+</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* With tfrecord and slim, using queue is much easier by using 	`slim.queues.QueueRunners`</span><br><span class="line">	```python</span><br><span class="line">	with tf.Session(config=config) as sess:        </span><br><span class="line">		with slim.queues.QueueRunners(sess):</span><br><span class="line">	``` </span><br><span class="line">  or `sv.managed_session`</span><br><span class="line">	```python</span><br><span class="line">	sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None)        </span><br><span class="line">	    with sv.managed_session() as sess:</span><br></pre></td></tr></table></figure>
+<p>Sample code of generating tfrecord dataset and reading data via queue can downloaded <a href="\code\TensorFlow\generate_tfrecord.rar">here</a></p>
+</li>
+</ul>
+<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><hr>
+<ul>
+<li><p>check tensorflow version</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.__version__.split(<span class="string">'.'</span>)[<span class="number">0</span>] != <span class="string">"1"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>count parameter numbers</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) <span class="keyword">for</span> v <span class="keyword">in</span> tf.trainable_variables()])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/tensorflow/TensorFlow Input Data with Queue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1570,320 +1973,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/" itemprop="url">Variants of Convolution in Deep Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and  the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$.</p>
-</li>
-<li><p>Pointwise convolution: pointwise fully connected across all the channels.</p>
-</li>
-<li><p>Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in <a href="https://arxiv.org/pdf/1707.01083.pdf" target="_blank" rel="noopener">ShuffleNet</a>.</p>
-</li>
-<li><p>Depthwise separable convolution = depthwise convolution + pointwise convolution</p>
-</li>
-<li><p>Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for <a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank" rel="noopener">segmentation</a>. </p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">Deformable convolution</a> (left) and <a href="https://arxiv.org/pdf/1506.02025.pdf" target="_blank" rel="noopener">spatial transformation network</a> (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation.<br> <img src="https://i.imgur.com/ht5DXxp.jpg" width="100%" height="100%"></p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1709.01507.pdf" target="_blank" rel="noopener">Squeeze-and-Excitation</a>: learn different weights for each channel.<br> <img src="https://i.imgur.com/CMk5i17.jpg" width="80%" height="80%"></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Tricky Back Propagation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Tricky Back Propagation/" itemprop="url">Tricky Back Propagation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Some operations are indifferentiable, which causes difficulties for back propagation.</p>
-<ol>
-<li><p>sample from distribution: reparameterization trick<br><a href="https://arxiv.org/pdf/1312.6114.pdf" target="_blank" rel="noopener">Auto-Encoding Variational Bayes</a> </p>
-</li>
-<li><p>argmax: soft argmax<br><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.4107&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Gradient Descent Optimization of Smoothed Information Retrieval Metrics</a> </p>
-</li>
-<li><p>crop: two-dimension boxcar function<br><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Look_Closer_to_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-grained Image Recognition</a> </p>
-</li>
-<li><p>delta function: lookup table+blur kernel<br><a href="https://arxiv.org/pdf/1801.05117.pdf" target="_blank" rel="noopener">Reblur2Deblur: Deblurring Videos via Self-Supervised Learning</a> </p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1933,7 +2027,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">139</span>
+                  <span class="site-state-item-count">141</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
