@@ -84,7 +84,7 @@
   <entry>
     <title><![CDATA[Video Object Segmentation]]></title>
     <url>%2F2019%2F01%2F16%2Fdeep_learning%2FVideo%20Object%20Segmentation%2F</url>
-    <content type="text"><![CDATA[Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. Davis challenge https://davischallenge.org/ held since 2017, related papers [1][2] Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016. Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).]]></content>
+    <content type="text"><![CDATA[Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. Davis challenge https://davischallenge.org/ held since 2017, related papers [1] [2] Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016. Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
