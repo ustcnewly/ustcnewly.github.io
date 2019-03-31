@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/31/machine_learning/GAN Evaluation Metric/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
+                <a class="post-title-link" href="/2019/03/31/machine_learning/GAN Evaluation Metric/" itemprop="url">GAN Evaluation Metric</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-31T14:57:24+08:00">
+                2019-03-31
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -374,83 +374,20 @@
       
         
           
-            <ol>
-<li>Preinstallation<ul>
-<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
-<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
-<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
-</ul>
-</li>
-<li>SSH keys<ul>
-<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
-<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
-<li>create the key in github: account setting-&gt;SSH</li>
-<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
-</ul>
-</li>
-<li><p>create an empty folder as Hexo folder</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
-<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
-</li>
-<li><p>deploy local Hexo folder</p>
-<ul>
-<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
-</li>
-<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
-</ul>
-</li>
-<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
-<li><p>local search</p>
-<ul>
-<li><code>$npm install hexo-generator-searchdb --save</code></li>
-<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>add social links: in the theme _config.yml file</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>latex: </p>
-<ul>
-<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
-<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>to address the conflict between MathJax and Hexo</p>
-   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>push posts to the top</p>
-<ul>
-<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
-<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
-</ul>
-</li>
-<li><p>insert code block</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>insert image</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>Tips:</strong> </p>
+            <p>An empirical study on evaluation metrics of generative adversarial networks <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">[pdf]</a><a href="https://github.com/xuqiantong/GAN-Metrics" target="_blank" rel="noopener">[code]</a></p>
 <ol>
-<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+<li><p>Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet</p>
+<script type="math/tex; mode=display">IS=\exp{E_x[KL(p_M(y|x)||p_M(y))]}</script><p> in which $p_M(y)$ is the marginal distribution of  $p_M(y|x)$. Expect $p_M(y)$ to be of low entropy while $p_M(y|x)$ to be of high entropy. The higher, the better.</p>
 </li>
-<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
-<ul>
-<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
-<li>clean the folder <code>.deploy_git</code></li>
-<li><code>hexo clean</code> and <code>hexo d -g</code></li>
-</ul>
+<li><p>Mode score: extension of Inception score</p>
+</li>
+<li><p>Kernel MMD: MMD distance between two data distributions</p>
+</li>
+<li><p>Wasserstein distance: Wasserstein distance (Earth mover’s distance) between two data distributions.</p>
+</li>
+<li><p>Fréchet Inception Distance (FID): extract InceptionNet features and measure the data distribution distance. The lower, the better.</p>
+<script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+\tr(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
+<li><p>KNN score: treat true data as positive and generated data as negative. Calculate the leave-one-out (LOO) accuracy based on 1-NN classifier.</p>
 </li>
 </ol>
 
@@ -1937,7 +1874,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">141</span>
+                  <span class="site-state-item-count">142</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
