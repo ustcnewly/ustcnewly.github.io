@@ -77,17 +77,17 @@
 
 
 
-<meta name="description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp{E_x[KL(p_M(y|x">
+<meta name="description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp\{E_x[KL(p_M(y|">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GAN Evaluation Metric">
 <meta property="og:url" content="http://yoursite.com/2019/03/31/machine_learning/GAN Evaluation Metric/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp{E_x[KL(p_M(y|x">
+<meta property="og:description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp\{E_x[KL(p_M(y|">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-31T08:57:05.028Z">
+<meta property="og:updated_time" content="2019-03-31T10:06:04.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN Evaluation Metric">
-<meta name="twitter:description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp{E_x[KL(p_M(y|x">
+<meta name="twitter:description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp\{E_x[KL(p_M(y|">
 
 
 
@@ -376,7 +376,7 @@
         <p>An empirical study on evaluation metrics of generative adversarial networks <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">[pdf]</a><a href="https://github.com/xuqiantong/GAN-Metrics" target="_blank" rel="noopener">[code]</a></p>
 <ol>
 <li><p>Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet</p>
-<script type="math/tex; mode=display">IS=\exp{E_x[KL(p_M(y|x)||p_M(y))]}</script><p> in which $p_M(y)$ is the marginal distribution of  $p_M(y|x)$. Expect $p_M(y)$ to be of low entropy while $p_M(y|x)$ to be of high entropy. The higher, the better.</p>
+<script type="math/tex; mode=display">IS=\exp\{E_x[KL(p_M(y|x)||p_M(y))]\}</script><p> in which $p_M(y)$ is the marginal distribution of  $p_M(y|x)$. Expect $p_M(y)$ to be of low entropy while $p_M(y|x)$ to be of high entropy. The higher, the better.</p>
 </li>
 <li><p>Mode score: extension of Inception score</p>
 </li>
@@ -385,7 +385,7 @@
 <li><p>Wasserstein distance: Wasserstein distance (Earth mover’s distance) between two data distributions.</p>
 </li>
 <li><p>Fréchet Inception Distance (FID): extract InceptionNet features and measure the data distribution distance. The lower, the better.</p>
-<script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+\tr(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
+<script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+trace(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
 <li><p>KNN score: treat true data as positive and generated data as negative. Calculate the leave-one-out (LOO) accuracy based on 1-NN classifier.</p>
 </li>
 </ol>
