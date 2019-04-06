@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Video Harmonization]]></title>
+    <url>%2F2019%2F04%2F06%2Fdeep_learning%2FVideo%20Harmonization%2F</url>
+    <content type="text"><![CDATA[First deep learning approach for video harmonization [1] [1] Haozhi Huang, Senzhe Xu, Junxiong Cai, Wei Liu, Shimin Hu, “Temporally Coherent Video Harmonization UsingAdversarial Networks”, arxiv, 2018.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Optical Flow]]></title>
     <url>%2F2019%2F04%2F05%2Fmachine_learning%2FOptical%20Flow%2F</url>
     <content type="text"><![CDATA[Estimate optical flow based on video: FlowNet [1], FlowNet2 [2] Estimate optical flow based on image: [3] [4] [5] [1] Dosovitskiy, Alexey, et al. “Flownet: Learning optical flow with convolutional networks.” ICCV, 2015. [2] Ilg, Eddy, et al. “Flownet 2.0: Evolution of optical flow estimation with deep networks.” CVPR, 2017. [3] Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018. [4] Silvia L. Pintea, Jan C. van Gemert, and Arnold W. M. Smeulders, “Deja Vu: Motion Prediction in Static Images”, arxiv, 2018. [5] Walker, Jacob, Abhinav Gupta, and Martial Hebert. “Dense optical flow prediction from a static image.” ICCV, 2015.]]></content>
