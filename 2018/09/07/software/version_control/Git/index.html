@@ -87,7 +87,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.imgur.com/t0IXoZq.jpg">
 <meta property="og:image" content="https://i.imgur.com/eZBhlc6.jpg">
-<meta property="og:updated_time" content="2018-02-15T01:22:36.504Z">
+<meta property="og:updated_time" content="2019-04-10T01:37:49.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="Initialize center and local repository  123456789#init from scratchgit init &amp;lt;local_dir&amp;gt;#for central repository without working directory, use --baregit init --bare &amp;lt;local_dir&amp;gt;#clone from">
@@ -441,6 +441,19 @@
 <li><code>checkout</code> and <code>reset</code> work on both file and commit with different meanings and usages, while <code>revert</code> only works on commit.</li>
 <li><code>reset</code> is often used for cancelling uncommited changes while <code>revert</code> is often used for cancelling commited changes.</li>
 <li>Compared with <code>reset</code>, <code>checkout</code> and <code>revert</code> focus on the modification, so they are forbidden in many cases.</li>
+</ol>
+<p><strong>Github User:</strong></p>
+<ol>
+<li>create a repository on GitHub</li>
+<li>create a local folder</li>
+<li><code>git init</code></li>
+<li><code>git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</code></li>
+<li><code>git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
+<li><code>git push --set-upstream &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
+<li>add files</li>
+<li><code>git add *</code></li>
+<li><code>git commit -m &quot;msg&quot;</code></li>
+<li><code>git push</code> </li>
 </ol>
 <p><strong>Resources:</strong><br>A good Chinese tutorial for git is <a href="http://git.oschina.net/progit/index.html" target="_blank" rel="noopener">here</a>.<br>A good English tutorial for git is <a href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank" rel="noopener">here</a>.</p>
 
