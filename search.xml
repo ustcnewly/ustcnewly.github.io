@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Domain Adaptation for Segmentation]]></title>
+    <url>%2F2019%2F04%2F10%2Fdeep_learning%2FDomain%20Adaptation%20for%20Segmentation%2F</url>
+    <content type="text"><![CDATA[Curriculumn learning for domain adaptation: [1] Domain adaptation with privileged information (depth): SPIGAN [2] (enforce synthetic image and generated image to predict the same depth), [3] (adversarial learning on depth) [1] Zhang, Yang, Philip David, and Boqing Gong. “Curriculum domain adaptation for semantic segmentation of urban scenes.” ICCV, 2017. [2] Lee, Kuan-Hui, et al. “SPIGAN: Privileged Adversarial Learning from Simulation.” ICLR, 2019. [3] Vu, Tuan-Hung, et al. “DADA: Depth-aware Domain Adaptation in Semantic Segmentation.” arXiv preprint arXiv:1904.01886 (2019).]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>DA</tag>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Video Harmonization]]></title>
     <url>%2F2019%2F04%2F06%2Fdeep_learning%2FVideo%20Harmonization%2F</url>
     <content type="text"><![CDATA[First deep learning approach for video harmonization [1] [1] Haozhi Huang, Senzhe Xu, Junxiong Cai, Wei Liu, Shimin Hu, “Temporally Coherent Video Harmonization UsingAdversarial Networks”, arxiv, 2018.]]></content>
