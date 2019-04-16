@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Image Matting]]></title>
+    <url>%2F2019%2F04%2F16%2Fdeep_learning%2FImage%20Matting%2F</url>
+    <content type="text"><![CDATA[FundamentalThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ [1] [2] [3]. Dataset Alphamatting.com Dataset: 25 train images, 8 test images, each has 3 different trimaps: small, large, user. Input: image and trimap. Composition-1k Dataset: 1000 images and 50 unique foregrounds. Matting Human Dataset: 34427 images, annotation is not very accurate. Evaluation metric quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error. Method The first end-to-end method for image mattingis here. Reference:[1]]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Aesthetic Cropping]]></title>
     <url>%2F2019%2F04%2F12%2Fdeep_learning%2FAesthetic%20Cropping%2F</url>
     <content type="text"><![CDATA[Aesthetic features: mimick photographic rules and practices such as the golden ratio, the rule of thirds and color harmonies [3] pairwise ranking [1][2] classification/regression [3] (photostyle) [4] (aesthetic attribute, plus pairwise ranking) Salience aware [6] References:[1] Good View Hunting: Learning Photo Composition from Dense View Pairs. CVPR 2018[2] Learning to Compose with Professional Photographs on the Web. ACMMM 2017[3] AVA: A large-scale database for aesthetic visual analysis. CVPR 2012[4] Photo Aesthetics Ranking Network with At tributes and Content Adaptation. ECCV 2016[5] Quantitative Analysis of Automatic Image Cropping Algorithms: A Dataset and Comparative Study. WACV 2017[6] Deep Cropping via Attention Box Prediction and Aesthetics Assessment. ICCV 2017]]></content>
