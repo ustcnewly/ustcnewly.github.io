@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="BackgroundThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-16T12:24:49.552Z">
+<meta property="og:updated_time" content="2019-04-16T12:51:07.617Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Matting">
 <meta name="twitter:description" content="BackgroundThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target)">
@@ -388,11 +388,11 @@
 </ul>
 <h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
 <li>Affinity-based matting methods <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </li>
-<li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and composite image loss; refine alpha.</li>
+<li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and compositional loss; refine alpha.</li>
 <li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block.</li>
-<li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; composite loss.</li>
+<li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; compositional loss.</li>
 <li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
-<li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and composite loss.</li>
+<li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and compositional loss.</li>
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.</p>
 <p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
