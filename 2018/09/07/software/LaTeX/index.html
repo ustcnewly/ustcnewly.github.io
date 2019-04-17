@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Installation: Ubuntu   12sudo apt-get install texlive-full	sudo apt-get install texmaker  Windows  Install Miktex: https://miktex.org/download Install texmaker or texstudio    Extension: Latexdiff Ins">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-11T05:01:59.399Z">
+<meta property="og:updated_time" content="2019-04-17T12:40:40.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LaTeX">
 <meta name="twitter:description" content="Installation: Ubuntu   12sudo apt-get install texlive-full	sudo apt-get install texmaker  Windows  Install Miktex: https://miktex.org/download Install texmaker or texstudio    Extension: Latexdiff Ins">
@@ -397,15 +397,13 @@
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
 <li><p>Refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/latex_symbols.pdf" target="_blank" rel="noopener">this</a> for commonly used symbols</p>
 </li>
-<li><p>Set the indentation in paragraphs: <code>\setlength\parindent{0pt}</code> </p>
+<li><p>Set color: <code>\usepackage{xcolor}</code> and <code>\textcolor{red}{}</code></p>
 </li>
-<li><p>set the separation between paragraphs: <code>\setlength{\parskip}{10pt}</code></p>
+<li><p>Setlength: set the indentation in paragraphs <code>\setlength\parindent{0pt}</code>; set the separation between paragraphs <code>\setlength{\parskip}{10pt}</code>; set column width in table <code>\setlength{\tabcolsep}{12pt}</code>; set the space below table/figure <code>\setlength{\textfloatsep}{2pt}</code></p>
 </li>
-<li><p>set color: <code>\usepackage{xcolor}</code> and <code>\textcolor{red}{}</code></p>
+<li><p>Math annotation: expectation <code>\usepackage{amsfonts}</code> and <code>\mathbb{E}</code>; not imply: <code>\usepackage{amssymb}</code> and <code>\nRightarrow</code></p>
 </li>
-<li><p>expectation symbol: <code>\usepackage{amsfonts}</code> and <code>\mathbb{E}</code></p>
-</li>
-<li><p>cannot infer: <code>\usepackage{amssymb}</code> and <code>\nRightarrow</code></p>
+<li><p>Encoding error: try adding <code>\UseRawInputEncoding</code> or <code>\usepackage[utf8x]{inputenc}</code> or <code>\usepackage{newunicodechar}</code> <code>\newunicodechar{ﬁ}{fi}</code> </p>
 </li>
 </ol>
 
