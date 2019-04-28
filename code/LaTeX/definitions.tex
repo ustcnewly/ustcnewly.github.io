@@ -1,0 +1,96 @@
+
+\usepackage{amsmath}
+\usepackage{etoolbox}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{bm}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\newtheorem{deftn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+
+\newcommand{\MyMapTemplatePrefixc}[4]{\expandafter#1\csname#3#4\endcsname{#2{#4}}} % it remembles a template: \#3#4 --> #2{#4}
+\forcsvlist{\MyMapTemplatePrefixc {\def} {\mathcal}{c}} {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}  % e.g., \cA --> \mathcal{A}
+
+\newcommand{\MyMapTemplatePrefixtb}[5]{\expandafter#1\csname#4#5\endcsname{#2{#3{#5}}}} % it remembles a template: \#3#4 --> #2{#4}
+\forcsvlist{\MyMapTemplatePrefixtb {\def} {\tilde}{\mathbf}{t}} {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}  % e.g., \tA --> \tilde{\A}
+\forcsvlist{\MyMapTemplatePrefixtb {\def} {\tilde}{\mathbf}{t}} {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}  % e.g., \ta --> \tilde{\a}
+
+\newcommand{\MyMapTemplateNoPrefix}[3]{\expandafter#1\csname#3\endcsname{#2{#3}}}
+\forcsvlist{\MyMapTemplateNoPrefix {\def} {\mathbf}} {0, 1, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, u, v, w, x, y, z} % e.g., \a --> \mathbf{a}
+\forcsvlist{\MyMapTemplateNoPrefix {\def} {\mathbf}} {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}  % e.g., \A --> \mathbf{A}
+
+\def\ba{\bm{\alpha}}
+\def\bb{\bm{\beta}}
+\def\bd{\bm{\delta}}
+\def\bz{\bm{\zeta}}
+\def\bn{\bm{\nu}}
+
+\def\bP{\bm{\Phi}}
+\def\bQ{\bm{\Psi}}
+\def\bS{\bm{\Sigma}}
+\def\bt{\bm{\theta}}
+
+\def\tc{\tilde{c}}
+\def\tk{\tilde{k}}
+\def\tm{\tilde{m}}
+\def\tl{\tilde{l}}
+
+\def\bbR{{\mathbb R}}
+
+\def\tr{\mbox{tr}}
+\def\diag{\mbox{diag}}
+
+\def\etal{\emph{et al.}}
+\def\ie{\emph{i.e.}}
+\def\eg{\emph{e.g.}}
+\def\resp{\emph{resp.}}
+\def\wrt{\emph{w.r.t.}~}
+
+\def \epsA{\E}
+\def \epsAele{E}
+\def \ij{ij}
+\def \ii{ii}
+\def \11{11}
+\def \22{22}
+\def \nn{nn}
+\def \opdiag{{\Gamma}_{diag}}
+\def \LagOne{\u}
+\def \LagOneele{u}
+\def \LagTwo{\V}
+\def \LagTwoele{V}
+\def \1{\mathbf{1}}
+
+\def \LagOnly{\L}
+\def \LagOnlyele{L}
+\def \1{\mathbf{1}}
+\def \setP{\mathcal{A}}
+\def \setPtwo{\mathcal{B}}
+\def \OneNN{\1_n\1_n'}
+\def \LagAll{\mathcal{L}(\P,\U,\V,\LagOnly)}
+\def \opP{\mathcal{P}}
+
+\def \LLagTwo{\H}
+\def \LLagTwoele{H}
+\def \LLagOne{\L}
+\def \LLagOnlyele{L}
+\def \LLagAll{\mathcal{L}(\P,\Z,\LagOne)}
+
+\def \setP{\mathcal{A}}
+\def \setS{\mathcal{S}}
+\def \setPtwo{\mathcal{B}}
+\def \opP{\mathcal{P}}
+\def \LapQ{\mathcal{F}\left(\expQ\right)}%{\mathcal{F}\left(\Q\right)}%{\mathbf{L}_{P}}
+\def \LapA{\mathcal{F}(\A)}%{\textbf{Lap}(\A)}%{\mathbf{L}_{A}}
+\def \Aji{M_{\ji}}
+\def \Aij{M_{\ij}}
+\def \Qij{\frac{P_{\ij}+P_{\ji}}{2}}
+\def \expQ{\frac{\P+\P'}{2}}
+\def \eqQ{\Q - \frac{\P+\P'}{2}}
