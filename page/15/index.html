@@ -281,6 +281,231 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/GAN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/GAN/" itemprop="url">GAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>The GAN zoo: <a href="https://github.com/hindupuravinash/the-gan-zoo" target="_blank" rel="noopener">https://github.com/hindupuravinash/the-gan-zoo</a></p>
+<h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems:"></a>Problems:</h3><ul>
+<li><p>oscillation: can train for a very long time without clearly generating better samples.</p>
+</li>
+<li><p>mode collapse: min-max is not equal to max-min</p>
+</li>
+</ul>
+<h3 id="Training-tricks"><a href="#Training-tricks" class="headerlink" title="Training tricks:"></a>Training tricks:</h3><p>17 tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
+<ul>
+<li><p>soft label: replace 1 with 0.9 and 0 with 0.3</p>
+</li>
+<li><p>train discriminator more times (e.g., 2X) than generator</p>
+</li>
+<li><p>use labels: auxiliary tasks</p>
+</li>
+<li><p>normalize inputs to [-1, 1]</p>
+</li>
+<li><p>use tanh before output</p>
+</li>
+<li><p>use batchnorm (not for the first and last layer)</p>
+</li>
+<li><p>use spherical distribution instead of uniform distribution</p>
+</li>
+<li><p>leaky relu</p>
+</li>
+<li><p>stability tricks from RL</p>
+</li>
+</ul>
+<p>Tricks from the BigGAN <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a> </p>
+<ul>
+<li><p>class-conditional BatchNorm</p>
+</li>
+<li><p>Spectral normalization</p>
+</li>
+<li><p>orthogonal initialization</p>
+</li>
+<li><p>truncated prior (truncation trick to seek the trade-off between fidelity and variety)</p>
+</li>
+<li><p>enforce orthogonality on weights to improve the model smoothness</p>
+</li>
+</ul>
+<p>More tricks</p>
+<ul>
+<li><p>gradient penalty <a href="https://papers.nips.cc/paper/7159-improved-training-of-wasserstein-gans.pdf" target="_blank" rel="noopener">[8]</a></p>
+</li>
+<li><p>unrolling <a href="https://arxiv.org/pdf/1611.02163.pdf" target="_blank" rel="noopener">[9]</a> and packing <a href="https://papers.nips.cc/paper/7423-pacgan-the-power-of-two-samples-in-generative-adversarial-networks.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+<li></li>
+</ul>
+<h3 id="Interesting-variants"><a href="#Interesting-variants" class="headerlink" title="Interesting variants:"></a>Interesting variants:</h3><ul>
+<li><p>LSGAN: replace cross-entropy loss with least square loss</p>
+</li>
+<li><p>Wasserstein GAN: replace discriminator with a critic function</p>
+</li>
+<li><p>LAPGAN: coarse-to-fine using laplacian pyramid</p>
+</li>
+<li><p>seqGAN: generate discrete sequences</p>
+</li>
+<li><p>E-GAN <a href="https://arxiv.org/pdf/1803.00657.pdf" target="_blank" rel="noopener">[2]</a>: place GAN under the framework of genetic evolution</p>
+</li>
+<li><p>Dissection GAN <a href="https://arxiv.org/pdf/1811.10597.pdf" target="_blank" rel="noopener">[3]</a>: use intervention for causality</p>
+</li>
+<li><p>CoGAN <a href="https://papers.nips.cc/paper/6544-coupled-generative-adversarial-networks.pdf" target="_blank" rel="noopener">[4]</a>: two generators and discriminators softly share parameters</p>
+</li>
+<li><p>DCGAN <a href="https://arxiv.org/pdf/1511.06434.pdf%C3%AF%C2%BC%E2%80%B0" target="_blank" rel="noopener">[5]</a></p>
+</li>
+<li><p>Progressive GAN  <a href="https://arxiv.org/pdf/1710.10196.pdf?__hstc=200028081.1bb630f9cde2cb5f07430159d50a3c91.1524009600081.1524009600082.1524009600083.1&amp;__hssc=200028081.1.1524009600084&amp;__hsfp=1773666937" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>Style-based GAN <a href="https://arxiv.org/pdf/1812.04948.pdf?utm_campaign=nathan.ai%20newsletter&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" rel="noopener">[7]</a></p>
+</li>
+</ul>
+<h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
+<p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a>.</p>
+<h3 id="Materials"><a href="#Materials" class="headerlink" title="Materials:"></a>Materials:</h3><p>A good tutorial: <a href="https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf" target="_blank" rel="noopener">https://github.com/mingyuliutw/cvpr2017\_gan\_tutorial/blob/master/gan_tutorial.pdf</a></p>
+<p>[1] Brock A, Donahue J, Simonyan K. Large scale gan training for high fidelity natural image synthesis[J]. arXiv preprint arXiv:1809.11096, 2018.</p>
+<p>[2] Wang C, Xu C, Yao X, et al. Evolutionary Generative Adversarial Networks[J]. arXiv preprint arXiv:1803.00657, 2018.</p>
+<p>[3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks[J]. arXiv preprint arXiv:1811.10597, 2018.</p>
+<p>[4] Liu M Y, Tuzel O. Coupled generative adversarial networks[C]//Advances in neural information processing systems. 2016: 469-477.</p>
+<p>[5] Radford, Alec, Luke Metz, and Soumith Chintala. “Unsupervised representation learning with deep convolutional generative adversarial networks.” arXiv preprint arXiv:1511.06434 (2015).</p>
+<p>[6] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017).</p>
+<p>[7] Karras, Tero, Samuli Laine, and Timo Aila. “A Style-Based Generator Architecture for Generative Adversarial Networks.” arXiv preprint arXiv:1812.04948 (2018).</p>
+<p>[8] Gulrajani, Ishaan, et al. “Improved training of wasserstein gans.” Advances in Neural Information Processing Systems. 2017.</p>
+<p>[9] Metz, Luke, et al. “Unrolled generative adversarial networks.” arXiv preprint arXiv:1611.02163 (2016).</p>
+<p>[10] Lin, Zinan, et al. “PacGAN: The power of two samples in generative adversarial networks.” Advances in Neural Information Processing Systems. 2018.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Face Verification and Recognition/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1536,7 +1761,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">147</span>
+                  <span class="site-state-item-count">148</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
