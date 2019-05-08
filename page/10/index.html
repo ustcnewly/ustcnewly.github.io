@@ -397,6 +397,15 @@
 <li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
 </li>
 </ol>
+<p><strong>Critical Issues:</strong></p>
+<ol>
+<li><p>generalized ZSL, why first predict seen or unseen?: As claimed in <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">[1]</a>, since we only see labeled data from seen classes, during training, the scoring functions of seen classes tend to dominate those of unseen classes, leading to biased predictions in GZSL and aggressively classifying<br>a new data point into the label space of S because classifiers for the seen classes do not get trained on negative examples from the unseen classes.</p>
+</li>
+<li><p>hubness problem <a href="https://arxiv.org/pdf/1412.6568.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>: As claimed in <a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>, one practical effect of the ZSL domain shift is the Hubness problem. Specifically, after the domain shift, there are a small set of hub test-class prototypes that become nearest or K nearest neighbours to the majority of testing samples in the semantic space, while others are NNs of no testing instances. This results in poor accuracy and highly biased predictions with the majority of testing examples being assigned to a small minority of classes. </p>
+</li>
+<li><p>projection domain shift: what is the impact on the decision values?</p>
+</li>
+</ol>
 <p><strong>Datasets:</strong></p>
 <ol>
 <li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
