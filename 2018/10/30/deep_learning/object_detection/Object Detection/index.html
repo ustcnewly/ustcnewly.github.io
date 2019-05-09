@@ -80,17 +80,17 @@
 <meta name="description" content="two-stage: use region proposal network (RPN) to generate proposals  faster-RCNN     one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios.   YO">
 <meta name="keywords" content="deep learning,object detection">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Evolving Object Detection">
-<meta property="og:url" content="http://yoursite.com/2018/10/30/deep_learning/object_detection/Evolving Object Detection/index.html">
+<meta property="og:title" content="Object Detection">
+<meta property="og:url" content="http://yoursite.com/2018/10/30/deep_learning/object_detection/Object Detection/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="two-stage: use region proposal network (RPN) to generate proposals  faster-RCNN     one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios.   YO">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.imgur.com/1otto8I.png">
 <meta property="og:image" content="https://i.imgur.com/1jX0kAI.jpg">
 <meta property="og:image" content="https://i.imgur.com/pqK8zQM.jpg">
-<meta property="og:updated_time" content="2018-12-29T01:17:39.273Z">
+<meta property="og:updated_time" content="2019-05-09T05:01:55.307Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Evolving Object Detection">
+<meta name="twitter:title" content="Object Detection">
 <meta name="twitter:description" content="two-stage: use region proposal network (RPN) to generate proposals  faster-RCNN     one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios.   YO">
 <meta name="twitter:image" content="https://i.imgur.com/1otto8I.png">
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/30/deep_learning/object_detection/Evolving Object Detection/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/30/deep_learning/object_detection/Object Detection/"/>
 
 
 
 
 
-  <title>Evolving Object Detection | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Object Detection | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/deep_learning/object_detection/Evolving Object Detection/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/deep_learning/object_detection/Object Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Evolving Object Detection</h1>
+          <h1 class="post-title" itemprop="name headline">Object Detection</h1>
         
 
         <div class="post-meta">
@@ -391,10 +391,17 @@
 <p><img src="https://i.imgur.com/1jX0kAI.jpg" width="50%"></p>
 </li>
 </ol>
-<p><strong>Corner:</strong> remove anchors and directly predict corner points</p>
+<p><strong>Corner Points:</strong> remove anchors and directly predict corner points</p>
 <ol>
 <li><p><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hei_Law_CornerNet_Detecting_Objects_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CornerNet</a></p>
 <p><img src="https://i.imgur.com/pqK8zQM.jpg" width="90%"></p>
+</li>
+</ol>
+<p><strong>No anchor:</strong> actually use aach cell as an anchor</p>
+<ol>
+<li><p><a href="https://arxiv.org/pdf/1904.11490.pdf" target="_blank" rel="noopener">RPDet</a>: use object centers as positive cells; paired with deformable CNN</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1904.03797.pdf" target="_blank" rel="noopener">FoveaBox</a>: use the cells in fovea area (object bounding box) as positive cells</p>
 </li>
 </ol>
 
