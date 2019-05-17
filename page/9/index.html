@@ -281,6 +281,321 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/HTML/HTML+CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/HTML/HTML+CSS/" itemprop="url">HTML+CSS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Website consists of three components: structure(HTML), representation(CSS), action(Javascript). XHTML is a strict version of HTML. The structure of webpage is previously done based on table, but currently via CSS.</p>
+</li>
+<li><p>Escape character in HTML source code: <code>&amp;lt;</code>:&lt;, <code>&amp;gt;</code>:&gt;, <code>&amp;nbsp;</code>:space</p>
+</li>
+<li><p><code>&lt;p&gt;</code>:paragraph, <code>&lt;br&gt;</code>:break, <code>&lt;blockquote&gt;</code>:indented paragraph, <code>&lt;b&gt;</code>:bold, <code>&lt;i&gt;</code>:italic, <code>&lt;u&gt;</code>:underline, <code>&lt;s&gt;</code>:deleteline, <code>&lt;strong&gt;</code>:emphasize, <code>&lt;ul&gt;&lt;li&gt;</code>:unordered list, <code>&lt;ol&gt;&lt;li&gt;</code>:ordered list. </p>
+</li>
+<li><p><code>&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</code>:hyperlink.  <code>&lt;a href=&quot;mailto:ustcnewly@gmail.com&quot;&gt;&lt;/a&gt;</code>. An area on the image can also be used to establish hyperlink based on <code>&lt;map&gt;</code> and <code>&lt;ared&gt;</code>. </p>
+</li>
+<li><p>Use <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> to split webpage. Note <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> belong to the the same level as <code>&lt;body&gt;</code>. <code>&lt;frameset cols=&quot;30%, 30%, *&quot;&gt;&lt;frame src=left.html&gt;</code>. <code>&lt;frame&gt;</code> is obsolete in HTML5. </p>
+</li>
+<li><p><code>&lt;table border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;6&quot; &gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/table&gt;</code>. Don’t miss any <code>&lt;tr&gt;</code> or <code>&lt;td&gt;</code>, otherwise the table will be messy. Use <code>&lt;colspan&gt;</code> or <code>&lt;rowspan&gt;</code> to merge cells. For professional table, we can use <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>. <code>&lt;table&gt;</code> is now rarely used for layout design. </p>
+</li>
+<li><p>Insert multimedia elements: </p>
+<ul>
+<li>image: <code>&lt;img src=&quot;a.jpg&quot; height=&quot;200&quot; width=&quot;200&quot; alt=&quot;desc&quot;/&gt;</code>  </li>
+<li>flash: <code>&lt;embed src=&quot;a.swf&quot;  width=&quot;490&quot; height=&quot;400&quot; wmode=&quot;transparent&quot; &gt;&lt;/embed&gt;</code> </li>
+<li>bgmusic: <code>&lt;audio src=&quot;a.mp3&quot; hidden=&quot;true&quot; autoplay=&quot;true&quot; loop=&quot;true&quot;&gt;&lt;/audio&gt;</code></li>
+<li>bgtile: <code>&lt;body background=&quot;a.png&quot;&gt;&lt;/body&gt;</code></li>
+</ul>
+</li>
+<li><p>Css: object, attribute, and value. Refer to <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">official website</a> for details.</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.myclass&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line">&amp;lt;p class="myclass"&gt;&amp;lt;/p&gt;</span><br><span class="line"></span><br><span class="line">#myid&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line">&amp;lt;p id="myid"&gt;&amp;lt;/p&gt;</span><br><span class="line"># one id name should be used only once in one html file.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Methods to use Css. </p>
+<ul>
+<li><p>a. Directly insert contents into <code>&lt;style&gt;&lt;/style&gt;</code>.</p>
+</li>
+<li><p>b. <code>&lt;link href=&quot;mycss.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+</li>
+<li><p>c. <code>&lt;style type=&quot;text/css&quot;&gt;@import &quot;mycss.css&quot;&lt;/style&gt;</code>. One html file can import more than one Css files. A Css file can also import other Css files.</p>
+<p> The priority of a is higher than b/c. The more special, the higher priority. For the methods with equal priority, override principle is applied. The difference between b and c is that c loads all the Css codes while b only loads the corresponding Css code when necessary. </p>
+</li>
+</ul>
+</li>
+<li><p>Some special usage of Css.</p>
+<ul>
+<li>class for specific tag: <code>p.special{}</code></li>
+<li>union of multiple tags: <code>h1,h2,p{}</code></li>
+<li>embeded tags: <code>p span{}</code> for descendents and <code>p&gt;span{}</code> for child. complex embedding mixing tags, classes, and ids: <code>td.out .inside strong{}</code>. The easiest way to recognize this kind of embedding is “(tag)(.class) (tag)(#id)”</li>
+<li>consecutive tags: <code>th+td+td+td{}</code>, the style is applied to the third <code>td</code>.</li>
+</ul>
+</li>
+<li><p>Css formats for some commonly used tags.</p>
+<ul>
+<li><p>body:</p>
+   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">    background-image:a.jpg;</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">    background-position:200px 100px;</span><br><span class="line">	background-attachment:fixed;</span><br><span class="line">	background-size: 20% 100%;</span><br><span class="line">	cursor:pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>text:</p>
+   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">p&#123;	    </span><br><span class="line">    float:left;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">    font-size:15px;</span><br><span class="line">    font-style:italic;</span><br><span class="line">    font-weight:bold;</span><br><span class="line">    color:red;</span><br><span class="line">    text-indent:2em;</span><br><span class="line">    text-decoration:underline;</span><br><span class="line">    text-transform:lowercase; #capitalize</span><br><span class="line">    text-align:justify; </span><br><span class="line">    margin:5px 0px #top/down margin left/right margin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>image:</p>
+   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img&#123;</span><br><span class="line">	float:left;</span><br><span class="line">	border:1px #9999CC dashed;</span><br><span class="line">	margin:5px; #margin-left/right/top/bottom</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;div&gt;</code> box layout from inside to outside: content, padding, border, margin. Note <code>width</code> and <code>height</code> are for content instead of the whole box. margin can be assigned negative values. Assigning attribute values in <strong>clock-wise</strong> order. Missing values are equal to the values of opposite side. We should first understand the standard flow without the constraints of boxes.</p>
+<ul>
+<li>block-level (vertical arrangement): <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;div&gt;</code></li>
+<li><p>inline (horizontal arrangement): <code>&lt;strong&gt;</code>,<code>&lt;a&gt;</code>, <code>&lt;span&gt;</code></p>
+<p><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are both blocks. <code>&lt;div&gt;</code> is vertial while <code>&lt;span&gt;</code> is horizontal. <code>&lt;span&gt;</code> can be used where no other proper tags can be used,s for instance, <code>&lt;span&gt;&lt;img src=&quot;a.jpg&quot;&gt;&lt;/span&gt;</code>.</p>
+<p>when using <code>&lt;div&gt;</code>, the margin between the top block and bottom block is max(top_block.bottom_margin,bottom_block.top_margin). when using <code>&lt;span&gt;</code>, the margin between the top block and bottom block is top_block.bottom_margin+bottom_block.top_margin.</p>
+</li>
+</ul>
+</li>
+<li><p>floating box: Arrange the non-floating boxes first and then float the floating box to the left or right in the father content. The stuff in the non-floating boxes surrounds the floating box. For floating box: <code>float:left</code>. For non-floating box: <code>clear:left</code>.</p>
+</li>
+<li><p>box location: static(default), relative, absolute</p>
+<ul>
+<li><p>relative: <code>position:relative; left:30px; top:30px</code>. Relative shift from original position. Relative has no impact on father box and sibling box.</p>
+</li>
+<li><p>absolute: <code>position:absolute; top:0px; right:0px</code>. Absolute coordinate in the nearest non-static ancestor. Other boxes treat this absolute box as non-existence.</p>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;div style=&quot;display:inline&quot;&gt;&lt;/div&gt;</code>, <code>&lt;span style=&quot;display:block&quot;&gt;&lt;/span&gt;</code>, use display to modifiy the vertical or horizontal order. Set as <code>none</code> to make it invisible. </p>
+</li>
+<li><p>For hyperlink, <code>a</code> has pseudo classes:<code>link</code>, <code>visited</code>, <code>hover</code>, for example:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#navigation li a:link, #navigation li a:visited</span><br><span class="line">&#123;</span><br><span class="line">	background-color:#1136c1;</span><br><span class="line">	color:#FFFFFF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use <code>div</code> to split columns</p>
+<ul>
+<li><p>absolute method: left column uses absolute position (Note to change the position of father div to relative) and right column use left margin. The drawback is that bottom row will ignore the left column.</p>
+</li>
+<li><p>float method: float left and float right. It is easy for fixed width or fixed ratio. For the mixed width such as <code>100%-30px</code>, use the wrapper trick (negative margin).</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> name =<span class="string">"newly"</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"my name is: "</span>+name)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>variable types</p>
+<ul>
+<li><code>null</code>: empty variable</li>
+<li>string: <code>parseFloat(string)</code>, <code>parseInt(string)</code>,  <code>str.substring(0,3)</code>, <code>str.slice(3,5)</code>, <code>str.charAt(0)</code>, <code>str.bold()</code>, <code>str.fontcolor(&quot;red&quot;)</code>, <code>str.length</code></li>
+<li>number: <code>Math.PI</code>, <code>Math.max</code>, <code>isNaN(value)</code>,</li>
+<li>bool: <code>true</code> or <code>false</code></li>
+<li><p>Array: can be a mixture of numbers and strings, <code>var a = new Array(10, 20, &quot;newly&quot;)</code></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(n <span class="keyword">in</span> actorAry)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"&amp;lt;li&amp;gt;"</span>+actorAry[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>myarr.toString()</code>, <code>myarr.join(&#39;-&#39;)</code>, <code>myarr.concat(tailarr)</code>, <code>myarr.reverse()</code>, <code>myarr.sort(cmpfunc)</code>, <code>slice</code>, <code>splice</code><br><br>stack&amp;&amp;queue operations: <code>myarr.push(&quot;newstr&quot;)</code>, <code>myarr.pop()</code>, <code>myarr.shift()</code>(dequeue), <code>myarr.unshift()</code>(pushfront)<br></p>
+</li>
+<li><p>Structure: There is no concept: class. Use function to construct an object. <code>var mycard = Card(&quot;newly&quot;, 20)</code>, <code>showCardInof.call(mycard,arg1,arg2)</code> or <code>mycard.showCardInfo(arg1,arg2)</code>, <code>mycard=null</code></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showCardInfo</span>(<span class="params">arg1,arg2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="keyword">this</span>.owner);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Card</span>(<span class="params">owner, rate</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.owner = owner;</span><br><span class="line">    <span class="keyword">this</span>.rate = rate;</span><br><span class="line">    <span class="keyword">this</span>.showCardInfo=<span class="function"><span class="keyword">function</span>(<span class="params">arg1,arg2</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="keyword">this</span>.owner);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>type related: <code>nameList instanceof Array</code>, <code>typeof(&quot;newly&quot;)</code></p>
+</li>
+</ul>
+</li>
+<li><p>commonly used built-in functions or classes</p>
+<ul>
+<li><p>alert dialogue: <code>alert(&quot;msg&quot;)</code></p>
+</li>
+<li><p>input diaglogue: <code>var age=prompt(&quot;Input your age&quot;, &quot;0&quot;)</code></p>
+</li>
+<li><p>confirm dialogue: <code>confirm(&quot;Are you sure?&quot;)</code></p>
+</li>
+<li><p>Date and time:</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cur = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">cur.setYear(<span class="number">2016</span>);</span><br><span class="line"><span class="keyword">var</span> seconds = cur.getSeconds();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Error:</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> e = <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line"><span class="built_in">document</span>.write(e.number&amp;<span class="number">0xFFFF</span>+e.description);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>operate on the html elements </p>
+<p> <code>&lt;img src=&quot;./images/web_fig.jpg&quot; width=500px&gt;</code></p>
+<p> The whole HTML page is a DOM tree. </p>
+<ul>
+<li><p>Visit the DOM elements</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.myform.elements[<span class="number">0</span>].value  <span class="comment">//myform is the form name</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myid"</span>).childNodes[<span class="number">0</span>].nodeName/nodeValue/nodeType</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myid"</span>).childNodes[<span class="number">0</span>].getAttribute(<span class="string">"attr"</span>)/setAttribute(<span class="string">"attr"</span>,<span class="string">"attval"</span>)	</span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">"tag"</span>)	</span><br><span class="line"><span class="built_in">document</span>.getElementsByName(<span class="string">"name"</span>)</span><br></pre></td></tr></table></figure>
+<p>Since <code>id</code> is unique, we use single form element for <code>Id</code>, but plural form elements for <code>Name</code> and <code>TagName</code>.</p>
+</li>
+<li><p>Change the DOM elements</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> docBody = <span class="built_in">document</span>.getElementById(<span class="string">"DocBody"</span>);</span><br><span class="line"><span class="keyword">var</span> imgObj = <span class="built_in">document</span>.createElement(<span class="string">"&lt;img&gt;"</span>);</span><br><span class="line"><span class="keyword">var</span> newTextNode = <span class="built_in">document</span>.createElement(<span class="string">"content"</span>);</span><br><span class="line">imgObj.src = url;</span><br><span class="line">docBody.appendChild(imgObj);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>use Javascript to modify the CSS style, <code>document.vlinkColor</code>, <code>document.linkColor</code>, <code>document.alinkColor</code>, <code>document.bgColor</code>, <code>document.fgColor</code>, <code>document.body.text</code>, <code>name1.vspace</code>, <code>name1.hspace</code>. </p>
+</li>
+<li><p>event handling: we can set event triggering function for certain element or a class of elements.</p>
+<ul>
+<li>commonly used events (case insensitive): <code>onblur</code>, <code>onchange</code>, <code>onclick</code>, <code>onfocus</code>, <code>onload</code>, <code>onmouseover</code>, <code>onmouseout</code>,  <code>onmousedown</code>, <code>onmouseup</code>, <code>onselect</code>, <code>onsubmit</code>, <code>onunload</code>. Form-related events: <code>myform.onReset</code>, <code>myform.onSubmit</code>, <code>myform.action=&quot;mailto:ustcnewly@gmail.com&quot;</code></li>
+<li><p>three approaches to trigger event function<br>a) directly embed function scripts: <code>onlick=&quot;javascript:alert(&quot;msg&quot;)&quot;</code>  //<code>javascript:</code> can be eliminated<br>   b) call the event function: <code>onkeyup = &quot;OnKeyUp()&quot;</code></p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">OnKeyUp</span>(<span class="params">_e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e = _e?_e:<span class="built_in">window</span>.event;</span><br><span class="line">    <span class="keyword">if</span> (event.keyCode==<span class="number">13</span>)</span><br><span class="line">    &#123;</span><br><span class="line">	    alert(<span class="string">"Your input is "</span>+Text1.value);</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>c) set the event attribute for certain elements:</p>
+<pre><code class="lang-javascript">   &lt;script for=&quot;document&quot; event=&quot;oncontextmenu&quot;&gt; 
+   window.event.returnValue = false;
+   document.oncontextmenu = hideContextMenu2;
+   &lt;/script&gt;;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>time control:<code>to=window.setTimeout(&quot;func()&quot;,3000)</code>, <code>clearTimeout(to)</code>, <code>tm=setInterval(&quot;func()&quot;,1000)</code>, <code>clearInterval(tm)</code></p>
+</li>
+<li><p>redirect href location or set anchor point:<code>window.location.href=&quot;www.baidu.com&quot;</code>, <code>&lt;a name=&quot;anchor1&quot;&gt;&lt;/a&gt;</code></p>
+</li>
+<li><p>history: <code>history.back()</code>,  <code>history.forward()</code>, <code>history.go(n)</code>, n&gt;0 means go back n pages, otherwise go forward n pages. </p>
+</li>
+<li><p>cookie contains key-value pairs: <code>document.cookie=&quot;user=newly;passwd=hehe;&quot;</code></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/cross-language/Call C++ in Python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1999,199 +2314,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Zero-Shot Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
-<p>1) X-&gt;Y (semantic similarity; write classifier)</p>
-<p>2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
-<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
-<p>1) inductive ZSL v.s. semi-supervised/transductive ZSL</p>
-<p>2) standard ZSL v.s. generalized ZSL (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
-<p><strong>Ideas:</strong></p>
-<ol>
-<li><p>Mapping: dictionary learning, metric learning, etc</p>
-</li>
-<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
-</li>
-<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
-</li>
-</ol>
-<p><strong>Critical Issues:</strong></p>
-<ol>
-<li><p>generalized ZSL, why first predict seen or unseen?: As claimed in <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">[1]</a>, since we only see labeled data from seen classes, during training, the scoring functions of seen classes tend to dominate those of unseen classes, leading to biased predictions in GZSL and aggressively classifying a new data point into the label space of S because classifiers for the seen classes do not get trained on negative examples from the unseen classes.</p>
-</li>
-<li><p>hubness problem <a href="https://arxiv.org/pdf/1412.6568.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>: As claimed in <a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>, one practical effect of the ZSL domain shift is the Hubness problem. Specifically, after the domain shift, there are a small set of hub test-class prototypes that become nearest or K nearest neighbours to the majority of testing samples in the semantic space, while others are NNs of no testing instances. This results in poor accuracy and highly biased predictions with the majority of testing examples being assigned to a small minority of classes. </p>
-</li>
-<li><p>projection domain shift: what is the impact on the decision values?</p>
-</li>
-</ol>
-<p><strong>Datasets:</strong></p>
-<ol>
-<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
-</li>
-<li><p>large-scale dataset: ImageNet</p>
-</li>
-</ol>
-<p><strong>Survey and Resource:</strong></p>
-<ol>
-<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
-</li>
-<li><p><a href="https://github.com/chichilicious/awesome-zero-shot-learning" target="_blank" rel="noopener">List of paper and datasets</a></p>
-</li>
-</ol>
-<p><strong>Other applications:</strong></p>
-<ol>
-<li>zero-shot segmentation: <a href="https://github.com/RohanDoshi2018/ZeroshotSemanticSegmentation/blob/master/rohan_doshi_senior_thesis.pdf" target="_blank" rel="noopener">semantic segmentation</a>, <a href="">figure-ground segmentation</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2246,7 +2368,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">148</span>
+                  <span class="site-state-item-count">149</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
