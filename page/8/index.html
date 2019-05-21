@@ -281,163 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/MATLAB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/MATLAB/" itemprop="url">MATLAB</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>run MATLAB using shellscript</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matlab -nodisplay -r "vid2frames('../data/regular_videos/', 'RiceCam106.MP4', '../data/frames/', '.png');exit"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>VideoReader: NumberOfFrames is 0, cannot read frames.</p>
-<p> something is wrong with gstreamer, first get the right version of gstreamer (0.10 for MATLAB R2015b)    </p>
-<ul>
-<li><p>install gst-plugins</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install gstffmpeg</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/MarkdownPad/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2084,6 +1927,158 @@
 </ol>
 <p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/MATLAB/MATLAB draw plot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/MATLAB/MATLAB draw plot/" itemprop="url">MATLAB draw plot</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/MATLAB/" itemprop="url" rel="index">
+                    <span itemprop="name">MATLAB</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% Set some nice settings.</span></span><br><span class="line">grid on;</span><br><span class="line">format long;</span><br><span class="line"></span><br><span class="line"><span class="comment">% Hold the graphics output until we are good to go.</span></span><br><span class="line">hold all;</span><br><span class="line"></span><br><span class="line"><span class="comment">% To create some random test data.</span></span><br><span class="line">x1 = <span class="number">100</span> : <span class="number">100</span> : <span class="number">1000</span>;</span><br><span class="line">raw_y1 = [<span class="number">0.76</span>,<span class="number">0.79</span>,<span class="number">0.80</span>,<span class="number">0.80</span>,<span class="number">0.81</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.81</span>];</span><br><span class="line">raw_y2 = [<span class="number">0.85</span>,<span class="number">0.81</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.79</span>,<span class="number">0.78</span>,<span class="number">0.80</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">raw_y3 = [<span class="number">0.85</span>,<span class="number">0.84</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">legendText = cell(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">plot(x1,y1,<span class="string">'--go'</span>,<span class="string">'MarkerSize'</span>,<span class="number">5</span>, <span class="string">'MarkerFaceColor'</span>,<span class="string">'g'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'CUB'</span> &#125;;</span><br><span class="line"></span><br><span class="line">plot(x1,y2,<span class="string">':bo'</span>, <span class="string">'MarkerSize'</span>,<span class="number">5</span>, <span class="string">'MarkerFaceColor'</span>,<span class="string">'b'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'SUN'</span> &#125;;</span><br><span class="line"></span><br><span class="line">plot(x1,y3,<span class="string">'-ro'</span>, <span class="string">'MarkerSize'</span>,<span class="number">5</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'Dogs'</span> &#125;;</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">100</span> <span class="number">1000</span>]);</span><br><span class="line">ylim([<span class="number">0.72</span> <span class="number">0.90</span>]);</span><br><span class="line"></span><br><span class="line">set(gca,<span class="string">'fontsize'</span>,<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% set sticks on x and y axis</span></span><br><span class="line">get(gca, <span class="string">'xtick'</span>);</span><br><span class="line">set(gca, <span class="string">'xtick'</span>, <span class="number">100</span>:<span class="number">100</span>:<span class="number">1000</span>);</span><br><span class="line">get(gca, <span class="string">'ytick'</span>);</span><br><span class="line">set(gca, <span class="string">'ytick'</span>, <span class="number">0.72</span>:<span class="number">0.02</span>:<span class="number">0.90</span>);</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">'# web training instances per category'</span>);</span><br><span class="line">ylabel(<span class="string">'Accuracy'</span>);</span><br><span class="line"></span><br><span class="line">legend(legendText,<span class="string">'location'</span>,<span class="string">'southeast'</span>);</span><br><span class="line"></span><br><span class="line">hold off;</span><br></pre></td></tr></table></figure>
           
         
       
