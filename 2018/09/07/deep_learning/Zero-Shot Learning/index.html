@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-09T07:55:03.948Z">
+<meta property="og:updated_time" content="2019-05-20T03:27:39.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Zero-Shot Learning">
 <meta name="twitter:description" content="Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized">
@@ -375,11 +375,11 @@
 
       
         <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
-<p>1) X-&gt;Y (semantic similarity; write classifier)</p>
-<p>2) X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>1) semantic relatedness: X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) semantic embedding: X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
 <p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
-<p>1) inductive ZSL v.s. semi-supervised/transductive ZSL</p>
-<p>2) standard ZSL v.s. generalized ZSL (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
+<p>1) inductive ZSL (do not use unlabeled test images in the training stage) v.s. semi-supervised/transductive ZSL (use unlabeled test images in the training stage)</p>
+<p>2) standard ZSL (test images only from unseen categories) v.s. generalized ZSL (test images from both seen and unseen categories) (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
 <p><strong>Ideas:</strong></p>
 <ol>
 <li><p>Mapping: dictionary learning, metric learning, etc</p>
