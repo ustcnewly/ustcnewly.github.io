@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="BackgroundThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-16T12:51:07.617Z">
+<meta property="og:updated_time" content="2019-05-22T07:56:07.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Matting">
 <meta name="twitter:description" content="BackgroundThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target)">
@@ -387,19 +387,35 @@
 <li>quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error.</li>
 </ul>
 <h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
-<li>Affinity-based matting methods <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </li>
+<li><p>Affinity-based <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </p>
+</li>
+<li><p>Sampling-based <a href="https://link.springer.com/chapter/10.1007/978-3-319-46475-6_13" target="_blank" rel="noopener">[8]</a>: the foreground/background color of unknown pixels can be obtained by sampling the foreground/background color of known pixels.</p>
+</li>
+<li><p>Learning-based</p>
+<ul>
+<li>With trimap:<ul>
 <li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and compositional loss; refine alpha.</li>
-<li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block.</li>
 <li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; compositional loss.</li>
-<li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
 <li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and compositional loss.</li>
+<li>Learning based sampling <a href="http://people.inf.ethz.ch/aksoyy/papers/CVPR19-samplenet.pdf" target="_blank" rel="noopener">[7]</a></li>
+</ul>
+</li>
+<li>Without trimap:<ul>
+<li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block. </li>
+<li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” CVPR, 2017.</p>
 <p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
 <p>[3] Zhu, Bingke, et al. “Fast deep matting for portrait animation on mobile phone.” ACM MM, 2017.</p>
 <p>[4] Wang, Yu, et al. “Deep Propagation Based Image Matting.” IJCAI. 2018.</p>
 <p>[5] Quan Chen, Tiezheng Ge, Yanyu Xu, Zhiqiang Zhang, Xinxin Yang, Kun Gai, “Semantic Human Matting.” ACM MM, 2018.</p>
 <p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
+<p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
+<p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
 
       
     </div>
