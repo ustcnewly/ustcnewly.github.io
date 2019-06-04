@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Methods:The goal of Disentangled Representation [4] is to extract explanatory factors of the data in the input distribution and generate a more meaningful representation. disentangle codes/encodings/r">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-29T09:27:15.089Z">
+<meta property="og:updated_time" content="2019-06-04T01:56:58.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Disentangled Representation">
 <meta name="twitter:description" content="Methods:The goal of Disentangled Representation [4] is to extract explanatory factors of the data in the input distribution and generate a more meaningful representation. disentangle codes/encodings/r">
@@ -382,11 +382,10 @@
 <li><p>Supervised disentanglement</p>
 <p>  Swapping attribute representation with the supervision of attribute annotation such as Dual Swap GAN [7] (semi-supervised) and DNA-GAN [8].</p>
 </li>
-<li><p>Disentangle representation and domain adaptation</p>
-<p>  In [9], the authors combine the disentanglement objective with image-to-image translation between a pair of domains by disentangling the embeddings into three parts: one shared part including all the factors that the two domain share and two exclusive parts including all the factors that the two domains exclude, which disentangles content from domain attribute.</p>
+<li><p>Disentangle representation for domain adaptation [9][10]</p>
 </li>
 </ul>
-<p>[1] <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">Image-to-Image Translation with Conditional Adversarial Nets</a><br>[2] <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle-consistent adversarial networks</a><br>[3] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Choi_StarGAN_Unified_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks<br>for Multi-Domain Image-to-Image Translation</a><br>[4] <a href="https://arxiv.org/pdf/1206.5538.pdf" target="_blank" rel="noopener">Representation learning: A review and new perspectives</a><br>[5] <a href="http://papers.nips.cc/paper/6399-infogan-interpretable-representation-learning-by-information-maximizing-generative-adversarial-nets.pdf" target="_blank" rel="noopener">Infogan: Interpretable representation learning by information maximizing generative adversarial nets</a><br>[6] <a href="https://arxiv.org/pdf/1710.05050.pdf" target="_blank" rel="noopener">Learning Independent Features with adversarial Nets for Non-linear ICA</a><br>[7] <a href="http://papers.nips.cc/paper/7830-dual-swap-disentangling.pdf" target="_blank" rel="noopener">Dual Swap Disentangling</a><br>[8] <a href="https://arxiv.org/pdf/1711.05415.pdf" target="_blank" rel="noopener">DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images</a><br>[9] <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">Image-to-image translation for cross-domain disentanglement</a></p>
+<p>[1] <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">Image-to-Image Translation with Conditional Adversarial Nets</a><br>[2] <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle-consistent adversarial networks</a><br>[3] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Choi_StarGAN_Unified_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks<br>for Multi-Domain Image-to-Image Translation</a><br>[4] <a href="https://arxiv.org/pdf/1206.5538.pdf" target="_blank" rel="noopener">Representation learning: A review and new perspectives</a><br>[5] <a href="http://papers.nips.cc/paper/6399-infogan-interpretable-representation-learning-by-information-maximizing-generative-adversarial-nets.pdf" target="_blank" rel="noopener">Infogan: Interpretable representation learning by information maximizing generative adversarial nets</a><br>[6] <a href="https://arxiv.org/pdf/1710.05050.pdf" target="_blank" rel="noopener">Learning Independent Features with adversarial Nets for Non-linear ICA</a><br>[7] <a href="http://papers.nips.cc/paper/7830-dual-swap-disentangling.pdf" target="_blank" rel="noopener">Dual Swap Disentangling</a><br>[8] <a href="https://arxiv.org/pdf/1711.05415.pdf" target="_blank" rel="noopener">DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images</a><br>[9] <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">Image-to-image translation for cross-domain disentanglement</a><br>[10] <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">Diverse Image-to-Image Translation via Disentangled Representations</a></p>
 <h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets:"></a>Datasets:</h2><ul>
 <li>CelebA <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Liu_Deep_Learning_Face_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[14]</a> (dataset for human faces): [12, 2, 11, 17, 13, 8, 13, 18]</li>
 <li>MNIST <a href="http://www.dengfanxin.cn/wp-content/uploads/2016/03/1998Lecun.pdf" target="_blank" rel="noopener">[10]</a>, MNIST-M <a href="http://www.jmlr.org/papers/volume17/15-239/15-239.pdf" target="_blank" rel="noopener">[4]</a> (digits): [16, 15, 12, 5, 2, 11, 9, 17, 6, 8, 13, 3]</li>
@@ -522,7 +521,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">149</span>
+                  <span class="site-state-item-count">151</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
