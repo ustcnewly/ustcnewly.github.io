@@ -260,7 +260,7 @@
   <entry>
     <title><![CDATA[semi-supervised Learning]]></title>
     <url>%2F2019%2F01%2F02%2Fdeep_learning%2FSemi-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[co-training for semi-supervised Learning multi-view: co-training, tri-net multi-graph: label propagation [1] Deep Co-Training for Semi-Supervised Image Recognition [2] Tri-net for Semi-Supervised Deep Learning [3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition]]></content>
+    <content type="text"><![CDATA[co-training for semi-supervised Learning multi-view: co-training [1], tri-net [2] multi-graph: label propagation [3] fdReference[1] Deep Co-Training for Semi-Supervised Image Recognition [2] Tri-net for Semi-Supervised Deep Learning [3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -430,7 +430,7 @@
   <entry>
     <title><![CDATA[Adversarial Attack]]></title>
     <url>%2F2018%2F11%2F11%2Fdeep_learning%2FAdversarial%20Attack%2F</url>
-    <content type="text"><![CDATA[A comprehensive survey can be found here. Terminology: black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model. targeted/non-targeted attack: whether predicting a specific label for the adversarial example. universal perturbation: fool a given model on any image with high probability. Attack Backward Update add imperceptible distortion and increase the classification loss universal adversarial perturbation: learn a residual perturbation that works on most clean images Forward Update one-pixel attack: use differential evolution algorithm Adversarial Transformation Networks: learn a network to translate clean image to adversarial example. Defense Use modified training samples during training or modified test samples during testing Modify network: model parameters regularization, add a layer/module Adversarial example detector: classify an example as adversarial or clean based on certain statistics]]></content>
+    <content type="text"><![CDATA[A comprehensive survey can be found here. Terminology: black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model. targeted/non-targeted attack: whether predicting a specific label for the adversarial example. universal perturbation: fool a given model on any image with high probability. Attack Backward Update add imperceptible distortion and increase the classification loss universal adversarial perturbation: learn a residual perturbation that works on most clean images Forward Update one-pixel attack: use differential evolution algorithm Adversarial Transformation Networks: learn a network to translate clean image to adversarial example. Defense Use modified training samples during training or modified test samples during testing Modify network: model parameters regularization, add a layer/module Adversarial example detector: classify an example as adversarial or clean based on certain statistics New perspectiveAdversarial examples are not bugs, they are features.]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
@@ -484,7 +484,7 @@
   <entry>
     <title><![CDATA[Object Detection]]></title>
     <url>%2F2018%2F10%2F30%2Fdeep_learning%2Fobject_detection%2FObject%20Detection%2F</url>
-    <content type="text"><![CDATA[two-stage: use region proposal network (RPN) to generate proposals faster-RCNN one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. YOLO v1 v2 v3 SSD Corner Points: remove anchors and directly predict corner points CornerNet No anchor: actually use aach cell as an anchor RPDet: use object centers as positive cells; paired with deformable CNN FoveaBox: use the cells in fovea area (object bounding box) as positive cells]]></content>
+    <content type="text"><![CDATA[two-stage: use region proposal network (RPN) to generate proposals faster-RCNN one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. YOLO v1 v2 v3 SSD Corner Points: remove anchors and directly predict corner points CornerNet No anchor: actually use aach cell as an anchor RPDet: use object centers as positive cells; paired with deformable CNN FoveaBox: use the cells in fovea area (object bounding box) as positive cells Guided Anchoring: use deformable CNN to obtain adapted feature map]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
