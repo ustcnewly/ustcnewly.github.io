@@ -356,7 +356,7 @@
   <entry>
     <title><![CDATA[Zoom in]]></title>
     <url>%2F2018%2F11%2F30%2Fdeep_learning%2FZoom%20in%2F</url>
-    <content type="text"><![CDATA[Zoom in and crop [1] Zoom in and deform [1]]]></content>
+    <content type="text"><![CDATA[Zoom in a bounding box [1] [2] Zoom in sampled pixels [3] Reference[1] Fu, Jianlong, Heliang Zheng, and Tao Mei. “Look closer to see better: Recurrent attention convolutional neural network for fine-grained image recognition.” CVPR, 2017. [2] Zheng, Heliang, et al. “Learning multi-attention convolutional neural network for fine-grained image recognition.” ICCV, 2017. [3] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018.]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
@@ -1608,7 +1608,7 @@
   <entry>
     <title><![CDATA[Attention Model]]></title>
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FAttention%20Model%2F</url>
-    <content type="text"><![CDATA[Attention based RNNsurvey paper: survey on the attention based RNN model and its applications in computer vision [pdf] soft/hard attention: binary weight or soft weight item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise. earliest papers: Neural Machine Translation by Jointly Learning to Align and Translate [pdf] Grammar as a Foreign Language [pdf] 1 and 2 are basically the same except design specs of RNN unit.]]></content>
+    <content type="text"><![CDATA[Attention based RNNsurvey paper: survey on the attention based RNN model and its applications in computer vision [pdf] soft/hard attention: binary weight or soft weight item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise. earliest papers: Neural Machine Translation by Jointly Learning to Align and Translate [pdf] Grammar as a Foreign Language [pdf] 1 and 2 are basically the same except design specs of RNN unit. Attention based on CNN Reference[1]]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
