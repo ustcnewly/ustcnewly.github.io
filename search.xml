@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Forecast Future based on One Still Image]]></title>
+    <url>%2F2019%2F06%2F18%2Fdeep_learning%2FForecast%20Future%20based%20on%20One%20Still%20Image%2F</url>
+    <content type="text"><![CDATA[Predict visual feature of one future frame [1] Predict optical flow of one future frame [2] Predict one future frame [4] (a special case of video prediction) Predict future trajectories [5] Predict optical flows of future frames, and then obtain future frames [3] Reference Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016. Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018. Li, Yijun, et al. “Flow-grounded spatial-temporal video prediction from still images.” ECCV, 2018. Xue, Tianfan, et al. “Visual dynamics: Probabilistic future frame synthesis via cross convolutional networks.” NIPS, 2016. Walker, Jacob, et al. “An uncertain future: Forecasting from static images using variational autoencoders.” ECCV, 2016.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Few-Shot Generation]]></title>
     <url>%2F2019%2F05%2F31%2Fdeep_learning%2FFew-Shot%20Generation%2F</url>
     <content type="text"><![CDATA[Generative Matching Network (GMN) [1] [1]: VAE-like network with matching network for generator and recognizer FIGR [2]: use Reptile for few-shot generation Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” AISTATS, 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot Image Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019).]]></content>
@@ -260,7 +271,7 @@
   <entry>
     <title><![CDATA[semi-supervised Learning]]></title>
     <url>%2F2019%2F01%2F02%2Fdeep_learning%2FSemi-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[co-training for semi-supervised Learning multi-view: co-training [1], tri-net [2] multi-graph: label propagation [3] fdReference[1] Deep Co-Training for Semi-Supervised Image Recognition [2] Tri-net for Semi-Supervised Deep Learning [3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition]]></content>
+    <content type="text"><![CDATA[co-training for semi-supervised Learning multi-view: co-training [1], tri-net [2] multi-graph: label propagation [3] #Reference[1] Deep Co-Training for Semi-Supervised Image Recognition [2] Tri-net for Semi-Supervised Deep Learning [3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -1608,7 +1619,7 @@
   <entry>
     <title><![CDATA[Attention Model]]></title>
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FAttention%20Model%2F</url>
-    <content type="text"><![CDATA[Attention based RNNsurvey paper: survey on the attention based RNN model and its applications in computer vision [pdf] soft/hard attention: binary weight or soft weight item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise. earliest papers: Neural Machine Translation by Jointly Learning to Align and Translate [pdf] Grammar as a Foreign Language [pdf] 1 and 2 are basically the same except design specs of RNN unit. Attention based on CNN Reference[1]]]></content>
+    <content type="text"><![CDATA[Attention based RNNsurvey paper: survey on the attention based RNN model and its applications in computer vision [1] soft/hard attention: binary weight or soft weight item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise. earliest papers: Neural Machine Translation by Jointly Learning to Align and Translate [2] Grammar as a Foreign Language [3] 1 and 2 are basically the same except design specs of RNN unit. Attention based on CNNReference[1] Wang, Feng, and David MJ Tax. “Survey on the attention based RNN model and its applications in computer vision.” arXiv preprint arXiv:1601.06823 (2016). [2] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014). [3] Vinyals, Oriol, et al. “Grammar as a foreign language.” NIPS, 2015. Li, Hanchao, et al. “Pyramid attention network for semantic segmentation.” arXiv preprint arXiv:1805.10180 (2018).]]></content>
       <categories>
         <category>deep learning</category>
       </categories>
