@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Visual Sentiment Analysis]]></title>
+    <url>%2F2019%2F06%2F27%2Fdeep_learning%2FVisual%20Sentiment%20Analysis%2F</url>
+    <content type="text"><![CDATA[Joint Image Emotion Classification and Distribution Learning via Deep Convolutional Neural Network Weakly Supervised Coupled Networks for Visual Sentiment Analysis]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Forecast Future based on One Still Image]]></title>
     <url>%2F2019%2F06%2F18%2Fdeep_learning%2FForecast%20Future%20based%20on%20One%20Still%20Image%2F</url>
     <content type="text"><![CDATA[Predict visual feature of one future frame [1] Predict optical flow of one future frame [2] Predict one future frame [4] (a special case of video prediction) Predict future trajectories [5] Predict optical flows of future frames, and then obtain future frames [3] Reference Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016. Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018. Li, Yijun, et al. “Flow-grounded spatial-temporal video prediction from still images.” ECCV, 2018. Xue, Tianfan, et al. “Visual dynamics: Probabilistic future frame synthesis via cross convolutional networks.” NIPS, 2016. Walker, Jacob, et al. “An uncertain future: Forecasting from static images using variational autoencoders.” ECCV, 2016.]]></content>
