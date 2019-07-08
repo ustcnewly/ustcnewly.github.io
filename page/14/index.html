@@ -281,6 +281,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu SSH/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/Ubuntu SSH/" itemprop="url">Ubuntu SSH</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Server:</strong></p>
+<ol>
+<li><p>run <code>$sudo apt-get install openssh-server</code></p>
+</li>
+<li><p>run <code>$ps -A |grep ssh</code>.<br>If there is sshd, then ssh-server has been started,<br>else run <code>$sudo /etc/init.d/ssh start</code> to start ssh-server.</p>
+</li>
+</ol>
+<p>Tips: To stop ssh-server, execute <code>$sudo /etc/init.d/ssh stop</code>.<br>To modify the configuration, edit <code>/etc/ssh/sshd_config</code>. </p>
+<p><strong>Client:</strong></p>
+<p>ssh-client is usually already installed. If not, run<br><code>$sudo apt-get install openssh-client</code>.</p>
+<p>After installing ssh-client, run <code>$ssh username@192.168.1.112</code>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Remote Desktop Connection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1919,153 +2071,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/object_detection/Object Detection Loss/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/object_detection/Object Detection Loss/" itemprop="url">Object Detection Loss</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Fast-RCNN"><a href="#Fast-RCNN" class="headerlink" title="Fast RCNN"></a>Fast RCNN</h3><script type="math/tex; mode=display">L(p,u,t^u,v)  L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v),</script><p>   where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is  a smooth L1 loss.</p>
-<h3 id="Faster-RCNN"><a href="#Faster-RCNN" class="headerlink" title="Faster RCNN"></a>Faster RCNN</h3><script type="math/tex; mode=display">L(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*),</script><p> where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen)  and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN.</p>
-<p> fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes.</p>
-<h3 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h3><p> By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box.</p>
-<script type="math/tex; mode=display">l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g),</script><p> where $L_{conf}$ is a (K+1)-class softmax loss, and </p>
-<script type="math/tex; mode=display">L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.</script><h3 id="YOLO"><a href="#YOLO" class="headerlink" title="YOLO"></a>YOLO</h3><script type="math/tex; mode=display">\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2  + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2</script><p>Note that for the noobj anchorboxes, there is only one loss term involved. </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2120,7 +2125,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">154</span>
+                  <span class="site-state-item-count">155</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
