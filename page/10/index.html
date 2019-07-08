@@ -281,184 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_tokenizer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_tokenizer/" itemprop="url">Boost_tokenizer</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/Boost/" itemprop="url" rel="index">
-                    <span itemprop="name">Boost</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt; boost/tokenizer.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>split string: default space</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"This is,  a test"</span>;  </span><br><span class="line">tokenizer&lt;&gt; tok(s);  </span><br><span class="line"><span class="keyword">for</span>(tokenizer&lt;&gt;::iterator beg=tok.begin(); beg!=tok.end();++beg)</span><br><span class="line">&#123;  </span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; *beg &lt;&lt; <span class="string">"\n"</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>split string: drop delimiter</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt;boost::char_separator&lt;<span class="keyword">char</span>&gt;&gt;  tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;|"</span>);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>split string: drop delimiter and keep delimiter</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt; boost::char_separator&lt; <span class="keyword">char</span>&gt; &gt; tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;"</span>, <span class="string">"|"</span>, boost::keep_empty_tokens);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>special kinds of tokenizer</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> offsets[] = &#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;   <span class="comment">//three segment length  </span></span><br><span class="line"><span class="function">offset_separator <span class="title">f</span><span class="params">(offsets, offsets+<span class="number">3</span>)</span></span>;  </span><br><span class="line">tokenizer&lt; offset_separator&gt; tok(s,f);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_regex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2160,6 +1982,152 @@
 <p>For 3,4, the problem is how to learn the weights or how to select samples.</p>
 <p>a. determined by the final task loss</p>
 <p>b. based on other measurement (e.g., reconstruction error, density, distance, etc)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Vote Aggregation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/machine_learning/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
+<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
+<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
+<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
+<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
 
           
         
