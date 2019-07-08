@@ -281,6 +281,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/library/OpenCV/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/software/library/OpenCV/" itemprop="url">OpenCV</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Locate-OpenCV"><a href="#Locate-OpenCV" class="headerlink" title="Locate OpenCV:"></a>Locate OpenCV:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg-config --modversion opencv //version</span><br><span class="line">pkg-config --cflags opencv //include file path</span><br><span class="line">pkg-config --libs opencv //library path</span><br></pre></td></tr></table></figure>
+<h3 id="Uninstall-OpenCV"><a href="#Uninstall-OpenCV" class="headerlink" title="Uninstall OpenCV:"></a>Uninstall OpenCV:</h3><ol>
+<li>go to the compile package and <code>make uninstall</code></li>
+<li>if cannot find the compile package, <code>sudo find / -name &quot;*opencv*&quot; -exec rm -i {} \;</code></li>
+</ol>
+<h3 id="Install-OpenCV"><a href="#Install-OpenCV" class="headerlink" title="Install OpenCV:"></a>Install OpenCV:</h3><p><strong>For Windows: C++(Visual Studio)</strong></p>
+<ol>
+<li>Download latest OpenCV from <a href="http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect" target="_blank" rel="noopener">http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect</a>.</li>
+<li>Make a dir named build. Use cmake to generate OpenCV.sln in build.</li>
+<li>Click OpenCV.sln and CMakeTargets-&gt;INSTALL-&gt;build. You can build it in both debug and release modes.</li>
+<li>In the environmental variables, add D:\Program Files\OpenCV_3.0.0\build\install\x64\vc11 as OPENCV_DIR, add Path with %OPENCV_DIR%\bin. </li>
+<li>Create a OpenCV project. C/C++-&gt;General-&gt;Additional Include Directories: $(OPENCV_DIR)\..\..\include</li>
+<li>Linker-&gt;General-&gt;Additional Library Directories: $(OPENCV_DIR)\lib</li>
+<li>Linker-&gt;Input-&gt;Additional Dependencies: copy all the lib files. <em>*</em>d.lib means debug mode.</li>
+</ol>
+<p>Note that there may be some problems for visual studio to recognize the updated environmental variable. Try to restart the visual studio or recreate the project.</p>
+<p><strong>For Linux: install for C++</strong></p>
+<ol>
+<li>pre-install packages<br>[compiler] sudo apt-get install build-essential<br>[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev<br>[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</li>
+<li>download the required version on <a href="https://sourceforge.net/projects/opencvlibrary/" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/</a></li>
+<li>make and install <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake ..     //cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Tips: if you want to install multiple versions of OpenCV, set CMAKE_INSTALL_PREFIX differently for different versions of OpenCV.</p>
+<pre><code class="lang-shell">cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D INSTALL_C_EXAMPLES=ON \
+    -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
+    -D PYTHON_EXECUTABLE=/usr/bin/python \
+    -D BUILD_EXAMPLES=ON ..
+</code></pre>
+<p>If want to turn off some modules, use <code>-D BUILD_opencv_xfeatures2d=OFF</code> </p>
+<p><strong>Switch between different versions of OpenCV:</strong></p>
+<p>switch from version 3.2 to version 2.4 <a href="\code\OpenCV\switch_to_2.4.13.sh">shell</a></p>
+<p>switch from version 2.4 to version 3.2 <a href="\code\OpenCV\switch_to_3.2.0.sh">shell</a></p>
+<p><strong>For Linux: Python(Anaconda)</strong></p>
+<pre><code class="lang-shell">source activate tgt_env
+conda install -c https://conda.binstar.org/menpo opencv
+spyder
+</code></pre>
+<p>Then try <code>import cv2</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/library/GStreamer+FFmpeg for Ubuntu14.04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1947,160 +2141,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/python/Python Draw Text on Image/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/python/Python Draw Text on Image/" itemprop="url">Python Draw Text on Image</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Use-PIL"><a href="#Use-PIL" class="headerlink" title="Use PIL"></a>Use PIL</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.ImageDraw</span><br><span class="line"><span class="keyword">import</span> PIL.Image</span><br><span class="line"><span class="keyword">import</span> PIL.ImageFont</span><br><span class="line"></span><br><span class="line">pil_img = PIL.Image.fromarray(bb_img)</span><br><span class="line">draw = PIL.ImageDraw.Draw(pil_img)</span><br><span class="line">font = PIL.ImageFont.truetype(<span class="string">"/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf"</span>,<span class="number">20</span>)</span><br><span class="line">draw.text((<span class="number">10</span>, <span class="number">10</span>),<span class="string">"Frame: %09d"</span>%(iframe),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),font=font)</span><br></pre></td></tr></table></figure>
-<h3 id="Use-OpenCV"><a href="#Use-OpenCV" class="headerlink" title="Use OpenCV"></a>Use OpenCV</h3><p>—</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">cv2.putText(cv_img, <span class="string">'Frame: %d'</span>%(iframe), (<span class="number">10</span>,<span class="number">20</span>),  cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.65</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>), <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2155,7 +2195,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">153</span>
+                  <span class="site-state-item-count">154</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
