@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="perceptual loss [1]: similar semantic information \frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2 style loss [2]: similar style which is spatial invariant ||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-08T13:37:03.764Z">
+<meta property="og:updated_time" content="2019-07-08T13:38:33.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Loss">
 <meta name="twitter:description" content="perceptual loss [1]: similar semantic information \frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2 style loss [2]: similar style which is spatial invariant ||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F">
@@ -378,8 +378,7 @@
 <li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: similar semantic information</p>
 <script type="math/tex; mode=display">\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2</script></li>
 <li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: similar style which is spatial invariant</p>
-<script type="math/tex; mode=display">||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'}</script></p>
-</li>
+<script type="math/tex; mode=display">||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2$$ with $$G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'}</script></li>
 <li><p>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </p>
 <script type="math/tex; mode=display">\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2</script></li>
 <li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
