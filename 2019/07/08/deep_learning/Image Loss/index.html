@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="perceptual loss [1]: similar semantic information  $\frac{1}{C_j H_j W_j}|\phi_j(\hat{x}-\phi_j(x))|^2$  style loss [2]: similar style which is spatial invariant  $|Gj^{\phi}(\hat{x})-G_j^{\phi}(x)|_">
+<meta name="description" content="perceptual loss [1]: similar semantic information  $\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2$  style loss [2]: similar style which is spatial invariant  $||Gj^{\phi}(\hat{x})-G_j^{\phi}(x">
 <meta name="keywords" content="deep learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Image Loss">
 <meta property="og:url" content="http://yoursite.com/2019/07/08/deep_learning/Image Loss/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="perceptual loss [1]: similar semantic information  $\frac{1}{C_j H_j W_j}|\phi_j(\hat{x}-\phi_j(x))|^2$  style loss [2]: similar style which is spatial invariant  $|Gj^{\phi}(\hat{x})-G_j^{\phi}(x)|_">
+<meta property="og:description" content="perceptual loss [1]: similar semantic information  $\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2$  style loss [2]: similar style which is spatial invariant  $||Gj^{\phi}(\hat{x})-G_j^{\phi}(x">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-08T13:17:27.653Z">
+<meta property="og:updated_time" content="2019-07-08T13:29:02.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Loss">
-<meta name="twitter:description" content="perceptual loss [1]: similar semantic information  $\frac{1}{C_j H_j W_j}|\phi_j(\hat{x}-\phi_j(x))|^2$  style loss [2]: similar style which is spatial invariant  $|Gj^{\phi}(\hat{x})-G_j^{\phi}(x)|_">
+<meta name="twitter:description" content="perceptual loss [1]: similar semantic information  $\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2$  style loss [2]: similar style which is spatial invariant  $||Gj^{\phi}(\hat{x})-G_j^{\phi}(x">
 
 
 
@@ -375,21 +375,19 @@
 
       
         <ol>
-<li>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: similar semantic information</li>
+<li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: similar semantic information</p>
+<p> $\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2$</p>
+</li>
+<li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: similar style which is spatial invariant</p>
+<p> $||G<em>j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2$ with $G_j^{\phi}(x)</em>{c,c’}=\frac{1}{C<em>j H_j W_j}\sum</em>{h=1}^{H<em>j}\sum</em>{w=1}^{W<em>j}\phi_j(x)</em>{h,w,c}\phi<em>j(x)</em>{h,w,c’}$</p>
+</li>
+<li><p>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </p>
+<p> $\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2$</p>
+</li>
+<li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
+<p> $\sum<em>{(i,j)} ||x</em>{i,j+1}-x<em>{i,j}|_1 +|x</em>{i+1,j}-x_{i,j}||_1$</p>
+</li>
 </ol>
-<p>$\frac{1}{C_j H_j W_j}|\phi_j(\hat{x}-\phi_j(x))|^2$</p>
-<ol>
-<li>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: similar style which is spatial invariant</li>
-</ol>
-<p>$|G<em>j^{\phi}(\hat{x})-G_j^{\phi}(x)|_F^2$ with $G_j^{\phi}(x)</em>{c,c’}=\frac{1}{C<em>j H_j W_j}\sum</em>{h=1}^{H<em>j}\sum</em>{w=1}^{W<em>j}\phi_j(x)</em>{h,w,c}\phi<em>j(x)</em>{h,w,c’}$</p>
-<ol>
-<li>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </li>
-</ol>
-<p>$\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2$</p>
-<ol>
-<li>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</li>
-</ol>
-<p>$\sum<em>{(i,j)} |x</em>{i,j+1}-x<em>{i,j}|_1 +|x</em>{i+1,j}-x_{i,j}|_1$</p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016.</p>
 <p>[2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015.</p>
 <p>[3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014.</p>
