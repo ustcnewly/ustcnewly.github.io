@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="perceptual loss [1]: similar semantic information \frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2 style loss [2]: similar style which is spatial invariant ||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-08T13:40:04.593Z">
+<meta property="og:updated_time" content="2019-07-10T13:42:26.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Loss">
 <meta name="twitter:description" content="perceptual loss [1]: similar semantic information \frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2 style loss [2]: similar style which is spatial invariant ||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F">
@@ -384,11 +384,15 @@
 <script type="math/tex; mode=display">\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2</script></li>
 <li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
 <script type="math/tex; mode=display">\sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1</script></li>
+<li><p>alignment loss <a href="https://arxiv.org/pdf/1812.06145.pdf" target="_blank" rel="noopener">[5]</a>: similar to style loss</p>
+<script type="math/tex; mode=display">||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c}</script></p>
+</li>
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016.</p>
 <p>[2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015.</p>
 <p>[3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014.</p>
 <p>[4] Bousmalis, Konstantinos, et al. “Unsupervised pixel-level domain adaptation with generative adversarial networks.” CVPR, 2017.</p>
+<p>[5] Abavisani, Mahdi, Hamid Reza Vaezi Joze, and Vishal M. Patel. “Improving the performance of unimodal dynamic hand-gesture recognition with multimodal training.” CVPR, 2019.</p>
 
       
     </div>
