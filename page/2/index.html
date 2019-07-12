@@ -281,162 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Scale Variation for Object Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/12/deep_learning/Scale Variation for Object Detection/" itemprop="url">Scale Variation for Object Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
-                2019-07-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>This problem is well discussed in <a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a>. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map.</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/HlFdOUN.jpg" width="100%"></p>
-<ol>
-<li><p>The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. </p>
-</li>
-<li><p>The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. </p>
-</li>
-<li><p>As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales.</p>
-</li>
-<li><p>use different dilation rates to vary receptive fields<br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ew7IgsX.jpg" width="80%"></p>
-</li>
-<li><p>use feature pyramid <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Lin_Feature_Pyramid_Networks_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>  </p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Lin, Tsung-Yi, et al. “Feature pyramid networks for object detection.” CVPR, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/deep_learning/Image Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1805,6 +1649,159 @@
 <p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
 <p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
 <p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/deep_learning/Aesthetic Cropping/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/12/deep_learning/Aesthetic Cropping/" itemprop="url">Aesthetic Cropping</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-12T08:45:19+08:00">
+                2019-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Aesthetic features: mimick photographic rules and practices such as the golden ratio, the rule of thirds and color harmonies <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6247954" target="_blank" rel="noopener">[3]</a></p>
+<ol>
+<li><p>pairwise ranking <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wei_Good_View_Hunting_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1702.00503.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>classification/regression <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6247954" target="_blank" rel="noopener">[3]</a> (photostyle) <a href="https://arxiv.org/pdf/1606.01621.pdf" target="_blank" rel="noopener">[4]</a> (aesthetic attribute, plus pairwise ranking)</p>
+</li>
+<li><p>salience-aware <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Wang_Deep_Cropping_via_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>reduce the number of candidate crops; consider the information both insides and outside the candidate crops <a href="https://arxiv.org/pdf/1904.04441.pdf" target="_blank" rel="noopener">[7]</a></p>
+</li>
+</ol>
+<h3 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h3><p>[1] Good View Hunting: Learning Photo Composition from Dense View Pairs. CVPR 2018<br>[2] Learning to Compose with Professional Photographs on the Web. ACMMM 2017<br>[3] AVA: A large-scale database for aesthetic visual analysis. CVPR 2012<br>[4] Photo Aesthetics Ranking Network with At tributes and Content Adaptation. ECCV 2016<br>[5] Quantitative Analysis of Automatic Image Cropping Algorithms: A Dataset and Comparative Study. WACV 2017<br>[6] Deep Cropping via Attention Box Prediction and Aesthetics Assessment. ICCV 2017<br>[7] Zeng, Hui, et al. “Reliable and Efficient Image Cropping: A Grid Anchor based Approach.”, CVPR 2019.</p>
 
           
         
