@@ -5,7 +5,8 @@
     <url>%2F2019%2F07%2F12%2Fhardware%2Fcamera%2FCamera%20Survey%2F</url>
     <content type="text"><![CDATA[Interface Type: GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission. Color v.s. MonochromeWhen the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file. Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution. Sensor Type: CCD (Charged Coupling Devices): special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light. CMOS (Complimentary Metal Oxide Semiconductor): use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption Readout Method:Global v.s. rolling shutter: originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities. Advantage of global shutter: global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. Quantum EfficiencyThe ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity. Field of ViewFOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV. Pixel SizeA small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio.]]></content>
       <categories>
-        <category>paper note</category>
+        <category>hardware</category>
+        <category>camera</category>
       </categories>
       <tags>
         <tag>camera</tag>
@@ -441,7 +442,7 @@
     <url>%2F2018%2F12%2F27%2Fdeep_learning%2FVisual%20Dialogue%2F</url>
     <content type="text"><![CDATA[Visual dialogue [1]: a dialogue with one image Multimodal Dialogue [2][3]: a dialogue with multiple images [1] Visual Dialog [2] Towards Building Large Scale Multimodal Domain-Aware Conversation Systems [3] Knowledge-aware Multimodal Dialogue Systems]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
         <tag>VQA</tag>
