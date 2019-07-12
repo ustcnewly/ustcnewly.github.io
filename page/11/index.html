@@ -281,6 +281,1522 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_installation/" itemprop="url">Boost_installation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
+<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
+<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
+<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
+<hr>
+<p>If you have installed boost, using it in a VC project just takes two steps:</p>
+<ol>
+<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
+</li>
+<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
+</li>
+<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
+</li>
+</ol>
+<p>Notes:</p>
+<ol>
+<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
+<li>build-&gt;configuration manager</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_file_system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_file_system/" itemprop="url">Boost_file_system</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/filesystem.hpp&gt;  </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::filesystem;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>file name operation    </p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Note the difference between /= and +=, /= means appending directory， += means string concatenation </span></span><br><span class="line"><span class="function">path <span class="title">dir</span><span class="params">(<span class="string">"C:\\Windows"</span>)</span></span>;</span><br><span class="line">dir /= <span class="string">"System32"</span>;       </span><br><span class="line">dir /= <span class="string">"services.exe"</span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.<span class="built_in">string</span>() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           </span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.parent_path()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;        /C:\Windows\System32</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.filename()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           /services.exe</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.stem()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;               <span class="comment">//services</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.extension()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;          <span class="comment">//.exe</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>file operation: rename, remove, copy</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">exists(path);                               </span><br><span class="line">is_directory(path); </span><br><span class="line">is_regular_file(path);                    </span><br><span class="line">                                          </span><br><span class="line">remove_all(<span class="keyword">const</span> Path&amp; p);  <span class="comment">//remove all files recursively                                                              </span></span><br><span class="line">rename(<span class="keyword">const</span> Path1&amp; from_p, <span class="keyword">const</span> Path2&amp; to_p);                        </span><br><span class="line">copy_file(<span class="keyword">const</span> Path1&amp; from_fp, <span class="keyword">const</span> Path2&amp; to_fp);                    </span><br><span class="line">create_directory(<span class="keyword">const</span> Path &amp; p);</span><br><span class="line">create_directories(<span class="keyword">const</span> Path &amp; p); <span class="comment">//make directory recursively&lt;/pre&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>shallow visit directory</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">directory_iterator end;</span><br><span class="line"><span class="keyword">for</span> (directory_iterator pos(dir2); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *pos &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>deep visit directory: like DFS, stack push&amp;&amp;pop</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> recursive_directory_iterator rd_iterator;</span><br><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"E:\\Student"</span>)</span></span>;</span><br><span class="line">rd_iterator end;</span><br><span class="line"><span class="keyword">for</span> (rd_iterator pos(dir); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_directory(*pos) &amp;&amp; pos.level() &gt; <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.no_push();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*pos == <span class="string">"nofind.txt"</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.pop();</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; pos-&gt;path().filename().<span class="built_in">string</span>()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>catch error</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">    assert(is_directory(dir2));          </span><br><span class="line">    assert(exists(dir2));          </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(filesystem_error&amp; e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.path1() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.what() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_array/" itemprop="url">Boost_array</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"boost/array.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"boost/multi_array.hpp"</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>Array: similar with STL vector</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array&lt; std::string, 3&gt; a&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Multi-Array: refer to <a href="http://www.boost.org/doc/libs/1_59_0/libs/multi_array/doc/user.html" target="_blank" rel="noopener">this</a> for more details, similar with matlab matrix operation</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::multi_array&lt;<span class="keyword">double</span>, <span class="number">3</span>&gt; array_type;</span><br><span class="line"><span class="function">array_type <span class="title">A</span><span class="params">(boost::extents[<span class="number">3</span>][<span class="number">4</span>][<span class="number">2</span>])</span></span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Android/Android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/Android/Android/" itemprop="url">Android</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><ol>
+<li><p>Download and install <a href="https://developer.android.com/sdk/index.html" target="_blank" rel="noopener">SDK</a></p>
+</li>
+<li><p>Install via SDK manager and AVD manager</p>
+</li>
+<li><p>Add  <font color="green">C:\Program Files (x86)\Android\android-sdk\tools</font> to environment path</p>
+</li>
+<li><p>Install ADT plugin in Eclipse by entering “ADT Plugin” for the Name and the following URL for the Location: <a href="https://dl-ssl.google.com/android/eclipse/" target="_blank" rel="noopener">https://dl-ssl.google.com/android/eclipse/</a></p>
+</li>
+<li><p>The first time to lauch AVD may take rather long time, just be patient. Leave the launched AVD open until your project is finished.</p>
+</li>
+</ol>
+<p><strong>Possible problems during installation:</strong></p>
+<ol>
+<li><p>java basis is unresolved: Project-&gt;Properties-&gt;Java Build Path-&gt;Libraries, add JRE lib</p>
+</li>
+<li><p>Android is unresolved: Project-&gt;Properties-&gt;Android, choose project build target and apply. For some Eclipse versions, clean and rebuild.</p>
+</li>
+</ol>
+<h3 id="Resource"><a href="#Resource" class="headerlink" title="Resource:"></a>Resource:</h3><ol>
+<li><p><a href="http://developer.android.com/reference/packages.html" target="_blank" rel="noopener">Android API</a> </p>
+</li>
+<li><p><a href="http://zetcode.com/mob/android/" target="_blank" rel="noopener">http://zetcode.com/mob/android/</a></p>
+</li>
+<li><p><a href="https://www.embeddedlinux.org.cn/AndroidEssentials/" target="_blank" rel="noopener">https://www.embeddedlinux.org.cn/AndroidEssentials/</a></p>
+</li>
+<li><p>Begining Android2: code is downloaded from <a href="https://www.apress.com" target="_blank" rel="noopener">https://www.apress.com</a></p>
+</li>
+</ol>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application:"></a>Application:</h3><p><code>Application</code> consists of <code>Activity</code>, <code>Service</code>, <code>BroadcastReceiver</code>, and <code>Content Provider</code>, in which <code>Activity</code> is a regular App, <code>Service</code> can run independently in the background, such as MP3 player, <code>BroadcastReceiver</code> reacts to outcoming events, <code>Content Provider</code> save data via SQLite or share data with other applications.</p>
+<ol>
+<li><p><font color="red">activity</font>: Most common application. <a href="\code\android\AndroidManifest_activity.xml">[AndroidManifest example]</a> <a href="http://bcmi.sjtu.edu.cn/~niuli/github_images/BPUcRFH.jpg" target="_blank" rel="noopener">[activity cycle]</a></p>
+</li>
+<li><p><font color="red">service</font>: Similar with activity but without user interface.   <a href="\code\android\AndroidManifest_service.xml">[AndroidManifest example]</a>    <a href="http://bcmi.sjtu.edu.cn/~niuli/github_images/cira5BF.jpg" target="_blank" rel="noopener">[service cycle]</a></p>
+<ul>
+<li><p>independent service</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.service.FIRST_SERVICE&quot;);</span><br><span class="line">startService(intent);</span><br><span class="line">stopService(intent);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>service has connection with activity via <code>IBinder</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BindService.MyBinder binder;</span><br><span class="line">private ServiceConnection conn = new ServiceConnection()&#123;</span><br><span class="line">	public void onServiceConnected(ComponentName name, IBinder service)&#123;</span><br><span class="line">		binder = (BindService.MyBinder) service; </span><br><span class="line">	&#125;</span><br><span class="line">	public void onServiceDisconnected(ComponentName name)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">bindService(intent, conn, Service.BIND_AUTO_CREATE);</span><br><span class="line">unbindService(conn);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to create a new thread, extend class <code>IntentService</code></p>
+</li>
+<li><p>for interprocess communication, use AIDL, i.e., extends <code>Stub</code> as IBinder interface. The others are the same as <code>Service</code>.</p>
+</li>
+</ul>
+</li>
+<li><p><font color="red">receiver</font>: a global listener. <a href="\code\android\AndroidManifest_receiver.xml">AndroidManifest example</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.action.CRAZY_BROADCAST&quot;);</span><br><span class="line">intent.putExtra(&quot;msg&quot;, &quot;hello world&quot;);</span><br><span class="line">sendBroadcast(intent);</span><br></pre></td></tr></table></figure>
+<p>use IntentFilter to filter the received broadcast</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IntentFilter filter = new IntentFilter();</span><br><span class="line">filter.addAction(MusicBox.CTL_ACTION);</span><br><span class="line">registerReceiver(serviceReceiver, filter);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><font color="red">provider</font>: globally share data. <a href="\code\android\AndroidManifest_provider.xml">AndroidManifest example</a></p>
+<p> The joint point is Uri:  <code>content://org.crazyit.providers.dictprovider/words/id</code></p>
+<p> ContentProvider: an extended class <code>public class DictProvider extends ContentProvider</code> which provides <code>query</code>, <code>insert</code>, <code>delete</code>, <code>update</code> functions.</p>
+<p> ContentResolver: </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver contentResolver = getContentResolver();</span><br><span class="line">contentResolver.insert(Words.Word.DICT_CONTENT_URI, values);</span><br></pre></td></tr></table></figure>
+<p> Most system applications provide their own ContentProvider, we need to know their Uri. </p>
+</li>
+</ol>
+<h3 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter:"></a>Adapter:</h3><p>Adapters are the link between a set of data (ArrayList, Cursor) and the AdapterView (ListView, GridView, Spinner) that displays the data. AdapterViews are ViewGroups that display child views given to it by an adapter.</p>
+<ol>
+<li><p>ArrayAdapter: </p>
+<p> In the simplest case, just use the String array <code>items</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayAdapter&lt;String&gt;aa = new ArrayAdapter&lt;String&gt;(this, adnroid.R.layout.simple_spinner_item, items);</span><br><span class="line">aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</span><br><span class="line">spin.setAdapter(aa);</span><br></pre></td></tr></table></figure>
+<p> Extend ArrayAdapter to satisfy your own needs,</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.my_list_view, MyObjectItemData);</span><br><span class="line">ListView listViewItems = new ListView(this);</span><br><span class="line">listViewItems.setAdapter(adapter);</span><br><span class="line">listViewItems.setOnItemClickListener(new OnItemClickListenerListViewItem());</span><br></pre></td></tr></table></figure>
+<p> The code for class <code>MyArrayAdapter</code> is <a href="\code\android\MyArrayAdapter.java">here</a>. The code for class <code>OnItemClickListenerListViewItem</code> is <a href="\code\android\OnItemClickListenerListViewItem.java">here</a>. Note here <code>inflate</code> is used to convert XML format to View. One trick is to check whether convertView is null so that duplicated reflation could be avoided, otherwise your device would be slowed down when crolling the screen. ConvertView can be bined with a newly defined class by using <code>setTag</code> and <code>getTag</code>. When the adapter is changed (e.g., add a new row), <code>adapter.notifyDataSetChanged()</code>. </p>
+</li>
+<li><p>CursorAdapter:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SimpleCursorAdapter adapter=new SimpleCursorAdapter(this, R.layout.row, constantsCursor, new String[] &#123;&quot;tag&quot;, &quot;value&quot;&#125;, new int[] &#123;R.id,tag, R.id.value&#125;);</span><br><span class="line">listviewItems.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
+<p> Extend CursorAdapter, see <a href="\code\android\MyCursorAdapter.java">here</a></p>
+</li>
+</ol>
+<h3 id="XML-format"><a href="#XML-format" class="headerlink" title="XML format:"></a>XML format:</h3><ol>
+<li><p>Use XML to format Layout: In XML file, <code>android:id=&quot;@+id/button</code>. In Java, <code>btn=(Button)findViewById(R.id.button)</code>. Similarly,  in XML file, <code>android:id=&quot;@string/app_name</code>, in Java, <code>Resources myres = getResources(); myres.getString();</code>.</p>
+</li>
+<li><p>Use XML to format componenet style: in res\values\<a href="\code\android\text_style.xml">text_style.xml</a>,  in \res\layout\main.xml, <code>style=&quot;@style/style2&quot;</code>. </p>
+</li>
+<li><p>Use XML to format window style: in res\values\<a href="\code\android\window_style.xml">window_style.xml</a>, in <code>onCreate()</code> function, add <code>setTheme(R.style.crazytheme)</code>, or <code>&lt;application android:theme=&quot;@style/crazytheme&quot;&gt;</code>.</p>
+</li>
+<li><p>Use XML to format menu style: \res\menu\<a href="\code\android\contextmenu_style.xml">contextmenu_style.xml</a> <a href="\code\android\optionmenu_style.xml">optionmenu_style.xml</a>. </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MenuInflater inflator = new MenuInflater(this);</span><br><span class="line">inflator.inflate(R.menu.my_menu, menu);</span><br><span class="line">//return super.onCreateOptionsMenu(menu);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use XML to inflate a view and thus format dialogue style, click <a href="\code\android\login.xml">login.xml</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TableLayout loginForm = (TableLayout)getLayoutInflater().inflate(R.layout.login, null);</span><br><span class="line">ad.setView(loginForm);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Event"><a href="#Event" class="headerlink" title="Event:"></a>Event:</h3><ol>
+<li><p><font color="red">Add EventListener</font>: there exist several types of implement. We take the most common event “click” as an example to demonstrate five types of implements.</p>
+<ul>
+<li><p>Override function <code>onClick</code> in class <code>OnClickListener</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	button1.setOnClickListener(new OnClickListener()&#123; </span><br><span class="line">	    public void onClick(View v)&#123;</span><br><span class="line">	&#125;);</span><br><span class="line">	```	</span><br><span class="line">* Extend class `OnClickListener`, essentially equal to a)</span><br><span class="line">	```android</span><br><span class="line">	private Button1_OnClickListener mListener1 = new Button1_OnClickListener();</span><br><span class="line">	class Button1_OnClickListener implements OnClickListener &#123; </span><br><span class="line">		public void onClick(View v) &#123; </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	mButton1.setOnClickListener(mListener1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Bind event listener in XML</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android:onClick=&quot;clickHandler&quot;</span><br><span class="line"></span><br><span class="line">function clickHandler()&#123;</span><br></pre></td></tr></table></figure>
+<p>For key event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new OnKeyListener()&#123;</span><br><span class="line">	public boolean onKey(View source, int keyCode, KeyEvent event&#123;</span><br><span class="line">		switch(event.getKeyCode())</span><br></pre></td></tr></table></figure>
+<p>For long click:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new OnLongClickListener&#123;</span><br><span class="line">	public boolean onLongClick(View source)&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="red">Override Recall Function</font>: extend View or Activity class to override event recall functions.</p>
+<pre><code>* Extends Activity Class 
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class TestEvent2 extends Activity implements OnClickListener&#123;</span><br><span class="line">	public void onClick(View v) &#123; 			</span><br><span class="line"></span><br><span class="line">public class TestEvent2 extends Activity&#123; </span><br><span class="line">	boolean onKeyDown(int keycode, KeyEvent event)&#123;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li>Extends View Class  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyButton extends Button&#123;</span><br><span class="line">	public boolean onKeyDown(int keyCode, KeyEvent event)&#123;</span><br><span class="line"></span><br><span class="line">public class DrawView extends View&#123;</span><br><span class="line">	public boolean onTouchEvent(MotionEvent event)&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout:"></a>Layout:</h4><ol>
+<li><p>Common attributes</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:layout_width|height=&quot;fill_parent&quot;|&quot;wrap_content&quot;|&quot;10dip&quot;	</span><br><span class="line">	android:gravity=&quot;center_horizontal&quot;|&quot;right&quot;</span><br><span class="line">	android:background=&quot;#FF909090&quot;</span><br><span class="line">	android:padding=&quot;3dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FrameLayout: fundamental layout, allow overlap or replacement for flexible usage.</p>
+</li>
+<li><p>LinearLayout: <a href="\code\android\linear.xml">example code</a>    </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_weight=&quot;1&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AbsoluteLayout: <a href="\code\android\absolute.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_x|layout_y=&quot;250dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RelativeLayout: <a href="\code\android\relative.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android:layout_below=&quot;@id/label&quot;</span><br><span class="line">android:layout_toLeftOf=&quot;@id/ok&quot;</span><br><span class="line">android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">android:layout_alignTop=&quot;@id/ok&quot;</span><br><span class="line">android:layout_marginLeft=&quot;10dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TableLayout: <a href="\code\android\table.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:layout_span=&quot;3&quot;</span><br><span class="line">android:layout_column=&quot;2&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make the layout scrollable, add <code>&lt;ScrollView&gt;</code> as in <a href="\code\android\scroll.xml">example code</a></p>
+</li>
+</ol>
+<h3 id="Componenet"><a href="#Componenet" class="headerlink" title="Componenet:"></a>Componenet:</h3><ol>
+<li><p>EditText | TextView <a href="\code\android\TextView.java">example code</a> </p>
+</li>
+<li><p>RadioGroup <a href="\code\android\RadioGroupDemo.java">example code</a> </p>
+</li>
+<li><p>CheckBox <a href="\code\android\CheckBoxDemo.java">example code</a></p>
+</li>
+<li><p>Spinner: dropdown menu <a href="\code\android\SpinnerDemo.java">example code</a></p>
+</li>
+<li><p>ListView: <a href="\code\android\ListViewDemo.java">example code</a></p>
+</li>
+<li><p>GridView: <a href="\code\android\GridDemo.java">example code</a></p>
+</li>
+<li><p>OptionsMenu: in the corner of screen <a href="\code\android\OptionsMenu.java">example code</a></p>
+</li>
+<li><p>ContextMenu: long press to show the menu. <a href="\code\android\MenuDemo.java">example code</a>.</p>
+</li>
+</ol>
+<h3 id="Advanced-Componenet"><a href="#Advanced-Componenet" class="headerlink" title="Advanced Componenet:"></a>Advanced Componenet:</h3><ol>
+<li><p><font color="red">Picker</font>: The DatePicker code is as follows and the TimePicker code is similar.</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Calendar dateAndTime=Calendar.getInstance();</span><br><span class="line">DatePickerDialog.OnDateSetListener mydiag=new DatePickerDialog.OnDateSetListener() &#123;</span><br><span class="line">	public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) &#123;</span><br><span class="line">		dateAndTime.set(Calendar.YEAR, year);</span><br><span class="line">		dateAndTime.set(Calendar.MONTH, monthOfYear);</span><br><span class="line">		dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);</span><br><span class="line">		updateLabel();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Button btn=(Button)findViewById(R.id.dateBtn);</span><br><span class="line">	</span><br><span class="line">btn.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		new DatePickerDialog(ChronoDemo.this, mydiag, year, month, day).show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Number picker</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">NumberPicker np = (NumberPicker) findViewById(R.id.npId);</span><br><span class="line"></span><br><span class="line">np.setOnValueChangedListener(new OnValueChangeListener()</span><br><span class="line">&#123;</span><br><span class="line">    public void onValueChange(NumberPicker picker, int oldVal, int newVal)</span><br><span class="line">    &#123;</span><br><span class="line">        tv.setText(String.valueOf(newVal)); </span><br><span class="line">    &#125;        </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">np.setMaxValue(100);</span><br><span class="line">np.setMinValue(0);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Toast</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">Toast.makeText(Demo.this, &quot;warning msg&quot;, Toast.LENGTH_LONG).show();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Notification <a href="\code\android\Notification.java">example code</a></p>
+</li>
+<li><p>Alert dialog <a href="\code\android\Dialog.java">example code</a></p>
+</li>
+<li><p>Dial phone number</p>
+<ul>
+<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;&gt;&lt;/uses-permission&gt;</code></p>
+</li>
+<li><p>java code</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent phoneIntent = new Intent(&quot;android.intent.action.CALL&quot;, Uri.parse(&quot;tel:&quot; + inputStr));</span><br><span class="line">startActivity(phoneIntent);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Send message</p>
+<ul>
+<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&gt;</code></p>
+</li>
+<li><p>java code</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SmsManager smsManager = SmsManager.getDefault();</span><br><span class="line">PendingIntent sentIntent = PendingIntent.getBroadcast(act, 0, new Intent(), 0);</span><br><span class="line">smsManager.sendTextMessage(addressStr, null,contentStr, sentIntent, null);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Gallary <a href="\code\android\Gallary.java">example code</a></p>
+</li>
+<li><p>Timer</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">new Timer().schedule(new TimerTask()</span><br><span class="line">&#123;</span><br><span class="line">	public void run()</span><br><span class="line">	&#123;</span><br><span class="line">		handler.sendEmptyMessage(0x123);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;, 0, 200);</span><br><span class="line"></span><br><span class="line">Handler handler = new Handler()</span><br><span class="line">&#123;</span><br><span class="line">	public void handleMessage(Message msg)</span><br><span class="line">	&#123;</span><br><span class="line">		if (msg.what == 0x123)&#123;</span><br><span class="line">		&#125;</span><br><span class="line">		super.handleMessage(msg);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><ol>
+<li><p><code>&lt;uses-sdk android:minSdkVersion=&quot;2&quot; /&gt;</code> indicates the minimum requirement of SDK. <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&gt;</code> indicates the required permission.</p>
+</li>
+<li><p>To utilize the resouce in res/values: in java code, , R.id….R.string….; in XML file, @id/…..@string/……</p>
+</li>
+<li><p>Set no title or fullscreen, add the following code in <code>AndroidManifest.xml</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	&lt;activity android:theme=&quot;@android:style/Theme.NoTitleBar.Fullscreen&quot;</span><br><span class="line">	```  </span><br><span class="line"></span><br><span class="line">1. There are two types of intents: explicit and implicit. In explicit intents you provide the name of the Activity class. In implicit intents, you tell the system what to do rather than name the Activity class to launch.</span><br><span class="line"></span><br><span class="line">## Game Development ##</span><br><span class="line"></span><br><span class="line">1. Prepare music and image resources uder folder &quot;res&quot;</span><br><span class="line"></span><br><span class="line">1. Use Handler in the MainActivity</span><br><span class="line">	```android</span><br><span class="line">	hd=new Handler()&#123;</span><br><span class="line">		public void handleMessage(Message msg)&#123;</span><br><span class="line">	    	super.handleMessage(msg);        		</span><br><span class="line">	    	switch(msg.what)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MenuView</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class ViewMainMenu extends SurfaceView implements SurfaceHolder.Callback&#123;</span><br><span class="line">	public void onDraw(Canvas canvas)&#123;</span><br><span class="line">	public void surfaceCreated(SurfaceHolder holder) &#123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create on thread for each function</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class KeyThread extends Thread&#123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use GLRender for GameView, android opengl</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MySurfaceView extends GLSurfaceView &#123;</span><br><span class="line">	public MySurfaceView(Context context) &#123;</span><br><span class="line">			super(context);</span><br><span class="line">	        mRenderer = new SceneRenderer();</span><br><span class="line">	        setRenderer(mRenderer);						</span><br><span class="line">	        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);</span><br><span class="line">	&#125;	 </span><br><span class="line">	class SceneRenderer implements GLSurfaceView.Renderer&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Zero-Shot Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) semantic relatedness: X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) semantic embedding: X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) inductive ZSL (do not use unlabeled test images in the training stage) v.s. semi-supervised/transductive ZSL (use unlabeled test images in the training stage)</p>
+<p>2) standard ZSL (test images only from unseen categories) v.s. generalized ZSL (test images from both seen and unseen categories) (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
+<p><strong>Ideas:</strong></p>
+<ol>
+<li><p>Mapping: dictionary learning, metric learning, etc</p>
+</li>
+<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
+</li>
+<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
+</li>
+</ol>
+<p><strong>Critical Issues:</strong></p>
+<ol>
+<li><p>generalized ZSL, why first predict seen or unseen?: As claimed in <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">[1]</a>, since we only see labeled data from seen classes, during training, the scoring functions of seen classes tend to dominate those of unseen classes, leading to biased predictions in GZSL and aggressively classifying a new data point into the label space of S because classifiers for the seen classes do not get trained on negative examples from the unseen classes.</p>
+</li>
+<li><p>hubness problem <a href="https://arxiv.org/pdf/1412.6568.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>: As claimed in <a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>, one practical effect of the ZSL domain shift is the Hubness problem. Specifically, after the domain shift, there are a small set of hub test-class prototypes that become nearest or K nearest neighbours to the majority of testing samples in the semantic space, while others are NNs of no testing instances. This results in poor accuracy and highly biased predictions with the majority of testing examples being assigned to a small minority of classes. </p>
+</li>
+<li><p>projection domain shift: what is the impact on the decision values?</p>
+</li>
+</ol>
+<p><strong>Datasets:</strong></p>
+<ol>
+<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
+</li>
+<li><p>large-scale dataset: ImageNet</p>
+</li>
+</ol>
+<p><strong>Survey and Resource:</strong></p>
+<ol>
+<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
+</li>
+<li><p><a href="https://github.com/chichilicious/awesome-zero-shot-learning" target="_blank" rel="noopener">List of paper and datasets</a></p>
+</li>
+</ol>
+<p><strong>Other applications:</strong></p>
+<ol>
+<li>zero-shot object detection</li>
+<li>zero-shot figure-ground segmentation <a href="http://www.cs.umanitoba.ca/~ywang/papers/icpr16_segment.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>zero-shot semantic segmentation</li>
+<li>zero-shot retrieval</li>
+<li>zero-shot domain adaptation</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Word Vector/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Word Vector/" itemprop="url">Word Vector</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><p>For a brief survey summarizing <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf" target="_blank" rel="noopener">skip-gram</a>, <a href="https://arxiv.org/pdf/1301.3781.pdf?" target="_blank" rel="noopener">CBOW</a>, <a href="http://www.aclweb.org/anthology/D14-1162" target="_blank" rel="noopener">GloVe</a>, etc, please refer to <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/word_vector_survey.pdf" target="_blank" rel="noopener">this</a>.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>word2vec: <a href="https://github.com/tensorflow/models/tree/master/tutorials/embedding" target="_blank" rel="noopener">TensorFlow</a></p>
+<p>GloVe: <a href="https://github.com/stanfordnlp/GloVe" target="_blank" rel="noopener">C</a>, <a href="https://github.com/shashankg7/glove-tensorflow" target="_blank" rel="noopener">TensorFlow</a></p>
+<h2 id="WikiCorpus"><a href="#WikiCorpus" class="headerlink" title="WikiCorpus"></a>WikiCorpus</h2><p>Download the <a href="https://dumps.wikimedia.org/enwiki/" target="_blank" rel="noopener">WikiCorpus</a> and use the <a href="\code\shellscript\get-wikimedia.sh">shellscript</a> to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li>English word vectors: <a href="https://github.com/3Top/word2vec-api" target="_blank" rel="noopener">https://github.com/3Top/word2vec-api</a></li>
+<li>Non-English word vectors: <a href="https://github.com/Kyubyong/wordvectors" target="_blank" rel="noopener">https://github.com/Kyubyong/wordvectors</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Weakly-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Weakly-supervised Learning/" itemprop="url">Weakly-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>bag-level multi-instance learning: average each bag <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.127.277&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>update labels<ul>
+<li>instance-level multi-instance learning: label constraint within each bag <a href="https://pdfs.semanticscholar.org/3447/fe054f6af70403cfc39b4d21076337a71128.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.lxduan.info/papers/LiICCV2011.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>flip labels based on the category similarities: <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1505.01554.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>learn mapping from noisy labels to clean labels: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Veit_Learning_From_Noisy_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>learn weights for epochs: <a href="https://arxiv.org/pdf/1806.02612.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li>add weights on training losses: implicitly update labels<ul>
+<li>gradient-based <a href="https://arxiv.org/pdf/1803.09050.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>use side information, e.g., privileged information</li>
+<li>curriculum learning: <a href="http://proceedings.mlr.press/v80/jiang18c/jiang18c.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li>select confident samples<ul>
+<li>outlier detection: aunto-encoder based <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Xia_Learning_Discriminative_Reconstructions_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>active learning</li>
+</ul>
+</li>
+</ol>
+<p>For 3,4, the problem is how to learn the weights or how to select samples.</p>
+<p>a. determined by the final task loss</p>
+<p>b. based on other measurement (e.g., reconstruction error, density, distance, etc)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Vote Aggregation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/machine_learning/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
+<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
+<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
+<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
+<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Visual Object Tracking/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -388,7 +1904,7 @@
 <li>Oxford: <a href="https://www.robots.ox.ac.uk/~luca/" target="_blank" rel="noopener">https://www.robots.ox.ac.uk/~luca/</a>, </li>
 <li>Linkoping: <a href="http://users.isy.liu.se/en/cvl/marda26/" target="_blank" rel="noopener">http://users.isy.liu.se/en/cvl/marda26/</a></li>
 </ul>
-<p><strong>Comparison of Speed and Performance</strong><br><img src="https://i.imgur.com/LsTWGvk.jpg" alt=""></p>
+<p><strong>Comparison of Speed and Performance</strong><br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/LsTWGvk.jpg" alt=""></p>
 <h3 id="Survey-papers"><a href="#Survey-papers" class="headerlink" title="Survey papers"></a>Survey papers</h3><ul>
 <li>Object tracking: A survey, 2006</li>
 <li>Object tracking benchmark, 2015</li>
@@ -599,1362 +2115,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Self-supervised Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Self-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Design a proxy task using unlabeled data to help  the original task. Please refer to the tutorial slides <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_naiyanwang.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_zisserman.pdf" target="_blank" rel="noopener">[2]</a>, the <a href="https://arxiv.org/pdf/1902.06162.pdf" target="_blank" rel="noopener">survey</a>, and the <a href="https://github.com/jason718/awesome-self-supervised-learning" target="_blank" rel="noopener">paper list</a>.</p>
-<ol>
-<li><p>image-to-image</p>
-<ul>
-<li>image-to-image translation: colorization <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[1]</a>, inpainting <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Pathak_Context_Encoders_Feature_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a>, cross-channel generation <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_Split-Brain_Autoencoders_Unsupervised_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>spatial location: relative location <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Doersch_Unsupervised_Visual_Representation_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, jigsaw <a href="https://arxiv.org/pdf/1603.09246.pdf" target="_blank" rel="noopener">[2]</a>, predicting rotation <a href="https://arxiv.org/pdf/1803.07728.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>unsupervised image tasks: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a> </li>
-</ul>
-</li>
-<li><p>video-to-image</p>
-<ul>
-<li>temporal coherence: <a href="http://people.csail.mit.edu/hmobahi/pubs/embedvideo.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.386.1586&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Jayaraman_Slow_and_Steady_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>temporal order:  <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wang_Unsupervised_Learning_of_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1603.08561.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>unsupervised image tasks with video clues: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a>, optical flow prediction <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, unsupervised segmentation based on optical flow <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>,unsupervised depth estimation based on optical flow <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Huaizu_Jiang_Self-Supervised_Relative_Depth_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>video generation <a href="https://arxiv.org/pdf/1502.04681.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>cross-modal consistency: consistency between visual kernel and optical flow kernel <a href="http://www.robots.ox.ac.uk/~vgg/publications/2018/Mahendran18/mahendran18.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li><p>video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features.</p>
-<ul>
-<li>3D rotation <a href="https://arxiv.org/pdf/1811.11387.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>Cubic puzzle <a href="https://www.aaai.org/Papers/AAAI/2019/AAAI-KimD.1806.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-</ol>
-<p><strong>Muti-task self-supervised learning:</strong> integrate multiple proxy tasks <a href="https://arxiv.org/pdf/1804.10069.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1708.07860" target="_blank" rel="noopener">[2]</a></p>
-<p><strong>Combined with other frameworks:</strong> self-supervised GAN <a href="https://arxiv.org/pdf/1811.11212.pdf" target="_blank" rel="noopener">[1]</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Reasons to Kill a Paper/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/others/Reasons to Kill a Paper/" itemprop="url">Reasons to Kill a Paper</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Strong reasons: (it is on you)</strong> </p>
-<ol>
-<li>promise more than they deliver (this is the first work….)</li>
-<li>miss important references (closely related)</li>
-<li>results are too incremental or too unconvincing</li>
-<li>poorly written or oraganized</li>
-<li>incorrect statements</li>
-</ol>
-<p><strong>Weak reasons: (not lucky)</strong></p>
-<ol>
-<li>novelty is minor or incremental</li>
-<li>no technical contribution: too few formulations or the new method is too straightforward</li>
-<li>improvement is insignificant: less than 1 percent</li>
-<li>no component analysis/ablation study: do not know which component works</li>
-<li>no qualitative analysis: only quantative analysis</li>
-<li>unfair or insufficient comparison with state-of-the-art: too few state-of-the-baselines or the comparison is unfair</li>
-<li>hyper-parameter analysis: too many hyper-parameters, unclear how to set hyper-parameter, sensitivity to hyper-parameters</li>
-<li>formulations are too dense and hard to follow: maybe move to supplementary or appendix</li>
-</ol>
-<p><strong>No reasons: (bad luck)</strong></p>
-<p>If a reviewer is determined to kill your paper (in a bad mood, or not happy with your paper or you, or your idea collides with his/her own), he/she can easily make up a thousand execuses.</p>
-<ol>
-<li>I do not know what is missing, but still cannot understand it (actually all papers require reviewers to have certain background knowledge). </li>
-<li>the improvement is very minor, only 5 percent (actually most improvements are minor and not robust)</li>
-<li>just an extension of XXX, or combination of XXX and XXX (actually most papers can be treated as extension or combination of previous papers.)</li>
-<li>miss some details, not self-contained (the paper space is limited, so there is no space to provide all the details. Or you should put all the details in supplementary.)</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Privileged Information/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Privileged Information/" itemprop="url">Privileged Information</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in <a href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf" target="_blank" rel="noopener">[the first paper]</a>.</p>
-<h3 id="High-level-ideas"><a href="#High-level-ideas" class="headerlink" title="High-level ideas:"></a>High-level ideas:</h3><ul>
-<li>Use privileged information in the same way as for multi-view learning</li>
-<li>Transfer between privileged information and primary information</li>
-<li>Use privileged information to control the training process like training uncertainty or training difficulty (e.g., training loss, noise). </li>
-</ul>
-<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications:"></a>Applications:</h3><ul>
-<li><p>SVM for binary classification</p>
-<ul>
-<li>model the slack variable : SVM+ <a href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>model the margin: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Sharmanska_Learning_to_Rank_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1410.0389.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>structural SVM: <a href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>theoretical analysis: <a href="http://papers.nips.cc/paper/3960-on-the-theory-of-learnining-with-privileged-information.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.765.6609&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-</li>
-<li><p>Gaussian process classification</p>
-<ul>
-<li>GPC <a href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li><p>L2 loss for classification/Hash</p>
-<ul>
-<li>multi-labeling <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>Hash ITQ <a href="https://arxiv.org/pdf/1605.04034.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li><p>clustering</p>
-<ul>
-<li>clustering <a href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li><p>metric learning for verification/classification</p>
-<ul>
-<li>ITML+ <a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_TNNLS2015.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/2412/9967f9e6c4fca95165a7b9e6745c9debe0dd.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>DML+ <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246" target="_blank" rel="noopener">[1]</a></li>
-<li>OITML <a href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf" target="_blank" rel="noopener">[1]</a>: ordinal-based ITML</li>
-</ul>
-</li>
-<li><p>CRF</p>
-<ul>
-<li>probilistic inference <a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
-</ul>
-</li>
-<li><p>random forest</p>
-<ul>
-<li>conditional regression forest <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766" target="_blank" rel="noopener">[1]</a>: design node splitting criterion</li>
-</ul>
-</li>
-<li><p>matrix factorization for collaborative filtering</p>
-<ul>
-<li>PriMF <a href="https://www.ijcai.org/proceedings/2017/0223.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li><p>Maximum Entropy Discrimination</p>
-<ul>
-<li>MED <a href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-<li><p>Deep Learning</p>
-<ul>
-<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hoffman_Learning_With_Side_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Hallucination network</a></li>
-<li>classification loss <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>model drop-out <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Lambert_Deep_Learning_Under_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings:"></a>Settings:</h3><ul>
-<li>multi-view + LUPI <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811" target="_blank" rel="noopener">[1]</a></li>
-<li>multi-task multi-class LUPI <a href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>multi-instance LUPI <a href="http://bcmi.sjtu.edu.cn/home/niuli/paper/Exploiting%20Privileged%20Information%20from%20Web%20Data%20for%20Image%20Categorization.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>active learning + LUPI <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533" target="_blank" rel="noopener">[1]</a></li>
-<li>distillation + LUPI <a href="https://arxiv.org/pdf/1511.03643.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>domain adaptation + LUPI <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Hyper Parameter Tuning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/others/Hyper Parameter Tuning/" itemprop="url">Hyper Parameter Tuning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="Parameter-searching"><a href="#Parameter-searching" class="headerlink" title="Parameter searching:"></a>Parameter searching:</h5><ul>
-<li><p>grid search</p>
-</li>
-<li><p><a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf" target="_blank" rel="noopener">random search</a></p>
-</li>
-<li><p>Bayesian Optimization: <a href="https://sigopt.com/" target="_blank" rel="noopener">SigOpt</a> is providing parameter tuning service based on Bayesian optimization. <a href="https://ustcnewly.github.io/2018/07/18/paper_note/Simple%20Bayesian%20Optimization/" target="_blank" rel="noopener">This</a> is a good place to start.</p>
-<ul>
-<li><a href="https://github.com/hyperopt/hyperopt" target="_blank" rel="noopener">hyperopt</a> (tree parzen estimator)</li>
-<li><a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">BayesianOptimization</a>, <a href="https://github.com/JasperSnoek/spearmint" target="_blank" rel="noopener">Spearmint</a>, <a href="https://github.com/Yelp/MOE" target="_blank" rel="noopener">MOE</a> (Gaussian process) </li>
-<li><p><a href="http://www.cs.ubc.ca/labs/beta/Projects/SMAC/" target="_blank" rel="noopener">SMAC</a> (random forest regression)</p>
-<p>related papers:  <a href="http://papers.nips.cc/paper/5086-multi-task-bayesian-optimization.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/f6c3/ba9e1ccb7931ab1bacb806c7e314ab4d8b06.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://proceedings.mlr.press/v37/snoek15.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-</ul>
-</li>
-<li><p>Spectral Optimization: <a href="https://arxiv.org/pdf/1706.00764.pdf" target="_blank" rel="noopener">Harmonica</a> <a href="https://github.com/callowbird/Harmonica" target="_blank" rel="noopener">[github]</a> currently only supports tuning binary parameters.</p>
-</li>
-</ul>
-<h4 id="Model-ensembling"><a href="#Model-ensembling" class="headerlink" title="Model ensembling:"></a>Model ensembling:</h4><ul>
-<li>different initialization</li>
-<li>different epochs</li>
-<li>different hyperparameters</li>
-</ul>
-<p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Outlier Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Outlier Detection/" itemprop="url">Outlier Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Statistical-methods"><a href="#Statistical-methods" class="headerlink" title="Statistical methods"></a>Statistical methods</h3><ul>
-<li>use a model (e.g., Gaussian) to fit the distribution of all data </li>
-<li>use two models to fit the distributions of non-outliers and outliers separately</li>
-<li>Grubbs’ test</li>
-</ul>
-<h3 id="Distance-based-methods"><a href="#Distance-based-methods" class="headerlink" title="Distance based methods"></a>Distance based methods</h3><ul>
-<li>the density within a neighborhood</li>
-<li>the distance from a nearest neighbor</li>
-</ul>
-<h3 id="Learning-based-method"><a href="#Learning-based-method" class="headerlink" title="Learning based method"></a>Learning based method</h3><ul>
-<li>clustering, the smallest cluster is likely to contain outliers</li>
-<li>one-class classifier (e.g., one-class SVM)</li>
-<li>binary classifier (e.g., naive bayes for spam filtering, weighted binary SVM)</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Make Presentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/others/Make Presentation/" itemprop="url">Make Presentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>The organization of slides should be hierarchical. By only reading the titles on each slide, the reader should capture the whole story. </p>
-</li>
-<li><p>Use as many pictures, animations, videos as possible. These are called hooks, which are more enticing than text and formulas.</p>
-</li>
-<li><p>Do not stuff too many words, or even worse, too many formulas on each slide. One point per slide and one slide per point.</p>
-</li>
-<li><p>Unify the font, color, etc. At most three different colors (e.g., pure blue, pure red, pure black), one font type (e.g., Times New Roman (good for PDF), Arial) and three different font sizes (e.g., 32, 24, 18) to distinguish title, subtitle, and context.</p>
-</li>
-<li><p>For non-professional readers, use as few jargons as possible. Make sure each jargon should be used before well defined. Try to replace jargons with plain words.</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Incremental SVM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Incremental SVM/" itemprop="url">Incremental SVM</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1) Approximate incremental SVM: pass through the dataset many times</p>
-<ul>
-<li><p>Pegasos: select a training batch in each iteration</p>
-<ul>
-<li>python: <a href="https://github.com/ejlb/pegasos" target="_blank" rel="noopener">https://github.com/ejlb/pegasos</a><pre><code>   https://github.com/avaitla/Pegasos
-</code></pre></li>
-<li>C: <a href="https://www.cs.huji.ac.il/~shais/code/index.html" target="_blank" rel="noopener">https://www.cs.huji.ac.il/~shais/code/index.html</a></li>
-<li>matlab: <a href="https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function" target="_blank" rel="noopener">https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function</a></li>
-</ul>
-</li>
-<li><p>sklearn.linear_model: SGD</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clf= sklearn.linear_model.SGDClassifier(learning_rate = <span class="string">'constant'</span>, eta0 = <span class="number">0.1</span>, shuffle = <span class="keyword">False</span>, n_iter = <span class="number">1</span>)</span><br><span class="line"><span class="comment"># get x1, y1 as a new instance</span></span><br><span class="line">clf.partial_fit(x1, y1)</span><br><span class="line"><span class="comment"># get x2, y2</span></span><br><span class="line"><span class="comment"># update accuracy if needed</span></span><br><span class="line">clf.partial_fit(x2, y2)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>2) Exact incremental or decremental SVM: only pass through the dataset once</p>
-<ul>
-<li><p>Incremental and Decremental Support Vector Machine Learning<br><a href="http://www.isn.ucsd.edu/svm/incremental" target="_blank" rel="noopener">http://www.isn.ucsd.edu/svm/incremental</a></p>
-</li>
-<li><p>SVM Incremental Learning, Adaptation and Optimization: extend the work above<br>matlab: <a href="https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB" target="_blank" rel="noopener">https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB</a></p>
-</li>
-<li><p>Incremental and decremental training for linear classification: extension of liblinear focusing on linear problem<br><a href="http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html</a></p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/How to Come up with Ideas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/others/How to Come up with Ideas/" itemprop="url">How to Come up with Ideas</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><u>Non-trivial ideas</u> require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. <u>Trivial ideas</u> are much easier with the aid of some short formulas. We do not encourage students to generate trivial ideas based on short formulas, but this can help beginners take the first step and gain confidence.</p>
-<ol>
-<li><p>naive combination: e.g., combine regularizers, combine network modules</p>
-</li>
-<li><p>from single to multiple: create multiple-XXX learning setting, e.g., multi-view learning, multi-instance learning, multi-label learning, multi-task learning.</p>
-</li>
-<li><p>separate common and specific components: in multi-XXX learning setting, we can separate XXX-invariant components from XXX-specific components. e.g., for multiple domains (resp, categories), we can separate domain (resp., category)-invariant components from domain (resp., category)-specific components.</p>
-</li>
-<li><p>combine local information with global information: jointly use local and global information from images/videos.</p>
-</li>
-<li><p>from  discrete to continous (e.g., using integral) or from continuous to discrete (e.g., using basis).</p>
-</li>
-<li><p>from coarse-grained to fine-grained: generate a coarse-grained result first and then refine the coarse-grained result to fine-grained result.</p>
-</li>
-<li><p>from simple structure to advanced structure: e.g., from sequence network to tree network to graph network, form vector representation to matrix representation to tensor representation.</p>
-</li>
-<li><p>kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. </p>
-</li>
-<li><p>introduce auxiliary/side information to help the original task: the auxiliary/side information is usually more accessible.</p>
-</li>
-<li><p>learn different weights on different components: the essence of machine learning is learning weights, e.g., assign different weights on different feature dimensions (linear classifier), on different kernels (multiple-kernel learning), on different training samples (sample reweighting).</p>
-</li>
-<li><p>fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method, as illustrated below.</p>
-</li>
-</ol>
-<center><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/fill_in_holes.png" width="35%"></center>
-
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2009,7 +2169,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">155</span>
+                  <span class="site-state-item-count">153</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2020,7 +2180,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2031,7 +2191,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

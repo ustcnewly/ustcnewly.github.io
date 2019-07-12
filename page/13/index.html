@@ -281,6 +281,1173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Euler Angle (yaw,pitch,roll)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/machine_learning/Euler Angle (yaw,pitch,roll)/" itemprop="url">Euler Angle (yaw,pitch,roll)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Borrowing aviation terminology, these rotations will be referred to as yaw, pitch, and roll:</p>
+<p>A yaw is a counterclockwise rotation of \( \alpha\) about the \(z\)-axis. The rotation matrix is given by</p>
+<script type="math/tex; mode=display">\displaystyle R_z(\alpha) = \begin{pmatrix}\cos\alpha & -\sin\alpha & 0 \\\\ \sin\alpha & \cos\alpha & 0 \\\\  0 & 0 & 1  \end{pmatrix} .</script><p>A pitch is a counterclockwise rotation of \( \beta\) about the \( y\)-axis. The rotation matrix is given by</p>
+<script type="math/tex; mode=display">\displaystyle R_y(\beta) = \begin{pmatrix}\cos\beta & 0 & \sin\beta \\\\ 0 & 1 & 0 \\\\ -\sin\beta & 0 & \cos\beta  \end{pmatrix} .</script><p>A roll is a counterclockwise rotation of \( \gamma\) about the \( x\)-axis. The rotation matrix is given by</p>
+<script type="math/tex; mode=display">\displaystyle R_x(\gamma) = \begin{pmatrix}1 & 0 & 0 \\\\ 0 & \cos\gamma & -\sin\gamma \\\\ 0 & \sin\gamma & \cos\gamma  \end{pmatrix} .</script><p>Note that \( R(\alpha,\beta,\gamma)\) performs the roll first, then the pitch, and finally the yaw. If the order of these operations is changed, a different rotation matrix would result.</p>
+<p>For gaze direction, roll does not change gaze direction, so only yaw and pitch affect gaze direction. Given a normalized 3D vector (x,y,z), how to determine the yaw and pitch angles?<br>The problem should be discussed based on the order of doing yaw/pitch.</p>
+<p>Consider an eye rigid model (bound with a head rigid model), aligned with original coordinate system, is facing x positive direction. Since roll has no effect on eye direction, we only perform yaw and pitch. For coordinate transformation, we consider the reverse process.</p>
+<p>The eye direction in new coordinate system is \(c_1 = (1,0,0)\) but \(c_2 = (x_0,y_0,z_0)\) in the original coordinate system. </p>
+<ul>
+<li><p>If true rotation order is yaw-&gt;pitch, then <script type="math/tex">c\_2=R\_z(-\alpha)R\_y (-\beta)c\_1.</script>. Then, \(\beta=arsin(z_0),\alpha=-artan(y_0/x_0)\). </p>
+</li>
+<li><p>If true rotation order is pitch-&gt;yaw, then <script type="math/tex">c\_2=R\_y(-\beta)R\_z (-\alpha)c\_1.</script>. Then, \(\alpha=-arsin(y_0),\beta=artan(z_0/x_0)\). </p>
+</li>
+</ul>
+<p>If we insert \(R_x(\gamma)\) before \(c_1\), the results won’t change, which demonstrates that roll will not influence eye direction. In other words, if the true rotation order is yaw-&gt;pitch-&gt;roll or pitch-&gt;yaw-&gt;roll, the above analysis still holds. </p>
+<p>Notice:<br>-</p>
+<ul>
+<li>we used right-hand coordinate system, that is, thumb along the z-axis and fingers from x-axis to y-axis.</li>
+<li>rotation \(\theta\) around some axis means rotating counter clockwise \(\theta\) when looking along the positive direction of that axis</li>
+<li>when doing rotations in sequence, each rotation is based on the up-to-date coordinate system (x-axis, y-axis, z-axis).</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Endovascular Surgery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/machine_learning/Endovascular Surgery/" itemprop="url">Endovascular Surgery</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Key-words"><a href="#Key-words" class="headerlink" title="Key words:"></a>Key words:</h4><p>catheter, cannulation, EM tracking (enhance visualization and provide objective metric)</p>
+<h4 id="Endovascular-Technique"><a href="#Endovascular-Technique" class="headerlink" title="Endovascular Technique:"></a>Endovascular Technique:</h4><p>Early endovascular technique: real-time fluoroscopy and 2D angiography: ionizing radiation and repeated injection of a nephrotoxic contrast agent.</p>
+<p>Image fusion techniques: project 3D CT and magnetic resonance imaging to real-time 2D fluoroscopic images, still require real-time fluroscopy.</p>
+<p>Electromagnetic (EM) tracking: an EM field is generated by the Aurora Window Field Generator, and sensors on the tips measure and transmit the roll orientation and forward motion. The veracity of EM tracking is evaluated on the basis of target registration error (TRE).</p>
+<h4 id="System"><a href="#System" class="headerlink" title="System:"></a>System:</h4><ol>
+<li>manual simulator 2. virtual simulator (virtual reality)</li>
+</ol>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/yQSOKk9.jpg" width="50%"></p>
+<h3 id="Task"><a href="#Task" class="headerlink" title="Task:"></a>Task:</h3><p>Different locations of vessels correspond to the tasks with different difficult levels. </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/iGbNTt1.jpg" width="50%"></p>
+<h4 id="Metric"><a href="#Metric" class="headerlink" title="Metric:"></a>Metric:</h4><p>Certain metric is required to evaluate or augment the skills of surgeon (novice, intermediate, expert).</p>
+<p>1.expert observation and subjective score</p>
+<p>2.number of cases</p>
+<p>3.kinematic metrics: mapping from kinematic data to skill (classification)</p>
+<ul>
+<li>3D path length</li>
+<li>spectral arc length: change of acceleration in frequency domain</li>
+<li>root mean dimensionless jerk: movement smoothness</li>
+<li>submovement number and duration</li>
+<li>catheter turn: measure the task difficulty</li>
+</ul>
+<h4 id="View"><a href="#View" class="headerlink" title="View:"></a>View:</h4><ul>
+<li>2D or 3D</li>
+<li>real-time or stored (using stored image can reduce fluoroscopy time and radiation exposure)</li>
+<li>anteroposterior/lateral/endoluminal view</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Domain Generalization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Domain Generalization/" itemprop="url">Domain Generalization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>a) When the domain labels are known: </p>
+<ul>
+<li><p>reduce the distance between different domains: MMD <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2932.pdf" target="_blank" rel="noopener">[1]</a><a href="http://proceedings.mlr.press/v28/muandet13.pdf" target="_blank" rel="noopener">[2]</a>, mutual information</p>
+</li>
+<li><p>domain-invariant and domain-specific components: <a href="">[1]</a><a href="https://arxiv.org/pdf/1710.03077.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ul>
+<p>b) When the domain labels are unkown:</p>
+<ul>
+<li>first discover multiple latent domains: cluster <a href="https://people.eecs.berkeley.edu/~jhoffman/papers/Hoffman_ECCV2012.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_ECCV2014.pdf" target="_blank" rel="noopener">[2]</a>, max margin separation <a href="http://papers.nips.cc/paper/5210-reshaping-visual-datasets-for-domain-adaptation.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Domain Adaptation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Domain Adaptation/" itemprop="url">Domain Adaptation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Methods</strong></p>
+<ol>
+<li><p>learn projection matrix: F(PXs, QXt)</p>
+<ul>
+<li>project to common subspace<ul>
+<li>TCA <a href="http://www.aaai.org/ocs/index.php/IJCAI/IJCAI-09/paper/download/294/962" target="_blank" rel="noopener">[pdf]</a></li>
+<li>SA <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Fernando_Unsupervised_Visual_Domain_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>LSSA: extension of SA <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Aljundi_Landmarks-Based_Kernelized_Subspace_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>DIP <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Baktashmotlagh_Unsupervised_Domain_Adaptation_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>CORAL <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12443/11842" target="_blank" rel="noopener">[pdf]</a></li>
+<li>deep CORAL <a href="https://arxiv.org/pdf/1607.01719.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>other deep feature-based methods <a href="http://proceedings.mlr.press/v37/long15.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1409.7495.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+</li>
+<li>interpolation on the manifold<ul>
+<li>SGF <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.300.3323&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>GFK <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.373.2677&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>sample selection: learn sample weights</p>
+<ul>
+<li>KMM <a href="http://papers.nips.cc/paper/3075-correcting-sample-selection-bias-by-unlabeled-data.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>STM <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chu_Selective_Transfer_Machine_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>DASVM <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4803844" target="_blank" rel="noopener">[pdf]</a></li>
+<li>weighted adversarial network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Importance_Weighted_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1224.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+</li>
+<li><p>domain-invariant and domain-specific components</p>
+<ul>
+<li>SDDL <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shekhar_Generalized_Domain-Adaptive_Dictionaries_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>Domain Separation Network <a href="http://papers.nips.cc/paper/6254-domain-separation-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>low-rank DL <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8053784" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>low-rank reconstruction</p>
+<ul>
+<li>LTSL <a href="https://search.proquest.com/docview/1531888211?pq-origsite=gscholar" target="_blank" rel="noopener">[pdf]</a></li>
+<li>RDALR <a href="http://www.ee.columbia.edu/ln/dvmm/publications/12/DomainAdaptation.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>pixel-level image to image translation</p>
+<ul>
+<li>paired input: conditional GAN <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>unpaired input: cycling GAN <a href="https://arxiv.org/pdf/1703.10593.pdf" target="_blank" rel="noopener">[pdf]</a>, GAN with content-similarity loss <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[pdf]</a>, UNIT <a href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>combine with feature-based method: GraspGAN <a href="https://arxiv.org/pdf/1709.07857.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>A unified framework <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Murez_Image_to_Image_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>adversarial network <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tzeng_Adversarial_Discriminative_Domain_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: classification and domain confusion. The domain separation and confusion problem, which is a min-max problem, can be solved like GAN or using <a href="https://arxiv.org/pdf/1409.7495.pdf" target="_blank" rel="noopener">reverse gradient (RevGrad) algorithm</a>.  </p>
+</li>
+<li><p>meta-learning</p>
+<ul>
+<li>gradients on two domains should be consistent <a href="https://arxiv.org/pdf/1710.03463.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>domain alignment layer (batch normalization): <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Carlucci_AutoDIAL_Automatic_DomaIn_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1603.04779" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>guided learning: tutor guides students and get feedback from students. <a href="http://www.leizhang.tk/publications%20and%20codes.html" target="_blank" rel="noopener">ACM-MM18 paper</a></p>
+</li>
+<li><p>ensemble transfer learning: aggregate multiple transfer learning approaches <a href="https://arxiv.org/pdf/1708.05629.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+</ol>
+<p><strong>Settings</strong></p>
+<ol>
+<li><p>open-set domain adaptation or partial transfer learning: <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busto_Open_Set_Domain_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_Partial_Transfer_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Tzeng_Simultaneous_Deep_Transfer_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>distant domain adaptation (two domains are too distant, so the transfer between them relies on transition domains): <a href="https://dl.acm.org/ft_gateway.cfm?id=2783295&amp;ftid=1613048&amp;dwn=1&amp;CFID=49856439&amp;CFTOKEN=825d8eea3c707e8-BF658D58-A3BB-2ACB-19DC13C6B3291336" target="_blank" rel="noopener">Transitive transfer learning</a>, <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14446/14451" target="_blank" rel="noopener">distant domain transfer learning</a>  </p>
+</li>
+</ol>
+<p><strong>Domain adaptation for diverse applications</strong></p>
+<ol>
+<li><p>pose estimation <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8245864" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>person re-identification <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7018030" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>objection detection <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Domain_Adaptive_Faster_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>segmentation <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>VQA <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chao_Cross-Dataset_Adaptation_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+</ol>
+<p><strong>Domain difference metric</strong>: To measure data distribution mismatch, the most commonly used metric is MMD and its extensions such as <a href="https://arxiv.org/pdf/1405.2664.pdf" target="_blank" rel="noopener">fast MMD</a>, conditional MMD <a href="https://arxiv.org/pdf/1606.04218.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1503.00591.pdf" target="_blank" rel="noopener">[2]</a> and <a href="https://arxiv.org/pdf/1605.06636.pdf" target="_blank" rel="noopener">joint MMD</a>. There are also some other metrics like KL divergence, HSIC criterion, Bregman divergence, manifold criterion, and second-order statistic.</p>
+<p><strong>Survey</strong>: </p>
+<ol>
+<li>An old survey of transfer learning <a href="http://www.cs.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>Recent advance on domain adaptation <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7078994" target="_blank" rel="noopener">[pdf]</a></li>
+<li>My survey of old deep learning domain adaptation methods <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/deep_learning_for_domain_adaptation.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>A Chinese version of transfer learning tutorial <a href="http://jd92.wang/assets/files/transfer_learning_tutorial_wjd.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+<li>Datasets and code: <a href="https://github.com/jindongwang/transferlearning" target="_blank" rel="noopener">[1]</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Bibliography Collection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/others/Bibliography Collection/" itemprop="url">Bibliography Collection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>For the full name of journals and venue information of conferences, click <a href="https://docs.google.com/spreadsheets/d/1-KlvSeO1ULdUkXCByqED1bQBeFXTG_e5LfHeWwtei0A/edit#gid=0" target="_blank" rel="noopener">Conference and Journal Info</a>.</p>
+</li>
+<li><p>For the collected full-length bib, click <a href="https://docs.google.com/document/d/1T8lmj8ZHfErMSVwrsQc_FVYNYbEaRETVPf9SKMfiGoY/edit" target="_blank" rel="noopener">egbib collection</a>.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Software Management/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Ubuntu Software Management/" itemprop="url">Ubuntu Software Management</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="raw-dpkg"><a href="#raw-dpkg" class="headerlink" title="raw: dpkg"></a>raw: dpkg</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i xxx.deb</span><br><span class="line">dpkg -r xxx.deb</span><br><span class="line">dpkg --purge xxx.deb</span><br><span class="line">dpkg -L xxx.deb</span><br><span class="line">dpkg --info xxx.deb</span><br><span class="line">dpkg -reconfigure xxx</span><br></pre></td></tr></table></figure>
+<p>dkpg is raw method to install without solving dependencies and existing software.</p>
+<h3 id="mature-apt-get"><a href="#mature-apt-get" class="headerlink" title="mature: apt-get"></a>mature: apt-get</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-get install softname1 softname2 softname3……</span><br><span class="line">apt-get remove softname1 softname2 softname3……</span><br><span class="line">apt-get remove --purge softname1</span><br><span class="line">apt-get autoremove</span><br><span class="line">apt-get clean //clean /var/cache/apt/archives </span><br><span class="line">apt-get autoclean //clean the out-of-date files in /var/cache/apt/archives</span><br><span class="line"></span><br><span class="line">apt-get update //update software information and database command</span><br><span class="line">apt-get upgrade //update the system</span><br><span class="line"></span><br><span class="line">apt-cache search rough_name</span><br><span class="line">apt-cache show exact_name</span><br><span class="line"></span><br><span class="line">pkg-config --libs opencv</span><br><span class="line">pkg-config --cflags opencv </span><br><span class="line">pkg-config --modversion opencv</span><br></pre></td></tr></table></figure>
+<p>apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg.</p>
+<h3 id="more-mature-aptitude-GUI"><a href="#more-mature-aptitude-GUI" class="headerlink" title="more mature: aptitude (GUI)"></a>more mature: aptitude (GUI)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aptitude install softname1</span><br><span class="line">aptitude remove softname1</span><br></pre></td></tr></table></figure>
+<p>aptitude is also built on dkpg and more powerful than apt-get.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/" itemprop="url">Ubuntu Shell Scripts</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><code>#!/bin/bash</code> at the head of file indicates shell type</p>
+<ol>
+<li><p>strict format</p>
+<p> For <code>if [[ $input == &quot;hello&quot; ]]</code>, note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression</p>
+</li>
+<li><p>arguments</p>
+<ul>
+<li>$@: stores all the arguments in a list of string</li>
+<li>$*: stores all the arguments as a single string</li>
+<li>$#: stores the number of arguments</li>
+<li>shift: remove the first argument</li>
+</ul>
+</li>
+</ol>
+<p>When starting login or interative shells, certain files will be executed based on the following tables:</p>
+<p>For bash:<br>login-y interactive-y: profile<br>login-y interactive-n: profile<br>login-n interactive-y: bashrc</p>
+<p>For zsh:<br>login-y interactive-y: zshenv zprofile zshrc zlogin<br>login-y interactive-n: zshenv zprofile zlogin<br>login-n interactive-y: zshenv zshrc<br>login-n interactive-n: zshenv</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Mount/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -712,1138 +1879,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Environment Variable/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Ubuntu Environment Variable/" itemprop="url">Ubuntu Environment Variable</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>For user-wide: ~/.profile or ~/.bashrc<br>For system-wide: /etc/profile</p>
-<p><code>source ~/.bashrc</code> or <code>source /etc/profile</code> can make the newly added (not the removed) environment variables for the current cmd window available immediately. However, you need to re-login to make them user-wide or system-wide.</p>
-<p>Note that after you <code>sudo su</code> (not using sudo privilege), the environment variables will be lost. You need to re-login. Because <code>sudo su</code> will erase newly exported variables.</p>
-<p>For permanent system-wide change even after <code>sudo su</code>, you should modify /etc/environment, which is not recommended. Because /etc/environment cannot recognize intermediate variable such as $JAVA_HOME. Sometimes misusing /etc/environment may result in your failure in login.</p>
-<p>Not recommend running <code>sudo su</code> and then modifying ~/.profile or ~/.bashrc.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Crontab/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Ubuntu Crontab/" itemprop="url">Ubuntu Crontab</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>crontab -l //list crontab</p>
-</li>
-<li><p>crontab -r //remove crontab</p>
-</li>
-<li><p>crontab -e //edit crontab</p>
-<ul>
-<li>minute hour day-of-month month day-of-week cmd </li>
-<li>each term can be a single number, <em>e.g.</em>, 3, or a range, <em>e.g.</em>, 3-6, or a set, <em>e.g.</em>, 3,5,7, or interval, <em>e.g.</em>,  */10</li>
-<li>for example, “<em> </em>/10 <em> </em> * sh ~/cmd.sh” means executing cmd.sh every 10 minutes.</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Linux Command Lines/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Linux Command Lines/" itemprop="url">Ubuntu Command Lines</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<ol>
-<li><p>create new user with home folder</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser XXX</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>sudo privilege: <code>vim /etc/sudoers</code> and add <code>$username ALL=(ALL) ALL</code> at the bottom.</p>
-</li>
-<li><p>start ssh on the server, the default port is 22</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo/etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list -a #including hidden files</span><br><span class="line">list -S #arrange by size</span><br><span class="line">list -t #arrange by time</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>view text</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat</span><br><span class="line">head/tail -n 10 tmp.txt #view the first/last 10 lines</span><br><span class="line">less #more powerful than more</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Change the privilege</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 ./</span><br><span class="line">chmod a+x ./</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Check disk or file size</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df -h </span><br><span class="line">du ./ --max-depth 2 -h</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Compress or uncompress files, refer to this <a href="http://www.cnblogs.com/eoiioe/archive/2008/09/20/1294681.html" target="_blank" rel="noopener">link</a>.</p>
-</li>
-<li><p>Grep + regular expression</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [xyz]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Search file</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">locate "keyword" #fast</span><br><span class="line">find ./ -maxdepth 1 -name "*keyword*" </span><br><span class="line">find ./ -name "*keyword*" -size +50M -size -100M </span><br><span class="line">find ./ -name "*keyword*" -mmin -10 #m:modify min:minute </span><br><span class="line">find ./ -name "*keyword*" -exec rm -r &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Pipe commands</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tr -s ' ' | cut -d ' ' -f 2 #tr to truncate space</span><br><span class="line">ls -l | sort -rnk2 #-r:reverse -n:numerical -k:k-th column</span><br><span class="line">ls -l | wc -l #count line</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>xargs:</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat python/requirements.txt | xargs -L 1 sudo pip install</span><br><span class="line">find . -name "*.c" | xargs rm -rf</span><br><span class="line">find . -name '*.c' | xargs grep 'stdlib.h'</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>alias: temporary alias command </p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias lnew="cd /home/niuli/caffe"</span><br><span class="line">unalias lnew</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>export: The export command is one of the bash shell built-in commands, which means it is part of your shell.</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export a=linux.com</span><br><span class="line">echo $a</span><br><span class="line">export -n a #remove variable</span><br><span class="line"></span><br><span class="line">printname () &#123; echo "Linuxcareer.com"; &#125;</span><br><span class="line">export -f printname #export function</span><br></pre></td></tr></table></figure>
-<p>add LD_LIBRARY_PATH</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shellscript sample</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">read -p "Please input your first name: " </span><br><span class="line">echo -e "\nYour full name is: $firstname $lastname" </span><br><span class="line">test ! -e $filename &amp;&amp; echo "The filename '$filename' DO NOT exist" &amp;&amp; exit 0</span><br><span class="line">test -f $filename &amp;&amp; filetype="regulare file" </span><br><span class="line">test -d $filename &amp;&amp; filetype="directory" </span><br><span class="line">[ "$yn" == "Y" -o "$yn" == "y" ] &amp;&amp; echo "OK, continue" &amp;&amp; exit 0</span><br><span class="line"></span><br><span class="line">if [ "$yn" == "Y" ] || [ "$yn" == "y" ]; then </span><br><span class="line">	echo "OK, continue" </span><br><span class="line">elif [ "$yn" == "N" ] || [ "$yn" == "n" ]; then </span><br><span class="line">	echo "Oh, interrupt!" </span><br><span class="line">else </span><br><span class="line">	echo "I don't know what your choice is" </span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">while [ "$yn" != "yes" -a "$yn" != "YES" ] </span><br><span class="line">do </span><br><span class="line">	read -p "Please input yes/YES to stop this program: " yn </span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for animal in dog cat elephant </span><br><span class="line">do </span><br><span class="line">	echo "There are $&#123;animal&#125;s.... " </span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Windows Command Lines/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/operation_system/Windows Command Lines/" itemprop="url">Windows Command Lines</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>zip/unzip</p>
-<p> <code>winrar x -y -ibck zip_file_name unzip_file_name</code> //x means unzip, -y means yes to interrupted queries, -ibck means running in the background</p>
-</li>
-<li><p>generate the file list under one folder</p>
-<p> <code>dir D:\test /b &gt;list.txt</code> or <code>dir D:\test /b &gt;list.xls</code></p>
-</li>
-<li><p>combine multiple compressed volumes</p>
-<p> <code>copy /b logs.tar.gza* logs.tar.gz</code></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Install Ubuntu under Windows/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/operation_system/Install Ubuntu under Windows/" itemprop="url">Install Ubuntu under Windows</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="For-MRB-file-system"><a href="#For-MRB-file-system" class="headerlink" title="For MRB file system"></a>For MRB file system</h3><ol>
-<li><p>Install from CD: the simplest way, but many desktops don’t have CD-ROM nowadays.</p>
-</li>
-<li><p>Install from memory disk: use universal USB installer or refus to write .iso file into memory disk. to enable booting from USB  installer, we should turn off fast booting in the OS and disable secure boot in the BIOS.</p>
-</li>
-<li><p>Install from hard disk: </p>
-<ul>
-<li><p>copy .iso along with vmlinuz.efi and initrd.lz in Casper as well as .disk under Disk C. Make sure Disk C is (hd0,N) in the disk manager.</p>
-</li>
-<li><p>Open easyBCD and configure NeoGrub by editing the menu.lst as follows:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title Install Ubuntu 14.04 LTS </span><br><span class="line">root (hd0,N) </span><br><span class="line">kernel (hd0,N)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</span><br><span class="line">initrd.lz (hd0,N)/initrd.lz</span><br></pre></td></tr></table></figure>
-<p>Remember to modify N and iso file name.</p>
-</li>
-<li><p>install Ubuntu after entering the NeoGrub term. Remember to execute <code>sudo umount –l /isodevice</code> first. </p>
-</li>
-<li><p>add the Linux/BSD boot term in easyBCD and choose grub2 instead of grub(legacy), otherwise the screen may be black.</p>
-</li>
-<li><p>if grub command line appears after booting Ubuntu system. Try to type the following codes:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root (hd1,1)</span><br><span class="line">kernel /boot/vmlinuz-3.19.0-25-generic root=/dev/sdb2</span><br><span class="line">initrd /boot/initrd.img-3.19.0-25-generic</span><br><span class="line">boot</span><br></pre></td></tr></table></figure>
-<p>Pay attention to (hd1,1), /dev/sdb2, and the linux kernel version. After typing <code>root (hd1,1)</code>, x83 should be returned.<br>Or configure NeoGrub by adding the following codes and use the NeoGrub to boot Ubuntu. You may want to know more about grub and MBR, <a href="http://www.cnblogs.com/moonlove/archive/2012/06/05/2537238.html" target="_blank" rel="noopener">this blog</a> is a good start.</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>Tips:</p>
-<ol>
-<li><p>Windows disks have basic ones and dynamic ones. Don’t install Ubuntu on dynamic ones. Converting basic disk to dynamic disk is easy while the opposite is time-consuming and needs formatting.</p>
-</li>
-<li><p>In Windows7, one disk can have 3 primary zones and 1 extended zones (containing logic zones). Installing Ubuntu on extended zones may be possible, but installing it on primary zones is preferred.</p>
-</li>
-<li><p>Change the boot order under Ubuntu: /boot/grub/grub.cfg is generated from /etc/grub.d and /etc/default/grub. So we have two ways: a) reset GRUB_DEFAULT=N in /etc/default/grub. b) <code>mv /etc/grub.d/30_os-prober /etc/grub.d/06_os-prober</code>. Don’t forget <code>sudo update-grub</code></p>
-</li>
-<li><p>Change the boot order under Windows7: use easyBCD.</p>
-</li>
-<li><p>For the Ubuntu disk partition, generally, / and swap are enough. Sometimes, we need /home and /boot. The size of swap is comparable with the memory size. The size of /boot is less than 1G. </p>
-</li>
-<li><p>Note that when parting disk for installing Ubuntu, we have two choices for booting management device in the bottom dropdown menu. First, by default, then Windows guides Ubuntu when booting. Second, change to the boot folder of Ubuntu, then Ubuntu guides Windows when booting. </p>
-</li>
-</ol>
-<h3 id="For-UEFI-file-system"><a href="#For-UEFI-file-system" class="headerlink" title="For UEFI file system"></a>For UEFI file system</h3><p>No need to make a partition for boot. Keep the booting mangement device in the bottom dropdown menu the default EFI (EPS) partition of Windows.</p>
-<p>For booting problem, we can use <a href="https://sourceforge.net/projects/refind" target="_blank" rel="noopener">rEFInd</a> to locate the efi file.</p>
-<p>tips:</p>
-<ol>
-<li><p>In Windows, we can assign a disk index to the EPS partition and operate on it via notebook with administrative privilege. </p>
-</li>
-<li><p>For Windows, the key efi files are bootx64.efi and bootmgfw.efi</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/BIOS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/operation_system/BIOS/" itemprop="url">BIOS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>If something is wrong when attempting to enter the BIOS, try the following approaches:</p>
-<ul>
-<li>press F2, F12, ESC, DEL</li>
-<li>change the cable, adaptor, interface, etc (hardware reason)</li>
-<li>update BIOS to the latest version</li>
-<li>for Windows10, settings-&gt;recover-&gt;firmware</li>
-<li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu VNC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/network/Ubuntu VNC/" itemprop="url">Ubuntu VNC</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Server"><a href="#Server" class="headerlink" title="Server:"></a>Server:</h3><ol>
-<li><p>Install VNC server under Ubuntu: $sudo apt-get install vnc4server</p>
-</li>
-<li><p>Configure the VNC server, $vi ~/.vnc/xstartup<br>change the style to gnome-session &amp; in the last line.</p>
-</li>
-<li><p>start the VNC server: $vncserver</p>
-</li>
-</ol>
-<h3 id="Client"><a href="#Client" class="headerlink" title="Client:"></a>Client:</h3><ol>
-<li>Install VNC client under Windows: use http:\IP:580$ID to log in.</li>
-</ol>
-<p><strong>Tips:</strong> For 10060 error, run <code>$iptables -F</code> to close firewall.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1898,7 +1933,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">155</span>
+                  <span class="site-state-item-count">153</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1909,7 +1944,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1920,7 +1955,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

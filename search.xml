@@ -1,25 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Image Loss]]></title>
-    <url>%2F2019%2F07%2F08%2Fdeep_learning%2FImage%20Loss%2F</url>
-    <content type="text"><![CDATA[perceptual loss [1]: similar semantic information \frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2 style loss [2]: similar style which is spatial invariant ||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2 with G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'} pairwise mean squared error (PMSE) [3] [4]: scale-invariant mean squared error (in log space) \frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2 total variation (TV) loss [1]: smoothness \sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1 alignment loss [5]: similar to style loss ||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2 with F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c} Reference[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016. [2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015. [3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014. [4] Bousmalis, Konstantinos, et al. “Unsupervised pixel-level domain adaptation with generative adversarial networks.” CVPR, 2017. [5] Abavisani, Mahdi, Hamid Reza Vaezi Joze, and Vishal M. Patel. “Improving the performance of unimodal dynamic hand-gesture recognition with multimodal training.” CVPR, 2019.]]></content>
+    <title><![CDATA[Camera Survey]]></title>
+    <url>%2F2019%2F07%2F12%2Fhardware%2Fcamera%2FCamera%20Survey%2F</url>
+    <content type="text"><![CDATA[Interface Type: GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission. Color v.s. MonochromeWhen the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file. Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution. Sensor Type: CCD (Charged Coupling Devices): special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light. CMOS (Complimentary Metal Oxide Semiconductor): use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption Readout Method:Global v.s. rolling shutter: originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities. Advantage of global shutter: global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. Quantum EfficiencyThe ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity. Field of ViewFOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV. Pixel SizeA small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>camera</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Caffe]]></title>
+    <url>%2F2019%2F07%2F12%2Fprogramming_language%2FCaffe%2FCaffe%2F</url>
+    <content type="text"><![CDATA[Fundamental Stuff: Caffe Tutorial Caffe Official Slides Key Notes: Required Packages: CUDA OpenCV BLAS: (Basic Linear Algebra Subprograms)operations like matrix multiplication, matrix addition,both implementation for CPU(cBLAS) and GPU(cuBLAS).provided by MKL(INTEL), ATLAS, openBLAS, etc. Boost: a c++ library, use some of its math functions and shared_pointer. glog,gflags:provide logging &amp; command line utilities. Essential for debugging. leveldblmdb: database io for your program. Need to know this for preparing your own data. protobuf: an efficient and flexible way to define data structure. Need to know this for defining new layers.]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>Caffe</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow Learning Note]]></title>
+    <url>%2F2019%2F07%2F12%2Fprogramming_language%2FTensorFlow%2FTensorFlow%20Learning%20Note%2F</url>
+    <content type="text"><![CDATA[Initialization shape = [batch,height,width,channel]constant:1234tf.zeros(shape)tf.constant(0.4, shape)tf.random_norm(shape, stddev=1e-1)tf.truncated_norm(shape, stddev=1e-1) variable:12345tf.get_variable(varname, shape=[5,5,64,192], initializer=XXX)initializer=tf.zeros_initializer() # biasinitializer=tf.random_normal_initializer(0.0, 0.02) initializer=tf.truncated_normal_initializer(0.0, 0.02)initializer=tf.contrib.layers.xavier_initializer() # weight Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal. Summary for tensorboard 1234tf.summary.scalar('total_loss', total_loss) #scalar, histogram, etcself.merged = tf.summary.merge_all()train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) #include the sess graphtrain_writer.add_summary(summary, ibatch) after running the code, open tensorboard tensorboard --logdir=&#39;./train&#39; Checkpoint 12345678910# save all the variablessaver = tf.train.Saver() # save partial variables saver = tf.train.Saver(&#123;"my_v2": v2&#125;)# save and restoresaver.save(sess, "/tmp/model.ckpt")saver.restore(sess, "/tmp/model.ckpt")# restore partial variablesinit_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())init_fn(sess) inspect the checkpoint file1234567from tensorflow.python import pywrap_tensorflow checkpoint_path = os.path.join(model_dir, "model.ckpt") reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path) var_to_shape_map = reader.get_variable_to_shape_map() for key in var_to_shape_map: print("tensor_name: ", key) print(reader.get_tensor(key)) # Remove this is you want to print only variable names Layer convolutional layer 1234kernel = tf.Variable(tf.zeros([5,5,64,192]))tf.nn.conv2d(x, kernel, strides=[1, 1, 1, 1], padding='SAME') # padding is 'SAME' or 'VALID' depending on stride is 1 or largertf.nn.bias_add(prev_layer, bias) dropout layer 123keep_prob = tf.placeholder(tf.float32)# set keep_prob as 0.5 during training and 1 during testingtf.nn.dropout(h_fc1, keep_prob) pooling layer 1tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='VALID') loss layer 12tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y)) tf.nn.l2_loss(prev_layer) metric layer 12# calculate top-k accuracytf.nn.in_top_k(logits, label_holder, k) # the accuracy of top k activation layer1tf.nn.relu(prev_layer) other layers123tf.one_hot(self.input_class, self.n_class)tf.nn.embedding_lookup(codebook, indices)tf.nn.lrn() # legacy Common Operations1234567891011121314151617tf.matmultf.powtf.diag_parttf.reduce_sumtf.reduce_meantf.nn.softmaxtf.tile(a,(2,2)) tf.nn.embedding_lookupsim.flattentf.squeezetf.reshapetf.concat(values=[a,b,c], axis=3)tf.gather #get indexed value, only on 0-dimtf.gather_ndtf.map_fntf.scan_fntf.fold1/foldr Training and testing training stage 1234optimizer = tf.train.GradientDescentOptimizer(0.01)train = optimizer.minimize(loss)for i in range(1000): #note the iteration number here sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;) testing stage 12acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125; Queue For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details. ``python with tf.Session(config=config) as sess: coord = tf.train.Coordinator() threads = tf.train.start_queue_runners(sess=sess, coord=coord) sess.run(tf.initialize_local_variables()) #main code coord.request_stop() coord.join(threads) 123456789* With tfrecord and slim, using queue is much easier by using `slim.queues.QueueRunners` ```python with tf.Session(config=config) as sess: with slim.queues.QueueRunners(sess): ``` or `sv.managed_session` ```python sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None) with sv.managed_session() as sess: Sample code of generating tfrecord dataset and reading data via queue can downloaded here Utils check tensorflow version 1tf.__version__.split('.')[0] != "1" count parameter numbers 1parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) for v in tf.trainable_variables()])]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow Input Data with Queue]]></title>
+    <url>%2F2019%2F07%2F12%2Fprogramming_language%2FTensorFlow%2FTensorFlow%20Input%20Data%20with%20Queue%2F</url>
+    <content type="text"><![CDATA[Input raw data (e.g., text, image address). There are many different implementations of queue. feature-label pair: [enqueue-op] [fetch-func] [slice-input-producer] [string-input-producer] image-image pair: [slice-input-producer][string-input-producer] A more elegant way is converting raw data to tfrecord format. Tips: setting large number_of_threading (e.g., 10) is helpful. shuffle the training samples to avoid homogenuity when necessary. place the training data in local disk instead of removable disk (consider I/O speed).]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow GPU Usage]]></title>
+    <url>%2F2019%2F07%2F12%2Fprogramming_language%2FTensorFlow%2FTensorFlow%20GPU%20Usage%2F</url>
+    <content type="text"><![CDATA[All the GPU memory will be notoriously filled up even if you designate one GPU device. maximum fractiongpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) automatic growthconfig = tf.ConfigProto()config.gpu_options.allow_growth=Truesess = tf.Session(config=config) visible GPU: os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables use multiple GPUsOne typical to use mulitple GPU is to average gradients, please refer to the sample code.]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Slim Learning Note]]></title>
+    <url>%2F2019%2F07%2F12%2Fprogramming_language%2FTensorFlow%2FSlim%20Learning%20Note%2F</url>
+    <content type="text"><![CDATA[slim = tf.contrib.slim Layersfor certain functions, assign default values to certain parameters with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....) https://www.tensorflow.org/api_docs/python/tf/contrib/layers slim.conv2d slim.max_pool2d slim.avg_pool2d slim.dropout slim.batch_norm slim.softmax tf.repeat(inputs, repetitions, layer, args, *kwargs) class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])): net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net) Load pretrained modelNote that initialization function must be associated with sess.12init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())init_fn(sess) Batch normalizationWith slim:123456789batch_norm_params = &#123; # Decay for the moving averages. 'decay': batch_norm_decay, # epsilon to prevent 0s in variance. 'epsilon': batch_norm_epsilon, # collection containing update_ops. 'updates_collections': tf.GraphKeys.UPDATE_OPS, &#125;slim.arg_scope([slim.conv2d], normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params) For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded moving-mean an moving_variance are used. To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways. The first method:12345678update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)variables_to_train = _get_variables_to_train()grads_and_vars = optimizer.compute_gradients(total_loss, variables_to_train)grad_updates = optimizer.apply_gradients(grads_and_vars)update_ops.append(grad_updates)update_op = tf.group(*update_ops)with tf.control_dependencies([update_op]): train_op = tf.identity(total_loss) The second method:123update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)with tf.control_dependencies(update_ops): train_op = optimizer.minimize(loss) The third method:1train_op = slim.learning.create_train_op(total_loss, optimizer) Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings. However, when trained on small-scale datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue: in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch. decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs. without slim: tf.nn.batch_normalization, no moving_mean/variance1234567891011def batchnorm(bn_input): with tf.variable_scope("batchnorm"): # this block looks like it has 3 inputs on the graph unless we do this bn_input = tf.identity(bn_input) channels = bn_input.get_shape()[3] offset = tf.get_variable("offset", [channels], dtype=tf.float32, initializer=tf.zeros_initializer()) scale = tf.get_variable("scale", [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(1.0, 0.02)) mean, variance = tf.nn.moments(bn_input, axes=[0, 1, 2], keep_dims=False) normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=1e-5) return normalized Utilsprint all model variables12345tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) # all the global variablesslim.get_model_variables() or tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) #variables defined by slim (tf.contrib.framework.model_variable)#excluding gradient variablestf.trainable_variables() #excluding graident variables and batch_norm variables (moving_mean and moving_variance) print regularization losses(weight decay) and other losses123slim.losses.get_regularization_losses()slim.losses.get_losses() # losses except weight decayslim.losses.get_total_loss(add_regularization_losses=False)]]></content>
+      <categories>
+        <category>programming language</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Object Detection]]></title>
+    <url>%2F2019%2F07%2F12%2Fdeep_learning%2FObject%20Detection%2F</url>
+    <content type="text"><![CDATA[two-stage: use region proposal network (RPN) to generate proposals faster-RCNN one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. YOLO v1 v2 v3 SSD Corner Points: remove anchors and directly predict corner points CornerNet No anchor: actually use aach cell as an anchor RPDet: use object centers as positive cells; paired with deformable CNN FoveaBox: use the cells in fovea area (object bounding box) as positive cells Guided Anchoring: use deformable CNN to obtain adapted feature map]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Object Detection Loss]]></title>
+    <url>%2F2019%2F07%2F12%2Fdeep_learning%2FObject%20Detection%20Loss%2F</url>
+    <content type="text"><![CDATA[Fast RCNNL(p,u,t^u,v) L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v), where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is a smooth L1 loss. Faster RCNNL(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*), where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen) and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN. fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes. SSD By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box. l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g), where $L_{conf}$ is a (K+1)-class softmax loss, and L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.YOLO\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2 + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2Note that for the noobj anchorboxes, there is only one loss term involved.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[From Anchor to ROI]]></title>
+    <url>%2F2019%2F07%2F12%2Fdeep_learning%2FFrom%20Anchor%20to%20ROI%2F</url>
+    <content type="text"><![CDATA[layer areaFrom layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, r_{i+1} = (r_i+2p_i-k_i)/s_i+1.In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area. coordinate mapNow consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$, x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.The above coordinate system starts from 1. When the coordinate system starts from 0, x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,which can be simplified as x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case. By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution x_1 = \alpha_L x_{L}+\beta_L,in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ anchor box to ROIGiven two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Scale Variation for Object Detection]]></title>
+    <url>%2F2019%2F07%2F12%2Fdeep_learning%2FScale%20Variation%20for%20Object%20Detection%2F</url>
+    <content type="text"><![CDATA[This problem is well discussed in https://arxiv.org/pdf/1506.01497.pdf. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map. The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales. use different dilation rates to vary receptive fields use feature pyramid [1] Reference[1] Lin, Tsung-Yi, et al. “Feature pyramid networks for object detection.” CVPR, 2017.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>object detection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Image Loss]]></title>
+    <url>%2F2019%2F07%2F08%2Fdeep_learning%2FImage%20Loss%2F</url>
+    <content type="text"><![CDATA[perceptual loss [1]: similar semantic information \frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2 style loss [2]: similar style which is spatial invariant; related to bilinear pooling [6] ||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2 with G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'} pairwise mean squared error (PMSE) [3] [4]: scale-invariant mean squared error (in log space) \frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2 total variation (TV) loss [1]: smoothness \sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1 alignment loss [5]: similar to style loss; related to bilinear pooling ||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2 with F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c} Reference[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016. [2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015. [3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014. [4] Bousmalis, Konstantinos, et al. “Unsupervised pixel-level domain adaptation with generative adversarial networks.” CVPR, 2017. [5] Abavisani, Mahdi, Hamid Reza Vaezi Joze, and Vishal M. Patel. “Improving the performance of unimodal dynamic hand-gesture recognition with multimodal training.” CVPR, 2019. [6] Lin, Tsung-Yu, Aruni RoyChowdhury, and Subhransu Maji. “Bilinear cnn models for fine-grained visual recognition.” ICCV, 2015.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[Cut and Paste]]></title>
     <url>%2F2019%2F06%2F28%2Fdeep_learning%2FCut%20and%20Paste%2F</url>
     <content type="text"><![CDATA[Do segmentation, image enhancemnet, and inpainting simultaneously [1] Learning to Segment via Cut-and-Paste [2] Reference[1] Ostyakov, Pavel, et al. “SEIGAN: Towards Compositional Image Generation by Simultaneously Learning to Segment, Enhance, and Inpaint.” arXiv preprint arXiv:1811.07630 (2018). [2] Remez, Tal, Jonathan Huang, and Matthew Brown. “Learning to segment via cut-and-paste.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>semantic segmentation</tag>
       </tags>
   </entry>
   <entry>
@@ -27,10 +139,10 @@
     <url>%2F2019%2F06%2F27%2Fdeep_learning%2FVisual%20Sentiment%20Analysis%2F</url>
     <content type="text"><![CDATA[Joint Image Emotion Classification and Distribution Learning via Deep Convolutional Neural Network Weakly Supervised Coupled Networks for Visual Sentiment Analysis]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>visual sentiment</tag>
       </tags>
   </entry>
   <entry>
@@ -40,9 +152,6 @@
       <categories>
         <category>paper note</category>
       </categories>
-      <tags>
-        <tag>deep learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Few-Shot Generation]]></title>
@@ -52,7 +161,8 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>GAN</tag>
+        <tag>few-shot</tag>
       </tags>
   </entry>
   <entry>
@@ -63,7 +173,8 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>semantic segmentation</tag>
+        <tag>zero-shot</tag>
       </tags>
   </entry>
   <entry>
@@ -71,10 +182,9 @@
     <url>%2F2019%2F05%2F17%2Fdeep_learning%2FConditional%20GAN%2F</url>
     <content type="text"><![CDATA[Conditioned on label vector: conditional GAN [4], CVAE-GAN [6] Conditioned on a single image pix2pix [1]; high-resolution pix2pix [2] (add coarse-to-fine strategy); BicycleGAN [3] (combination of cVAE-GAN and cLR-GAN) DAGAN [5] Reference[1] Isola, Phillip, et al. “Image-to-image translation with conditional adversarial networks.” CVPR, 2017 [2] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018. [3] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” NIPS, 2017. [4] Mirza, Mehdi, and Simon Osindero. “Conditional generative adversarial nets.” arXiv preprint arXiv:1411.1784 (2014). [5] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017). [6] Bao, Jianmin, et al. “CVAE-GAN: fine-grained image generation through asymmetric training.” ICCV, 2017.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
         <tag>GAN</tag>
       </tags>
   </entry>
@@ -86,7 +196,8 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>object detection</tag>
+        <tag>zero-shot</tag>
       </tags>
   </entry>
   <entry>
@@ -97,7 +208,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>matting</tag>
       </tags>
   </entry>
   <entry>
@@ -108,7 +219,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>aesthetic cropping</tag>
       </tags>
   </entry>
   <entry>
@@ -119,8 +230,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>DA</tag>
-        <tag>machine learning</tag>
+        <tag>domain adaptation</tag>
       </tags>
   </entry>
   <entry>
@@ -131,7 +241,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>harmonization</tag>
       </tags>
   </entry>
   <entry>
@@ -141,6 +251,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>optical flow</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[GAN Evaluation Metric]]></title>
@@ -149,6 +262,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>GAN</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Meta Learning]]></title>
@@ -157,6 +273,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>meta learning</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Graph Neural Network]]></title>
@@ -166,7 +285,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>GNN</tag>
       </tags>
   </entry>
   <entry>
@@ -176,13 +295,16 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>scene text</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Image Action Recognition with Unlabeled Videos]]></title>
     <url>%2F2019%2F03%2F01%2Fdeep_learning%2FImage%20Action%20Recognition%20with%20Unlabeled%20Videos%2F</url>
     <content type="text"><![CDATA[Self-supervised learning: see video-to-image in this blog. predict optical flow and use two-stream network [1] Predicting pose information (use poselet detector) [2] Reference:[1] Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018. [2] Chen, Chao-Yeh, and Kristen Grauman. “Watching unlabeled video helps learn new human actions from very few labeled snapshots.” CVPR, 2013.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
         <tag>action recognition</tag>
@@ -211,17 +333,17 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>distillation</tag>
+      </tags>
   </entry>
   <entry>
-    <title><![CDATA[Gradient-based Works]]></title>
-    <url>%2F2019%2F01%2F16%2Fdeep_learning%2FGradient-based%20Works%2F</url>
+    <title><![CDATA[Gradient Regularization]]></title>
+    <url>%2F2019%2F01%2F16%2Fdeep_learning%2FGradient%20Regularization%2F</url>
     <content type="text"><![CDATA[Gradient harmonization: [1] [1] Gradient Harmonized Single-stage Detector, AAAI, 2019]]></content>
       <categories>
         <category>paper note</category>
       </categories>
-      <tags>
-        <tag>machine learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Subjective Annotation]]></title>
@@ -236,23 +358,22 @@
     <url>%2F2019%2F01%2F16%2Fdeep_learning%2FVideo%20Object%20Segmentation%2F</url>
     <content type="text"><![CDATA[Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. Davis challenge https://davischallenge.org/ held since 2017, related papers [1] [2] YouTube-VOS: A Large-Scale Benchmark for Video Object Segmentation https://youtube-vos.org/home GyGO: an E-commerce Video Object Segmentation Dataset by Visualead https://github.com/ilchemla/gygo-dataset Reference: Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016. Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
-        <tag>segmentation</tag>
+        <tag>video object segmentation</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[PyTorch Learning Note]]></title>
-    <url>%2F2019%2F01%2F07%2Fdeep_learning%2FPyTorch%20Learning%20Note%2F</url>
+    <url>%2F2019%2F01%2F07%2Fprogramming_language%2FPyTorch%2FPyTorch%20Learning%20Note%2F</url>
     <content type="text"><![CDATA[Using multiple GPUsdevice = torch.device(“cuda:gpu_id1”) model = nn.DataParallel(model, [gpu_id1, gpu_id2, …])model.to(device) input = input.to(device) Note that gpu_id1 must be the first gpu in the gpu_list in model.DataParallel(arg1, gpu_list)]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>programming language</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
-        <tag>TensorFlow</tag>
+        <tag>PyTorch</tag>
       </tags>
   </entry>
   <entry>
@@ -262,19 +383,16 @@
       <categories>
         <category>paper note</category>
       </categories>
-      <tags>
-        <tag>machine learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Capsule Network]]></title>
     <url>%2F2019%2F01%2F06%2Fdeep_learning%2FCapsule%20Network%2F</url>
     <content type="text"><![CDATA[CapsNet [1] CapProNet [2] [code] [1] Sabour S, Frosst N, Hinton G E. Dynamic routing between capsules[C]//Advances in Neural Information Processing Systems. 2017: 3856-3866. [2] Zhang L, Edraki M, Qi G J. CapProNet: Deep feature learning via orthogonal projections onto capsule subspaces[J]. arXiv preprint arXiv:1805.07621, 2018.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>network structure</tag>
       </tags>
   </entry>
   <entry>
@@ -284,6 +402,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Determine baselines]]></title>
@@ -292,10 +413,13 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
-    <title><![CDATA[Latent Variable Regulation]]></title>
-    <url>%2F2019%2F01%2F05%2Fmachine_learning%2FLatent%20Variable%20Regulation%2F</url>
+    <title><![CDATA[Latent Variable Regularization]]></title>
+    <url>%2F2019%2F01%2F05%2Fmachine_learning%2FLatent%20Variable%20Regularization%2F</url>
     <content type="text"><![CDATA[Regulating latent variables or latent features can improve the generalizability of classifier and lower the error bound. Regulating latent variables is essentially decrease the entropy of latent variables. There are some common tricks to decrease the entropy of latent variables, for example, dropout weight decay add random noise to the latent variables in VAE and GAN. add random perturbation to model parameters For theoretical proof, please refer to here.]]></content>
       <categories>
         <category>paper note</category>
@@ -304,23 +428,12 @@
   <entry>
     <title><![CDATA[semi-supervised Learning]]></title>
     <url>%2F2019%2F01%2F02%2Fdeep_learning%2FSemi-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[Semi-supervised learning mixmatch [4]: gracefully unify data augmentation, sharpening (low entropy), mixup. co-training for semi-supervised Learning multi-view: co-training [1], tri-net [2] multi-graph: label propagation [3] Reference[1] Deep Co-Training for Semi-Supervised Image Recognition [2] Tri-net for Semi-Supervised Deep Learning [3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition [4] Berthelot, David, et al. “Mixmatch: A holistic approach to semi-supervised learning.” arXiv preprint arXiv:1905.02249 (2019).]]></content>
+    <content type="text"><![CDATA[Semi-supervised learning mixmatch [4]: gracefully unify data augmentation, sharpening (low entropy), mixup. unsupervised data augmentation [5] [code] co-training for semi-supervised Learning multi-view: co-training [1], tri-net [2] multi-graph: label propagation [3] Reference[1] Deep Co-Training for Semi-Supervised Image Recognition [2] Tri-net for Semi-Supervised Deep Learning [3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition [4] Berthelot, David, et al. “Mixmatch: A holistic approach to semi-supervised learning.” arXiv preprint arXiv:1905.02249 (2019). [5] Qizhe Xie, Zihang Dai, Eduard Hovy, Minh-Thang Luong, Quoc V. Le, “Unsupervised Data Augmentation for Consistency Training.” arXiv preprint arXiv:1904.12848 (2019).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Network Structure]]></title>
-    <url>%2F2019%2F01%2F02%2Fdeep_learning%2FNetwork%20Structure%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
+        <tag>semi-supervised</tag>
       </tags>
   </entry>
   <entry>
@@ -331,7 +444,6 @@
         <category>deep learning</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
         <tag>VQA</tag>
       </tags>
   </entry>
@@ -343,17 +455,19 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
-        <tag>machine learning</tag>
+        <tag>representation learning</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Fine-grained Dataset]]></title>
     <url>%2F2018%2F12%2F19%2Fdeep_learning%2FFine-grained%20Classification%2F</url>
-    <content type="text"><![CDATA[Papers: bilinear pooling [1] use object proposal [2] (refine generated object proposals) [3] (zoom in region of interest) use attention map [4] Datasets: clothing dataset car dataset CUB, Birdsnap scene dataset dog dataset flower dataset aircraft dataset Food-101 dataset [1] Lin T, Roychowdhury A, Maji S, et al. Bilinear CNN Models for Fine-Grained Visual Recognition, ICCV, 2015. [2] Zhang N, Donahue J, Girshick R B, et al. Part-Based R-CNNs for Fine-Grained Category Detection, ECCV, 2014. [3] Jianlong Fu, Heliang Zheng, Tao Mei. Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-Grained Image Recognition, CVPR 2017. [4] Zhao B, Wu X, Feng J, et al. Diversified visual attention networks for fine-grained object classification, T-MM, 2017.]]></content>
+    <content type="text"><![CDATA[Surveys: Deep learning for fine-grained image analysis: A survey [1]: include few-shot classification, few-shot retrieval, and few-shot generation A survey on deep learningbased fine-grained object classification and semantic segmentation [2] [1] Xiu-Shen Wei, Jianxin Wu, Quan Cui. “Deep learning for fine-grained image analysis: A survey.” arXiv preprint arXiv:1907.03069 (2019). [2] Zhao, Bo, et al. “A survey on deep learning-based fine-grained object classification and semantic segmentation.” International Journal of Automation and Computing 14.2 (2017): 119-135. Datasets: clothing dataset car dataset CUB, Birdsnap scene dataset dog dataset flower dataset aircraft dataset Food-101 dataset]]></content>
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>fine-grained</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Few-Shot Learning]]></title>
@@ -363,7 +477,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>few-shot</tag>
       </tags>
   </entry>
   <entry>
@@ -385,6 +499,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>knowledge graph</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Soft Loss]]></title>
@@ -393,41 +510,32 @@
       <categories>
         <category>paper note</category>
       </categories>
-      <tags>
-        <tag>machine learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Zoom in]]></title>
     <url>%2F2018%2F11%2F30%2Fdeep_learning%2FZoom%20in%2F</url>
     <content type="text"><![CDATA[Zoom in a bounding box [1] [2] Zoom in sampled pixels [3] [4] Reference[1] Fu, Jianlong, Heliang Zheng, and Tao Mei. “Look closer to see better: Recurrent attention convolutional neural network for fine-grained image recognition.” CVPR, 2017. [2] Zheng, Heliang, et al. “Learning multi-attention convolutional neural network for fine-grained image recognition.” ICCV, 2017. [3] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018. [4] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” arXiv preprint arXiv:1903.06150 (2019).]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
-      <tags>
-        <tag>deep learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Differential Programming]]></title>
     <url>%2F2018%2F11%2F29%2Fdeep_learning%2FDifferential%20Programming%2F</url>
     <content type="text"><![CDATA[The first work of differential programming is using network to approximate sparse coding. [pdf] Introduction tutorials: [1] [2]]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
-      <tags>
-        <tag>deep learning</tag>
-      </tags>
   </entry>
   <entry>
-    <title><![CDATA[Memory Network]]></title>
+    <title><![CDATA[Image Inpainting]]></title>
     <url>%2F2018%2F11%2F27%2Fdeep_learning%2FImage%20Inpainting%2F</url>
-    <content type="text"><![CDATA[pixels: valid pixels, invalid pixels, synthesized pixels holes: regular holes, irregular holes, free-form holes visual artifacts: color discrepancy, blurriness, obvious edge response user guidance: dot, sketch losses: perceptual loss, style lossw partial convolution: hard-gating single-channel unlearnable layer gated convolution: soft-gating multi-channel learnable layer, use detected edges as user guidance isophote-driven image sampling: Priority is the product of confidence term (a measure of the amount of reliable information surrounding the pixel) and data term (a function of the strength of isophotes hitting the front). Select the patch to be filled based on the priority, similar to patch-based texture synthesis. &lt;img src=&quot;https://i.imgur.com/bO5YXEQ.jpg&quot; width=&quot;40%&quot;&gt;]]></content>
+    <content type="text"><![CDATA[pixels: valid pixels, invalid pixels, synthesized pixels holes: regular holes, irregular holes, free-form holes visual artifacts: color discrepancy, blurriness, obvious edge response user guidance: dot, sketch losses: perceptual loss, style lossw partial convolution: hard-gating single-channel unlearnable layer gated convolution: soft-gating multi-channel learnable layer, use detected edges as user guidance isophote-driven image sampling: Priority is the product of confidence term (a measure of the amount of reliable information surrounding the pixel) and data term (a function of the strength of isophotes hitting the front). Select the patch to be filled based on the priority, similar to patch-based texture synthesis. &lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/bO5YXEQ.jpg&quot; width=&quot;40%&quot;&gt;]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>inpainting</tag>
       </tags>
   </entry>
   <entry>
@@ -438,7 +546,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>harmonization</tag>
       </tags>
   </entry>
   <entry>
@@ -446,10 +554,10 @@
     <url>%2F2018%2F11%2F22%2Fdeep_learning%2FUpsampling%20Layer%2F</url>
     <content type="text"><![CDATA[unpooling transpose convolution (learnable upsampling)]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>network structure</tag>
       </tags>
   </entry>
   <entry>
@@ -460,7 +568,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>scene text</tag>
       </tags>
   </entry>
   <entry>
@@ -476,21 +584,22 @@
     <url>%2F2018%2F11%2F11%2Fdeep_learning%2FAdversarial%20Attack%2F</url>
     <content type="text"><![CDATA[A comprehensive survey can be found here. Terminology: black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model. targeted/non-targeted attack: whether predicting a specific label for the adversarial example. universal perturbation: fool a given model on any image with high probability. Attack Backward Update add imperceptible distortion and increase the classification loss universal adversarial perturbation: learn a residual perturbation that works on most clean images Forward Update one-pixel attack: use differential evolution algorithm Adversarial Transformation Networks: learn a network to translate clean image to adversarial example. Defense Use modified training samples during training or modified test samples during testing Modify network: model parameters regularization, add a layer/module Adversarial example detector: classify an example as adversarial or clean based on certain statistics New perspectiveAdversarial examples are not bugs, they are features.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>adversarial attack</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Webly Supervised Learning]]></title>
-    <url>%2F2018%2F11%2F07%2Fdeep_learning%2FWebly%20Supervised%20Learning%2F</url>
+    <title><![CDATA[Webly-supervised Learning]]></title>
+    <url>%2F2018%2F11%2F07%2Fdeep_learning%2FWebly-supervised%20Learning%2F</url>
     <content type="text"><![CDATA[Two problems: Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web data and consumer data. Solutions: label flip layer: [1] [2] [3] multi-instance learning: [1](group attention) [2] [3] reweight training samples (a special case of label flip layer, flip from clean to noise): [1] [2] [2] curriculumn learning: [1] [2] bootstrapping: [1] Use clean data: active learning (select training samples to annotate): [1] reinforcement learning (learn labeling policies): [1] analogous to semi-supervised learning partial data with both noisy labels and clean labels as well as partial data with only noisy labels [1] [2] [3] partial data with noisy labels and partial data with clean labels [1] [2] Datasets: large-scale web datasets: webvision fine-grained web datasets: clothing dataset, car dataset synthetic noisy datasets via label flipping: CIFAR-10/100]]></content>
       <categories>
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>weakly-supervised</tag>
+        <tag>web data</tag>
       </tags>
   </entry>
   <entry>
@@ -508,6 +617,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Ensure the Novelty of Your Idea]]></title>
@@ -526,26 +638,14 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Object Detection]]></title>
-    <url>%2F2018%2F10%2F30%2Fdeep_learning%2Fobject_detection%2FObject%20Detection%2F</url>
-    <content type="text"><![CDATA[two-stage: use region proposal network (RPN) to generate proposals faster-RCNN one-stage: remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. YOLO v1 v2 v3 SSD Corner Points: remove anchors and directly predict corner points CornerNet No anchor: actually use aach cell as an anchor RPDet: use object centers as positive cells; paired with deformable CNN FoveaBox: use the cells in fovea area (object bounding box) as positive cells Guided Anchoring: use deformable CNN to obtain adapted feature map]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>object detection</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Memory Network]]></title>
     <url>%2F2018%2F10%2F25%2Fdeep_learning%2FMemory%20Network%2F</url>
     <content type="text"><![CDATA[First paper of memory network: I(input feature map), G(generalization), O(output feature map), R(response), use the following objective function to optimize the variables in I,G,O,R. end-to-end memory network: easy back-propagation More memory modules semi-supervised learning with memory module [1] few-shot learning with memory module [1] [2] [3]]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>memory</tag>
       </tags>
   </entry>
   <entry>
@@ -556,7 +656,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>proposal</tag>
       </tags>
   </entry>
   <entry>
@@ -574,6 +674,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Causal Inference]]></title>
@@ -593,6 +696,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Clothes Dataset]]></title>
@@ -609,6 +715,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Unsupervised Attribute Learning]]></title>
@@ -618,7 +727,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>attribute</tag>
       </tags>
   </entry>
   <entry>
@@ -628,13 +737,10 @@
       <categories>
         <category>paper note</category>
       </categories>
-      <tags>
-        <tag>machine learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Python Send Email]]></title>
-    <url>%2F2018%2F09%2F15%2Fprogramming_language%2Fpython%2FPython%20Send%20Email%2F</url>
+    <url>%2F2018%2F09%2F15%2Fprogramming_language%2FPython%2FPython%20Send%20Email%2F</url>
     <content type="text"><![CDATA[Open SMTP service for your email and obtain the SMTP password. Create a Python script 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869import win32serviceutilimport win32serviceimport win32eventimport servicemanagerimport smtplibimport timeimport reimport sysimport urllib2class Getmyip: def visit(self,url): opener = urllib2.urlopen(url) if url == opener.geturl(): IPstr = opener.read() return re.search('\d+\.\d+\.\d+\.\d+',IPstr).group(0) def getip(self): myip = self.visit("http://www.net.cn/static/customercare/yourip.asp") return myip class AppServerSvc (win32serviceutil.ServiceFramework): _svc_name_ = "TestService" _svc_display_name_ = "Test Service" def __init__(self,args): win32serviceutil.ServiceFramework.__init__(self,args) self.hWaitStop = win32event.CreateEvent(None,0,0,None) self.run = True def SvcStop(self): self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING) win32event.SetEvent(self.hWaitStop) self.run = False def SvcDoRun(self): while(self.run==True): self.main() def main(self): fromaddr = 'XXX@qq.com' toaddrs = 'XXX@qq.com' server = smtplib.SMTP_SSL('smtp.qq.com') server.set_debuglevel(1) print("--- Need Authentication ---") username = 'XXX' password = 'XXX' server.login(username, password) prev_msg = '' while(True): getmyip=Getmyip() msg = getmyip.getip() if not msg==prev_msg: server.sendmail(fromaddr, toaddrs, msg) prev_msg = msg time.sleep(10) server.quit()if __name__ == '__main__': if len(sys.argv) == 1: servicemanager.Initialize() servicemanager.PrepareToHostSingle(AppServerSvc) servicemanager.StartServiceCtrlDispatcher() else: win32serviceutil.HandleCommandLine(AppServerSvc) Make python file into an exe 1pyinstaller -F MyService.py Make exe into a Windows service 1234sc create MyServer binPath=$exe_pathsc start MyServersc stop MyServersc delete MyServer]]></content>
       <categories>
         <category>programming language</category>
@@ -653,20 +759,19 @@
         <category>IDE</category>
       </categories>
       <tags>
-        <tag>Eclipse</tag>
         <tag>Python</tag>
-        <tag>remote debugging</tag>
+        <tag>Eclipse</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Remote Folder Amount]]></title>
-    <url>%2F2018%2F09%2F09%2Fnetwork%2FRemote%20Folder%20Amount%2F</url>
+    <title><![CDATA[Remote Folder Mount]]></title>
+    <url>%2F2018%2F09%2F09%2Fnetwork%2FRemote%20Folder%20Mount%2F</url>
     <content type="text"><![CDATA[Mount Linux folder under Linux12sudo apt-get install cifs-utilssudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir Mount Windows folder under Windowsadd network device Mount Linux folder under Windows Install Dokan and WinSSHFS: for Win10, recommend 1.6.1.13 win-sshfs and 1.0.3 Dokan. Open WinSSHFS, fill in the drive name, host, port, username, password, directory. The other entries can be left blank.]]></content>
       <categories>
         <category>network</category>
       </categories>
       <tags>
-        <tag>remote folder amount</tag>
+        <tag>mount</tag>
       </tags>
   </entry>
   <entry>
@@ -813,7 +918,7 @@
   </entry>
   <entry>
     <title><![CDATA[wxPython]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FwxPython%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FwxPython%2F</url>
     <content type="text"><![CDATA[Framework Code Simplest App: MyApp(False)means noredirect while MyApp(True, &#39;output.txt&#39;) will redirect the output to the file output.txt. Derivation from wx.App uses def OnInit(self) while others use def __init__(self) Donnot forget return True Simplest Frame: frame.Show(), frame.Centre() A frame with menubar, toolbar, and statusbar: UpdateUIEvents are sent periodically by the framework during idle time to allow the application to check if the state of a control needs to be updated. Append a menu_item with icon, qmi = wx.MenuItem(fileMenu, APP_EXIT, '&Quit\tCtrl+Q') qmi.SetBitmap(wx.Bitmap('exit.png')) fileMenu.AppendItem(qmi) Menu check_item self.shtl = viewMenu.Append(wx.ID_ANY, 'Show toolbar', 'Show Toolbar', kind=wx.ITEM_CHECK) self.Bind(wx.EVT_MENU, self.ToggleStatusBar, self.shst) def ToggleStatusBar(self, e): if self.shst.IsChecked(): self.statusbar.Show() else: self.statusbar.Hide() Pop a Dialogue box with validator: derivation from wx.PyValidator A login dialogue before main frame: wx.PyValidator Notebook with multiple pages Advanced notebook, user can add new pages Foldable Pannel Splash Screen: splash before entering main frame wx.SplashScreen Extendable Pannel SplitPanel (hide, show): a horizontally or vertically splited panel, loading html file File Drag Drop File Hunter SpreadSheet Media Player Web Browser Component Code Bitmap: use bitmap to beautify the appearance, or use the bitmap brush (transparent widgets may be a little troublesome here) self.Bind(wx.EVT_PAINT, self.OnPaint) def OnPaint(self, event): dc = wx.PaintDC(self) dc.SetBackgroundMode(wx.TRANSPARENT) brush1 = wx.BrushFromBitmap(wx.Bitmap('pattern1.jpg')) dc.SetBrush(brush1) w, h = self.GetSize() dc.DrawRectangle(0, 0, w, h) Simplest Button: use lib to build advanced buttons Bind function with building blocks self.Bind(wx.EVT_BUTTON, self.OnButton, button) def OnButton(self, event): Note GetChildren(), GetParent(), GetId(), FindWindowById(self.btnId) Advanced button: bitmap button, toggle button, gradient button Frame Icon: personalize the frame icon con = wx.Icon(path, wx.BITMAP_TYPE_PNG) self.SetIcon(icon): Interaction with Clipboard: paste to and copy from system clipboard Drop Files to Frame: : wx.PyDropTarget Help in Frame: when initializing Frame pre = wx.PreFrame() pre.SetExtraStyle(wx.FRAME_EX_CONTEXTHELP) pre.Create(parent, *args, **kwargs) self.PostCreate(pre) Checkbox: use more general event detector to simplify code `self.Bind(wx.EVT_CHECKBOX, self.OnCheck)` e_obj = event.GetEventObject() dropdown menu MessageBox def ShowMessage(self,event): wx.MessageBox('Download completed', 'Info', wx.OK | wx.ICON_INFORMATION) Open file_dialogue dlg = wx.FileDialog(self, "Open File", style=wx.FD_OPEN) if dlg.ShowModal() == wx.ID_OK: fname = dlg.GetPath() handle = open(fname, 'r') self.txtctrl.SetValue(handle.read()) handle.close() popup menu: right click to pop up the menu static box: a static box containing components list ctrl: multi-column list customtree: a tree-structure file browser virtual list box Styled Text: i.e., python-style text Download Progressbar About info: info including name, version, copyright, and description Choose Color Dialogue colour_data = wx.ColourData() colour = self.GetBackgroundColour() colour_data.SetColour(colour) colour_data.SetChooseFull(True) dlg = wx.ColourDialog(self, colour_data) if dlg.ShowModal() == wx.ID_OK: colour = dlg.GetColourData().GetColour() self.SetBackgroundColour(colour) self.Refresh() dlg.Destroy() Image Browser with simple editing Image Slide Show Search Bar Timer self._timer = wx.Timer(self) self.Bind(wx.EVT_TIMER, self.OnTimer, self._timer) self._timer.Start(100) self._timer.Stop() Execute Command Line import outputwin self.output = outputwin.OutputWindow(self) self.output.StartProcess("ping %s" % url, blocksize=64) Music Player Video Player: First, you need to install MplayerCtrl lib. Secondly, place the mplayer folder under the current working directory. Layout wx.BoxSizer: proportion is used to control main direction and wx.EXPAND is used to control the other direction. Note in BoxSizer, alignment is only valid in one direction. AddSpacer(50) is equal to Add((50,50)). AddStretchSpacer() is equal to Add((0,0),proportion=1). sizer = wx.BoxSizer(wx.HORIZONTAL) sizer.AddSpacer(50) sizer.Add(sth,proportion=0, flag=wx.ALL, border=5) #use flag to mark which side has border sizer.Add((-1,10)) #add a black space, height=10 # sizer.Add(sth,proportion=0, wx.EXPAND|wx.RIGHT|wx.ALIGN_RIGHT, border=5) sizer.AddSpacer((0,0)) #sizer.AddStretchSpacer() self.SetSizer(sizer) self.SetInitialSize() wx.GridSizer: proportion is usually set as 0, use Add((20,20), 1, wx.EXPAND) to take up space. wx.GridSizer(2, 2, vgap=0, hgap=0) msizer.Add(sth, 0, wx.EXPAND) wx.FlexGridSizer: make some rows and columns growable. fgs.AddGrowableRow(2) fgs.AddGrowableCol(1) wx.GridBagSizer: use pos and span to indicate the location and size. sizer = wx.GridBagSizer(vgap=8, hgap=8) sizer.Add(sth, (1, 2), (1, 15), wx.EXPAND) Notes Event Propagation: When an event can intrigue multiple events, use event.skip() to guaranttee the occurrence of following events. Take keyevents.py for an example. Virtual Ride: wx.PyPannel Bind function which will be checked in the idle timeself.Bind(wx.EVT_UPDATE_UI, self.OnUpdateEditMenu)]]></content>
       <categories>
         <category>programming language</category>
@@ -826,7 +931,7 @@
   </entry>
   <entry>
     <title><![CDATA[Python]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FPython%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FPython%2F</url>
     <content type="text"><![CDATA[check type 1isinstance(n,int) list 12345678t1 = ['a', 'b', 'c'];t2 = ['d', 'e', 'f'];t1.extend(t2);t1.append('g');t1 = t1+['g']t1.sort();del t1[1:3];t1.remove('b'); dictionary 1234567eng2sp = &#123;'one': 'uno', 'two': 'dos', 'three': 'tres'&#125;eng2sp.values() #'uno','dos','tres'eng2sp.items()'one' in eng2sp #trueinverse = invert_dict(eng2sp) d = dict(zip('abc',range(3)))d.get(word,0) #d[word] if word in d, 0 otherwise tupe: similar with list but immutable file operation 12345678fout = os.getcwd()os.path.abspath('tmp.txt')os.path.exists('tmp.txt')os.path.isfile/isdiros.listdir(cwd)fout = open('output.txt','w')fout.write('hehe')fout.close()]]></content>
       <categories>
         <category>programming language</category>
@@ -838,7 +943,7 @@
   </entry>
   <entry>
     <title><![CDATA[Python Draw Text on Image]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FPython%20Draw%20Text%20on%20Image%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FPython%20Draw%20Text%20on%20Image%2F</url>
     <content type="text"><![CDATA[Use PIL12345678import PIL.ImageDrawimport PIL.Imageimport PIL.ImageFontpil_img = PIL.Image.fromarray(bb_img)draw = PIL.ImageDraw.Draw(pil_img)font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf",20)draw.text((10, 10),"Frame: %09d"%(iframe),(255,0,0),font=font) Use OpenCV— 12import cv2cv2.putText(cv_img, 'Frame: %d'%(iframe), (10,20), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0,0,255), 3)]]></content>
       <categories>
         <category>programming language</category>
@@ -850,7 +955,7 @@
   </entry>
   <entry>
     <title><![CDATA[Fastest Way to Read Text, Image, and Video in Python]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FFastest%20Way%20to%20Read%20Text%2C%20Image%2C%20and%20Video%20in%20Python%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FFastest%20Way%20to%20Read%20Text%2C%20Image%2C%20and%20Video%20in%20Python%2F</url>
     <content type="text"><![CDATA[When comparing the efficiency of different libraries, there may exist a few orders of magnitude difference. In the implementation in demand of high efficiency, locate the time-consuming function and replace it with the most efficient library function. Text: PandasInstallation: pip install pandas or conda install pandas 12import pandas as pddata = pd.read_csv(text_name, sep=',', header=None) Image: Pillow-SIMD, skimage, OpenCV, imageio 12345678910111213141516import cv2import skimageimport imageiofrom PIL import Image#read a 1280x720 imagepil_im = Image.open(image_name) #0.0057spil_im = pil_im.resize((448,448)) #0.025ssk_im = skimage.io.imread(image_name) #0.026ssk_im = skimage.transform.resize(sk_im, (448, 448)) #0.060Scv_im = cv2.imread(image_name) #0.021scv_im = cv2.resize(cv_im, (448, 448)) #0.0016sim = imageio.imread(image_name) #0.033s Pillow-SIMD is faster than Pillow, which is not reported here. OpenCV is the most efficient one here. Video: OpenCV, skvideo, imageio 1234567891011121314import cv2import imageioimport skvideo#read 30fps video with each frame 1280x720 cap = cv2.VideoCapture(video_name)ret, frame = cap.read() #0.002svid = imageio.get_reader(video_name, 'ffmpeg')for image in vid.iter_data(): #0.004sskvideo.setFFmpegPath(os.path.dirname(sys.executable))videogen = skvideo.io.vreader(video_name)for img in videogen: #0.073s For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, /usr/bin/python is recommended. imageio and OpenCV are comparable here.]]></content>
       <categories>
         <category>programming language</category>
@@ -862,20 +967,20 @@
   </entry>
   <entry>
     <title><![CDATA[Eclipse for Python]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FEclipse%20for%20Python%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FEclipse%20for%20Python%2F</url>
     <content type="text"><![CDATA[Eclipse-&gt;help-&gt;install new software. Work with http://pydev.org/updates. Eclipse-&gt;Window-&gt;Preferences-&gt;PyDev, modify the python interpreter, e.g., python.exe.]]></content>
       <categories>
         <category>software</category>
         <category>IDE</category>
       </categories>
       <tags>
-        <tag>Eclipse</tag>
         <tag>Python</tag>
+        <tag>Eclipse</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Python bottle]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2Fbottle%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2Fbottle%2F</url>
     <content type="text"><![CDATA[Use route to indicate path, 80 is the default port for HTTP. 1234567import bottle@bottle.route('/hello')def hello(): return "Hello World!"bottle.run(host='localhost', port=80, debug=True) Dynamic path V.S. static path. We can use filter such as &lt;id:int&gt; to convert input variables to certain type. 1234567import bottle@bottle.route('/hello/&amp;lt;name&gt;/&amp;lt;address&gt;')def hello(name,address): return "Hello "+namebottle.run(host='localhost', port=80, debug=True) Use local resources. Pay special attention to the path. Local resource names should start with ‘/‘. 123@bottle.route('/&lt;filename:path&gt;')def server_static(filename): return bottle.static_file(filename, root='./resource/') The default HTTP request method for route() is get(), we can use other methods post(), put(), delete(), patch(). The POST method is commonly used for HTML form submission. When entering URL address, GET method is used. 12345678910111213141516171819202122232425262728import bottledef check_login(username, password): if username=='niuli' and password=='niuli': return True else: return False @bottle.get('/login') # or @route('/login')def login(): return ''' &amp;lt;form action="/login" method="post"&gt; Username: &amp;lt;input name="username" type="text" /&gt; Password: &amp;lt;input name="password" type="password" /&gt; &amp;lt;input value="Login" type="submit" /&gt; &amp;lt;/form&gt; '''@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') if check_login(username, password): return "&amp;lt;p&gt;Your login information was correct.&amp;lt;/p&gt;" else: return "&amp;lt;p&gt;Login failed.&amp;lt;/p&gt;"bottle.run(host='localhost', port=80, debug=True) Return local files localhost/filename. Note path:path is important, otherwise the filename containing ‘/‘ may not be correctly recognized. 12345from bottle import static_file @route(’/&lt;filepath:path&gt;’) def server_static(filepath): return static_file(filepath, root=’./resource’) Use redirect to jump to another page: bottle.redirect(&#39;/login&#39;) Use the HTML template. In the template file, the lines starting with % are python codes and others are HTML codes. We can include other templates in the current template by using % include(&#39;header.tpl&#39;, title=&#39;Page Title&#39;). Cookies, HTTP header, HTML &lt;form&gt; fields and other request data is available through the global request object. 12345678910@bottle.route('/&lt;name&gt;')@bottle.view('my_template.html')def root(name="default"): return bottle.template('my_template', name=name)@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') bottle.redirect('/'+username) Some tricks for helping development bottle.debug(True) The default error page shows a traceback. Templates are not cached. Plugins are applied immediately. run(reloader=True) Every time you edit a module file, the reloader restarts the server process and loads the newest version of your code.]]></content>
       <categories>
         <category>programming language</category>
@@ -883,12 +988,11 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>bottle</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Anaconda]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2Fpython%2FAnaconda%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FAnaconda%2F</url>
     <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentlist: conda info —envs create: conda create --name $newenv python=2.7 (if copy, use —clone $oldenv) activate: source activate $newenv revert: source deactivate delete: conda remove —name $newenv —all packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
       <categories>
         <category>software</category>
@@ -956,7 +1060,6 @@
       <categories>
         <category>programming language</category>
         <category>C++</category>
-        <category>Boost</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -969,7 +1072,6 @@
       <categories>
         <category>programming language</category>
         <category>C++</category>
-        <category>Boost</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -982,7 +1084,6 @@
       <categories>
         <category>programming language</category>
         <category>C++</category>
-        <category>Boost</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -995,7 +1096,6 @@
       <categories>
         <category>programming language</category>
         <category>C++</category>
-        <category>Boost</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -1008,7 +1108,6 @@
       <categories>
         <category>programming language</category>
         <category>C++</category>
-        <category>Boost</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -1021,7 +1120,6 @@
       <categories>
         <category>programming language</category>
         <category>C++</category>
-        <category>Boost</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -1047,8 +1145,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
-        <tag>machine learning</tag>
+        <tag>zero-shot</tag>
       </tags>
   </entry>
   <entry>
@@ -1059,7 +1156,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>word vector</tag>
       </tags>
   </entry>
   <entry>
@@ -1070,7 +1167,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>weakly-supervised</tag>
       </tags>
   </entry>
   <entry>
@@ -1089,7 +1186,6 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
         <tag>object tracking</tag>
       </tags>
   </entry>
@@ -1101,7 +1197,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>hyper-parameter</tag>
       </tags>
   </entry>
   <entry>
@@ -1112,7 +1208,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>self-supervised</tag>
       </tags>
   </entry>
   <entry>
@@ -1122,6 +1218,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Privileged Information]]></title>
@@ -1131,7 +1230,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>LUPI</tag>
+        <tag>privileged information</tag>
       </tags>
   </entry>
   <entry>
@@ -1142,7 +1241,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>hyper-parameter</tag>
       </tags>
   </entry>
   <entry>
@@ -1152,6 +1251,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>outlier detection</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Make Presentation]]></title>
@@ -1169,7 +1271,6 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
         <tag>SVM</tag>
       </tags>
   </entry>
@@ -1189,7 +1290,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>machine learning</tag>
+        <tag>gaze estimation</tag>
       </tags>
   </entry>
   <entry>
@@ -1199,6 +1300,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>weakly-supervised</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Euler Angle (yaw,pitch,roll)]]></title>
@@ -1227,8 +1331,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>DA</tag>
-        <tag>machine learning</tag>
+        <tag>domain adaptation</tag>
       </tags>
   </entry>
   <entry>
@@ -1239,19 +1342,7 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>DA</tag>
-        <tag>machine learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Camera Survey]]></title>
-    <url>%2F2018%2F09%2F07%2Fmachine_learning%2FCamera%20survey%2F</url>
-    <content type="text"><![CDATA[Interface Type: GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission. Color v.s. MonochromeWhen the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file. Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution. Sensor Type: CCD (Charged Coupling Devices): special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light. CMOS (Complimentary Metal Oxide Semiconductor): use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption Readout Method:Global v.s. rolling shutter: originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities. Advantage of global shutter: global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. Quantum EfficiencyThe ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity. Field of ViewFOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV. Pixel SizeA small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio.]]></content>
-      <categories>
-        <category>paper note</category>
-      </categories>
-      <tags>
-        <tag>optics</tag>
+        <tag>domain adaptation</tag>
       </tags>
   </entry>
   <entry>
@@ -1261,6 +1352,9 @@
       <categories>
         <category>paper note</category>
       </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Ubuntu Software Management]]></title>
@@ -1418,9 +1512,6 @@
       <categories>
         <category>network</category>
       </categories>
-      <tags>
-        <tag>remote desktop connection</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[kinit]]></title>
@@ -1429,14 +1520,11 @@
       <categories>
         <category>network</category>
       </categories>
-      <tags>
-        <tag>kinit</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[GitHub+Hexo for Personal Blog]]></title>
     <url>%2F2018%2F09%2F07%2Fnetwork%2FGitHub%2BHexo%20for%20Personal%20Blog%2F</url>
-    <content type="text"><![CDATA[Preinstallation install Node.js https://nodejs.org/en/download/ install git https://git-scm.com/download/win install hexo: right click “git bash here”, $npm install hexo-cli -g SSH keys check whether ssh exists $cd ~/.ssh. If not, $ssh-keygen -t rsa -C &quot;your_email@example.com&quot; to generate key file get the SSH key $cat ~/.ssh/id_rsa.pub create the key in github: account setting-&gt;SSH check the SSH key $ ssh -T git@github.com create an empty folder as Hexo folder 123$hexo init$hexo generate$hexo server local test: http://localhost:4000/ deploy local Hexo folder in Hexo folder, modify the _config.yml file as follows, 1234deploy: type: git repository: $(SSH address from github) branch: master in Hexo folder, install the deployer by $npm install hexo-deployer-git --save type $hexo g and $hexo d, or $hexo d -g. change theme: go to the folder “/themes” and git clone https://github.com/iissnan/hexo-theme-next. config the theme in the file “/themes/XXXX/_config.yml”. local search $npm install hexo-generator-searchdb --save in the site _config.yml file, set local_search: enable: true. paste the following lines anywhere. 12345search: path: search.xml field: post #post, page, all format: html limit: 10000 add new page for some subcategory (e.g., write): in the theme _config.yml file 12menu: write: /categories/write add social links: in the theme _config.yml file 1234# Social linkssocial: GitHub: https://github.com/ustcnewly Linkedin: https://www.linkedin.com/in/li-niu-b0905133/ latex: install $npm install hexo-math --save and restart Hexo in the theme _config.yml file, modify as follows (notice that cdn may change) 12345# MathJax Supportmathjax: enable: true per_page: false cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML to address the conflict between MathJax and Hexo 12$npm uninstall hexo-renderer-marked --save$npm install hexo-renderer-kramed --save push posts to the top $ npm install hexo-generator-index-pin-top --save. for the target post, add top: true in Front-matter, or top: 10 with larger number indicating higher priority. insert code block 123&#123;% codeblock lang:python %&#125;code snippet&#123;% endcodeblock %&#125; insert image 1&lt;img src=&quot;https://i.imgur.com/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt; Tips: If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats). Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors. set ignorecase as false in the file .deploy_git/.git/config clean the folder .deploy_git hexo clean and hexo d -g]]></content>
+    <content type="text"><![CDATA[Preinstallation install Node.js https://nodejs.org/en/download/ install git https://git-scm.com/download/win install hexo: right click “git bash here”, $npm install hexo-cli -g SSH keys check whether ssh exists $cd ~/.ssh. If not, $ssh-keygen -t rsa -C &quot;your_email@example.com&quot; to generate key file get the SSH key $cat ~/.ssh/id_rsa.pub create the key in github: account setting-&gt;SSH check the SSH key $ ssh -T git@github.com create an empty folder as Hexo folder 123$hexo init$hexo generate$hexo server local test: http://localhost:4000/ deploy local Hexo folder in Hexo folder, modify the _config.yml file as follows, 1234deploy: type: git repository: $(SSH address from github) branch: master in Hexo folder, install the deployer by $npm install hexo-deployer-git --save type $hexo g and $hexo d, or $hexo d -g. change theme: go to the folder “/themes” and git clone https://github.com/iissnan/hexo-theme-next. config the theme in the file “/themes/XXXX/_config.yml”. local search $npm install hexo-generator-searchdb --save in the site _config.yml file, set local_search: enable: true. paste the following lines anywhere. 12345search: path: search.xml field: post #post, page, all format: html limit: 10000 add new page for some subcategory (e.g., write): in the theme _config.yml file 12menu: write: /categories/write add social links: in the theme _config.yml file 1234# Social linkssocial: GitHub: https://github.com/ustcnewly Linkedin: https://www.linkedin.com/in/li-niu-b0905133/ latex: install $npm install hexo-math --save and restart Hexo in the theme _config.yml file, modify as follows (notice that cdn may change) 12345# MathJax Supportmathjax: enable: true per_page: false cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML to address the conflict between MathJax and Hexo 12$npm uninstall hexo-renderer-marked --save$npm install hexo-renderer-kramed --save push posts to the top $ npm install hexo-generator-index-pin-top --save. for the target post, add top: true in Front-matter, or top: 10 with larger number indicating higher priority. insert code block 123&#123;% codeblock lang:python %&#125;code snippet&#123;% endcodeblock %&#125; insert image 1&lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt; Tips: If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats). Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors. set ignorecase as false in the file .deploy_git/.git/config clean the folder .deploy_git hexo clean and hexo d -g]]></content>
       <categories>
         <category>network</category>
       </categories>
@@ -1460,124 +1548,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[TensorFlow Learning Note]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FTensorFlow%20Learning%20Note%2F</url>
-    <content type="text"><![CDATA[Initialization shape = [batch,height,width,channel]constant:1234tf.zeros(shape)tf.constant(0.4, shape)tf.random_norm(shape, stddev=1e-1)tf.truncated_norm(shape, stddev=1e-1) variable:12345tf.get_variable(varname, shape=[5,5,64,192], initializer=XXX)initializer=tf.zeros_initializer() # biasinitializer=tf.random_normal_initializer(0.0, 0.02) initializer=tf.truncated_normal_initializer(0.0, 0.02)initializer=tf.contrib.layers.xavier_initializer() # weight Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal. Summary for tensorboard 1234tf.summary.scalar('total_loss', total_loss) #scalar, histogram, etcself.merged = tf.summary.merge_all()train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) #include the sess graphtrain_writer.add_summary(summary, ibatch) after running the code, open tensorboard tensorboard --logdir=&#39;./train&#39; Checkpoint 12345678910# save all the variablessaver = tf.train.Saver() # save partial variables saver = tf.train.Saver(&#123;"my_v2": v2&#125;)# save and restoresaver.save(sess, "/tmp/model.ckpt")saver.restore(sess, "/tmp/model.ckpt")# restore partial variablesinit_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())init_fn(sess) inspect the checkpoint file1234567from tensorflow.python import pywrap_tensorflow checkpoint_path = os.path.join(model_dir, "model.ckpt") reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path) var_to_shape_map = reader.get_variable_to_shape_map() for key in var_to_shape_map: print("tensor_name: ", key) print(reader.get_tensor(key)) # Remove this is you want to print only variable names Layer convolutional layer 1234kernel = tf.Variable(tf.zeros([5,5,64,192]))tf.nn.conv2d(x, kernel, strides=[1, 1, 1, 1], padding='SAME') # padding is 'SAME' or 'VALID' depending on stride is 1 or largertf.nn.bias_add(prev_layer, bias) dropout layer 123keep_prob = tf.placeholder(tf.float32)# set keep_prob as 0.5 during training and 1 during testingtf.nn.dropout(h_fc1, keep_prob) pooling layer 1tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='VALID') loss layer 12tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y)) tf.nn.l2_loss(prev_layer) metric layer 12# calculate top-k accuracytf.nn.in_top_k(logits, label_holder, k) # the accuracy of top k activation layer1tf.nn.relu(prev_layer) other layers123tf.one_hot(self.input_class, self.n_class)tf.nn.embedding_lookup(codebook, indices)tf.nn.lrn() # legacy Common Operations1234567891011121314151617tf.matmultf.powtf.diag_parttf.reduce_sumtf.reduce_meantf.nn.softmaxtf.tile(a,(2,2)) tf.nn.embedding_lookupsim.flattentf.squeezetf.reshapetf.concat(values=[a,b,c], axis=3)tf.gather #get indexed value, only on 0-dimtf.gather_ndtf.map_fntf.scan_fntf.fold1/foldr Training and testing training stage 1234optimizer = tf.train.GradientDescentOptimizer(0.01)train = optimizer.minimize(loss)for i in range(1000): #note the iteration number here sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;) testing stage 12acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125; Queue For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details. ``python with tf.Session(config=config) as sess: coord = tf.train.Coordinator() threads = tf.train.start_queue_runners(sess=sess, coord=coord) sess.run(tf.initialize_local_variables()) #main code coord.request_stop() coord.join(threads) 123456789* With tfrecord and slim, using queue is much easier by using `slim.queues.QueueRunners` ```python with tf.Session(config=config) as sess: with slim.queues.QueueRunners(sess): ``` or `sv.managed_session` ```python sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None) with sv.managed_session() as sess: Sample code of generating tfrecord dataset and reading data via queue can downloaded here Utils check tensorflow version 1tf.__version__.split('.')[0] != "1" count parameter numbers 1parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) for v in tf.trainable_variables()])]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>TensorFlow</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[TensorFlow Input Data with Queue]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FTensorFlow%20Input%20Data%20with%20Queue%2F</url>
-    <content type="text"><![CDATA[Input raw data (e.g., text, image address). There are many different implementations of queue. feature-label pair: [enqueue-op] [fetch-func] [slice-input-producer] [string-input-producer] image-image pair: [slice-input-producer][string-input-producer] A more elegant way is converting raw data to tfrecord format. Tips: setting large number_of_threading (e.g., 10) is helpful. shuffle the training samples to avoid homogenuity when necessary. place the training data in local disk instead of removable disk (consider I/O speed).]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>TensorFlow</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[TensorFlow GPU Usage]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FTensorFlow%20GPU%20Usage%2F</url>
-    <content type="text"><![CDATA[All the GPU memory will be notoriously filled up even if you designate one GPU device. maximum fractiongpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) automatic growthconfig = tf.ConfigProto()config.gpu_options.allow_growth=Truesess = tf.Session(config=config) visible GPU: os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables use multiple GPUsOne typical to use mulitple GPU is to average gradients, please refer to the sample code.]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>TensorFlow</tag>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Slim Learning Note]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Ftensorflow%2FSlim%20Learning%20Note%2F</url>
-    <content type="text"><![CDATA[slim = tf.contrib.slim Layersfor certain functions, assign default values to certain parameters with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....) https://www.tensorflow.org/api_docs/python/tf/contrib/layers slim.conv2d slim.max_pool2d slim.avg_pool2d slim.dropout slim.batch_norm slim.softmax tf.repeat(inputs, repetitions, layer, args, *kwargs) class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])): net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net) Load pretrained modelNote that initialization function must be associated with sess.12init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())init_fn(sess) Batch normalizationWith slim:123456789batch_norm_params = &#123; # Decay for the moving averages. 'decay': batch_norm_decay, # epsilon to prevent 0s in variance. 'epsilon': batch_norm_epsilon, # collection containing update_ops. 'updates_collections': tf.GraphKeys.UPDATE_OPS, &#125;slim.arg_scope([slim.conv2d], normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params) For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded moving-mean an moving_variance are used. To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways. The first method:12345678update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)variables_to_train = _get_variables_to_train()grads_and_vars = optimizer.compute_gradients(total_loss, variables_to_train)grad_updates = optimizer.apply_gradients(grads_and_vars)update_ops.append(grad_updates)update_op = tf.group(*update_ops)with tf.control_dependencies([update_op]): train_op = tf.identity(total_loss) The second method:123update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)with tf.control_dependencies(update_ops): train_op = optimizer.minimize(loss) The third method:1train_op = slim.learning.create_train_op(total_loss, optimizer) Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings. However, when trained on small-scale datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue: in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch. decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs. without slim: tf.nn.batch_normalization, no moving_mean/variance1234567891011def batchnorm(bn_input): with tf.variable_scope("batchnorm"): # this block looks like it has 3 inputs on the graph unless we do this bn_input = tf.identity(bn_input) channels = bn_input.get_shape()[3] offset = tf.get_variable("offset", [channels], dtype=tf.float32, initializer=tf.zeros_initializer()) scale = tf.get_variable("scale", [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(1.0, 0.02)) mean, variance = tf.nn.moments(bn_input, axes=[0, 1, 2], keep_dims=False) normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=1e-5) return normalized Utilsprint all model variables12345tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) # all the global variablesslim.get_model_variables() or tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) #variables defined by slim (tf.contrib.framework.model_variable)#excluding gradient variablestf.trainable_variables() #excluding graident variables and batch_norm variables (moving_mean and moving_variance) print regularization losses(weight decay) and other losses123slim.losses.get_regularization_losses()slim.losses.get_losses() # losses except weight decayslim.losses.get_total_loss(add_regularization_losses=False)]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>TensorFlow</tag>
-        <tag>slim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[YOLO Code Note]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FYOLO%20Code%20Note%2F</url>
-    <content type="text"><![CDATA[note net.batch = net.batch * net.subdivisions // the input batch number is divided by subdivision. preconfigured file 123cfg/voc.data -&gt; list *optionscfg/yolo-voc.cfg -&gt; char *cfgfiledarknet19_448.conv23 -&gt; char* weightfile every 10 times, change the input size the maximum number of bounding boxes in one image is hard coded as 30 each training image is tweaked by jitter, hue, crop, and etc. multiple threads create multiple threads when using multiple GPUs: -gpus 0,1 12345if(ngpus == 1)&#123; loss = train_network(net, train);&#125; else &#123; loss = train_networks(nets, ngpus, train, 4);&#125; use additional thread to load data to save time 12pthread_t load_thread = load_data(args);pthread_join(load_thread, 0); // wait for the thread to end load partial weights// load partial weights up to certain layerparser.c: load_weights_upto(network *net, char *filename, int start, int cutoff) loading bounding boxes// note that bounding box path is obtained based on image path, e.g., change “images” to “labels”. bounding box format: class_id x y w h. For the detaill, check data.c: fill_truth_detection detection/region layer all the pred/truth boxes coordinates (x,y,w,h) are scaled to (0,1) scalar 1234outputs = h * w * n * (coords + 1 + classes); // h=13,w=13,n=5,classes=20, coords=4// top-down layout: n-&gt;coords(x,y,w,h)+ obj_score + class_probs&gt;h&gt;wtruths = 30 * (coords + 1); // 30 is the max number of ground-truth boxes, which is hard coded//top-down layout: 30-&gt;coords(x,y,w,h)+class_id the size of vectors 1234output: batch*outputstruth: batch*truthsdelta: the same as outputbiases: 2*#anchor scales detection idea Each feature map pixel is associated with 10 anchor scales, the detection bounding box can be obtained based on the feature map pixel location and anchor scale, followed by being corrected by bounding box regression as follows. Assume output is ($\Delta i, \Delta j, \Delta w, \Delta h$), then the corrected prediction box isx'=(i+\Delta i)/w, y'=(j+\Delta j)/h, w'=\exp(\Delta w)*aw/w, h'=\exp(\Delta h) * ah/h. For each feature map pixel and each anchor scale, calculate its overlap with any ground-truth bounding boxes to get its object score, then update gradients w.r.t. obj_score. For each ground-truth bounding box, find the corresponding feature map pixel with the most fittable anchor scale, then update gradients w.r.t. box regression and class probabilities. update gradient most of the loss terms are square loss, which can be easily computed obj_score: if best_iou&gt;thresh, set as 0, otherwise 1l.delta[obj_index] = l.noobject_scale * (0 - l.output[obj_index]); box regression// add higher weights on small regions 1delta_region_box(box truth, float *x, float *biases, int n, int index, int i, int j, int w, int h, float *delta, float scale, int stride) class probabilities 1delta_region_class(l.output, l.delta, class_index, class, l.classes, l.softmax_tree, l.class_scale, l.w*l.h, &amp;avg_cat); experimental observation reducing the number of layers may improve the performance due to the enlarged feature map. increasing the number of anchors does not help (5 or 10 is adequate enough). the dynamic version (dynamically shrink or expand the network scale) is better than the static version the default hyper parameters are pretty good. No significant improvement is obtained by tuning hyper parameters.]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>object detection</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Object Detection Loss]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FObject%20Detection%20Loss%2F</url>
-    <content type="text"><![CDATA[Fast RCNNL(p,u,t^u,v) L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v), where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is a smooth L1 loss. Faster RCNNL(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*), where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen) and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN. fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes. SSD By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box. l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g), where $L_{conf}$ is a (K+1)-class softmax loss, and L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.YOLO\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2 + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2Note that for the noobj anchorboxes, there is only one loss term involved.]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>object detection</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Scale Variation for Object Detection]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FScale%20Variation%20for%20Object%20Detection%2F</url>
-    <content type="text"><![CDATA[This problem is well discussed in https://arxiv.org/pdf/1506.01497.pdf. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map. The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales. use different dilation rates to vary receptive fields use feature pyramid [1] Reference[1] Lin, Tsung-Yi, et al. “Feature pyramid networks for object detection.” CVPR, 2017.]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>object detection</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[From Anchor to ROI]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fobject_detection%2FFrom%20Anchor%20to%20ROI%2F</url>
-    <content type="text"><![CDATA[layer areaFrom layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, r_{i+1} = (r_i+2p_i-k_i)/s_i+1.In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area. coordinate mapNow consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$, x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.The above coordinate system starts from 1. When the coordinate system starts from 0, x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,which can be simplified as x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case. By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution x_1 = \alpha_L x_{L}+\beta_L,in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ anchor box to ROIGiven two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>object detection</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Caffe]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2Fcaffe%2FCaffe%2F</url>
-    <content type="text"><![CDATA[Fundamental Stuff: Caffe Tutorial Caffe Official Slides Key Notes: Required Packages: CUDA OpenCV BLAS: (Basic Linear Algebra Subprograms)operations like matrix multiplication, matrix addition,both implementation for CPU(cBLAS) and GPU(cuBLAS).provided by MKL(INTEL), ATLAS, openBLAS, etc. Boost: a c++ library, use some of its math functions and shared_pointer. glog,gflags:provide logging &amp; command line utilities. Essential for debugging. leveldblmdb: database io for your program. Need to know this for preparing your own data. protobuf: an efficient and flexible way to define data structure. Need to know this for defining new layers.]]></content>
-      <categories>
-        <category>deep learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-        <tag>Caffe</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Variants of Convolution in Deep Learning]]></title>
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FVariants%20of%20Convolution%20in%20Deep%20Learning%2F</url>
     <content type="text"><![CDATA[Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$. Pointwise convolution: pointwise fully connected across all the channels. Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in ShuffleNet. Depthwise separable convolution = depthwise convolution + pointwise convolution Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for segmentation. Deformable convolution (left) and spatial transformation network (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation. Squeeze-and-Excitation: learn different weights for each channel.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>network structure</tag>
       </tags>
   </entry>
   <entry>
@@ -1585,21 +1563,18 @@
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FTricky%20Back%20Propagation%2F</url>
     <content type="text"><![CDATA[Some operations are indifferentiable, which causes difficulties for back propagation. sample from distribution: reparameterization trickAuto-Encoding Variational Bayes argmax: soft argmaxGradient Descent Optimization of Smoothed Information Retrieval Metrics crop: two-dimension boxcar functionLook Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-grained Image Recognition delta function: lookup table+blur kernelReblur2Deblur: Deblurring Videos via Self-Supervised Learning]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
-      <tags>
-        <tag>deep learning</tag>
-      </tags>
   </entry>
   <entry>
-    <title><![CDATA[Image to Image with Deep Learning]]></title>
-    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FImage%20to%20Image%20with%20Deep%20Learning%2F</url>
+    <title><![CDATA[Image to Image Translation]]></title>
+    <url>%2F2018%2F09%2F07%2Fdeep_learning%2FImage%20to%20Image%20Translation%2F</url>
     <content type="text"><![CDATA[Learn the input image: texture synthesis Texture synthesis using convolutional neural networks. [pdf] feature inversion Understanding Deep Image Representations by Inverting Them. style transfer = feature inversion + texture synthesis Image style transfer using convolutional neural networks. [pdf] [code] (no training, test is slow) Perceptual Losses for Real-Time Style Transfer and Super-Resolution. [pdf] (train a network for each style using style image and content image as inputs, real-time test, belong to one-to-one image mapping) Texture Networks: Feed-forward Synthesis of Textures and Stylized Image. [pdf] A learned representation for artistic style. [pdf] (train a unified network for multiple styles) Learn the mapping from image to image super-resolution Learning a deep convolutional network for image super-resolution. [pdf] Accurate Image Super-Resolution Using Very Deep Convolutional Networks [pdf] [code] (VGG learns residual) Accelerating the Super-Resolution Convolutional Neural Network. [pdf] (hourglass structure, deconv) Deeply-recursive convolutional network for image super-resolution. [pdf] Photo-realistic single image super-resolution using a generative adversarial network. [pdf] (content_loss, adversarial loss) inpainting or hole-filling Deep Image Inpainting. [pdf] Context Encoders: Feature Learning by Inpainting [pdf] [code] colorization Colorful image colorization. [pdf] [code] Learning Representations for Automatic Colorization. [pdf] [code denoising Image Restoration Using Very Deep Convolutional EncoderDecoder Networks with Symmetric Skip Connections [pdf] [code]:(conv and deconv) decompression Compression Artifacts Reduction by a Deep Convolutional Network [pdf] dehaze Dehazenet: An end-to-end system for single image haze removal [pdf] demosaicking Deep joint demosaicking and denoising [pdf] pixel-level domain adaptation Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network. [pdf] [code] feature learning DCGAN: Unsupervised representation learning with deep convolutional generative adversarial networks. [pdf] [code] general Image-to-Image Translation with Conditional Adversarial Nets. [pdf] [code] (pixelGAN) For unpair training samples, the following three GANs, i.e., dualGAN, cycleGAN, and discoGAN, are almost the same. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. [pdf][code] (CycleGAN) DualGAN: Unsupervised Dual Learning for Image-to-Image Translation [pdf] Learning to Discover Cross-Domain Relations with Generative Adversarial Networks. [pdf] (discoGAN) HD GAN High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs. [pdf]: extend pixel2pixel GAN with coarse-to-fine strategy.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>GAN</tag>
       </tags>
   </entry>
   <entry>
@@ -1607,10 +1582,9 @@
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FGAN%2F</url>
     <content type="text"><![CDATA[The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples. mode collapse: min-max is not equal to max-min Training tricks:17 tricks for training GAN: https://github.com/soumith/ganhacks soft label: replace 1 with 0.9 and 0 with 0.3 train discriminator more times (e.g., 2X) than generator use labels: auxiliary tasks normalize inputs to [-1, 1] use tanh before output use batchnorm (not for the first and last layer) use spherical distribution instead of uniform distribution leaky relu stability tricks from RL Tricks from the BigGAN [1] class-conditional BatchNorm Spectral normalization orthogonal initialization truncated prior (truncation trick to seek the trade-off between fidelity and variety) enforce orthogonality on weights to improve the model smoothness More tricks gradient penalty [8] unrolling [9] and packing [10] Interesting variants: LSGAN: replace cross-entropy loss with least square loss Wasserstein GAN: replace discriminator with a critic function LAPGAN: coarse-to-fine using laplacian pyramid seqGAN: generate discrete sequences E-GAN [2]: place GAN under the framework of genetic evolution Dissection GAN [3]: use intervention for causality CoGAN [4]: two generators and discriminators softly share parameters DCGAN [5] Progressive GAN [6] Style-based GAN [7] Measurement：Results: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance. Stability: for the stability of generator and discriminator, refer to [1]. Materials:A good tutorial: https://github.com/mingyuliutw/cvpr2017\_gan\_tutorial/blob/master/gan_tutorial.pdf [1] Brock A, Donahue J, Simonyan K. Large scale gan training for high fidelity natural image synthesis[J]. arXiv preprint arXiv:1809.11096, 2018. [2] Wang C, Xu C, Yao X, et al. Evolutionary Generative Adversarial Networks[J]. arXiv preprint arXiv:1803.00657, 2018. [3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks[J]. arXiv preprint arXiv:1811.10597, 2018. [4] Liu M Y, Tuzel O. Coupled generative adversarial networks[C]//Advances in neural information processing systems. 2016: 469-477. [5] Radford, Alec, Luke Metz, and Soumith Chintala. “Unsupervised representation learning with deep convolutional generative adversarial networks.” arXiv preprint arXiv:1511.06434 (2015). [6] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017). [7] Karras, Tero, Samuli Laine, and Timo Aila. “A Style-Based Generator Architecture for Generative Adversarial Networks.” arXiv preprint arXiv:1812.04948 (2018). [8] Gulrajani, Ishaan, et al. “Improved training of wasserstein gans.” Advances in Neural Information Processing Systems. 2017. [9] Metz, Luke, et al. “Unrolled generative adversarial networks.” arXiv preprint arXiv:1611.02163 (2016). [10] Lin, Zinan, et al. “PacGAN: The power of two samples in generative adversarial networks.” Advances in Neural Information Processing Systems. 2018.]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
         <tag>GAN</tag>
       </tags>
   </entry>
@@ -1622,7 +1596,6 @@
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
         <tag>face verification</tag>
         <tag>face recognition</tag>
       </tags>
@@ -1632,10 +1605,10 @@
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FEnergy%20Efficient%20Deep%20Learning%2F</url>
     <content type="text"><![CDATA[Light-weighted network structure Xception: strictly speaking, not light-weighted CNN SqueezeNet MobileNet ShuffleNet SqueezeNet, MobileNet, and ShuffleNet share the same idea: decouple the temporal convolution and spatial convolution to reduce the nummber of parameters, sharing the similar spirit with Pseudo-3D Residual Networks. SqueezeNet is serial while MobileNet and ShuffleNet are parrallel. MobileNet is a special case of ShuffleNet when using only one group. Low-rank approximation ($k\times k \times c\times d = k\times k\times c\times d’ + 1\times 1\times d’\times d$) also falls into the above scope. The difference between MobileNet and Low-rank approximation is layerwise convolution or not. Tweak network structure prune nodes based on certain criteria (e.g., response value, Fisher information): require special implementation and take up more space than expected due to irregular network structure. Compress weights Quantization (fixed bit number): learn codebook and encode weights. Fine-tune codebook after quantizatizing weights, which averages the gradient of weights belonging to the same cluster. Extreme cases are binary net and ternary net. Binary (resp, ternary) net are quantized to [-1, 1] (resp, [-1, 0, 1]), with different weights $\alpha$ for different layers. Huffman Coding (flexible bit number): applied after quantization for further compression. Computation spatial domain to frequency domain: convert convolution to pointwise multiplication by using FFT Sparsity regularization L0 norm Efficient Inference cascade of networks, early exit network (predict whether to exit or not after each layer) [1] [2] Good introduction slides: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
+        <tag>network structure</tag>
       </tags>
   </entry>
   <entry>
@@ -1643,21 +1616,17 @@
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FDeep%20Learning%20Platform%2F</url>
     <content type="text"><![CDATA[Ready-made DevBox: Dell Alienware: at most 2 GPUs newegg: 4 GPUs Lambda Labs: 4 GPUs Assemble: cheap, but no warranty part list: most things are out of date. Tom’s hardware is a good website for comparison. Nvidia microarchitecture: maxwell-&gt;pascal-&gt;volta DGX-systems GPU cloud]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
-      <tags>
-        <tag>deep learning</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Attention Model]]></title>
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FAttention%20Model%2F</url>
     <content type="text"><![CDATA[Attention based RNNsurvey paper: survey on the attention based RNN model and its applications in computer vision [1] soft/hard attention: binary weight or soft weight item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise. earliest papers: Neural Machine Translation by Jointly Learning to Align and Translate [2] Grammar as a Foreign Language [3] 1 and 2 are basically the same except design specs of RNN unit. Attention based on CNNReference[1] Wang, Feng, and David MJ Tax. “Survey on the attention based RNN model and its applications in computer vision.” arXiv preprint arXiv:1601.06823 (2016). [2] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014). [3] Vinyals, Oriol, et al. “Grammar as a foreign language.” NIPS, 2015. Li, Hanchao, et al. “Pyramid attention network for semantic segmentation.” arXiv preprint arXiv:1805.10180 (2018).]]></content>
       <categories>
-        <category>deep learning</category>
+        <category>paper note</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
         <tag>attention model</tag>
       </tags>
   </entry>
