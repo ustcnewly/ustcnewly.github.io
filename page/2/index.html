@@ -281,6 +281,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/From Anchor to ROI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/From Anchor to ROI/" itemprop="url">From Anchor to ROI</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="layer-area"><a href="#layer-area" class="headerlink" title="layer area"></a>layer area</h2><p>From layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, </p>
+<script type="math/tex; mode=display">r_{i+1} = (r_i+2p_i-k_i)/s_i+1.</script><p>In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area.</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/5oklFvo.png" alt=""></p>
+<h2 id="coordinate-map"><a href="#coordinate-map" class="headerlink" title="coordinate map"></a>coordinate map</h2><p>Now consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$,</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.</script><p>The above coordinate system starts from 1. When the coordinate system starts from 0, </p>
+<script type="math/tex; mode=display">x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,</script><p>which can be simplified as</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).</script><p>when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case.</p>
+<p>By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution</p>
+<script type="math/tex; mode=display">x_1 = \alpha_L x_{L}+\beta_L,</script><p>in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/acLbSez.png" alt=""></p>
+<h2 id="anchor-box-to-ROI"><a href="#anchor-box-to-ROI" class="headerlink" title="anchor box to ROI"></a>anchor box to ROI</h2><p>Given two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Scale Variation for Object Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -531,16 +683,16 @@
         
           
             <ol>
-<li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: similar semantic information</p>
+<li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: two images have similar semantic information</p>
 <script type="math/tex; mode=display">\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2</script></li>
-<li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: similar style which is spatial invariant; related to bilinear pooling <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Lin_Bilinear_CNN_Models_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+<li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: two images have similar channel correlation; related to bilinear pooling <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Lin_Bilinear_CNN_Models_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
 <script type="math/tex; mode=display">||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'}</script></p>
 </li>
 <li><p>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </p>
 <script type="math/tex; mode=display">\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2</script></li>
 <li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
 <script type="math/tex; mode=display">\sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1</script></li>
-<li><p>alignment loss <a href="https://arxiv.org/pdf/1812.06145.pdf" target="_blank" rel="noopener">[5]</a>: similar to style loss; related to bilinear pooling</p>
+<li><p>alignment loss <a href="https://arxiv.org/pdf/1812.06145.pdf" target="_blank" rel="noopener">[5]</a>: two images have similar spatial correlation, complementary to style loss</p>
 <script type="math/tex; mode=display">||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c}</script></p>
 </li>
 </ol>
@@ -1657,189 +1809,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/deep_learning/Image Matting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/16/deep_learning/Image Matting/" itemprop="url">Image Matting</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-16T08:41:39+08:00">
-                2019-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>.</p>
-<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
-<li><p><a href="http://alphamatting.com/" target="_blank" rel="noopener">Alphamatting.com</a> Dataset: 25 train images, 8 test images, each has 3 different trimaps: small, large, user. Input: image and trimap.</p>
-</li>
-<li><p><a href="https://sites.google.com/view/deepimagematting" target="_blank" rel="noopener">Composition-1k Dataset</a>: 1000 images and 50 unique foregrounds.</p>
-</li>
-<li><p><a href="https://github.com/lizhengwei1992/Semantic_Human_Matting" target="_blank" rel="noopener">Matting Human Dataset</a>: 34427 images, annotation is not very accurate.</p>
-</li>
-</ul>
-<h2 id="Evaluation-metrics"><a href="#Evaluation-metrics" class="headerlink" title="Evaluation metrics"></a>Evaluation metrics</h2><ul>
-<li>quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error.</li>
-</ul>
-<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
-<li><p>Affinity-based <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </p>
-</li>
-<li><p>Sampling-based <a href="https://link.springer.com/chapter/10.1007/978-3-319-46475-6_13" target="_blank" rel="noopener">[8]</a>: the foreground/background color of unknown pixels can be obtained by sampling the foreground/background color of known pixels.</p>
-</li>
-<li><p>Learning-based</p>
-<ul>
-<li>With trimap:<ul>
-<li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and compositional loss; refine alpha.</li>
-<li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; compositional loss.</li>
-<li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and compositional loss.</li>
-<li>Learning based sampling <a href="http://people.inf.ethz.ch/aksoyy/papers/CVPR19-samplenet.pdf" target="_blank" rel="noopener">[7]</a></li>
-</ul>
-</li>
-<li>Without trimap:<ul>
-<li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block. </li>
-<li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” CVPR, 2017.</p>
-<p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
-<p>[3] Zhu, Bingke, et al. “Fast deep matting for portrait animation on mobile phone.” ACM MM, 2017.</p>
-<p>[4] Wang, Yu, et al. “Deep Propagation Based Image Matting.” IJCAI. 2018.</p>
-<p>[5] Quan Chen, Tiezheng Ge, Yanyu Xu, Zhiqiang Zhang, Xinxin Yang, Kun Gai, “Semantic Human Matting.” ACM MM, 2018.</p>
-<p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
-<p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
-<p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1894,7 +1863,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">153</span>
+                  <span class="site-state-item-count">154</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

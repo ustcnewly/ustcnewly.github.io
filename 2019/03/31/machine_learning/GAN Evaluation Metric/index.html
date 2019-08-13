@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp\{E_x[KL(p_M(y|">
+<meta name="description" content="Objective Evaluation:An empirical study on evaluation metrics of generative adversarial networks [1] with code.  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNe">
 <meta name="keywords" content="GAN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GAN Evaluation Metric">
 <meta property="og:url" content="http://yoursite.com/2019/03/31/machine_learning/GAN Evaluation Metric/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp\{E_x[KL(p_M(y|">
+<meta property="og:description" content="Objective Evaluation:An empirical study on evaluation metrics of generative adversarial networks [1] with code.  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNe">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-12T07:36:29.210Z">
+<meta property="og:updated_time" content="2019-07-22T09:35:13.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN Evaluation Metric">
-<meta name="twitter:description" content="An empirical study on evaluation metrics of generative adversarial networks [pdf][code]  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet IS=\exp\{E_x[KL(p_M(y|">
+<meta name="twitter:description" content="Objective Evaluation:An empirical study on evaluation metrics of generative adversarial networks [1] with code.  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNe">
 
 
 
@@ -374,7 +374,7 @@
       
 
       
-        <p>An empirical study on evaluation metrics of generative adversarial networks <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">[pdf]</a><a href="https://github.com/xuqiantong/GAN-Metrics" target="_blank" rel="noopener">[code]</a></p>
+        <h2 id="Objective-Evaluation"><a href="#Objective-Evaluation" class="headerlink" title="Objective Evaluation:"></a>Objective Evaluation:</h2><p>An empirical study on evaluation metrics of generative adversarial networks <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">[1]</a> with <a href="https://github.com/xuqiantong/GAN-Metrics" target="_blank" rel="noopener">code</a>.</p>
 <ol>
 <li><p>Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet</p>
 <script type="math/tex; mode=display">IS=\exp\{E_x[KL(p_M(y|x)||p_M(y))]\}</script><p> in which $p_M(y)$ is the marginal distribution of  $p_M(y|x)$. Expect $p_M(y)$ to be of low entropy while $p_M(y|x)$ to be of high entropy. The higher, the better.</p>
@@ -389,6 +389,15 @@
 <script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+trace(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
 <li><p>KNN score: treat true data as positive and generated data as negative. Calculate the leave-one-out (LOO) accuracy based on 1-NN classifier.</p>
 </li>
+</ol>
+<h2 id="Subjective-Evaluation"><a href="#Subjective-Evaluation" class="headerlink" title="Subjective Evaluation:"></a>Subjective Evaluation:</h2><ol>
+<li><p>Each user sees two randomly selected results at a time and is asked to choose the one that looks more realistic.  After obtaining all the pairwise results, Bradley-Terry model (B-T model) is used to calculate the global ranking score for each method. <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tsai_Deep_Image_Harmonization_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li></li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li>Xu, Qiantong, et al. “An empirical study on evaluation metrics of generative adversarial networks.” arXiv preprint arXiv:1806.07755 (2018).</li>
+<li>Tsai, Yi-Hsuan, et al. “Deep image harmonization.” CVPR, 2017.</li>
 </ol>
 
       
@@ -484,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -504,7 +522,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">153</span>
+                  <span class="site-state-item-count">154</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -565,6 +583,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Objective-Evaluation"><span class="nav-number">1.</span> <span class="nav-text">Objective Evaluation:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subjective-Evaluation"><span class="nav-number">2.</span> <span class="nav-text">Subjective Evaluation:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">2.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

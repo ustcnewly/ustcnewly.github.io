@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="FundamentalImage Statistics: illuminance, color temperature, saturation, local contrast, hue, texture, tone Color spaces: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-12T07:12:07.483Z">
+<meta property="og:updated_time" content="2019-08-13T04:49:06.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Harmonization">
 <meta name="twitter:description" content="FundamentalImage Statistics: illuminance, color temperature, saturation, local contrast, hue, texture, tone Color spaces: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).">
@@ -394,10 +394,12 @@
 </ul>
 <ul>
 <li><p><strong>Deep learning methods:</strong> learn the mapping from fake images to real images.</p>
-<p>  The first deep learning image harmonization <a href="https://arxiv.org/pdf/1703.00069.pdf" target="_blank" rel="noopener">[1]</a> with <a href="https://github.com/wasidennis/DeepHarmonization" target="_blank" rel="noopener">code</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2017/supplemental/Tsai_Deep_Image_Harmonization_2017_CVPR_supplemental.pdf" target="_blank" rel="noopener">supplementary</a>; use style transfer for image harmonization <a href="https://arxiv.org/pdf/1804.03189.pdf" target="_blank" rel="noopener">[2]</a></p>
-<p>  The first deep learning video harmonization <a href="https://arxiv.org/pdf/1809.01372.pdf" target="_blank" rel="noopener">[1]</a> </p>
+<p>   DIH <a href="https://arxiv.org/pdf/1703.00069.pdf" target="_blank" rel="noopener">[1*]</a> with <a href="https://github.com/wasidennis/DeepHarmonization" target="_blank" rel="noopener">code</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2017/supplemental/Tsai_Deep_Image_Harmonization_2017_CVPR_supplemental.pdf" target="_blank" rel="noopener">supplementary</a>; use style transfer for image harmonization <a href="https://arxiv.org/pdf/1804.03189.pdf" target="_blank" rel="noopener">[2*]</a>; S²AM <a href="https://arxiv.org/pdf/1907.06406v1.pdf" target="_blank" rel="noopener">[3*]</a> with <a href="https://github.com/vinthony/s2am" target="_blank" rel="noopener">code</a></p>
 </li>
 </ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1*] Tsai, Yi-Hsuan, et al. “Deep image harmonization.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.</p>
+<p>[2*] Luan, Fujun, et al. “Deep painterly harmonization.” Computer Graphics Forum. Vol. 37. No. 4. 2018.</p>
+<p>[3*] Xiaodong, Cun, and Pun Chi-Man. “Improving the Harmony of the Composite Image by Spatial-Separated Attention Module.” arXiv preprint arXiv:1907.06406 (2019). </p>
 <h2 id="Other-related-concepts"><a href="#Other-related-concepts" class="headerlink" title="Other related concepts:"></a>Other related concepts:</h2><ol>
 <li><p><strong>Image blending</strong>: The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable.</p>
 </li>
@@ -529,7 +531,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">153</span>
+                  <span class="site-state-item-count">154</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -600,7 +602,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fundamental"><span class="nav-number">1.</span> <span class="nav-text">Fundamental</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-realism"><span class="nav-number">2.</span> <span class="nav-text">Image realism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-harmonization"><span class="nav-number">3.</span> <span class="nav-text">Image harmonization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-related-concepts"><span class="nav-number">4.</span> <span class="nav-text">Other related concepts:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fundamental"><span class="nav-number">1.</span> <span class="nav-text">Fundamental</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-realism"><span class="nav-number">2.</span> <span class="nav-text">Image realism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-harmonization"><span class="nav-number">3.</span> <span class="nav-text">Image harmonization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">3.1.</span> <span class="nav-text">Reference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-related-concepts"><span class="nav-number">4.</span> <span class="nav-text">Other related concepts:</span></a></li></ol></div>
             
 
           </div>
