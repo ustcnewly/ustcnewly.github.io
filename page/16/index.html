@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Attention Model/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Attention Mechanism/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Attention Model/" itemprop="url">Attention Model</a></h1>
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Attention Mechanism/" itemprop="url">Attention Mechanism</a></h1>
         
 
         <div class="post-meta">
@@ -374,25 +374,35 @@
       
         
           
-            <h2 id="Attention-based-RNN"><a href="#Attention-based-RNN" class="headerlink" title="Attention based RNN"></a>Attention based RNN</h2><p>survey paper: survey on the attention based RNN model and its applications in computer vision [<a href="https://arxiv.org/pdf/1601.06823.pdf" target="_blank" rel="noopener">1</a>]</p>
+            <h2 id="Attention-in-CNN"><a href="#Attention-in-CNN" class="headerlink" title="Attention in CNN:"></a>Attention in CNN:</h2><p>According to <a href="https://arxiv.org/pdf/1805.08819.pdf" target="_blank" rel="noopener">[4]</a>, attention can be categorized into bottom-up attention (visual saliency, unsupervised) and top-down attention (task-driven, supervised).</p>
+<p>According to <a href="https://arxiv.org/pdf/1804.02391.pdf" target="_blank" rel="noopener">[5]</a>, attention can be categorized into forward attention, post-hoc attention, and query-based attention.</p>
 <ul>
-<li><p>soft/hard attention: binary weight or soft weight</p>
+<li><p>forward attention: spatial/channel attention <a href="https://arxiv.org/pdf/1802.08122.pdf" target="_blank" rel="noopener">[10]</a>,  full attention <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Cheng_Wang_Mancs_A_Multi-task_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[11]</a>, Deformable CNN v1 <a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[8]</a> v2 <a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
+<li><p>post-hoc attention: CAM <a href="https://arxiv.org/pdf/1512.04150.pdf" target="_blank" rel="noopener">[6]</a>, GradCAM <a href="https://arxiv.org/pdf/1610.02391.pdf" target="_blank" rel="noopener">[7]</a></p>
+</li>
+<li><p>query-based attention: <a href="https://arxiv.org/pdf/1804.02391.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ul>
+<h2 id="Attention-in-RNN"><a href="#Attention-in-RNN" class="headerlink" title="Attention in RNN:"></a>Attention in RNN:</h2><p>survey paper: survey on the attention based RNN model and its applications in computer vision [<a href="https://arxiv.org/pdf/1601.06823.pdf" target="_blank" rel="noopener">1</a>]</p>
+<ul>
+<li><p>soft/hard attention: binary weight or soft weight </p>
 </li>
 <li><p>item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise.</p>
 </li>
 </ul>
-<p>earliest papers:</p>
-<ol>
-<li><p>Neural Machine Translation by Jointly Learning to Align and Translate [<a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank" rel="noopener">2</a>]</p>
-</li>
-<li><p>Grammar as a Foreign Language [<a href="https://arxiv.org/pdf/1412.7449.pdf" target="_blank" rel="noopener">3</a>]</p>
-</li>
-</ol>
-<p>1 and 2 are basically the same except design specs of RNN unit.</p>
-<h2 id="Attention-based-on-CNN"><a href="#Attention-based-on-CNN" class="headerlink" title="Attention based on CNN"></a>Attention based on CNN</h2><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Wang, Feng, and David MJ Tax. “Survey on the attention based RNN model and its applications in computer vision.” arXiv preprint arXiv:1601.06823 (2016).</p>
+<p>Earliest papers [<a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank" rel="noopener">2</a>] [<a href="https://arxiv.org/pdf/1412.7449.pdf" target="_blank" rel="noopener">3</a>] are basically the same except design specs of RNN unit.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Wang, Feng, and David MJ Tax. “Survey on the attention based RNN model and its applications in computer vision.” arXiv preprint arXiv:1601.06823 (2016).</p>
 <p>[2] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).</p>
 <p>[3] Vinyals, Oriol, et al. “Grammar as a foreign language.” NIPS, 2015.</p>
-<p>Li, Hanchao, et al. “Pyramid attention network for semantic segmentation.” arXiv preprint arXiv:1805.10180 (2018).</p>
+<p>[4] Drew Linsley, Dan Shiebler, Sven Eberhardt, Thomas Serre: Learning what and where to attend. ICLR, 2019.</p>
+<p>[5] Saumya Jetley, Nicholas A. Lord, Namhoon Lee, Philip H. S. Torr: Learn to Pay Attention. ICLR, 2018.</p>
+<p>[6] Bolei Zhou, Aditya Khosla, Àgata Lapedriza, Aude Oliva, Antonio Torralba: Learning Deep Features for Discriminative Localization. CVPR 2016.</p>
+<p>[7] Ramprasaath R. Selvaraju, Michael Cogswell, Abhishek Das, Ramakrishna Vedantam, Devi Parikh, Dhruv Batra:<br>Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. ICCV 2017.</p>
+<p>[8] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:<br>Deformable Convolutional Networks. ICCV 2017.</p>
+<p>[9] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018)</p>
+<p>[10] Wei Li, Xiatian Zhu, Shaogang Gong: Harmonious Attention Network for Person Re-Identification. CVPR 2018.</p>
+<p>[11] Cheng Wang, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang: Mancs: A Multi-task Attentional Network with Curriculum Sampling for Person Re-Identification. ECCV (4) 2018.</p>
 
           
         
@@ -1047,7 +1057,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-count">84</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

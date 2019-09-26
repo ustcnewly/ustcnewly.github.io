@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Objective Evaluation:An empirical study on evaluation metrics of generative adversarial networks [1] with code.  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNe">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-22T09:35:13.487Z">
+<meta property="og:updated_time" content="2019-09-13T07:51:39.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN Evaluation Metric">
 <meta name="twitter:description" content="Objective Evaluation:An empirical study on evaluation metrics of generative adversarial networks [1] with code.  Inception Score (IS): classification score using the InceptionNet pretrained on ImageNe">
@@ -389,15 +389,16 @@
 <script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+trace(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
 <li><p>KNN score: treat true data as positive and generated data as negative. Calculate the leave-one-out (LOO) accuracy based on 1-NN classifier.</p>
 </li>
+<li><p>Learned Perceptual Image Patch Similarity (LPIPS): <script type="math/tex">d(x,x_0)=\sum_l \frac{1}{H_l W_l}\sum_{h,w}\|w_l\circ (\hat{y}_{hw}^l-\hat{y}^l_{0hw})\|^2</script> <a href="https://arxiv.org/pdf/1801.03924.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://github.com/richzhang/PerceptualSimilarity#a-basic-usage" target="_blank" rel="noopener">[code]</a> </p>
+</li>
 </ol>
 <h2 id="Subjective-Evaluation"><a href="#Subjective-Evaluation" class="headerlink" title="Subjective Evaluation:"></a>Subjective Evaluation:</h2><ol>
-<li><p>Each user sees two randomly selected results at a time and is asked to choose the one that looks more realistic.  After obtaining all the pairwise results, Bradley-Terry model (B-T model) is used to calculate the global ranking score for each method. <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tsai_Deep_Image_Harmonization_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li></li>
+<li>Each user sees two randomly selected results at a time and is asked to choose the one that looks more realistic.  After obtaining all the pairwise results, Bradley-Terry model (B-T model) is used to calculate the global ranking score for each method. <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tsai_Deep_Image_Harmonization_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
 <li>Xu, Qiantong, et al. “An empirical study on evaluation metrics of generative adversarial networks.” arXiv preprint arXiv:1806.07755 (2018).</li>
 <li>Tsai, Yi-Hsuan, et al. “Deep image harmonization.” CVPR, 2017.</li>
+<li>Zhang, Richard, et al. “The unreasonable effectiveness of deep features as a perceptual metric.” CVPR, 2018.</li>
 </ol>
 
       
@@ -544,7 +545,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-count">84</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
