@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-12T07:12:56.170Z">
+<meta property="og:updated_time" content="2019-09-26T11:55:29.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN">
 <meta name="twitter:description" content="The GAN zoo: https://github.com/hindupuravinash/the-gan-zoo Problems: oscillation: can train for a very long time without clearly generating better samples.  mode collapse: min-max is not equal to max">
@@ -421,7 +421,6 @@
 </li>
 <li><p>unrolling <a href="https://arxiv.org/pdf/1611.02163.pdf" target="_blank" rel="noopener">[9]</a> and packing <a href="https://papers.nips.cc/paper/7423-pacgan-the-power-of-two-samples-in-generative-adversarial-networks.pdf" target="_blank" rel="noopener">[10]</a></p>
 </li>
-<li></li>
 </ul>
 <h3 id="Interesting-variants"><a href="#Interesting-variants" class="headerlink" title="Interesting variants:"></a>Interesting variants:</h3><ul>
 <li><p>LSGAN: replace cross-entropy loss with least square loss</p>
@@ -445,6 +444,12 @@
 <li><p>Style-based GAN <a href="https://arxiv.org/pdf/1812.04948.pdf?utm_campaign=nathan.ai%20newsletter&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" rel="noopener">[7]</a></p>
 </li>
 </ul>
+<h3 id="Conditional-GAN"><a href="#Conditional-GAN" class="headerlink" title="Conditional GAN:"></a>Conditional GAN:</h3><ol>
+<li><p>Conditioned on label vector: conditional GAN <a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">[14]</a>, CVAE-GAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[16]</a></p>
+</li>
+<li><p>Conditioned on a single image: pix2pix <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[11]</a>; high-resolution pix2pix <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[12]</a> (add coarse-to-fine strategy); BicycleGAN <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">[13]</a> (combination of cVAE-GAN and cLR-GAN); DAGAN <a href="https://arxiv.org/pdf/1711.04340" target="_blank" rel="noopener">[15]</a></p>
+</li>
+</ol>
 <h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
 <p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a>.</p>
 <h3 id="Materials"><a href="#Materials" class="headerlink" title="Materials:"></a>Materials:</h3><p>A good tutorial: <a href="https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf" target="_blank" rel="noopener">https://github.com/mingyuliutw/cvpr2017\_gan\_tutorial/blob/master/gan_tutorial.pdf</a></p>
@@ -458,6 +463,12 @@
 <p>[8] Gulrajani, Ishaan, et al. “Improved training of wasserstein gans.” Advances in Neural Information Processing Systems. 2017.</p>
 <p>[9] Metz, Luke, et al. “Unrolled generative adversarial networks.” arXiv preprint arXiv:1611.02163 (2016).</p>
 <p>[10] Lin, Zinan, et al. “PacGAN: The power of two samples in generative adversarial networks.” Advances in Neural Information Processing Systems. 2018.</p>
+<p>[11] Isola, Phillip, et al. “Image-to-image translation with conditional adversarial networks.” CVPR, 2017</p>
+<p>[12] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018.</p>
+<p>[13] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” NIPS, 2017.</p>
+<p>[14] Mirza, Mehdi, and Simon Osindero. “Conditional generative adversarial nets.” arXiv preprint arXiv:1411.1784 (2014).</p>
+<p>[15] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
+<p>[16] Bao, Jianmin, et al. “CVAE-GAN: fine-grained image generation through asymmetric training.” ICCV, 2017.</p>
 
       
     </div>
@@ -581,7 +592,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">154</span>
+                  <span class="site-state-item-count">156</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -603,7 +614,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -652,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Training-tricks"><span class="nav-number">2.</span> <span class="nav-text">Training tricks:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interesting-variants"><span class="nav-number">3.</span> <span class="nav-text">Interesting variants:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Measurement："><span class="nav-number">4.</span> <span class="nav-text">Measurement：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Materials"><span class="nav-number">5.</span> <span class="nav-text">Materials:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Training-tricks"><span class="nav-number">2.</span> <span class="nav-text">Training tricks:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interesting-variants"><span class="nav-number">3.</span> <span class="nav-text">Interesting variants:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conditional-GAN"><span class="nav-number">4.</span> <span class="nav-text">Conditional GAN:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Measurement："><span class="nav-number">5.</span> <span class="nav-text">Measurement：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Materials"><span class="nav-number">6.</span> <span class="nav-text">Materials:</span></a></li></ol></div>
             
 
           </div>

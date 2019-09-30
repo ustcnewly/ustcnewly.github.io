@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="weakly-supervised,web data," />
+  <meta name="keywords" content="GAN,few-shot," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Two problems:  Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web">
-<meta name="keywords" content="weakly-supervised,web data">
+<meta name="description" content="Generative Matching Network (GMN) [1] [1]: VAE-like network with matching network for generator and recognizer  FIGR [2]: use Reptile for few-shot generation   Reference[1] Bartunov, Sergey, and Dmit">
+<meta name="keywords" content="GAN,few-shot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Webly-supervised Learning">
-<meta property="og:url" content="http://yoursite.com/2018/11/07/deep_learning/Webly-supervised Learning/index.html">
+<meta property="og:title" content="Few-Shot Image Generation">
+<meta property="og:url" content="http://yoursite.com/2019/05/31/deep_learning/Few-Shot Image Generation/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Two problems:  Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web">
+<meta property="og:description" content="Generative Matching Network (GMN) [1] [1]: VAE-like network with matching network for generator and recognizer  FIGR [2]: use Reptile for few-shot generation   Reference[1] Bartunov, Sergey, and Dmit">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-12T07:05:29.274Z">
+<meta property="og:updated_time" content="2019-09-26T11:22:53.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Webly-supervised Learning">
-<meta name="twitter:description" content="Two problems:  Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web">
+<meta name="twitter:title" content="Few-Shot Image Generation">
+<meta name="twitter:description" content="Generative Matching Network (GMN) [1] [1]: VAE-like network with matching network for generator and recognizer  FIGR [2]: use Reptile for few-shot generation   Reference[1] Bartunov, Sergey, and Dmit">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/07/deep_learning/Webly-supervised Learning/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/31/deep_learning/Few-Shot Image Generation/"/>
 
 
 
 
 
-  <title>Webly-supervised Learning | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Few-Shot Image Generation | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/deep_learning/Webly-supervised Learning/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/deep_learning/Few-Shot Image Generation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Webly-supervised Learning</h1>
+          <h1 class="post-title" itemprop="name headline">Few-Shot Image Generation</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-07T16:17:27+08:00">
-                2018-11-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-31T13:35:34+08:00">
+                2019-05-31
               </time>
             
 
@@ -374,46 +374,14 @@
       
 
       
-        <p><strong>Two problems:</strong></p>
-<ul>
-<li><u>Label noise</u>: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category).</li>
-<li><u>Domain shift</u>: domain distribution mismatch between web data and consumer data.</li>
-</ul>
-<p><strong>Solutions:</strong></p>
-<ol>
-<li><p>label flip layer: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Chen_Webly_Supervised_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+        <ol>
+<li><p>Generative Matching Network (GMN) <a href="https://arxiv.org/pdf/1612.02192.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">[1]</a>: VAE-like network with matching network for generator and recognizer</p>
 </li>
-<li><p>multi-instance learning: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>(group attention) <a href="https://jiajunwu.com/papers/dmil_cvpr.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1802.04712.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>reweight training samples (a special case of label flip layer, flip from clean to noise): <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1411.7718.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>curriculumn learning: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1712.05055.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>bootstrapping: <a href="https://arxiv.org/pdf/1412.6596.pdf" target="_blank" rel="noopener">[1]</a></p>
+<li><p>FIGR <a href="https://arxiv.org/pdf/1901.02199v1.pdf" target="_blank" rel="noopener">[2]</a>: use Reptile for few-shot generation</p>
 </li>
 </ol>
-<p><strong>Use clean data</strong>:</p>
-<ol>
-<li><p>active learning (select training samples to annotate): <a href="https://arxiv.org/pdf/1511.06789.pdf" target="_blank" rel="noopener">[1]</a> </p>
-</li>
-<li><p>reinforcement learning (learn labeling policies): <a href="https://arxiv.org/pdf/1706.02884.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>analogous to semi-supervised learning </p>
-<ul>
-<li>partial data with both noisy labels and clean labels as well as partial data with only noisy labels <a href="https://vision.cornell.edu/se3/wp-content/uploads/2017/04/DeepLabelCleaning_CVPR.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>partial data with noisy labels and partial data with clean labels <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7778168" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-</li>
-</ol>
-<p><strong>Datasets:</strong></p>
-<ul>
-<li><p>large-scale web datasets: <a href="https://www.vision.ee.ethz.ch/webvision/" target="_blank" rel="noopener">webvision</a></p>
-</li>
-<li><p>fine-grained web datasets: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">clothing dataset</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">car dataset</a></p>
-</li>
-<li><p>synthetic noisy datasets via label flipping: <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener">CIFAR-10/100</a></p>
-</li>
-</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” AISTATS, 2018.</p>
+<p>[2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot Image Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019).</p>
 
       
     </div>
@@ -431,9 +399,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/weakly-supervised/" rel="tag"># weakly-supervised</a>
+            <a href="/tags/GAN/" rel="tag"># GAN</a>
           
-            <a href="/tags/web-data/" rel="tag"># web data</a>
+            <a href="/tags/few-shot/" rel="tag"># few-shot</a>
           
         </div>
       
@@ -446,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/01/others/My Clumsy Research Experience/" rel="next" title="My Clumsy Research Experience">
-                <i class="fa fa-chevron-left"></i> My Clumsy Research Experience
+              <a href="/2019/05/31/deep_learning/Zero-Shot Semantic Segmentation/" rel="next" title="Zero-Shot Semantic Segmentation">
+                <i class="fa fa-chevron-left"></i> Zero-Shot Semantic Segmentation
               </a>
             
           </div>
@@ -456,8 +424,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/11/deep_learning/Adversarial Attack/" rel="prev" title="Adversarial Attack">
-                Adversarial Attack <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/18/deep_learning/Forecast Future based on One Still Image/" rel="prev" title="Forecast Future based on One Still Image">
+                Forecast Future based on One Still Image <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -510,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -530,7 +507,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">154</span>
+                  <span class="site-state-item-count">156</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -552,7 +529,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -591,6 +568,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
