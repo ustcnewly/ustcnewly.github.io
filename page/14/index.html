@@ -281,6 +281,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Ubuntu Shell Scripts/" itemprop="url">Ubuntu Shell Scripts</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><code>#!/bin/bash</code> at the head of file indicates shell type</p>
+<ol>
+<li><p>strict format</p>
+<p> For <code>if [[ $input == &quot;hello&quot; ]]</code>, note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression</p>
+</li>
+<li><p>arguments</p>
+<ul>
+<li>$@: stores all the arguments in a list of string</li>
+<li>$*: stores all the arguments as a single string</li>
+<li>$#: stores the number of arguments</li>
+<li>shift: remove the first argument</li>
+</ul>
+</li>
+</ol>
+<p>When starting login or interative shells, certain files will be executed based on the following tables:</p>
+<p>For bash:<br>login-y interactive-y: profile<br>login-y interactive-n: profile<br>login-n interactive-y: bashrc</p>
+<p>For zsh:<br>login-y interactive-y: zshenv zprofile zshrc zlogin<br>login-y interactive-n: zshenv zprofile zlogin<br>login-n interactive-y: zshenv zshrc<br>login-n interactive-n: zshenv</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Ubuntu Mount/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1657,159 +1815,6 @@
 <li>for Windows10, settings-&gt;recover-&gt;firmware</li>
 <li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Ubuntu VNC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/network/Ubuntu VNC/" itemprop="url">Ubuntu VNC</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Server"><a href="#Server" class="headerlink" title="Server:"></a>Server:</h3><ol>
-<li><p>Install VNC server under Ubuntu: $sudo apt-get install vnc4server</p>
-</li>
-<li><p>Configure the VNC server, $vi ~/.vnc/xstartup<br>change the style to gnome-session &amp; in the last line.</p>
-</li>
-<li><p>start the VNC server: $vncserver</p>
-</li>
-</ol>
-<h3 id="Client"><a href="#Client" class="headerlink" title="Client:"></a>Client:</h3><ol>
-<li>Install VNC client under Windows: use http:\IP:580$ID to log in.</li>
-</ol>
-<p><strong>Tips:</strong> For 10060 error, run <code>$iptables -F</code> to close firewall.</p>
 
           
         
