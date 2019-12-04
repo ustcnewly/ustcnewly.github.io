@@ -801,7 +801,7 @@
   </entry>
   <entry>
     <title><![CDATA[Python Send Email]]></title>
-    <url>%2F2018%2F09%2F15%2Fprogramming_language%2FPython%2FPython%20Send%20Email%2F</url>
+    <url>%2F2018%2F09%2F15%2Fprogramming_language%2FPython2%2FPython%20Send%20Email%2F</url>
     <content type="text"><![CDATA[Open SMTP service for your email and obtain the SMTP password. Create a Python script 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869import win32serviceutilimport win32serviceimport win32eventimport servicemanagerimport smtplibimport timeimport reimport sysimport urllib2class Getmyip: def visit(self,url): opener = urllib2.urlopen(url) if url == opener.geturl(): IPstr = opener.read() return re.search('\d+\.\d+\.\d+\.\d+',IPstr).group(0) def getip(self): myip = self.visit("http://www.net.cn/static/customercare/yourip.asp") return myip class AppServerSvc (win32serviceutil.ServiceFramework): _svc_name_ = "TestService" _svc_display_name_ = "Test Service" def __init__(self,args): win32serviceutil.ServiceFramework.__init__(self,args) self.hWaitStop = win32event.CreateEvent(None,0,0,None) self.run = True def SvcStop(self): self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING) win32event.SetEvent(self.hWaitStop) self.run = False def SvcDoRun(self): while(self.run==True): self.main() def main(self): fromaddr = 'XXX@qq.com' toaddrs = 'XXX@qq.com' server = smtplib.SMTP_SSL('smtp.qq.com') server.set_debuglevel(1) print("--- Need Authentication ---") username = 'XXX' password = 'XXX' server.login(username, password) prev_msg = '' while(True): getmyip=Getmyip() msg = getmyip.getip() if not msg==prev_msg: server.sendmail(fromaddr, toaddrs, msg) prev_msg = msg time.sleep(10) server.quit()if __name__ == '__main__': if len(sys.argv) == 1: servicemanager.Initialize() servicemanager.PrepareToHostSingle(AppServerSvc) servicemanager.StartServiceCtrlDispatcher() else: win32serviceutil.HandleCommandLine(AppServerSvc) Make python file into an exe 1pyinstaller -F MyService.py Make exe into a Windows service 1234sc create MyServer binPath=$exe_pathsc start MyServersc stop MyServersc delete MyServer]]></content>
       <categories>
         <category>programming language</category>
@@ -979,7 +979,7 @@
   </entry>
   <entry>
     <title><![CDATA[wxPython]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FwxPython%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython2%2FwxPython%2F</url>
     <content type="text"><![CDATA[Framework Code Simplest App: MyApp(False)means noredirect while MyApp(True, &#39;output.txt&#39;) will redirect the output to the file output.txt. Derivation from wx.App uses def OnInit(self) while others use def __init__(self) Donnot forget return True Simplest Frame: frame.Show(), frame.Centre() A frame with menubar, toolbar, and statusbar: UpdateUIEvents are sent periodically by the framework during idle time to allow the application to check if the state of a control needs to be updated. Append a menu_item with icon, qmi = wx.MenuItem(fileMenu, APP_EXIT, '&Quit\tCtrl+Q') qmi.SetBitmap(wx.Bitmap('exit.png')) fileMenu.AppendItem(qmi) Menu check_item self.shtl = viewMenu.Append(wx.ID_ANY, 'Show toolbar', 'Show Toolbar', kind=wx.ITEM_CHECK) self.Bind(wx.EVT_MENU, self.ToggleStatusBar, self.shst) def ToggleStatusBar(self, e): if self.shst.IsChecked(): self.statusbar.Show() else: self.statusbar.Hide() Pop a Dialogue box with validator: derivation from wx.PyValidator A login dialogue before main frame: wx.PyValidator Notebook with multiple pages Advanced notebook, user can add new pages Foldable Pannel Splash Screen: splash before entering main frame wx.SplashScreen Extendable Pannel SplitPanel (hide, show): a horizontally or vertically splited panel, loading html file File Drag Drop File Hunter SpreadSheet Media Player Web Browser Component Code Bitmap: use bitmap to beautify the appearance, or use the bitmap brush (transparent widgets may be a little troublesome here) self.Bind(wx.EVT_PAINT, self.OnPaint) def OnPaint(self, event): dc = wx.PaintDC(self) dc.SetBackgroundMode(wx.TRANSPARENT) brush1 = wx.BrushFromBitmap(wx.Bitmap('pattern1.jpg')) dc.SetBrush(brush1) w, h = self.GetSize() dc.DrawRectangle(0, 0, w, h) Simplest Button: use lib to build advanced buttons Bind function with building blocks self.Bind(wx.EVT_BUTTON, self.OnButton, button) def OnButton(self, event): Note GetChildren(), GetParent(), GetId(), FindWindowById(self.btnId) Advanced button: bitmap button, toggle button, gradient button Frame Icon: personalize the frame icon con = wx.Icon(path, wx.BITMAP_TYPE_PNG) self.SetIcon(icon): Interaction with Clipboard: paste to and copy from system clipboard Drop Files to Frame: : wx.PyDropTarget Help in Frame: when initializing Frame pre = wx.PreFrame() pre.SetExtraStyle(wx.FRAME_EX_CONTEXTHELP) pre.Create(parent, *args, **kwargs) self.PostCreate(pre) Checkbox: use more general event detector to simplify code `self.Bind(wx.EVT_CHECKBOX, self.OnCheck)` e_obj = event.GetEventObject() dropdown menu MessageBox def ShowMessage(self,event): wx.MessageBox('Download completed', 'Info', wx.OK | wx.ICON_INFORMATION) Open file_dialogue dlg = wx.FileDialog(self, "Open File", style=wx.FD_OPEN) if dlg.ShowModal() == wx.ID_OK: fname = dlg.GetPath() handle = open(fname, 'r') self.txtctrl.SetValue(handle.read()) handle.close() popup menu: right click to pop up the menu static box: a static box containing components list ctrl: multi-column list customtree: a tree-structure file browser virtual list box Styled Text: i.e., python-style text Download Progressbar About info: info including name, version, copyright, and description Choose Color Dialogue colour_data = wx.ColourData() colour = self.GetBackgroundColour() colour_data.SetColour(colour) colour_data.SetChooseFull(True) dlg = wx.ColourDialog(self, colour_data) if dlg.ShowModal() == wx.ID_OK: colour = dlg.GetColourData().GetColour() self.SetBackgroundColour(colour) self.Refresh() dlg.Destroy() Image Browser with simple editing Image Slide Show Search Bar Timer self._timer = wx.Timer(self) self.Bind(wx.EVT_TIMER, self.OnTimer, self._timer) self._timer.Start(100) self._timer.Stop() Execute Command Line import outputwin self.output = outputwin.OutputWindow(self) self.output.StartProcess("ping %s" % url, blocksize=64) Music Player Video Player: First, you need to install MplayerCtrl lib. Secondly, place the mplayer folder under the current working directory. Layout wx.BoxSizer: proportion is used to control main direction and wx.EXPAND is used to control the other direction. Note in BoxSizer, alignment is only valid in one direction. AddSpacer(50) is equal to Add((50,50)). AddStretchSpacer() is equal to Add((0,0),proportion=1). sizer = wx.BoxSizer(wx.HORIZONTAL) sizer.AddSpacer(50) sizer.Add(sth,proportion=0, flag=wx.ALL, border=5) #use flag to mark which side has border sizer.Add((-1,10)) #add a black space, height=10 # sizer.Add(sth,proportion=0, wx.EXPAND|wx.RIGHT|wx.ALIGN_RIGHT, border=5) sizer.AddSpacer((0,0)) #sizer.AddStretchSpacer() self.SetSizer(sizer) self.SetInitialSize() wx.GridSizer: proportion is usually set as 0, use Add((20,20), 1, wx.EXPAND) to take up space. wx.GridSizer(2, 2, vgap=0, hgap=0) msizer.Add(sth, 0, wx.EXPAND) wx.FlexGridSizer: make some rows and columns growable. fgs.AddGrowableRow(2) fgs.AddGrowableCol(1) wx.GridBagSizer: use pos and span to indicate the location and size. sizer = wx.GridBagSizer(vgap=8, hgap=8) sizer.Add(sth, (1, 2), (1, 15), wx.EXPAND) Notes Event Propagation: When an event can intrigue multiple events, use event.skip() to guaranttee the occurrence of following events. Take keyevents.py for an example. Virtual Ride: wx.PyPannel Bind function which will be checked in the idle timeself.Bind(wx.EVT_UPDATE_UI, self.OnUpdateEditMenu)]]></content>
       <categories>
         <category>programming language</category>
@@ -992,7 +992,7 @@
   </entry>
   <entry>
     <title><![CDATA[Python]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FPython%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython2%2FPython%2F</url>
     <content type="text"><![CDATA[check type 1isinstance(n,int) list 12345678t1 = ['a', 'b', 'c'];t2 = ['d', 'e', 'f'];t1.extend(t2);t1.append('g');t1 = t1+['g']t1.sort();del t1[1:3];t1.remove('b'); dictionary 1234567eng2sp = &#123;'one': 'uno', 'two': 'dos', 'three': 'tres'&#125;eng2sp.values() #'uno','dos','tres'eng2sp.items()'one' in eng2sp #trueinverse = invert_dict(eng2sp) d = dict(zip('abc',range(3)))d.get(word,0) #d[word] if word in d, 0 otherwise tupe: similar with list but immutable file operation 12345678fout = os.getcwd()os.path.abspath('tmp.txt')os.path.exists('tmp.txt')os.path.isfile/isdiros.listdir(cwd)fout = open('output.txt','w')fout.write('hehe')fout.close()]]></content>
       <categories>
         <category>programming language</category>
@@ -1004,7 +1004,7 @@
   </entry>
   <entry>
     <title><![CDATA[Python Draw Text on Image]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FPython%20Draw%20Text%20on%20Image%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython2%2FPython%20Draw%20Text%20on%20Image%2F</url>
     <content type="text"><![CDATA[Use PIL12345678import PIL.ImageDrawimport PIL.Imageimport PIL.ImageFontpil_img = PIL.Image.fromarray(bb_img)draw = PIL.ImageDraw.Draw(pil_img)font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf",20)draw.text((10, 10),"Frame: %09d"%(iframe),(255,0,0),font=font) Use OpenCV— 12import cv2cv2.putText(cv_img, 'Frame: %d'%(iframe), (10,20), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0,0,255), 3)]]></content>
       <categories>
         <category>programming language</category>
@@ -1016,7 +1016,7 @@
   </entry>
   <entry>
     <title><![CDATA[Fastest Way to Read Text, Image, and Video in Python]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FFastest%20Way%20to%20Read%20Text%2C%20Image%2C%20and%20Video%20in%20Python%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython2%2FFastest%20Way%20to%20Read%20Text%2C%20Image%2C%20and%20Video%20in%20Python%2F</url>
     <content type="text"><![CDATA[When comparing the efficiency of different libraries, there may exist a few orders of magnitude difference. In the implementation in demand of high efficiency, locate the time-consuming function and replace it with the most efficient library function. Text: PandasInstallation: pip install pandas or conda install pandas 12import pandas as pddata = pd.read_csv(text_name, sep=',', header=None) Image: Pillow-SIMD, skimage, OpenCV, imageio 12345678910111213141516import cv2import skimageimport imageiofrom PIL import Image#read a 1280x720 imagepil_im = Image.open(image_name) #0.0057spil_im = pil_im.resize((448,448)) #0.025ssk_im = skimage.io.imread(image_name) #0.026ssk_im = skimage.transform.resize(sk_im, (448, 448)) #0.060Scv_im = cv2.imread(image_name) #0.021scv_im = cv2.resize(cv_im, (448, 448)) #0.0016sim = imageio.imread(image_name) #0.033s Pillow-SIMD is faster than Pillow, which is not reported here. OpenCV is the most efficient one here. Video: OpenCV, skvideo, imageio 1234567891011121314import cv2import imageioimport skvideo#read 30fps video with each frame 1280x720 cap = cv2.VideoCapture(video_name)ret, frame = cap.read() #0.002svid = imageio.get_reader(video_name, 'ffmpeg')for image in vid.iter_data(): #0.004sskvideo.setFFmpegPath(os.path.dirname(sys.executable))videogen = skvideo.io.vreader(video_name)for img in videogen: #0.073s For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, /usr/bin/python is recommended. imageio and OpenCV are comparable here.]]></content>
       <categories>
         <category>programming language</category>
@@ -1027,21 +1027,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Eclipse for Python]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FEclipse%20for%20Python%2F</url>
-    <content type="text"><![CDATA[Eclipse-&gt;help-&gt;install new software. Work with http://pydev.org/updates. Eclipse-&gt;Window-&gt;Preferences-&gt;PyDev, modify the python interpreter, e.g., python.exe.]]></content>
-      <categories>
-        <category>software</category>
-        <category>IDE</category>
-      </categories>
-      <tags>
-        <tag>Eclipse</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Python bottle]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FPython%20bottle%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython2%2FPython%20bottle%2F</url>
     <content type="text"><![CDATA[Use route to indicate path, 80 is the default port for HTTP. 1234567import bottle@bottle.route('/hello')def hello(): return "Hello World!"bottle.run(host='localhost', port=80, debug=True) Dynamic path V.S. static path. We can use filter such as &lt;id:int&gt; to convert input variables to certain type. 1234567import bottle@bottle.route('/hello/&amp;lt;name&gt;/&amp;lt;address&gt;')def hello(name,address): return "Hello "+namebottle.run(host='localhost', port=80, debug=True) Use local resources. Pay special attention to the path. Local resource names should start with ‘/‘. 123@bottle.route('/&lt;filename:path&gt;')def server_static(filename): return bottle.static_file(filename, root='./resource/') The default HTTP request method for route() is get(), we can use other methods post(), put(), delete(), patch(). The POST method is commonly used for HTML form submission. When entering URL address, GET method is used. 12345678910111213141516171819202122232425262728import bottledef check_login(username, password): if username=='niuli' and password=='niuli': return True else: return False @bottle.get('/login') # or @route('/login')def login(): return ''' &amp;lt;form action="/login" method="post"&gt; Username: &amp;lt;input name="username" type="text" /&gt; Password: &amp;lt;input name="password" type="password" /&gt; &amp;lt;input value="Login" type="submit" /&gt; &amp;lt;/form&gt; '''@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') if check_login(username, password): return "&amp;lt;p&gt;Your login information was correct.&amp;lt;/p&gt;" else: return "&amp;lt;p&gt;Login failed.&amp;lt;/p&gt;"bottle.run(host='localhost', port=80, debug=True) Return local files localhost/filename. Note path:path is important, otherwise the filename containing ‘/‘ may not be correctly recognized. 12345from bottle import static_file @route(’/&lt;filepath:path&gt;’) def server_static(filepath): return static_file(filepath, root=’./resource’) Use redirect to jump to another page: bottle.redirect(&#39;/login&#39;) Use the HTML template. In the template file, the lines starting with % are python codes and others are HTML codes. We can include other templates in the current template by using % include(&#39;header.tpl&#39;, title=&#39;Page Title&#39;). Cookies, HTTP header, HTML &lt;form&gt; fields and other request data is available through the global request object. 12345678910@bottle.route('/&lt;name&gt;')@bottle.view('my_template.html')def root(name="default"): return bottle.template('my_template', name=name)@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') bottle.redirect('/'+username) Some tricks for helping development bottle.debug(True) The default error page shows a traceback. Templates are not cached. Plugins are applied immediately. run(reloader=True) Every time you edit a module file, the reloader restarts the server process and loads the newest version of your code.]]></content>
       <categories>
         <category>programming language</category>
@@ -1053,7 +1040,7 @@
   </entry>
   <entry>
     <title><![CDATA[Anaconda]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FAnaconda%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython2%2FAnaconda%2F</url>
     <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentlist: conda info —envs create: conda create --name $newenv python=2.7 (if copy, use —clone $oldenv) activate: source activate $newenv revert: source deactivate delete: conda remove —name $newenv —all packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
       <categories>
         <category>programming language</category>
@@ -1438,8 +1425,8 @@
         <category>OS</category>
       </categories>
       <tags>
-        <tag>mount</tag>
         <tag>Ubuntu</tag>
+        <tag>mount</tag>
       </tags>
   </entry>
   <entry>
@@ -1517,8 +1504,8 @@
         <category>OS</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Windows</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
