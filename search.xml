@@ -1041,7 +1041,7 @@
   </entry>
   <entry>
     <title><![CDATA[Python bottle]]></title>
-    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2Fbottle%2F</url>
+    <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FPython%20bottle%2F</url>
     <content type="text"><![CDATA[Use route to indicate path, 80 is the default port for HTTP. 1234567import bottle@bottle.route('/hello')def hello(): return "Hello World!"bottle.run(host='localhost', port=80, debug=True) Dynamic path V.S. static path. We can use filter such as &lt;id:int&gt; to convert input variables to certain type. 1234567import bottle@bottle.route('/hello/&amp;lt;name&gt;/&amp;lt;address&gt;')def hello(name,address): return "Hello "+namebottle.run(host='localhost', port=80, debug=True) Use local resources. Pay special attention to the path. Local resource names should start with ‘/‘. 123@bottle.route('/&lt;filename:path&gt;')def server_static(filename): return bottle.static_file(filename, root='./resource/') The default HTTP request method for route() is get(), we can use other methods post(), put(), delete(), patch(). The POST method is commonly used for HTML form submission. When entering URL address, GET method is used. 12345678910111213141516171819202122232425262728import bottledef check_login(username, password): if username=='niuli' and password=='niuli': return True else: return False @bottle.get('/login') # or @route('/login')def login(): return ''' &amp;lt;form action="/login" method="post"&gt; Username: &amp;lt;input name="username" type="text" /&gt; Password: &amp;lt;input name="password" type="password" /&gt; &amp;lt;input value="Login" type="submit" /&gt; &amp;lt;/form&gt; '''@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') if check_login(username, password): return "&amp;lt;p&gt;Your login information was correct.&amp;lt;/p&gt;" else: return "&amp;lt;p&gt;Login failed.&amp;lt;/p&gt;"bottle.run(host='localhost', port=80, debug=True) Return local files localhost/filename. Note path:path is important, otherwise the filename containing ‘/‘ may not be correctly recognized. 12345from bottle import static_file @route(’/&lt;filepath:path&gt;’) def server_static(filepath): return static_file(filepath, root=’./resource’) Use redirect to jump to another page: bottle.redirect(&#39;/login&#39;) Use the HTML template. In the template file, the lines starting with % are python codes and others are HTML codes. We can include other templates in the current template by using % include(&#39;header.tpl&#39;, title=&#39;Page Title&#39;). Cookies, HTTP header, HTML &lt;form&gt; fields and other request data is available through the global request object. 12345678910@bottle.route('/&lt;name&gt;')@bottle.view('my_template.html')def root(name="default"): return bottle.template('my_template', name=name)@bottle.post('/login') # or @route('/login', method='POST')def do_login(): username = bottle.request.forms.get('username') password = bottle.request.forms.get('password') bottle.redirect('/'+username) Some tricks for helping development bottle.debug(True) The default error page shows a traceback. Templates are not cached. Plugins are applied immediately. run(reloader=True) Every time you edit a module file, the reloader restarts the server process and loads the newest version of your code.]]></content>
       <categories>
         <category>programming language</category>
@@ -1056,7 +1056,8 @@
     <url>%2F2018%2F09%2F07%2Fprogramming_language%2FPython%2FAnaconda%2F</url>
     <content type="text"><![CDATA[python virtual environment: creat an isolated environment for each python version set, similar with pyenv. Installation:For Windows: Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment. Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment. For Linux: bash Anaconda2-4.3.1-Linux-x86_64.sh Environmentlist: conda info —envs create: conda create --name $newenv python=2.7 (if copy, use —clone $oldenv) activate: source activate $newenv revert: source deactivate delete: conda remove —name $newenv —all packagelist: conda list search: conda search pack install new packages: conda install pack conda install pack=1.8.2 # install certain version conda install —name env pack search on http://anaconda.org/, no need to register pip install pack install from local pack Tips: check available pythons: conda search —full-name python]]></content>
       <categories>
-        <category>software</category>
+        <category>programming language</category>
+        <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
@@ -1437,8 +1438,8 @@
         <category>OS</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>mount</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
