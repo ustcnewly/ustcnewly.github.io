@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/18/deep_learning/Domain Translation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
+                <a class="post-title-link" href="/2019/12/18/deep_learning/Domain Translation/" itemprop="url">Domain Translation</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-18T12:00:51+08:00">
+                2019-12-18
               </time>
             
 
@@ -335,8 +335,255 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div class="table-container">
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>supervised</th>
+<th>multi-domain</th>
+<th>multi-modal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pix2pix [1]</td>
+<td>yes</td>
+<td>no</td>
+<td>no </td>
+</tr>
+<tr>
+<td>cycleGAN [2]</td>
+<td>no</td>
+<td>no</td>
+<td>no </td>
+</tr>
+<tr>
+<td>UNIT [3]</td>
+<td>no</td>
+<td>no</td>
+<td>no </td>
+</tr>
+<tr>
+<td>MUNIT [4]</td>
+<td>no</td>
+<td>no</td>
+<td>yes </td>
+</tr>
+<tr>
+<td>AugCGAN [5]</td>
+<td>no</td>
+<td>no</td>
+<td>yes </td>
+</tr>
+<tr>
+<td>BicycleGAN [6]</td>
+<td>yes</td>
+<td>no</td>
+<td>yes </td>
+</tr>
+<tr>
+<td>Gonzalez et al. [7]</td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>starGAN [8]</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Le et al. [9]</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Honglun et al. [11]</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Hao et al. [12]</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>ComboGAN [13]</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Alexander et al. [14]</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Multi-view Image Generation [10]</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Andres et al. [15]</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="https://i.imgur.com/sqrtSjK.jpg" width="70%" border="0"></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">Image-to-Image Translation with Conditional Adversarial Networks</a><br>[2] <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</a><br>[3] <a href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf" target="_blank" rel="noopener">Unsupervised image-to-image translation networks</a><br>[4] <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Xun_Huang_Multimodal_Unsupervised_Image-to-image_ECCV_2018_paper.pdf" target="_blank" rel="noopener">Multimodal Unsupervised Image-to-Image Translation</a><br>[5] <a href="https://arxiv.org/pdf/1802.10151.pdf" target="_blank" rel="noopener">Augmented CycleGAN: Learning Many-to-Many Mappings from Unpaired Data</a><br>[6] <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">Toward Multimodal Image-to-Image Translation</a><br>[7] <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">Image-to-image translation for cross-domain disentanglement</a><br>[8] <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</a><br>[9] <a href="https://arxiv.org/pdf/1712.02050.pdf" target="_blank" rel="noopener">Unsupervised Multi-Domain Image Translation with Domain-specific Encoders/Decoders</a><br>[10] <a href="https://arxiv.org/pdf/1704.04886.pdf" target="_blank" rel="noopener">Multi-view image Generation from a single-view</a><br>[11] <a href="https://arxiv.org/pdf/1811.07483.pdf" target="_blank" rel="noopener">Show, Attend and Translate- Unpaired Multi-Domain Image-to-Image Translation with Visual Attention</a><br>[12] <a href="https://arxiv.org/pdf/1901.04604.pdf" target="_blank" rel="noopener">Dual Generator Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</a><br>[13] <a href="http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w13/Anoosheh_ComboGAN_Unrestrained_Scalability_CVPR_2018_paper.pdf" target="_blank" rel="noopener">ComboGAN: Unrestrained Scalability for Image Domain Translation</a><br>[14] <a href="http://papers.nips.cc/paper/7525-a-unified-feature-disentangler-for-multi-domain-image-translation-and-manipulation.pdf" target="_blank" rel="noopener">A Unified Feature Disentangler for Multi-Domain Image Translation and Manipulation</a><br>[15] <a href="https://arxiv.org/pdf/1905.01270.pdf" target="_blank" rel="noopener">SMIT: Stochastic Multi-Label Image-to-Image Translation</a><br>[16] <a href="https://arxiv.org/pdf/1611.03383.pdf" target="_blank" rel="noopener">DRIT++: Diverse Image-to-Image Translation via Disentangled Representations</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/16/deep_learning/Diversity Loss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/16/deep_learning/Diversity Loss/" itemprop="url">Diversity Loss</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-16T20:58:14+08:00">
+                2019-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -375,82 +622,15 @@
         
           
             <ol>
-<li>Preinstallation<ul>
-<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
-<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
-<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
-</ul>
+<li><p>diversification loss <a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
-<li>SSH keys<ul>
-<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
-<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
-<li>create the key in github: account setting-&gt;SSH</li>
-<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
-</ul>
-</li>
-<li><p>create an empty folder as Hexo folder</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
-<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
-</li>
-<li><p>deploy local Hexo folder</p>
-<ul>
-<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
-</li>
-<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
-</ul>
-</li>
-<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
-<li><p>local search</p>
-<ul>
-<li><code>$npm install hexo-generator-searchdb --save</code></li>
-<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>add social links: in the theme _config.yml file</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>latex: </p>
-<ul>
-<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
-<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>to address the conflict between MathJax and Hexo</p>
-   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>push posts to the top</p>
-<ul>
-<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
-<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
-</ul>
-</li>
-<li><p>insert code block</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>insert image</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+<li><p>mode seeking loss <a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">[2]</a></p>
 </li>
 </ol>
-<p><strong>Tips:</strong> </p>
-<ol>
-<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ol>
+<li><p>Choi, Yunjey, et al. “StarGAN v2: Diverse Image Synthesis for Multiple Domains.” arXiv preprint arXiv:1912.01865 (2019).</p>
 </li>
-<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
-<ul>
-<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
-<li>clean the folder <code>.deploy_git</code></li>
-<li><code>hexo clean</code> and <code>hexo d -g</code></li>
-</ul>
+<li><p>Mao, Qi, et al. “Mode seeking generative adversarial networks for diverse image synthesis.” CVPR, 2019.</p>
 </li>
 </ol>
 
@@ -1718,226 +1898,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/programming_language/TensorFlow/TensorFlow Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/12/programming_language/TensorFlow/TensorFlow Learning Note/" itemprop="url">TensorFlow Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:40+08:00">
-                2019-07-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><hr>
-<p>shape = [batch,height,width,channel]<br><strong>constant:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.zeros(shape)</span><br><span class="line">tf.constant(<span class="number">0.4</span>, shape)</span><br><span class="line">tf.random_norm(shape, stddev=<span class="number">1e-1</span>)</span><br><span class="line">tf.truncated_norm(shape, stddev=<span class="number">1e-1</span>)</span><br></pre></td></tr></table></figure></p>
-<p><strong>variable:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_variable(varname, shape=[<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>], initializer=XXX)</span><br><span class="line">initializer=tf.zeros_initializer() <span class="comment"># bias</span></span><br><span class="line">initializer=tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>) </span><br><span class="line">initializer=tf.truncated_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">initializer=tf.contrib.layers.xavier_initializer() <span class="comment"># weight</span></span><br></pre></td></tr></table></figure></p>
-<p>Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal.</p>
-<h3 id="Summary-for-tensorboard"><a href="#Summary-for-tensorboard" class="headerlink" title="Summary for tensorboard"></a>Summary for tensorboard</h3><hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.scalar(<span class="string">'total_loss'</span>, total_loss) <span class="comment">#scalar, histogram, etc</span></span><br><span class="line">self.merged = tf.summary.merge_all()</span><br><span class="line">train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) <span class="comment">#include the sess graph</span></span><br><span class="line">train_writer.add_summary(summary, ibatch)</span><br></pre></td></tr></table></figure>
-<p>after running the code, open tensorboard <code>tensorboard --logdir=&#39;./train&#39;</code></p>
-<h3 id="Checkpoint"><a href="#Checkpoint" class="headerlink" title="Checkpoint"></a>Checkpoint</h3><hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># save all the variables</span></span><br><span class="line">saver = tf.train.Saver() </span><br><span class="line"><span class="comment"># save partial variables </span></span><br><span class="line">saver = tf.train.Saver(&#123;<span class="string">"my_v2"</span>: v2&#125;)</span><br><span class="line"><span class="comment"># save and restore</span></span><br><span class="line">saver.save(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line">saver.restore(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line"><span class="comment"># restore partial variables</span></span><br><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure>
-<p>inspect the checkpoint file<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python <span class="keyword">import</span> pywrap_tensorflow  </span><br><span class="line">checkpoint_path = os.path.join(model_dir, <span class="string">"model.ckpt"</span>)  </span><br><span class="line">reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path)  </span><br><span class="line">var_to_shape_map = reader.get_variable_to_shape_map()  </span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> var_to_shape_map:  </span><br><span class="line">    print(<span class="string">"tensor_name: "</span>, key)  </span><br><span class="line">    print(reader.get_tensor(key)) <span class="comment"># Remove this is you want to print only variable names</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h3><hr>
-<ul>
-<li><p>convolutional layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kernel = tf.Variable(tf.zeros([<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>]))</span><br><span class="line">tf.nn.conv2d(x, kernel, strides=[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>) <span class="comment"># padding is 'SAME' or 'VALID' depending on stride is 1 or larger</span></span><br><span class="line"></span><br><span class="line">tf.nn.bias_add(prev_layer, bias)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dropout layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line"><span class="comment"># set keep_prob as 0.5 during training and 1 during testing</span></span><br><span class="line">tf.nn.dropout(h_fc1, keep_prob)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>pooling layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(x, ksize=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>],  strides=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], padding=<span class="string">'VALID'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>loss layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))</span><br><span class="line">	tf.nn.l2_loss(prev_layer)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>metric layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculate top-k accuracy</span></span><br><span class="line">tf.nn.in_top_k(logits, label_holder, k) <span class="comment"># the accuracy of top k</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>activation layer<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(prev_layer)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>other layers<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tf.one_hot(self.input_class, self.n_class)</span><br><span class="line">tf.nn.embedding_lookup(codebook, indices)</span><br><span class="line">tf.nn.lrn() <span class="comment"># legacy</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Common-Operations"><a href="#Common-Operations" class="headerlink" title="Common Operations"></a>Common Operations</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tf.matmul</span><br><span class="line">tf.pow</span><br><span class="line">tf.diag_part</span><br><span class="line">tf.reduce_sum</span><br><span class="line">tf.reduce_mean</span><br><span class="line">tf.nn.softmax</span><br><span class="line">tf.tile(a,(<span class="number">2</span>,<span class="number">2</span>)) </span><br><span class="line">tf.nn.embedding_lookup</span><br><span class="line">sim.flatten</span><br><span class="line">tf.squeeze</span><br><span class="line">tf.reshape</span><br><span class="line">tf.concat(values=[a,b,c], axis=<span class="number">3</span>)</span><br><span class="line">tf.gather  <span class="comment">#get indexed value, only on 0-dim</span></span><br><span class="line">tf.gather_nd</span><br><span class="line">tf.map_fn</span><br><span class="line">tf.scan_fn</span><br><span class="line">tf.fold1/foldr</span><br></pre></td></tr></table></figure>
-<h3 id="Training-and-testing"><a href="#Training-and-testing" class="headerlink" title="Training and testing"></a>Training and testing</h3><hr>
-<ul>
-<li><p>training stage</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">optimizer = tf.train.GradientDescentOptimizer(<span class="number">0.01</span>)</span><br><span class="line">train = optimizer.minimize(loss)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>): <span class="comment">#note the iteration number here</span></span><br><span class="line">    sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>testing stage</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)</span><br><span class="line">sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><hr>
-<ul>
-<li><p>For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details.<br>  ``python<br>  with tf.Session(config=config) as sess:      </p>
-<pre><code>  coord = tf.train.Coordinator()
-  threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-  sess.run(tf.initialize_local_variables())
-  #main code
-  coord.request_stop()
-  coord.join(threads)
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* With tfrecord and slim, using queue is much easier by using 	`slim.queues.QueueRunners`</span><br><span class="line">	```python</span><br><span class="line">	with tf.Session(config=config) as sess:        </span><br><span class="line">		with slim.queues.QueueRunners(sess):</span><br><span class="line">	``` </span><br><span class="line">  or `sv.managed_session`</span><br><span class="line">	```python</span><br><span class="line">	sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None)        </span><br><span class="line">	    with sv.managed_session() as sess:</span><br></pre></td></tr></table></figure>
-<p>Sample code of generating tfrecord dataset and reading data via queue can downloaded <a href="\code\TensorFlow\generate_tfrecord.rar">here</a></p>
-</li>
-</ul>
-<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><hr>
-<ul>
-<li><p>check tensorflow version</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.__version__.split(<span class="string">'.'</span>)[<span class="number">0</span>] != <span class="string">"1"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>count parameter numbers</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) <span class="keyword">for</span> v <span class="keyword">in</span> tf.trainable_variables()])</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1992,7 +1952,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">157</span>
+                  <span class="site-state-item-count">159</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2014,7 +1974,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-count">84</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
