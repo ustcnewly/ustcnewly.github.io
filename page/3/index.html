@@ -281,6 +281,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/deep_learning/Image Loss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/08/deep_learning/Image Loss/" itemprop="url">Image Loss</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-08T17:27:02+08:00">
+                2019-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: two images have similar semantic information</p>
+<script type="math/tex; mode=display">\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2</script></li>
+<li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: two images have similar channel correlation; related to bilinear pooling <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Lin_Bilinear_CNN_Models_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+<script type="math/tex; mode=display">||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'}</script></p>
+</li>
+<li><p>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </p>
+<script type="math/tex; mode=display">\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2</script></li>
+<li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
+<script type="math/tex; mode=display">\sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1</script></li>
+<li><p>alignment loss <a href="https://arxiv.org/pdf/1812.06145.pdf" target="_blank" rel="noopener">[5]</a>: two images have similar spatial correlation, complementary to style loss</p>
+<script type="math/tex; mode=display">||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c}</script></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016.</p>
+<p>[2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015.</p>
+<p>[3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014.</p>
+<p>[4] Bousmalis, Konstantinos, et al. “Unsupervised pixel-level domain adaptation with generative adversarial networks.” CVPR, 2017.</p>
+<p>[5] Abavisani, Mahdi, Hamid Reza Vaezi Joze, and Vishal M. Patel. “Improving the performance of unimodal dynamic hand-gesture recognition with multimodal training.” CVPR, 2019.</p>
+<p>[6] Lin, Tsung-Yu, Aruni RoyChowdhury, and Subhransu Maji. “Bilinear cnn models for fine-grained visual recognition.” ICCV, 2015.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/deep_learning/Cut and Paste/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1683,168 +1844,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/deep_learning/Domain Adaptation for Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/10/deep_learning/Domain Adaptation for Segmentation/" itemprop="url">Domain Adaptation for Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-10T09:59:07+08:00">
-                2019-04-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Domain-adaptation"><a href="#Domain-adaptation" class="headerlink" title="Domain adaptation:"></a>Domain adaptation:</h3><ul>
-<li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>; <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a> </p>
-</li>
-<li><p>Translation source domain image to target domain image: <a href="https://arxiv.org/pdf/1711.03213.pdf" target="_blank" rel="noopener">[5]</a>; <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sankaranarayanan_Learning_From_Synthetic_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[6]</a>; <a href="https://arxiv.org/pdf/1904.10620.pdf" target="_blank" rel="noopener">[10]</a> (combine with target domain pseudo labels).</p>
-</li>
-<li><p>Training with pseudo labels on the target domain: Curriculumn learning <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> (global image label distribution and landmark superpixel label distribution); self-training <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yang_Zou_Unsupervised_Domain_Adaptation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[7]</a>; use multiple models to vote for pseudo labels <a href="https://arxiv.org/pdf/1711.03694.pdf" target="_blank" rel="noopener">[9]</a> </p>
-</li>
-</ul>
-<h3 id="Domain-adaptation-with-privileged-information"><a href="#Domain-adaptation-with-privileged-information" class="headerlink" title="Domain adaptation with privileged information:"></a>Domain adaptation with privileged information:</h3><ul>
-<li>Domain adaptation with privileged information like depth: SPIGAN <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[2]</a> (enforce synthetic image and generated image to predict the same depth), <a href="https://arxiv.org/pdf/1904.01886.pdf" target="_blank" rel="noopener">[3]</a> (adversarial learning on depth)</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Yang, Philip David, and Boqing Gong. “Curriculum domain adaptation for semantic segmentation of urban scenes.” ICCV, 2017.</p>
-<p>[2] Lee, Kuan-Hui, et al. “SPIGAN: Privileged Adversarial Learning from Simulation.” ICLR, 2019.</p>
-<p>[3] Vu, Tuan-Hung, et al. “DADA: Depth-aware Domain Adaptation in Semantic Segmentation.” arXiv preprint arXiv:1904.01886 (2019).</p>
-<p>[4] Chen, Yuhua, Wen Li, and Luc Van Gool. “Road: Reality oriented adaptation for semantic segmentation of urban scenes.” CVPR, 2018.</p>
-<p>[5] Hoffman, Judy, et al. “Cycada: Cycle-consistent adversarial domain adaptation.” arXiv preprint arXiv:1711.03213 (2017).</p>
-<p>[6] Sankaranarayanan, Swami, et al. “Learning from synthetic data: Addressing domain shift for semantic segmentation.” CVPR, 2018.</p>
-<p>[7] Zou, Yang, et al. “Unsupervised domain adaptation for semantic segmentation via class-balanced self-training.”, ECCV, 2018.</p>
-<p>[8] Hong, Weixiang, et al. “Conditional generative adversarial network for structured domain adaptation.” CVPR, 2018.</p>
-<p>[9] Zhang, Junting, Chen Liang, and C-C. Jay Kuo. “A fully convolutional tri-branch network (FCTN) for domain adaptation.” ICASSP, 2018.</p>
-<p>[10] Li, Yunsheng, Lu Yuan, and Nuno Vasconcelos. “Bidirectional Learning for Domain Adaptation of Semantic Segmentation.” arXiv preprint arXiv:1904.10620 (2019).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1899,7 +1898,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">160</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1921,7 +1920,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
