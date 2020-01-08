@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Watermark Removal]]></title>
+    <url>%2F2019%2F12%2F31%2Fdeep_learning%2FWatermark%20Removal%2F</url>
+    <content type="text"><![CDATA[watermark removal: ICA [4], inpainting [5] watermarks consistent across a collection of images: multi-image matting and reconstruction [3] Survey papers on watermarking: [1] [2] Reference Podilchuk, Christine I., and Edward J. Delp. “Digital watermarking: algorithms and applications.” IEEE signal processing Magazine 18.4 (2001): 33-46. Potdar, Vidyasagar M., Song Han, and Elizabeth Chang. “A survey of digital image watermarking techniques.” INDIN’05. 2005 3rd IEEE International Conference on Industrial Informatics, 2005.. IEEE, 2005. Dekel, Tali, et al. “On the effectiveness of visible watermarks.” CVPR, 2017.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>watermark</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Deep EM]]></title>
     <url>%2F2019%2F12%2F19%2Fdeep_learning%2FDeep%20EM%2F</url>
     <content type="text"><![CDATA[Learning from Massive Noisy Labeled Data for Image Classification: hidden variable is the label noise type Expectation-Maximization Attention Networks for Semantic Segmentation: hidden variable is dictionary basis]]></content>
@@ -62,9 +73,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Webly-supervised Semantic Segmentation]]></title>
-    <url>%2F2019%2F09%2F26%2Fdeep_learning%2FWebly-supervised%20Semantic%20Segmentation%2F</url>
-    <content type="text"><![CDATA[[1]: crawl web images with white background and generate composite images to initialize segmentation network [2]: train a segmentation network using web data to obtain rough segmentation mask Reference[1] Bin Jin, Maria V. Ortiz Segovia, Sabine Süsstrunk:Webly Supervised Semantic Segmentation. CVPR 2017. [2] Tong Shen, Guosheng Lin, Chunhua Shen, Ian D. Reid:Bootstrapping the Performance of Webly Supervised Semantic Segmentation. CVPR 2018.]]></content>
+    <title><![CDATA[Weakly-supervised Semantic Segmentation]]></title>
+    <url>%2F2019%2F09%2F26%2Fdeep_learning%2FWeakly-supervised%20Semantic%20Segmentation%2F</url>
+    <content type="text"><![CDATA[Using web data for semantic segmentation: [1]: crawl web images with white background and generate composite images to initialize segmentation network [2]: train a segmentation network using web data to obtain rough segmentation mask box-level semantic/instance segmentation: [3] [4] [5] [6] scribble-level semantic segmentaiton: [7] point-level semantic segmentation: [8] Reference[1] Bin Jin, Maria V. Ortiz Segovia, Sabine Süsstrunk:Webly Supervised Semantic Segmentation. CVPR 2017. [2] Tong Shen, Guosheng Lin, Chunhua Shen, Ian D. Reid:Bootstrapping the Performance of Webly Supervised Semantic Segmentation. CVPR 2018. [3] Dai, Jifeng, Kaiming He, and Jian Sun. “Boxsup: Exploiting bounding boxes to supervise convolutional networks for semantic segmentation.” ICCV, 2015. [4] Khoreva, Anna, et al. “Simple does it: Weakly supervised instance and semantic segmentation.” CVPR, 2017. [5] Ahn, Jiwoon, Sunghyun Cho, and Suha Kwak. “Weakly Supervised Learning of Instance Segmentation with Inter-pixel Relations.” CVPR, 2019. [6] Hsu, Cheng-Chun, et al. “Weakly Supervised Instance Segmentation using the Bounding Box Tightness Prior.” NeurIPS. 2019. [7] Lin, Di, et al. “Scribblesup: Scribble-supervised convolutional networks for semantic segmentation.” CVPR, 2016. [8] Bearman, Amy, et al. “What’s the point: Semantic segmentation with point supervision.” ECCV, 2016.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -374,7 +385,7 @@
   <entry>
     <title><![CDATA[Graph Neural Network]]></title>
     <url>%2F2019%2F03%2F27%2Fmachine_learning%2FGraph%20Neural%20Network%2F</url>
-    <content type="text"><![CDATA[GNN for zero-shot learning [1][2]: treat each category as a graph node GNN for multi-view learning [3]: treat each view as a graph node Reference: Wang, Xiaolong, Yufei Ye, and Abhinav Gupta. “Zero-shot recognition via semantic embeddings and knowledge graphs.” CVPR, 2018. Lee, Chung-Wei, et al. “Multi-label zero-shot learning with structured knowledge graphs.” CVPR, 2018. Wang, Dongang, et al. “Dividing and aggregating network for multi-view action recognition.” ECCV, 2018.]]></content>
+    <content type="text"><![CDATA[GNN for zero-shot learning [1][2]: treat each category as a graph node GNN for multi-view learning [3]: treat each view as a graph node A survey on graph similarity [4] Reference: Wang, Xiaolong, Yufei Ye, and Abhinav Gupta. “Zero-shot recognition via semantic embeddings and knowledge graphs.” CVPR, 2018. Lee, Chung-Wei, et al. “Multi-label zero-shot learning with structured knowledge graphs.” CVPR, 2018. Wang, Dongang, et al. “Dividing and aggregating network for multi-view action recognition.” ECCV, 2018. Ma, Guixiang, et al. “Deep Graph Similarity Learning: A Survey.” arXiv preprint arXiv:1912.11615 (2019).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
