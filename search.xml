@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mutual Information]]></title>
+    <url>%2F2020%2F02%2F10%2Fmachine_learning%2FMutual%20Information%2F</url>
+    <content type="text"><![CDATA[[1]: use KL divergence as the upper-bound of mutual information (MI), which can be used to minimize MI. r(z) can be set as unit Gaussian for simplicity. MINE[2]: lower-bound of MI based on KL divergence. Due to strong consistency, MINE can be used as a tight estimation of MI. References Alemi, Alexander A., et al. “Deep variational information bottleneck.” arXiv preprint arXiv:1612.00410 (2016). Belghazi, M. I., Baratin, A., Rajeshwar, S., Ozair, S., Bengio, Y., Courville, A., &amp; Hjelm, D. Mutual information neural estimation, ICML, 2018.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>MI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Watermark Removal]]></title>
     <url>%2F2019%2F12%2F31%2Fdeep_learning%2FWatermark%20Removal%2F</url>
     <content type="text"><![CDATA[watermark removal: ICA [4], inpainting [5] watermarks consistent across a collection of images: multi-image matting and reconstruction [3] Survey papers on watermarking: [1] [2] Reference Podilchuk, Christine I., and Edward J. Delp. “Digital watermarking: algorithms and applications.” IEEE signal processing Magazine 18.4 (2001): 33-46. Potdar, Vidyasagar M., Song Han, and Elizabeth Chang. “A survey of digital image watermarking techniques.” INDIN’05. 2005 3rd IEEE International Conference on Industrial Informatics, 2005.. IEEE, 2005. Dekel, Tali, et al. “On the effectiveness of visible watermarks.” CVPR, 2017.]]></content>
@@ -259,9 +270,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Few-Shot Image Generation]]></title>
-    <url>%2F2019%2F05%2F31%2Fdeep_learning%2FFew-Shot%20Image%20Generation%2F</url>
-    <content type="text"><![CDATA[Generative Matching Network (GMN) [1] [1]: VAE-like network with matching network for generator and recognizer FIGR [2]: use Reptile for few-shot generation Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” AISTATS, 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot Image Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019).]]></content>
+    <title><![CDATA[Few-Shot Generation]]></title>
+    <url>%2F2019%2F05%2F31%2Fdeep_learning%2FFew-Shot%20Generation%2F</url>
+    <content type="text"><![CDATA[Few-shot Feature Generation Meta-learning method: [3] Delta-encoder [4] Few-shot Image Generation1.eMtric-based method: Generative Matching Network (GMN) [1_v1] [1_v2] (VAE-like network with matching network for generator and recognizer) Optimization-based method: FIGR [2]: use Reptile for few-shot generation Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019). [3] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018. [4] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018.]]></content>
       <categories>
         <category>paper note</category>
       </categories>

@@ -1758,7 +1758,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/hardware/GPU/GPU Cuda and CuDNN/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1777,7 +1777,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/hardware/GPU/GPU Cuda and CuDNN/" itemprop="url">GPU Cuda and CuDNN</a></h1>
+                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
         
 
         <div class="post-meta">
@@ -1812,19 +1812,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/" itemprop="url" rel="index">
-                    <span itemprop="name">hardware</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/GPU/" itemprop="url" rel="index">
-                    <span itemprop="name">GPU</span>
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
                   </a>
                 </span>
 
@@ -1862,48 +1851,85 @@
       
         
           
-            <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
-<li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
-</li>
-<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
-</li>
+            <ol>
+<li>Preinstallation<ul>
+<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
+<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
+<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
 </ul>
-<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
-<li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
 </li>
-<li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
-</li>
-<li><p>Install NVIDIA GPU driver using apt-get</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:Ubuntu-x-swat/x-updates</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
-<ol>
-<li>Hit CTRL+ALT+F1 and login using your credentials.</li>
-<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
-<li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
-<li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
-</ol>
-</li>
+<li>SSH keys<ul>
+<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
+<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
+<li>create the key in github: account setting-&gt;SSH</li>
+<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
 </ul>
-<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><ol>
-<li><p>Preprocessing</p>
+</li>
+<li><p>create an empty folder as Hexo folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
+<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
+</li>
+<li><p>deploy local Hexo folder</p>
 <ul>
-<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
-<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
-<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
+<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
+</li>
+<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
 </ul>
 </li>
-<li><p>Install Cuda</p>
-<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
-<p> and then add into PATH and LD_LIBRARY_PATH</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
+<li><p>local search</p>
+<ul>
+<li><code>$npm install hexo-generator-searchdb --save</code></li>
+<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
+</ul>
+</li>
+<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add social links: in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latex: </p>
+<ul>
+<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
+<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to address the conflict between MathJax and Hexo</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>push posts to the top</p>
+<ul>
+<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
+<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
+</ul>
+</li>
+<li><p>insert code block</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert image</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
-<h3 id="Deep-learning-platform"><a href="#Deep-learning-platform" class="headerlink" title="Deep learning platform"></a>Deep learning platform</h3><p>When using conda, installing Tensorflow and Pytorch can be as  easy as <code>conda install tensorflow-gpu</code> and <code>conda install pytorch</code>, which can automatically install compatible cuda and cudnn. </p>
+<p><strong>Tips:</strong> </p>
+<ol>
+<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+</li>
+<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
+<ul>
+<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
+<li>clean the folder <code>.deploy_git</code></li>
+<li><code>hexo clean</code> and <code>hexo d -g</code></li>
+</ul>
+</li>
+</ol>
 
           
         
@@ -1993,7 +2019,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">161</span>
+                  <span class="site-state-item-count">162</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2015,7 +2041,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">86</span>
+                  <span class="site-state-item-count">87</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
