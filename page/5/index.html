@@ -78,12 +78,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Newly Wiki">
+<meta property="og:title" content="Newly Wikipedia">
 <meta property="og:url" content="http://yoursite.com/page/5/index.html">
-<meta property="og:site_name" content="Newly Wiki">
+<meta property="og:site_name" content="Newly Wikipedia">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Newly Wiki">
+<meta name="twitter:title" content="Newly Wikipedia">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <title>Newly Wiki</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Newly Wikipedia</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -150,7 +150,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Newly Wiki</span>
+        <span class="site-title">Newly Wikipedia</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -281,194 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/machine_learning/Meta Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/27/machine_learning/Meta Learning/" itemprop="url">Meta Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T10:25:39+08:00">
-                2019-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Taxonomy"><a href="#Taxonomy" class="headerlink" title="Taxonomy"></a>Taxonomy</h3><p>1) <strong>metric-based:</strong>  learn a good metric</p>
-<ul>
-<li>matching network <a href="https://arxiv.org/pdf/1606.04080.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>relation network <a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>prototypical network <a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.00676.pdf" target="_blank" rel="noopener">[4]</a></li>
-</ul>
-<p>2) <strong>optimization-based:</strong> gradient</p>
-<ul>
-<li>Meta-Learner LSTM <a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">[5]</a></li>
-<li>MAML <a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://arxiv.org/pdf/1710.11622.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1801.08930.pdf" target="_blank" rel="noopener">[8]</a></li>
-<li><p>REPTILE (an approximation of MAML) <a href="https://arxiv.org/abs/1803.02999" target="_blank" rel="noopener">[9]</a></p>
-<center><img src="https://i.imgur.com/ZYN2cQ5.png" width="60%" border="0"></center>
-
-<p>Optimization based methods aim to obtain good parameter initilization. If we simply train multiple tasks, the obtained model parameters may lead to sub optimum for each task. </p>
-<center><img src="https://i.imgur.com/FBax49a.jpg" width="60%" border="0"></center>
-
-</li>
-</ul>
-<p>3) <strong>model-based:</strong> predict model parameters</p>
-<ul>
-<li>MANN <a href="http://proceedings.mlr.press/v48/santoro16.pdf" target="_blank" rel="noopener">[10]</a></li>
-<li>MetaNet <a href="https://arxiv.org/pdf/1703.00837.pdf" target="_blank" rel="noopener">[11]</a></li>
-</ul>
-<p><strong>Reference:</strong></p>
-<ol>
-<li>Vinyals, Oriol, et al. “Matching networks for one shot learning.” NIPS, 2016.</li>
-<li>Sung, Flood, et al. “Learning to compare: Relation network for few-shot learning.” CVPR, 2018.</li>
-<li>Snell, Jake, Kevin Swersky, and Richard Zemel. “Prototypical networks for few-shot learning.” NIPS, 2017.</li>
-<li>Ren, Mengye, et al. “Meta-learning for semi-supervised few-shot classification.” arXiv preprint arXiv:1803.00676 (2018).</li>
-<li>Sachin Ravi and Hugo Larochelle. “Optimization as a Model for Few-Shot Learning.” ICLR, 2017.</li>
-<li>Chelsea Finn, Pieter Abbeel, and Sergey Levine. “Model-agnostic meta-learning for fast adaptation of deep networks.” ICML, 2017.</li>
-<li>Finn, Chelsea, and Sergey Levine. “Meta-learning and universality: Deep representations and gradient descent can approximate any learning algorithm.” arXiv preprint arXiv:1710.11622 (2017).</li>
-<li>Grant, Erin, et al. “Recasting gradient-based meta-learning as hierarchical bayes.” arXiv preprint arXiv:1801.08930 (2018).</li>
-<li>A. Nichol, J. Achiam, and J. Schulman. On first-order meta-learning algorithms. arXiv, 1803.02999v2, 2018.</li>
-<li>Adam Santoro, et al. “Meta-learning with memory-augmented neural networks.” ICML. 2016.</li>
-<li>Munkhdalai, Tsendsuren, and Hong Yu. “Meta networks.” ICML, 2017.</li>
-</ol>
-<h3 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials:"></a>Tutorials:</h3><ul>
-<li><p><a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html</a></p>
-</li>
-<li><p><a href="http://metalearning-symposium.ml/files/vinyals.pdf" target="_blank" rel="noopener">http://metalearning-symposium.ml/files/vinyals.pdf</a></p>
-</li>
-<li><p><a href="https://github.com/floodsung/Meta-Learning-Papers" target="_blank" rel="noopener">https://github.com/floodsung/Meta-Learning-Papers</a></p>
-</li>
-<li><p>A more comprehensive survey: <a href="https://arxiv.org/pdf/1810.03548.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1810.03548.pdf</a></p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/machine_learning/Graph Neural Network/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -478,7 +290,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -654,7 +466,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -811,7 +623,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -962,7 +774,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -1119,7 +931,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -1271,7 +1083,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -1420,7 +1232,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -1565,7 +1377,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -1709,7 +1521,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Wiki">
+      <meta itemprop="name" content="Newly Wikipedia">
     </span>
 
     
@@ -1808,6 +1620,162 @@
 <li><p>Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).</p>
 </li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/programming_language/PyTorch/PyTorch Learning Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wikipedia">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/07/programming_language/PyTorch/PyTorch Learning Note/" itemprop="url">PyTorch Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T21:23:21+08:00">
+                2019-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Using-multiple-GPUs"><a href="#Using-multiple-GPUs" class="headerlink" title="Using multiple GPUs"></a>Using multiple GPUs</h3><p>device = torch.device(“cuda:gpu_id1”)</p>
+<p>model = nn.DataParallel(model, [gpu_id1, gpu_id2, …])<br>model.to(device)</p>
+<p>input = input.to(device)</p>
+<p>Note that gpu_id1 must be the first gpu in the gpu_list in model.DataParallel(arg1, gpu_list)</p>
 
           
         
