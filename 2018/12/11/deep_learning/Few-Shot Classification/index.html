@@ -82,10 +82,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Few-Shot Classification">
 <meta property="og:url" content="http://yoursite.com/2018/12/11/deep_learning/Few-Shot Classification/index.html">
-<meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
+<meta property="og:site_name" content="Newly Wiki">
 <meta property="og:description" content="One-shot/few-shot learningThe first one-shot learning paper dates back to 2006, but becomes more popular recently. Conceptstraining/validation/test categories: Training categories and test categories">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-26T11:23:18.966Z">
+<meta property="og:updated_time" content="2020-03-21T07:45:34.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-Shot Classification">
 <meta name="twitter:description" content="One-shot/few-shot learningThe first one-shot learning paper dates back to 2006, but becomes more popular recently. Conceptstraining/validation/test categories: Training categories and test categories">
@@ -124,7 +124,7 @@
 
 
 
-  <title>Few-Shot Classification | Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Few-Shot Classification | Newly Wiki</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -154,7 +154,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Li Niu's cheatsheet</span>
+        <span class="site-title">Newly Wiki</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -294,7 +294,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -380,7 +380,7 @@
 <p><u>C-way K-shot</u>: The test set has C categories. For each test category, we preserve K instances as the support set</p>
 <p><u>episode</u>: Episode-based strategy used in the training stage to match the inference in the testing stage. First sample some categories and then sample the suppport/query set for each category</p>
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
-<li><p>Metric-learning based: transfer metric </p>
+<li><p>Metric based:</p>
 <ul>
 <li><p><a href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf" target="_blank" rel="noopener">Siamese network</a>: the earliest and simplest metric-learning based few-shot learning, standard verification problem.</p>
 </li>
@@ -394,15 +394,25 @@
 </li>
 </ul>
 <ul>
-<li><p>Meta-learning based: transfer meta-information: </p>
+<li><p>Optimization (gradient) based:</p>
 <ul>
-<li><p><a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">Meta-Learner LSTM</a>: gradient update</p>
+<li><p>[MAML] (<a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1703.03400.pdf</a>)</p>
 </li>
+<li><p><a href="(https://arxiv.org/abs/1803.02999">REPTILE</a>) (an approximation of MAML)</p>
+</li>
+<li><p><a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">Meta-Learner LSTM</a></p>
+</li>
+</ul>
+</li>
+<li><p>Model based:</p>
+<ul>
 <li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-01267-0_2" target="_blank" rel="noopener">[5]</a>: predict the parameters of classifiers for novel categories. </p>
 </li>
 <li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>: predict the parameters of CNN feature extractor by virtue of memory module.</p>
 </li>
 </ul>
+</li>
+<li><p>Generation based:</p>
 </li>
 </ul>
 
@@ -528,7 +538,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">163</span>
+                  <span class="site-state-item-count">166</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

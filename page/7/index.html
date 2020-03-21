@@ -78,12 +78,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Li Niu&#39;s cheatsheet">
+<meta property="og:title" content="Newly Wiki">
 <meta property="og:url" content="http://yoursite.com/page/7/index.html">
-<meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
+<meta property="og:site_name" content="Newly Wiki">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Li Niu&#39;s cheatsheet">
+<meta name="twitter:title" content="Newly Wiki">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <title>Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Newly Wiki</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -150,7 +150,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Li Niu's cheatsheet</span>
+        <span class="site-title">Newly Wiki</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -281,6 +281,480 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/deep_learning/Few-Shot Classification/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wiki">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/11/deep_learning/Few-Shot Classification/" itemprop="url">Few-Shot Classification</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T16:55:28+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="One-shot-few-shot-learning"><a href="#One-shot-few-shot-learning" class="headerlink" title="One-shot/few-shot learning"></a>One-shot/few-shot learning</h2><p>The first one-shot learning paper dates back to <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=1597116" target="_blank" rel="noopener">2006</a>, but becomes more popular recently.</p>
+<h3 id="Concepts"><a href="#Concepts" class="headerlink" title="Concepts"></a>Concepts</h3><p><u>training/validation/test categories</u>: Training categories and test categories have no overlap</p>
+<p><u>support(sample)/query(batch) set</u>: In the testing stage, for each test category, we preserve some instances to form the support set and sample from the remaining instances to form the query set</p>
+<p><u>C-way K-shot</u>: The test set has C categories. For each test category, we preserve K instances as the support set</p>
+<p><u>episode</u>: Episode-based strategy used in the training stage to match the inference in the testing stage. First sample some categories and then sample the suppport/query set for each category</p>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
+<li><p>Metric based:</p>
+<ul>
+<li><p><a href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf" target="_blank" rel="noopener">Siamese network</a>: the earliest and simplest metric-learning based few-shot learning, standard verification problem.</p>
+</li>
+<li><p><a href="https://arxiv.org/abs/1606.04080" target="_blank" rel="noopener">Matching network</a>: map a support set to a classification function p(y|x,S) (KNN or LSTM). For the LSTM version, there is another similar <a href="https://arxiv.org/pdf/1605.06065.pdf" target="_blank" rel="noopener">work</a> using memory module. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">Relation network</a>: calculate the relation score for 1-shot, calculate the average of relation scores for k-shot</p>
+</li>
+<li><p><a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">Prototypical network</a>: compare with the prototype representations of each class. Each class can have more than one prototype representation. There are some other prototype-based methods <a href="https://link.springer.com/chapter/10.1007/978-3-642-33709-3_35" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Linchao_Zhu_Compound_Memory_Networks_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Optimization (gradient) based:</p>
+<ul>
+<li><p>[MAML] (<a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1703.03400.pdf</a>)</p>
+</li>
+<li><p><a href="(https://arxiv.org/abs/1803.02999">REPTILE</a>) (an approximation of MAML)</p>
+</li>
+<li><p><a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">Meta-Learner LSTM</a></p>
+</li>
+</ul>
+</li>
+<li><p>Model based:</p>
+<ul>
+<li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-01267-0_2" target="_blank" rel="noopener">[5]</a>: predict the parameters of classifiers for novel categories. </p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>: predict the parameters of CNN feature extractor by virtue of memory module.</p>
+</li>
+</ul>
+</li>
+<li><p>Generation based:</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/07/network/Ubuntu VPN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wiki">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/07/network/Ubuntu VPN/" itemprop="url">Ubuntu SSH</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-07T13:54:33+08:00">
+                2018-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Sometimes Ubuntu fails to connect VPN. Open the PPTP advanced options, uncheck EAP and check MPPE.</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/cr0lyNn.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/machine_learning/Knowledge Graph/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wiki">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/02/machine_learning/Knowledge Graph/" itemprop="url">Knowledge Graph</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-02T11:32:15+08:00">
+                2018-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Definition: entities, attributes, and relationships</p>
+<p>Two ways to construct knowledge graph:</p>
+<ol>
+<li><p>probabilistic models (graphical model/random walk)</p>
+</li>
+<li><p>embedding based models</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/machine_learning/Soft Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -290,7 +764,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -442,7 +916,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -594,7 +1068,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -737,7 +1211,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -925,7 +1399,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -1100,7 +1574,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -1249,7 +1723,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -1484,550 +1958,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/others/How to Conduct Experiments/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/18/others/How to Conduct Experiments/" itemprop="url">How to Conduct Experiments</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T10:11:04+08:00">
-                2018-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Experimental setting:</p>
-<ul>
-<li>Select more than 3 popular benchmark datasets. Most papers perform evaluation on 3~5 datasets.</li>
-<li>Determine the training/testing split. By default, strictly follow the setting in recent papers. If their settings are not applicable, we can determine our own setting reasonably and fully describe the details in the paper. </li>
-</ul>
-<p>Experimental implementation:</p>
-<ul>
-<li>For the commonly used model, avoid unnecessary reimplementation. Just use the released code and model.</li>
-<li>If closely related papers release their code, modify based on their code and avoid starting from scratch. </li>
-<li>Document your code with readable and meaningful comments. Otherwise, even your cannot understand your own code after a long time.</li>
-<li>Manage different versions of code carefully, otherwise your code will get messy very rapidly. Use advanced tool such as github to create branches, revert to old version, etc. The brutal approach is to create an individual folder for each version, which is not recommended.</li>
-</ul>
-<p>Experimental running:</p>
-<ul>
-<li>Avoid redundant or unncessary experiments.</li>
-<li>Run experiments parallelly using all available computing resources.</li>
-<li><a href="https://ustcnewly.github.io/2018/09/07/paper_note/Parameter%20Tuning/" target="_blank" rel="noopener">Tune hyper-parameters wisely</a>.</li>
-<li>Save final output and important intermediate output for future analysis.</li>
-</ul>
-<p>Experimental record:</p>
-<ul>
-<li>Make a to-do list for what experiments you are going to do.</li>
-<li>For the experiments you have done, summarize your observation and conclusion. Then, adjust the remaining to-do list accordingly. </li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/11/deep_learning/Adversarial Attack/" itemprop="url">Adversarial Attack</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-11T15:40:12+08:00">
-                2018-11-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>A comprehensive survey can be found <a href="https://arxiv.org/pdf/1801.00553.pdf" target="_blank" rel="noopener">here</a>.</p>
-<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology:"></a>Terminology:</h2><ul>
-<li><p>black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.</p>
-</li>
-<li><p>targeted/non-targeted attack: whether predicting a specific label for the adversarial example.</p>
-</li>
-<li><p>universal perturbation: fool a given model on any image with high probability. </p>
-</li>
-</ul>
-<h2 id="Attack"><a href="#Attack" class="headerlink" title="Attack"></a>Attack</h2><ol>
-<li><p>Backward Update</p>
-<ul>
-<li><p>add imperceptible distortion and increase the classification loss</p>
-</li>
-<li><p>universal adversarial perturbation: learn a residual perturbation that works on most clean images</p>
-</li>
-</ul>
-</li>
-<li><p>Forward Update</p>
-<ul>
-<li><p><a href="https://arxiv.org/pdf/1710.08864.pdf" target="_blank" rel="noopener">one-pixel attack</a>: use differential evolution algorithm</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1703.09387.pdf" target="_blank" rel="noopener">Adversarial Transformation Networks</a>: learn a network to translate clean image to adversarial example.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Defense"><a href="#Defense" class="headerlink" title="Defense"></a>Defense</h2><ol>
-<li><p>Use modified training samples during training or modified test samples during testing</p>
-</li>
-<li><p>Modify network: model parameters regularization, add a layer/module</p>
-</li>
-<li><p>Adversarial example detector: classify an example as adversarial or clean based on certain statistics</p>
-</li>
-</ol>
-<h2 id="New-perspective"><a href="#New-perspective" class="headerlink" title="New perspective"></a>New perspective</h2><p><a href="https://arxiv.org/pdf/1905.02175" target="_blank" rel="noopener">Adversarial examples are not bugs, they are features.</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/deep_learning/Webly-supervised Classification/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/07/deep_learning/Webly-supervised Classification/" itemprop="url">Webly-supervised Classification</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-07T16:17:27+08:00">
-                2018-11-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Two problems:</strong></p>
-<ul>
-<li><u>Label noise</u>: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category).</li>
-<li><u>Domain shift</u>: domain distribution mismatch between web data and consumer data.</li>
-</ul>
-<p><strong>Solutions:</strong></p>
-<ol>
-<li><p>label flip layer: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Chen_Webly_Supervised_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
-</li>
-<li><p>multi-instance learning: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> (pixel-level attention) <a href="https://jiajunwu.com/papers/dmil_cvpr.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/1802.04712.pdf" target="_blank" rel="noopener">[6]</a> (image-level attention)</p>
-</li>
-<li><p>reweight training samples: <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1411.7718.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
-</li>
-<li><p>curriculumn learning: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[10]</a> <a href="https://arxiv.org/pdf/1712.05055.pdf" target="_blank" rel="noopener">[11]</a></p>
-</li>
-<li><p>bootstrapping: <a href="https://arxiv.org/pdf/1412.6596.pdf" target="_blank" rel="noopener">[12]</a></p>
-</li>
-<li><p>negative learning: <a href="https://arxiv.org/pdf/1908.07387.pdf" target="_blank" rel="noopener">[18]</a></p>
-</li>
-</ol>
-<p><strong>Use auxiliary clean data</strong>:</p>
-<ol>
-<li><p>active learning (select training samples to annotate): <a href="https://arxiv.org/pdf/1511.06789.pdf" target="_blank" rel="noopener">[13]</a> </p>
-</li>
-<li><p>reinforcement learning (learn labeling policies): <a href="https://arxiv.org/pdf/1706.02884.pdf" target="_blank" rel="noopener">[14]</a></p>
-</li>
-<li><p>analogous to semi-supervised learning </p>
-<ul>
-<li>partial data with both noisy labels and clean labels as well as partial data with only noisy labels <a href="https://vision.cornell.edu/se3/wp-content/uploads/2017/04/DeepLabelCleaning_CVPR.pdf" target="_blank" rel="noopener">[15]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a>  <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[7]</a></li>
-<li>partial data with noisy labels and partial data with clean labels <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7778168" target="_blank" rel="noopener">[16]</a> <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">[17]</a></li>
-</ul>
-</li>
-</ol>
-<p><strong>Datasets:</strong></p>
-<p>There are two types of label noise: synthetic label noise and web label noise.</p>
-<ul>
-<li><p>large-scale web datasets: <a href="https://www.vision.ee.ethz.ch/webvision/" target="_blank" rel="noopener">webvision v1</a>, <a href="https://data.vision.ee.ethz.ch/cvl/webvision/" target="_blank" rel="noopener">webvision v2</a></p>
-</li>
-<li><p>fine-grained web datasets: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">clothing</a>, <a href="https://bitbucket.org/jingruixiaozhuang/attend-in-groups-a-weakly-supervised-deep-learning-framework/src/master/" target="_blank" rel="noopener">car</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">Stanford Dogs</a>, <a href="https://kuanghuei.github.io/Food-101N/" target="_blank" rel="noopener">Food101N</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">MIT indoor67</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">skin disease-198</a></p>
-</li>
-<li><p>synthetic noisy datasets via label flipping: <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener">CIFAR-10/100</a></p>
-</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chen, Xinlei, and Abhinav Gupta. “Webly supervised learning of convolutional networks.” ICCV, 2015.</p>
-<p>[2] Sukhbaatar, Sainbayar, et al. “Training convolutional networks with noisy labels.” arXiv preprint arXiv:1406.2080 (2014).</p>
-<p>[3] Xiao, Tong, et al. “Learning from massive noisy labeled data for image classification.” CVPR, 2015.</p>
-<p>[4] Zhuang, Bohan, et al. “Attend in groups: a weakly-supervised deep learning framework for learning from web data.” CVPR, 2017.</p>
-<p>[5] Wu, Jiajun, et al. “Deep multiple instance learning for image classification and auto-annotation.” CVPR, 2015.</p>
-<p>[6] Ilse, Maximilian, Jakub M. Tomczak, and Max Welling. “Attention-based deep multiple instance learning.” arXiv preprint arXiv:1802.04712 (2018).</p>
-<p>[7] Lee, Kuang-Huei, et al. “Cleannet: Transfer learning for scalable image classifier training with label noise.” CVPR, 2018.</p>
-<p>[8] Liu, Tongliang, and Dacheng Tao. “Classification with noisy labels by importance reweighting.” T-PAMI, 2015.</p>
-<p>[9] Misra, Ishan, et al. “Seeing through the human reporting bias: Visual classifiers from noisy human-centric labels.” CVPR, 2016.</p>
-<p>[10] Guo, Sheng, et al. “Curriculumnet: Weakly supervised learning from large-scale web images.” ECCV, 2018.</p>
-<p>[11] Jiang, Lu, et al. “Mentornet: Learning data-driven curriculum for very deep neural networks on corrupted labels.” arXiv preprint arXiv:1712.05055 (2017).</p>
-<p>[12] Reed, Scott, et al. “Training deep neural networks on noisy labels with bootstrapping.” arXiv preprint arXiv:1412.6596 (2014).</p>
-<p>[13] Krause, Jonathan, et al. “The unreasonable effectiveness of noisy data for fine-grained recognition.” ECCV, 2016. </p>
-<p>[14] Yeung, Serena, et al. “Learning to learn from noisy web videos.” CVPR, 2017.</p>
-<p>[15] Veit, Andreas, et al. “Learning from noisy large-scale datasets with minimal supervision.” CVPR, 2017.</p>
-<p>[16] Xu, Zhe, et al. “Webly-supervised fine-grained visual categorization via deep domain adaptation.” T-PAMI, 2016.</p>
-<p>[17] Li, Yuncheng, et al. “Learning from noisy labels with distillation.” ICCV, 2017.</p>
-<p>[18] Kim, Youngdong, et al. “Nlnl: Negative learning for noisy labels.” ICCV, 2019.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2082,7 +2012,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">163</span>
+                  <span class="site-state-item-count">166</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

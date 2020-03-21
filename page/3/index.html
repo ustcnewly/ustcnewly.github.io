@@ -78,12 +78,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Li Niu&#39;s cheatsheet">
+<meta property="og:title" content="Newly Wiki">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
+<meta property="og:site_name" content="Newly Wiki">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Li Niu&#39;s cheatsheet">
+<meta name="twitter:title" content="Newly Wiki">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <title>Li Niu's cheatsheet</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Newly Wiki</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -150,7 +150,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Li Niu's cheatsheet</span>
+        <span class="site-title">Newly Wiki</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -281,6 +281,516 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/programming_language/TensorFlow/TensorFlow GPU Usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wiki">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/programming_language/TensorFlow/TensorFlow GPU Usage/" itemprop="url">TensorFlow GPU Usage</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:39+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
+<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
+<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
+<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
+<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/programming_language/TensorFlow/Slim Learning Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wiki">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/programming_language/TensorFlow/Slim Learning Note/" itemprop="url">Slim Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:39+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>slim = tf.contrib.slim</p>
+<h3 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h3><p>for certain functions, assign default values to certain parameters</p>
+<pre><code>with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....)
+</code></pre><p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib/layers" target="_blank" rel="noopener">https://www.tensorflow.org/api_docs/python/tf/contrib/layers</a></p>
+<ul>
+<li>slim.conv2d </li>
+<li>slim.max_pool2d</li>
+<li>slim.avg_pool2d</li>
+<li>slim.dropout</li>
+<li>slim.batch_norm</li>
+<li>slim.softmax</li>
+<li>tf.repeat(inputs, repetitions, layer, <em>args, *</em>kwargs)</li>
+</ul>
+<p>class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])):<br> net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net)</p>
+<h3 id="Load-pretrained-model"><a href="#Load-pretrained-model" class="headerlink" title="Load pretrained model"></a>Load pretrained model</h3><p>Note that initialization function must be associated with sess.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a>Batch normalization</h3><p><strong>With slim</strong>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">batch_norm_params = &#123;</span><br><span class="line">	    <span class="comment"># Decay for the moving averages.</span></span><br><span class="line">	    <span class="string">'decay'</span>: batch_norm_decay,</span><br><span class="line">	    <span class="comment"># epsilon to prevent 0s in variance.</span></span><br><span class="line">	    <span class="string">'epsilon'</span>: batch_norm_epsilon,</span><br><span class="line">	    <span class="comment"># collection containing update_ops.</span></span><br><span class="line">	    <span class="string">'updates_collections'</span>: tf.GraphKeys.UPDATE_OPS,</span><br><span class="line"> &#125;</span><br><span class="line">slim.arg_scope([slim.conv2d],  normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params)</span><br></pre></td></tr></table></figure></p>
+<p>For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded  moving-mean an moving_variance are used.</p>
+<p>To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways.</p>
+<p>The first method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line">variables_to_train = _get_variables_to_train()</span><br><span class="line">grads_and_vars = optimizer.compute_gradients(total_loss,  variables_to_train)</span><br><span class="line">grad_updates = optimizer.apply_gradients(grads_and_vars)</span><br><span class="line">update_ops.append(grad_updates)</span><br><span class="line">update_op = tf.group(*update_ops)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies([update_op]):</span><br><span class="line">    train_op = tf.identity(total_loss)</span><br></pre></td></tr></table></figure></p>
+<p>The second method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies(update_ops):</span><br><span class="line">	train_op = optimizer.minimize(loss)</span><br></pre></td></tr></table></figure></p>
+<p>The third method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_op = slim.learning.create_train_op(total_loss, optimizer)</span><br></pre></td></tr></table></figure></p>
+<p>Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings.</p>
+<p>However, when trained on small-scale  datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue:</p>
+<ul>
+<li><p>in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch.</p>
+</li>
+<li><p>decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs.</p>
+</li>
+</ul>
+<p><strong>without slim</strong>: tf.nn.batch_normalization, no moving_mean/variance<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">batchnorm</span><span class="params">(bn_input)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> tf.variable_scope(<span class="string">"batchnorm"</span>):</span><br><span class="line">		<span class="comment"># this block looks like it has 3 inputs on the graph unless we do this</span></span><br><span class="line">		bn_input = tf.identity(bn_input)</span><br><span class="line">		</span><br><span class="line">		channels = bn_input.get_shape()[<span class="number">3</span>]</span><br><span class="line">		offset = tf.get_variable(<span class="string">"offset"</span>, [channels], dtype=tf.float32, initializer=tf.zeros_initializer())</span><br><span class="line">		scale = tf.get_variable(<span class="string">"scale"</span>, [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(<span class="number">1.0</span>, <span class="number">0.02</span>))</span><br><span class="line">		mean, variance = tf.nn.moments(bn_input, axes=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], keep_dims=<span class="keyword">False</span>)</span><br><span class="line">		normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=<span class="number">1e-5</span>)</span><br><span class="line">		<span class="keyword">return</span> normalized	</span><br></pre></td></tr></table></figure></p>
+<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><p>print all model variables<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) <span class="comment"># all the global variables</span></span><br><span class="line">slim.get_model_variables() <span class="keyword">or</span> tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) </span><br><span class="line"><span class="comment">#variables defined by slim (tf.contrib.framework.model_variable)</span></span><br><span class="line"><span class="comment">#excluding gradient variables</span></span><br><span class="line">tf.trainable_variables() <span class="comment">#excluding graident variables and batch_norm variables (moving_mean and moving_variance)</span></span><br></pre></td></tr></table></figure></p>
+<p>print regularization losses(weight decay) and other losses<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slim.losses.get_regularization_losses()</span><br><span class="line">slim.losses.get_losses() <span class="comment"># losses except weight decay</span></span><br><span class="line">slim.losses.get_total_loss(add_regularization_losses=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Object Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Wiki">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/Object Detection/" itemprop="url">Object Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>two-stage:</strong> use region proposal network (RPN) to generate proposals</p>
+<ol>
+<li><p><a href="http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf" target="_blank" rel="noopener">faster-RCNN</a> </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/1otto8I.png" width="50%"></p>
+</li>
+</ol>
+<p><strong>one-stage:</strong> remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. </p>
+<ol>
+<li>YOLO <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf" target="_blank" rel="noopener">v1</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf" target="_blank" rel="noopener">v2</a> <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf" target="_blank" rel="noopener">v3</a></li>
+<li><p><a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank" rel="noopener">SSD</a> </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/1jX0kAI.jpg" width="50%"></p>
+</li>
+</ol>
+<p><strong>Corner Points:</strong> remove anchors and directly predict corner points</p>
+<ol>
+<li><p><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hei_Law_CornerNet_Detecting_Objects_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CornerNet</a></p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/pqK8zQM.jpg" width="90%"></p>
+</li>
+</ol>
+<p><strong>No anchor:</strong> actually use aach cell as an anchor</p>
+<ol>
+<li><p><a href="https://arxiv.org/pdf/1904.11490.pdf" target="_blank" rel="noopener">RPDet</a>: use object centers as positive cells; paired with deformable CNN</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1904.03797.pdf" target="_blank" rel="noopener">FoveaBox</a>: use the cells in fovea area (object bounding box) as positive cells</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1901.03278.pdf" target="_blank" rel="noopener">Guided Anchoring</a>:  use deformable CNN to obtain adapted feature map</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Object Detection Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -290,7 +800,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -437,7 +947,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -589,7 +1099,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -745,7 +1255,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -906,7 +1416,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -1055,7 +1565,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -1202,7 +1712,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
+      <meta itemprop="name" content="Newly Wiki">
     </span>
 
     
@@ -1345,469 +1855,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/deep_learning/Few-Shot Generation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/31/deep_learning/Few-Shot Generation/" itemprop="url">Few-Shot Generation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-31T13:35:34+08:00">
-                2019-05-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Few-shot-Feature-Generation"><a href="#Few-shot-Feature-Generation" class="headerlink" title="Few-shot Feature Generation"></a>Few-shot Feature Generation</h2><ol>
-<li><p>Meta-learning method: <a href="https://www.cse.ust.hk/~yqsong/papers/2018-NIPS-MetaGAN-long.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>Delta-encoder <a href="https://arxiv.org/pdf/1806.04734.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-</ol>
-<h2 id="Few-shot-Image-Generation"><a href="#Few-shot-Image-Generation" class="headerlink" title="Few-shot Image Generation"></a>Few-shot Image Generation</h2><p>1.eMtric-based method: Generative Matching Network (GMN) <a href="https://arxiv.org/pdf/1612.02192.pdf" target="_blank" rel="noopener">[1_v1]</a> <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">[1_v2]</a> (VAE-like network with matching network for generator and recognizer)</p>
-<ol>
-<li>Optimization-based method: FIGR <a href="https://arxiv.org/pdf/1901.02199v1.pdf" target="_blank" rel="noopener">[2]</a>: use Reptile for few-shot generation</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018.</p>
-<p>[2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019).</p>
-<p>[3] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018.</p>
-<p>[4] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/deep_learning/Zero-Shot Semantic Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/31/deep_learning/Zero-Shot Semantic Segmentation/" itemprop="url">Zero-Shot Semantic Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-31T12:57:17+08:00">
-                2019-05-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>standard semantic segmentation: <a href="https://github.com/RohanDoshi2018/ZeroshotSemanticSegmentation/blob/master/rohan_doshi_senior_thesis.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xian_Semantic_Projection_Network_for_Zero-_and_Few-Label_Semantic_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1906.00817.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>binary segmentation: <a href="http://openaccess.thecvf.com/content_ICCVW_2019/papers/MDALC/Kato_Zero-Shot_Semantic_Segmentation_via_Variational_Mapping_ICCVW_2019_paper.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Rohan Doshi, Olga Russakovsky, “zero-shot semantic segmentation”, bachelor thesis.</p>
-<p>[2] Y. Xian, S. Choudhury, Y. He, B. Schiele and Z. Akata , “SPNet: Semantic Projection Network for Zero- and Few-Label Semantic Segmentation”, CVPR, 2019.</p>
-<p>[3] Maxime Bucher, Tuan-Hung Vu, Matthieu Cord, Sorbonne, Patrick Pérez, “Zero-Shot Semantic Segmentation”, 2019</p>
-<p>[4] Kato, Naoki, Toshihiko Yamasaki, and Kiyoharu Aizawa. “Zero-Shot Semantic Segmentation via Variational Mapping.” ICCV Workshops. 2019.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/deep_learning/Conditional GAN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/17/deep_learning/Conditional GAN/" itemprop="url">Conditional GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-17T15:22:33+08:00">
-                2019-05-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Conditioned on label vector: conditional GAN <a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">[4]</a>, CVAE-GAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>Conditioned on a single image</p>
-<ul>
-<li>pix2pix <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>; high-resolution pix2pix <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[2]</a> (add coarse-to-fine strategy); BicycleGAN <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">[3]</a> (combination of cVAE-GAN and cLR-GAN)</li>
-<li>DAGAN <a href="https://arxiv.org/pdf/1711.04340" target="_blank" rel="noopener">[5]</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Isola, Phillip, et al. “Image-to-image translation with conditional adversarial networks.” CVPR, 2017</p>
-<p>[2] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018.</p>
-<p>[3] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” NIPS, 2017.</p>
-<p>[4] Mirza, Mehdi, and Simon Osindero. “Conditional generative adversarial nets.” arXiv preprint arXiv:1411.1784 (2014).</p>
-<p>[5] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
-<p>[6] Bao, Jianmin, et al. “CVAE-GAN: fine-grained image generation through asymmetric training.” ICCV, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1862,7 +1909,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">163</span>
+                  <span class="site-state-item-count">166</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
