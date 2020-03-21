@@ -281,160 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Python2/Python Draw Text on Image/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/Python2/Python Draw Text on Image/" itemprop="url">Python Draw Text on Image</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Use-PIL"><a href="#Use-PIL" class="headerlink" title="Use PIL"></a>Use PIL</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.ImageDraw</span><br><span class="line"><span class="keyword">import</span> PIL.Image</span><br><span class="line"><span class="keyword">import</span> PIL.ImageFont</span><br><span class="line"></span><br><span class="line">pil_img = PIL.Image.fromarray(bb_img)</span><br><span class="line">draw = PIL.ImageDraw.Draw(pil_img)</span><br><span class="line">font = PIL.ImageFont.truetype(<span class="string">"/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf"</span>,<span class="number">20</span>)</span><br><span class="line">draw.text((<span class="number">10</span>, <span class="number">10</span>),<span class="string">"Frame: %09d"</span>%(iframe),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),font=font)</span><br></pre></td></tr></table></figure>
-<h3 id="Use-OpenCV"><a href="#Use-OpenCV" class="headerlink" title="Use OpenCV"></a>Use OpenCV</h3><p>—</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">cv2.putText(cv_img, <span class="string">'Frame: %d'</span>%(iframe), (<span class="number">10</span>,<span class="number">20</span>),  cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.65</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>), <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Python2/Fastest Way to Read Text, Image, and Video in Python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2022,6 +1868,166 @@
 </li>
 <li><p>special setting for regex</p>
  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">e2</span><span class="params">(my_expression, boost::regex::icase)</span></span>; \\<span class="keyword">case</span> insensitive</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/" itemprop="url">Boost_lexical_cast</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/lexical_cast.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>conversion between number and string: replace the atoi, itoa, and etc</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="built_in">string</span>&gt;(i)&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="keyword">double</span>&gt;(s)&lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mixed types: for type generalization</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/fusion/adapted/boost_tuple.hpp&gt;</span></span></span><br><span class="line">boost::tuple&lt;<span class="keyword">char</span>, <span class="keyword">int</span>, <span class="keyword">char</span>, <span class="keyword">int</span>&gt; decim(<span class="string">'-'</span>, <span class="number">10</span>, <span class="string">'e'</span>, <span class="number">5</span>);</span><br><span class="line">assert(stringize(decim) == <span class="string">"-10e5"</span>);</span><br></pre></td></tr></table></figure></li>
 </ol>
 
           

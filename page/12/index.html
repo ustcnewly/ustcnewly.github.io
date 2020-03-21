@@ -281,166 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/" itemprop="url">Boost_lexical_cast</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/lexical_cast.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>conversion between number and string: replace the atoi, itoa, and etc</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="built_in">string</span>&gt;(i)&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="keyword">double</span>&gt;(s)&lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mixed types: for type generalization</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/fusion/adapted/boost_tuple.hpp&gt;</span></span></span><br><span class="line">boost::tuple&lt;<span class="keyword">char</span>, <span class="keyword">int</span>, <span class="keyword">char</span>, <span class="keyword">int</span>&gt; decim(<span class="string">'-'</span>, <span class="number">10</span>, <span class="string">'e'</span>, <span class="number">5</span>);</span><br><span class="line">assert(stringize(decim) == <span class="string">"-10e5"</span>);</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2075,6 +1915,176 @@
 <li><p>utility = bo.util.utility(test_params, bo.gp): return the utility of test parameters, based on which the next point is recommended.</p>
 </li>
 </ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Self-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Self-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Design a proxy task using unlabeled or weakly-labeled data to help the original task. Essentially, self-supervised learning is <strong>multi-task learning with the proxy task not relying on heavy human annotation</strong>.</p>
+<p>Please refer to the tutorial slides <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_naiyanwang.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_zisserman.pdf" target="_blank" rel="noopener">[2]</a>, the <a href="https://arxiv.org/pdf/1902.06162.pdf" target="_blank" rel="noopener">survey</a>, and the <a href="https://github.com/jason718/awesome-self-supervised-learning" target="_blank" rel="noopener">paper list</a>.</p>
+<ol>
+<li><p>image-to-image</p>
+<ul>
+<li>image-to-image translation: colorization <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[1]</a>, inpainting <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Pathak_Context_Encoders_Feature_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a>, cross-channel generation <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_Split-Brain_Autoencoders_Unsupervised_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>spatial location: relative location <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Doersch_Unsupervised_Visual_Representation_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, jigsaw <a href="https://arxiv.org/pdf/1603.09246.pdf" target="_blank" rel="noopener">[2]</a>, predicting rotation <a href="https://arxiv.org/pdf/1803.07728.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>unsupervised image tasks: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a> </li>
+</ul>
+</li>
+<li><p>video-to-image</p>
+<ul>
+<li>temporal coherence: <a href="http://people.csail.mit.edu/hmobahi/pubs/embedvideo.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.386.1586&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Jayaraman_Slow_and_Steady_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>temporal order:  <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wang_Unsupervised_Learning_of_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1603.08561.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>unsupervised image tasks with video clues: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a>, optical flow prediction <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, unsupervised segmentation based on optical flow <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>,unsupervised depth estimation based on optical flow <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Huaizu_Jiang_Self-Supervised_Relative_Depth_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>video generation <a href="https://arxiv.org/pdf/1502.04681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>cross-modal consistency: consistency between visual kernel and optical flow kernel <a href="http://www.robots.ox.ac.uk/~vgg/publications/2018/Mahendran18/mahendran18.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features.</p>
+<ul>
+<li>3D rotation <a href="https://arxiv.org/pdf/1811.11387.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Cubic puzzle <a href="https://www.aaai.org/Papers/AAAI/2019/AAAI-KimD.1806.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>video localization and classification <a href="https://arxiv.org/pdf/1904.03597.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+</ol>
+<p><strong>Muti-task self-supervised learning:</strong> integrate multiple proxy tasks <a href="https://arxiv.org/pdf/1804.10069.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1708.07860" target="_blank" rel="noopener">[2]</a></p>
+<p><strong>Combined with other frameworks:</strong> self-supervised GAN <a href="https://arxiv.org/pdf/1811.11212.pdf" target="_blank" rel="noopener">[1]</a></p>
 
           
         
