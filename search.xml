@@ -72,15 +72,16 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Webly-supervised Image-text Retrieval]]></title>
-    <url>%2F2019%2F09%2F26%2Fdeep_learning%2FWebly-supervised%20Image-text%20Retrieval%2F</url>
-    <content type="text"><![CDATA[[1]: use web images and their tags to augment image-sentence pairs Reference[1] Niluthpol Chowdhury Mithun, Rameswar Panda, Evangelos E. Papalexakis, Amit K. Roy-Chowdhury:Webly Supervised Joint Embedding for Cross-Modal Image-Text Retrieval. ACM Multimedia 2018.]]></content>
+    <title><![CDATA[Image-text Retrieval]]></title>
+    <url>%2F2019%2F09%2F26%2Fdeep_learning%2FImage-text%20Retrieval%2F</url>
+    <content type="text"><![CDATA[Webly supervised image-text retrievalThe first work [1] on using web images and their tags to augment image-sentence pairs. We try to reproduce it, but it does not work at all. The text associated with a web image generally consists of tags, title, and description.The tags are very noisy, but they are acceptable for webly supervised image classification. The titles and descriptions are noisier. Only a few descriptions are complete sentences and match the corresponding images. Conceptual caption dataset [2] crawled web images and their alt text, and developed an automatic pipeline that extracts, filters, and transforms candidate image-caption pairs, resulting in relatively clean image-text pairs. This large corpus of web image-text pairs can be used for pretraining image-text retrieval model or image captioning model. Image-text (Chinse) Datasets AI challenger 2017: training set code:asix validation set code:dcnn f30k-cn Reference[1] Niluthpol Chowdhury Mithun, Rameswar Panda, Evangelos E. Papalexakis, Amit K. Roy-Chowdhury:Webly Supervised Joint Embedding for Cross-Modal Image-Text Retrieval. ACM MM, 2018. [2] Sharma, Piyush, et al. “Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning.” ACL, 2018.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
       <tags>
         <tag>weakly-supervised</tag>
         <tag>webly-supervised</tag>
+        <tag>cross-modal retrieval</tag>
       </tags>
   </entry>
   <entry>

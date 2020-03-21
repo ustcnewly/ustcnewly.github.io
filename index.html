@@ -1671,7 +1671,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/deep_learning/Webly-supervised Image-text Retrieval/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/deep_learning/Image-text Retrieval/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1690,7 +1690,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/09/26/deep_learning/Webly-supervised Image-text Retrieval/" itemprop="url">Webly-supervised Image-text Retrieval</a></h1>
+                <a class="post-title-link" href="/2019/09/26/deep_learning/Image-text Retrieval/" itemprop="url">Image-text Retrieval</a></h1>
         
 
         <div class="post-meta">
@@ -1764,8 +1764,15 @@
       
         
           
-            <p><a href="https://arxiv.org/pdf/1808.07793.pdf" target="_blank" rel="noopener">[1]</a>: use web images and their tags to augment image-sentence pairs</p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Niluthpol Chowdhury Mithun, Rameswar Panda, Evangelos E. Papalexakis, Amit K. Roy-Chowdhury:<br>Webly Supervised Joint Embedding for Cross-Modal Image-Text Retrieval. ACM Multimedia 2018.</p>
+            <h2 id="Webly-supervised-image-text-retrieval"><a href="#Webly-supervised-image-text-retrieval" class="headerlink" title="Webly supervised image-text retrieval"></a>Webly supervised image-text retrieval</h2><p>The first work <a href="https://arxiv.org/pdf/1808.07793.pdf" target="_blank" rel="noopener">[1]</a> on using web images and their tags to augment image-sentence pairs. We try to reproduce it, but it does not work at all. </p>
+<p>The text associated with a web image generally consists of tags, title, and description.<br>The tags are very noisy, but they are acceptable for webly supervised image classification. The titles and descriptions are noisier. Only a few descriptions are complete sentences and match the corresponding images.</p>
+<p><a href="https://github.com/google-research-datasets/conceptual-captions" target="_blank" rel="noopener">Conceptual caption dataset</a> [2] crawled web images and their alt text, and developed an automatic pipeline that extracts, filters, and transforms candidate image-caption pairs, resulting in relatively clean image-text pairs. This large corpus of web image-text pairs can be used for pretraining image-text retrieval model or image captioning model. </p>
+<h2 id="Image-text-Chinse-Datasets"><a href="#Image-text-Chinse-Datasets" class="headerlink" title="Image-text (Chinse) Datasets"></a>Image-text (Chinse) Datasets</h2><ul>
+<li>AI challenger 2017: <a href="https://pan.baidu.com/s/1YziBPLiU2WmE0j35oaXeKw" target="_blank" rel="noopener">training set</a> code:asix <a href="https://pan.baidu.com/s/1p_0V89d4wfxk-7f7QsU9rg" target="_blank" rel="noopener">validation set</a> code:dcnn</li>
+<li><a href="http://lixirong.net/datasets/flickr8kcn" target="_blank" rel="noopener">f30k-cn</a> </li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Niluthpol Chowdhury Mithun, Rameswar Panda, Evangelos E. Papalexakis, Amit K. Roy-Chowdhury:<br>Webly Supervised Joint Embedding for Cross-Modal Image-Text Retrieval. ACM MM, 2018.</p>
+<p>[2] Sharma, Piyush, et al. “Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning.” ACL, 2018.</p>
 
           
         
@@ -2042,7 +2049,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">87</span>
+                  <span class="site-state-item-count">88</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
