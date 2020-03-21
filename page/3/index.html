@@ -281,6 +281,153 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Object Detection Loss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/Object Detection Loss/" itemprop="url">Object Detection Loss</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Fast-RCNN"><a href="#Fast-RCNN" class="headerlink" title="Fast RCNN"></a>Fast RCNN</h3><script type="math/tex; mode=display">L(p,u,t^u,v)  L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v),</script><p>   where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is  a smooth L1 loss.</p>
+<h3 id="Faster-RCNN"><a href="#Faster-RCNN" class="headerlink" title="Faster RCNN"></a>Faster RCNN</h3><script type="math/tex; mode=display">L(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*),</script><p> where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen)  and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN.</p>
+<p> fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes.</p>
+<h3 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h3><p> By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box.</p>
+<script type="math/tex; mode=display">l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g),</script><p> where $L_{conf}$ is a (K+1)-class softmax loss, and </p>
+<script type="math/tex; mode=display">L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.</script><h3 id="YOLO"><a href="#YOLO" class="headerlink" title="YOLO"></a>YOLO</h3><script type="math/tex; mode=display">\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2  + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2</script><p>Note that for the noobj anchorboxes, there is only one loss term involved. </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/From Anchor to ROI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1626,167 +1773,6 @@
 <p>[4] Mirza, Mehdi, and Simon Osindero. “Conditional generative adversarial nets.” arXiv preprint arXiv:1411.1784 (2014).</p>
 <p>[5] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
 <p>[6] Bao, Jianmin, et al. “CVAE-GAN: fine-grained image generation through asymmetric training.” ICCV, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/deep_learning/Zero-Shot Object Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/30/deep_learning/Zero-Shot Object Detection/" itemprop="url">Zero-Shot Object Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-30T17:22:26+08:00">
-                2019-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>ZSL based on bounding box features</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/1804.04340.pdf" target="_blank" rel="noopener">[1]</a>: use background bounding boxes from background classes</li>
-<li><a href="https://arxiv.org/pdf/1803.06049.pdf" target="_blank" rel="noopener">[3]</a>: classification loss with semantic clustering</li>
-</ul>
-</li>
-<li><p>End-to-end zero-shot object detection</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/1803.07113.pdf" target="_blank" rel="noopener">[2]</a>: extend YOLO, concatenate three feature maps to predict confidence score.</li>
-<li><a href="https://arxiv.org/pdf/1811.08982.pdf" target="_blank" rel="noopener">[4]</a>: use polarity loss similar to focal loss and vocabulary to enhance word vector</li>
-<li><a href="https://arxiv.org/pdf/1805.06157.pdf" target="_blank" rel="noopener">[5]</a>: output both classification scores and semantic embeddings</li>
-</ul>
-</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ankan Bansal, Karan Sikka, Gaurav Sharma, Rama Chellappa, Ajay Divakaran, “Zero-Shot Object Detection”, ECCV, 2018.</p>
-<p>[2] Pengkai Zhu, Hanxiao Wang, and Venkatesh Saligrama, “Zero Shot Detection”, T-CSVT, 2019.</p>
-<p>[3] Rahman, Shafin, Salman Khan, and Fatih Porikli. “Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts.” arXiv preprint arXiv:1803.06049 (2018).</p>
-<p>[4] Rahman, Shafin, Salman Khan, and Nick Barnes. “Polarity Loss for Zero-shot Object Detection.” arXiv preprint arXiv:1811.08982 (2018).</p>
-<p>[5] Demirel, Berkan, Ramazan Gokberk Cinbis, and Nazli Ikizler-Cinbis. “Zero-Shot Object Detection by Hybrid Region Embedding.” arXiv preprint arXiv:1805.06157 (2018).</p>
 
           
         
