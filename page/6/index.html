@@ -281,6 +281,186 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/others/Determine Baselines/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Li Niu's cheatsheet">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/others/Determine Baselines/" itemprop="url">Determine baselines</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T14:10:23+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Generally speaking, for the baselines, you need to compare with other (i.e., state-of-the-art) and compare with yourself (i.e., component analysis or ablation study).</p>
+<h2 id="Compare-with-others"><a href="#Compare-with-others" class="headerlink" title="Compare with others"></a>Compare with others</h2><ul>
+<li><p>How to select baselines?</p>
+<ul>
+<li>Select the baselines from top conferences. You can refer to related paper published on recent top conferences and find out which baselines they compare with. The intersection of their baselines should be the most popular ones.</li>
+<li>The selected baselines should be discussed in the related work in your paper.</li>
+<li>The selected baselines should cover at least several ones from the most recent top conferences.</li>
+<li>The selected baselines should cover the researchers who are very famous in this field or has many publications in this field. If you do not cite his/her paper and your paper unfortunately goes under his/her review, then you are doomed.</li>
+</ul>
+</li>
+<li><p>Could we directly copy the results from previous papers?</p>
+<ul>
+<li>Carefully compare your experiments settings with those described in previous papers. The experimental settings include training/testing split, input format (e.g., image size), evaluation metric, backbone network, etc. If they are exactly the same, just copy the results. </li>
+<li>Otherwise, you need to re-run their methods with exactly the same experimental settings as yours for fair comparison.  </li>
+</ul>
+</li>
+<li><p>Need we implement the baselines?</p>
+<ul>
+<li>Search the code online and contact the authors for code.</li>
+<li>If you could not get the code, you need to implement the baseline by yourself according to the details provided in the paper. Theoretically, it is impossible to completely re-implement the baseline unless the method is frustratingly easy (e.g., 10 lines of matlab code), so just follow your understanding and implement a reasonable version.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Compare-with-yourself"><a href="#Compare-with-yourself" class="headerlink" title="Compare with yourself"></a>Compare with yourself</h2><ul>
+<li><p>Why is it necessary?</p>
+<ul>
+<li>Because you need to understand which component of your method really works.</li>
+<li>If you do not compare with yourself, you provide a perfect reason for reviewers to reject your paper.</li>
+</ul>
+</li>
+<li><p>How many special cases do we need?</p>
+<ul>
+<li>That mainly depends on the technical contribution of your paper. If you claim regularizer XXX or strategy XXX or subnetwork XXX is proposed by yourself and very effective, you have to verify that in the experiments.</li>
+<li>For some naive special cases, you may just need to set certain hyper-parameter as 0 or freeze some components in your network, so the experiments will be quite simple. For other advanced special cases, that will take some more work. </li>
+</ul>
+</li>
+</ul>
+<h2 id="Checklist"><a href="#Checklist" class="headerlink" title="Checklist"></a>Checklist</h2><p>Please select and compare with baselines meticulously. You can summarize and check your baseline information in the following table:</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/UHKtu7Y.jpg" width="100%"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/machine_learning/Latent Variable Regularization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1683,158 +1863,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/deep_learning/Zoom in/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Li Niu's cheatsheet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/30/deep_learning/Zoom in/" itemprop="url">Zoom in</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T11:18:06+08:00">
-                2018-11-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>(1) Zoom in a bounding box <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Look_Closer_to_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zheng_Learning_Multi-Attention_Convolutional_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-<p>(2) Zoom in salient region <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Adria_Recasens_Learning_to_Zoom_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1903.06150.pdf" target="_blank" rel="noopener">[4]</a></p>
-<ul>
-<li>relation to (1):  if the salience region is rectangle and salience value is infinity, this should be equivalent to zooming in a bounding box. </li>
-<li>relation to pooling: weighted pooling with salience map as weight map</li>
-<li>relation to deformable CNN: use salience map to calculate offset for each position</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Fu, Jianlong, Heliang Zheng, and Tao Mei. “Look closer to see better: Recurrent attention convolutional neural network for fine-grained image recognition.” CVPR, 2017.</p>
-<p>[2] Zheng, Heliang, et al. “Learning multi-attention convolutional neural network for fine-grained image recognition.” ICCV, 2017.</p>
-<p>[3] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018.</p>
-<p>[4] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” arXiv preprint arXiv:1903.06150 (2019).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1889,7 +1917,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">162</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

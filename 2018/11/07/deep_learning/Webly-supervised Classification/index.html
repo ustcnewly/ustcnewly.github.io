@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
 <meta property="og:description" content="Two problems:  Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-26T10:54:18.247Z">
+<meta property="og:updated_time" content="2020-03-21T04:11:21.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webly-supervised Classification">
 <meta name="twitter:description" content="Two problems:  Label noise: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category). Domain shift: domain distribution mismatch between web">
@@ -381,39 +381,60 @@
 </ul>
 <p><strong>Solutions:</strong></p>
 <ol>
-<li><p>label flip layer: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Chen_Webly_Supervised_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+<li><p>label flip layer: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Chen_Webly_Supervised_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
 </li>
-<li><p>multi-instance learning: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>(group attention) <a href="https://jiajunwu.com/papers/dmil_cvpr.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1802.04712.pdf" target="_blank" rel="noopener">[3]</a></p>
+<li><p>multi-instance learning: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> (pixel-level attention) <a href="https://jiajunwu.com/papers/dmil_cvpr.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/1802.04712.pdf" target="_blank" rel="noopener">[6]</a> (image-level attention)</p>
 </li>
-<li><p>reweight training samples (a special case of label flip layer, flip from clean to noise): <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1411.7718.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+<li><p>reweight training samples: <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1411.7718.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
 </li>
-<li><p>curriculumn learning: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1712.05055.pdf" target="_blank" rel="noopener">[2]</a></p>
+<li><p>curriculumn learning: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[10]</a> <a href="https://arxiv.org/pdf/1712.05055.pdf" target="_blank" rel="noopener">[11]</a></p>
 </li>
-<li><p>bootstrapping: <a href="https://arxiv.org/pdf/1412.6596.pdf" target="_blank" rel="noopener">[1]</a></p>
+<li><p>bootstrapping: <a href="https://arxiv.org/pdf/1412.6596.pdf" target="_blank" rel="noopener">[12]</a></p>
+</li>
+<li><p>negative learning: <a href="https://arxiv.org/pdf/1908.07387.pdf" target="_blank" rel="noopener">[18]</a></p>
 </li>
 </ol>
-<p><strong>Use clean data</strong>:</p>
+<p><strong>Use auxiliary clean data</strong>:</p>
 <ol>
-<li><p>active learning (select training samples to annotate): <a href="https://arxiv.org/pdf/1511.06789.pdf" target="_blank" rel="noopener">[1]</a> </p>
+<li><p>active learning (select training samples to annotate): <a href="https://arxiv.org/pdf/1511.06789.pdf" target="_blank" rel="noopener">[13]</a> </p>
 </li>
-<li><p>reinforcement learning (learn labeling policies): <a href="https://arxiv.org/pdf/1706.02884.pdf" target="_blank" rel="noopener">[1]</a></p>
+<li><p>reinforcement learning (learn labeling policies): <a href="https://arxiv.org/pdf/1706.02884.pdf" target="_blank" rel="noopener">[14]</a></p>
 </li>
 <li><p>analogous to semi-supervised learning </p>
 <ul>
-<li>partial data with both noisy labels and clean labels as well as partial data with only noisy labels <a href="https://vision.cornell.edu/se3/wp-content/uploads/2017/04/DeepLabelCleaning_CVPR.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>partial data with noisy labels and partial data with clean labels <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7778168" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>partial data with both noisy labels and clean labels as well as partial data with only noisy labels <a href="https://vision.cornell.edu/se3/wp-content/uploads/2017/04/DeepLabelCleaning_CVPR.pdf" target="_blank" rel="noopener">[15]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a>  <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[7]</a></li>
+<li>partial data with noisy labels and partial data with clean labels <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7778168" target="_blank" rel="noopener">[16]</a> <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">[17]</a></li>
 </ul>
 </li>
 </ol>
 <p><strong>Datasets:</strong></p>
+<p>There are two types of label noise: synthetic label noise and web label noise.</p>
 <ul>
-<li><p>large-scale web datasets: <a href="https://www.vision.ee.ethz.ch/webvision/" target="_blank" rel="noopener">webvision</a></p>
+<li><p>large-scale web datasets: <a href="https://www.vision.ee.ethz.ch/webvision/" target="_blank" rel="noopener">webvision v1</a>, <a href="https://data.vision.ee.ethz.ch/cvl/webvision/" target="_blank" rel="noopener">webvision v2</a></p>
 </li>
-<li><p>fine-grained web datasets: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">clothing dataset</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">car dataset</a></p>
+<li><p>fine-grained web datasets: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">clothing</a>, <a href="https://bitbucket.org/jingruixiaozhuang/attend-in-groups-a-weakly-supervised-deep-learning-framework/src/master/" target="_blank" rel="noopener">car</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">Stanford Dogs</a>, <a href="https://kuanghuei.github.io/Food-101N/" target="_blank" rel="noopener">Food101N</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">MIT indoor67</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">skin disease-198</a></p>
 </li>
 <li><p>synthetic noisy datasets via label flipping: <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener">CIFAR-10/100</a></p>
 </li>
 </ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chen, Xinlei, and Abhinav Gupta. “Webly supervised learning of convolutional networks.” ICCV, 2015.</p>
+<p>[2] Sukhbaatar, Sainbayar, et al. “Training convolutional networks with noisy labels.” arXiv preprint arXiv:1406.2080 (2014).</p>
+<p>[3] Xiao, Tong, et al. “Learning from massive noisy labeled data for image classification.” CVPR, 2015.</p>
+<p>[4] Zhuang, Bohan, et al. “Attend in groups: a weakly-supervised deep learning framework for learning from web data.” CVPR, 2017.</p>
+<p>[5] Wu, Jiajun, et al. “Deep multiple instance learning for image classification and auto-annotation.” CVPR, 2015.</p>
+<p>[6] Ilse, Maximilian, Jakub M. Tomczak, and Max Welling. “Attention-based deep multiple instance learning.” arXiv preprint arXiv:1802.04712 (2018).</p>
+<p>[7] Lee, Kuang-Huei, et al. “Cleannet: Transfer learning for scalable image classifier training with label noise.” CVPR, 2018.</p>
+<p>[8] Liu, Tongliang, and Dacheng Tao. “Classification with noisy labels by importance reweighting.” T-PAMI, 2015.</p>
+<p>[9] Misra, Ishan, et al. “Seeing through the human reporting bias: Visual classifiers from noisy human-centric labels.” CVPR, 2016.</p>
+<p>[10] Guo, Sheng, et al. “Curriculumnet: Weakly supervised learning from large-scale web images.” ECCV, 2018.</p>
+<p>[11] Jiang, Lu, et al. “Mentornet: Learning data-driven curriculum for very deep neural networks on corrupted labels.” arXiv preprint arXiv:1712.05055 (2017).</p>
+<p>[12] Reed, Scott, et al. “Training deep neural networks on noisy labels with bootstrapping.” arXiv preprint arXiv:1412.6596 (2014).</p>
+<p>[13] Krause, Jonathan, et al. “The unreasonable effectiveness of noisy data for fine-grained recognition.” ECCV, 2016. </p>
+<p>[14] Yeung, Serena, et al. “Learning to learn from noisy web videos.” CVPR, 2017.</p>
+<p>[15] Veit, Andreas, et al. “Learning from noisy large-scale datasets with minimal supervision.” CVPR, 2017.</p>
+<p>[16] Xu, Zhe, et al. “Webly-supervised fine-grained visual categorization via deep domain adaptation.” T-PAMI, 2016.</p>
+<p>[17] Li, Yuncheng, et al. “Learning from noisy labels with distillation.” ICCV, 2017.</p>
+<p>[18] Kim, Youngdong, et al. “Nlnl: Negative learning for noisy labels.” ICCV, 2019.</p>
 
       
     </div>
@@ -510,8 +531,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -530,7 +560,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">162</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -591,6 +621,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

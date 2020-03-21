@@ -77,17 +77,17 @@
 
 
 
-<meta name="description" content="Deformable sampling layer [1] [6]  Global spatial transform [2]  Local and dense spatial transform: Deformable CNN v1[3], v2[4]  Graph transformation: pooling/unpooling [5]   Reference[1] Recasens, A">
+<meta name="description" content="parametric transform (affine transformation, thin-plate translation, etc): STN [2], hierarchical STN [5]  non-parametric transform  learn distortion grid [1] [6] [7]  learn offset: Deformable CNN v1[">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learnable Deformation">
 <meta property="og:url" content="http://yoursite.com/2019/12/03/deep_learning/Learnable Deformation/index.html">
 <meta property="og:site_name" content="Li Niu&#39;s cheatsheet">
-<meta property="og:description" content="Deformable sampling layer [1] [6]  Global spatial transform [2]  Local and dense spatial transform: Deformable CNN v1[3], v2[4]  Graph transformation: pooling/unpooling [5]   Reference[1] Recasens, A">
+<meta property="og:description" content="parametric transform (affine transformation, thin-plate translation, etc): STN [2], hierarchical STN [5]  non-parametric transform  learn distortion grid [1] [6] [7]  learn offset: Deformable CNN v1[">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-09T11:15:08.967Z">
+<meta property="og:updated_time" content="2020-03-21T04:48:52.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learnable Deformation">
-<meta name="twitter:description" content="Deformable sampling layer [1] [6]  Global spatial transform [2]  Local and dense spatial transform: Deformable CNN v1[3], v2[4]  Graph transformation: pooling/unpooling [5]   Reference[1] Recasens, A">
+<meta name="twitter:description" content="parametric transform (affine transformation, thin-plate translation, etc): STN [2], hierarchical STN [5]  non-parametric transform  learn distortion grid [1] [6] [7]  learn offset: Deformable CNN v1[">
 
 
 
@@ -373,22 +373,25 @@
       
 
       
-        <ol>
-<li><p>Deformable sampling layer <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Adria_Recasens_Learning_to_Zoom_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Looking_for_the_Devil_in_the_Details_Learning_Trilinear_Attention_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+        <ul>
+<li><p>parametric transform (affine transformation, thin-plate translation, etc): STN <a href="http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf" target="_blank" rel="noopener">[2]</a>, hierarchical STN <a href="https://arxiv.org/pdf/1801.09467.pdf" target="_blank" rel="noopener">[5]</a></p>
 </li>
-<li><p>Global spatial transform <a href="http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf" target="_blank" rel="noopener">[2]</a></p>
+<li><p>non-parametric transform</p>
+<ul>
+<li><p>learn distortion grid <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Adria_Recasens_Learning_to_Zoom_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Looking_for_the_Devil_in_the_Details_Learning_Trilinear_Attention_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[6]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Marin_Efficient_Segmentation_Learning_Downsampling_Near_Semantic_Boundaries_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[7]</a></p>
 </li>
-<li><p>Local and dense spatial transform: Deformable CNN v1<a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[3]</a>, v2<a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[4]</a></p>
+<li><p>learn offset: Deformable CNN v1<a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[3]</a>, v2<a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[4]</a></p>
 </li>
-<li><p>Graph transformation: pooling/unpooling <a href="https://arxiv.org/pdf/1905.05178.pdf" target="_blank" rel="noopener">[5]</a></p>
+</ul>
 </li>
-</ol>
+</ul>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018.</p>
 <p>[2] Jaderberg, Max, Karen Simonyan, and Andrew Zisserman. “Spatial transformer networks.” NIPS, 2015.</p>
 <p>[3] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:<br>Deformable Convolutional Networks. ICCV 2017.</p>
 <p>[4] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018)</p>
-<p>[5] Hongyang Gao, Shuiwang Ji: Graph U-Nets. CoRR abs/1905.05178 (2019)</p>
+<p>[5] Shu, Chang, et al. “Hierarchical Spatial Transformer Network.” arXiv preprint arXiv:1801.09467 (2018).</p>
 <p>[6] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” CVPR, 2019.</p>
+<p>[7] Marin, Dmitrii, et al. “Efficient segmentation: Learning downsampling near semantic boundaries.” ICCV, 2019.</p>
 
       
     </div>
@@ -506,7 +509,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">162</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
