@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Receptive Field]]></title>
+    <url>%2F2020%2F03%2F23%2Fdeep_learning%2FReceptive%20Field%2F</url>
+    <content type="text"><![CDATA[Real receptive field is smaller than theorical receptive field, and shrinks by $\frac{1}{\sqrt{n}}$ with $n$ being the number of layers. Advanced networks (e.g., ResNet) have larger receptive field than old networks (e.g., AlexNet). In latest networks, the receptive field of each pixel in the last layer is as large as the whole image. Generally, larger receptive field leads to higher accuracy, but is not the only factor that influences the accuracy. Fomoro: a website to calculate receptive field. Distill: mathematical derivations and open-source library to compute receptive field. Reference Wenjie Luo, Yujia Li, Raquel Urtasun, Richard S. Zemel:Understanding the Effective Receptive Field in Deep Convolutional Neural Networks. NIPS, 2016.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>network structure</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Data Augmentation]]></title>
     <url>%2F2020%2F03%2F21%2Fmachine_learning%2FData%20Augmentation%2F</url>
     <content type="text"><![CDATA[Traditional data augmentation color, hue, illumination flip, crop, shear, rotation, (piecewise) affine transformation Mixtures: Mixup [1], CutMix [2] (Mixture in spatial domain), FMix [3] (Mixture in frequency) Few-shot generation or few-shot translation Learn optimal data augmentation strategy: [4] [5] Reference[1] mixup: Beyond empirical risk minimization [2] Cutmix: Regularization strategy to train strong classifiers with localizable features [3] Understanding and Enhancing Mixed Sample Data Augmentation [4] AutoAugment: Learning Augmentation Strategies from Data [5] The Effectiveness of Data Augmentation in Image Classification using Deep Learning]]></content>
@@ -77,20 +88,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Diversity Loss]]></title>
-    <url>%2F2019%2F12%2F16%2Fdeep_learning%2FDiversity%20Loss%2F</url>
-    <content type="text"><![CDATA[diversification loss [1] mode seeking loss [2] Reference: Choi, Yunjey, et al. “StarGAN v2: Diverse Image Synthesis for Multiple Domains.” arXiv preprint arXiv:1912.01865 (2019). Mao, Qi, et al. “Mode seeking generative adversarial networks for diverse image synthesis.” CVPR, 2019.]]></content>
-      <categories>
-        <category>paper note</category>
-      </categories>
-      <tags>
-        <tag>GAN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Multi-modal Problem]]></title>
     <url>%2F2019%2F12%2F03%2Fdeep_learning%2FMulti-modal%20Problem%2F</url>
-    <content type="text"><![CDATA[Generated output belongs to one of K possibilities [1]. K is set beforehand. Associate random factor (e.g., random vector z) with specific information [2]. Either random factor is conditioned on specific information, or the generated output can recognize random factor. Reference[1] Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016. [2] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” Advances in Neural Information Processing Systems. 2017.]]></content>
+    <content type="text"><![CDATA[Multi-modal problem means that given an input, there exist multiple possible outputs instead of a single deterministic output. Generated output belongs to one of K possibilities [1]. K is set beforehand. Ensure bijection between random vector and output: Associate random factor (e.g., random vector z) with specific information [2]. Either random factor is conditioned on specific information, or the generated output can recognize random factor. Enforce different random vectors to produce different outputs: push apart the outputs generated from different random vectors z with diversity loss or mode seeking loss [3] [4] [5] Reference[1] Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016. [2] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” Advances in Neural Information Processing Systems. 2017. [3] Qi Mao, Hsin-Ying Lee, Hung-Yu Tseng, Siwei Ma, and Ming-Hsuan Yang. Mode seeking generative adversarialnetworks for diverse image synthesis. In CVPR, 2019. [4] Dingdong Yang, Seunghoon Hong, Yunseok Jang, Tianchen Zhao, and Honglak Lee. Diversity-sensitiveconditional generative adversarial networks. arXiv preprint arXiv:1901.09024, 2019. [5] Choi, Yunjey, et al. “StarGAN v2: Diverse Image Synthesis for Multiple Domains.” arXiv preprint arXiv:1912.01865 (2019).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -305,7 +305,7 @@
   <entry>
     <title><![CDATA[Few-Shot Generation]]></title>
     <url>%2F2019%2F05%2F31%2Fdeep_learning%2FFew-Shot%20Generation%2F</url>
-    <content type="text"><![CDATA[Few-shot Feature Generation Meta-learning method: [3] Delta-encoder [4] Few-shot Image Generation Metric-based method: Generative Matching Network (GMN) [1] (VAE-like network with matching network for generator and recognizer), MatchingGAN [5] Optimization-based method: FIGR [2]: use Reptile for few-shot generation Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019). [3] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018. [4] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018. [5] Yan Hong, Li Niu, Jianfu Zhang, Liqing Zhang, “MatchingGAN: Matching-based Few-shot Image Generation”, ICME, 2020]]></content>
+    <content type="text"><![CDATA[Few-shot Feature Generation Meta-learning method: [3] Delta-encoder [4] Few-shot Image GenerationOne early one-shot generative model [6], specifically designed for hand-written charaters, technically not a generation model. Metric-based method: Generative Matching Network (GMN) [1] (VAE-like network with matching network for generator and recognizer), MatchingGAN [5] Optimization-based method: FIGR [2]: use Reptile for few-shot generation Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019). [3] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018. [4] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018. [5] Yan Hong, Li Niu, Jianfu Zhang, Liqing Zhang, “MatchingGAN: Matching-based Few-shot Image Generation”, ICME, 2020 [6] Brenden M. Lake, Ruslan Salakhutdinov, Jason Gross, Joshua B. Tenenbaum, “One shot learning of simple visual concepts”. CogSci 2011]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -1329,7 +1329,7 @@
   <entry>
     <title><![CDATA[Self-supervised Learning]]></title>
     <url>%2F2018%2F09%2F07%2Fdeep_learning%2FSelf-supervised%20Learning%2F</url>
-    <content type="text"><![CDATA[Design a proxy task using unlabeled or weakly-labeled data to help the original task. Essentially, self-supervised learning is multi-task learning with the proxy task not relying on heavy human annotation. Please refer to the tutorial slides [1] [2], the survey, and the paper list. image-to-image image-to-image translation: colorization [1], inpainting [2], cross-channel generation [3] spatial location: relative location [1], jigsaw [2], predicting rotation [3] unsupervised image tasks: clustering [1] video-to-image temporal coherence: [1] [2] [3] temporal order: [1] [2] [3] unsupervised image tasks with video clues: clustering [1], optical flow prediction [1], unsupervised segmentation based on optical flow [1] [2],unsupervised depth estimation based on optical flow [2] video generation [1] cross-modal consistency: consistency between visual kernel and optical flow kernel [1] video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features. 3D rotation [1] Cubic puzzle [1] video localization and classification [1] Muti-task self-supervised learning: integrate multiple proxy tasks [1] [2] Combined with other frameworks: self-supervised GAN [1]]]></content>
+    <content type="text"><![CDATA[Design a proxy task using unlabeled or weakly-labeled data to help the original task. Essentially, self-supervised learning is multi-task learning with the proxy task not relying on heavy human annotation. Please refer to the tutorial slides [1] [2], the survey, and the paper list. image-to-image image-to-image translation: colorization [1], inpainting [2], cross-channel generation [3] spatial location: relative location [1], jigsaw [2], predicting rotation [3] unsupervised image tasks: clustering [1] video-to-image temporal coherence: [1] [2] [3] temporal order: [1] [2] [3] unsupervised image tasks with video clues: clustering [1], optical flow prediction [1], unsupervised segmentation based on optical flow [1] [2],unsupervised depth estimation based on optical flow [2] video generation [1] cross-modal consistency: consistency between visual kernel and optical flow kernel [1] video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features. 3D rotation [1] Cubic puzzle [1] video localization and classification [1] Muti-task self-supervised learning: integrate multiple proxy tasks [1] [2] Combined with other frameworks: self-supervised GAN [1] A recent paper [1] claims that the best self-supervised learning method is still the earliest image inpainting model. The design of network architecture has a significant impact on the performance of self-supevivsed learning methods. Reference[1] Alexander Kolesnikov, Xiaohua Zhai, Lucas Beyer: Revisiting Self-Supervised Visual Representation Learning. CVPR 2019.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
