@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Newly Blog">
 <meta property="og:description" content="FundamentalImage Statistics: illuminance, color temperature, saturation, local contrast, hue, texture, tone Color spaces: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-13T04:49:06.095Z">
+<meta property="og:updated_time" content="2020-03-26T08:35:24.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Harmonization">
 <meta name="twitter:description" content="FundamentalImage Statistics: illuminance, color temperature, saturation, local contrast, hue, texture, tone Color spaces: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).">
@@ -400,14 +400,6 @@
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1*] Tsai, Yi-Hsuan, et al. “Deep image harmonization.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.</p>
 <p>[2*] Luan, Fujun, et al. “Deep painterly harmonization.” Computer Graphics Forum. Vol. 37. No. 4. 2018.</p>
 <p>[3*] Xiaodong, Cun, and Pun Chi-Man. “Improving the Harmony of the Composite Image by Spatial-Separated Attention Module.” arXiv preprint arXiv:1907.06406 (2019). </p>
-<h2 id="Other-related-concepts"><a href="#Other-related-concepts" class="headerlink" title="Other related concepts:"></a>Other related concepts:</h2><ol>
-<li><p><strong>Image blending</strong>: The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable.</p>
-</li>
-<li><p><strong>Image matting</strong>: The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>. In image harmonization, we already know the ground-truth mask of foreground. The first end-to-end method for image matting<br>is <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">here</a>.</p>
-</li>
-<li><p><strong>Image composition</strong>: The target is not only to adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. In image harmonization, we do not need to perform geometric adjustment.</p>
-</li>
-</ol>
 
       
     </div>
@@ -531,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">166</span>
+                  <span class="site-state-item-count">169</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -553,7 +545,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">88</span>
+                  <span class="site-state-item-count">90</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -602,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fundamental"><span class="nav-number">1.</span> <span class="nav-text">Fundamental</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-realism"><span class="nav-number">2.</span> <span class="nav-text">Image realism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-harmonization"><span class="nav-number">3.</span> <span class="nav-text">Image harmonization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">3.1.</span> <span class="nav-text">Reference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-related-concepts"><span class="nav-number">4.</span> <span class="nav-text">Other related concepts:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fundamental"><span class="nav-number">1.</span> <span class="nav-text">Fundamental</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-realism"><span class="nav-number">2.</span> <span class="nav-text">Image realism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-harmonization"><span class="nav-number">3.</span> <span class="nav-text">Image harmonization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">3.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
             
 
           </div>
