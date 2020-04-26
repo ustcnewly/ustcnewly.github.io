@@ -138,8 +138,8 @@
   </entry>
   <entry>
     <title><![CDATA[Learnable Deformation]]></title>
-    <url>%2F2019%2F12%2F03%2Fdeep_learning%2FLearnable%20Deformation%2F</url>
-    <content type="text"><![CDATA[parametric transform (affine transformation, thin-plate translation, etc): STN [2], hierarchical STN [5] non-parametric transform learn distortion grid [1] [6] [7] learn offset: Deformable CNN v1[3], v2[4] Reference[1] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018. [2] Jaderberg, Max, Karen Simonyan, and Andrew Zisserman. “Spatial transformer networks.” NIPS, 2015. [3] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:Deformable Convolutional Networks. ICCV 2017. [4] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018) [5] Shu, Chang, et al. “Hierarchical Spatial Transformer Network.” arXiv preprint arXiv:1801.09467 (2018). [6] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” CVPR, 2019. [7] Marin, Dmitrii, et al. “Efficient segmentation: Learning downsampling near semantic boundaries.” ICCV, 2019.]]></content>
+    <url>%2F2019%2F12%2F03%2Fdeep_learning%2FSpatial%20Transformation%2F</url>
+    <content type="text"><![CDATA[parametric transform (affine transformation, thin-plate translation, etc): STN [2], hierarchical STN [5] non-parametric transform learn distortion grid [1] [6] [7] learn offset or optical flow: Deformable CNN v1[3], v2[4], optical flow [8] Reference[1] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018. [2] Jaderberg, Max, Karen Simonyan, and Andrew Zisserman. “Spatial transformer networks.” NIPS, 2015. [3] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:Deformable Convolutional Networks. ICCV 2017. [4] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018) [5] Shu, Chang, et al. “Hierarchical Spatial Transformer Network.” arXiv preprint arXiv:1801.09467 (2018). [6] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” CVPR, 2019. [7] Marin, Dmitrii, et al. “Efficient segmentation: Learning downsampling near semantic boundaries.” ICCV, 2019. [8] Ren, Yurui, et al. “Deep Image Spatial Transformation for Person Image Generation.”, CVPR, 2020.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -519,7 +519,7 @@
   <entry>
     <title><![CDATA[Distillation]]></title>
     <url>%2F2019%2F01%2F16%2Fmachine_learning%2FDistillation%2F</url>
-    <content type="text"><![CDATA[knowledge/model distillation [1] data distillation [2] [1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015). [2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018.]]></content>
+    <content type="text"><![CDATA[knowledge/model distillation [1] data distillation [2] A survey of knowledge distillation [3] Reference[1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015). [2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018. [3] Wang, Lin, and Kuk-Jin Yoon. “Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks.” arXiv preprint arXiv:2004.05937 (2020).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
