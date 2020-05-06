@@ -77,20 +77,20 @@
 
 
 
-<meta name="description" content="method supervised multi-domain multi-modal      pix2pix [1] yes no no    cycleGAN [2] no no no    UNIT [3] no no no    MUNIT [4] no no yes    AugCGAN [5] no no yes    BicycleGAN [6] yes no yes">
+<meta name="description" content="method supervised multi-domain multi-modal      pix2pix [1] yes no no    BicycleGAN [6], [7] yes no yes   [10] yes yes yes   cycleGAN [2], UNIT [3] no no no    MUNIT [4], AugCGAN [5] no no yes">
 <meta name="keywords" content="domain translation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Domain Translation">
 <meta property="og:url" content="http://yoursite.com/2019/12/18/deep_learning/Domain Translation/index.html">
 <meta property="og:site_name" content="Newly Blog">
-<meta property="og:description" content="method supervised multi-domain multi-modal      pix2pix [1] yes no no    cycleGAN [2] no no no    UNIT [3] no no no    MUNIT [4] no no yes    AugCGAN [5] no no yes    BicycleGAN [6] yes no yes">
+<meta property="og:description" content="method supervised multi-domain multi-modal      pix2pix [1] yes no no    BicycleGAN [6], [7] yes no yes   [10] yes yes yes   cycleGAN [2], UNIT [3] no no no    MUNIT [4], AugCGAN [5] no no yes">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.imgur.com/sqrtSjK.jpg">
-<meta property="og:updated_time" content="2019-12-19T05:53:43.803Z">
+<meta property="og:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/sqrtSjK.jpg">
+<meta property="og:updated_time" content="2020-05-03T05:27:57.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Domain Translation">
-<meta name="twitter:description" content="method supervised multi-domain multi-modal      pix2pix [1] yes no no    cycleGAN [2] no no no    UNIT [3] no no no    MUNIT [4] no no yes    AugCGAN [5] no no yes    BicycleGAN [6] yes no yes">
-<meta name="twitter:image" content="https://i.imgur.com/sqrtSjK.jpg">
+<meta name="twitter:description" content="method supervised multi-domain multi-modal      pix2pix [1] yes no no    BicycleGAN [6], [7] yes no yes   [10] yes yes yes   cycleGAN [2], UNIT [3] no no no    MUNIT [4], AugCGAN [5] no no yes">
+<meta name="twitter:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/sqrtSjK.jpg">
 
 
 
@@ -388,91 +388,43 @@
 </thead>
 <tbody>
 <tr>
-<td>pix2pix [1]</td>
+<td>pix2pix <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">[1]</a></td>
 <td>yes</td>
 <td>no</td>
 <td>no </td>
 </tr>
 <tr>
-<td>cycleGAN [2]</td>
+<td>BicycleGAN <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[6]</a>, <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">[7]</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1704.04886.pdf" target="_blank" rel="noopener">[10]</a></td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>cycleGAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>, UNIT <a href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf" target="_blank" rel="noopener">[3]</a></td>
 <td>no</td>
 <td>no</td>
 <td>no </td>
 </tr>
 <tr>
-<td>UNIT [3]</td>
-<td>no</td>
-<td>no</td>
-<td>no </td>
-</tr>
-<tr>
-<td>MUNIT [4]</td>
+<td>MUNIT <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Xun_Huang_Multimodal_Unsupervised_Image-to-image_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>, AugCGAN <a href="https://arxiv.org/pdf/1802.10151.pdf" target="_blank" rel="noopener">[5]</a></td>
 <td>no</td>
 <td>no</td>
 <td>yes </td>
 </tr>
 <tr>
-<td>AugCGAN [5]</td>
-<td>no</td>
-<td>no</td>
-<td>yes </td>
-</tr>
-<tr>
-<td>BicycleGAN [6]</td>
-<td>yes</td>
-<td>no</td>
-<td>yes </td>
-</tr>
-<tr>
-<td>Gonzalez et al. [7]</td>
-<td>yes</td>
-<td>no</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>starGAN [8]</td>
+<td>starGAN <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[8]</a>, <a href="https://arxiv.org/pdf/1712.02050.pdf" target="_blank" rel="noopener">[9]</a>, <a href="https://arxiv.org/pdf/1811.07483.pdf" target="_blank" rel="noopener">[11]</a>, <a href="https://arxiv.org/pdf/1901.04604.pdf" target="_blank" rel="noopener">[12]</a>, ComboGAN <a href="http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w13/Anoosheh_ComboGAN_Unrestrained_Scalability_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[13]</a>, <a href="http://papers.nips.cc/paper/7525-a-unified-feature-disentangler-for-multi-domain-image-translation-and-manipulation.pdf" target="_blank" rel="noopener">[14]</a></td>
 <td>no</td>
 <td>yes</td>
 <td>no</td>
 </tr>
 <tr>
-<td>Le et al. [9]</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Honglun et al. [11]</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Hao et al. [12]</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>ComboGAN [13]</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Alexander et al. [14]</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Multi-view Image Generation [10]</td>
-<td>yes</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Andres et al. [15]</td>
+<td>SMIT<a href="https://arxiv.org/pdf/1905.01270.pdf" target="_blank" rel="noopener">[15]</a>, DRIT++<a href="https://arxiv.org/pdf/1611.03383.pdf" target="_blank" rel="noopener">[16]</a></td>
 <td>no</td>
 <td>yes</td>
 <td>yes</td>
@@ -480,8 +432,26 @@
 </tbody>
 </table>
 </div>
-<p><img src="https://i.imgur.com/sqrtSjK.jpg" width="70%" border="0"></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">Image-to-Image Translation with Conditional Adversarial Networks</a><br>[2] <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</a><br>[3] <a href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf" target="_blank" rel="noopener">Unsupervised image-to-image translation networks</a><br>[4] <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Xun_Huang_Multimodal_Unsupervised_Image-to-image_ECCV_2018_paper.pdf" target="_blank" rel="noopener">Multimodal Unsupervised Image-to-Image Translation</a><br>[5] <a href="https://arxiv.org/pdf/1802.10151.pdf" target="_blank" rel="noopener">Augmented CycleGAN: Learning Many-to-Many Mappings from Unpaired Data</a><br>[6] <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">Toward Multimodal Image-to-Image Translation</a><br>[7] <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">Image-to-image translation for cross-domain disentanglement</a><br>[8] <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</a><br>[9] <a href="https://arxiv.org/pdf/1712.02050.pdf" target="_blank" rel="noopener">Unsupervised Multi-Domain Image Translation with Domain-specific Encoders/Decoders</a><br>[10] <a href="https://arxiv.org/pdf/1704.04886.pdf" target="_blank" rel="noopener">Multi-view image Generation from a single-view</a><br>[11] <a href="https://arxiv.org/pdf/1811.07483.pdf" target="_blank" rel="noopener">Show, Attend and Translate- Unpaired Multi-Domain Image-to-Image Translation with Visual Attention</a><br>[12] <a href="https://arxiv.org/pdf/1901.04604.pdf" target="_blank" rel="noopener">Dual Generator Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</a><br>[13] <a href="http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w13/Anoosheh_ComboGAN_Unrestrained_Scalability_CVPR_2018_paper.pdf" target="_blank" rel="noopener">ComboGAN: Unrestrained Scalability for Image Domain Translation</a><br>[14] <a href="http://papers.nips.cc/paper/7525-a-unified-feature-disentangler-for-multi-domain-image-translation-and-manipulation.pdf" target="_blank" rel="noopener">A Unified Feature Disentangler for Multi-Domain Image Translation and Manipulation</a><br>[15] <a href="https://arxiv.org/pdf/1905.01270.pdf" target="_blank" rel="noopener">SMIT: Stochastic Multi-Label Image-to-Image Translation</a><br>[16] <a href="https://arxiv.org/pdf/1611.03383.pdf" target="_blank" rel="noopener">DRIT++: Diverse Image-to-Image Translation via Disentangled Representations</a></p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/sqrtSjK.jpg" width="70%" border="0"></p>
+<p><strong>Exemplar-guided domain translation:</strong> use an exemplar to define the target domain <a href="https://arxiv.org/pdf/2004.05571.pdf" target="_blank" rel="noopener">[17]</a> <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[18]</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Image-to-Image Translation with Conditional Adversarial Networks</p>
+<p>[2] Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</p>
+<p>[3] Unsupervised image-to-image translation networks</p>
+<p>[4] Multimodal Unsupervised Image-to-Image Translation</p>
+<p>[5] Augmented CycleGAN: Learning Many-to-Many Mappings from Unpaired Data</p>
+<p>[6] Toward Multimodal Image-to-Image Translation</p>
+<p>[7] Image-to-image translation for cross-domain disentanglement</p>
+<p>[8] StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
+<p>[9] Unsupervised Multi-Domain Image Translation with Domain-specific Encoders/Decoders</p>
+<p>[10] Multi-view image Generation from a single-view</p>
+<p>[11] Show, Attend and Translate- Unpaired Multi-Domain Image-to-Image Translation with Visual Attention</p>
+<p>[12] Dual Generator Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
+<p>[13] ComboGAN: Unrestrained Scalability for Image Domain Translation</p>
+<p>[14] A Unified Feature Disentangler for Multi-Domain Image Translation and Manipulation</p>
+<p>[15] SMIT: Stochastic Multi-Label Image-to-Image Translation</p>
+<p>[16] DRIT++: Diverse Image-to-Image Translation via Disentangled Representations</p>
+<p>[17] Cross-domain Correspondence Learning for Exemplar-based Image Translation</p>
+<p>[18] High-Resolution Daytime Translation Without Domain Labels</p>
 
       
     </div>
