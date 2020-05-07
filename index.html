@@ -281,6 +281,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/06/deep_learning/Different Ways of Injecting Latent Code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/06/deep_learning/Different Ways of Injecting Latent Code/" itemprop="url">Different Ways of Injecting Latent Code</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-06T18:29:31+08:00">
+                2020-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Given latent code z, how to inject it into an auto-encoder. skip-yes/no means whether using skip-connection is possible.</p>
+<ol>
+<li><p>Append it to the input image <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[1]</a> or add it to the input image <a href="https://arxiv.org/pdf/1905.01164.pdf" target="_blank" rel="noopener">[7]</a> (skip-yes)</p>
+</li>
+<li><p>Append it to each layer in encoder <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a> (skip-yes)</p>
+</li>
+<li><p>Add it to the bottleneck feature <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> (skip-no)</p>
+</li>
+<li><p>Add to decoder layers using AdaIn <a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">[4]</a> (skip-no) or a variant of AdaIn <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[5]</a> (skip-yes)</p>
+</li>
+<li><p>Add to decoder layers without AdaIn <a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
+<p>[2] Toward Multimodal Image-to-Image Translation</p>
+<p>[3] Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</p>
+<p>[4] Choi, Yunjey, et al. “StarGAN v2: Diverse Image Synthesis for Multiple Domains.” CVPR, 2020.</p>
+<p>[5] High-Resolution Daytime Translation Without Domain Labels</p>
+<p>[6] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
+<p>[7] Tamar Rott Shaham, Tali Dekel, Tomer Michaeli, “SinGAN: Learning a Generative Model from a Single Natural Image”, ICCV2019</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/30/deep_learning/Geometry-aware Deep Feature/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1630,169 +1791,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/machine_learning/Mutual Information/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/10/machine_learning/Mutual Information/" itemprop="url">Mutual Information</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-10T20:55:02+08:00">
-                2020-02-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><a href="https://arxiv.org/pdf/1612.00410.pdf" target="_blank" rel="noopener">[1]</a>: use KL divergence as the upper-bound of mutual information (MI), which can be used to minimize MI. r(z) can be set as unit Gaussian for simplicity.</li>
-</ol>
-<center><img src="https://i.imgur.com/i3j6VrX.png" width="50%" border="0"></center>
-
-<ol>
-<li>MINE<a href="http://proceedings.mlr.press/v80/belghazi18a/belghazi18a.pdf" target="_blank" rel="noopener">[2]</a>: lower-bound of MI based on KL divergence. Due to strong consistency, MINE can be used as a tight estimation of MI.</li>
-</ol>
-<center><img src="https://i.imgur.com/e6EaQpZ.png" width="50%" border="0"></center>
-
-
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
-<li><p>Alemi, Alexander A., et al. “Deep variational information bottleneck.” arXiv preprint arXiv:1612.00410 (2016).</p>
-</li>
-<li><p>Belghazi, M. I., Baratin, A., Rajeshwar, S., Ozair, S., Bengio, Y., Courville, A., &amp; Hjelm, D. Mutual information neural estimation, ICML, 2018.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1842,7 +1845,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">170</span>
+                  <span class="site-state-item-count">171</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
