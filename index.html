@@ -376,24 +376,25 @@
           
             <p>Given latent code z, how to inject it into an auto-encoder. skip-yes/no means whether using skip-connection is possible.</p>
 <ol>
-<li><p>Append it to the input image <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[1]</a> or add it to the input image <a href="https://arxiv.org/pdf/1905.01164.pdf" target="_blank" rel="noopener">[7]</a> (skip-yes)</p>
+<li><p>Append it to the input image <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[1]</a>* or add it to the input image <a href="https://arxiv.org/pdf/1905.01164.pdf" target="_blank" rel="noopener">[7]</a> (skip-yes)</p>
 </li>
 <li><p>Append it to each layer in encoder <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a> (skip-yes)</p>
 </li>
 <li><p>Add it to the bottleneck feature <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> (skip-no)</p>
 </li>
-<li><p>Add to decoder layers using AdaIn <a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">[4]</a> (skip-no) or a variant of AdaIn <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[5]</a> (skip-yes)</p>
+<li><p>Add to decoder layers using AdaIn <a href="https://arxiv.org/pdf/1812.04948.pdf" target="_blank" rel="noopener">[4]</a>* (skip-no) or a variant of AdaIn <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[5]</a> (skip-yes)</p>
 </li>
-<li><p>Add to decoder layers without AdaIn <a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">[6]</a></p>
+<li><p>Add to decoder layers without AdaIn <a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>*</p>
 </li>
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
 <p>[2] Toward Multimodal Image-to-Image Translation</p>
 <p>[3] Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</p>
-<p>[4] Choi, Yunjey, et al. “StarGAN v2: Diverse Image Synthesis for Multiple Domains.” CVPR, 2020.</p>
+<p>[4] Karras, Tero, Samuli Laine, and Timo Aila. “A style-based generator architecture for generative adversarial networks.” CVPR, 2019.</p>
 <p>[5] High-Resolution Daytime Translation Without Domain Labels</p>
 <p>[6] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
 <p>[7] Tamar Rott Shaham, Tali Dekel, Tomer Michaeli, “SinGAN: Learning a Generative Model from a Single Natural Image”, ICCV2019</p>
+<p>[8] Lee, Hsin-Ying, et al. “Diverse image-to-image translation via disentangled representations.” ECCV, 2018.</p>
 
           
         
@@ -1279,7 +1280,7 @@
 <ul>
 <li><p>color, hue, illumination</p>
 </li>
-<li><p>flip, crop, shear, rotation, (piecewise) affine transformation</p>
+<li><p>flip, crop, shear, rotation, (piecewise) affine transformation, Cutout, RandErasing, HideAndSeek, GridMask</p>
 </li>
 </ul>
 </li>
@@ -1289,7 +1290,7 @@
 <ol>
 <li><p><a href="https://ustcnewly.github.io/2019/05/31/deep_learning/Few-Shot%20Generation/" target="_blank" rel="noopener">Few-shot generation</a> or few-shot translation</p>
 </li>
-<li><p>Learn optimal data augmentation strategy: <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/1712.04621.pdf" target="_blank" rel="noopener">[5]</a></p>
+<li><p>Learn optimal data augmentation strategy: <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/1712.04621.pdf" target="_blank" rel="noopener">[5]</a>, AutoAugment, RandAugment, Fast AutoAugment, Faster AutoAugment, Greedy Augment</p>
 </li>
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] mixup: Beyond empirical risk minimization</p>
