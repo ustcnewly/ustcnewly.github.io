@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Newly Blog">
 <meta property="og:description" content="BackgroundThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-12T07:10:41.498Z">
+<meta property="og:updated_time" content="2020-06-26T12:21:52.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Matting">
 <meta name="twitter:description" content="BackgroundThe target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique alpha matting is to solve $\mathbf{\alpha}$ (primary target)">
@@ -382,6 +382,8 @@
 </li>
 <li><p><a href="https://github.com/lizhengwei1992/Semantic_Human_Matting" target="_blank" rel="noopener">Matting Human Dataset</a>: 34427 images, annotation is not very accurate.</p>
 </li>
+<li><p><a href="https://github.com/wukaoliu/CVPR2020-HAttMatting" target="_blank" rel="noopener">Dinstinctions-646</a>: composed of 646 foreground images</p>
+</li>
 </ul>
 <h2 id="Evaluation-metrics"><a href="#Evaluation-metrics" class="headerlink" title="Evaluation metrics"></a>Evaluation metrics</h2><ul>
 <li>quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error.</li>
@@ -403,6 +405,7 @@
 <li>Without trimap:<ul>
 <li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block. </li>
 <li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
+<li><a href="https://arxiv.org/pdf/2004.00626.pdf" target="_blank" rel="noopener">[9]</a>: capture the background image without subject and a corresponding video with subject</li>
 </ul>
 </li>
 </ul>
@@ -416,6 +419,7 @@
 <p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
 <p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
 <p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
+<p>[9] Soumyadip Sengupta, Vivek Jayaram, Brian Curless, Steve Seitz, Ira Kemelmacher-Shlizerman:<br>Background Matting: The World is Your Green Screen. CVPR, 2020.</p>
 
       
     </div>
