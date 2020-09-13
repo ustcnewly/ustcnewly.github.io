@@ -281,6 +281,328 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Python2/Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/Python2/Python/" itemprop="url">Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>check type</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(n,int)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">t1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">t2 = [<span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span>];</span><br><span class="line">t1.extend(t2);</span><br><span class="line">t1.append(<span class="string">'g'</span>);</span><br><span class="line">t1 = t1+[<span class="string">'g'</span>]</span><br><span class="line">t1.sort();</span><br><span class="line"><span class="keyword">del</span> t1[<span class="number">1</span>:<span class="number">3</span>];</span><br><span class="line">t1.remove(<span class="string">'b'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dictionary</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">eng2sp = &#123;<span class="string">'one'</span>: <span class="string">'uno'</span>, <span class="string">'two'</span>: <span class="string">'dos'</span>, <span class="string">'three'</span>: <span class="string">'tres'</span>&#125;</span><br><span class="line">eng2sp.values() <span class="comment">#'uno','dos','tres'</span></span><br><span class="line">eng2sp.items()</span><br><span class="line"><span class="string">'one'</span> <span class="keyword">in</span> eng2sp <span class="comment">#true</span></span><br><span class="line">inverse = invert_dict(eng2sp)  </span><br><span class="line">d = dict(zip(<span class="string">'abc'</span>,range(<span class="number">3</span>)))</span><br><span class="line">d.get(word,<span class="number">0</span>) <span class="comment">#d[word] if word in d, 0 otherwise</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tupe: similar with list but immutable</p>
+</li>
+<li><p>file operation</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fout = os.getcwd()</span><br><span class="line">os.path.abspath(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.exists(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.isfile/isdir</span><br><span class="line">os.listdir(cwd)</span><br><span class="line">fout = open(<span class="string">'output.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">fout.write(<span class="string">'hehe'</span>)</span><br><span class="line">fout.close()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Python2/Python Draw Text on Image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/programming_language/Python2/Python Draw Text on Image/" itemprop="url">Python Draw Text on Image</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Use-PIL"><a href="#Use-PIL" class="headerlink" title="Use PIL"></a>Use PIL</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.ImageDraw</span><br><span class="line"><span class="keyword">import</span> PIL.Image</span><br><span class="line"><span class="keyword">import</span> PIL.ImageFont</span><br><span class="line"></span><br><span class="line">pil_img = PIL.Image.fromarray(bb_img)</span><br><span class="line">draw = PIL.ImageDraw.Draw(pil_img)</span><br><span class="line">font = PIL.ImageFont.truetype(<span class="string">"/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf"</span>,<span class="number">20</span>)</span><br><span class="line">draw.text((<span class="number">10</span>, <span class="number">10</span>),<span class="string">"Frame: %09d"</span>%(iframe),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),font=font)</span><br></pre></td></tr></table></figure>
+<h3 id="Use-OpenCV"><a href="#Use-OpenCV" class="headerlink" title="Use OpenCV"></a>Use OpenCV</h3><p>—</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">cv2.putText(cv_img, <span class="string">'Frame: %d'</span>%(iframe), (<span class="number">10</span>,<span class="number">20</span>),  cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.65</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>), <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Python2/Fastest Way to Read Text, Image, and Video in Python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1740,330 +2062,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_regex/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_regex/" itemprop="url">Boost_regex</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/regex.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>regex_match</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">regex <span class="title">expression</span><span class="params">(<span class="string">"^select ([a-zA-Z]*) from ([a-zA-Z]*)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> in=<span class="string">"select name from table"</span>;</span><br><span class="line">cmatch what;</span><br><span class="line"><span class="keyword">if</span>(regex_match(in.c_str(), what, expression))</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt; what.size();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; what[i].first&lt;&lt; <span class="string">"|"</span>&lt;&lt;what[i].second&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; <span class="string">"str :"</span>&lt;&lt; what[i].str()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>regex_search</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">r</span><span class="params">(<span class="string">"(a+)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> content = <span class="string">"bbbaaaaacccaaaaddddaaaeeeaaa"</span>;</span><br><span class="line">boost::smatch m;</span><br><span class="line"><span class="built_in">string</span>::const_iterator strstart = content.begin();</span><br><span class="line"><span class="built_in">string</span>::const_iterator strend = content.end();</span><br><span class="line"><span class="keyword">while</span>(boost::regex_search(strstart, strend, m, r))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//0 for the whole, m[i] is the i-th group</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; m[<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//m[i].first and m[i].second stands for the begin idx and end idx</span></span><br><span class="line">    strstart = m[<span class="number">0</span>].second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Note <code>regex_match(in.c_str(), what, expression)</code> is for complete match while <code>regex_match(in.c_str(), what, expression)</code> is for incomplete match.<br> <code>regex_match(in.c_str(), expression, target_exp).</code></p>
-</li>
-<li><p>special setting for regex</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">e2</span><span class="params">(my_expression, boost::regex::icase)</span></span>; \\<span class="keyword">case</span> insensitive</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/" itemprop="url">Boost_lexical_cast</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/lexical_cast.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>conversion between number and string: replace the atoi, itoa, and etc</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="built_in">string</span>&gt;(i)&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="keyword">double</span>&gt;(s)&lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mixed types: for type generalization</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/fusion/adapted/boost_tuple.hpp&gt;</span></span></span><br><span class="line">boost::tuple&lt;<span class="keyword">char</span>, <span class="keyword">int</span>, <span class="keyword">char</span>, <span class="keyword">int</span>&gt; decim(<span class="string">'-'</span>, <span class="number">10</span>, <span class="string">'e'</span>, <span class="number">5</span>);</span><br><span class="line">assert(stringize(decim) == <span class="string">"-10e5"</span>);</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2118,7 +2116,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">172</span>
+                  <span class="site-state-item-count">174</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2140,7 +2138,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">91</span>
+                  <span class="site-state-item-count">92</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
