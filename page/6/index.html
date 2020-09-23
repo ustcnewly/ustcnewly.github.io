@@ -281,6 +281,343 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/machine_learning/Graph Neural Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/machine_learning/Graph Neural Network/" itemprop="url">Graph Neural Network</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T08:38:48+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Representative-methods"><a href="#Representative-methods" class="headerlink" title="Representative methods"></a>Representative methods</h2><p><a href="http://bcmi.sjtu.edu.cn/~niuli/download/AAAI_tutorial_GNN.pdf" target="_blank" rel="noopener">Tutorial slides on AAAI2019</a> </p>
+<ul>
+<li>Graph Convolutional Network (GCN) <a href="https://arxiv.org/abs/1609.02907" target="_blank" rel="noopener">[6]</a></li>
+<li>Graph Attention Network <a href="https://arxiv.org/abs/1710.10903" target="_blank" rel="noopener">[7]</a></li>
+<li>GraphSAGE(SAmple and aggreGatE) <a href="https://papers.nips.cc/paper/6703-inductive-representation-learning-on-large-graphs.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li>Transformer <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf" target="_blank" rel="noopener">[9]</a>: transformer can be deemed as a type of GNN</li>
+</ul>
+<h2 id="Graph-similarity-matching"><a href="#Graph-similarity-matching" class="headerlink" title="Graph similarity/matching"></a>Graph similarity/matching</h2><p>A survey on graph similarity <a href="https://arxiv.org/pdf/1912.11615.pdf" target="_blank" rel="noopener">[4]</a></p>
+<h2 id="Graph-transformation"><a href="#Graph-transformation" class="headerlink" title="Graph transformation:"></a>Graph transformation:</h2><p>pooling/unpooling <a href="https://arxiv.org/pdf/1905.05178.pdf" target="_blank" rel="noopener">[5]</a></p>
+<h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><ul>
+<li><p>GNN for zero-shot learning <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a>: treat each category as a graph node</p>
+</li>
+<li><p>GNN for multi-view learning <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Dongang_Wang_Dividing_and_Aggregating_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a>: treat each view as a graph node</p>
+</li>
+<li><p>GNN for clustering <a href="https://arxiv.org/pdf/2002.01633.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+</ul>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ol>
+<li><p>Wang, Xiaolong, Yufei Ye, and Abhinav Gupta. “Zero-shot recognition via semantic embeddings and knowledge graphs.” CVPR, 2018.</p>
+</li>
+<li><p>Lee, Chung-Wei, et al. “Multi-label zero-shot learning with structured knowledge graphs.” CVPR, 2018.</p>
+</li>
+<li><p>Wang, Dongang, et al. “Dividing and aggregating network for multi-view action recognition.” ECCV, 2018.</p>
+</li>
+<li><p>Ma, Guixiang, et al. “Deep Graph Similarity Learning: A Survey.” arXiv preprint arXiv:1912.11615 (2019).</p>
+</li>
+<li><p>Hongyang Gao, Shuiwang Ji: Graph U-Nets. CoRR abs/1905.05178 (2019)</p>
+</li>
+<li><p>Kipf, Thomas N., and Max Welling. “Semi-supervised classification with graph convolutional networks.” arXiv preprint arXiv:1609.02907 (2016).</p>
+</li>
+<li><p>Veličković, Petar, et al. “Graph attention networks.” arXiv preprint arXiv:1710.10903 (2017).</p>
+</li>
+<li><p>Hamilton, Will, Zhitao Ying, and Jure Leskovec. “Inductive representation learning on large graphs.” NeurIPS, 2017.</p>
+</li>
+<li><p>Vaswani, Ashish, et al. “Attention is all you need.” NeurIPS, 2017.</p>
+</li>
+<li><p>Bo, Deyu, et al. “Structural Deep Clustering Network.” Proceedings of The Web Conference 2020. 2020.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/machine_learning/Synthetic Text Images/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/26/machine_learning/Synthetic Text Images/" itemprop="url">Synthetic Text Images</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-26T12:38:30+08:00">
+                2019-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Blend text and background images. </p>
+<ul>
+<li>text image (font, color, border, blending): <a href="https://arxiv.org/pdf/1406.2227.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>scene-text image (font, color, border, blending, <u>geometry</u>): <a href="http://www.robots.ox.ac.uk/~ankush/textloc.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Fangneng_Zhan_Verisimilar_Image_Synthesis_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><ol>
+<li><p>Jaderberg, Max, et al. “Synthetic data and artificial neural networks for natural scene text recognition.” arXiv preprint arXiv:1406.2227 (2014).</p>
+</li>
+<li><p>Gupta, Ankush, Andrea Vedaldi, and Andrew Zisserman. “Synthetic data for text localisation in natural images.” CVPR, 2016.</p>
+</li>
+<li><p>Zhan, Fangneng, Shijian Lu, and Chuhui Xue. “Verisimilar image synthesis for accurate detection and recognition of texts in scenes.” ECCV, 2018.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/deep_learning/Image Action Recognition with Unlabeled Videos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1480,318 +1817,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/machine_learning/Normalization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/06/machine_learning/Normalization/" itemprop="url">Normalization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-06T10:34:35+08:00">
-                2019-01-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Normalize weights:</strong></p>
-<ol>
-<li>weight normalization <a href="https://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf" target="_blank" rel="noopener">[1]</a>:  $\mathbf{w}=\frac{g}{|\mathbf{v}|} \mathbf{v}$, weight normalization can be viewed as a cheaper and less noisy approximation to batch normalization</li>
-</ol>
-<p><strong>Normalize outputs:</strong></p>
-<ol>
-<li><p>batch normalization <a href="https://arxiv.org/pdf/1502.03167.pdf" target="_blank" rel="noopener">[2]</a>: make the input and output have the same variance</p>
-</li>
-<li><p>layer normalization <a href="https://arxiv.org/pdf/1607.06450.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>instance normalization <a href="https://arxiv.org/pdf/1607.08022.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-<li><p>group normalization <a href="https://arxiv.org/pdf/1803.08494.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-</ol>
-<p><img src="https://i.imgur.com/5rzQSsn.jpg" width="80%"></p>
-<p>N as the batch axis, C as the channel axis, and (H, W)<br>as the spatial axes</p>
-<p>[1] Salimans T, Kingma D P. Weight normalization: A simple reparameterization to accelerate training of deep neural networks[C]//Advances in Neural Information Processing Systems. 2016: 901-909.</p>
-<p>[2] Ioffe S, Szegedy C. Batch normalization: Accelerating deep network training by reducing internal covariate shift[J]. arXiv preprint arXiv:1502.03167, 2015.</p>
-<p>[3] Ba J L, Kiros J R, Hinton G E. Layer normalization[J]. arXiv preprint arXiv:1607.06450, 2016.</p>
-<p>[4] D. Ulyanov, A. Vedaldi, and V. Lempitsky. Instance normalization: The missing ingredient for fast stylization. arXiv:1607.08022, 2016.</p>
-<p>[5] Wu Y, He K. Group normalization[J]. arXiv preprint arXiv:1803.08494, 2018.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/deep_learning/Capsule Network/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/06/deep_learning/Capsule Network/" itemprop="url">Capsule Network</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-06T10:29:07+08:00">
-                2019-01-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>CapsNet <a href="https://arxiv.org/pdf/1710.09829.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>CapProNet <a href="https://arxiv.org/pdf/1805.07621.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://github.com/maple-research-lab" target="_blank" rel="noopener">[code]</a></p>
-</li>
-</ol>
-<p>[1] Sabour S, Frosst N, Hinton G E. Dynamic routing between capsules[C]//Advances in Neural Information Processing Systems. 2017: 3856-3866.</p>
-<p>[2] Zhang L, Edraki M, Qi G J. CapProNet: Deep feature learning via orthogonal projections onto capsule subspaces[J]. arXiv preprint arXiv:1805.07621, 2018.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1846,7 +1871,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">174</span>
+                  <span class="site-state-item-count">176</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1868,7 +1893,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">92</span>
+                  <span class="site-state-item-count">94</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
