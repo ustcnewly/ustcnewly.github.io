@@ -281,6 +281,428 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/deep_learning/Scene Text Recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/19/deep_learning/Scene Text Recognition/" itemprop="url">Scene Text Recognition</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T15:40:54+08:00">
+                2018-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
+<h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.187&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Detecting Text in Natural Scenes with<br>Stroke Width Transform</a>, CVPR 2010: assume consistent stroke width within each character</p>
+</li>
+<li><p><a href="http://www.iapr-tc11.org/dataset/MSRA-TD500/Detecting_Texts_of_Arbitrary_Orientations_in_Natural_Images.pdf" target="_blank" rel="noopener">Detecting Texts of Arbitrary Orientations in Natural Images</a>, CVPR 2012: design rotation-invariant features</p>
+</li>
+<li><p><a href="http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/jaderberg14deep.pdf" target="_blank" rel="noopener">Deep Features for Text Spotting</a>, ECCV 2014: add three branches for prediction</p>
+</li>
+<li><p><a href="http://www.whuang.org/papers/whuang2014_eccv.pdf" target="_blank" rel="noopener">Robust scene text detection with convolution neural network induced mser trees</a>, ECCV 2014</p>
+</li>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.4947&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Real-time Lexicon-free Scene Text<br>Localization and Recognition</a>, T-PAMI 2016</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gupta_Synthetic_Data_for_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Synthetic Data for Text Localisation in Natural Images</a>, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Multi-Oriented_Text_Detection_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Multi-oriented text detection with fully convolutional networks</a>, CVPR 2016</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1609.03605.pdf" target="_blank" rel="noopener">Detecting Text in Natural Image with Connectionist Text Proposal Network</a>, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM.</p>
+</li>
+<li><p><a href="https://scholar.google.com/scholar?hl=zh-CN&amp;as_sdt=0%2C5&amp;q=SSD%3A+single+shot+multibox+detector&amp;btnG=" target="_blank" rel="noopener">SSD: single shot multibox detector</a>, ECCV 2016</p>
+</li>
+<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12256/12121" target="_blank" rel="noopener">Reading Scene Text in Deep Convolutional Sequences</a>, AAAI 2016</p>
+</li>
+<li><p><a href="Scene text detection via holistic, multi-channel prediction">Scene text detection via holistic, multi-channel prediction</a>, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linking<br>orientation map</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Deep_Direct_Regression_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep Direct Regression for Multi-Oriented Scene Text Detection</a>, ICCV 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_WordSup_Exploiting_Word_ICCV_2017_paper.pdf" target="_blank" rel="noopener">WordSup: Exploiting Word Annotations for Character based Text Detection</a>, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training</p>
+</li>
+<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14202/14295" target="_blank" rel="noopener">TextBoxes: A Fast Text Detector with a Single Deep Neural Network</a>, AAAI 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017: use <a href="https://arxiv.org/pdf/1509.04874.pdf" target="_blank" rel="noopener">DenseBox</a> to generate quadrangle proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.02765.pdf" target="_blank" rel="noopener">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf" target="_blank" rel="noopener">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.01315.pdf" target="_blank" rel="noopener">PixelLink: Detecting Scene Text via Instance Segmentation</a>, AAAI 2018: rectangle enclosing instance segmentation mask, which is obtained based on text/non-text prediction and link prediction.</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.01086.pdf" target="_blank" rel="noopener">Arbitrary-Oriented Scene Text Detection via Rotation Proposals</a>, TMM 2018: generate rotated proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1807.01544.pdf" target="_blank" rel="noopener">TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes</a>, ECCV 2018: infer the center line area (TCL) and associated circle radius/rotation</p>
+</li>
+</ol>
+<h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.354&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">End-to-End Scene Text Recognition</a>, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon</p>
+</li>
+<li><p><a href="https://hal.inria.fr/hal-00818178/document" target="_blank" rel="noopener">Top-down and bottom-up cues for scene text recognition</a>, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shi_Scene_Text_Recognition_2013_CVPR_paper.pdf" target="_blank" rel="noopener">Scene text recognition using part-based tree-structured character detection</a>, CVPR 2013:  build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Bissacco_PhotoOCR_Reading_Text_2013_ICCV_paper.pdf" target="_blank" rel="noopener">PhotoOCR: Reading text in uncontrolled conditions</a>, ICCV 2013: automatically generate training data and perform OCR on web images</p>
+</li>
+<li><p><a href="https://link.springer.com/article/10.1007/s11263-014-0793-6" target="_blank" rel="noopener">Label embedding: A frugal baseline for text recognition</a>, IJCV 2015: learn a common space for image and word</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016 </p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Robust_Scene_Text_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Robust Scene Text Recognition with Automatic Rectification</a>, CVPR 2016</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Recursive Recurrent Nets with Attention Modeling for OCR in the Wild</a>, CVPR 2016: character-level language model embodied in a recurrent neural network</p>
+</li>
+<li><p><a href="https://ieeexplore.ieee.org/abstract/document/7801919" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Cheng_Focusing_Attention_Towards_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Focusing Attention: Towards Accurate Text Recognition in Natural Images</a>, ICCV 2017: Focusing Network to handle the attention drift</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1706.01487.pdf" target="_blank" rel="noopener">Visual attention models for scene text recognition</a>, 2017 arxiv</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">AON: Towards Arbitrarily-Oriented Text Recognition
+</a>, CVPR 2018</p>
+</li>
+<li><p>(recommended by Guo)<a href="https://arxiv.org/pdf/1507.05717.pdf" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI, 2017</p>
+</li>
+</ol>
+<h2 id="End-to-end"><a href="#End-to-end" class="headerlink" title="End-to-end"></a>End-to-end</h2><p>Integrate scene text detection and recognition in an end-to-end system.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://cmp.felk.cvut.cz/~matas/papers/neumann-text-accv10.pdf" target="_blank" rel="noopener">A method for text localization and recognition in real-world images</a>, ACCV 2010</p>
+</li>
+<li><p><a href="http://fadaei.semnan.ac.ir/uploads/MV7.pdf" target="_blank" rel="noopener">Real-Time Scene Text Localization and Recognition</a>, CVPR 2012</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Towards_End-To-End_Text_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Towards End-to-end Text Spotting with Convolutional<br>Recurrent Neural Networks</a>, ICCV 2017: designed for horizontal scene text</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busta_Deep_TextSpotter_An_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework</a>, ICCV 2017:  detect and recognize horizontal and multioriented<br>scene text</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf" target="_blank" rel="noopener">FOTS: Fast Oriented Text Spotting with a Unified Network</a>, CVPR 2018: using EAST as text detector and CRNN as text recognizer</p>
+</li>
+</ol>
+<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
+<li><a href="http://mclab.eic.hust.edu.cn/icdar2017chinese/" target="_blank" rel="noopener">RCTW-17</a></li>
+<li><a href="http://rrc.cvc.uab.es/?ch=8" target="_blank" rel="noopener">MLT</a> </li>
+<li><a href="https://github.com/Yuliang-Liu/Curve-Text-Detector" target="_blank" rel="noopener">SCUT-CTW1500</a></li>
+<li><a href="https://github.com/cs-chan/Total-Text-Dataset" target="_blank" rel="noopener">Total-Text</a></li>
+<li><a href="http://rrc.cvc.uab.es/?ch=4&amp;com=introduction" target="_blank" rel="noopener">ICDAR 2015</a></li>
+<li><a href="http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500" target="_blank" rel="noopener">MSRA-TD500</a>)</li>
+<li><a href="http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html" target="_blank" rel="noopener">IIIT 5K-Word</a></li>
+<li><a href="https://vision.cornell.edu/se3/coco-text-2/" target="_blank" rel="noopener">COCO-Text</a></li>
+</ul>
+<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h2><ul>
+<li><a href="http://www.vlrlab.net/admin/uploads/avatars/FCS_TextSurvey_2015.pdf" target="_blank" rel="noopener">Scene text detection and recognition: Recent advances and future trends</a>, FCS 2015</li>
+<li><a href="https://ieeexplore.ieee.org/abstract/document/6945320" target="_blank" rel="noopener">Text detection and recognition in imagery: A survey</a>, T-PAMI 2015</li>
+</ul>
+<h2 id="Special-Sessions"><a href="#Special-Sessions" class="headerlink" title="Special Sessions"></a>Special Sessions</h2><ol>
+<li><p>Use Spatial Transformation Network (STN) <a href="https://arxiv.org/pdf/1509.05329.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1611.04298.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1707.08831.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1603.03915.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+<li><p>Use Deformable Convolution Network (DCN) <a href="https://arxiv.org/pdf/1805.01167" target="_blank" rel="noopener">[1]</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/others/How to Conduct Experiments/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/18/others/How to Conduct Experiments/" itemprop="url">How to Conduct Experiments</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T10:11:04+08:00">
+                2018-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Experimental setting:</p>
+<ul>
+<li>Select more than 3 popular benchmark datasets. Most papers perform evaluation on 3~5 datasets.</li>
+<li>Determine the training/testing split. By default, strictly follow the setting in recent papers. If their settings are not applicable, we can determine our own setting reasonably and fully describe the details in the paper. </li>
+</ul>
+<p>Experimental implementation:</p>
+<ul>
+<li>For the commonly used model, avoid unnecessary reimplementation. Just use the released code and model.</li>
+<li>If closely related papers release their code, modify based on their code and avoid starting from scratch. </li>
+<li>Document your code with readable and meaningful comments. Otherwise, even your cannot understand your own code after a long time.</li>
+<li>Manage different versions of code carefully, otherwise your code will get messy very rapidly. Use advanced tool such as github to create branches, revert to old version, etc. The brutal approach is to create an individual folder for each version, which is not recommended.</li>
+</ul>
+<p>Experimental running:</p>
+<ul>
+<li>Avoid redundant or unncessary experiments.</li>
+<li>Run experiments parallelly using all available computing resources.</li>
+<li><a href="https://ustcnewly.github.io/2018/09/07/paper_note/Parameter%20Tuning/" target="_blank" rel="noopener">Tune hyper-parameters wisely</a>.</li>
+<li>Save final output and important intermediate output for future analysis.</li>
+</ul>
+<p>Experimental record:</p>
+<ul>
+<li>Make a to-do list for what experiments you are going to do.</li>
+<li>For the experiments you have done, summarize your observation and conclusion. Then, adjust the remaining to-do list accordingly. </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1621,316 +2043,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/20/deep_learning/Interpretable Machine Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/20/deep_learning/Interpretable Machine Learning/" itemprop="url">Interpretable Machine Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-20T19:14:21+08:00">
-                2018-10-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Manipulate each layer/neuron, and observe the change of network parameters/activations.</p>
-</li>
-<li><p>Saliency map</p>
-</li>
-<li><p>Adversarial attack</p>
-</li>
-<li><p>Correlation</p>
-</li>
-<li><p>Information gain/loss</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/19/others/Conference Rebuttal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/19/others/Conference Rebuttal/" itemprop="url">Conference Rebuttal</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-19T15:31:55+08:00">
-                2018-10-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>To determine whether the rebuttal is necessary. If the scores are too low, just give up.</p>
-</li>
-<li><p>Summarize the questions from reviewers and rank them based on the importance. </p>
-</li>
-<li><p>Pick out the questions which call for experiments and conduct those experiments immediately.</p>
-</li>
-<li><p>When running experiments, draft the response file. Pay attention to the format of response file (e.g., limited characters or one page of pdf, URL allowed or not).</p>
-</li>
-<li><p>In the response file, try to cover all the questions if possible. Otherwise, igore the questions with least importance.</p>
-</li>
-<li><p>The tone of response file cannot be rude and offensive. Be cool and confident.</p>
-</li>
-<li><p>If the maximum number of characters is quite limited, there are many tricks to save space.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1985,7 +2097,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">176</span>
+                  <span class="site-state-item-count">178</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2007,7 +2119,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">96</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
