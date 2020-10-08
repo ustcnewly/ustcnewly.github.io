@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Class Imbalance]]></title>
+    <url>%2F2020%2F10%2F08%2Fmachine_learning%2FClass%20Imbalance%2F</url>
+    <content type="text"><![CDATA[re-sampling synthetic samples: generate more samples for minor classes re-weighting few-shot learning decoupling representation and classifier learning: use normal sampling in the feature learning stage and use re-sampling in the classifier learning stage.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[High-resolution Image Generation]]></title>
     <url>%2F2020%2F10%2F06%2Fdeep_learning%2FHigh-resolution%20Image%20Generation%2F</url>
     <content type="text"><![CDATA[multi-resolution pipeline: [1] shallow mapping from large-scale input to large-scale output: [2](look-up table) use patch input and encourage information sharing among patches: [3] Reference[1] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018. [2] Zeng, Hui, et al. “Learning Image-adaptive 3D Lookup Tables for High Performance Photo Enhancement in Real-time.” PAMI, 2020. [3] Yu, Haichao, et al. “High-Resolution Deep Image Matting.” arXiv preprint arXiv:2009.06613 (2020).]]></content>
