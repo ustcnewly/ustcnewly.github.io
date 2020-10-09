@@ -739,11 +739,11 @@
       
         
           
-            <p>Multi-modal problem means that given an input, there exist multiple possible outputs instead of a single deterministic output. </p>
+            <p>Multi-modal problem means that given an input, there exist multiple possible outputs instead of a single deterministic output. The key problem is the mode collapse problem.</p>
 <ol>
-<li><p>Generated output belongs to one of K possibilities <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Vondrick_Anticipating_Visual_Representations_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a>. K is set beforehand.</p>
+<li><p>The ground-truth output belongs to one of K generated possibilities <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Vondrick_Anticipating_Visual_Representations_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a>. K is set beforehand.</p>
 </li>
-<li><p>Ensure bijection between random vector and output: Associate random factor (e.g., random vector z) with specific information <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a>. Either random factor is conditioned on specific information, or the generated output can recognize random factor.</p>
+<li><p>Ensure bijection between random vector and output: Associate random factor (e.g., random vector z) with specific information <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a>. Either random factor is conditioned on specific information, or the generated output can recognize random factor. If the mapping from random vector to output is invertible (e.g., glow), there is a natural bijection between random vector and output <a href="http://de.arxiv.org/pdf/2006.14200?gitT" target="_blank" rel="noopener">[6]</a>. </p>
 <center><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/gAVVos7.jpg" width="50%" border="0"></center>
 </li>
 <li><p>Enforce different random vectors to produce different outputs: push apart the outputs generated from different random vectors z with diversity loss or mode seeking loss <a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1901.09024.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Normalized_Diversification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
@@ -751,9 +751,10 @@
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016.</p>
 <p>[2] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” Advances in Neural Information Processing Systems. 2017.</p>
-<p>[3] Qi Mao, Hsin-Ying Lee, Hung-Yu Tseng, Siwei Ma, and Ming-Hsuan Yang. Mode seeking generative adversarial<br>networks for diverse image synthesis. In CVPR, 2019.</p>
+<p>[3] Qi Mao, Hsin-Ying Lee, Hung-Yu Tseng, Siwei Ma, and Ming-Hsuan Yang. Mode seeking generative adversarial networks for diverse image synthesis. In CVPR, 2019.</p>
 <p>[4] Dingdong Yang, Seunghoon Hong, Yunseok Jang, Tianchen Zhao, and Honglak Lee. Diversity-sensitive<br>conditional generative adversarial networks. arXiv preprint arXiv:1901.09024, 2019.</p>
-<p>[5] Shaohui Liu, Xiao Zhang, Jianqiao Wangni, Jianbo Shi:<br>Normalized Diversification. CVPR 2019: 10306-10315</p>
+<p>[5] Shaohui Liu, Xiao Zhang, Jianqiao Wangni, Jianbo Shi: Normalized Diversification. CVPR 2019: 10306-10315</p>
+<p>[6] Lugmayr, Andreas, et al. “SRFlow: Learning the Super-Resolution Space with Normalizing Flow.” arXiv preprint arXiv:2006.14200 (2020).</p>
 
           
         
