@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Non-local Network]]></title>
+    <url>%2F2020%2F10%2F29%2Fdeep_learning%2FNon-local%20Network%2F</url>
+    <content type="text"><![CDATA[Extensions of non-local network [1]: [2] [3] [4] [5] Reference[1] Wang, Xiaolong, et al. “Non-local neural networks.” CVPR, 2018. [2] Zhu, Zhen, et al. “Asymmetric non-local neural networks for semantic segmentation.” ICCV, 2019. [3] Li, Xia, et al. “Expectation-maximization attention networks for semantic segmentation.” ICCV, 2019. [4] Huang, Zilong, et al. “Ccnet: Criss-cross attention for semantic segmentation.” ICCV, 2019. [5] Zhang, Li, et al. “Dynamic graph message passing networks.” CVPR, 2020.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>network structure</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Class Imbalance]]></title>
     <url>%2F2020%2F10%2F08%2Fmachine_learning%2FClass%20Imbalance%2F</url>
     <content type="text"><![CDATA[re-sampling synthetic samples: generate more samples for minor classes re-weighting few-shot learning decoupling representation and classifier learning: use normal sampling in the feature learning stage and use re-sampling in the classifier learning stage.]]></content>
@@ -11,7 +22,7 @@
   <entry>
     <title><![CDATA[High-resolution Image Generation]]></title>
     <url>%2F2020%2F10%2F06%2Fdeep_learning%2FHigh-resolution%20Image%20Generation%2F</url>
-    <content type="text"><![CDATA[multi-resolution pipeline: [1] shallow mapping from large-scale input to large-scale output: [2](look-up table) use patch input and encourage information sharing among patches: [3] Reference[1] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018. [2] Zeng, Hui, et al. “Learning Image-adaptive 3D Lookup Tables for High Performance Photo Enhancement in Real-time.” PAMI, 2020. [3] Yu, Haichao, et al. “High-Resolution Deep Image Matting.” arXiv preprint arXiv:2009.06613 (2020).]]></content>
+    <content type="text"><![CDATA[stacked generators from low-resolution to high-resolution: [4] [5] [6] [10] low-resolution generator embedded in high-resolution generator: [1] [7] [8] [9] fuse low-resolution outputs: [3] [11] shallow mapping from large-scale input to large-scale output: [2](look-up table) Reference[1] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018. [2] Zeng, Hui, et al. “Learning Image-adaptive 3D Lookup Tables for High Performance Photo Enhancement in Real-time.” PAMI, 2020. [3] Yu, Haichao, et al. “High-Resolution Deep Image Matting.” arXiv preprint arXiv:2009.06613 (2020). [4] Denton, Emily L., Soumith Chintala, and Rob Fergus. “Deep generative image models using a￼ laplacian pyramid of adversarial networks.” NIPS, 2015. [5] Huang, Xun, et al. “Stacked generative adversarial networks.” CVPR, 2017. [6] Zhang, Han, et al. “Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks.” ICCV, 2017. [7] Andreini, Paolo, et al. “A two stage gan for high resolution retinal image generation and segmentation.” arXiv preprint arXiv:1907.12296 (2019). [8] Hamada, K., Tachibana, K., Li, T., Honda, H., &amp; Uchida, Y. (2018). Full-body high-resolution anime generation with progressive structure-conditional generative adversarial networks. ECCV, 2018. [9] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017). [10] Chen, Qifeng, and Vladlen Koltun. “Photographic image synthesis with cascaded refinement networks.” ICCV, 2017. [11] Anokhin, Ivan, et al. “High-Resolution Daytime Translation Without Domain Labels.” CVPR, 2020.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -23,7 +34,7 @@
   <entry>
     <title><![CDATA[ROI Feature]]></title>
     <url>%2F2020%2F09%2F29%2Fdeep_learning%2FROI%20feature%2F</url>
-    <content type="text"><![CDATA[ROI pooling ROI alignment [1] Reference He, Kaiming, et al. “Mask R-CNN.” ICCV, 2017.]]></content>
+    <content type="text"><![CDATA[ROI pooling ROI alignment [1] Precise RoI Pooling [2] Reference He, Kaiming, et al. “Mask R-CNN.” ICCV, 2017. Jiang, Borui, et al. “Acquisition of localization confidence for accurate object detection.” ECCV, 2018.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
@@ -971,7 +982,7 @@
   <entry>
     <title><![CDATA[Causal Inference]]></title>
     <url>%2F2018%2F10%2F15%2Fmachine_learning%2FCausality%2F</url>
-    <content type="text"><![CDATA[Big names: Judy Pearl [Tutorial] [slides] [textbook], James Robin [Textbook] [slides] Tutorial: NIPS workshop on causal learning, Causality for machine learning [4] Reference[1] Chalupka K, Perona P, Eberhardt F. Visual causal feature learning. arXiv preprint arXiv:1412.2309, 2014. [2] Lopez-Paz D, Nishihara R, Chintala S, et al. Discovering causal signals in images. CVPR, 2017. [3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks. arXiv preprint arXiv:1811.10597, 2018. [4] Bernhard Schölkopf: CAUSALITY FOR MACHINE LEARNING. arXiv preprint arXiv:1911.10500, 2019.]]></content>
+    <content type="text"><![CDATA[Big Names: Judy Pearl [Tutorial] [slides] [textbook], James Robin [Textbook] [slides] Tutorial: Causality for machine learning [4] Workshop: NIPS2018 workshop on causal learning, KDD2020 Tutorial on Causal Inference Meets Machine Learning Material: MILA Course Reference[1] Chalupka K, Perona P, Eberhardt F. Visual causal feature learning. arXiv preprint arXiv:1412.2309, 2014. [2] Lopez-Paz D, Nishihara R, Chintala S, et al. Discovering causal signals in images. CVPR, 2017. [3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks. arXiv preprint arXiv:1811.10597, 2018. [4] Bernhard Schölkopf: CAUSALITY FOR MACHINE LEARNING. arXiv preprint arXiv:1911.10500, 2019.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
