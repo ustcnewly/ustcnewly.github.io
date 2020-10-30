@@ -671,13 +671,21 @@
       
         
           
-            <p>The target is not only to adjust the color and illumination of foreground, but also 2D-transform or 3D-transform the foreground <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. Image harmonization and image blending can be treated as subtasks of image composition.</p>
-<p>How to generate realistic composite images? <a href="https://arxiv.org/pdf/1706.01021.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Toward_Realistic_Image_Compositing_With_Adversarial_Learning_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
-<p>Deep image blending <a href="https://arxiv.org/pdf/1910.11495.pdf" target="_blank" rel="noopener">[4]</a></p>
+            <p>Simply speaking, image composition means cut-and-paste, that is, cutting one piece from one image and paste it on another image. The obtained composite image may be unrealistic due to the following reasons:</p>
+<ul>
+<li>The foreground is not well segmented, so there is an evident and unnatural boundary between foreground and background. </li>
+<li>The foreground and background may look incompatible due to different color and illumination statistics. For example, the foreground is captured in the daytime while the background is captured at night.</li>
+<li>The foreground is placed at an unreasonable location. For example, a horse is placed in the sky. </li>
+<li>The foreground needs to be geometrically transformed. For example, when pasting eye glasses on a face, the eye glasses should fit the eyes and ears on the face.</li>
+<li>The pasted foreground may also affect the background. For example, the foreground may cast a shadow on the background.</li>
+</ul>
+<p>Therefore, image composition is actually a combination of multiple subtasks.<br>Previously, some works only focus on one subtask such as harmonization or geometric transformation <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. Some other works attempt to solve all subtasks in a single package <a href="https://arxiv.org/pdf/1706.01021.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Toward_Realistic_Image_Compositing_With_Adversarial_Learning_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1910.11495.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Weng_MISC_Multi-Condition_Injection_and_Spatially-Adaptive_Compositing_for_Conditional_Person_Image_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2009.08255.pdf" target="_blank" rel="noopener">[6]</a></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Lin, Chen-Hsuan, et al. “St-gan: Spatial transformer generative adversarial networks for image compositing.”, CVPR, 2018.</p>
 <p>[2] Tan, Fuwen, et al. “Where and who? automatic semantic-aware person composition.” WACV, 2018.</p>
 <p>[3] Chen, Bor-Chun, and Andrew Kae. “Toward Realistic Image Compositing with Adversarial Learning.” CVPR, 2019.</p>
 <p>[4] Lingzhi Zhang, Tarmily Wen, Jianbo Shi: Deep Image Blending. WACV 2020: 231-240</p>
+<p>[5] Weng, Shuchen, et al. “MISC: Multi-Condition Injection and Spatially-Adaptive Compositing for Conditional Person Image Synthesis.” CVPR, 2020.</p>
+<p>[6] Zhan, Fangneng, et al. “Adversarial Image Composition with Auxiliary Illumination.” arXiv preprint arXiv:2009.08255 (2020).</p>
 
           
         
