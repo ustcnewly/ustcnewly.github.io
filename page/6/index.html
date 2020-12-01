@@ -281,6 +281,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/deep_learning/Domain Adaptation for Segmentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/10/deep_learning/Domain Adaptation for Segmentation/" itemprop="url">Domain Adaptation for Segmentation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-10T09:59:07+08:00">
+                2019-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Domain-adaptation"><a href="#Domain-adaptation" class="headerlink" title="Domain adaptation:"></a>Domain adaptation:</h3><ul>
+<li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>; <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a> </p>
+</li>
+<li><p>Translation source domain image to target domain image: <a href="https://arxiv.org/pdf/1711.03213.pdf" target="_blank" rel="noopener">[5]</a>; <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sankaranarayanan_Learning_From_Synthetic_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[6]</a>; <a href="https://arxiv.org/pdf/1904.10620.pdf" target="_blank" rel="noopener">[10]</a> (combine with target domain pseudo labels).</p>
+</li>
+<li><p>Training with pseudo labels on the target domain: Curriculumn learning <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> (global image label distribution and landmark superpixel label distribution); self-training <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yang_Zou_Unsupervised_Domain_Adaptation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[7]</a>; use multiple models to vote for pseudo labels <a href="https://arxiv.org/pdf/1711.03694.pdf" target="_blank" rel="noopener">[9]</a> </p>
+</li>
+</ul>
+<h3 id="Domain-adaptation-with-privileged-information"><a href="#Domain-adaptation-with-privileged-information" class="headerlink" title="Domain adaptation with privileged information:"></a>Domain adaptation with privileged information:</h3><ul>
+<li>Domain adaptation with privileged information like depth: SPIGAN <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[2]</a> (enforce synthetic image and generated image to predict the same depth), <a href="https://arxiv.org/pdf/1904.01886.pdf" target="_blank" rel="noopener">[3]</a> (adversarial learning on depth)</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Yang, Philip David, and Boqing Gong. “Curriculum domain adaptation for semantic segmentation of urban scenes.” ICCV, 2017.</p>
+<p>[2] Lee, Kuan-Hui, et al. “SPIGAN: Privileged Adversarial Learning from Simulation.” ICLR, 2019.</p>
+<p>[3] Vu, Tuan-Hung, et al. “DADA: Depth-aware Domain Adaptation in Semantic Segmentation.” arXiv preprint arXiv:1904.01886 (2019).</p>
+<p>[4] Chen, Yuhua, Wen Li, and Luc Van Gool. “Road: Reality oriented adaptation for semantic segmentation of urban scenes.” CVPR, 2018.</p>
+<p>[5] Hoffman, Judy, et al. “Cycada: Cycle-consistent adversarial domain adaptation.” arXiv preprint arXiv:1711.03213 (2017).</p>
+<p>[6] Sankaranarayanan, Swami, et al. “Learning from synthetic data: Addressing domain shift for semantic segmentation.” CVPR, 2018.</p>
+<p>[7] Zou, Yang, et al. “Unsupervised domain adaptation for semantic segmentation via class-balanced self-training.”, ECCV, 2018.</p>
+<p>[8] Hong, Weixiang, et al. “Conditional generative adversarial network for structured domain adaptation.” CVPR, 2018.</p>
+<p>[9] Zhang, Junting, Chen Liang, and C-C. Jay Kuo. “A fully convolutional tri-branch network (FCTN) for domain adaptation.” ICASSP, 2018.</p>
+<p>[10] Li, Yunsheng, Lu Yuan, and Nuno Vasconcelos. “Bidirectional Learning for Domain Adaptation of Semantic Segmentation.” arXiv preprint arXiv:1904.10620 (2019).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/06/deep_learning/Video Harmonization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1031,9 +1193,15 @@
 <li>GraphSAGE(SAmple and aggreGatE) <a href="https://papers.nips.cc/paper/6703-inductive-representation-learning-on-large-graphs.pdf" target="_blank" rel="noopener">[8]</a></li>
 <li>Transformer <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf" target="_blank" rel="noopener">[9]</a>: transformer can be deemed as a type of GNN</li>
 </ul>
+<h2 id="Avoid-oversmoothing-and-go-deeper"><a href="#Avoid-oversmoothing-and-go-deeper" class="headerlink" title="Avoid oversmoothing and go deeper"></a>Avoid oversmoothing and go deeper</h2><ul>
+<li><p>Initial residual and Identity mapping <a href="http://xxx.itp.ac.cn/pdf/2007.02133v1" target="_blank" rel="noopener">[12]</a></p>
+</li>
+<li><p>GCN and PageRank <a href="http://xxx.itp.ac.cn/pdf/1810.05997v5" target="_blank" rel="noopener">[13]</a></p>
+</li>
+</ul>
 <h2 id="Graph-similarity-matching"><a href="#Graph-similarity-matching" class="headerlink" title="Graph similarity/matching"></a>Graph similarity/matching</h2><p>A survey on graph similarity <a href="https://arxiv.org/pdf/1912.11615.pdf" target="_blank" rel="noopener">[4]</a></p>
 <h2 id="Graph-transformation"><a href="#Graph-transformation" class="headerlink" title="Graph transformation:"></a>Graph transformation:</h2><p>pooling/unpooling <a href="https://arxiv.org/pdf/1905.05178.pdf" target="_blank" rel="noopener">[5]</a></p>
-<h1 id="Dynamic-Graph"><a href="#Dynamic-Graph" class="headerlink" title="Dynamic Graph:"></a>Dynamic Graph:</h1><ul>
+<h2 id="Dynamic-Graph"><a href="#Dynamic-Graph" class="headerlink" title="Dynamic Graph:"></a>Dynamic Graph:</h2><ul>
 <li>Pointer Graph Network <a href="https://arxiv.org/pdf/2006.06380.pdf" target="_blank" rel="noopener">[11]</a></li>
 </ul>
 <h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><ul>
@@ -1066,6 +1234,10 @@
 <li><p>Bo, Deyu, et al. “Structural Deep Clustering Network.” Proceedings of The Web Conference 2020. 2020.</p>
 </li>
 <li><p>Veličković, Petar, et al. “Pointer Graph Networks.” arXiv preprint arXiv:2006.06380 (2020).</p>
+</li>
+<li><p>Chen, Ming, et al. “Simple and deep graph convolutional networks.” arXiv preprint arXiv:2007.02133 (2020).</p>
+</li>
+<li><p>Klicpera, Johannes, Aleksandar Bojchevski, and Stephan Günnemann. “Predict then propagate: Graph neural networks meet personalized pagerank.” arXiv preprint arXiv:1810.05997 (2018).</p>
 </li>
 </ol>
 
@@ -1722,162 +1894,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/machine_learning/Distillation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/machine_learning/Distillation/" itemprop="url">Distillation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T12:48:33+08:00">
-                2019-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>knowledge/model distillation <a href="https://arxiv.org/pdf/1503.02531" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>data distillation <a href="https://arxiv.org/pdf/1712.04440.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ol>
-<p>A survey of knowledge distillation <a href="https://arxiv.org/abs/2004.05937" target="_blank" rel="noopener">[3]</a></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015).</p>
-<p>[2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018.</p>
-<p>[3] Wang, Lin, and Kuk-Jin Yoon. “Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks.” arXiv preprint arXiv:2004.05937 (2020).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1927,7 +1948,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">180</span>
+                  <span class="site-state-item-count">181</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1949,7 +1970,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">96</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

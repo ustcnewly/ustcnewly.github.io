@@ -281,6 +281,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/" itemprop="url">Variants of Convolution in Deep Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and  the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$.</p>
+</li>
+<li><p>Pointwise convolution: pointwise fully connected across all the channels.</p>
+</li>
+<li><p>Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in <a href="https://arxiv.org/pdf/1707.01083.pdf" target="_blank" rel="noopener">ShuffleNet</a>.</p>
+</li>
+<li><p>Depthwise separable convolution = depthwise convolution + pointwise convolution</p>
+</li>
+<li><p>Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for <a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank" rel="noopener">segmentation</a>. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">Deformable convolution</a> (left) and <a href="https://arxiv.org/pdf/1506.02025.pdf" target="_blank" rel="noopener">spatial transformation network</a> (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ht5DXxp.jpg" width="100%" height="100%"></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1709.01507.pdf" target="_blank" rel="noopener">Squeeze-and-Excitation</a>: learn different weights for each channel.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/CMk5i17.jpg" width="80%" height="80%"></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Tricky Back Propagation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1202,6 +1359,7 @@
 <li><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></li>
 <li><a href="https://arxiv.org/abs/1704.04861" target="_blank" rel="noopener">MobileNet</a></li>
 <li><a href="https://arxiv.org/abs/1707.01083" target="_blank" rel="noopener">ShuffleNet</a></li>
+<li><a href="https://arxiv.org/pdf/2011.12289.pdf" target="_blank" rel="noopener">MicroNet</a></li>
 </ul>
 <p>SqueezeNet, MobileNet, and ShuffleNet share the same idea: decouple the temporal convolution and spatial convolution to reduce the nummber of parameters, sharing the similar spirit with <a href="https://arxiv.org/pdf/1711.10305.pdf" target="_blank" rel="noopener">Pseudo-3D Residual Networks</a>. SqueezeNet is serial while MobileNet and ShuffleNet are parrallel. MobileNet is a special case of ShuffleNet when using only one group.</p>
 <p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Zhang_Efficient_and_Accurate_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Low-rank approximation</a> ($k\times k \times c\times d = k\times k\times c\times d’ + 1\times 1\times d’\times d$) also falls into the above scope. The difference between MobileNet and Low-rank approximation is layerwise convolution or not.</p>
@@ -2005,162 +2163,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/CMake with Eclipse/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/compiler/CMake with Eclipse/" itemprop="url">CMake with Eclipse</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/compiler/" itemprop="url" rel="index">
-                    <span itemprop="name">compiler</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Cmake supports CDT4 and higher versions.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -help  # check the supported generator</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li><p>Install CDT to Eclipse: <a href="http://www.eclipse.org/cdt/downloads.php" target="_blank" rel="noopener">http://www.eclipse.org/cdt/downloads.php</a></p>
-</li>
-<li><p>The eclipse build directory should be sibling directory of the source directory.</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir eclipse</span><br><span class="line">cd eclipse</span><br><span class="line">cmake -G "Eclipse CDT4 - Unix Makefiles" -D     CMAKE_BUILD_TYPE=Debug ../src_folder # note that CMAKE_BUILD_TYPE can be set as Debug or Release</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><code>cmake --build . --config Release</code> is equivalent to <code>make</code></p>
-<p><code>cmake --build . --target install --config Release</code> is equivalent to <code>make install</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2210,7 +2217,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">180</span>
+                  <span class="site-state-item-count">181</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2232,7 +2239,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">96</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

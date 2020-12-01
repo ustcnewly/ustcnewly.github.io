@@ -281,6 +281,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Ubuntu/Linux Command Lines/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/operation_system/Ubuntu/Linux Command Lines/" itemprop="url">Ubuntu Command Lines</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Here is a website <a href="https://linux.gaomeluo.com/" target="_blank" rel="noopener">link</a> to query linux commands.</p>
+<hr>
+<ol>
+<li><p>create new user with home folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser XXX</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sudo privilege: <code>vim /etc/sudoers</code> and add <code>$username ALL=(ALL) ALL</code> at the bottom.</p>
+</li>
+<li><p>start ssh on the server, the default port is 22</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo/etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list -a #including hidden files</span><br><span class="line">list -S #arrange by size</span><br><span class="line">list -t #arrange by time</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>view text</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat</span><br><span class="line">head/tail -n 10 tmp.txt #view the first/last 10 lines</span><br><span class="line">less #more powerful than more</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Change the privilege</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 ./</span><br><span class="line">chmod a+x ./</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Check disk or file size</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df -h </span><br><span class="line">du ./ --max-depth 2 -h</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Compress or uncompress files, refer to this <a href="http://www.cnblogs.com/eoiioe/archive/2008/09/20/1294681.html" target="_blank" rel="noopener">link</a>.</p>
+</li>
+<li><p>Grep + regular expression</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [xyz]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Search file</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">locate "keyword" #fast</span><br><span class="line">find ./ -maxdepth 1 -name "*keyword*" </span><br><span class="line">find ./ -name "*keyword*" -size +50M -size -100M </span><br><span class="line">find ./ -name "*keyword*" -mmin -10 #m:modify min:minute </span><br><span class="line">find ./ -name "*keyword*" -exec rm -r &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pipe commands</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tr -s ' ' | cut -d ' ' -f 2 #tr to truncate space</span><br><span class="line">ls -l | sort -rnk2 #-r:reverse -n:numerical -k:k-th column</span><br><span class="line">ls -l | wc -l #count line</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xargs:</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat python/requirements.txt | xargs -L 1 sudo pip install</span><br><span class="line">find . -name "*.c" | xargs rm -rf</span><br><span class="line">find . -name '*.c' | xargs grep 'stdlib.h'</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>alias: temporary alias command </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias lnew="cd /home/niuli/caffe"</span><br><span class="line">unalias lnew</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>export: The export command is one of the bash shell built-in commands, which means it is part of your shell.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export a=linux.com</span><br><span class="line">echo $a</span><br><span class="line">export -n a #remove variable</span><br><span class="line"></span><br><span class="line">printname () &#123; echo "Linuxcareer.com"; &#125;</span><br><span class="line">export -f printname #export function</span><br></pre></td></tr></table></figure>
+<p>add LD_LIBRARY_PATH</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>shellscript sample</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">read -p "Please input your first name: " </span><br><span class="line">echo -e "\nYour full name is: $firstname $lastname" </span><br><span class="line">test ! -e $filename &amp;&amp; echo "The filename '$filename' DO NOT exist" &amp;&amp; exit 0</span><br><span class="line">test -f $filename &amp;&amp; filetype="regulare file" </span><br><span class="line">test -d $filename &amp;&amp; filetype="directory" </span><br><span class="line">[ "$yn" == "Y" -o "$yn" == "y" ] &amp;&amp; echo "OK, continue" &amp;&amp; exit 0</span><br><span class="line"></span><br><span class="line">if [ "$yn" == "Y" ] || [ "$yn" == "y" ]; then </span><br><span class="line">	echo "OK, continue" </span><br><span class="line">elif [ "$yn" == "N" ] || [ "$yn" == "n" ]; then </span><br><span class="line">	echo "Oh, interrupt!" </span><br><span class="line">else </span><br><span class="line">	echo "I don't know what your choice is" </span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">while [ "$yn" != "yes" -a "$yn" != "YES" ] </span><br><span class="line">do </span><br><span class="line">	read -p "Please input yes/YES to stop this program: " yn </span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for animal in dog cat elephant </span><br><span class="line">do </span><br><span class="line">	echo "There are $&#123;animal&#125;s.... " </span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/operation_system/Windows Command Lines/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1814,168 +2004,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/" itemprop="url">Variants of Convolution in Deep Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and  the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$.</p>
-</li>
-<li><p>Pointwise convolution: pointwise fully connected across all the channels.</p>
-</li>
-<li><p>Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in <a href="https://arxiv.org/pdf/1707.01083.pdf" target="_blank" rel="noopener">ShuffleNet</a>.</p>
-</li>
-<li><p>Depthwise separable convolution = depthwise convolution + pointwise convolution</p>
-</li>
-<li><p>Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for <a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank" rel="noopener">segmentation</a>. </p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">Deformable convolution</a> (left) and <a href="https://arxiv.org/pdf/1506.02025.pdf" target="_blank" rel="noopener">spatial transformation network</a> (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ht5DXxp.jpg" width="100%" height="100%"></p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1709.01507.pdf" target="_blank" rel="noopener">Squeeze-and-Excitation</a>: learn different weights for each channel.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/CMk5i17.jpg" width="80%" height="80%"></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2025,7 +2058,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">180</span>
+                  <span class="site-state-item-count">181</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2047,7 +2080,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">96</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
