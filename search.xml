@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Defect Detection]]></title>
-    <url>%2F2020%2F11%2F18%2Fmachine_learning%2FDefect%20Detection%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[Image Denoising]]></title>
+    <url>%2F2020%2F12%2F01%2Fmachine_learning%2FImage%20Denoising%2F</url>
+    <content type="text"><![CDATA[Reference]]></content>
       <categories>
         <category>paper note</category>
       </categories>
       <tags>
-        <tag>few-shot</tag>
-        <tag>defect</tag>
+        <tag>denoise</tag>
       </tags>
   </entry>
   <entry>
