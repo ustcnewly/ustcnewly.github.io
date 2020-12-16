@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/deep_learning/Domain Adaptation for Segmentation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/deep_learning/Domain Adaptive Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/10/deep_learning/Domain Adaptation for Segmentation/" itemprop="url">Domain Adaptation for Segmentation</a></h1>
+                <a class="post-title-link" href="/2019/04/10/deep_learning/Domain Adaptive Segmentation/" itemprop="url">Domain Adaptative Segmentation</a></h1>
         
 
         <div class="post-meta">
@@ -375,9 +375,9 @@
         
           
             <h3 id="Domain-adaptation"><a href="#Domain-adaptation" class="headerlink" title="Domain adaptation:"></a>Domain adaptation:</h3><ul>
-<li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>; <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a> </p>
+<li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>, cycle consistency <a href="https://papers.nips.cc/paper/2020/file/243be2818a23c980ad664f30f48e5d19-Paper.pdf" target="_blank" rel="noopener">[11]</a></p>
 </li>
-<li><p>Translation source domain image to target domain image: <a href="https://arxiv.org/pdf/1711.03213.pdf" target="_blank" rel="noopener">[5]</a>; <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sankaranarayanan_Learning_From_Synthetic_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[6]</a>; <a href="https://arxiv.org/pdf/1904.10620.pdf" target="_blank" rel="noopener">[10]</a> (combine with target domain pseudo labels).</p>
+<li><p>Translation source domain image to target domain image: <a href="https://arxiv.org/pdf/1711.03213.pdf" target="_blank" rel="noopener">[5]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sankaranarayanan_Learning_From_Synthetic_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[6]</a><a href="https://arxiv.org/pdf/1904.10620.pdf" target="_blank" rel="noopener">[10]</a> (combine with target domain pseudo labels).</p>
 </li>
 <li><p>Training with pseudo labels on the target domain: Curriculumn learning <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> (global image label distribution and landmark superpixel label distribution); self-training <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yang_Zou_Unsupervised_Domain_Adaptation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[7]</a>; use multiple models to vote for pseudo labels <a href="https://arxiv.org/pdf/1711.03694.pdf" target="_blank" rel="noopener">[9]</a> </p>
 </li>
@@ -395,6 +395,7 @@
 <p>[8] Hong, Weixiang, et al. “Conditional generative adversarial network for structured domain adaptation.” CVPR, 2018.</p>
 <p>[9] Zhang, Junting, Chen Liang, and C-C. Jay Kuo. “A fully convolutional tri-branch network (FCTN) for domain adaptation.” ICASSP, 2018.</p>
 <p>[10] Li, Yunsheng, Lu Yuan, and Nuno Vasconcelos. “Bidirectional Learning for Domain Adaptation of Semantic Segmentation.” arXiv preprint arXiv:1904.10620 (2019).</p>
+<p>[11] Kang, Guoliang, et al. “Pixel-Level Cycle Association: A New Perspective for Domain Adaptive Semantic Segmentation.” Advances in Neural Information Processing Systems 33 (2020).</p>
 
           
         
