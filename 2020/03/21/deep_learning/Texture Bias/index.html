@@ -77,17 +77,17 @@
 
 
 
-<meta name="description" content="An interesting observation is that CNN is prone to classify an image based on its texture rather than shape. In other words, CNN is biased towards texture. [1] [2] [3] Reference Geirhos, Robert, et al">
+<meta name="description" content="It is claimed in [1] [2] [3] that CNN is biased towards texture, that is, CNN tends to classify an object based on its texture intead of its shape. In [4], it is claimed that texture-bias is caused by">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Texture Bias">
 <meta property="og:url" content="http://yoursite.com/2020/03/21/deep_learning/Texture Bias/index.html">
 <meta property="og:site_name" content="Newly Blog">
-<meta property="og:description" content="An interesting observation is that CNN is prone to classify an image based on its texture rather than shape. In other words, CNN is biased towards texture. [1] [2] [3] Reference Geirhos, Robert, et al">
+<meta property="og:description" content="It is claimed in [1] [2] [3] that CNN is biased towards texture, that is, CNN tends to classify an object based on its texture intead of its shape. In [4], it is claimed that texture-bias is caused by">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-21T05:46:15.452Z">
+<meta property="og:updated_time" content="2020-12-27T06:47:49.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Texture Bias">
-<meta name="twitter:description" content="An interesting observation is that CNN is prone to classify an image based on its texture rather than shape. In other words, CNN is biased towards texture. [1] [2] [3] Reference Geirhos, Robert, et al">
+<meta name="twitter:description" content="It is claimed in [1] [2] [3] that CNN is biased towards texture, that is, CNN tends to classify an object based on its texture intead of its shape. In [4], it is claimed that texture-bias is caused by">
 
 
 
@@ -373,13 +373,16 @@
       
 
       
-        <p>An interesting observation is that CNN is prone to classify an image based on its texture rather than shape. In other words, CNN is biased towards texture. <a href="https://arxiv.org/pdf/1811.12231.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1907.12892.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1909.08245.pdf" target="_blank" rel="noopener">[3]</a></p>
+        <p>It is claimed in <a href="https://arxiv.org/pdf/1811.12231.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1907.12892.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1909.08245.pdf" target="_blank" rel="noopener">[3]</a> that CNN is biased towards texture, that is, CNN tends to classify an object based on its texture intead of its shape.</p>
+<p>In <a href="https://proceedings.neurips.cc/paper/2020/file/db5f9f42a7157abe65bb145000b5871a-Paper.pdf" target="_blank" rel="noopener">[4]</a>, it is claimed that texture-bias is caused by data augmentation approach. Using different data augmentation approaches can introduce either texture-bias or shape-bias. </p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
 <li><p>Geirhos, Robert, et al. “ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness.” ICLR, 2019. <a href="https://github.com/rgeirhos/texture-vs-shape" target="_blank" rel="noopener">[code]</a></p>
 </li>
 <li><p>Brochu, Francis. “Increasing Shape Bias in ImageNet-Trained Networks Using Transfer Learning and Domain-Adversarial Methods.” arXiv preprint arXiv:1907.12892 (2019). </p>
 </li>
 <li><p>Asadi, Nader, Mehrdad Hosseinzadeh, and Mahdi Eftekhari. “Towards Shape Biased Unsupervised Representation Learning for Domain Generalization.” arXiv preprint arXiv:1909.08245 (2019).</p>
+</li>
+<li><p>Hermann, Katherine, Ting Chen, and Simon Kornblith. “The origins and prevalence of texture bias in convolutional neural networks.” NeurIPS, (2020).</p>
 </li>
 </ol>
 

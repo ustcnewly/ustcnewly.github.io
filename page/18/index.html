@@ -933,14 +933,7 @@
       
         
           
-            <p>The GAN zoo: <a href="https://github.com/hindupuravinash/the-gan-zoo" target="_blank" rel="noopener">https://github.com/hindupuravinash/the-gan-zoo</a></p>
-<h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems:"></a>Problems:</h3><ul>
-<li><p>oscillation: can train for a very long time without clearly generating better samples.</p>
-</li>
-<li><p>mode collapse: min-max is not equal to max-min</p>
-</li>
-</ul>
-<h3 id="Training-tricks"><a href="#Training-tricks" class="headerlink" title="Training tricks:"></a>Training tricks:</h3><p>17 tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
+            <h3 id="Training-tricks"><a href="#Training-tricks" class="headerlink" title="Training tricks:"></a>Training tricks:</h3><p>17 tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
 <ul>
 <li><p>soft label: replace 1 with 0.9 and 0 with 0.3</p>
 </li>
@@ -981,7 +974,7 @@
 <li><p>unrolling <a href="https://arxiv.org/pdf/1611.02163.pdf" target="_blank" rel="noopener">[9]</a> and packing <a href="https://papers.nips.cc/paper/7423-pacgan-the-power-of-two-samples-in-generative-adversarial-networks.pdf" target="_blank" rel="noopener">[10]</a></p>
 </li>
 </ul>
-<h3 id="Interesting-variants"><a href="#Interesting-variants" class="headerlink" title="Interesting variants:"></a>Interesting variants:</h3><ul>
+<h3 id="Famous-GANs"><a href="#Famous-GANs" class="headerlink" title="Famous GANs:"></a>Famous GANs:</h3><ul>
 <li><p>LSGAN: replace cross-entropy loss with least square loss</p>
 </li>
 <li><p>Wasserstein GAN: replace discriminator with a critic function</p>
@@ -1006,21 +999,27 @@
 </li>
 <li><p>self-attention GAN <a href="https://arxiv.org/pdf/1805.08318.pdf" target="_blank" rel="noopener">[18]</a></p>
 </li>
-</ul>
-<h3 id="Conditional-GAN"><a href="#Conditional-GAN" class="headerlink" title="Conditional GAN:"></a>Conditional GAN:</h3><ol>
+<li><p>BigGAN <a href="https://arxiv.org/pdf/1809.11096.pdf?utm_campaign=Dynamically%20Typed&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" rel="noopener">[20]</a></p>
+</li>
+<li><p>LoGAN <a href="https://arxiv.org/pdf/1912.00953.pdf" target="_blank" rel="noopener">[19]</a></p>
+</li>
 <li><p>Conditioned on label vector: conditional GAN <a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">[14]</a>, CVAE-GAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[16]</a></p>
 </li>
 <li><p>Conditioned on a single image: pix2pix <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[11]</a>; high-resolution pix2pix <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[12]</a> (add coarse-to-fine strategy); BicycleGAN <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">[13]</a> (combination of cVAE-GAN and cLR-GAN); DAGAN <a href="https://arxiv.org/pdf/1711.04340" target="_blank" rel="noopener">[15]</a></p>
 </li>
-</ol>
+</ul>
 <h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
 <p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a>.</p>
-<h3 id="State-of-the-art"><a href="#State-of-the-art" class="headerlink" title="State-of-the-art:"></a>State-of-the-art:</h3><ul>
-<li>BigGAN <a href="https://arxiv.org/pdf/1809.11096.pdf?utm_campaign=Dynamically%20Typed&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" rel="noopener">[20]</a></li>
-<li>LoGAN <a href="https://arxiv.org/pdf/1912.00953.pdf" target="_blank" rel="noopener">[19]</a></li>
+<h3 id="Tutorial-and-Survey"><a href="#Tutorial-and-Survey" class="headerlink" title="Tutorial and Survey:"></a>Tutorial and Survey:</h3><ul>
+<li><p>The GAN zoo: <a href="https://github.com/hindupuravinash/the-gan-zoo" target="_blank" rel="noopener">https://github.com/hindupuravinash/the-gan-zoo</a></p>
+</li>
+<li><p>A good tutorial: <a href="https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf" target="_blank" rel="noopener">https://github.com/mingyuliutw/cvpr2017\_gan\_tutorial/blob/master/gan_tutorial.pdf</a></p>
+</li>
+<li><p><a href="https://arxiv.org/ftp/arxiv/papers/2005/2005.09165.pdf" target="_blank" rel="noopener">Regularization Methods for Generative Adversarial Networks: An Overview of Recent Studies</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1906.01529.pdf" target="_blank" rel="noopener">Generative adversarial networks in computer vision: A survey and taxonomy</a> <a href="https://github.com/sheqi/GAN_Review" target="_blank" rel="noopener">[code]</a></p>
+</li>
 </ul>
-<h3 id="Tutorial-and-Survey"><a href="#Tutorial-and-Survey" class="headerlink" title="Tutorial and Survey:"></a>Tutorial and Survey:</h3><p>A good tutorial: <a href="https://github.com/mingyuliutw/cvpr2017_gan_tutorial/blob/master/gan_tutorial.pdf" target="_blank" rel="noopener">https://github.com/mingyuliutw/cvpr2017\_gan\_tutorial/blob/master/gan_tutorial.pdf</a></p>
-<p><a href="https://arxiv.org/ftp/arxiv/papers/2005/2005.09165.pdf" target="_blank" rel="noopener">Regularization Methods for Generative Adversarial Networks: An Overview of Recent Studies</a></p>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Brock A, Donahue J, Simonyan K. Large scale gan training for high fidelity natural image synthesis[J]. arXiv preprint arXiv:1809.11096, 2018.</p>
 <p>[2] Wang C, Xu C, Yao X, et al. Evolutionary Generative Adversarial Networks[J]. arXiv preprint arXiv:1803.00657, 2018.</p>
 <p>[3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks[J]. arXiv preprint arXiv:1811.10597, 2018.</p>
@@ -1701,7 +1700,7 @@
             <h2 id="Attention-in-CNN"><a href="#Attention-in-CNN" class="headerlink" title="Attention in CNN:"></a>Attention in CNN:</h2><p>According to <a href="https://arxiv.org/pdf/1805.08819.pdf" target="_blank" rel="noopener">[4]</a>, attention can be categorized into bottom-up attention (visual saliency, unsupervised) and top-down attention (task-driven, supervised).</p>
 <p>According to <a href="https://arxiv.org/pdf/1804.02391.pdf" target="_blank" rel="noopener">[5]</a>, attention can be categorized into forward attention, post-hoc attention, and query-based attention.</p>
 <ul>
-<li><p>forward attention: spatial attention <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhu_An_Empirical_Study_of_Spatial_Attention_Mechanisms_in_Deep_Networks_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[16]</a>, channel attention <a href="https://arxiv.org/pdf/1802.08122.pdf" target="_blank" rel="noopener">[10]</a>,  full attention <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Cheng_Wang_Mancs_A_Multi-task_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[11]</a>, Deformable CNN v1 <a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[8]</a> v2 <a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[9]</a></p>
+<li><p>forward attention: spatial attention <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhu_An_Empirical_Study_of_Spatial_Attention_Mechanisms_in_Deep_Networks_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[16]</a>, channel attention <a href="https://arxiv.org/pdf/1802.08122.pdf" target="_blank" rel="noopener">[10]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[17]</a> <a href="https://arxiv.org/pdf/2012.11879.pdf" target="_blank" rel="noopener">[18]</a>,  full attention <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Cheng_Wang_Mancs_A_Multi-task_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[11]</a>, Deformable CNN v1 <a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[8]</a> v2 <a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[9]</a>, </p>
 </li>
 <li><p>post-hoc attention: CAM <a href="https://arxiv.org/pdf/1512.04150.pdf" target="_blank" rel="noopener">[6]</a>, GradCAM <a href="https://arxiv.org/pdf/1610.02391.pdf" target="_blank" rel="noopener">[7]</a>, scoreCAM <a href="https://arxiv.org/pdf/1910.01279" target="_blank" rel="noopener">[14]</a></p>
 </li>
@@ -1736,6 +1735,8 @@
 <p>[14] Wang, Haofan, et al. “Score-CAM: Improved Visual Explanations Via Score-Weighted Class Activation Mapping.” arXiv preprint arXiv:1910.01279 (2019).</p>
 <p>[15] Chen, Binghui, Weihong Deng, and Jiani Hu. “Mixed high-order attention network for person re-identification.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
 <p>[16] Zhu, Xizhou, et al. “An empirical study of spatial attention mechanisms in deep networks.” ICCV, 2019.</p>
+<p>[17] Wang, Qilong, et al. “ECA-net: Efficient channel attention for deep convolutional neural networks.” CVPR, 2020.</p>
+<p>[18] Qin, Zequn, et al. “FcaNet: Frequency Channel Attention Networks.” arXiv preprint arXiv:2012.11879 (2020).</p>
 
           
         
