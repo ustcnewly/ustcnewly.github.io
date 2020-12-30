@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Lifelong Learning]]></title>
+    <url>%2F2020%2F12%2F28%2Fmachine_learning%2FLifelong%20Learning%2F</url>
+    <content type="text"><![CDATA[Related concepts: online learning, incremental learning, continual learning Survey Continual lifelong learning with neural networks: A review A continual learning survey: Defying forgetting in classification tasks Class-incremental learning: survey and performance evaluation Resources Stanford course]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>lifelong learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Bio-inspired Network]]></title>
     <url>%2F2020%2F12%2F27%2Fdeep_learning%2FBio-inspired%20Network%2F</url>
     <content type="text"><![CDATA[Use the first few layers to simulate neuron activation in human brain [1] Use the attention learnt by network to mimick human attention [2] Reference[1] Dapello, Joel, et al. “Simulating a primary visual cortex at the front of CNNs improves robustness to image perturbations.” BioRxiv (2020). [2] Linsley, Drew, et al. “Learning what and where to attend.” arXiv preprint arXiv:1805.08819 (2018).]]></content>
