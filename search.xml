@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Implicit Modelling]]></title>
     <url>%2F2021%2F01%2F07%2Fmachine_learning%2FImplicit%20Modelling%2F</url>
-    <content type="text"><![CDATA[simulates an infinite-depth network by fixed point iteration $h^=f_{\theta}(h^;x)$, in which $x$ is initial input, $\theta$ is the model parameter of one-time transformation. After infinite times of transformations, $x$ will approach the fixed point $h^*$. DEQ[1], MDEQ[2], iFPN[3] Reference: Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. “Deep equilibrium models.” Advances in Neural Information Processing Systems. 2019. Bai, Shaojie, Vladlen Koltun, and J. Zico Kolter. “Multiscale deep equilibrium models.” arXiv preprint arXiv:2006.08656 (2020). Wang, Tiancai, Xiangyu Zhang, and Jian Sun. “Implicit Feature Pyramid Network for Object Detection.” arXiv preprint arXiv:2012.13563 (2020).]]></content>
+    <content type="text"><![CDATA[simulates an infinite-depth network by fixed point iteration $h=f_{\theta}(h;x)$, in which $x$ is initial input, $\theta$ is the model parameter of one-time transformation. After infinite times of transformations, $x$ will approach the fixed point $h$. DEQ[1], MDEQ[2], iFPN[3] Reference: Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. “Deep equilibrium models.” Advances in Neural Information Processing Systems. 2019. Bai, Shaojie, Vladlen Koltun, and J. Zico Kolter. “Multiscale deep equilibrium models.” arXiv preprint arXiv:2006.08656 (2020). Wang, Tiancai, Xiangyu Zhang, and Jian Sun. “Implicit Feature Pyramid Network for Object Detection.” arXiv preprint arXiv:2012.13563 (2020).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
