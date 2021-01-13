@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Shadow-related Application]]></title>
+    <url>%2F2021%2F01%2F13%2Fmachine_learning%2FShadow-related%20Application%2F</url>
+    <content type="text"><![CDATA[Shadow detection: [1] Object-shadow pair detection: [2] Shadow removal: [3] [4] [5] [6] Shadow generation: [7] [8] References Zhu, Lei, et al. “Bidirectional feature pyramid network with recurrent attention residual modules for shadow detection.” Proceedings of the European Conference on Computer Vision (ECCV). 2018. Wang, Tianyu, et al. “Instance shadow detection.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020. Hu, Xiaowei, et al. “Mask-ShadowGAN: Learning to remove shadows from unpaired data.” Proceedings of the IEEE International Conference on Computer Vision. 2019. Le, Hieu, and Dimitris Samaras. “Shadow removal via shadow image decomposition.” Proceedings of the IEEE International Conference on Computer Vision. 2019. Xiaodong, Cun, Pun Chi-Man, and Shi Cheng. “Towards Ghost-free Shadow Removal via Dual Hierarchical Aggregation Network and Shadow Matting GAN.” arXiv preprint arXiv:1911.08718 (2019). Le, Hieu, and Dimitris Samaras. “From Shadow Segmentation to Shadow Removal.” European Conference on Computer Vision. Springer, Cham, 2020. Liu, Daquan, et al. “ARShadowGAN: Shadow Generative Adversarial Network for Augmented Reality in Single Light Scenes.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020. Zhan, Fangneng, et al. “Adversarial Image Composition with Auxiliary Illumination.” Proceedings of the Asian Conference on Computer Vision. 2020.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>shadow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Weak-shot Object Detection]]></title>
+    <url>%2F2021%2F01%2F13%2Fdeep_learning%2FWeak-shot%20Object%20Detection%2F</url>
+    <content type="text"><![CDATA[Weak-shot object detection is also called cross-supervised or mixed-supervised object detection. Specifically, all categories are splitted into base categories and novel categories. Base categories have box-level annotation while novel categories only have image-level annotations. Transfer common objectness: [1] [3] Transfer the mapping from inaccurate bounding boxes to accurate bounding boxes: [2] Reference[1] Zhong, Yuanyi, et al. “Boosting weakly supervised object detection with progressive knowledge transfer.” European Conference on Computer Vision. Springer, Cham, 2020. [2] Chen, Zitian, et al. “Cross-Supervised Object Detection.” arXiv preprint arXiv:2006.15056 (2020). [3] Li, Yan, et al. “Mixed supervised object detection with robust objectness transfer.” IEEE transactions on pattern analysis and machine intelligence 41.3 (2018): 639-653.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>weakly-supervised</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Implicit Modelling]]></title>
     <url>%2F2021%2F01%2F07%2Fmachine_learning%2FImplicit%20Modelling%2F</url>
     <content type="text"><![CDATA[simulates an infinite-depth network by fixed point iteration $h=f_{\theta}(h;x)$, in which $x$ is initial input, $\theta$ is the model parameter of one-time transformation. After infinite times of transformations, $x$ will approach the fixed point $h$. DEQ[1], MDEQ[2], iFPN[3] Reference: Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. “Deep equilibrium models.” Advances in Neural Information Processing Systems. 2019. Bai, Shaojie, Vladlen Koltun, and J. Zico Kolter. “Multiscale deep equilibrium models.” arXiv preprint arXiv:2006.08656 (2020). Wang, Tiancai, Xiangyu Zhang, and Jian Sun. “Implicit Feature Pyramid Network for Object Detection.” arXiv preprint arXiv:2012.13563 (2020).]]></content>
