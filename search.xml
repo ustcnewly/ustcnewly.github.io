@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Image Matching]]></title>
+    <url>%2F2021%2F02%2F18%2Fmachine_learning%2FImage%20Matching%2F</url>
+    <content type="text"><![CDATA[Survey Image Matching from Handcrafted to Deep Features: A Survey Deep learning methods Correlation tensor: [1] [2] [3] Reference Rocco, Ignacio, et al. “Neighbourhood consensus networks.” arXiv preprint arXiv:1810.10510 (2018). Rocco, Ignacio, Relja Arandjelovic, and Josef Sivic. “Convolutional neural network architecture for geometric matching.” CVPR, 2017. Chen, Jianchun, et al. “Arbicon-net: Arbitrary continuous geometric transformation networks for image registration.” NIPS, 2019.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Transformer]]></title>
     <url>%2F2021%2F02%2F10%2Fmachine_learning%2FTransformer%2F</url>
     <content type="text"><![CDATA[Transformer [1] is multi-head self-attention, which can be used for sequence-to-sequence or sequence-to-label applications. Applications classification [2] object detection [3] person reID [7] image-to-image translation [4]: colorization [6] Combination of transformer and CNN: T2T-Vit [9] TransUNet [8] Interpretability beyond attention visualization [5] Survey A survey on visual transformer Transformers in Vision: A Survey Reference[1] Vaswani, Ashish, et al. “Attention is all you need.” NeurIPS, 2017.[2] Dosovitskiy, Alexey, et al. “An image is worth 16x16 words: Transformers for image recognition at scale.” arXiv preprint arXiv:2010.11929 (2020).[3] Carion, Nicolas, et al. “End-to-End Object Detection with Transformers.” arXiv preprint arXiv:2005.12872 (2020).[4] Chen, Hanting, et al. “Pre-Trained Image Processing Transformer.” arXiv preprint arXiv:2012.00364 (2020).[5] Chefer, Hila, Shir Gur, and Lior Wolf. “Transformer Interpretability Beyond Attention Visualization.” arXiv preprint arXiv:2012.09838 (2020).[6] Manoj Kumar, Dirk Weissenborn &amp; Nal Kalchbrenner, “COLORIZATION TRANSFORMER”, ICLR, 2021.[7] Shuting He, Hao Luo, Pichao Wang, Fan Wang, Hao Li, Wei Jiang, “TransReID: Transformer-based Object Re-Identification”, arXiv preprint arXiv:2102.04378 (2021).[8] Jieneng Chen, Yongyi Lu, Qihang Yu, Xiangde Luo, Ehsan Adeli, Yan Wang, Le Lu, Alan L. Yuille, Yuyin Zhou, “TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation”, arXiv preprint arXiv:2102.04306 (2021).[9] Li Yuan, Yunpeng Chen, Tao Wang, Weihao Yu, Yujun Shi, Francis EH Tay, Jiashi Feng, Shuicheng Yan, “Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet”, arXiv preprint arXiv:2101.11986 (2021).]]></content>
