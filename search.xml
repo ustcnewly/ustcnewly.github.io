@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Illumination Model]]></title>
     <url>%2F2021%2F02%2F23%2Fhardware%2Fcamera%2FIllumination%20Model%2F</url>
-    <content type="text"><![CDATA[Dichromatic Reflection Model I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i} Reference Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.]]></content>
+    <content type="text"><![CDATA[Dichromatic Reflection Model I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i} [1] [2] Reference Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.]]></content>
       <categories>
         <category>paper note</category>
       </categories>
