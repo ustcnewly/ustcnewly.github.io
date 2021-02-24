@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Illumination Model]]></title>
+    <url>%2F2021%2F02%2F23%2Fhardware%2Fcamera%2FIllumination%20Model%2F</url>
+    <content type="text"><![CDATA[Dichromatic Reflection Model I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i} Reference Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Image Matching]]></title>
     <url>%2F2021%2F02%2F18%2Fmachine_learning%2FImage%20Matching%2F</url>
     <content type="text"><![CDATA[Survey Image Matching from Handcrafted to Deep Features: A Survey Deep learning methods Correlation tensor: [1] [2] [3] Reference Rocco, Ignacio, et al. “Neighbourhood consensus networks.” arXiv preprint arXiv:1810.10510 (2018). Rocco, Ignacio, Relja Arandjelovic, and Josef Sivic. “Convolutional neural network architecture for geometric matching.” CVPR, 2017. Chen, Jianchun, et al. “Arbicon-net: Arbitrary continuous geometric transformation networks for image registration.” NIPS, 2019.]]></content>
