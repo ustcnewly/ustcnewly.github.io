@@ -375,12 +375,12 @@
         
           
             <ol>
-<li>Dichromatic Reflection Model <script type="math/tex">I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i}</script> <a href="https://apps.dtic.mil/sti/pdfs/ADA150999.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-61864-3_17#enumeration" target="_blank" rel="noopener">[2]</a></li>
+<li><p>Dichromatic Reflection Model <a href="https://apps.dtic.mil/sti/pdfs/ADA150999.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-61864-3_17#enumeration" target="_blank" rel="noopener">[2]</a> <script type="math/tex">I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i}</script>, in which $$</p>
+</li>
+<li><p>gray pixels:  pixels with equal RGB values. detecting gray pixels in a color-biased image is not easy. <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Qian_On_Finding_Gray_Pixels_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
+</li>
 </ol>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/L2j9XQP.jpg" width="900"></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li>Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.</li>
-</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.<br>[2] Song, Shuangbing, et al. “Illumination Harmonization with Gray Mean Scale.” Computer Graphics International Conference. Springer, Cham, 2020.<br>[3] Qian, Yanlin, et al. “On finding gray pixels.” CVPR, 2019.</p>
 
           
         
@@ -676,11 +676,11 @@
           
             <p>Transformer <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf" target="_blank" rel="noopener">[1]</a> is multi-head self-attention, which can be used for sequence-to-sequence or sequence-to-label applications.</p>
 <h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h3><ul>
-<li>classification <a href="https://arxiv.org/pdf/2010.11929.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>object detection <a href="https://arxiv.org/pdf/2005.12872.pdf" target="_blank" rel="noopener">[3]</a></li>
-<li>person reID <a href="https://arxiv.org/pdf/2102.04378.pdf" target="_blank" rel="noopener">[7]</a></li>
-<li>image-to-image translation <a href="https://arxiv.org/pdf/2012.00364.pdf" target="_blank" rel="noopener">[4]</a>: colorization <a href="https://openreview.net/pdf?id=5NA1PinlGFu" target="_blank" rel="noopener">[6]</a> </li>
-<li>unconditional GAN <a href="https://arxiv.org/pdf/2102.07074.pdf" target="_blank" rel="noopener">[10]</a></li>
+<li>classification: ViT<a href="https://arxiv.org/pdf/2010.11929.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>object detection: DETR<a href="https://arxiv.org/pdf/2005.12872.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>person reID: <a href="https://arxiv.org/pdf/2102.04378.pdf" target="_blank" rel="noopener">[7]</a></li>
+<li>image-to-image translation: super-resolution, denoising, deraining <a href="https://arxiv.org/pdf/2012.00364.pdf" target="_blank" rel="noopener">[4]</a>, colorization <a href="https://openreview.net/pdf?id=5NA1PinlGFu" target="_blank" rel="noopener">[6]</a> </li>
+<li>unconditional GAN: <a href="https://arxiv.org/pdf/2102.07074.pdf" target="_blank" rel="noopener">[10]</a></li>
 </ul>
 <h3 id="Combination-of-transformer-and-CNN"><a href="#Combination-of-transformer-and-CNN" class="headerlink" title="Combination of transformer and CNN:"></a>Combination of transformer and CNN:</h3><ul>
 <li>T2T-Vit <a href="https://arxiv.org/pdf/2101.11986.pdf" target="_blank" rel="noopener">[9]</a></li>
@@ -688,6 +688,9 @@
 </ul>
 <h3 id="Interpretability"><a href="#Interpretability" class="headerlink" title="Interpretability"></a>Interpretability</h3><ul>
 <li>beyond attention visualization <a href="https://arxiv.org/pdf/2012.09838" target="_blank" rel="noopener">[5]</a></li>
+</ul>
+<h3 id="Position-embedding"><a href="#Position-embedding" class="headerlink" title="Position embedding"></a>Position embedding</h3><ul>
+<li><a href="https://mp.weixin.qq.com/s/QlR528MYCioEuYwJIs20Pg" target="_blank" rel="noopener">A summary</a></li>
 </ul>
 <h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ul>
 <li><a href="https://arxiv.org/pdf/2012.12556.pdf" target="_blank" rel="noopener">A survey on visual transformer</a></li>
