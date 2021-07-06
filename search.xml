@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Few-Shot Image Generation From Large Dataset to Small Dataset]]></title>
+    <url>%2F2021%2F07%2F06%2Fdeep_learning%2FFew-Shot%20Image%20Generation%20From%20Large%20Dataset%20to%20Small%20Dataset%2F</url>
+    <content type="text"><![CDATA[Reference]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>GAN</tag>
+        <tag>few-shot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Image Manipulation Detection]]></title>
     <url>%2F2021%2F04%2F28%2Fdeep_learning%2FImage%20Manipulation%20Detection%2F</url>
     <content type="text"><![CDATA[Datasets Casia V1.0/2.0: [paper] [v1] [v2] Columbia Uncompressed Image Splicing Detection: [dataset] Pawel korus-Realistic Tampering Dataset: [dataset] Coverage: [dataset] NIST16: [dataset] self-made dataset with [code]]]></content>
