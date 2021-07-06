@@ -281,6 +281,191 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/Makefile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/compiler/Makefile/" itemprop="url">Makefile</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/compiler/" itemprop="url" rel="index">
+                    <span itemprop="name">compiler</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li><p>use nemiver to debug. </p>
+<ul>
+<li>gcc/g++ <strong>-g</strong> hello.c -o hello.o <font color="green">#-g for debug</font></li>
+<li>nemiver hello <font color="green">#bin file</font></li>
+</ul>
+</li>
+<li><p>The comment character # does not introduce a make comment in the text of commands.</p>
+</li>
+<li><p><strong>Wildcards</strong>: <em>.</em> expands to all the files containing a period. A question mark represents any single character, and […] represents a character class.</p>
+</li>
+<li><p>.PHONY: clean</p>
+</li>
+<li><p><strong>Automatic Variables</strong>:</p>
+<ul>
+<li>$@ The name of the current target.</li>
+<li>$% The filename element of an archive member specification.</li>
+<li>$&lt; The name of the first prerequisite.</li>
+<li>$? The names of all prerequisites that are newer than the target, separated by spaces.</li>
+<li>$^ The names of all the prerequisites, separated by spaces. This list has duplicate names removed since for most uses, such as compiling, copying, etc., duplicates are not wanted.</li>
+<li>$+ The names of all the prerequisites separated by spaces, including duplicates. This variable was created for specific situations such as arguments to linkers where duplicate values have meaning.</li>
+<li>$* The stem of the target filename. A stem is typically a filename without its suffix. Its use outside of pattern rules is discouraged.</li>
+</ul>
+</li>
+<li><p>run makefile with —just-print option to view the execution process</p>
+</li>
+</ol>
+<h2 id="How-to-write-Makefile"><a href="#How-to-write-Makefile" class="headerlink" title="How to write Makefile"></a>How to write Makefile</h2><ol>
+<li><p>single C-file</p>
+ <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">hello: hello.c</span></span><br><span class="line">	gcc -g hello.c -o hello&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>multiple C-files</p>
+ <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">count_words: count_words.o lexer.o -lfl</span></span><br><span class="line">	gcc count_words.o lexer.o -lfl -ocount_words</span><br><span class="line"><span class="section">count_words.o: count_words.c</span></span><br><span class="line">	gcc -g -c count_words.c</span><br><span class="line"><span class="section">lexer.o: lexer.c</span></span><br><span class="line">	gcc -g -c lexer.c</span><br><span class="line"><span class="section">lexer.c: lexer.l</span></span><br><span class="line">	flex -t lexer.l &gt; lexer.c</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>set <strong>VPATH</strong> and <strong>CPPFLAGS</strong> in implicit rules</p>
+ <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">VPATH    = src <span class="keyword">include</span></span><br><span class="line">CPPFLAGS = -I <span class="keyword">include</span></span><br><span class="line"></span><br><span class="line"><span class="section">count_words: counter.o lexer.o -lfl</span></span><br><span class="line"><span class="section">count_words.o: counter.h</span></span><br><span class="line"><span class="section">counter.o: counter.h lexer.h</span></span><br><span class="line"><span class="section">lexer.o: lexer.h</span></span><br></pre></td></tr></table></figure>
+<p>VPATH can be used in a more advanced fashion as follows,</p>
+ <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vpath</span> %.c src</span><br><span class="line"><span class="keyword">vpath</span> %.l src</span><br><span class="line"><span class="keyword">vpath</span> %.h <span class="keyword">include</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use library <strong>.a</strong>. pack <strong>.o</strong> files into <strong>.a</strong>, similar as <strong>.lib</strong> in Windows.</p>
+ <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">libcounter.a: libcounter.a(lexer.o) libcounter.a(counter.o)</span></span><br><span class="line"><span class="section">libcounter.a(lexer.o): lexer.o</span></span><br><span class="line">	<span class="variable">$(AR)</span> <span class="variable">$(ARFLAGS)</span> <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">libcounter.a(counter.o): counter.o</span></span><br><span class="line">	<span class="variable">$(AR)</span> <span class="variable">$(ARFLAGS)</span> <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/CMake/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -680,7 +865,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">192</span>
+                  <span class="site-state-item-count">193</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

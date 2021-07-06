@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Few-Shot Image Generation From Base Categories to Novel Categories]]></title>
+    <url>%2F2021%2F07%2F06%2Fdeep_learning%2FFew-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories%2F</url>
+    <content type="text"><![CDATA[One early one-shot generative model [6], specifically designed for hand-written charaters, technically not a generation model. Fusion-based method: Generative Matching Network (GMN) [1] (VAE with matching network for generator and recognizer). MatchingGAN [3] learns reasonable interpolation coefficients. F2GAN [5] first fuses high-level features and then fills in low-level details. Optimization-based method: FIGR [2] is based on Reptile. DAWSON [4] is based on MAML. Transformation-based method: DAGAN [6] samples random vectors to generate new images. DeltaGAN [7] learns sample-specific delta. Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019). [3] Yan Hong, Li Niu, Jianfu Zhang, Liqing Zhang, “MatchingGAN: Matching-based Few-shot Image Generation”, ICME, 2020 [4] Weixin Liang, Zixuan Liu, Can Liu: “DAWSON: A Domain Adaptive Few Shot Generation Framework.” CoRR abs/2001.00576 (2020) [5] Yan Hong, Li Niu, Jianfu Zhang, Weijie Zhao, Chen Fu, Liqing Zhang: “F2GAN: Fusing-and-Filling GAN for Few-shot Image Generation.” ACM MM (2020) [6] Antreas Antoniou, Amos J. Storkey, Harrison Edwards: “Data Augmentation Generative Adversarial Networks.” stat (2018) [7] Yan Hong, Li Niu, Jianfu Zhang, Jing Liang, Liqing Zhang: “DeltaGAN: Towards Diverse Few-shot Image Generation with Sample-Specific Delta.” CoRR abs/2009.08753 (2020)]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>GAN</tag>
+        <tag>few-shot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Few-Shot Image Generation From Large Dataset to Small Dataset]]></title>
     <url>%2F2021%2F07%2F06%2Fdeep_learning%2FFew-Shot%20Image%20Generation%20From%20Large%20Dataset%20to%20Small%20Dataset%2F</url>
-    <content type="text"><![CDATA[Reference]]></content>
+    <content type="text"><![CDATA[Transfer a large proportion of parameters and only update a few parameters [1] updates scaling and shifting parameters. [2] updates the miner before generator. [3] uses Fisher information to select the parameters to be updates. Empirically, the last layers are prone to be frozen. Similarly, in [6], the last layers are frozen and scaling/shifting parameters are predicted. Transfer structure similarity from large dataset to small dataset: [4] Transfer parameter basis: [5] adapts the singular values of the pre-trained weights while freezing the corresponding singular vectors. Reference Atsuhiro Noguchi, Tatsuya Harada: “Image generation from small datasets via batch statistics adaptation.” ICCV (2019) Yaxing Wang, Abel Gonzalez-Garcia, David Berga, Luis Herranz, Fahad Shahbaz Khan, Joost van de Weijer: “MineGAN: effective knowledge transfer from GANs to target domains with few images.” CVPR (2020). Yijun Li, Richard Zhang, Jingwan Lu, Eli Shechtman: “Few-shot Image Generation with Elastic Weight Consolidation.” NeurIPS (2020). Utkarsh Ojha, Yijun Li, Jingwan Lu, Alexei A. Efros, Yong Jae Lee, Eli Shechtman, Richard Zhang: “Few-shot Image Generation via Cross-domain Correspondence.” CVPR (2021). Esther Robb, Wen-Sheng Chu, Abhishek Kumar, Jia-Bin Huang: “Few-Shot Adaptation of Generative Adversarial Networks.” arXiv (2020). Miaoyun Zhao, Yulai Cong, Lawrence Carin: “On Leveraging Pretrained GANs for Generation with Limited Data.” ICML (2020).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
