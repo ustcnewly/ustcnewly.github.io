@@ -281,162 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Scale Variation for Object Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/12/deep_learning/Scale Variation for Object Detection/" itemprop="url">Scale Variation for Object Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
-                2019-07-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>This problem is well discussed in <a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a>. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map.</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/HlFdOUN.jpg" width="100%"></p>
-<ol>
-<li><p>The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. </p>
-</li>
-<li><p>The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. </p>
-</li>
-<li><p>As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales.</p>
-</li>
-<li><p>use different dilation rates to vary receptive fields<br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ew7IgsX.jpg" width="80%"></p>
-</li>
-<li><p>use feature pyramid <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Lin_Feature_Pyramid_Networks_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>  </p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Lin, Tsung-Yi, et al. “Feature pyramid networks for object detection.” CVPR, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/deep_learning/Image Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1059,7 +903,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/deep_learning/Few-Shot Generation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/deep_learning/Few-Shot Feature Generation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1078,7 +922,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/31/deep_learning/Few-Shot Generation/" itemprop="url">Few-Shot Generation</a></h1>
+                <a class="post-title-link" href="/2019/05/31/deep_learning/Few-Shot Feature Generation/" itemprop="url">Few-Shot Feature Generation</a></h1>
         
 
         <div class="post-meta">
@@ -1153,26 +997,15 @@
         
           
             <h2 id="Few-shot-Feature-Generation"><a href="#Few-shot-Feature-Generation" class="headerlink" title="Few-shot Feature Generation"></a>Few-shot Feature Generation</h2><ol>
-<li><p>Meta-learning method: <a href="https://www.cse.ust.hk/~yqsong/papers/2018-NIPS-MetaGAN-long.pdf" target="_blank" rel="noopener">[3]</a></p>
+<li><p>Meta-learning method: <a href="https://www.cse.ust.hk/~yqsong/papers/2018-NIPS-MetaGAN-long.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
-<li><p>Delta-based: delta between each pair of samples <a href="https://arxiv.org/pdf/1806.04734.pdf" target="_blank" rel="noopener">[4]</a>; delta between each sample and class center <a href="https://arxiv.org/pdf/2002.10826.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1803.09014.pdf" target="_blank" rel="noopener">[8]</a></p>
-</li>
-</ol>
-<h2 id="Few-shot-Image-Generation"><a href="#Few-shot-Image-Generation" class="headerlink" title="Few-shot Image Generation"></a>Few-shot Image Generation</h2><p>One early one-shot generative model <a href="https://cims.nyu.edu/~brenden/papers/LakeEtAl2011CogSci.pdf" target="_blank" rel="noopener">[6]</a>, specifically designed for hand-written charaters, technically not a generation model. </p>
-<ol>
-<li><p>Metric-based method: Generative Matching Network (GMN) <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">[1]</a> (VAE-like network with matching network for generator and recognizer), MatchingGAN <a href="https://arxiv.org/pdf/2003.03497.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-<li><p>Optimization-based method: FIGR <a href="https://arxiv.org/pdf/1901.02199v1.pdf" target="_blank" rel="noopener">[2]</a>: use Reptile for few-shot generation</p>
+<li><p>Delta-based: delta between each pair of samples <a href="https://arxiv.org/pdf/1806.04734.pdf" target="_blank" rel="noopener">[2]</a>; delta between each sample and class center <a href="https://arxiv.org/pdf/2002.10826.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.09014.pdf" target="_blank" rel="noopener">[4]</a></p>
 </li>
 </ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018.</p>
-<p>[2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019).</p>
-<p>[3] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018.</p>
-<p>[4] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018.</p>
-<p>[5] Yan Hong, Li Niu, Jianfu Zhang, Liqing Zhang, “MatchingGAN: Matching-based Few-shot Image Generation”, ICME, 2020</p>
-<p>[6] Brenden M. Lake, Ruslan Salakhutdinov, Jason Gross, Joshua B. Tenenbaum, “One shot learning of simple visual concepts”. CogSci 2011</p>
-<p>[7] Liu, Jialun, et al. “Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective.” arXiv preprint arXiv:2002.10826 (2020).</p>
-<p>[8] Yin, Xi, et al. “Feature transfer learning for face recognition with under-represented data.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018.</p>
+<p>[2] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018.</p>
+<p>[3] Liu, Jialun, et al. “Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective.” arXiv preprint arXiv:2002.10826 (2020).</p>
+<p>[4] Yin, Xi, et al. “Feature transfer learning for face recognition with under-represented data.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.</p>
 
           
         
@@ -1866,6 +1699,150 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/deep_learning/Aesthetic Evaluation and Cropping/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/12/deep_learning/Aesthetic Evaluation and Cropping/" itemprop="url">Aesthetic Evaluation and Cropping</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-12T08:45:19+08:00">
+                2019-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><a href="https://github.com/bcmi/Awesome-Aesthetic-Evaluation-and-Cropping" target="_blank" rel="noopener">Awesome-Aesthetic-Evaluation-and-Cropping</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1920,7 +1897,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">192</span>
+                  <span class="site-state-item-count">191</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

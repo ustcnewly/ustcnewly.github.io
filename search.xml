@@ -157,17 +157,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Few-shot Classification and Generation]]></title>
-    <url>%2F2020%2F09%2F23%2Fdeep_learning%2FFew-shot%20Classification%20and%20Generation%2F</url>
-    <content type="text"><![CDATA[Few-shot Image ClassificationBaselines Matching Networks for One Shot Learning [pdf] [code] Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks [pdf] [code] On First-Order Meta-Learning Algorithms [pdf] [code] Learning to Compare: Relation Network for Few-Shot Learning [pdf] [code] DPGN: Distribution Propagation Graph Network for Few-shot Learning [pdf] [code] Meta-Transfer Learning for Few-Shot Learning [pdf] [code] Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation [pdf] [code] Datasets Omniglot [link] EMNIST [link] miniImagenet [link] Fewshot-CIFAR100 [link] tieredImageNet [link] Few-shot Image GenerationBaselines FIGR: Few-shot Image Generation with Reptile [pdf] [code] Few-shot Generative Modelling with Generative Matching [pdf] [code] DAWSON: A domain adaptive few shot generation framework [pdf] [code] Data Augmentation Generative Adversarial Networks [pdf] [code] F2GAN: Fusing-and-Filling GAN for Few-shot Image Generation [pdf] [code] Datasets Omniglot [link] EMNIST [link] VGGFace [link] Animal Faces [link] Flowers [link] NABbirds [link]]]></content>
-      <categories>
-        <category>paper note</category>
-      </categories>
-      <tags>
-        <tag>few-shot learning</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Camouflaged Object Detection and Segmentation]]></title>
     <url>%2F2020%2F09%2F13%2Fdeep_learning%2FCamouflaged%20Object%20Detection%20and%20Segmentation%2F</url>
     <content type="text"><![CDATA[Camouflaged Object Detection: [1] Camouflaged Object Segmentation [2] Reference Fan, Deng-Ping, et al. “Camouflaged object detection.” CVPR, 2020. Yan, Jinnan, et al. “MirrorNet: Bio-Inspired Adversarial Attack for Camouflaged Object Segmentation.” arXiv preprint arXiv:2007.12881 (2020).]]></content>
@@ -568,9 +557,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Few-Shot Generation]]></title>
-    <url>%2F2019%2F05%2F31%2Fdeep_learning%2FFew-Shot%20Generation%2F</url>
-    <content type="text"><![CDATA[Few-shot Feature Generation Meta-learning method: [3] Delta-based: delta between each pair of samples [4]; delta between each sample and class center [7] [8] Few-shot Image GenerationOne early one-shot generative model [6], specifically designed for hand-written charaters, technically not a generation model. Metric-based method: Generative Matching Network (GMN) [1] (VAE-like network with matching network for generator and recognizer), MatchingGAN [5] Optimization-based method: FIGR [2]: use Reptile for few-shot generation Reference[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018. [2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019). [3] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018. [4] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018. [5] Yan Hong, Li Niu, Jianfu Zhang, Liqing Zhang, “MatchingGAN: Matching-based Few-shot Image Generation”, ICME, 2020 [6] Brenden M. Lake, Ruslan Salakhutdinov, Jason Gross, Joshua B. Tenenbaum, “One shot learning of simple visual concepts”. CogSci 2011 [7] Liu, Jialun, et al. “Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective.” arXiv preprint arXiv:2002.10826 (2020). [8] Yin, Xi, et al. “Feature transfer learning for face recognition with under-represented data.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.]]></content>
+    <title><![CDATA[Few-Shot Feature Generation]]></title>
+    <url>%2F2019%2F05%2F31%2Fdeep_learning%2FFew-Shot%20Feature%20Generation%2F</url>
+    <content type="text"><![CDATA[Few-shot Feature Generation Meta-learning method: [1] Delta-based: delta between each pair of samples [2]; delta between each sample and class center [3] [4] Reference[1] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018. [2] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018. [3] Liu, Jialun, et al. “Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective.” arXiv preprint arXiv:2002.10826 (2020). [4] Yin, Xi, et al. “Feature transfer learning for face recognition with under-represented data.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.]]></content>
       <categories>
         <category>paper note</category>
       </categories>

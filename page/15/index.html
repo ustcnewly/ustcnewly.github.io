@@ -281,177 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_installation/" itemprop="url">Boost_installation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
-<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
-<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
-<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
-<hr>
-<p>If you have installed boost, using it in a VC project just takes two steps:</p>
-<ol>
-<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
-</li>
-<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
-</li>
-<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
-</li>
-</ol>
-<p>Notes:</p>
-<ol>
-<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
-<li>build-&gt;configuration manager</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_file_system/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2126,6 +1955,174 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Reasons to Reject a Paper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/others/Reasons to Reject a Paper/" itemprop="url">Reasons to Reject a Paper</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Strong reasons:</strong> </p>
+<ol>
+<li>Promise more than delivered (this is the first work….).</li>
+<li>Miss important references (closely related).</li>
+<li>Results are too incremental or too unconvincing, or lower than state-of-the-art.</li>
+<li>Poorly written or oraganized.</li>
+<li>Incorrect statements or statements without support.</li>
+<li>Lack of component analysis for important components.</li>
+</ol>
+<p><strong>Weak reasons:</strong></p>
+<ol>
+<li>Novelty is minor or incremental. Just an extension of A, or similar to A, or combination of A and B.</li>
+<li>Motivation is unclear or arguable.</li>
+<li>No theoretical guarantee of the effectiveness.</li>
+<li>No technical contribution: too few math formulations or the proposed method is too straightforward.</li>
+<li>Formulations are too dense and hard to follow.</li>
+<li>Paper writing has some flaws (e.g., ambiguity, redundancy, a few typos or grammar mistakes).</li>
+<li>Improvement is not very significant.</li>
+<li>Lack of component analysis for less important components.</li>
+<li>Lack of qualitative analysis.</li>
+<li>Unfair or insufficient comparison with state-of-the-art. Miss some baselines. Sometimes we need to create baselines if necessary.</li>
+<li>Hyper-parameter analysis: too many hyper-parameters, unclear how to set hyper-parameter, sensitivity to hyper-parameters. </li>
+<li>No significant test.</li>
+<li>Miss some details (e.g., technical details or experimental details), not self-contained. </li>
+<li>Miss less important references.</li>
+<li>Miss analyses on time/memory/model complexity</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2180,7 +2177,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">192</span>
+                  <span class="site-state-item-count">191</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
