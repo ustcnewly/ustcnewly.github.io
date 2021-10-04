@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CLIP]]></title>
+    <url>%2F2021%2F09%2F27%2Fdeep_learning%2FCLIP%2F</url>
+    <content type="text"><![CDATA[image classication: CLIP [1], learnable prompt [2] video classification: ActionCLIP [3] object detection: ViLD [4] visual grounding: CPT [5] Reference[1] Radford, Alec, et al. “Learning transferable visual models from natural language supervision.” arXiv preprint arXiv:2103.00020 (2021). [2] Zhou, Kaiyang, et al. “Learning to Prompt for Vision-Language Models.” arXiv preprint arXiv:2109.01134 (2021). [3] Wang, Mengmeng, Jiazheng Xing, and Yong Liu. “ActionCLIP: A New Paradigm for Video Action Recognition.” arXiv preprint arXiv:2109.08472 (2021). [4] Gu, Xiuye, et al. “Zero-Shot Detection via Vision and Language Knowledge Distillation.” arXiv preprint arXiv:2104.13921 (2021). [5] Yao, Yuan, et al. “CPT: Colorful Prompt Tuning for Pre-trained Vision-Language Models.” arXiv preprint arXiv:2109.11797 (2021).]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Layout Generation]]></title>
     <url>%2F2021%2F07%2F22%2Fdeep_learning%2FLayout%20Generation%2F</url>
     <content type="text"><![CDATA[VAE/GAN: [1] [6] [7](hierarchical encoder/decoder) GNN: [2] [5] autoregressive: [3] [4] Reference Zheng, Xinru, et al. “Content-aware generative modeling of graphic design layouts.” ACM Transactions on Graphics (TOG) 38.4 (2019): 1-15. Lee, Hsin-Ying, et al. “Neural design network: Graphic layout generation with constraints.” ECCV, 2020. Gupta, Kamal, et al. “Layout Generation and Completion with Self-attention.” arXiv preprint arXiv:2006.14615 (2020). Jyothi, Akash Abdu, et al. “Layoutvae: Stochastic scene layout generation from a label set.” ICCV, 2019. Li, Jianan, et al. “Layoutgan: Generating graphic layouts with wireframe discriminators.” ICLR, 2019. Arroyo, Diego Martin, Janis Postels, and Federico Tombari. “Variational Transformer Networks for Layout Generation.” CVPR, 2021. Patil, Akshay Gadi, et al. “Read: Recursive autoencoders for document layout generation.” CVPR Workshops. 2020.]]></content>
