@@ -281,6 +281,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Energy Efficient Deep Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Energy Efficient Deep Learning/" itemprop="url">Energy Efficient Deep Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Light-weighted network structure</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1610.02357" target="_blank" rel="noopener">Xception</a>: strictly speaking, not light-weighted CNN</li>
+<li><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></li>
+<li><a href="https://arxiv.org/abs/1704.04861" target="_blank" rel="noopener">MobileNet</a></li>
+<li><a href="https://arxiv.org/abs/1707.01083" target="_blank" rel="noopener">ShuffleNet</a></li>
+<li><a href="https://arxiv.org/pdf/2011.12289.pdf" target="_blank" rel="noopener">MicroNet</a></li>
+</ul>
+<p>SqueezeNet, MobileNet, and ShuffleNet share the same idea: decouple the temporal convolution and spatial convolution to reduce the nummber of parameters, sharing the similar spirit with <a href="https://arxiv.org/pdf/1711.10305.pdf" target="_blank" rel="noopener">Pseudo-3D Residual Networks</a>. SqueezeNet is serial while MobileNet and ShuffleNet are parrallel. MobileNet is a special case of ShuffleNet when using only one group.</p>
+<p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Zhang_Efficient_and_Accurate_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Low-rank approximation</a> ($k\times k \times c\times d = k\times k\times c\times d’ + 1\times 1\times d’\times d$) also falls into the above scope. The difference between MobileNet and Low-rank approximation is layerwise convolution or not.</p>
+</li>
+<li><p>Tweak network structure</p>
+<ul>
+<li>prune nodes based on certain criteria (e.g., <a href="https://arxiv.org/pdf/1510.00149.pdf" target="_blank" rel="noopener">response value</a>, <a href="https://arxiv.org/pdf/1801.05787.pdf" target="_blank" rel="noopener">Fisher information</a>): require special implementation and take up more space than expected due to irregular network structure.</li>
+</ul>
+</li>
+<li><p>Compress weights</p>
+<ul>
+<li>Quantization (fixed bit number): learn codebook and encode weights. Fine-tune codebook after quantizatizing weights, which averages the gradient of weights belonging to the same cluster. Extreme cases are <a href="https://arxiv.org/pdf/1510.03009.pdf" target="_blank" rel="noopener">binary net</a> and <a href="https://arxiv.org/pdf/1612.01064.pdf" target="_blank" rel="noopener">ternary net</a>. Binary (resp, ternary) net are quantized to [-1, 1] (resp, [-1, 0, 1]), with different weights $\alpha$ for different layers.</li>
+<li>Huffman Coding (flexible bit number): applied after quantization for further compression.</li>
+</ul>
+</li>
+<li><p>Computation</p>
+<ul>
+<li>spatial domain to frequency domain: convert convolution to pointwise multiplication by using FFT</li>
+</ul>
+</li>
+<li><p>Sparsity regularization</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1712.01312.pdf" target="_blank" rel="noopener">L0 norm</a></li>
+</ul>
+</li>
+<li><p>Efficient Inference</p>
+<ul>
+<li>cascade of networks, early exit network (predict whether to exit or not after each layer) <a href="https://arxiv.org/pdf/1702.07811.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://papers.nips.cc/paper/7058-adaptive-classification-for-prediction-under-a-budget.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+</li>
+</ol>
+<p>Good introduction slides: <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf" target="_blank" rel="noopener">http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Deep Learning Platform/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1214,7 +1395,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">195</span>
+                  <span class="site-state-item-count">196</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1236,7 +1417,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">101</span>
+                  <span class="site-state-item-count">102</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
