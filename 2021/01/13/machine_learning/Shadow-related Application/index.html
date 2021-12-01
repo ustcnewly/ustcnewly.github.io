@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="Shadow detection: [1]   Object-shadow pair detection: [2]  Shadow removal: [3] [4] [5] [6]  Shadow generation: [7] [8]  Remove occluder and its associated shadow [9]   References Zhu, Lei, et al. “Bi">
+<meta name="description" content="Application Shadow detection: [1]   Object-shadow pair detection: [2]  Shadow removal: [3] [4] [5] [6]  Shadow generation: [7] [8]  Remove occluder and its associated shadow [9]   DatasetShadow Genera">
 <meta name="keywords" content="shadow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shadow-related Application">
 <meta property="og:url" content="http://yoursite.com/2021/01/13/machine_learning/Shadow-related Application/index.html">
 <meta property="og:site_name" content="Newly Blog">
-<meta property="og:description" content="Shadow detection: [1]   Object-shadow pair detection: [2]  Shadow removal: [3] [4] [5] [6]  Shadow generation: [7] [8]  Remove occluder and its associated shadow [9]   References Zhu, Lei, et al. “Bi">
+<meta property="og:description" content="Application Shadow detection: [1]   Object-shadow pair detection: [2]  Shadow removal: [3] [4] [5] [6]  Shadow generation: [7] [8]  Remove occluder and its associated shadow [9]   DatasetShadow Genera">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-09-17T08:35:55.866Z">
+<meta property="og:updated_time" content="2021-11-01T10:34:36.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shadow-related Application">
-<meta name="twitter:description" content="Shadow detection: [1]   Object-shadow pair detection: [2]  Shadow removal: [3] [4] [5] [6]  Shadow generation: [7] [8]  Remove occluder and its associated shadow [9]   References Zhu, Lei, et al. “Bi">
+<meta name="twitter:description" content="Application Shadow detection: [1]   Object-shadow pair detection: [2]  Shadow removal: [3] [4] [5] [6]  Shadow generation: [7] [8]  Remove occluder and its associated shadow [9]   DatasetShadow Genera">
 
 
 
@@ -374,7 +374,7 @@
       
 
       
-        <ul>
+        <h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
 <li><p>Shadow detection: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Lei_Zhu_Bi-directional_Feature_Pyramid_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
 </li>
 <li><p>Object-shadow pair detection: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
@@ -386,6 +386,31 @@
 <li><p>Remove occluder and its associated shadow <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_No_Shadow_Left_Behind_Removing_Objects_and_Their_Shadows_Using_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
 </li>
 </ul>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>Shadow Generation</p>
+<ol>
+<li>Shadow-AR (rendered) <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>RGB-AO-depth (rendered) <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.13943" target="_blank" rel="noopener">paper</a></li>
+<li>Composition datasets: WILDTRACK, Penn-Fudan, UA-DETRAC, Cityscapes, ShapeNet <a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Zhan_Adversarial_Image_Composition_with_Auxiliary_Illumination_ACCV_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>Soft shadow dataset (rendered) <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Sheng_SSN_Soft_Shadow_Network_for_Image_Compositing_CVPR_2021_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>ShadowGAN (rendered, 12,400 rendered images, 9265 objects, 110 textures for rendering the plane, up to four objects in each scene) <a href="https://dc.tsinghuajournals.com/cgi/viewcontent.cgi?article=1127&amp;context=computational-visual-media" target="_blank" rel="noopener">paper</a></li>
+<li>SID (single object, 25, 000 images, 12, 500 3D objects, 50 homogeneous color and 200 variable set of textured patterns) <a href="https://arxiv.org/pdf/2009.06295.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SID2 (45,000 images, similar to SID, more than one object in each scene) <a href="https://arxiv.org/pdf/2009.08941.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SHAD3S <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Venkataramaiyer_SHAD3S_A_Model_to_Sketch_Shade_and_Shadow_WACV_2021_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ol>
+<p>Shadow Removal/Detection</p>
+<ol>
+<li>ISTD/ ISTD+ (1870 0 triplets of shadow, shadow mask and shadow-free images) <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Stacked_Conditional_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>USR(unpaired, 2,445 shadow images, 1,770 shadow-free) <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hu_Mask-ShadowGAN_Learning_to_Remove_Shadows_From_Unpaired_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SRD/ SRD+ (3088 pairs, paired shadow and shadow-free, without the ground-truth shadow mask) <a href="">paper</a></li>
+<li>LRSS (37 image pairs, soft shadow) <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Qu_DeshadowNet_A_Multi-Context_CVPR_2017_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>UIUC (76 pairs, paired shadow/shadow-free) <a href="https://dl.acm.org/doi/pdf/10.1145/2732407" target="_blank" rel="noopener">paper</a></li>
+<li>GTAV (5723 pairs, 5110 daylight scenes, occlude objects inside camera) <a href="https://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Sidorov_Conditional_GANs_for_Multi-Illuminant_Color_Constancy_Revolution_or_yet_Another_CVPRW_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SynShadow (based on USR, occlude objects outside camera, shadow/shadow-free/matte image triplets synthesized from rendered 10,000 matte images and about 1,800 background images) <a href="https://arxiv.org/pdf/2101.01713.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>UCF (245 pairs, shadow/shadow mask, only for detection)</li>
+<li>SBU (4727 pairs, shadow/shadow mask, only for detection)</li>
+<li>CUHK-Shadow (10,500 pairs, shadow/shadow mask, only for detection) <a href="https://arxiv.org/pdf/1911.06998.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SOBA (1013 images) <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ol>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
 <li><p>Zhu, Lei, et al. “Bidirectional feature pyramid network with recurrent attention residual modules for shadow detection.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.</p>
 </li>
@@ -529,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">196</span>
+                  <span class="site-state-item-count">197</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -600,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#References"><span class="nav-number">1.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Application"><span class="nav-number">1.</span> <span class="nav-text">Application</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dataset"><span class="nav-number">2.</span> <span class="nav-text">Dataset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
             
 
           </div>
