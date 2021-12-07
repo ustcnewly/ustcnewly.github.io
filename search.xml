@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[VAE]]></title>
     <url>%2F2021%2F10%2F08%2Fdeep_learning%2FVAE%2F</url>
-    <content type="text"><![CDATA[Advanced VAEVQVAE [1],VQVAE2 [2] NVAE [3] References[1] Oord, Aaron van den, Oriol Vinyals, and Koray Kavukcuoglu. “Neural discrete representation learning.” arXiv preprint arXiv:1711.00937 (2017).[2] Razavi, Ali, Aaron van den Oord, and Oriol Vinyals. “Generating diverse high-fidelity images with vq-vae-2.” Advances in neural information processing systems. 2019.[3] Vahdat, Arash, and Jan Kautz. “Nvae: A deep hierarchical variational autoencoder.” arXiv preprint arXiv:2007.03898 (2020).]]></content>
+    <content type="text"><![CDATA[Advanced VAE VQVAE [1],VQVAE2 [2]. Accelerate auto-regression: [4] NVAE [3] References[1] Oord, Aaron van den, Oriol Vinyals, and Koray Kavukcuoglu. “Neural discrete representation learning.” arXiv preprint arXiv:1711.00937 (2017).[2] Razavi, Ali, Aaron van den Oord, and Oriol Vinyals. “Generating diverse high-fidelity images with vq-vae-2.” Advances in neural information processing systems. 2019.[3] Vahdat, Arash, and Jan Kautz. “Nvae: A deep hierarchical variational autoencoder.” arXiv preprint arXiv:2007.03898 (2020).[4] Bond-Taylor, Sam, et al. “Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes.” arXiv preprint arXiv:2111.12701 (2021).]]></content>
       <categories>
         <category>paper note</category>
       </categories>
