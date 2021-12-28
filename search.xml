@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Video Instance Segmentation]]></title>
+    <url>%2F2021%2F12%2F28%2Fdeep_learning%2FVideo%20Instance%20Segmentation%2F</url>
+    <content type="text"><![CDATA[Track-by-Detect: MaskTrack R-CNN [1] Clip-Match: Vistr [2] Propose-Reduce: [3] Reference[1] Yang, Linjie, Yuchen Fan, and Ning Xu. “Video instance segmentation.” ICCV, 2019. [2] Wang, Yuqing, et al. “End-to-end video instance segmentation with transformers.” CVPR, 2021. [3] Lin, Huaijia, et al. “Video instance segmentation with a propose-reduce paradigm.” ICCV, 2021.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>instance segmentation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[3D Photography]]></title>
+    <url>%2F2021%2F12%2F27%2Fdeep_learning%2F3D%20Photography%2F</url>
+    <content type="text"><![CDATA[Layered Depth Image (LDI): [1] MultiPlane Image (MPI): [2] [3] Point cloud: [4] Reference[1] Shih, Meng-Li, et al. “3d photography using context-aware layered depth inpainting.” CVPR, 2020. [2] Tucker, Richard, and Noah Snavely. “Single-view view synthesis with multiplane images.” CVPR, 2020. [3] Li, Jiaxin, et al. “Mine: Towards continuous depth mpi with nerf for novel view synthesis.” ICCV, 2021. [4] Niklaus, Simon, et al. “3d ken burns effect from a single image.” ACM Transactions on Graphics (TOG) 38.6 (2019): 1-15.]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>3D</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Multi-modality Fusion]]></title>
+    <url>%2F2021%2F12%2F27%2Fdeep_learning%2FMulti-modality%20Fusion%2F</url>
+    <content type="text"><![CDATA[Concatenation/summation, or weighted (attention mechanism) concatenation/summation. P(y|x1,x2)=P(y|x1)P(y|x2), with Gaussian distribution assumption [1] Reference Huang, Xun, et al. “Multimodal Conditional Image Synthesis with Product-of-Experts GANs.” arXiv preprint arXiv:2112.05130 (2021).]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Color Mapping]]></title>
+    <url>%2F2021%2F12%2F26%2Fdeep_learning%2FColor%20Mapping%2F</url>
+    <content type="text"><![CDATA[Advanced VAEGlobal color mapping: 3D LUT: https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf Color curve: https://arxiv.org/pdf/2109.05750.pdf Local color mapping: Spatial-aware 3D LUT: https://arxiv.org/pdf/2108.08697.pdf Color curve: https://openaccess.thecvf.com/content/ICCV2021/papers/Song_StarEnhancer_Learning_Real-Time_and_Style-Aware_Image_Enhancement_ICCV_2021_paper.pdf DCE: https://arxiv.org/pdf/2001.06826.pdf]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Generative Model]]></title>
+    <url>%2F2021%2F12%2F24%2Fdeep_learning%2FGenerative%20Model%2F</url>
+    <content type="text"><![CDATA[GAN VAE diffusion model: [1] [2] References[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021). [2] GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>GAN</tag>
+        <tag>VAE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Artistic and Photorealistic Style Transfer]]></title>
+    <url>%2F2021%2F12%2F11%2Fdeep_learning%2FArtistic%20and%20Photorealistic%20Style%20Transfer%2F</url>
+    <content type="text"><![CDATA[Conditioned on color values, location, semantic information, or other guidance. learn color transformation (explicit function or look-up table). HDRNet [1], 3D LUT [2] Fusion: AdaIN, WCT, SAnet Losses: paired supervision: L2 loss unpaired supervision: adversarial loss smooth loss: variation loss, Poisson loss content loss: perception loss style loss: style loss, AdaIn loss Reference[1] Gharbi, Michaël, et al. “Deep bilateral learning for real-time image enhancement.” ACM Transactions on Graphics (TOG) 36.4 (2017): 1-12. [2] Zeng, Hui, et al. “Learning image-adaptive 3D lookup tables for high performance photo enhancement in real-time.” IEEE Transactions on Pattern Analysis and Machine Intelligence (2020).]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>style transfer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Boundary-guided Semantic Segmentation]]></title>
     <url>%2F2021%2F12%2F10%2Fdeep_learning%2FBoundary-guided%20Semantic%20Segmentation%2F</url>
     <content type="text"><![CDATA[propagate information within each non-boundary region [1] focus on unconfident boundary regions [2] fuse boundary feature and image feature [3] Reference[1] Ding, Henghui, et al. “Boundary-aware feature propagation for scene segmentation.” ICCV, 2019. [2] Marin, Dmitrii, et al. “Efficient segmentation: Learning downsampling near semantic boundaries.” ICCV, 2019. [3] Takikawa, Towaki, et al. “Gated-scnn: Gated shape cnns for semantic segmentation.” ICCV, 2019.]]></content>
@@ -815,7 +876,7 @@
   <entry>
     <title><![CDATA[Distillation]]></title>
     <url>%2F2019%2F01%2F16%2Fmachine_learning%2FDistillation%2F</url>
-    <content type="text"><![CDATA[knowledge/model distillation [1] data distillation [2] A survey of knowledge distillation [3] Reference[1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015). [2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018. [3] Wang, Lin, and Kuk-Jin Yoon. “Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks.” arXiv preprint arXiv:2004.05937 (2020).]]></content>
+    <content type="text"><![CDATA[knowledge/model distillation [1] data distillation [2] [4] [5] A survey of knowledge distillation [3] Reference[1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015). [2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018. [3] Wang, Lin, and Kuk-Jin Yoon. “Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks.” arXiv preprint arXiv:2004.05937 (2020). [4] Nguyen, Timothy, Zhourong Chen, and Jaehoon Lee. “Dataset Meta-Learning from Kernel Ridge-Regression.” arXiv preprint arXiv:2011.00050 (2020). [5] Nguyen, Timothy, et al. “Dataset distillation with infinitely wide convolutional networks.” Advances in Neural Information Processing Systems 34 (2021).]]></content>
       <categories>
         <category>paper note</category>
       </categories>

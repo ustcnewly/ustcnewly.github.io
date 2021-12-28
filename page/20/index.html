@@ -281,6 +281,1066 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/Remote Desktop Connection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/Remote Desktop Connection/" itemprop="url">Remote Desktop Connection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Remote-Connect-to-Ubuntu-in-Windows"><a href="#Remote-Connect-to-Ubuntu-in-Windows" class="headerlink" title="Remote Connect to Ubuntu in Windows"></a>Remote Connect to Ubuntu in Windows</h3><hr>
+<p><strong>a) cmdline:</strong> putty, secureCRT</p>
+<p><strong>b) window:</strong></p>
+<p>xrdp: <a href="http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp</span><br><span class="line">sudo apt-get install vnc4server</span><br><span class="line">sudo apt-get install xubuntu-desktop</span><br><span class="line">echo "xfce4-session" &gt;~/.xsession</span><br><span class="line">sudo service xrdp restart</span><br></pre></td></tr></table></figure></p>
+<p>xrdp mm process login response login failed<br>When this error occurs, try the following methods, followed by “sudo service xrdp restart”.</p>
+<ol>
+<li><p>delete vnc processes</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep vnc</span><br><span class="line">kill -9 XXX</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>delete X sessions, .xrdp, .X11-unix, .X0-20</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp &amp;&amp; ls -a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>modify “MaxSessions” number</p>
+<pre><code class="lang-shell"> sudo vim /etc/xrdp/sesman.ini
+</code></pre>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/kinit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/kinit/" itemprop="url">kinit</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Credential ticket for principles without need to type in password, from MIT Kerberos.<br>A ticket has ticket lifetime and renewable lifetime.<br>Ticket lifetime is shorter than renewable lifetime.<br>For liniu@ANT.AMAZON.COM, the default ticket lifetime is 10h (resp., 6h40m) when using kinit -l (resp., -r), why?</p>
+<p>From KDC server side: </p>
+<ol>
+<li>modify the max_life in /etc/krb5kdc/kdc.conf and restart the KDC daemon  /var/kerberos/krb5kdc/kdc.conf</li>
+<li>Via “kadmin”, changed the “maxlife” for a test principal via “modprinc -maxlife 14hours “</li>
+</ol>
+<p>From Kerberos client side:<br>modify in /etc/krb5.conf</p>
+<p>In fact, the ticket lifetime is the minimum of the following values:</p>
+<ul>
+<li><p>max_life in kdc.conf on the KDC servers.</p>
+</li>
+<li><p>ticket_lifetime in krb5.conf on the client machine.</p>
+</li>
+<li><p>maxlife for the user principal.</p>
+</li>
+<li><p>maxlife for the service principal “krbtgt/[REALM_in_CAPS]” </p>
+</li>
+<li><p>requested lifetime in the ticket request. For example: kinit -l 14h</p>
+</li>
+<li><p>maxlife for the AFS service principal “afs/[realm_in_lower_case]”, if you want to increase the lifetime of your AFS token.</p>
+</li>
+</ul>
+<p>commonly used commands:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">klist</span><br><span class="line">kdestroy</span><br></pre></td></tr></table></figure></p>
+<p>An example:</p>
+<p>Ticket cache: FILE:/tmp/krb5cc_4126574_GM19Ct<br>Default principal: liniu@ANT.AMAZON.COM</p>
+<p>Valid starting     Expires            Service principal<br>08/18/16 08:13:20  08/18/16 18:13:20  krbtgt/ANT.AMAZON.COM@ANT.AMAZON.COM</p>
+<p>time format is like 4d5h30m</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">kinit -l lifetime //request a ticket with ticket lifetime of lifetime</span><br><span class="line">-r renewable-life //request renewable ticket with a total lifetime of renewable-life</span><br><span class="line">//I'm still unclear about the difference between -l and -r</span><br><span class="line">-f //forwardable</span><br><span class="line">-F //non-forwardable</span><br><span class="line">-R //requests renewal of the ticket-granting ticket. No need for password but must be within ticket lifetime instead of renewable lifetime.</span><br></pre></td></tr></table></figure>
+<p>Automatically renew tickets: Since you need to renew a ticket before its ticket lifetime expires, the easiest way to renew tickets is to put it in a cron job since renewing a ticket is non-interactive.</p>
+<p>Run ‘crontab -e’ to edit the file in /var/spool/cron/. Use ‘crontab -l’ to see the file.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Renew the kerberos ticket every 8 hours, this will extend the lifetime of </span><br><span class="line"># the ticket until the renew lifetime expiers, after that this command will </span><br><span class="line"># fail to renew the ticket and you will need to interactively </span><br><span class="line"># run `kinit -f -l 86400 -r 2592000`</span><br><span class="line">#</span><br><span class="line"># minute  hour  day_of_month  month  weekday  command</span><br><span class="line">59 00,08,16 * * * /usr/kerberos/bin/kinit -R</span><br><span class="line">//59 minute, 0 or 8 or 16 o&apos;clock, any, any, any, the command to be executed is &apos;/usr/kerberos/bin/kinit -R&apos;</span><br><span class="line">//some short notations: 1-3 means 1,2,3; */15 means every 15</span><br></pre></td></tr></table></figure>
+<p>Key Notes:</p>
+<ol>
+<li><p>do not use sudo kinit</p>
+</li>
+<li><p>when no credential ticket can be found, add -c $KRB5CCNAME, where KRB5CCNAME is the environment variable recording the path of credential ticket.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/network/GitHub+Hexo for Personal Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>Preinstallation<ul>
+<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
+<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
+<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
+</ul>
+</li>
+<li>SSH keys<ul>
+<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
+<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
+<li>create the key in github: account setting-&gt;SSH</li>
+<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
+</ul>
+</li>
+<li><p>create an empty folder as Hexo folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
+<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
+</li>
+<li><p>deploy local Hexo folder</p>
+<ul>
+<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
+</li>
+<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
+</ul>
+</li>
+<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
+<li><p>local search</p>
+<ul>
+<li><code>$npm install hexo-generator-searchdb --save</code></li>
+<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add social links: in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latex: </p>
+<ul>
+<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
+<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to address the conflict between MathJax and Hexo</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>push posts to the top</p>
+<ul>
+<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
+<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
+</ul>
+</li>
+<li><p>insert code block</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert image</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Tips:</strong> </p>
+<ol>
+<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+</li>
+<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
+<ul>
+<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
+<li>clean the folder <code>.deploy_git</code></li>
+<li><code>hexo clean</code> and <code>hexo d -g</code></li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/hardware/GPU/GPU Cuda and CuDNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/hardware/GPU/GPU Cuda and CuDNN/" itemprop="url">GPU Cuda and CuDNN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/" itemprop="url" rel="index">
+                    <span itemprop="name">hardware</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/GPU/" itemprop="url" rel="index">
+                    <span itemprop="name">GPU</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
+<li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
+</li>
+<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
+</li>
+</ul>
+<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
+<li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
+</li>
+<li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
+</li>
+<li><p>Install NVIDIA GPU driver using apt-get</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:Ubuntu-x-swat/x-updates</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
+<ol>
+<li>Hit CTRL+ALT+F1 and login using your credentials.</li>
+<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
+<li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
+<li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
+</ol>
+</li>
+</ul>
+<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><p>When using anaconda to install deep learning platform, sometimes it is unnecessary to install CUDA by yourself. </p>
+<ol>
+<li><p>Preprocessing</p>
+<ul>
+<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
+<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
+<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
+</ul>
+</li>
+<li><p>Install Cuda</p>
+<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
+<p> and then add into PATH and LD_LIBRARY_PATH</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
+</li>
+</ol>
+<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Variants of Convolution in Deep Learning/" itemprop="url">Variants of Convolution in Deep Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and  the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$.</p>
+</li>
+<li><p>Pointwise convolution: pointwise fully connected across all the channels.</p>
+</li>
+<li><p>Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in <a href="https://arxiv.org/pdf/1707.01083.pdf" target="_blank" rel="noopener">ShuffleNet</a>.</p>
+</li>
+<li><p>Depthwise separable convolution = depthwise convolution + pointwise convolution</p>
+</li>
+<li><p>Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for <a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank" rel="noopener">segmentation</a>. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">Deformable convolution</a> (left) and <a href="https://arxiv.org/pdf/1506.02025.pdf" target="_blank" rel="noopener">spatial transformation network</a> (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ht5DXxp.jpg" width="100%" height="100%"></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1709.01507.pdf" target="_blank" rel="noopener">Squeeze-and-Excitation</a>: learn different weights for each channel.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/CMk5i17.jpg" width="80%" height="80%"></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Tricky Back Propagation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Tricky Back Propagation/" itemprop="url">Tricky Back Propagation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Some operations are indifferentiable, which causes difficulties for back propagation.</p>
+<ol>
+<li><p>sample from distribution: reparameterization trick<br><a href="https://arxiv.org/pdf/1312.6114.pdf" target="_blank" rel="noopener">Auto-Encoding Variational Bayes</a> </p>
+</li>
+<li><p>argmax: soft argmax<br><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.4107&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Gradient Descent Optimization of Smoothed Information Retrieval Metrics</a> </p>
+</li>
+<li><p>crop: two-dimension boxcar function<br><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Look_Closer_to_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-grained Image Recognition</a> </p>
+</li>
+<li><p>delta function: lookup table+blur kernel<br><a href="https://arxiv.org/pdf/1801.05117.pdf" target="_blank" rel="noopener">Reblur2Deblur: Deblurring Videos via Self-Supervised Learning</a> </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Image to Image Translation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1120,903 +2180,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Deep Learning Platform/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Deep Learning Platform/" itemprop="url">Deep Learning Platform</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Ready-made DevBox:</p>
-<ul>
-<li><a href="https://www.dell.com/en-us/gaming/alienware-desktops?cid=312465046&amp;st=alienware&amp;lid=59673390274&amp;ptaid=kwd-24191410&amp;VEN1=suyunKW6A%2C282265229036%2C901pdb6671%2Cc%2CM68G1rWA%2C%2C56626657187%2Ckwd-24191410&amp;VEN2=e%2Calienware&amp;pgrid=56626657187&amp;dgc=st&amp;dgseg=dhs&amp;acd=1230923830920560&amp;VEN3=113804489962527442" target="_blank" rel="noopener">Dell Alienware</a>: at most 2 GPUs</li>
-<li><a href="https://www.newegg.com/Product/Product.aspx?Item=9SIAB946K29620" target="_blank" rel="noopener">newegg</a>: 4 GPUs</li>
-<li><a href="https://lambdal.com/raw-configurator?product=quad-amd" target="_blank" rel="noopener">Lambda Labs</a>: 4 GPUs</li>
-</ul>
-</li>
-<li><p>Assemble: cheap, but no warranty</p>
-<ul>
-<li><a href="https://sites.google.com/site/ustcnewly/download/newegg_list.pdf?attredirects=0" target="_blank" rel="noopener">part list</a>: most things are out of date. <a href="https://www.tomshardware.com/" target="_blank" rel="noopener">Tom’s hardware</a> is a good website for comparison. </li>
-</ul>
-</li>
-<li><p>Nvidia</p>
-<ul>
-<li><p>microarchitecture: maxwell-&gt;pascal-&gt;volta</p>
-</li>
-<li><p><a href="https://www.nvidia.com/en-us/data-center/" target="_blank" rel="noopener">DGX-systems</a></p>
-</li>
-</ul>
-</li>
-<li><p>GPU cloud</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Attention Mechanism/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Attention Mechanism/" itemprop="url">Attention Mechanism</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Attention-in-CNN"><a href="#Attention-in-CNN" class="headerlink" title="Attention in CNN:"></a>Attention in CNN:</h2><p>According to <a href="https://arxiv.org/pdf/1805.08819.pdf" target="_blank" rel="noopener">[4]</a>, attention can be categorized into bottom-up attention (visual saliency, unsupervised) and top-down attention (task-driven, supervised).</p>
-<p>According to <a href="https://arxiv.org/pdf/1804.02391.pdf" target="_blank" rel="noopener">[5]</a>, attention can be categorized into forward attention, post-hoc attention, and query-based attention.</p>
-<ul>
-<li><p>forward attention: spatial attention <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhu_An_Empirical_Study_of_Spatial_Attention_Mechanisms_in_Deep_Networks_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[16]</a>, channel attention <a href="https://arxiv.org/pdf/1802.08122.pdf" target="_blank" rel="noopener">[10]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[17]</a> <a href="https://arxiv.org/pdf/2012.11879.pdf" target="_blank" rel="noopener">[18]</a>,  full attention <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Cheng_Wang_Mancs_A_Multi-task_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[11]</a>, Deformable CNN v1 <a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[8]</a> v2 <a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[9]</a>, </p>
-</li>
-<li><p>post-hoc attention: CAM <a href="https://arxiv.org/pdf/1512.04150.pdf" target="_blank" rel="noopener">[6]</a>, GradCAM <a href="https://arxiv.org/pdf/1610.02391.pdf" target="_blank" rel="noopener">[7]</a>, scoreCAM <a href="https://arxiv.org/pdf/1910.01279" target="_blank" rel="noopener">[14]</a>, trainable CAM <a href="https://arxiv.org/pdf/2101.11253.pdf" target="_blank" rel="noopener">[20]</a><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Araslanov_Single-Stage_Semantic_Segmentation_From_Image_Labels_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[21]</a></p>
-</li>
-<li><p>query-based attention: <a href="https://arxiv.org/pdf/1804.02391.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-<li><p>erase attention: <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Adversarial_Complementary_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[19]</a> <a href="https://arxiv.org/pdf/1702.04595.pdf" target="_blank" rel="noopener">[12]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Fong_Interpretable_Explanations_of_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[13]</a></p>
-</li>
-<li><p>high-order attention <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Mixed_High-Order_Attention_Network_for_Person_Re-Identification_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[15]</a></p>
-</li>
-</ul>
-<h2 id="Attention-in-RNN"><a href="#Attention-in-RNN" class="headerlink" title="Attention in RNN:"></a>Attention in RNN:</h2><p>survey paper: survey on the attention based RNN model and its applications in computer vision [<a href="https://arxiv.org/pdf/1601.06823.pdf" target="_blank" rel="noopener">1</a>]</p>
-<ul>
-<li><p>soft/hard attention: binary weight or soft weight </p>
-</li>
-<li><p>item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise.</p>
-</li>
-</ul>
-<p>Earliest papers [<a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank" rel="noopener">2</a>] [<a href="https://arxiv.org/pdf/1412.7449.pdf" target="_blank" rel="noopener">3</a>] are basically the same except design specs of RNN unit.</p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Wang, Feng, and David MJ Tax. “Survey on the attention based RNN model and its applications in computer vision.” arXiv preprint arXiv:1601.06823 (2016).</p>
-<p>[2] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).</p>
-<p>[3] Vinyals, Oriol, et al. “Grammar as a foreign language.” NIPS, 2015.</p>
-<p>[4] Drew Linsley, Dan Shiebler, Sven Eberhardt, Thomas Serre: Learning what and where to attend. ICLR, 2019.</p>
-<p>[5] Saumya Jetley, Nicholas A. Lord, Namhoon Lee, Philip H. S. Torr: Learn to Pay Attention. ICLR, 2018.</p>
-<p>[6] Bolei Zhou, Aditya Khosla, Àgata Lapedriza, Aude Oliva, Antonio Torralba: Learning Deep Features for Discriminative Localization. CVPR 2016.</p>
-<p>[7] Ramprasaath R. Selvaraju, Michael Cogswell, Abhishek Das, Ramakrishna Vedantam, Devi Parikh, Dhruv Batra:<br>Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. ICCV 2017.</p>
-<p>[8] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:<br>Deformable Convolutional Networks. ICCV 2017.</p>
-<p>[9] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018)</p>
-<p>[10] Wei Li, Xiatian Zhu, Shaogang Gong: Harmonious Attention Network for Person Re-Identification. CVPR 2018.</p>
-<p>[11] Cheng Wang, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang: Mancs: A Multi-task Attentional Network with Curriculum Sampling for Person Re-Identification. ECCV (4) 2018.</p>
-<p>[12] Zintgraf, Luisa M., et al. “Visualizing deep neural network decisions: Prediction difference analysis.” arXiv preprint arXiv:1702.04595 (2017).</p>
-<p>[13] Fong, Ruth C., and Andrea Vedaldi. “Interpretable explanations of black boxes by meaningful perturbation.” ICCV, 2017.</p>
-<p>[14] Wang, Haofan, et al. “Score-CAM: Improved Visual Explanations Via Score-Weighted Class Activation Mapping.” arXiv preprint arXiv:1910.01279 (2019).</p>
-<p>[15] Chen, Binghui, Weihong Deng, and Jiani Hu. “Mixed high-order attention network for person re-identification.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
-<p>[16] Zhu, Xizhou, et al. “An empirical study of spatial attention mechanisms in deep networks.” ICCV, 2019.</p>
-<p>[17] Wang, Qilong, et al. “ECA-net: Efficient channel attention for deep convolutional neural networks.” CVPR, 2020.</p>
-<p>[18] Qin, Zequn, et al. “FcaNet: Frequency Channel Attention Networks.” arXiv preprint arXiv:2012.11879 (2020).</p>
-<p>[19] Zhang, Xiaolin, et al. “Adversarial complementary learning for weakly supervised object localization.” CVPR, 2018.</p>
-<p>[20] Jo, Sanhyun, and In-Jae Yu. “Puzzle-CAM: Improved localization via matching partial and full features.” arXiv preprint arXiv:2101.11253 (2021).</p>
-<p>[21] Araslanov, Nikita, and Stefan Roth. “Single-stage semantic segmentation from image labels.” CVPR, 2020.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/Makefile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/compiler/Makefile/" itemprop="url">Makefile</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/compiler/" itemprop="url" rel="index">
-                    <span itemprop="name">compiler</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li><p>use nemiver to debug. </p>
-<ul>
-<li>gcc/g++ <strong>-g</strong> hello.c -o hello.o <font color="green">#-g for debug</font></li>
-<li>nemiver hello <font color="green">#bin file</font></li>
-</ul>
-</li>
-<li><p>The comment character # does not introduce a make comment in the text of commands.</p>
-</li>
-<li><p><strong>Wildcards</strong>: <em>.</em> expands to all the files containing a period. A question mark represents any single character, and […] represents a character class.</p>
-</li>
-<li><p>.PHONY: clean</p>
-</li>
-<li><p><strong>Automatic Variables</strong>:</p>
-<ul>
-<li>$@ The name of the current target.</li>
-<li>$% The filename element of an archive member specification.</li>
-<li>$&lt; The name of the first prerequisite.</li>
-<li>$? The names of all prerequisites that are newer than the target, separated by spaces.</li>
-<li>$^ The names of all the prerequisites, separated by spaces. This list has duplicate names removed since for most uses, such as compiling, copying, etc., duplicates are not wanted.</li>
-<li>$+ The names of all the prerequisites separated by spaces, including duplicates. This variable was created for specific situations such as arguments to linkers where duplicate values have meaning.</li>
-<li>$* The stem of the target filename. A stem is typically a filename without its suffix. Its use outside of pattern rules is discouraged.</li>
-</ul>
-</li>
-<li><p>run makefile with —just-print option to view the execution process</p>
-</li>
-</ol>
-<h2 id="How-to-write-Makefile"><a href="#How-to-write-Makefile" class="headerlink" title="How to write Makefile"></a>How to write Makefile</h2><ol>
-<li><p>single C-file</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">hello: hello.c</span></span><br><span class="line">	gcc -g hello.c -o hello&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>multiple C-files</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">count_words: count_words.o lexer.o -lfl</span></span><br><span class="line">	gcc count_words.o lexer.o -lfl -ocount_words</span><br><span class="line"><span class="section">count_words.o: count_words.c</span></span><br><span class="line">	gcc -g -c count_words.c</span><br><span class="line"><span class="section">lexer.o: lexer.c</span></span><br><span class="line">	gcc -g -c lexer.c</span><br><span class="line"><span class="section">lexer.c: lexer.l</span></span><br><span class="line">	flex -t lexer.l &gt; lexer.c</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>set <strong>VPATH</strong> and <strong>CPPFLAGS</strong> in implicit rules</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">VPATH    = src <span class="keyword">include</span></span><br><span class="line">CPPFLAGS = -I <span class="keyword">include</span></span><br><span class="line"></span><br><span class="line"><span class="section">count_words: counter.o lexer.o -lfl</span></span><br><span class="line"><span class="section">count_words.o: counter.h</span></span><br><span class="line"><span class="section">counter.o: counter.h lexer.h</span></span><br><span class="line"><span class="section">lexer.o: lexer.h</span></span><br></pre></td></tr></table></figure>
-<p>VPATH can be used in a more advanced fashion as follows,</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vpath</span> %.c src</span><br><span class="line"><span class="keyword">vpath</span> %.l src</span><br><span class="line"><span class="keyword">vpath</span> %.h <span class="keyword">include</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use library <strong>.a</strong>. pack <strong>.o</strong> files into <strong>.a</strong>, similar as <strong>.lib</strong> in Windows.</p>
- <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">libcounter.a: libcounter.a(lexer.o) libcounter.a(counter.o)</span></span><br><span class="line"><span class="section">libcounter.a(lexer.o): lexer.o</span></span><br><span class="line">	<span class="variable">$(AR)</span> <span class="variable">$(ARFLAGS)</span> <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">libcounter.a(counter.o): counter.o</span></span><br><span class="line">	<span class="variable">$(AR)</span> <span class="variable">$(ARFLAGS)</span> <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/CMake/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/compiler/CMake/" itemprop="url">CMake</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/compiler/" itemprop="url" rel="index">
-                    <span itemprop="name">compiler</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>in-source make</li>
-<li>out-of-source make</li>
-</ul>
-<h3 id="Write-Basic-CMakeLists-txt"><a href="#Write-Basic-CMakeLists-txt" class="headerlink" title="Write Basic CMakeLists.txt"></a>Write Basic CMakeLists.txt</h3><ul>
-<li><p>common head</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">PROJECT</span>(projectname [CXX] [C] [Java]) <span class="comment"># project name</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">2.8</span>.<span class="number">12</span>) <span class="comment"># minimum cmake version</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>variable assignment</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span>(VAR [VALUE] [CACHE TYPE DOCSTRING [FORCE]])</span><br></pre></td></tr></table></figure>
-<p>variable should be used by  ${VAR} except for IF condition.<br>commonly used path variables are listed as follows:</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;projectname&gt;_BINARY_DIR = PROJECT_BINARY_DIR=CMAKE_BINARY_DIR</span><br><span class="line">&lt;projectname&gt;_SOURCE_DIR = PROJECT__SOURCE_DIR=CMAKE_SOURCE_DIR</span><br><span class="line"><span class="keyword">SET</span>(EXECUTABLE_OUTPUT_PATH <span class="variable">$&#123;PROJECT_BINARY_DIR&#125;</span>/bin)</span><br><span class="line"><span class="keyword">SET</span>(LIBRARY_OUTPUT_PATH <span class="variable">$&#123;PROJECT_BINARY_DIR&#125;</span>/lib)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>display message</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">MESSAGE</span>([SEND_ERROR | STATUS | FATAL_ERROR] <span class="string">"message to display"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>generate output binary/library</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD_EXECUTABLE</span>(hello <span class="variable">$&#123;SRC_LIST&#125;</span>)</span><br><span class="line"><span class="keyword">ADD_LIBRARY</span>(libname [SHARED|STATIC|MODULE] [EXCLUDE_FROM_ALL] source1 source2 ... sourceN)</span><br><span class="line"><span class="keyword">TARGET_LINK_LIBRARIES</span>(target library1 &lt;debug | optimized&gt; library2 ...) /<span class="comment">#target-specific</span></span><br><span class="line"></span><br><span class="line">// change the name, version, <span class="keyword">and</span> so <span class="keyword">on</span> of the output (*e.g.*, library, binary)</span><br><span class="line"><span class="keyword">SET_TARGET_PROPERTIES</span>(target1 target2 ...</span><br><span class="line">	PROPERTIES prop1 value1</span><br><span class="line">	prop2 value2 ...)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Finding"><a href="#Finding" class="headerlink" title="Finding"></a>Finding</h3><ul>
-<li><p>search source</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INCLUDE_DIRECTORIES</span>([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...) <span class="comment">#include files</span></span><br><span class="line"><span class="keyword">LINK_DIRECTORIES</span>(directory1 directory2 ...)</span><br></pre></td></tr></table></figure>
-<p><code>CMAKE_INCLUDE_PATH</code>, <code>CMAKE_LIBRARY_PATH</code>, <code>CMAKE_MODULE_PATH</code>  are environment variables instead of CMake variables. when using <code>FIND_***</code>, <code>CMAKE_INCLUDE_PATH</code>, the above paths will be searched.</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FIND_PATH</span>(myHeader hello.h)</span><br><span class="line"><span class="keyword">IF</span>(myHeader)</span><br><span class="line"><span class="keyword">INCLUDE_DIRECTORIES</span>(<span class="variable">$&#123;myHeader&#125;</span>)</span><br><span class="line"><span class="keyword">ENDIF</span>(myHeader)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>search commands</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FIND_FILE</span>(&lt;VAR&gt; name1 path1 path2 ...)</span><br><span class="line"><span class="keyword">FIND_LIBRARY</span>(&lt;VAR&gt; name1 path1 path2 ...)</span><br><span class="line"><span class="keyword">FIND_PATH</span>(&lt;VAR&gt; name1 path1 path2 ...)</span><br><span class="line"><span class="keyword">FIND_PROGRAM</span>(&lt;VAR&gt; name1 path1 path2 ...)</span><br><span class="line"><span class="keyword">FIND_PACKAGE</span>(&lt;name&gt; [major.minor] [QUIET] [NO_MODULE] [[REQUIRED|COMPONENTS] [componets...]]) <span class="comment"># find \*.cmake</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Compactness"><a href="#Compactness" class="headerlink" title="Compactness"></a>Compactness</h3><ul>
-<li><p>include the content of other files</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span>(FILE) <span class="comment"># load the content of FILE</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>hierarchical binary tree</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD_SUBDIRECTORY</span>(source_dir [binary_dir][EXCLUDE_FROM_ALL])</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>macro definition</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">MACRO</span>(add_example name)</span><br><span class="line">	<span class="keyword">ADD_EXECUTABLE</span>(<span class="variable">$&#123;name&#125;</span> <span class="variable">$&#123;name&#125;</span>.cpp)</span><br><span class="line">	<span class="keyword">TARGET_LINK_LIBRARIES</span>(<span class="variable">$&#123;name&#125;</span> dlib::dlib )</span><br><span class="line"><span class="keyword">ENDMACRO</span>()</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="CMake-Module"><a href="#CMake-Module" class="headerlink" title="CMake Module"></a>CMake Module</h3><ul>
-<li>define FindHELLO.cmake module  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FIND_PATH</span>(HELLO_INCLUDE_DIR hello.h /usr/<span class="keyword">include</span>/hello /usr/local/<span class="keyword">include</span>/hello)</span><br><span class="line"><span class="keyword">FIND_LIBRARY</span>(HELLO_LIBRARY NAMES hello PATH /usr/lib/usr/local/lib)</span><br><span class="line"><span class="keyword">IF</span> (HELLO_INCLUDE_DIR <span class="keyword">AND</span> HELLO_LIBRARY)</span><br><span class="line"><span class="keyword">SET</span>(HELLO_FOUND <span class="keyword">TRUE</span>)</span><br><span class="line"><span class="keyword">ENDIF</span> (HELLO_INCLUDE_DIR <span class="keyword">AND</span> HELLO_LIBRARY)</span><br><span class="line"><span class="keyword">IF</span> (HELLO_FOUND)</span><br><span class="line"><span class="keyword">IF</span> (NOT HELLO_FIND_QUIETLY)</span><br><span class="line"><span class="keyword">MESSAGE</span>(STATUS <span class="string">"Found Hello: $&#123;HELLO_LIBRARY&#125;"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p><code>cmake -DCMAKE_INSTALL_PREFIX=/usr  # the default install target is /usr/local</code></p>
-<ul>
-<li><p>install library and binary</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSTALL</span>(TARGETS targets...</span><br><span class="line">	[[ARCHIVE|LIBRARY|RUNTIME]</span><br><span class="line">		[DESTINATION &lt;dir&gt;]</span><br><span class="line">		[PERMISSIONS permissions...]</span><br><span class="line">		[CONFIGURATIONS</span><br><span class="line">	[Debug|Release|...]]</span><br><span class="line">		[COMPONENT &lt;component&gt;]</span><br><span class="line">		[OPTIONAL]</span><br><span class="line">		] [...])</span><br></pre></td></tr></table></figure>
-<p>ARCHIVE is static library *.a; LIBRARY is dynamic library *.so; RUNTIME is executable binary</p>
-</li>
-<li><p>install regular file</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSTALL</span>(FILES files... DESTINATION &lt;dir&gt;</span><br><span class="line">	[PERMISSIONS permissions...]</span><br><span class="line">	[CONFIGURATIONS [Debug|Release|...]]</span><br><span class="line">	[COMPONENT &lt;component&gt;]</span><br><span class="line">	[RENAME &lt;name&gt;] [OPTIONAL])</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install script file (<em>e.g.</em>, *.sh), almost the same with installing files except for permission</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSTALL</span>(PROGRAMS files... DESTINATION &lt;dir&gt;</span><br><span class="line">	[PERMISSIONS permissions...]</span><br><span class="line">	[CONFIGURATIONS [Debug|Release|...]]</span><br><span class="line">	[COMPONENT &lt;component&gt;]</span><br><span class="line">	[RENAME &lt;name&gt;] [OPTIONAL])</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install folders</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSTALL</span>(DIRECTORY dirs... DESTINATION &lt;dir&gt;</span><br><span class="line">	[FILE_PERMISSIONS permissions...]</span><br><span class="line">	[DIRECTORY_PERMISSIONS permissions...]</span><br><span class="line">	[USE_SOURCE_PERMISSIONS]</span><br><span class="line">	[CONFIGURATIONS [Debug|Release|...]]</span><br><span class="line">	[COMPONENT &lt;component&gt;]</span><br><span class="line">	[[PATTERN &lt;pattern&gt; | REGEX &lt;regex&gt;]</span><br><span class="line">	[EXCLUDE] [PERMISSIONS permissions...]] [...])</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install *.cmake</p>
-  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSTALL</span>([[SCRIPT &lt;file&gt;] [CODE &lt;code&gt;]] [...])</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD_TEST</span>(mytest <span class="variable">$&#123;PROJECT_BINARY_DIR&#125;</span>/bin/main)</span><br><span class="line"><span class="keyword">ENABLE_TESTING</span>()</span><br></pre></td></tr></table></figure>
-<p>After generating <code>Makefile</code>, run <code>make test</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/compiler/CMake with Eclipse/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/compiler/CMake with Eclipse/" itemprop="url">CMake with Eclipse</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/compiler/" itemprop="url" rel="index">
-                    <span itemprop="name">compiler</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Cmake supports CDT4 and higher versions.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -help  # check the supported generator</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li><p>Install CDT to Eclipse: <a href="http://www.eclipse.org/cdt/downloads.php" target="_blank" rel="noopener">http://www.eclipse.org/cdt/downloads.php</a></p>
-</li>
-<li><p>The eclipse build directory should be sibling directory of the source directory.</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir eclipse</span><br><span class="line">cd eclipse</span><br><span class="line">cmake -G "Eclipse CDT4 - Unix Makefiles" -D     CMAKE_BUILD_TYPE=Debug ../src_folder # note that CMAKE_BUILD_TYPE can be set as Debug or Release</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><code>cmake --build . --config Release</code> is equivalent to <code>make</code></p>
-<p><code>cmake --build . --target install --config Release</code> is equivalent to <code>make install</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2066,7 +2234,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">199</span>
+                  <span class="site-state-item-count">205</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2088,7 +2256,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

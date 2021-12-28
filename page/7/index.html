@@ -281,6 +281,940 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Object Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/Object Detection/" itemprop="url">Object Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>two-stage:</strong> use region proposal network (RPN) to generate proposals</p>
+<ol>
+<li><p><a href="http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf" target="_blank" rel="noopener">faster-RCNN</a> </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/1otto8I.png" width="50%"></p>
+</li>
+</ol>
+<p><strong>one-stage:</strong> remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. </p>
+<ol>
+<li>YOLO <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf" target="_blank" rel="noopener">v1</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf" target="_blank" rel="noopener">v2</a> <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf" target="_blank" rel="noopener">v3</a></li>
+<li><p><a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank" rel="noopener">SSD</a> </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/1jX0kAI.jpg" width="50%"></p>
+</li>
+</ol>
+<p><strong>Corner Points:</strong> remove anchors and directly predict corner points</p>
+<ol>
+<li><p><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hei_Law_CornerNet_Detecting_Objects_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CornerNet</a></p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/pqK8zQM.jpg" width="90%"></p>
+</li>
+</ol>
+<p><strong>No anchor:</strong> actually use aach cell as an anchor</p>
+<ol>
+<li><p><a href="https://arxiv.org/pdf/1904.11490.pdf" target="_blank" rel="noopener">RPDet</a>: use object centers as positive cells; paired with deformable CNN</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1904.03797.pdf" target="_blank" rel="noopener">FoveaBox</a>: use the cells in fovea area (object bounding box) as positive cells</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1901.03278.pdf" target="_blank" rel="noopener">Guided Anchoring</a>:  use deformable CNN to obtain adapted feature map</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Object Detection Loss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/Object Detection Loss/" itemprop="url">Object Detection Loss</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Fast-RCNN"><a href="#Fast-RCNN" class="headerlink" title="Fast RCNN"></a>Fast RCNN</h3><script type="math/tex; mode=display">L(p,u,t^u,v)  L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v),</script><p>   where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is  a smooth L1 loss.</p>
+<h3 id="Faster-RCNN"><a href="#Faster-RCNN" class="headerlink" title="Faster RCNN"></a>Faster RCNN</h3><script type="math/tex; mode=display">L(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*),</script><p> where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen)  and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN.</p>
+<p> fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes.</p>
+<h3 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h3><p> By using $x_{ij}^p$ as a binary indicator for matching the i-th default box to the j-th ground-truth box of category p. Multiple detection boxes can be matched to the same ground-truth box.</p>
+<script type="math/tex; mode=display">l(x,c,l,g)=L_{conf}(x,c) + \alpha L_{loc}(x,l,g),</script><p> where $L_{conf}$ is a (K+1)-class softmax loss, and </p>
+<script type="math/tex; mode=display">L_{loc} (x,l,g)=\sum_i \sum_j x_{ij}^k |l_i-g_j|.</script><h3 id="YOLO"><a href="#YOLO" class="headerlink" title="YOLO"></a>YOLO</h3><script type="math/tex; mode=display">\sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(x_i-\hat{x}_i)^2+(y_i-\hat{y}_i)^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{obj}}[(\sqrt{w_i}-\sqrt{\hat{w}_i)}^2+(\sqrt{h_i}-\sqrt{\hat{y}_i})^2] + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}} (C_i-\hat{C}_i)^2+ \sum_{i=0}^{S^2}\sum_{j=0}^B \mathcal{1^{noobj}}(C_i-\hat{C}_i)^2  + \sum_{i=0}^{S^2}\sum_{j=0}^B  \mathcal{1^{obj}}\sum_{c} (p_i(c)-\hat{p}_i(c))^2</script><p>Note that for the noobj anchorboxes, there is only one loss term involved. </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/From Anchor to ROI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/From Anchor to ROI/" itemprop="url">From Anchor to ROI</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="layer-area"><a href="#layer-area" class="headerlink" title="layer area"></a>layer area</h2><p>From layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, </p>
+<script type="math/tex; mode=display">r_{i+1} = (r_i+2p_i-k_i)/s_i+1.</script><p>In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area.</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/5oklFvo.png" alt=""></p>
+<h2 id="coordinate-map"><a href="#coordinate-map" class="headerlink" title="coordinate map"></a>coordinate map</h2><p>Now consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$,</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.</script><p>The above coordinate system starts from 1. When the coordinate system starts from 0, </p>
+<script type="math/tex; mode=display">x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,</script><p>which can be simplified as</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).</script><p>when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case.</p>
+<p>By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution</p>
+<script type="math/tex; mode=display">x_1 = \alpha_L x_{L}+\beta_L,</script><p>in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/acLbSez.png" alt=""></p>
+<h2 id="anchor-box-to-ROI"><a href="#anchor-box-to-ROI" class="headerlink" title="anchor box to ROI"></a>anchor box to ROI</h2><p>Given two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/deep_learning/Scale Variation for Object Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/deep_learning/Scale Variation for Object Detection/" itemprop="url">Scale Variation for Object Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-12T14:14:01+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>This problem is well discussed in <a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a>. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map.</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/HlFdOUN.jpg" width="100%"></p>
+<ol>
+<li><p>The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. </p>
+</li>
+<li><p>The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. </p>
+</li>
+<li><p>As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales.</p>
+</li>
+<li><p>use different dilation rates to vary receptive fields<br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ew7IgsX.jpg" width="80%"></p>
+</li>
+<li><p>use feature pyramid <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Lin_Feature_Pyramid_Networks_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>  </p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Lin, Tsung-Yi, et al. “Feature pyramid networks for object detection.” CVPR, 2017.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/deep_learning/Image Loss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/08/deep_learning/Image Loss/" itemprop="url">Image Loss</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-08T17:27:02+08:00">
+                2019-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: two images have similar semantic information</p>
+<script type="math/tex; mode=display">\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2</script></li>
+<li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: two images have similar channel correlation; related to bilinear pooling <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Lin_Bilinear_CNN_Models_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+<script type="math/tex; mode=display">||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'}</script></p>
+</li>
+<li><p>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </p>
+<script type="math/tex; mode=display">\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2</script></li>
+<li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
+<script type="math/tex; mode=display">\sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1</script></li>
+<li><p>alignment loss <a href="https://arxiv.org/pdf/1812.06145.pdf" target="_blank" rel="noopener">[5]</a>: two images have similar spatial correlation, complementary to style loss</p>
+<script type="math/tex; mode=display">||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c}</script></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016.</p>
+<p>[2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015.</p>
+<p>[3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014.</p>
+<p>[4] Bousmalis, Konstantinos, et al. “Unsupervised pixel-level domain adaptation with generative adversarial networks.” CVPR, 2017.</p>
+<p>[5] Abavisani, Mahdi, Hamid Reza Vaezi Joze, and Vishal M. Patel. “Improving the performance of unimodal dynamic hand-gesture recognition with multimodal training.” CVPR, 2019.</p>
+<p>[6] Lin, Tsung-Yu, Aruni RoyChowdhury, and Subhransu Maji. “Bilinear cnn models for fine-grained visual recognition.” ICCV, 2015.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/deep_learning/Cut and Paste/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/28/deep_learning/Cut and Paste/" itemprop="url">Cut and Paste</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-28T09:30:47+08:00">
+                2019-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Do segmentation, image enhancemnet, and inpainting simultaneously <a href="https://arxiv.org/pdf/1811.07630.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>Learning to Segment via Cut-and-Paste <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Tal_Remez_Learning_to_Segment_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ostyakov, Pavel, et al. “SEIGAN: Towards Compositional Image Generation by Simultaneously Learning to Segment, Enhance, and Inpaint.” arXiv preprint arXiv:1811.07630 (2018).</p>
+<p>[2] Remez, Tal, Jonathan Huang, and Matthew Brown. “Learning to segment via cut-and-paste.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/27/deep_learning/Visual Sentiment Analysis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -882,970 +1816,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/deep_learning/Conditional GAN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/17/deep_learning/Conditional GAN/" itemprop="url">Conditional GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-17T15:22:33+08:00">
-                2019-05-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Conditioned on label vector: conditional GAN <a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">[4]</a>, CVAE-GAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>Conditioned on a single image</p>
-<ul>
-<li>pix2pix <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>; high-resolution pix2pix <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[2]</a> (add coarse-to-fine strategy); BicycleGAN <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">[3]</a> (combination of cVAE-GAN and cLR-GAN)</li>
-<li>DAGAN <a href="https://arxiv.org/pdf/1711.04340" target="_blank" rel="noopener">[5]</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Isola, Phillip, et al. “Image-to-image translation with conditional adversarial networks.” CVPR, 2017</p>
-<p>[2] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018.</p>
-<p>[3] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” NIPS, 2017.</p>
-<p>[4] Mirza, Mehdi, and Simon Osindero. “Conditional generative adversarial nets.” arXiv preprint arXiv:1411.1784 (2014).</p>
-<p>[5] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
-<p>[6] Bao, Jianmin, et al. “CVAE-GAN: fine-grained image generation through asymmetric training.” ICCV, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/deep_learning/Zero-Shot Object Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/30/deep_learning/Zero-Shot Object Detection/" itemprop="url">Zero-Shot Object Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-30T17:22:26+08:00">
-                2019-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>ZSL based on bounding box features</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/1804.04340.pdf" target="_blank" rel="noopener">[1]</a>: use background bounding boxes from background classes</li>
-<li><a href="https://arxiv.org/pdf/1803.06049.pdf" target="_blank" rel="noopener">[3]</a>: classification loss with semantic clustering</li>
-</ul>
-</li>
-<li><p>End-to-end zero-shot object detection</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/1803.07113.pdf" target="_blank" rel="noopener">[2]</a>: extend YOLO, concatenate three feature maps to predict confidence score.</li>
-<li><a href="https://arxiv.org/pdf/1811.08982.pdf" target="_blank" rel="noopener">[4]</a>: use polarity loss similar to focal loss and vocabulary to enhance word vector</li>
-<li><a href="https://arxiv.org/pdf/1805.06157.pdf" target="_blank" rel="noopener">[5]</a>: output both classification scores and semantic embeddings</li>
-</ul>
-</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ankan Bansal, Karan Sikka, Gaurav Sharma, Rama Chellappa, Ajay Divakaran, “Zero-Shot Object Detection”, ECCV, 2018.</p>
-<p>[2] Pengkai Zhu, Hanxiao Wang, and Venkatesh Saligrama, “Zero Shot Detection”, T-CSVT, 2019.</p>
-<p>[3] Rahman, Shafin, Salman Khan, and Fatih Porikli. “Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts.” arXiv preprint arXiv:1803.06049 (2018).</p>
-<p>[4] Rahman, Shafin, Salman Khan, and Nick Barnes. “Polarity Loss for Zero-shot Object Detection.” arXiv preprint arXiv:1811.08982 (2018).</p>
-<p>[5] Demirel, Berkan, Ramazan Gokberk Cinbis, and Nazli Ikizler-Cinbis. “Zero-Shot Object Detection by Hybrid Region Embedding.” arXiv preprint arXiv:1805.06157 (2018).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/deep_learning/Image Matting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/16/deep_learning/Image Matting/" itemprop="url">Image Matting</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-16T08:41:39+08:00">
-                2019-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>.</p>
-<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
-<li><p><a href="http://alphamatting.com/" target="_blank" rel="noopener">Alphamatting.com</a> Dataset: 25 train images, 8 test images, each has 3 different trimaps: small, large, user. Input: image and trimap.</p>
-</li>
-<li><p><a href="https://sites.google.com/view/deepimagematting" target="_blank" rel="noopener">Composition-1k Dataset</a>: 1000 images and 50 unique foregrounds.</p>
-</li>
-<li><p><a href="https://github.com/lizhengwei1992/Semantic_Human_Matting" target="_blank" rel="noopener">Matting Human Dataset</a>: 34427 images, annotation is not very accurate.</p>
-</li>
-<li><p><a href="https://github.com/wukaoliu/CVPR2020-HAttMatting" target="_blank" rel="noopener">Dinstinctions-646</a>: composed of 646 foreground images</p>
-</li>
-<li><p><a href="https://openaccess.thecvf.com/content/WACV2021/papers/Kang_ATM_Attentional_Text_Matting_WACV_2021_paper.pdf" target="_blank" rel="noopener">Text matting dataset</a></p>
-</li>
-</ul>
-<h2 id="Evaluation-metrics"><a href="#Evaluation-metrics" class="headerlink" title="Evaluation metrics"></a>Evaluation metrics</h2><ul>
-<li>quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error.</li>
-</ul>
-<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
-<li><p>Affinity-based <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </p>
-</li>
-<li><p>Sampling-based <a href="https://link.springer.com/chapter/10.1007/978-3-319-46475-6_13" target="_blank" rel="noopener">[8]</a>: the foreground/background color of unknown pixels can be obtained by sampling the foreground/background color of known pixels.</p>
-</li>
-<li><p>Learning-based</p>
-<ul>
-<li>With trimap:<ul>
-<li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and compositional loss; refine alpha.</li>
-<li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; compositional loss.</li>
-<li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and compositional loss.</li>
-<li>Learning based sampling <a href="http://people.inf.ethz.ch/aksoyy/papers/CVPR19-samplenet.pdf" target="_blank" rel="noopener">[7]</a></li>
-</ul>
-</li>
-<li>Without trimap:<ul>
-<li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block. </li>
-<li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
-<li><a href="https://arxiv.org/pdf/2004.00626.pdf" target="_blank" rel="noopener">[9]</a>: capture the background image without subject and a corresponding video with subject</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h2><p>Omnimatte <a href="https://arxiv.org/pdf/2105.06993.pdf" target="_blank" rel="noopener">[10]</a>: segment objects and scene effects related to the objects (shadows, reflections, smoke)</p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” CVPR, 2017.</p>
-<p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
-<p>[3] Zhu, Bingke, et al. “Fast deep matting for portrait animation on mobile phone.” ACM MM, 2017.</p>
-<p>[4] Wang, Yu, et al. “Deep Propagation Based Image Matting.” IJCAI. 2018.</p>
-<p>[5] Quan Chen, Tiezheng Ge, Yanyu Xu, Zhiqiang Zhang, Xinxin Yang, Kun Gai, “Semantic Human Matting.” ACM MM, 2018.</p>
-<p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
-<p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
-<p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
-<p>[9] Soumyadip Sengupta, Vivek Jayaram, Brian Curless, Steve Seitz, Ira Kemelmacher-Shlizerman:<br>Background Matting: The World is Your Green Screen. CVPR, 2020.</p>
-<p>[10] Lu, Erika, et al. “Omnimatte: Associating Objects and Their Effects in Video.” CVPR, 2021.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/deep_learning/Aesthetic Evaluation and Cropping/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/12/deep_learning/Aesthetic Evaluation and Cropping/" itemprop="url">Aesthetic Evaluation and Cropping</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-12T08:45:19+08:00">
-                2019-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><a href="https://github.com/bcmi/Awesome-Aesthetic-Evaluation-and-Cropping" target="_blank" rel="noopener">Awesome-Aesthetic-Evaluation-and-Cropping</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/deep_learning/Domain Adaptive Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/10/deep_learning/Domain Adaptive Segmentation/" itemprop="url">Domain Adaptative Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-10T09:59:07+08:00">
-                2019-04-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Domain-adaptation"><a href="#Domain-adaptation" class="headerlink" title="Domain adaptation:"></a>Domain adaptation:</h3><ul>
-<li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>, cycle consistency <a href="https://papers.nips.cc/paper/2020/file/243be2818a23c980ad664f30f48e5d19-Paper.pdf" target="_blank" rel="noopener">[11]</a></p>
-</li>
-<li><p>Translation source domain image to target domain image: <a href="https://arxiv.org/pdf/1711.03213.pdf" target="_blank" rel="noopener">[5]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sankaranarayanan_Learning_From_Synthetic_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[6]</a><a href="https://arxiv.org/pdf/1904.10620.pdf" target="_blank" rel="noopener">[10]</a> (combine with target domain pseudo labels).</p>
-</li>
-<li><p>Training with pseudo labels on the target domain: Curriculumn learning <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> (global image label distribution and landmark superpixel label distribution); self-training <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yang_Zou_Unsupervised_Domain_Adaptation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[7]</a>; use multiple models to vote for pseudo labels <a href="https://arxiv.org/pdf/1711.03694.pdf" target="_blank" rel="noopener">[9]</a> </p>
-</li>
-</ul>
-<h3 id="Domain-adaptation-with-privileged-information"><a href="#Domain-adaptation-with-privileged-information" class="headerlink" title="Domain adaptation with privileged information:"></a>Domain adaptation with privileged information:</h3><ul>
-<li>Domain adaptation with privileged information like depth: SPIGAN <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[2]</a> (enforce synthetic image and generated image to predict the same depth), <a href="https://arxiv.org/pdf/1904.01886.pdf" target="_blank" rel="noopener">[3]</a> (adversarial learning on depth)</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Yang, Philip David, and Boqing Gong. “Curriculum domain adaptation for semantic segmentation of urban scenes.” ICCV, 2017.</p>
-<p>[2] Lee, Kuan-Hui, et al. “SPIGAN: Privileged Adversarial Learning from Simulation.” ICLR, 2019.</p>
-<p>[3] Vu, Tuan-Hung, et al. “DADA: Depth-aware Domain Adaptation in Semantic Segmentation.” arXiv preprint arXiv:1904.01886 (2019).</p>
-<p>[4] Chen, Yuhua, Wen Li, and Luc Van Gool. “Road: Reality oriented adaptation for semantic segmentation of urban scenes.” CVPR, 2018.</p>
-<p>[5] Hoffman, Judy, et al. “Cycada: Cycle-consistent adversarial domain adaptation.” arXiv preprint arXiv:1711.03213 (2017).</p>
-<p>[6] Sankaranarayanan, Swami, et al. “Learning from synthetic data: Addressing domain shift for semantic segmentation.” CVPR, 2018.</p>
-<p>[7] Zou, Yang, et al. “Unsupervised domain adaptation for semantic segmentation via class-balanced self-training.”, ECCV, 2018.</p>
-<p>[8] Hong, Weixiang, et al. “Conditional generative adversarial network for structured domain adaptation.” CVPR, 2018.</p>
-<p>[9] Zhang, Junting, Chen Liang, and C-C. Jay Kuo. “A fully convolutional tri-branch network (FCTN) for domain adaptation.” ICASSP, 2018.</p>
-<p>[10] Li, Yunsheng, Lu Yuan, and Nuno Vasconcelos. “Bidirectional Learning for Domain Adaptation of Semantic Segmentation.” arXiv preprint arXiv:1904.10620 (2019).</p>
-<p>[11] Kang, Guoliang, et al. “Pixel-Level Cycle Association: A New Perspective for Domain Adaptive Semantic Segmentation.” Advances in Neural Information Processing Systems 33 (2020).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/06/deep_learning/Video Harmonization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/06/deep_learning/Video Harmonization/" itemprop="url">Video Harmonization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-06T12:37:41+08:00">
-                2019-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>First deep learning approach for video harmonization <a href="https://arxiv.org/pdf/1809.01372.pdf" target="_blank" rel="noopener">[1]</a></p>
-<p>[1] Haozhi Huang, Senzhe Xu, Junxiong Cai, Wei Liu, Shimin Hu, “Temporally Coherent Video Harmonization Using<br>Adversarial Networks”, arxiv, 2018.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1895,7 +1870,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">199</span>
+                  <span class="site-state-item-count">205</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1917,7 +1892,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

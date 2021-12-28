@@ -281,6 +281,1060 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Visual Object Tracking/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Visual Object Tracking/" itemprop="url">Visual Object Tracking</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Tracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect</p>
+<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><p>Tracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. </p>
+<ul>
+<li>Meanshift: density based, ASMS <a href="https://github.com/vojirt/asms" target="_blank" rel="noopener">https://github.com/vojirt/asms</a></li>
+<li>Particle filter: particle based statistical method</li>
+<li>Optical flow: match feature points between neighboring frames</li>
+<li>correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect.</li>
+<li>deep learning: GOTURN, MDNet, TCNN, SiamFC</li>
+</ul>
+<p>Two research groups contribute to CF methods most:</p>
+<ul>
+<li>Oxford: <a href="https://www.robots.ox.ac.uk/~luca/" target="_blank" rel="noopener">https://www.robots.ox.ac.uk/~luca/</a>, </li>
+<li>Linkoping: <a href="http://users.isy.liu.se/en/cvl/marda26/" target="_blank" rel="noopener">http://users.isy.liu.se/en/cvl/marda26/</a></li>
+</ul>
+<p><strong>Comparison of Speed and Performance</strong><br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/LsTWGvk.jpg" alt=""></p>
+<h3 id="Survey-papers"><a href="#Survey-papers" class="headerlink" title="Survey papers"></a>Survey papers</h3><ul>
+<li>Object tracking: A survey, 2006</li>
+<li>Object tracking benchmark, 2015</li>
+</ul>
+<h3 id="Benchmark"><a href="#Benchmark" class="headerlink" title="Benchmark"></a>Benchmark</h3><ul>
+<li>OTB50/100: <a href="http://cvlab.hanyang.ac.kr/tracker_benchmark/" target="_blank" rel="noopener">http://cvlab.hanyang.ac.kr/tracker_benchmark/</a></li>
+<li>VOT2016: <a href="http://www.votchallenge.net/vot2016/dataset.html" target="_blank" rel="noopener">http://www.votchallenge.net/vot2016/dataset.html</a> </li>
+</ul>
+<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><ul>
+<li>Visual Object Tracking (VOT) challenge:<br><a href="http://www.votchallenge.net/challenges.html" target="_blank" rel="noopener">http://www.votchallenge.net/challenges.html</a><br>VOT2016 has released the code of many trackers: <a href="http://votchallenge.net/vot2016/trackers.html" target="_blank" rel="noopener">http://votchallenge.net/vot2016/trackers.html</a></li>
+<li>Multiple Object Tracking Challenge (MOT) challenge:<br><a href="https://motchallenge.net/" target="_blank" rel="noopener">https://motchallenge.net/</a></li>
+</ul>
+<h3 id="Detection-based-Tracking"><a href="#Detection-based-Tracking" class="headerlink" title="Detection based Tracking"></a>Detection based Tracking</h3><p>Detection based tracking is also named as  tracking by detection or multiple object tracking. (MOT Challenge)</p>
+<p>TLD (tracking-learning-detection): update tracker and detector during learning<br><a href="http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html" target="_blank" rel="noopener">http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Simple Bayesian Optimization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/others/Simple Bayesian Optimization/" itemprop="url">Simple Bayesian Optimization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We release a light-weighted user-friendly Bayesian optimization tool for tuning hyper-parameters based on Gaussian profess. The code is modified based on <a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">https://github.com/fmfn/BayesianOptimization</a> and released on <a href="https://github.com/ustcnewly/simple_Bayesian_optimization" target="_blank" rel="noopener">https://github.com/ustcnewly/simple_Bayesian_optimization</a>, in which README shows the dependency and usage of the tool. </p>
+<ul>
+<li><p>bo = BayesianOptimization(func, param_bound_dict): ‘func’ is a function with parameters as input and performance as output, ‘param_dict’ is a dictionary containing the upper/lower bound of each parameter.</p>
+</li>
+<li><p>bo.explore(param_value_dict, eager=True): ‘param_value_dict’ is a dictionary containing multiple parameter values. This function does no calculate the performance corresponding to the parameter values, does not add items into bo.X and bo.Y, only add new parameters. Do not forget to set eager as True to make the added parameters take effect.</p>
+</li>
+<li><p>bo.initialize(param_value_target_dict): compared with ‘param_value_dict’, ‘param_value_target_dict’ additionally contains the performance corresponding to the parameter values. This function does not add items into bo.X and bo.Y.</p>
+</li>
+<li><p>bo.maximize(init_points=5, n_iter=15, **kwargs): ‘init_points’ is to include extra points for fitting. ‘n_iter’ indicates the iterative process of inferring the next point and add it for fitting. All the init points and inferred points will be added into bo.X and bo.Y. The model is fitted on bo.X and bo.Y. </p>
+<p>The algorithm requires at least two initial points. When setting ‘init_points=0’, we can use ‘bo.explore’ and ‘bo.initialization’ for initialization. </p>
+<p>For inference, acq=’ucb’ (upper confidence bound), ‘ei’ (expected improvement) or ‘poi’ (probability of improvement). ‘poi’ and ‘ucb’ work better empirically. There is a trade-off beteween exploitation and exploration. When acq=’ucb’,  smaller kappa prefers exploitation while larger kappa prefers exploration. When acq=’poi’, similarly, smaller xi prefers exploitation while larger xi prefers exploration. kappa and xi can be set within [10^-3, 10^-2, …, 10^3].</p>
+<p>For the Gaussian process model itself, it contains parameters like ‘kernel’ and ‘alpha’. Refer to <a href="http://scikit-learn.org/stable/modules/gaussian_process.html" target="_blank" rel="noopener">scikit-learn</a> for the details. When warnings occur in ‘gpr.py’, you can try using larger alpha, i.e., 10^-3. </p>
+</li>
+<li><p>bo.gp.fit(bo.X, bo.Y): use Gaussian process regression to fit bo.X and bo.Y.</p>
+</li>
+<li><p>mu, sigma = bo.gp.predict(x, return_std=True): use the learnt model to predict x, output mean and variance.</p>
+</li>
+<li><p>utility = bo.util.utility(test_params, bo.gp): return the utility of test parameters, based on which the next point is recommended.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Self-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Self-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Design a proxy task using unlabeled or weakly-labeled data to help the original task. Essentially, self-supervised learning is multi-task learning with the proxy task not relying on heavy human annotation. The problem is which proxy task without human annotation is the most effective one.</p>
+<p>Please refer to the tutorial slides <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_naiyanwang.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_zisserman.pdf" target="_blank" rel="noopener">[2]</a>, the <a href="https://arxiv.org/pdf/1902.06162.pdf" target="_blank" rel="noopener">survey</a>, and the <a href="https://github.com/jason718/awesome-self-supervised-learning" target="_blank" rel="noopener">paper list</a>.</p>
+<ol>
+<li><p>image-to-image</p>
+<ul>
+<li>image-to-image translation: colorization <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[1]</a>, inpainting <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Pathak_Context_Encoders_Feature_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a>, cross-channel generation <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_Split-Brain_Autoencoders_Unsupervised_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>spatial location: relative location <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Doersch_Unsupervised_Visual_Representation_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, jigsaw <a href="https://arxiv.org/pdf/1603.09246.pdf" target="_blank" rel="noopener">[2]</a>, predicting rotation <a href="https://arxiv.org/pdf/1803.07728.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>contrastive learning: instance-wise contrastive learning (e.g., MOCO), prototypical contrastive learning (clustering) <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2005.04966" target="_blank" rel="noopener">[2]</a> </li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>video-to-image</p>
+<ul>
+<li>temporal coherence: <a href="http://people.csail.mit.edu/hmobahi/pubs/embedvideo.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.386.1586&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Jayaraman_Slow_and_Steady_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>temporal order:  <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wang_Unsupervised_Learning_of_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1603.08561.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>unsupervised image tasks with video clues: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a>, optical flow prediction <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, unsupervised segmentation based on optical flow <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>,unsupervised depth estimation based on optical flow <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Huaizu_Jiang_Self-Supervised_Relative_Depth_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>video generation <a href="https://arxiv.org/pdf/1502.04681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>cross-modal consistency: consistency between visual kernel and optical flow kernel <a href="http://www.robots.ox.ac.uk/~vgg/publications/2018/Mahendran18/mahendran18.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features.</p>
+<ul>
+<li>3D rotation <a href="https://arxiv.org/pdf/1811.11387.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Cubic puzzle <a href="https://www.aaai.org/Papers/AAAI/2019/AAAI-KimD.1806.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>video localization and classification <a href="https://arxiv.org/pdf/1904.03597.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+</ol>
+<p><strong>Muti-task self-supervised learning:</strong> integrate multiple proxy tasks <a href="https://arxiv.org/pdf/1804.10069.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1708.07860" target="_blank" rel="noopener">[2]</a></p>
+<p><strong>Combined with other frameworks:</strong> self-supervised GAN <a href="https://arxiv.org/pdf/1811.11212.pdf" target="_blank" rel="noopener">[1]</a></p>
+<p>  A recent paper <a href="https://arxiv.org/pdf/1901.09005.pdf" target="_blank" rel="noopener">[1*]</a> claims that the best self-supervised learning method is still the earliest image inpainting model. The design of network architecture has a significant impact on the performance of self-supevivsed learning methods.</p>
+<p>SimCLR <a href="https://arxiv.org/pdf/2002.05709.pdf" target="_blank" rel="noopener">[2*]</a> is a SOTA self-supervised learning method with performance approaching supervised learning. </p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1*] Alexander Kolesnikov, Xiaohua Zhai, Lucas Beyer: Revisiting Self-Supervised Visual Representation Learning. CVPR 2019.</p>
+<p>[2*] Chen, Ting, et al. “A simple framework for contrastive learning of visual representations.” arXiv preprint arXiv:2002.05709 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Reasons to Reject a Paper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/others/Reasons to Reject a Paper/" itemprop="url">Reasons to Reject a Paper</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Strong reasons:</strong> </p>
+<ol>
+<li>Promise more than delivered (this is the first work….).</li>
+<li>Miss important references (closely related).</li>
+<li>Results are too incremental or too unconvincing, or lower than state-of-the-art.</li>
+<li>Poorly written or oraganized.</li>
+<li>Incorrect statements or statements without support.</li>
+<li>Lack of component analysis for important components.</li>
+</ol>
+<p><strong>Weak reasons:</strong></p>
+<ol>
+<li>Novelty is minor or incremental. Just an extension of A, or similar to A, or combination of A and B.</li>
+<li>Motivation is unclear or arguable.</li>
+<li>No theoretical guarantee of the effectiveness.</li>
+<li>No technical contribution: too few math formulations or the proposed method is too straightforward.</li>
+<li>Formulations are too dense and hard to follow.</li>
+<li>Paper writing has some flaws (e.g., ambiguity, redundancy, a few typos or grammar mistakes).</li>
+<li>Improvement is not very significant.</li>
+<li>Lack of component analysis for less important components.</li>
+<li>Lack of qualitative analysis.</li>
+<li>Unfair or insufficient comparison with state-of-the-art. Miss some baselines. Sometimes we need to create baselines if necessary.</li>
+<li>Hyper-parameter analysis: too many hyper-parameters, unclear how to set hyper-parameter, sensitivity to hyper-parameters. </li>
+<li>No significant test.</li>
+<li>Miss some details (e.g., technical details or experimental details), not self-contained. </li>
+<li>Miss less important references.</li>
+<li>Miss analyses on time/memory/model complexity</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Privileged Information/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/deep_learning/Privileged Information/" itemprop="url">Privileged Information</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in <a href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf" target="_blank" rel="noopener">[the first paper]</a>.</p>
+<h3 id="High-level-ideas"><a href="#High-level-ideas" class="headerlink" title="High-level ideas:"></a>High-level ideas:</h3><ul>
+<li>Use privileged information in the same way as for multi-view learning</li>
+<li>Transfer between privileged information and primary information</li>
+<li>Use privileged information to control the training process like training uncertainty or training difficulty (e.g., training loss, noise). </li>
+</ul>
+<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications:"></a>Applications:</h3><ul>
+<li><p>SVM for binary classification</p>
+<ul>
+<li>model the slack variable : SVM+ <a href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>model the margin: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Sharmanska_Learning_to_Rank_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1410.0389.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>structural SVM: <a href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>theoretical analysis: <a href="http://papers.nips.cc/paper/3960-on-the-theory-of-learnining-with-privileged-information.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.765.6609&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+</li>
+<li><p>Gaussian process classification</p>
+<ul>
+<li>GPC <a href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>L2 loss for classification/Hash</p>
+<ul>
+<li>multi-labeling <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Hash ITQ <a href="https://arxiv.org/pdf/1605.04034.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>clustering</p>
+<ul>
+<li>clustering <a href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>metric learning for verification/classification</p>
+<ul>
+<li>ITML+ <a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_TNNLS2015.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/2412/9967f9e6c4fca95165a7b9e6745c9debe0dd.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>DML+ <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246" target="_blank" rel="noopener">[1]</a></li>
+<li>OITML <a href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf" target="_blank" rel="noopener">[1]</a>: ordinal-based ITML</li>
+</ul>
+</li>
+<li><p>CRF</p>
+<ul>
+<li>probilistic inference <a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
+</ul>
+</li>
+<li><p>random forest</p>
+<ul>
+<li>conditional regression forest <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766" target="_blank" rel="noopener">[1]</a>: design node splitting criterion</li>
+</ul>
+</li>
+<li><p>matrix factorization for collaborative filtering</p>
+<ul>
+<li>PriMF <a href="https://www.ijcai.org/proceedings/2017/0223.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>Maximum Entropy Discrimination</p>
+<ul>
+<li>MED <a href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>Deep Learning</p>
+<ul>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hoffman_Learning_With_Side_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Hallucination network</a></li>
+<li>classification loss <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>model drop-out <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Lambert_Deep_Learning_Under_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings:"></a>Settings:</h3><ul>
+<li>multi-view + LUPI <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811" target="_blank" rel="noopener">[1]</a></li>
+<li>multi-task multi-class LUPI <a href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>multi-instance LUPI <a href="http://bcmi.sjtu.edu.cn/home/niuli/paper/Exploiting%20Privileged%20Information%20from%20Web%20Data%20for%20Image%20Categorization.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>active learning + LUPI <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533" target="_blank" rel="noopener">[1]</a></li>
+<li>distillation + LUPI <a href="https://arxiv.org/pdf/1511.03643.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>domain adaptation + LUPI <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/others/Hyper Parameter Tuning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/07/others/Hyper Parameter Tuning/" itemprop="url">Hyper Parameter Tuning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="Parameter-searching"><a href="#Parameter-searching" class="headerlink" title="Parameter searching:"></a>Parameter searching:</h5><ul>
+<li><p>grid search</p>
+</li>
+<li><p><a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf" target="_blank" rel="noopener">random search</a></p>
+</li>
+<li><p>Bayesian Optimization: <a href="https://sigopt.com/" target="_blank" rel="noopener">SigOpt</a> is providing parameter tuning service based on Bayesian optimization. <a href="https://ustcnewly.github.io/2018/07/18/paper_note/Simple%20Bayesian%20Optimization/" target="_blank" rel="noopener">This</a> is a good place to start.</p>
+<ul>
+<li><a href="https://github.com/hyperopt/hyperopt" target="_blank" rel="noopener">hyperopt</a> (tree parzen estimator)</li>
+<li><a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">BayesianOptimization</a>, <a href="https://github.com/JasperSnoek/spearmint" target="_blank" rel="noopener">Spearmint</a>, <a href="https://github.com/Yelp/MOE" target="_blank" rel="noopener">MOE</a> (Gaussian process) </li>
+<li><p><a href="http://www.cs.ubc.ca/labs/beta/Projects/SMAC/" target="_blank" rel="noopener">SMAC</a> (random forest regression)</p>
+<p>related papers:  <a href="http://papers.nips.cc/paper/5086-multi-task-bayesian-optimization.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/f6c3/ba9e1ccb7931ab1bacb806c7e314ab4d8b06.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://proceedings.mlr.press/v37/snoek15.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+</ul>
+</li>
+<li><p>Spectral Optimization: <a href="https://arxiv.org/pdf/1706.00764.pdf" target="_blank" rel="noopener">Harmonica</a> <a href="https://github.com/callowbird/Harmonica" target="_blank" rel="noopener">[github]</a> currently only supports tuning binary parameters.</p>
+</li>
+</ul>
+<h4 id="Model-ensembling"><a href="#Model-ensembling" class="headerlink" title="Model ensembling:"></a>Model ensembling:</h4><ul>
+<li>different initialization</li>
+<li>different epochs</li>
+<li>different hyperparameters</li>
+</ul>
+<p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Outlier Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -909,1068 +1963,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Gaze Estimation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Gaze Estimation/" itemprop="url">Gaze Estimation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/VDw1UW6.jpg" width="50%" height="50%"></p>
-<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><ol>
-<li><p>Corneal reflection-based methods</p>
-<ul>
-<li>NIR or LED illumination, learning the mapping (e.g., regression, ) between glint vector and gaze direction.</li>
-</ul>
-</li>
-<li><p>Appearance based methods</p>
-<ul>
-<li>Limbus model <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.486.489&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a>: fit a limbus model (a fixed-diameter disc) to detected iris edges.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Auxiliary-Tools"><a href="#Auxiliary-Tools" class="headerlink" title="Auxiliary Tools"></a>Auxiliary Tools</h3><ol>
-<li><p>Calibration: obtain the visual axis and kappa angle for each person.</p>
-</li>
-<li><p>Facial landmarks detection</p>
-<ul>
-<li>One Millisecond Face Alignment with an Ensemble of Regression Trees <a href="http://openaccess.thecvf.com/content_cvpr_2014/papers/Kazemi_One_Millisecond_Face_2014_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/cheind/dest" target="_blank" rel="noopener">[code]</a></li>
-<li>Continuous Conditional Neural Fields for Structured Regression <a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=1133&amp;context=lti" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>Head Pose Estimation</p>
-<ul>
-<li>EPnP algorithm <a href="https://infoscience.epfl.ch/record/160138/files/top.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><ol>
-<li><p><a href="https://www.mpi-inf.mpg.de/de/abteilungen/computer-vision-and-multimodal-computing/research/gaze-based-human-computer-interaction/appearance-based-gaze-estimation-in-the-wild-mpiigaze/" target="_blank" rel="noopener">[MPIIGaze]</a>: fine-grained annotation</p>
-</li>
-<li><p><a href="https://www.idiap.ch/dataset/eyediap" target="_blank" rel="noopener">[Eyediap]</a>: RGB-D </p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/From Weak to Strong Supervision/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/From Weak to Strong Supervision/" itemprop="url">From Weak to Strong Supervision</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Object Detection:</strong></p>
-<ol>
-<li><p>image label: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Bilen_Weakly_Supervised_Deep_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[WSDDN]</a></p>
-</li>
-<li><p>points that indicate the location of the object</p>
-</li>
-<li><p>bounding boxes</p>
-</li>
-</ol>
-<p><strong>Segmentation:</strong></p>
-<ol>
-<li><p>image label: <a href="https://arxiv.org/pdf/1603.06098.pdf]" target="_blank" rel="noopener">[SEC]</a></p>
-</li>
-<li><p>points that indicate the location of the object</p>
-</li>
-<li><p>scribbles that imply the extent of the object</p>
-</li>
-<li><p>bounding boxes</p>
-</li>
-<li><p>segmentation masks</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Euler Angle (yaw,pitch,roll)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Euler Angle (yaw,pitch,roll)/" itemprop="url">Euler Angle (yaw,pitch,roll)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Borrowing aviation terminology, these rotations will be referred to as yaw, pitch, and roll:</p>
-<p>A yaw is a counterclockwise rotation of \( \alpha\) about the \(z\)-axis. The rotation matrix is given by</p>
-<script type="math/tex; mode=display">\displaystyle R_z(\alpha) = \begin{pmatrix}\cos\alpha & -\sin\alpha & 0 \\\\ \sin\alpha & \cos\alpha & 0 \\\\  0 & 0 & 1  \end{pmatrix} .</script><p>A pitch is a counterclockwise rotation of \( \beta\) about the \( y\)-axis. The rotation matrix is given by</p>
-<script type="math/tex; mode=display">\displaystyle R_y(\beta) = \begin{pmatrix}\cos\beta & 0 & \sin\beta \\\\ 0 & 1 & 0 \\\\ -\sin\beta & 0 & \cos\beta  \end{pmatrix} .</script><p>A roll is a counterclockwise rotation of \( \gamma\) about the \( x\)-axis. The rotation matrix is given by</p>
-<script type="math/tex; mode=display">\displaystyle R_x(\gamma) = \begin{pmatrix}1 & 0 & 0 \\\\ 0 & \cos\gamma & -\sin\gamma \\\\ 0 & \sin\gamma & \cos\gamma  \end{pmatrix} .</script><p>Note that \( R(\alpha,\beta,\gamma)\) performs the roll first, then the pitch, and finally the yaw. If the order of these operations is changed, a different rotation matrix would result.</p>
-<p>For gaze direction, roll does not change gaze direction, so only yaw and pitch affect gaze direction. Given a normalized 3D vector (x,y,z), how to determine the yaw and pitch angles?<br>The problem should be discussed based on the order of doing yaw/pitch.</p>
-<p>Consider an eye rigid model (bound with a head rigid model), aligned with original coordinate system, is facing x positive direction. Since roll has no effect on eye direction, we only perform yaw and pitch. For coordinate transformation, we consider the reverse process.</p>
-<p>The eye direction in new coordinate system is \(c_1 = (1,0,0)\) but \(c_2 = (x_0,y_0,z_0)\) in the original coordinate system. </p>
-<ul>
-<li><p>If true rotation order is yaw-&gt;pitch, then <script type="math/tex">c\_2=R\_z(-\alpha)R\_y (-\beta)c\_1.</script>. Then, \(\beta=arsin(z_0),\alpha=-artan(y_0/x_0)\). </p>
-</li>
-<li><p>If true rotation order is pitch-&gt;yaw, then <script type="math/tex">c\_2=R\_y(-\beta)R\_z (-\alpha)c\_1.</script>. Then, \(\alpha=-arsin(y_0),\beta=artan(z_0/x_0)\). </p>
-</li>
-</ul>
-<p>If we insert \(R_x(\gamma)\) before \(c_1\), the results won’t change, which demonstrates that roll will not influence eye direction. In other words, if the true rotation order is yaw-&gt;pitch-&gt;roll or pitch-&gt;yaw-&gt;roll, the above analysis still holds. </p>
-<p>Notice:<br>-</p>
-<ul>
-<li>we used right-hand coordinate system, that is, thumb along the z-axis and fingers from x-axis to y-axis.</li>
-<li>rotation \(\theta\) around some axis means rotating counter clockwise \(\theta\) when looking along the positive direction of that axis</li>
-<li>when doing rotations in sequence, each rotation is based on the up-to-date coordinate system (x-axis, y-axis, z-axis).</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Endovascular Surgery/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Endovascular Surgery/" itemprop="url">Endovascular Surgery</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="Key-words"><a href="#Key-words" class="headerlink" title="Key words:"></a>Key words:</h4><p>catheter, cannulation, EM tracking (enhance visualization and provide objective metric)</p>
-<h4 id="Endovascular-Technique"><a href="#Endovascular-Technique" class="headerlink" title="Endovascular Technique:"></a>Endovascular Technique:</h4><p>Early endovascular technique: real-time fluoroscopy and 2D angiography: ionizing radiation and repeated injection of a nephrotoxic contrast agent.</p>
-<p>Image fusion techniques: project 3D CT and magnetic resonance imaging to real-time 2D fluoroscopic images, still require real-time fluroscopy.</p>
-<p>Electromagnetic (EM) tracking: an EM field is generated by the Aurora Window Field Generator, and sensors on the tips measure and transmit the roll orientation and forward motion. The veracity of EM tracking is evaluated on the basis of target registration error (TRE).</p>
-<h4 id="System"><a href="#System" class="headerlink" title="System:"></a>System:</h4><ol>
-<li>manual simulator 2. virtual simulator (virtual reality)</li>
-</ol>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/yQSOKk9.jpg" width="50%"></p>
-<h3 id="Task"><a href="#Task" class="headerlink" title="Task:"></a>Task:</h3><p>Different locations of vessels correspond to the tasks with different difficult levels. </p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/iGbNTt1.jpg" width="50%"></p>
-<h4 id="Metric"><a href="#Metric" class="headerlink" title="Metric:"></a>Metric:</h4><p>Certain metric is required to evaluate or augment the skills of surgeon (novice, intermediate, expert).</p>
-<p>1.expert observation and subjective score</p>
-<p>2.number of cases</p>
-<p>3.kinematic metrics: mapping from kinematic data to skill (classification)</p>
-<ul>
-<li>3D path length</li>
-<li>spectral arc length: change of acceleration in frequency domain</li>
-<li>root mean dimensionless jerk: movement smoothness</li>
-<li>submovement number and duration</li>
-<li>catheter turn: measure the task difficulty</li>
-</ul>
-<h4 id="View"><a href="#View" class="headerlink" title="View:"></a>View:</h4><ul>
-<li>2D or 3D</li>
-<li>real-time or stored (using stored image can reduce fluoroscopy time and radiation exposure)</li>
-<li>anteroposterior/lateral/endoluminal view</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Domain Generalization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Domain Generalization/" itemprop="url">Domain Generalization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>a) When the domain labels are known: </p>
-<ul>
-<li><p>reduce the distance between different domains: MMD <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2932.pdf" target="_blank" rel="noopener">[1]</a><a href="http://proceedings.mlr.press/v28/muandet13.pdf" target="_blank" rel="noopener">[2]</a>, mutual information</p>
-</li>
-<li><p>domain-invariant and domain-specific components: <a href="">[1]</a><a href="https://arxiv.org/pdf/1710.03077.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ul>
-<p>b) When the domain labels are unkown:</p>
-<ul>
-<li>first discover multiple latent domains: cluster <a href="https://people.eecs.berkeley.edu/~jhoffman/papers/Hoffman_ECCV2012.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_ECCV2014.pdf" target="_blank" rel="noopener">[2]</a>, max margin separation <a href="http://papers.nips.cc/paper/5210-reshaping-visual-datasets-for-domain-adaptation.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Domain Adaptation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Domain Adaptation/" itemprop="url">Domain Adaptation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Methods</strong></p>
-<ol>
-<li><p>learn projection matrix: F(PXs, QXt)</p>
-<ul>
-<li>project to common subspace<ul>
-<li>TCA <a href="http://www.aaai.org/ocs/index.php/IJCAI/IJCAI-09/paper/download/294/962" target="_blank" rel="noopener">[pdf]</a></li>
-<li>SA <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Fernando_Unsupervised_Visual_Domain_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>LSSA: extension of SA <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Aljundi_Landmarks-Based_Kernelized_Subspace_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>DIP <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Baktashmotlagh_Unsupervised_Domain_Adaptation_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>CORAL <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12443/11842" target="_blank" rel="noopener">[pdf]</a></li>
-<li>deep CORAL <a href="https://arxiv.org/pdf/1607.01719.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>other deep feature-based methods <a href="http://proceedings.mlr.press/v37/long15.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1409.7495.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-</li>
-<li>interpolation on the manifold<ul>
-<li>SGF <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.300.3323&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>GFK <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.373.2677&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>sample selection: learn sample weights</p>
-<ul>
-<li>KMM <a href="http://papers.nips.cc/paper/3075-correcting-sample-selection-bias-by-unlabeled-data.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>STM <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chu_Selective_Transfer_Machine_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>DASVM <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4803844" target="_blank" rel="noopener">[pdf]</a></li>
-<li>weighted adversarial network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Importance_Weighted_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1224.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-</li>
-<li><p>domain-invariant and domain-specific components</p>
-<ul>
-<li>SDDL <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shekhar_Generalized_Domain-Adaptive_Dictionaries_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>Domain Separation Network <a href="http://papers.nips.cc/paper/6254-domain-separation-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>low-rank DL <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8053784" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>low-rank reconstruction</p>
-<ul>
-<li>LTSL <a href="https://search.proquest.com/docview/1531888211?pq-origsite=gscholar" target="_blank" rel="noopener">[pdf]</a></li>
-<li>RDALR <a href="http://www.ee.columbia.edu/ln/dvmm/publications/12/DomainAdaptation.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>pixel-level image to image translation</p>
-<ul>
-<li>paired input: conditional GAN <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>unpaired input: cycling GAN <a href="https://arxiv.org/pdf/1703.10593.pdf" target="_blank" rel="noopener">[pdf]</a>, GAN with content-similarity loss <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[pdf]</a>, UNIT <a href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>combine with feature-based method: GraspGAN <a href="https://arxiv.org/pdf/1709.07857.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>A unified framework <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Murez_Image_to_Image_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>adversarial network <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tzeng_Adversarial_Discriminative_Domain_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: classification and domain confusion. The domain separation and confusion problem, which is a min-max problem, can be solved like GAN or using <a href="https://arxiv.org/pdf/1409.7495.pdf" target="_blank" rel="noopener">reverse gradient (RevGrad) algorithm</a>.  </p>
-</li>
-<li><p>meta-learning</p>
-<ul>
-<li>gradients on two domains should be consistent <a href="https://arxiv.org/pdf/1710.03463.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>domain alignment layer (batch normalization): <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Carlucci_AutoDIAL_Automatic_DomaIn_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1603.04779" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>guided learning: tutor guides students and get feedback from students. <a href="http://www.leizhang.tk/publications%20and%20codes.html" target="_blank" rel="noopener">ACM-MM18 paper</a></p>
-</li>
-<li><p>ensemble transfer learning: aggregate multiple transfer learning approaches <a href="https://arxiv.org/pdf/1708.05629.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-</ol>
-<p><strong>Settings</strong></p>
-<ol>
-<li><p>open-set domain adaptation or partial transfer learning: <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busto_Open_Set_Domain_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_Partial_Transfer_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a><a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Tzeng_Simultaneous_Deep_Transfer_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>distant domain adaptation (two domains are too distant, so the transfer between them relies on transition domains): <a href="https://dl.acm.org/ft_gateway.cfm?id=2783295&amp;ftid=1613048&amp;dwn=1&amp;CFID=49856439&amp;CFTOKEN=825d8eea3c707e8-BF658D58-A3BB-2ACB-19DC13C6B3291336" target="_blank" rel="noopener">Transitive transfer learning</a>, <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14446/14451" target="_blank" rel="noopener">distant domain transfer learning</a>  </p>
-</li>
-<li><p>open compound domain adaptation <a href="https://arxiv.org/pdf/1909.03403.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-</ol>
-<p><strong>Domain adaptation for diverse applications</strong></p>
-<ol>
-<li><p>pose estimation <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8245864" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>person re-identification <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7018030" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>objection detection <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Domain_Adaptive_Faster_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>segmentation <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>VQA <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chao_Cross-Dataset_Adaptation_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-</ol>
-<p><strong>Domain difference metric</strong>: To measure data distribution mismatch, the most commonly used metric is MMD and its extensions such as <a href="https://arxiv.org/pdf/1405.2664.pdf" target="_blank" rel="noopener">fast MMD</a>, conditional MMD <a href="https://arxiv.org/pdf/1606.04218.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1503.00591.pdf" target="_blank" rel="noopener">[2]</a> and <a href="https://arxiv.org/pdf/1605.06636.pdf" target="_blank" rel="noopener">joint MMD</a>. There are also some other metrics like KL divergence, HSIC criterion, Bregman divergence, manifold criterion, and second-order statistic.</p>
-<p><strong>Theories</strong>: <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/Transfer_Learning_Theories_and_Algorithms.pdf" target="_blank" rel="noopener">A summary of related theories</a></p>
-<p><strong>Survey</strong>: </p>
-<ol>
-<li>An old survey of transfer learning <a href="http://www.cs.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>Recent advance on domain adaptation <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7078994" target="_blank" rel="noopener">[pdf]</a></li>
-<li>My survey of old deep learning domain adaptation methods <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/deep_learning_for_domain_adaptation.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>A Chinese version of transfer learning tutorial <a href="http://jd92.wang/assets/files/transfer_learning_tutorial_wjd.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li>Datasets and code: <a href="https://github.com/jindongwang/transferlearning" target="_blank" rel="noopener">[1]</a></li>
-<li>A Comprehensive Survey on Transfer Learning <a href="https://arxiv.org/pdf/1911.02685.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2020,7 +2017,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">199</span>
+                  <span class="site-state-item-count">205</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2042,7 +2039,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
