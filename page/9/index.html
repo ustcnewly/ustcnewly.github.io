@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/machine_learning/Synthetic Text Images/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Optical Flow/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/26/machine_learning/Synthetic Text Images/" itemprop="url">Synthetic Text Images</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Optical Flow/" itemprop="url">Optical Flow</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-26T12:38:30+08:00">
-                2019-03-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -375,21 +375,525 @@
         
           
             <ol>
-<li><p>Blend text and background images. </p>
+<li><p>Estimate optical flow based on video: FlowNet <a href="http://openaccess.thecvf.com/content_iccv_2015/papers/Dosovitskiy_FlowNet_Learning_Optical_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, FlowNet2 <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Ilg_FlowNet_2.0_Evolution_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Estimate optical flow based on image: <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gao_Im2Flow_Motion_Hallucination_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.06951.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ol>
+<p>[1] Dosovitskiy, Alexey, et al. “Flownet: Learning optical flow with convolutional networks.” ICCV, 2015.</p>
+<p>[2] Ilg, Eddy, et al. “Flownet 2.0: Evolution of optical flow estimation with deep networks.” CVPR, 2017.</p>
+<p>[3] Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018.</p>
+<p>[4] Silvia L. Pintea, Jan C. van Gemert, and Arnold W. M. Smeulders, “Deja Vu: Motion Prediction in Static Images”, arxiv, 2018.</p>
+<p>[5] Walker, Jacob, Abhinav Gupta, and Martial Hebert. “Dense optical flow prediction from a static image.” ICCV, 2015.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Normalization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Normalization/" itemprop="url">Normalization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Normalize weights:</strong></p>
+<ol>
+<li>weight normalization <a href="https://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf" target="_blank" rel="noopener">[1]</a>:  $\mathbf{w}=\frac{g}{|\mathbf{v}|} \mathbf{v}$, weight normalization can be viewed as a cheaper and less noisy approximation to batch normalization</li>
+</ol>
+<p><strong>Normalize outputs:</strong></p>
+<ol>
+<li><p>batch normalization <a href="https://arxiv.org/pdf/1502.03167.pdf" target="_blank" rel="noopener">[2]</a>: make the input and output have the same variance</p>
+</li>
+<li><p>layer normalization <a href="https://arxiv.org/pdf/1607.06450.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>instance normalization <a href="https://arxiv.org/pdf/1607.08022.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+<li><p>group normalization <a href="https://arxiv.org/pdf/1803.08494.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/5rzQSsn.jpg" width="80%"></p>
+<p>N as the batch axis, C as the channel axis, and (H, W)<br>as the spatial axes</p>
+<p>[1] Salimans T, Kingma D P. Weight normalization: A simple reparameterization to accelerate training of deep neural networks[C]//Advances in Neural Information Processing Systems. 2016: 901-909.</p>
+<p>[2] Ioffe S, Szegedy C. Batch normalization: Accelerating deep network training by reducing internal covariate shift[J]. arXiv preprint arXiv:1502.03167, 2015.</p>
+<p>[3] Ba J L, Kiros J R, Hinton G E. Layer normalization[J]. arXiv preprint arXiv:1607.06450, 2016.</p>
+<p>[4] D. Ulyanov, A. Vedaldi, and V. Lempitsky. Instance normalization: The missing ingredient for fast stylization. arXiv:1607.08022, 2016.</p>
+<p>[5] Wu Y, He K. Group normalization[J]. arXiv preprint arXiv:1803.08494, 2018.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Mutual Information/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Mutual Information/" itemprop="url">Mutual Information</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><a href="https://arxiv.org/pdf/1612.00410.pdf" target="_blank" rel="noopener">[1]</a>: use KL divergence as the upper-bound of mutual information (MI), which can be used to minimize MI. r(z) can be set as unit Gaussian for simplicity.</li>
+</ol>
+<center><img src="https://i.imgur.com/i3j6VrX.png" width="50%" border="0"></center>
+
+<ol>
+<li>MINE<a href="http://proceedings.mlr.press/v80/belghazi18a/belghazi18a.pdf" target="_blank" rel="noopener">[2]</a>: lower-bound of MI based on KL divergence. Due to strong consistency, MINE can be used as a tight estimation of MI.</li>
+</ol>
+<center><img src="https://i.imgur.com/e6EaQpZ.png" width="50%" border="0"></center>
+
+
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li><p>Alemi, Alexander A., et al. “Deep variational information bottleneck.” arXiv preprint arXiv:1612.00410 (2016).</p>
+</li>
+<li><p>Belghazi, M. I., Baratin, A., Rajeshwar, S., Ozair, S., Bengio, Y., Courville, A., &amp; Hjelm, D. Mutual information neural estimation, ICML, 2018.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Meta Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Meta Learning/" itemprop="url">Meta Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Taxonomy"><a href="#Taxonomy" class="headerlink" title="Taxonomy"></a>Taxonomy</h3><p>1) <strong>metric-based:</strong>  learn a good metric</p>
 <ul>
-<li>text image (font, color, border, blending): <a href="https://arxiv.org/pdf/1406.2227.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>scene-text image (font, color, border, blending, <u>geometry</u>): <a href="http://www.robots.ox.ac.uk/~ankush/textloc.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Fangneng_Zhan_Verisimilar_Image_Synthesis_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>matching network <a href="https://arxiv.org/pdf/1606.04080.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>relation network <a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>prototypical network <a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.00676.pdf" target="_blank" rel="noopener">[4]</a></li>
 </ul>
+<p>2) <strong>optimization-based:</strong> gradient</p>
+<ul>
+<li>Meta-Learner LSTM <a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">[5]</a></li>
+<li>MAML <a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://arxiv.org/pdf/1710.11622.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1801.08930.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li><p>REPTILE (an approximation of MAML) <a href="https://arxiv.org/abs/1803.02999" target="_blank" rel="noopener">[9]</a></p>
+<center><img src="https://i.imgur.com/ZYN2cQ5.png" width="60%" border="0"></center>
+
+<p>Optimization based methods aim to obtain good parameter initilization. If we simply train multiple tasks, the obtained model parameters may lead to sub optimum for each task. </p>
+<center><img src="https://i.imgur.com/FBax49a.jpg" width="60%" border="0"></center>
+
 </li>
+</ul>
+<p>3) <strong>model-based:</strong> predict model parameters</p>
+<ul>
+<li>MANN <a href="http://proceedings.mlr.press/v48/santoro16.pdf" target="_blank" rel="noopener">[10]</a></li>
+<li>MetaNet <a href="https://arxiv.org/pdf/1703.00837.pdf" target="_blank" rel="noopener">[11]</a></li>
+</ul>
+<p><strong>Reference:</strong></p>
+<ol>
+<li>Vinyals, Oriol, et al. “Matching networks for one shot learning.” NIPS, 2016.</li>
+<li>Sung, Flood, et al. “Learning to compare: Relation network for few-shot learning.” CVPR, 2018.</li>
+<li>Snell, Jake, Kevin Swersky, and Richard Zemel. “Prototypical networks for few-shot learning.” NIPS, 2017.</li>
+<li>Ren, Mengye, et al. “Meta-learning for semi-supervised few-shot classification.” arXiv preprint arXiv:1803.00676 (2018).</li>
+<li>Sachin Ravi and Hugo Larochelle. “Optimization as a Model for Few-Shot Learning.” ICLR, 2017.</li>
+<li>Chelsea Finn, Pieter Abbeel, and Sergey Levine. “Model-agnostic meta-learning for fast adaptation of deep networks.” ICML, 2017.</li>
+<li>Finn, Chelsea, and Sergey Levine. “Meta-learning and universality: Deep representations and gradient descent can approximate any learning algorithm.” arXiv preprint arXiv:1710.11622 (2017).</li>
+<li>Grant, Erin, et al. “Recasting gradient-based meta-learning as hierarchical bayes.” arXiv preprint arXiv:1801.08930 (2018).</li>
+<li>A. Nichol, J. Achiam, and J. Schulman. On first-order meta-learning algorithms. arXiv, 1803.02999v2, 2018.</li>
+<li>Adam Santoro, et al. “Meta-learning with memory-augmented neural networks.” ICML. 2016.</li>
+<li>Munkhdalai, Tsendsuren, and Hong Yu. “Meta networks.” ICML, 2017.</li>
 </ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><ol>
-<li><p>Jaderberg, Max, et al. “Synthetic data and artificial neural networks for natural scene text recognition.” arXiv preprint arXiv:1406.2227 (2014).</p>
+<h3 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials:"></a>Tutorials:</h3><ul>
+<li><p><a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html</a></p>
 </li>
-<li><p>Gupta, Ankush, Andrea Vedaldi, and Andrew Zisserman. “Synthetic data for text localisation in natural images.” CVPR, 2016.</p>
+<li><p><a href="http://metalearning-symposium.ml/files/vinyals.pdf" target="_blank" rel="noopener">http://metalearning-symposium.ml/files/vinyals.pdf</a></p>
 </li>
-<li><p>Zhan, Fangneng, Shijian Lu, and Chuhui Xue. “Verisimilar image synthesis for accurate detection and recognition of texts in scenes.” ECCV, 2018.</p>
+<li><p><a href="https://github.com/floodsung/Meta-Learning-Papers" target="_blank" rel="noopener">https://github.com/floodsung/Meta-Learning-Papers</a></p>
 </li>
-</ol>
+<li><p>A more comprehensive survey: <a href="https://arxiv.org/pdf/1810.03548.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1810.03548.pdf</a></p>
+</li>
+</ul>
 
           
         
@@ -438,7 +942,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/deep_learning/Image Action Recognition with Unlabeled Videos/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Lifelong Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -457,7 +961,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/01/deep_learning/Image Action Recognition with Unlabeled Videos/" itemprop="url">Image Action Recognition with Unlabeled Videos</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Lifelong Learning/" itemprop="url">Lifelong Learning</a></h1>
         
 
         <div class="post-meta">
@@ -469,8 +973,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-01T16:49:16+08:00">
-                2019-03-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -531,16 +1035,15 @@
       
         
           
-            <ol>
-<li><p>Self-supervised learning: see video-to-image in this <a href="https://ustcnewly.github.io/2018/09/07/deep_learning/Self-supervised%20Learning/" target="_blank" rel="noopener">blog</a>. </p>
-</li>
-<li><p>predict optical flow and use two-stream network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gao_Im2Flow_Motion_Hallucination_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
-</li>
-<li><p>Predicting pose information (use poselet detector) <a href="http://openaccess.thecvf.com/content_cvpr_2013/papers/Chen_Watching_Unlabeled_Video_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018.</p>
-<p>[2] Chen, Chao-Yeh, and Kristen Grauman. “Watching unlabeled video helps learn new human actions from very few labeled snapshots.” CVPR, 2013.</p>
+            <p>Related concepts: online learning, incremental learning, continual learning</p>
+<h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0893608019300231" target="_blank" rel="noopener">Continual lifelong learning with neural networks: A review</a></li>
+<li><a href="https://homes.esat.kuleuven.be/~konijn/publications/2020/DeLange2.pdf" target="_blank" rel="noopener">A continual learning survey: Defying forgetting in classification tasks</a></li>
+<li><a href="https://arxiv.org/pdf/2010.15277" target="_blank" rel="noopener">Class-incremental learning: survey and performance evaluation</a></li>
+</ul>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><ul>
+<li><a href="https://cs330.stanford.edu/slides/cs330_lifelonglearning_karol.pdf" target="_blank" rel="noopener">Stanford course</a></li>
+</ul>
 
           
         
@@ -589,7 +1092,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/23/machine_learning/Finding Datasets/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Latent Variable Regularization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -608,7 +1111,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/23/machine_learning/Finding Datasets/" itemprop="url">Finding Datasets</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Latent Variable Regularization/" itemprop="url">Latent Variable Regularization</a></h1>
         
 
         <div class="post-meta">
@@ -620,8 +1123,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-23T10:33:44+08:00">
-                2019-01-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -682,24 +1185,15 @@
       
         
           
-            <ol>
-<li><p><a href="https://www.kaggle.com/datasets" target="_blank" rel="noopener">Kaggle datasets</a></p>
-</li>
-<li><p><a href="https://registry.opendata.aws/" target="_blank" rel="noopener">Amazon datasets</a></p>
-</li>
-<li><p><a href="https://archive.ics.uci.edu/ml/datasets.html" target="_blank" rel="noopener">UCI datasets</a></p>
-</li>
-<li><p><a href="https://toolbox.google.com/datasetsearch/" target="_blank" rel="noopener">Google dataset search</a></p>
-</li>
-<li><p><a href="https://msropendata.com/" target="_blank" rel="noopener">Microsoft datasets</a></p>
-</li>
-<li><p><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank" rel="noopener">Awesome public datasets</a></p>
-</li>
-<li><p><a href="https://www.visualdata.io/" target="_blank" rel="noopener">Computer vision datasets</a></p>
-</li>
-<li><p><a href="https://www.graviti.com/open-datasets/" target="_blank" rel="noopener">Graviti</a></p>
-</li>
+            <p>Regulating latent variables or latent features can improve the generalizability of classifier and lower the error bound. </p>
+<p>Regulating latent variables is essentially decrease the entropy of latent variables. There are some common tricks to decrease the entropy of latent variables, for example,</p>
+<ol>
+<li>dropout</li>
+<li>weight decay</li>
+<li>add random noise to the latent variables in VAE and GAN.</li>
+<li>add random perturbation to model parameters</li>
 </ol>
+<p>For theoretical proof, please refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/information_theory_for_latent_variable_regulation.pdf" target="_blank" rel="noopener">here</a>.</p>
 
           
         
@@ -748,7 +1242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/machine_learning/Label Vector Interpolation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Label Vector Interpolation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -767,7 +1261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/16/machine_learning/Label Vector Interpolation/" itemprop="url">Vote Aggregation</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Label Vector Interpolation/" itemprop="url">Vote Aggregation</a></h1>
         
 
         <div class="post-meta">
@@ -779,8 +1273,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T13:40:42+08:00">
-                2019-01-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -900,7 +1394,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/machine_learning/Distillation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Knowledge Graph/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -919,7 +1413,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/16/machine_learning/Distillation/" itemprop="url">Distillation</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Knowledge Graph/" itemprop="url">Knowledge Graph</a></h1>
         
 
         <div class="post-meta">
@@ -931,8 +1425,321 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T12:48:33+08:00">
-                2019-01-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Definition: entities, attributes, and relationships</p>
+<p>Two ways to construct knowledge graph:</p>
+<ol>
+<li><p>probabilistic models (graphical model/random walk)</p>
+</li>
+<li><p>embedding based models</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Incremental SVM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Incremental SVM/" itemprop="url">Incremental SVM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1) Approximate incremental SVM: pass through the dataset many times</p>
+<ul>
+<li><p>Pegasos: select a training batch in each iteration</p>
+<ul>
+<li>python: <a href="https://github.com/ejlb/pegasos" target="_blank" rel="noopener">https://github.com/ejlb/pegasos</a><pre><code>   https://github.com/avaitla/Pegasos
+</code></pre></li>
+<li>C: <a href="https://www.cs.huji.ac.il/~shais/code/index.html" target="_blank" rel="noopener">https://www.cs.huji.ac.il/~shais/code/index.html</a></li>
+<li>matlab: <a href="https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function" target="_blank" rel="noopener">https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function</a></li>
+</ul>
+</li>
+<li><p>sklearn.linear_model: SGD</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clf= sklearn.linear_model.SGDClassifier(learning_rate = <span class="string">'constant'</span>, eta0 = <span class="number">0.1</span>, shuffle = <span class="keyword">False</span>, n_iter = <span class="number">1</span>)</span><br><span class="line"><span class="comment"># get x1, y1 as a new instance</span></span><br><span class="line">clf.partial_fit(x1, y1)</span><br><span class="line"><span class="comment"># get x2, y2</span></span><br><span class="line"><span class="comment"># update accuracy if needed</span></span><br><span class="line">clf.partial_fit(x2, y2)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2) Exact incremental or decremental SVM: only pass through the dataset once</p>
+<ul>
+<li><p>Incremental and Decremental Support Vector Machine Learning<br><a href="http://www.isn.ucsd.edu/svm/incremental" target="_blank" rel="noopener">http://www.isn.ucsd.edu/svm/incremental</a></p>
+</li>
+<li><p>SVM Incremental Learning, Adaptation and Optimization: extend the work above<br>matlab: <a href="https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB" target="_blank" rel="noopener">https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB</a></p>
+</li>
+<li><p>Incremental and decremental training for linear classification: extension of liblinear focusing on linear problem<br><a href="http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Implicit Modelling/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Implicit Modelling/" itemprop="url">Implicit Modelling</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -994,781 +1801,14 @@
         
           
             <ol>
-<li><p>knowledge/model distillation <a href="https://arxiv.org/pdf/1503.02531" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>data distillation <a href="https://arxiv.org/pdf/1712.04440.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2011.00050.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://proceedings.neurips.cc/paper/2021/file/299a23a2291e2126b91d54f3601ec162-Paper.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
+<li>simulates an infinite-depth network by fixed point iteration $h=f_{\theta}(h;x)$, in which $x$ is initial input, $\theta$ is the model parameter of one-time transformation. After infinite times of transformations, $x$ will approach the fixed point $h$. DEQ<a href="https://papers.nips.cc/paper/2019/file/01386bd6d8e091c2ab4c7c7de644d37b-Paper.pdf" target="_blank" rel="noopener">[1]</a>, MDEQ<a href="https://arxiv.org/pdf/2006.08656.pdf" target="_blank" rel="noopener">[2]</a>, iFPN<a href="https://arxiv.org/pdf/2012.13563.pdf" target="_blank" rel="noopener">[3]</a></li>
 </ol>
-<p>A survey of knowledge distillation <a href="https://arxiv.org/abs/2004.05937" target="_blank" rel="noopener">[3]</a></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015).</p>
-<p>[2] Radosavovic, Ilija, et al. “Data distillation: Towards omni-supervised learning.” CVPR, 2018.</p>
-<p>[3] Wang, Lin, and Kuk-Jin Yoon. “Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks.” arXiv preprint arXiv:2004.05937 (2020).</p>
-<p>[4] Nguyen, Timothy, Zhourong Chen, and Jaehoon Lee. “Dataset Meta-Learning from Kernel Ridge-Regression.” arXiv preprint arXiv:2011.00050 (2020).</p>
-<p>[5] Nguyen, Timothy, et al. “Dataset distillation with infinitely wide convolutional networks.” Advances in Neural Information Processing Systems 34 (2021).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/deep_learning/Gradient Regularization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/deep_learning/Gradient Regularization/" itemprop="url">Gradient Regularization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T12:23:21+08:00">
-                2019-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>Gradient harmonization: <a href="https://arxiv.org/pdf/1811.05181.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ul>
-<p>[1] Gradient Harmonized Single-stage Detector, AAAI, 2019</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/machine_learning/Subjective Annotation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/machine_learning/Subjective Annotation/" itemprop="url">Subjective Annotation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T08:24:36+08:00">
-                2019-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>As mentioned in <a href="https://arxiv.org/pdf/1606.01621.pdf" target="_blank" rel="noopener">[1]</a> One major concern of subjective annotation is that the annotations provided by different workers for each image may not be reliable, which calls for consistency analysis on the annotations. We use Spearman’s rank correlation ρ between pairs of workers to measure consistency and estimate p-values to evaluate statistical significance of the correlation relative to a null hypothesis of uncorrelated responses. We use the Benjamini-Hochberg<br>procedure to control the false discovery rate (FDR) for multiple comparisons <a href="ftp://swanson.seas.upenn.edu/pub/datamining/public_html/ReadingGroup/papers/fdr-dep.pdf" target="_blank" rel="noopener">[2]</a>. At an FDR level of 0.05, we find 98.45% batches have significant agreement among raters. Further consistency analysis of the dataset can be found in the supplementary material of <a href="https://arxiv.org/pdf/1606.01621.pdf" target="_blank" rel="noopener">[1]</a>.</p>
-<p>[1] Kong, Shu, et al. “Photo aesthetics ranking network with attributes and content adaptation.” European Conference on Computer Vision. Springer, Cham, 2016.</p>
-<p>[2] Benjamini, Yoav, and Daniel Yekutieli. “The control of the false discovery rate in multiple testing under dependency.” Annals of statistics (2001): 1165-1188.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/deep_learning/Video Object Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/deep_learning/Video Object Segmentation/" itemprop="url">Video Object Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T08:18:09+08:00">
-                2019-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. </p>
+<p><strong>Reference:</strong></p>
 <ol>
-<li><p>Davis challenge <a href="https://davischallenge.org/" target="_blank" rel="noopener">https://davischallenge.org/</a> held since 2017, related papers <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1704.00675.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>YouTube-VOS: A Large-Scale Benchmark for Video Object Segmentation <a href="https://youtube-vos.org/home" target="_blank" rel="noopener">https://youtube-vos.org/home</a></p>
-</li>
-<li><p>GyGO: an E-commerce Video Object Segmentation Dataset by Visualead <a href="https://github.com/ilchemla/gygo-dataset" target="_blank" rel="noopener">https://github.com/ilchemla/gygo-dataset</a></p>
-</li>
+<li>Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. “Deep equilibrium models.” Advances in Neural Information Processing Systems. 2019.</li>
+<li>Bai, Shaojie, Vladlen Koltun, and J. Zico Kolter. “Multiscale deep equilibrium models.” arXiv preprint arXiv:2006.08656 (2020).</li>
+<li>Wang, Tiancai, Xiangyu Zhang, and Jian Sun. “Implicit Feature Pyramid Network for Object Detection.” arXiv preprint arXiv:2012.13563 (2020).</li>
 </ol>
-<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ol>
-<li><p>Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016.</p>
-</li>
-<li><p>Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/programming_language/PyTorch/PyTorch Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/07/programming_language/PyTorch/PyTorch Learning Note/" itemprop="url">PyTorch Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T21:23:21+08:00">
-                2019-01-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Using-multiple-GPUs"><a href="#Using-multiple-GPUs" class="headerlink" title="Using multiple GPUs"></a>Using multiple GPUs</h3><p>device = torch.device(“cuda:gpu_id1”)</p>
-<p>model = nn.DataParallel(model, [gpu_id1, gpu_id2, …])<br>model.to(device)</p>
-<p>input = input.to(device)</p>
-<p>Note that gpu_id1 must be the first gpu in the gpu_list in model.DataParallel(arg1, gpu_list)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/machine_learning/Normalization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/06/machine_learning/Normalization/" itemprop="url">Normalization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-06T10:34:35+08:00">
-                2019-01-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Normalize weights:</strong></p>
-<ol>
-<li>weight normalization <a href="https://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf" target="_blank" rel="noopener">[1]</a>:  $\mathbf{w}=\frac{g}{|\mathbf{v}|} \mathbf{v}$, weight normalization can be viewed as a cheaper and less noisy approximation to batch normalization</li>
-</ol>
-<p><strong>Normalize outputs:</strong></p>
-<ol>
-<li><p>batch normalization <a href="https://arxiv.org/pdf/1502.03167.pdf" target="_blank" rel="noopener">[2]</a>: make the input and output have the same variance</p>
-</li>
-<li><p>layer normalization <a href="https://arxiv.org/pdf/1607.06450.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>instance normalization <a href="https://arxiv.org/pdf/1607.08022.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-<li><p>group normalization <a href="https://arxiv.org/pdf/1803.08494.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-</ol>
-<p><img src="https://i.imgur.com/5rzQSsn.jpg" width="80%"></p>
-<p>N as the batch axis, C as the channel axis, and (H, W)<br>as the spatial axes</p>
-<p>[1] Salimans T, Kingma D P. Weight normalization: A simple reparameterization to accelerate training of deep neural networks[C]//Advances in Neural Information Processing Systems. 2016: 901-909.</p>
-<p>[2] Ioffe S, Szegedy C. Batch normalization: Accelerating deep network training by reducing internal covariate shift[J]. arXiv preprint arXiv:1502.03167, 2015.</p>
-<p>[3] Ba J L, Kiros J R, Hinton G E. Layer normalization[J]. arXiv preprint arXiv:1607.06450, 2016.</p>
-<p>[4] D. Ulyanov, A. Vedaldi, and V. Lempitsky. Instance normalization: The missing ingredient for fast stylization. arXiv:1607.08022, 2016.</p>
-<p>[5] Wu Y, He K. Group normalization[J]. arXiv preprint arXiv:1803.08494, 2018.</p>
 
           
         
@@ -1858,7 +1898,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">205</span>
+                  <span class="site-state-item-count">206</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1880,7 +1920,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-count">103</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

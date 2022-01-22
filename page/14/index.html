@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/version_control/Git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Spatial Transformation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/software/version_control/Git/" itemprop="url">Git</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Spatial Transformation/" itemprop="url">Spatial Transformation</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -335,597 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/version-control/" itemprop="url" rel="index">
-                    <span itemprop="name">version control</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg" width="50%" height="50%"></p>
-<ol>
-<li><p><strong>Initialize center and local repository</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>init from scratch</span><br><span class="line">git init &lt;local_dir&gt;</span><br><span class="line"><span class="meta">#</span>for central repository without working directory, use --bare</span><br><span class="line">git init --bare &lt;local_dir&gt;</span><br><span class="line"><span class="meta">#</span>clone from GitHub, can just clone a subdirectory XXX/XXX</span><br><span class="line">git clone &lt;remote_repo&gt; &lt;remote_dir&gt;</span><br><span class="line"><span class="meta">#</span>pull from other local repository</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Configuration</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name $name</span><br><span class="line">git config --global user.email $email</span><br><span class="line">git config --global alias.$alias-name $git-command</span><br><span class="line">git config --system core.editor $editor # e.g., vim</span><br><span class="line">git config --global --edit</span><br></pre></td></tr></table></figure>
-<p><code>.git/config</code>  Repository-specific settings.<br><code>~/.gitconfig</code>  User-specific settings. This is where options set with the —global flag are stored.<br><code>/etc/gitconfig</code> System-wide settings.</p>
-</li>
-<li><p><strong>Staged snapshot in the staging area</strong><br>operations on tracked files:</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br><span class="line">git add &lt;dir&gt;</span><br><span class="line">git add . #add all the files in the current directory</span><br><span class="line">git add * #add  all the files and folders in the current directory</span><br><span class="line"><span class="meta">#</span>reversion for add</span><br><span class="line">git reset &lt;file&gt; #lead to untracked &lt;file&gt;</span><br><span class="line">rm &lt;file&gt; #del &lt;file&gt;</span><br><span class="line"></span><br><span class="line">git rm &lt;file&gt; #remove from both staging area and working directory  	</span><br><span class="line"><span class="meta">#</span>reversion for rm</span><br><span class="line">git reset HEAD &lt;file&gt; #lead to unstaged rm &lt;file&gt;</span><br><span class="line">git checkout &lt;file&gt; #recover &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>mv = rm+add, so its reversion is the combination of those for add and rm</span><br><span class="line">git mv &lt;old name&gt; &lt;new name&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>clear the entire staging area</span><br><span class="line">git reset HEAD</span><br></pre></td></tr></table></figure>
-<p>before using <code>git add .</code> or <code>git add *</code>, we can exclude the untracked files in <code>.gitignore</code> (e.g., <code>*.&lt;ext&gt;</code>, <code>&lt;dir&gt;/</code>, use <code>!&lt;file&gt;</code> for exception).<br>to untrack added files, use <code>git rm --cached &lt;filename&gt;</code></p>
-</li>
-<li><p><strong>Commit the staged snapshot</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "&lt;message&gt;"  #new commit node</span><br><span class="line">git commit --amend #old commit node</span><br><span class="line"><span class="meta">#</span>`-a` means staging all the modifications of tracked files</span><br><span class="line">git commit -a -m "&lt;message&gt;" </span><br><span class="line">git commit -a --amend</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Branch</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch #list local branches		</span><br><span class="line">git branch &lt;new_branch&gt; #create a new branch </span><br><span class="line">git branch -d &lt;old_branch&gt; #use -D enforce delete</span><br><span class="line">git checkout &lt;old_branch&gt; #switch to branch $branch </span><br><span class="line">git checkout -b &lt;new_branch&gt; #switch to a new branch $branch</span><br></pre></td></tr></table></figure>
-<p> (a) Imaging there exists a hash table of <code>key:value</code> pairs with branch name as key and commit node as value. When checkout a new branch b1, <code>b1:current-commit-code</code> will be stored in the hash table. When checkout an existing branch b1, you will reach the hashed commit code. In both cases, b1 (HEAD) will be used as the hash key for the next commit node, that is, when you commit next time, <code>b1:new-commit-code</code> will be updated in the hash table.<br> (b) Another perspective is treating the branch name as a pointer to the commit node and each branch is a retrospective history dating back from that node, which is essentially the same as (a).</p>
-<p> When checkout to another branch, git status (staged or unstaged modifications) will be transferred to that branch. If there exists file conflicts (operations on common yet different files), checkout will be forbidden. </p>
-<p> Besides <code>branch</code>, users can also add <code>tag</code> to each commit node.</p>
-<p> <img src="https://i.imgur.com/eZBhlc6.jpg" alt=""></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>assume the current branch is master</span><br><span class="line"><span class="meta">#</span>merge: merge experiment into master</span><br><span class="line"><span class="meta">#</span>master moves one step forward, both experiment and original master are its parents</span><br><span class="line">git merge experiment</span><br><span class="line"><span class="meta">#</span>assume the current branch is experiment</span><br><span class="line"><span class="meta">#</span>rebase: base experiment on master</span><br><span class="line"><span class="meta">#</span>duplicate the nodes between C2 and experiment after master, move experiment to up-to-date</span><br><span class="line">git rebase master</span><br><span class="line"><span class="meta">#</span>in the simple fast-forward case, assume &lt;branch&gt; is ahead of &lt;branch1&gt;</span><br><span class="line"><span class="meta">#</span>then, `merge &lt;branch1&gt; &lt;branch2&gt;` and `rebase &lt;branch1&gt; &lt;branch2&gt;` work the same, just move &lt;branch1&gt; to &lt;branch2&gt;.</span><br><span class="line"><span class="meta">#</span>whereas, `merge &lt;branch2&gt; &lt;branch1&gt;` or `rebase &lt;branch2&gt; &lt;branch1&gt;` are not allowed.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Tracking changes</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status </span><br><span class="line">git log #commit history</span><br><span class="line">git log -n &lt;limit&gt; --stat</span><br><span class="line">git log --grep="&lt;pattern&gt;"</span><br><span class="line">git log --author="John Smith" -p hello.py</span><br><span class="line">git diff #view unstaged modification</span><br><span class="line">git diff --cached #view staged modification</span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line">git diff &lt;repo&gt;/&lt;branch1&gt;..&lt;branch2&gt;</span><br></pre></td></tr></table></figure>
-<p>when using <code>git log</code>, it will only show the ancestral commit nodes of current node. </p>
-</li>
-<li><p><strong>Date back to history</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>revert the operations in &lt;commit&gt; and add one commit node ahead of HEAD</span><br><span class="line"><span class="meta">#</span>revert does not work on file</span><br><span class="line">git revert &lt;commit&gt;</span><br><span class="line"><span class="meta">#</span>go back to &lt;commit&gt;</span><br><span class="line"><span class="meta">#</span>git checkout &lt;commit&gt; &lt;file&gt; is just copying the &lt;file&gt; in &lt;commit&gt;</span><br><span class="line">git checkout &lt;commit&gt;  		</span><br><span class="line"><span class="meta">#</span>git reset &lt;commit&gt; changes branch name, working directory, and staged index</span><br><span class="line"><span class="meta">#</span>git reset &lt;file&gt; is removing the staged file</span><br><span class="line">git reset --mixed &lt;commit&gt; #default, save the working directory</span><br><span class="line">git reset --soft &lt;commit&gt; #save both working directory and staged index</span><br><span class="line">git reset --hard &lt;commit&gt; #save none, dangerous!</span><br></pre></td></tr></table></figure>
-<p>(a) For reset file, there are no options <code>--hard</code> and <code>--soft</code>.<br>(b) For reset commit, after <code>reset --mixed</code> or <code>reset --hard</code>, there are no staged snapshots. After <code>reset --soft</code>, staged snapshots enable the staged index to remain the same. More specifically, at the time before or after <code>reset --soft</code>, if you run <code>git commit</code>, the generated commit node should be the same. </p>
-</li>
-</ol>
-<ol>
-<li><p><strong>Communicate with remote repositories</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git remote -v #list remote repositories</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git branch -r #list the fetched branches of remote repositories</span><br><span class="line"></span><br><span class="line">git fetch &lt;repo&gt;  # fetch all of the remote branches</span><br><span class="line">git fetch &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git checkout -b &lt;new_branch&gt; &lt;repo&gt;/&lt;remote_branch&gt; # Checking out a local copy of specific branch</span><br><span class="line">git pull &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git push &lt;origin&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
-<p>after merging code to address the conflict, use <code>git commit -a -m &quot;$message&quot;</code>, then <code>git push</code>.</p>
-<p> <code>git pull</code> is equal to a <code>git fetch</code> followed by a <code>git merge</code>.</p>
-</li>
-<li><p><strong>Clean working directory</strong></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clean -f/d #clean untracked files/directory</span><br><span class="line">git clean -f $path #clean untracked files in $path</span><br><span class="line"><span class="meta">#</span>`git clean` is often used togther with `git reset —hard`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Stashing</strong></p>
-<p>If you are working in your repository, and your workflow is interrupted by another project, you can save the current state of your repository (the working directory and the staging index) in the Git stash. When you are ready to start working where you left off, you can restore the stashed repository state. Note that doing a stash gives you a clean working directory, and leaves you at the last commit. </p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git stash save # stash the current state</span><br><span class="line">git stash list # see what is in the Git stash:</span><br><span class="line">git stash apply # return your stashed state to the working directory</span><br><span class="line">git stash pop # return your stashed state to the working directory and delete it from the stash</span><br></pre></td></tr></table></figure>
-<p>Note the commit-tree grows. “git log” prints the path from root to current node. “leave behind” prints the path from current node to the first common ancestor between current node and new node. Detached head will be off any branch, so create a new branch for the detached head. </p>
-</li>
-</ol>
-<p><strong>Tips:</strong></p>
-<ol>
-<li><code>checkout</code> and <code>reset</code> work on both file and commit with different meanings and usages, while <code>revert</code> only works on commit.</li>
-<li><code>reset</code> is often used for cancelling uncommited changes while <code>revert</code> is often used for cancelling commited changes.</li>
-<li>Compared with <code>reset</code>, <code>checkout</code> and <code>revert</code> focus on the modification, so they are forbidden in many cases.</li>
-</ol>
-<p><strong>Github User:</strong></p>
-<ol>
-<li>create a repository on GitHub</li>
-<li>create a local folder</li>
-<li><code>git init</code></li>
-<li><code>git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</code></li>
-<li><code>git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
-<li><code>git push --set-upstream &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
-<li>add files</li>
-<li><code>git add *</code></li>
-<li><code>git commit -m &quot;msg&quot;</code></li>
-<li><code>git push</code> </li>
-</ol>
-<p><strong>Resources:</strong><br>A good Chinese tutorial for git is <a href="http://git.oschina.net/progit/index.html" target="_blank" rel="noopener">here</a>.<br>A good English tutorial for git is <a href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank" rel="noopener">here</a>.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/library/Ubuntu JDK/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/library/Ubuntu JDK/" itemprop="url">Ubuntu JDK</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/library/" itemprop="url" rel="index">
-                    <span itemprop="name">library</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Remove default OpenJDK</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge openjdk-\*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>download jdk(containing jre) and tar.</p>
-</li>
-<li><p>add into /etc/profile</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=&quot;/home/newly/Program_Files/Java/jdk1.8.0_65&quot;</span><br><span class="line">PATH=&quot;$PATH:$JAVA_HOME/jre/bin:$JAVA_HOME/bin&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>set newly installed jdk as default jdk.</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install "/usr/bin/java" "java" "$JAVA_HOME/bin/java" 1</span><br><span class="line">sudo update-alternatives --install "/usr/bin/javac" "javac" "$JAVA_HOME/bin/javac" 1</span><br><span class="line">sudo update-alternatives --install "/usr/bin/javaws" "javaws" "$JAVA_HOME/bin/javaws" 1</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/library/OpenCV/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/library/OpenCV/" itemprop="url">OpenCV</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/library/" itemprop="url" rel="index">
-                    <span itemprop="name">library</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Locate-OpenCV"><a href="#Locate-OpenCV" class="headerlink" title="Locate OpenCV:"></a>Locate OpenCV:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg-config --modversion opencv //version</span><br><span class="line">pkg-config --cflags opencv //include file path</span><br><span class="line">pkg-config --libs opencv //library path</span><br></pre></td></tr></table></figure>
-<h3 id="Uninstall-OpenCV"><a href="#Uninstall-OpenCV" class="headerlink" title="Uninstall OpenCV:"></a>Uninstall OpenCV:</h3><ol>
-<li>go to the compile package and <code>make uninstall</code></li>
-<li>if cannot find the compile package, <code>sudo find / -name &quot;*opencv*&quot; -exec rm -i {} \;</code></li>
-</ol>
-<h3 id="Install-OpenCV"><a href="#Install-OpenCV" class="headerlink" title="Install OpenCV:"></a>Install OpenCV:</h3><p><strong>For Windows: C++(Visual Studio)</strong></p>
-<ol>
-<li>Download latest OpenCV from <a href="http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect" target="_blank" rel="noopener">http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect</a>.</li>
-<li>Make a dir named build. Use cmake to generate OpenCV.sln in build.</li>
-<li>Click OpenCV.sln and CMakeTargets-&gt;INSTALL-&gt;build. You can build it in both debug and release modes.</li>
-<li>In the environmental variables, add D:\Program Files\OpenCV_3.0.0\build\install\x64\vc11 as OPENCV_DIR, add Path with %OPENCV_DIR%\bin. </li>
-<li>Create a OpenCV project. C/C++-&gt;General-&gt;Additional Include Directories: $(OPENCV_DIR)\..\..\include</li>
-<li>Linker-&gt;General-&gt;Additional Library Directories: $(OPENCV_DIR)\lib</li>
-<li>Linker-&gt;Input-&gt;Additional Dependencies: copy all the lib files. <em>*</em>d.lib means debug mode.</li>
-</ol>
-<p>Note that there may be some problems for visual studio to recognize the updated environmental variable. Try to restart the visual studio or recreate the project.</p>
-<p><strong>For Linux: install for C++</strong></p>
-<ol>
-<li>pre-install packages<br>[compiler] sudo apt-get install build-essential<br>[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev<br>[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</li>
-<li>download the required version on <a href="https://sourceforge.net/projects/opencvlibrary/" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/</a></li>
-<li>make and install <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake ..     //cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>Tips: if you want to install multiple versions of OpenCV, set CMAKE_INSTALL_PREFIX differently for different versions of OpenCV.</p>
-<pre><code class="lang-shell">cmake -D CMAKE_BUILD_TYPE=RELEASE \
-    -D CMAKE_INSTALL_PREFIX=/usr/local \
-    -D INSTALL_PYTHON_EXAMPLES=ON \
-    -D INSTALL_C_EXAMPLES=ON \
-    -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
-    -D PYTHON_EXECUTABLE=/usr/bin/python \
-    -D BUILD_EXAMPLES=ON ..
-</code></pre>
-<p>If want to turn off some modules, use <code>-D BUILD_opencv_xfeatures2d=OFF</code> </p>
-<p><strong>Switch between different versions of OpenCV:</strong></p>
-<p>switch from version 3.2 to version 2.4 <a href="\code\OpenCV\switch_to_2.4.13.sh">shell</a></p>
-<p>switch from version 2.4 to version 3.2 <a href="\code\OpenCV\switch_to_3.2.0.sh">shell</a></p>
-<p><strong>For Linux: Python(Anaconda)</strong></p>
-<pre><code class="lang-shell">source activate tgt_env
-conda install -c https://conda.binstar.org/menpo opencv
-spyder
-</code></pre>
-<p>Then try <code>import cv2</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/library/GStreamer+FFmpeg for Ubuntu14.04/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/library/GStreamer+FFmpeg for Ubuntu14.04/" itemprop="url">GStreamer+FFmpeg for Ubuntu14.04</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/library/" itemprop="url" rel="index">
-                    <span itemprop="name">library</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -964,13 +375,30 @@ spyder
         
           
             <ul>
-<li><p>Install gst-plugin</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
+<li><p>parametric transform (affine transformation, thin-plate translation, etc): STN <a href="http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf" target="_blank" rel="noopener">[2]</a>, hierarchical STN <a href="https://arxiv.org/pdf/1801.09467.pdf" target="_blank" rel="noopener">[5]</a>, deformable style transfer <a href="https://arxiv.org/pdf/2003.11038.pdf" target="_blank" rel="noopener">[10]</a></p>
 </li>
-<li><p>Install gstffmpeg</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
+<li><p>learn distortion grid <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Adria_Recasens_Learning_to_Zoom_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Looking_for_the_Devil_in_the_Details_Learning_Trilinear_Attention_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[6]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Marin_Efficient_Segmentation_Learning_Downsampling_Near_Semantic_Boundaries_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[7]</a></p>
+</li>
+<li><p>learn conv offset: Deformable CNN v1<a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">[3]</a>, v2<a href="https://arxiv.org/pdf/1811.11168.pdf" target="_blank" rel="noopener">[4]</a>, deformable kernel <a href="https://arxiv.org/pdf/1910.02940.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
+<li><p>optical flow: <a href="https://arxiv.org/pdf/2003.00696.pdf" target="_blank" rel="noopener">[8]</a> </p>
+</li>
+<li><p>swap disentangled <a href="https://ustcnewly.github.io/2020/03/30/deep_learning/Geometry-aware%20Deep%20Feature/" target="_blank" rel="noopener">geometry-relevant feature</a></p>
+</li>
+<li><p>move keypoints: transGAGA <a href="https://arxiv.org/pdf/1904.09571.pdf" target="_blank" rel="noopener">[11]</a></p>
 </li>
 </ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018.</p>
+<p>[2] Jaderberg, Max, Karen Simonyan, and Andrew Zisserman. “Spatial transformer networks.” NIPS, 2015.</p>
+<p>[3] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:<br>Deformable Convolutional Networks. ICCV 2017.</p>
+<p>[4] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018)</p>
+<p>[5] Shu, Chang, et al. “Hierarchical Spatial Transformer Network.” arXiv preprint arXiv:1801.09467 (2018).</p>
+<p>[6] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” CVPR, 2019.</p>
+<p>[7] Marin, Dmitrii, et al. “Efficient segmentation: Learning downsampling near semantic boundaries.” ICCV, 2019.</p>
+<p>[8] Ren, Yurui, et al. “Deep Image Spatial Transformation for Person Image Generation.”, CVPR, 2020.</p>
+<p>[9] Gao, Hang, et al. “Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation.” arXiv preprint arXiv:1910.02940 (2019).</p>
+<p>[10] Kim, Sunnie SY, et al. “Deformable Style Transfer.” arXiv preprint arXiv:2003.11038 (2020).</p>
+<p>[11] Wayne Wu, Kaidi Cao, Cheng Li, Chen Qian, Chen Change Loy: TransGaGa: Geometry-Aware Unsupervised Image-To-Image Translation. CVPR 2019</p>
 
           
         
@@ -1019,7 +447,7 @@ spyder
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/IDE/Install JDK and Eclipse/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Semi-supervised Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1038,7 +466,7 @@ spyder
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/software/IDE/Install JDK and Eclipse/" itemprop="url">Install JDK and Eclipse</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Semi-supervised Learning/" itemprop="url">semi-supervised Learning</a></h1>
         
 
         <div class="post-meta">
@@ -1050,8 +478,8 @@ spyder
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -1073,19 +501,8 @@ spyder
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/IDE/" itemprop="url" rel="index">
-                    <span itemprop="name">IDE</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -1123,31 +540,24 @@ spyder
       
         
           
-            <h3 id="For-Windows"><a href="#For-Windows" class="headerlink" title="For Windows"></a>For Windows</h3><ol>
-<li><p>Download Java JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> and install. Note that JDK contains JRE. Modify the following environment variables:</p>
-<ul>
-<li>add JAVAHOME D:\Program Files (x86)\Java\jdk1.7.051</li>
-<li>add Path %JAVA_HOME%\bin;\%JAVA_HOME%\jre\bin;</li>
-<li>add CLASSPATH %JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\rt.jar</li>
-</ul>
+            <h3 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h3><p><a href="https://arxiv.org/pdf/2006.05278.pdf" target="_blank" rel="noopener">An Overview of Deep Semi-Supervised Learning</a> </p>
+<h3 id="Semi-supervised-learning"><a href="#Semi-supervised-learning" class="headerlink" title="Semi-supervised learning"></a>Semi-supervised learning</h3><ol>
+<li><p>mixmatch <a href="https://arxiv.org/pdf/1905.02249" target="_blank" rel="noopener">[4]</a>: gracefully unify data augmentation, sharpening (low entropy), mixup.</p>
 </li>
-<li><p>Download Eclipse from <a href="http://www.eclipse.org/downloads/" target="_blank" rel="noopener">http://www.eclipse.org/downloads/</a> and click eclipse.exe</p>
+<li><p>unsupervised data augmentation <a href="https://arxiv.org/abs/1904.12848" target="_blank" rel="noopener">[5]</a> <a href="https://github.com/google-research/uda" target="_blank" rel="noopener">[code]</a></p>
 </li>
 </ol>
-<h3 id="For-Linux"><a href="#For-Linux" class="headerlink" title="For Linux"></a>For Linux</h3><ol>
-<li><p>Install JDK</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update // depending on the needed java version</span><br><span class="line">sudo apt-get install openjdk-7-jdk</span><br><span class="line">or sudo apt-get install openjdk-8-jre openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+<h3 id="co-training-for-semi-supervised-Learning"><a href="#co-training-for-semi-supervised-Learning" class="headerlink" title="co-training for semi-supervised Learning"></a>co-training for semi-supervised Learning</h3><ol>
+<li><p>multi-view: co-training <a href="https://arxiv.org/pdf/1803.05984.pdf" target="_blank" rel="noopener">[1]</a>, tri-net <a href="https://www.ijcai.org/proceedings/2018/0278.pdf" target="_blank" rel="noopener">[2]</a></p>
 </li>
-<li><p>Download Eclipse and unpack</p>
-</li>
-<li><p>Create a new file eclipse.desktop in /usr/share/applications/ and add the below code </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   [Desktop Entry]</span><br><span class="line">   Name=Eclipse</span><br><span class="line">Comment=Eclipse IDE</span><br><span class="line">Exec=/home/liniu/Program_Files/Eclipse/eclipse/eclipse</span><br><span class="line">Icon=/home/ivan/Eclipse/icon.xpm</span><br><span class="line">Categories=Application;Development;Java;IDE</span><br><span class="line">Type=Application</span><br><span class="line">Terminal=0</span><br></pre></td></tr></table></figure>
-<p>and then run</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo desktop-file-install /usr/share/applications/eclipse.desktop</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Add to the path:  <code>sudo ln -s /opt/eclipse/eclipse /usr/local/bin/</code></p>
+<li><p>multi-graph: label propagation <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaohang_Zhan_Consensus-Driven_Propagation_in_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
 </li>
 </ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Deep Co-Training for Semi-Supervised Image Recognition</p>
+<p>[2] Tri-net for Semi-Supervised Deep Learning</p>
+<p>[3] Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition</p>
+<p>[4] Berthelot, David, et al. “Mixmatch: A holistic approach to semi-supervised learning.” arXiv preprint arXiv:1905.02249 (2019).</p>
+<p>[5] Qizhe Xie, Zihang Dai, Eduard Hovy, Minh-Thang Luong, Quoc V. Le, “Unsupervised Data Augmentation for Consistency Training.” arXiv preprint arXiv:1904.12848 (2019).</p>
 
           
         
@@ -1196,7 +606,7 @@ spyder
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/Ubuntu MATLAB/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Self-supervised Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1215,7 +625,7 @@ spyder
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/software/Ubuntu MATLAB/" itemprop="url">Ubuntu MATLAB</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Self-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
         
 
         <div class="post-meta">
@@ -1227,8 +637,8 @@ spyder
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -1250,8 +660,8 @@ spyder
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -1289,669 +699,1289 @@ spyder
       
         
           
-            <ol>
-<li>install by running the sh file</li>
-<li>refer to the crack folder</li>
-<li>After installation, create a shortcut<br>a) sudo ln -s /usr/local/MATLAB/R2012a/bin/matlab  /usr/bin/matlab<br>b) copy the matlab.desktop to /usr/share/applications and matlab.png to /usr/share/icons.</li>
-</ol>
-<p>Problem:</p>
+            <p>Design a proxy task using unlabeled or weakly-labeled data to help the original task. Essentially, self-supervised learning is multi-task learning with the proxy task not relying on heavy human annotation. The problem is which proxy task without human annotation is the most effective one.</p>
+<p>Please refer to the tutorial slides <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_naiyanwang.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_zisserman.pdf" target="_blank" rel="noopener">[2]</a>, the <a href="https://arxiv.org/pdf/1902.06162.pdf" target="_blank" rel="noopener">survey</a>, and the <a href="https://github.com/jason718/awesome-self-supervised-learning" target="_blank" rel="noopener">paper list</a>.</p>
 <ol>
-<li><p>/tmp/mathworks……. permission denied</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>cd /Matlab.R2012a.UNIX/sys/java/jre/glnxa64/jre/bin</span><br><span class="line">chmod +x ./java</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>warning: usr/local/MATLAB/R2012a/bin/util/oscheck.sh: /lib/libc.so.6: not found</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /lib/x86_64-linux-gnu/libc.so.6 /lib64/libc.so.6</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/Medical Image Format/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/Medical Image Format/" itemprop="url">Medical Image Format</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h3><ol>
-<li><strong>DICOM:</strong> (Digital Imaging and COmmunications in Medicine) meta info + raw data</li>
-<li><strong>nrrd:</strong> meta info (e.g., sizes, dimension, encoding, endian) + raw data</li>
-</ol>
-<p>The meta info in <code>nrrd</code> mainly consists of the format of raw data while the meta info in <code>DICOM</code> contains the detailed information of patient, study, and series.<br>There exist matlab and python functions to read DICOM and nrdd files.</p>
+<li><p>image-to-image</p>
 <ul>
-<li>MATLAB<ul>
-<li>DICOM: dicominfo, dicomread</li>
-<li>nrrd: <a href="\code\medical_image\nrrdread.m">nrrdread</a></li>
-<li>conversion from DICOM to nrrd: <a href="\code\medical_image\Dicom2nrrd.m">Dicom2nrrd</a></li>
-</ul>
-</li>
-</ul>
-<p>DICOM is generally a directory containing a sequence of slices while nrrd is a single file. The meta info of DICOM is more complicated and thus more error-prone than that of nrrd. Use <a href="https://github.com/Slicer/Slicer/tree/master/Modules/Scripted/DICOMPatcher" target="_blank" rel="noopener">DICOMPatcher</a> to fix up DICOM files if errors occur when loading them to 3D Slicer.</p>
-<h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><ol>
-<li><p><strong>3D Slicer</strong>: cross-platform, compatible with different formats (e.g., DICOM and nrrd), and convert between them.</p>
-</li>
-<li><p>Other softwares to view medical images: <a href="http://www.cabiatl.com/mricro/dicom/#links" target="_blank" rel="noopener">http://www.cabiatl.com/mricro/dicom/#links</a></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/MATLAB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/MATLAB/" itemprop="url">MATLAB</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>run MATLAB using shellscript</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matlab -nodisplay -r "vid2frames('../data/regular_videos/', 'RiceCam106.MP4', '../data/frames/', '.png');exit"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>VideoReader: NumberOfFrames is 0, cannot read frames.</p>
-<p> something is wrong with gstreamer, first get the right version of gstreamer (0.10 for MATLAB R2015b)    </p>
-<ul>
-<li><p>install gst-plugins</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install gstffmpeg</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
-</li>
+<li>image-to-image translation: colorization <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[1]</a>, inpainting <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Pathak_Context_Encoders_Feature_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a>, cross-channel generation <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_Split-Brain_Autoencoders_Unsupervised_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>spatial location: relative location <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Doersch_Unsupervised_Visual_Representation_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, jigsaw <a href="https://arxiv.org/pdf/1603.09246.pdf" target="_blank" rel="noopener">[2]</a>, predicting rotation <a href="https://arxiv.org/pdf/1803.07728.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>contrastive learning: instance-wise contrastive learning (e.g., MOCO), prototypical contrastive learning (clustering) <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2005.04966" target="_blank" rel="noopener">[2]</a> </li>
 </ul>
 </li>
 </ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/MarkdownPad/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/MarkdownPad/" itemprop="url">MarkdownPad</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p><strong>Problem</strong>: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControl<br><strong>solution</strong>: Win+R to open regedit: change the following value from 1 to 0<br> <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled</code></p>
-</li>
-<li><p><strong>Problem</strong>: How to suppport Latex: MathJax?<br><strong>solution</strong>: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following:</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span></span><br><span class="line">   src=<span class="string">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:</p>
-<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script></li>
-</ol>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
-<li>insert image: <code>&lt;center&gt;&lt;img src=&quot;http://....jpg&quot; width=50% border=&quot;0&quot;&gt;&lt;/center&gt;</code></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/software/LaTeX/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/software/LaTeX/" itemprop="url">LaTeX</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><ul>
-<li><p>Ubuntu</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	</span><br><span class="line">sudo apt-get install texmaker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Windows</p>
 <ol>
-<li>Install Miktex: <a href="https://miktex.org/download" target="_blank" rel="noopener">https://miktex.org/download</a></li>
-<li>Install texmaker or texstudio</li>
-</ol>
-</li>
-</ul>
-<h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension:"></a>Extension:</h2><ol>
-<li>Latexdiff<ul>
-<li>Install perl: <a href="http://www.perl.org/get.html" target="_blank" rel="noopener">http://www.perl.org/get.html</a> </li>
-<li>Download latexdiff.zip package from <a href="https://ctan.org/pkg/latexdiff" target="_blank" rel="noopener">https://ctan.org/pkg/latexdiff</a></li>
-<li>Unzip the latexdiff files and copy them to the Perl\perl\bin folder</li>
-<li><code>latexdiff draft.tex revision.tex &gt; diff.tex</code></li>
+<li><p>video-to-image</p>
+<ul>
+<li>temporal coherence: <a href="http://people.csail.mit.edu/hmobahi/pubs/embedvideo.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.386.1586&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Jayaraman_Slow_and_Steady_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>temporal order:  <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wang_Unsupervised_Learning_of_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1603.08561.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>unsupervised image tasks with video clues: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a>, optical flow prediction <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, unsupervised segmentation based on optical flow <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>,unsupervised depth estimation based on optical flow <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Huaizu_Jiang_Self-Supervised_Relative_Depth_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>video generation <a href="https://arxiv.org/pdf/1502.04681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>cross-modal consistency: consistency between visual kernel and optical flow kernel <a href="http://www.robots.ox.ac.uk/~vgg/publications/2018/Mahendran18/mahendran18.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 </li>
+<li><p>video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features.</p>
+<ul>
+<li>3D rotation <a href="https://arxiv.org/pdf/1811.11387.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Cubic puzzle <a href="https://www.aaai.org/Papers/AAAI/2019/AAAI-KimD.1806.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>video localization and classification <a href="https://arxiv.org/pdf/1904.03597.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
 </ol>
-<h2 id="Math-input"><a href="#Math-input" class="headerlink" title="Math input:"></a>Math input:</h2><ol>
-<li><p>Include the <a href="\code\LaTeX\definition.py">definition.tex</a>  file with macro definition. <code>\input{definition}</code> in the main text.</p>
+<p><strong>Muti-task self-supervised learning:</strong> integrate multiple proxy tasks <a href="https://arxiv.org/pdf/1804.10069.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1708.07860" target="_blank" rel="noopener">[2]</a></p>
+<p><strong>Combined with other frameworks:</strong> self-supervised GAN <a href="https://arxiv.org/pdf/1811.11212.pdf" target="_blank" rel="noopener">[1]</a></p>
+<p>  A recent paper <a href="https://arxiv.org/pdf/1901.09005.pdf" target="_blank" rel="noopener">[1*]</a> claims that the best self-supervised learning method is still the earliest image inpainting model. The design of network architecture has a significant impact on the performance of self-supevivsed learning methods.</p>
+<p>SimCLR <a href="https://arxiv.org/pdf/2002.05709.pdf" target="_blank" rel="noopener">[2*]</a> is a SOTA self-supervised learning method with performance approaching supervised learning. </p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1*] Alexander Kolesnikov, Xiaohua Zhai, Lucas Beyer: Revisiting Self-Supervised Visual Representation Learning. CVPR 2019.</p>
+<p>[2*] Chen, Ting, et al. “A simple framework for contrastive learning of visual representations.” arXiv preprint arXiv:2002.05709 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Scene Text Recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Scene Text Recognition/" itemprop="url">Scene Text Recognition</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
+<h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.187&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Detecting Text in Natural Scenes with<br>Stroke Width Transform</a>, CVPR 2010: assume consistent stroke width within each character</p>
 </li>
-<li><p><a href="https://mathpix.com/" target="_blank" rel="noopener">Mathpix Snip</a> can convert images to LaTeX.</p>
+<li><p><a href="http://www.iapr-tc11.org/dataset/MSRA-TD500/Detecting_Texts_of_Arbitrary_Orientations_in_Natural_Images.pdf" target="_blank" rel="noopener">Detecting Texts of Arbitrary Orientations in Natural Images</a>, CVPR 2012: design rotation-invariant features</p>
 </li>
-<li><p><a href="http://www.jonathanleroux.org/software/iguanatex/" target="_blank" rel="noopener">IguanaTex</a> allows you to insert LaTeX formulations in PowerPoint.</p>
+<li><p><a href="http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/jaderberg14deep.pdf" target="_blank" rel="noopener">Deep Features for Text Spotting</a>, ECCV 2014: add three branches for prediction</p>
+</li>
+<li><p><a href="http://www.whuang.org/papers/whuang2014_eccv.pdf" target="_blank" rel="noopener">Robust scene text detection with convolution neural network induced mser trees</a>, ECCV 2014</p>
+</li>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.4947&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Real-time Lexicon-free Scene Text<br>Localization and Recognition</a>, T-PAMI 2016</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gupta_Synthetic_Data_for_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Synthetic Data for Text Localisation in Natural Images</a>, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Multi-Oriented_Text_Detection_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Multi-oriented text detection with fully convolutional networks</a>, CVPR 2016</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1609.03605.pdf" target="_blank" rel="noopener">Detecting Text in Natural Image with Connectionist Text Proposal Network</a>, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM.</p>
+</li>
+<li><p><a href="https://scholar.google.com/scholar?hl=zh-CN&amp;as_sdt=0%2C5&amp;q=SSD%3A+single+shot+multibox+detector&amp;btnG=" target="_blank" rel="noopener">SSD: single shot multibox detector</a>, ECCV 2016</p>
+</li>
+<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12256/12121" target="_blank" rel="noopener">Reading Scene Text in Deep Convolutional Sequences</a>, AAAI 2016</p>
+</li>
+<li><p><a href="Scene text detection via holistic, multi-channel prediction">Scene text detection via holistic, multi-channel prediction</a>, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linking<br>orientation map</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Deep_Direct_Regression_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep Direct Regression for Multi-Oriented Scene Text Detection</a>, ICCV 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_WordSup_Exploiting_Word_ICCV_2017_paper.pdf" target="_blank" rel="noopener">WordSup: Exploiting Word Annotations for Character based Text Detection</a>, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training</p>
+</li>
+<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14202/14295" target="_blank" rel="noopener">TextBoxes: A Fast Text Detector with a Single Deep Neural Network</a>, AAAI 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017: use <a href="https://arxiv.org/pdf/1509.04874.pdf" target="_blank" rel="noopener">DenseBox</a> to generate quadrangle proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.02765.pdf" target="_blank" rel="noopener">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf" target="_blank" rel="noopener">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.01315.pdf" target="_blank" rel="noopener">PixelLink: Detecting Scene Text via Instance Segmentation</a>, AAAI 2018: rectangle enclosing instance segmentation mask, which is obtained based on text/non-text prediction and link prediction.</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.01086.pdf" target="_blank" rel="noopener">Arbitrary-Oriented Scene Text Detection via Rotation Proposals</a>, TMM 2018: generate rotated proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1807.01544.pdf" target="_blank" rel="noopener">TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes</a>, ECCV 2018: infer the center line area (TCL) and associated circle radius/rotation</p>
 </li>
 </ol>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
-<li><p>Refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/latex_symbols.pdf" target="_blank" rel="noopener">this</a> for commonly used symbols</p>
+<h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.354&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">End-to-End Scene Text Recognition</a>, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon</p>
 </li>
-<li><p>Set color: <code>\usepackage{xcolor}</code> and <code>\textcolor{red}{}</code></p>
+<li><p><a href="https://hal.inria.fr/hal-00818178/document" target="_blank" rel="noopener">Top-down and bottom-up cues for scene text recognition</a>, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues</p>
 </li>
-<li><p>Setlength: set the indentation in paragraphs <code>\setlength\parindent{0pt}</code>; set the separation between paragraphs <code>\setlength{\parskip}{10pt}</code>; set column width in table <code>\setlength{\tabcolsep}{12pt}</code>; set the space below table/figure <code>\setlength{\textfloatsep}{2pt}</code></p>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shi_Scene_Text_Recognition_2013_CVPR_paper.pdf" target="_blank" rel="noopener">Scene text recognition using part-based tree-structured character detection</a>, CVPR 2013:  build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework</p>
 </li>
-<li><p>Math annotation: expectation <code>\usepackage{amsfonts}</code> and <code>\mathbb{E}</code>; not imply: <code>\usepackage{amssymb}</code> and <code>\nRightarrow</code></p>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Bissacco_PhotoOCR_Reading_Text_2013_ICCV_paper.pdf" target="_blank" rel="noopener">PhotoOCR: Reading text in uncontrolled conditions</a>, ICCV 2013: automatically generate training data and perform OCR on web images</p>
 </li>
-<li><p>Encoding error: try adding <code>\UseRawInputEncoding</code> or <code>\usepackage[utf8x]{inputenc}</code> or <code>\usepackage{newunicodechar}</code> <code>\newunicodechar{ﬁ}{fi}</code> </p>
+<li><p><a href="https://link.springer.com/article/10.1007/s11263-014-0793-6" target="_blank" rel="noopener">Label embedding: A frugal baseline for text recognition</a>, IJCV 2015: learn a common space for image and word</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016 </p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Robust_Scene_Text_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Robust Scene Text Recognition with Automatic Rectification</a>, CVPR 2016</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Recursive Recurrent Nets with Attention Modeling for OCR in the Wild</a>, CVPR 2016: character-level language model embodied in a recurrent neural network</p>
+</li>
+<li><p><a href="https://ieeexplore.ieee.org/abstract/document/7801919" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Cheng_Focusing_Attention_Towards_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Focusing Attention: Towards Accurate Text Recognition in Natural Images</a>, ICCV 2017: Focusing Network to handle the attention drift</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1706.01487.pdf" target="_blank" rel="noopener">Visual attention models for scene text recognition</a>, 2017 arxiv</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">AON: Towards Arbitrarily-Oriented Text Recognition
+</a>, CVPR 2018</p>
+</li>
+<li><p>(recommended by Guo)<a href="https://arxiv.org/pdf/1507.05717.pdf" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI, 2017</p>
+</li>
+</ol>
+<h2 id="End-to-end"><a href="#End-to-end" class="headerlink" title="End-to-end"></a>End-to-end</h2><p>Integrate scene text detection and recognition in an end-to-end system.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://cmp.felk.cvut.cz/~matas/papers/neumann-text-accv10.pdf" target="_blank" rel="noopener">A method for text localization and recognition in real-world images</a>, ACCV 2010</p>
+</li>
+<li><p><a href="http://fadaei.semnan.ac.ir/uploads/MV7.pdf" target="_blank" rel="noopener">Real-Time Scene Text Localization and Recognition</a>, CVPR 2012</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Towards_End-To-End_Text_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Towards End-to-end Text Spotting with Convolutional<br>Recurrent Neural Networks</a>, ICCV 2017: designed for horizontal scene text</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busta_Deep_TextSpotter_An_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework</a>, ICCV 2017:  detect and recognize horizontal and multioriented<br>scene text</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf" target="_blank" rel="noopener">FOTS: Fast Oriented Text Spotting with a Unified Network</a>, CVPR 2018: using EAST as text detector and CRNN as text recognizer</p>
+</li>
+</ol>
+<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
+<li><a href="http://mclab.eic.hust.edu.cn/icdar2017chinese/" target="_blank" rel="noopener">RCTW-17</a></li>
+<li><a href="http://rrc.cvc.uab.es/?ch=8" target="_blank" rel="noopener">MLT</a> </li>
+<li><a href="https://github.com/Yuliang-Liu/Curve-Text-Detector" target="_blank" rel="noopener">SCUT-CTW1500</a></li>
+<li><a href="https://github.com/cs-chan/Total-Text-Dataset" target="_blank" rel="noopener">Total-Text</a></li>
+<li><a href="http://rrc.cvc.uab.es/?ch=4&amp;com=introduction" target="_blank" rel="noopener">ICDAR 2015</a></li>
+<li><a href="http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500" target="_blank" rel="noopener">MSRA-TD500</a>)</li>
+<li><a href="http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html" target="_blank" rel="noopener">IIIT 5K-Word</a></li>
+<li><a href="https://vision.cornell.edu/se3/coco-text-2/" target="_blank" rel="noopener">COCO-Text</a></li>
+</ul>
+<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h2><ul>
+<li><a href="http://www.vlrlab.net/admin/uploads/avatars/FCS_TextSurvey_2015.pdf" target="_blank" rel="noopener">Scene text detection and recognition: Recent advances and future trends</a>, FCS 2015</li>
+<li><a href="https://ieeexplore.ieee.org/abstract/document/6945320" target="_blank" rel="noopener">Text detection and recognition in imagery: A survey</a>, T-PAMI 2015</li>
+</ul>
+<h2 id="Special-Sessions"><a href="#Special-Sessions" class="headerlink" title="Special Sessions"></a>Special Sessions</h2><ol>
+<li><p>Use Spatial Transformation Network (STN) <a href="https://arxiv.org/pdf/1509.05329.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1611.04298.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1707.08831.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1603.03915.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+<li><p>Use Deformable Convolution Network (DCN) <a href="https://arxiv.org/pdf/1805.01167" target="_blank" rel="noopener">[1]</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Scale Variation for Object Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Scale Variation for Object Detection/" itemprop="url">Scale Variation for Object Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>This problem is well discussed in <a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a>. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map.</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/HlFdOUN.jpg" width="100%"></p>
+<ol>
+<li><p>The first way is based on image/feature pyramids, e.g., in DPM and CNN-based methods. The images are resized at multiple scales, and feature maps (HOG or deep convolutional features) are computed for each scale. This way is often useful but is time-consuming. </p>
+</li>
+<li><p>The second way is to use sliding windows of multiple scales (and/or aspect ratios) of the feature maps. For example, in DPM, models of different aspect ratios are trained separately using different filter sizes. If this way is used to address multiple scales, it can be thought of as a “pyramid of filters”. The second way is usually adopted jointly with the first way. </p>
+</li>
+<li><p>As a comparison, our anchor-based method is built on comparison, our anchor-based method is built on a pyramid of anchors, which is more cost-efficient. Our method classifies and regresses bounding boxes with reference to anchor boxes of multiple scales and aspect ratios. It only relies on images and feature maps of a single scale, and uses filters (sliding windows on the feature map) of a single size. We show by experiments the effects of this scheme for addressing multiple scales and sizes. Because of this multi-scale design based on anchors, we can simply use the convolutional features computed on a single-scale image, as is also done by the Fast R-CNN detector. The design of multi- scale anchors is a key component for sharing features without extra cost for addressing scales.</p>
+</li>
+<li><p>use different dilation rates to vary receptive fields<br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ew7IgsX.jpg" width="80%"></p>
+</li>
+<li><p>use feature pyramid <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Lin_Feature_Pyramid_Networks_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>  </p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Lin, Tsung-Yi, et al. “Feature pyramid networks for object detection.” CVPR, 2017.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/ROI feature/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/ROI feature/" itemprop="url">ROI Feature</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>ROI pooling</li>
+<li>ROI alignment <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Precise RoI Pooling <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Borui_Jiang_Acquisition_of_Localization_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li>He, Kaiming, et al. “Mask R-CNN.” ICCV, 2017.</li>
+<li>Jiang, Borui, et al. “Acquisition of localization confidence for accurate object detection.” ECCV, 2018.</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Repeated Patterns/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Repeated Patterns/" itemprop="url">Repeated Patterns</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>detect repeated patterns <a href="https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/176177/1/paper.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>inpaint corrupted images with repeated patterns <a href="https://arxiv.org/pdf/2109.07161.pdf" target="_blank" rel="noopener">[2]</a>: use frequency convolution</p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Louis Lettry, Michal Perdoch, Kenneth Vanhoey, and Luc Van Gool. Repeated pattern detection using cnn activations. In WACV, 2017</p>
+<p>[2] Suvorov, Roman, et al. “Resolution-robust Large Mask Inpainting with Fourier Convolutions.” arXiv preprint arXiv:2109.07161 (2021).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Receptive Field/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Receptive Field/" itemprop="url">Receptive Field</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <center><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/5oklFvo.png" width="40%" border="0"></center>
+
+<ol>
+<li><p>Real receptive field is smaller than theorical receptive field, and shrinks by $\frac{1}{\sqrt{n}}$ with $n$ being the number of layers.</p>
+</li>
+<li><p>Advanced networks (e.g., ResNet) have larger receptive field than old networks (e.g., AlexNet). In latest networks, the receptive field of each pixel in the last layer is as large as the whole image. Generally, larger receptive field leads to higher accuracy, but is not the only factor that influences the accuracy.</p>
+</li>
+</ol>
+<p><a href="https://fomoro.com/research/article/receptive-field-calculator" target="_blank" rel="noopener">Fomoro</a>: a website to calculate receptive field.</p>
+<p><a href="https://distill.pub/2019/computing-receptive-fields/" target="_blank" rel="noopener">Distill</a>: mathematical derivations and open-source library to compute receptive field.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li>Wenjie Luo, Yujia Li, Raquel Urtasun, Richard S. Zemel:<br>Understanding the Effective Receptive Field in Deep Convolutional Neural Networks. NIPS, 2016.</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Privileged Information/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Privileged Information/" itemprop="url">Privileged Information</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in <a href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf" target="_blank" rel="noopener">[the first paper]</a>.</p>
+<h3 id="High-level-ideas"><a href="#High-level-ideas" class="headerlink" title="High-level ideas:"></a>High-level ideas:</h3><ul>
+<li>Use privileged information in the same way as for multi-view learning</li>
+<li>Transfer between privileged information and primary information</li>
+<li>Use privileged information to control the training process like training uncertainty or training difficulty (e.g., training loss, noise). </li>
+</ul>
+<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications:"></a>Applications:</h3><ul>
+<li><p>SVM for binary classification</p>
+<ul>
+<li>model the slack variable : SVM+ <a href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>model the margin: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Sharmanska_Learning_to_Rank_2013_ICCV_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1410.0389.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>structural SVM: <a href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>theoretical analysis: <a href="http://papers.nips.cc/paper/3960-on-the-theory-of-learnining-with-privileged-information.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.765.6609&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+</li>
+<li><p>Gaussian process classification</p>
+<ul>
+<li>GPC <a href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>L2 loss for classification/Hash</p>
+<ul>
+<li>multi-labeling <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Hash ITQ <a href="https://arxiv.org/pdf/1605.04034.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>clustering</p>
+<ul>
+<li>clustering <a href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>metric learning for verification/classification</p>
+<ul>
+<li>ITML+ <a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_TNNLS2015.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/2412/9967f9e6c4fca95165a7b9e6745c9debe0dd.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>DML+ <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246" target="_blank" rel="noopener">[1]</a></li>
+<li>OITML <a href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf" target="_blank" rel="noopener">[1]</a>: ordinal-based ITML</li>
+</ul>
+</li>
+<li><p>CRF</p>
+<ul>
+<li>probilistic inference <a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
+</ul>
+</li>
+<li><p>random forest</p>
+<ul>
+<li>conditional regression forest <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766" target="_blank" rel="noopener">[1]</a>: design node splitting criterion</li>
+</ul>
+</li>
+<li><p>matrix factorization for collaborative filtering</p>
+<ul>
+<li>PriMF <a href="https://www.ijcai.org/proceedings/2017/0223.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>Maximum Entropy Discrimination</p>
+<ul>
+<li>MED <a href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>Deep Learning</p>
+<ul>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hoffman_Learning_With_Side_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Hallucination network</a></li>
+<li>classification loss <a href="https://arxiv.org/pdf/1702.08681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>model drop-out <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Lambert_Deep_Learning_Under_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings:"></a>Settings:</h3><ul>
+<li>multi-view + LUPI <a href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811" target="_blank" rel="noopener">[1]</a></li>
+<li>multi-task multi-class LUPI <a href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>multi-instance LUPI <a href="http://bcmi.sjtu.edu.cn/home/niuli/paper/Exploiting%20Privileged%20Information%20from%20Web%20Data%20for%20Image%20Categorization.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>active learning + LUPI <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533" target="_blank" rel="noopener">[1]</a></li>
+<li>distillation + LUPI <a href="https://arxiv.org/pdf/1511.03643.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>domain adaptation + LUPI <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Object Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Object Detection/" itemprop="url">Object Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>two-stage:</strong> use region proposal network (RPN) to generate proposals</p>
+<ol>
+<li><p><a href="http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf" target="_blank" rel="noopener">faster-RCNN</a> </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/1otto8I.png" width="50%"></p>
+</li>
+</ol>
+<p><strong>one-stage:</strong> remove RPN and use anchors with associated fixed proposals based on predefined scales/aspect-ratios. </p>
+<ol>
+<li>YOLO <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf" target="_blank" rel="noopener">v1</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf" target="_blank" rel="noopener">v2</a> <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf" target="_blank" rel="noopener">v3</a></li>
+<li><p><a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank" rel="noopener">SSD</a> </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/1jX0kAI.jpg" width="50%"></p>
+</li>
+</ol>
+<p><strong>Corner Points:</strong> remove anchors and directly predict corner points</p>
+<ol>
+<li><p><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hei_Law_CornerNet_Detecting_Objects_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CornerNet</a></p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/pqK8zQM.jpg" width="90%"></p>
+</li>
+</ol>
+<p><strong>No anchor:</strong> actually use aach cell as an anchor</p>
+<ol>
+<li><p><a href="https://arxiv.org/pdf/1904.11490.pdf" target="_blank" rel="noopener">RPDet</a>: use object centers as positive cells; paired with deformable CNN</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1904.03797.pdf" target="_blank" rel="noopener">FoveaBox</a>: use the cells in fovea area (object bounding box) as positive cells</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1901.03278.pdf" target="_blank" rel="noopener">Guided Anchoring</a>:  use deformable CNN to obtain adapted feature map</p>
 </li>
 </ol>
 
@@ -2043,7 +2073,7 @@ spyder
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">205</span>
+                  <span class="site-state-item-count">206</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2065,7 +2095,7 @@ spyder
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-count">103</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

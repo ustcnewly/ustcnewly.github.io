@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_tokenizer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Matting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_tokenizer/" itemprop="url">Boost_tokenizer</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Matting/" itemprop="url">Image Matting</a></h1>
         
 
         <div class="post-meta">
@@ -312,1358 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt; boost/tokenizer.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>split string: default space</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"This is,  a test"</span>;  </span><br><span class="line">tokenizer&lt;&gt; tok(s);  </span><br><span class="line"><span class="keyword">for</span>(tokenizer&lt;&gt;::iterator beg=tok.begin(); beg!=tok.end();++beg)</span><br><span class="line">&#123;  </span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; *beg &lt;&lt; <span class="string">"\n"</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>split string: drop delimiter</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt;boost::char_separator&lt;<span class="keyword">char</span>&gt;&gt;  tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;|"</span>);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>split string: drop delimiter and keep delimiter</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::tokenizer&lt; boost::char_separator&lt; <span class="keyword">char</span>&gt; &gt; tokenizer;</span><br><span class="line">boost::char_separator&lt; <span class="keyword">char</span>&gt; sep(<span class="string">"-;"</span>, <span class="string">"|"</span>, boost::keep_empty_tokens);</span><br><span class="line"><span class="function">tokenizer <span class="title">tokens</span><span class="params">(str, sep)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>special kinds of tokenizer</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> offsets[] = &#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;   <span class="comment">//three segment length  </span></span><br><span class="line"><span class="function">offset_separator <span class="title">f</span><span class="params">(offsets, offsets+<span class="number">3</span>)</span></span>;  </span><br><span class="line">tokenizer&lt; offset_separator&gt; tok(s,f);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_regex/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_regex/" itemprop="url">Boost_regex</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/regex.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>regex_match</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">regex <span class="title">expression</span><span class="params">(<span class="string">"^select ([a-zA-Z]*) from ([a-zA-Z]*)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> in=<span class="string">"select name from table"</span>;</span><br><span class="line">cmatch what;</span><br><span class="line"><span class="keyword">if</span>(regex_match(in.c_str(), what, expression))</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt; what.size();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; what[i].first&lt;&lt; <span class="string">"|"</span>&lt;&lt;what[i].second&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt; <span class="string">"str :"</span>&lt;&lt; what[i].str()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>regex_search</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">r</span><span class="params">(<span class="string">"(a+)"</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> content = <span class="string">"bbbaaaaacccaaaaddddaaaeeeaaa"</span>;</span><br><span class="line">boost::smatch m;</span><br><span class="line"><span class="built_in">string</span>::const_iterator strstart = content.begin();</span><br><span class="line"><span class="built_in">string</span>::const_iterator strend = content.end();</span><br><span class="line"><span class="keyword">while</span>(boost::regex_search(strstart, strend, m, r))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//0 for the whole, m[i] is the i-th group</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; m[<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//m[i].first and m[i].second stands for the begin idx and end idx</span></span><br><span class="line">    strstart = m[<span class="number">0</span>].second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Note <code>regex_match(in.c_str(), what, expression)</code> is for complete match while <code>regex_match(in.c_str(), what, expression)</code> is for incomplete match.<br> <code>regex_match(in.c_str(), expression, target_exp).</code></p>
-</li>
-<li><p>special setting for regex</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boost::<span class="function">regex <span class="title">e2</span><span class="params">(my_expression, boost::regex::icase)</span></span>; \\<span class="keyword">case</span> insensitive</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_lexical_cast/" itemprop="url">Boost_lexical_cast</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/lexical_cast.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>conversion between number and string: replace the atoi, itoa, and etc</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="built_in">string</span>&gt;(i)&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt; lexical_cast&lt; <span class="keyword">double</span>&gt;(s)&lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mixed types: for type generalization</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/fusion/adapted/boost_tuple.hpp&gt;</span></span></span><br><span class="line">boost::tuple&lt;<span class="keyword">char</span>, <span class="keyword">int</span>, <span class="keyword">char</span>, <span class="keyword">int</span>&gt; decim(<span class="string">'-'</span>, <span class="number">10</span>, <span class="string">'e'</span>, <span class="number">5</span>);</span><br><span class="line">assert(stringize(decim) == <span class="string">"-10e5"</span>);</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_installation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_installation/" itemprop="url">Boost_installation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
-<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
-<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
-<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
-<hr>
-<p>If you have installed boost, using it in a VC project just takes two steps:</p>
-<ol>
-<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
-</li>
-<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
-</li>
-<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
-</li>
-</ol>
-<p>Notes:</p>
-<ol>
-<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
-<li>build-&gt;configuration manager</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_file_system/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_file_system/" itemprop="url">Boost_file_system</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/filesystem.hpp&gt;  </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::filesystem;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>file name operation    </p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Note the difference between /= and +=, /= means appending directory， += means string concatenation </span></span><br><span class="line"><span class="function">path <span class="title">dir</span><span class="params">(<span class="string">"C:\\Windows"</span>)</span></span>;</span><br><span class="line">dir /= <span class="string">"System32"</span>;       </span><br><span class="line">dir /= <span class="string">"services.exe"</span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.<span class="built_in">string</span>() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           </span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.parent_path()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;        /C:\Windows\System32</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.filename()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           /services.exe</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.stem()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;               <span class="comment">//services</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.extension()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;          <span class="comment">//.exe</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>file operation: rename, remove, copy</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">exists(path);                               </span><br><span class="line">is_directory(path); </span><br><span class="line">is_regular_file(path);                    </span><br><span class="line">                                          </span><br><span class="line">remove_all(<span class="keyword">const</span> Path&amp; p);  <span class="comment">//remove all files recursively                                                              </span></span><br><span class="line">rename(<span class="keyword">const</span> Path1&amp; from_p, <span class="keyword">const</span> Path2&amp; to_p);                        </span><br><span class="line">copy_file(<span class="keyword">const</span> Path1&amp; from_fp, <span class="keyword">const</span> Path2&amp; to_fp);                    </span><br><span class="line">create_directory(<span class="keyword">const</span> Path &amp; p);</span><br><span class="line">create_directories(<span class="keyword">const</span> Path &amp; p); <span class="comment">//make directory recursively&lt;/pre&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shallow visit directory</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">directory_iterator end;</span><br><span class="line"><span class="keyword">for</span> (directory_iterator pos(dir2); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *pos &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>deep visit directory: like DFS, stack push&amp;&amp;pop</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> recursive_directory_iterator rd_iterator;</span><br><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"E:\\Student"</span>)</span></span>;</span><br><span class="line">rd_iterator end;</span><br><span class="line"><span class="keyword">for</span> (rd_iterator pos(dir); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_directory(*pos) &amp;&amp; pos.level() &gt; <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.no_push();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*pos == <span class="string">"nofind.txt"</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.pop();</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; pos-&gt;path().filename().<span class="built_in">string</span>()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>catch error</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">    assert(is_directory(dir2));          </span><br><span class="line">    assert(exists(dir2));          </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(filesystem_error&amp; e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.path1() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.what() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/C++/boost/Boost_array/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/C++/boost/Boost_array/" itemprop="url">Boost_array</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"boost/array.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"boost/multi_array.hpp"</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>Array: similar with STL vector</p>
- <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array&lt; std::string, 3&gt; a&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Multi-Array: refer to <a href="http://www.boost.org/doc/libs/1_59_0/libs/multi_array/doc/user.html" target="_blank" rel="noopener">this</a> for more details, similar with matlab matrix operation</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> boost::multi_array&lt;<span class="keyword">double</span>, <span class="number">3</span>&gt; array_type;</span><br><span class="line"><span class="function">array_type <span class="title">A</span><span class="params">(boost::extents[<span class="number">3</span>][<span class="number">4</span>][<span class="number">2</span>])</span></span>;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/programming_language/Android/Android/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/programming_language/Android/Android/" itemprop="url">Android</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><ol>
-<li><p>Download and install <a href="https://developer.android.com/sdk/index.html" target="_blank" rel="noopener">SDK</a></p>
-</li>
-<li><p>Install via SDK manager and AVD manager</p>
-</li>
-<li><p>Add  <font color="green">C:\Program Files (x86)\Android\android-sdk\tools</font> to environment path</p>
-</li>
-<li><p>Install ADT plugin in Eclipse by entering “ADT Plugin” for the Name and the following URL for the Location: <a href="https://dl-ssl.google.com/android/eclipse/" target="_blank" rel="noopener">https://dl-ssl.google.com/android/eclipse/</a></p>
-</li>
-<li><p>The first time to lauch AVD may take rather long time, just be patient. Leave the launched AVD open until your project is finished.</p>
-</li>
-</ol>
-<p><strong>Possible problems during installation:</strong></p>
-<ol>
-<li><p>java basis is unresolved: Project-&gt;Properties-&gt;Java Build Path-&gt;Libraries, add JRE lib</p>
-</li>
-<li><p>Android is unresolved: Project-&gt;Properties-&gt;Android, choose project build target and apply. For some Eclipse versions, clean and rebuild.</p>
-</li>
-</ol>
-<h3 id="Resource"><a href="#Resource" class="headerlink" title="Resource:"></a>Resource:</h3><ol>
-<li><p><a href="http://developer.android.com/reference/packages.html" target="_blank" rel="noopener">Android API</a> </p>
-</li>
-<li><p><a href="http://zetcode.com/mob/android/" target="_blank" rel="noopener">http://zetcode.com/mob/android/</a></p>
-</li>
-<li><p><a href="https://www.embeddedlinux.org.cn/AndroidEssentials/" target="_blank" rel="noopener">https://www.embeddedlinux.org.cn/AndroidEssentials/</a></p>
-</li>
-<li><p>Begining Android2: code is downloaded from <a href="https://www.apress.com" target="_blank" rel="noopener">https://www.apress.com</a></p>
-</li>
-</ol>
-<h3 id="Application"><a href="#Application" class="headerlink" title="Application:"></a>Application:</h3><p><code>Application</code> consists of <code>Activity</code>, <code>Service</code>, <code>BroadcastReceiver</code>, and <code>Content Provider</code>, in which <code>Activity</code> is a regular App, <code>Service</code> can run independently in the background, such as MP3 player, <code>BroadcastReceiver</code> reacts to outcoming events, <code>Content Provider</code> save data via SQLite or share data with other applications.</p>
-<ol>
-<li><p><font color="red">activity</font>: Most common application. <a href="\code\android\AndroidManifest_activity.xml">[AndroidManifest example]</a> <a href="http://bcmi.sjtu.edu.cn/~niuli/github_images/BPUcRFH.jpg" target="_blank" rel="noopener">[activity cycle]</a></p>
-</li>
-<li><p><font color="red">service</font>: Similar with activity but without user interface.   <a href="\code\android\AndroidManifest_service.xml">[AndroidManifest example]</a>    <a href="http://bcmi.sjtu.edu.cn/~niuli/github_images/cira5BF.jpg" target="_blank" rel="noopener">[service cycle]</a></p>
-<ul>
-<li><p>independent service</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.service.FIRST_SERVICE&quot;);</span><br><span class="line">startService(intent);</span><br><span class="line">stopService(intent);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>service has connection with activity via <code>IBinder</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BindService.MyBinder binder;</span><br><span class="line">private ServiceConnection conn = new ServiceConnection()&#123;</span><br><span class="line">	public void onServiceConnected(ComponentName name, IBinder service)&#123;</span><br><span class="line">		binder = (BindService.MyBinder) service; </span><br><span class="line">	&#125;</span><br><span class="line">	public void onServiceDisconnected(ComponentName name)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">bindService(intent, conn, Service.BIND_AUTO_CREATE);</span><br><span class="line">unbindService(conn);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>to create a new thread, extend class <code>IntentService</code></p>
-</li>
-<li><p>for interprocess communication, use AIDL, i.e., extends <code>Stub</code> as IBinder interface. The others are the same as <code>Service</code>.</p>
-</li>
-</ul>
-</li>
-<li><p><font color="red">receiver</font>: a global listener. <a href="\code\android\AndroidManifest_receiver.xml">AndroidManifest example</a></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.action.CRAZY_BROADCAST&quot;);</span><br><span class="line">intent.putExtra(&quot;msg&quot;, &quot;hello world&quot;);</span><br><span class="line">sendBroadcast(intent);</span><br></pre></td></tr></table></figure>
-<p>use IntentFilter to filter the received broadcast</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IntentFilter filter = new IntentFilter();</span><br><span class="line">filter.addAction(MusicBox.CTL_ACTION);</span><br><span class="line">registerReceiver(serviceReceiver, filter);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><font color="red">provider</font>: globally share data. <a href="\code\android\AndroidManifest_provider.xml">AndroidManifest example</a></p>
-<p> The joint point is Uri:  <code>content://org.crazyit.providers.dictprovider/words/id</code></p>
-<p> ContentProvider: an extended class <code>public class DictProvider extends ContentProvider</code> which provides <code>query</code>, <code>insert</code>, <code>delete</code>, <code>update</code> functions.</p>
-<p> ContentResolver: </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver contentResolver = getContentResolver();</span><br><span class="line">contentResolver.insert(Words.Word.DICT_CONTENT_URI, values);</span><br></pre></td></tr></table></figure>
-<p> Most system applications provide their own ContentProvider, we need to know their Uri. </p>
-</li>
-</ol>
-<h3 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter:"></a>Adapter:</h3><p>Adapters are the link between a set of data (ArrayList, Cursor) and the AdapterView (ListView, GridView, Spinner) that displays the data. AdapterViews are ViewGroups that display child views given to it by an adapter.</p>
-<ol>
-<li><p>ArrayAdapter: </p>
-<p> In the simplest case, just use the String array <code>items</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayAdapter&lt;String&gt;aa = new ArrayAdapter&lt;String&gt;(this, adnroid.R.layout.simple_spinner_item, items);</span><br><span class="line">aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</span><br><span class="line">spin.setAdapter(aa);</span><br></pre></td></tr></table></figure>
-<p> Extend ArrayAdapter to satisfy your own needs,</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.my_list_view, MyObjectItemData);</span><br><span class="line">ListView listViewItems = new ListView(this);</span><br><span class="line">listViewItems.setAdapter(adapter);</span><br><span class="line">listViewItems.setOnItemClickListener(new OnItemClickListenerListViewItem());</span><br></pre></td></tr></table></figure>
-<p> The code for class <code>MyArrayAdapter</code> is <a href="\code\android\MyArrayAdapter.java">here</a>. The code for class <code>OnItemClickListenerListViewItem</code> is <a href="\code\android\OnItemClickListenerListViewItem.java">here</a>. Note here <code>inflate</code> is used to convert XML format to View. One trick is to check whether convertView is null so that duplicated reflation could be avoided, otherwise your device would be slowed down when crolling the screen. ConvertView can be bined with a newly defined class by using <code>setTag</code> and <code>getTag</code>. When the adapter is changed (e.g., add a new row), <code>adapter.notifyDataSetChanged()</code>. </p>
-</li>
-<li><p>CursorAdapter:</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SimpleCursorAdapter adapter=new SimpleCursorAdapter(this, R.layout.row, constantsCursor, new String[] &#123;&quot;tag&quot;, &quot;value&quot;&#125;, new int[] &#123;R.id,tag, R.id.value&#125;);</span><br><span class="line">listviewItems.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
-<p> Extend CursorAdapter, see <a href="\code\android\MyCursorAdapter.java">here</a></p>
-</li>
-</ol>
-<h3 id="XML-format"><a href="#XML-format" class="headerlink" title="XML format:"></a>XML format:</h3><ol>
-<li><p>Use XML to format Layout: In XML file, <code>android:id=&quot;@+id/button</code>. In Java, <code>btn=(Button)findViewById(R.id.button)</code>. Similarly,  in XML file, <code>android:id=&quot;@string/app_name</code>, in Java, <code>Resources myres = getResources(); myres.getString();</code>.</p>
-</li>
-<li><p>Use XML to format componenet style: in res\values\<a href="\code\android\text_style.xml">text_style.xml</a>,  in \res\layout\main.xml, <code>style=&quot;@style/style2&quot;</code>. </p>
-</li>
-<li><p>Use XML to format window style: in res\values\<a href="\code\android\window_style.xml">window_style.xml</a>, in <code>onCreate()</code> function, add <code>setTheme(R.style.crazytheme)</code>, or <code>&lt;application android:theme=&quot;@style/crazytheme&quot;&gt;</code>.</p>
-</li>
-<li><p>Use XML to format menu style: \res\menu\<a href="\code\android\contextmenu_style.xml">contextmenu_style.xml</a> <a href="\code\android\optionmenu_style.xml">optionmenu_style.xml</a>. </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MenuInflater inflator = new MenuInflater(this);</span><br><span class="line">inflator.inflate(R.menu.my_menu, menu);</span><br><span class="line">//return super.onCreateOptionsMenu(menu);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use XML to inflate a view and thus format dialogue style, click <a href="\code\android\login.xml">login.xml</a></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TableLayout loginForm = (TableLayout)getLayoutInflater().inflate(R.layout.login, null);</span><br><span class="line">ad.setView(loginForm);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Event"><a href="#Event" class="headerlink" title="Event:"></a>Event:</h3><ol>
-<li><p><font color="red">Add EventListener</font>: there exist several types of implement. We take the most common event “click” as an example to demonstrate five types of implements.</p>
-<ul>
-<li><p>Override function <code>onClick</code> in class <code>OnClickListener</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	button1.setOnClickListener(new OnClickListener()&#123; </span><br><span class="line">	    public void onClick(View v)&#123;</span><br><span class="line">	&#125;);</span><br><span class="line">	```	</span><br><span class="line">* Extend class `OnClickListener`, essentially equal to a)</span><br><span class="line">	```android</span><br><span class="line">	private Button1_OnClickListener mListener1 = new Button1_OnClickListener();</span><br><span class="line">	class Button1_OnClickListener implements OnClickListener &#123; </span><br><span class="line">		public void onClick(View v) &#123; </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	mButton1.setOnClickListener(mListener1);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Bind event listener in XML</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android:onClick=&quot;clickHandler&quot;</span><br><span class="line"></span><br><span class="line">function clickHandler()&#123;</span><br></pre></td></tr></table></figure>
-<p>For key event:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new OnKeyListener()&#123;</span><br><span class="line">	public boolean onKey(View source, int keyCode, KeyEvent event&#123;</span><br><span class="line">		switch(event.getKeyCode())</span><br></pre></td></tr></table></figure>
-<p>For long click:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new OnLongClickListener&#123;</span><br><span class="line">	public boolean onLongClick(View source)&#123;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><font color="red">Override Recall Function</font>: extend View or Activity class to override event recall functions.</p>
-<pre><code>* Extends Activity Class 
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class TestEvent2 extends Activity implements OnClickListener&#123;</span><br><span class="line">	public void onClick(View v) &#123; 			</span><br><span class="line"></span><br><span class="line">public class TestEvent2 extends Activity&#123; </span><br><span class="line">	boolean onKeyDown(int keycode, KeyEvent event)&#123;</span><br></pre></td></tr></table></figure>
-</code></pre><ul>
-<li>Extends View Class  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyButton extends Button&#123;</span><br><span class="line">	public boolean onKeyDown(int keyCode, KeyEvent event)&#123;</span><br><span class="line"></span><br><span class="line">public class DrawView extends View&#123;</span><br><span class="line">	public boolean onTouchEvent(MotionEvent event)&#123;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout:"></a>Layout:</h4><ol>
-<li><p>Common attributes</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:layout_width|height=&quot;fill_parent&quot;|&quot;wrap_content&quot;|&quot;10dip&quot;	</span><br><span class="line">	android:gravity=&quot;center_horizontal&quot;|&quot;right&quot;</span><br><span class="line">	android:background=&quot;#FF909090&quot;</span><br><span class="line">	android:padding=&quot;3dip&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>FrameLayout: fundamental layout, allow overlap or replacement for flexible usage.</p>
-</li>
-<li><p>LinearLayout: <a href="\code\android\linear.xml">example code</a>    </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_weight=&quot;1&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>AbsoluteLayout: <a href="\code\android\absolute.xml">example code</a></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_x|layout_y=&quot;250dip&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>RelativeLayout: <a href="\code\android\relative.xml">example code</a></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android:layout_below=&quot;@id/label&quot;</span><br><span class="line">android:layout_toLeftOf=&quot;@id/ok&quot;</span><br><span class="line">android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">android:layout_alignTop=&quot;@id/ok&quot;</span><br><span class="line">android:layout_marginLeft=&quot;10dip&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>TableLayout: <a href="\code\android\table.xml">example code</a></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:layout_span=&quot;3&quot;</span><br><span class="line">android:layout_column=&quot;2&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Make the layout scrollable, add <code>&lt;ScrollView&gt;</code> as in <a href="\code\android\scroll.xml">example code</a></p>
-</li>
-</ol>
-<h3 id="Componenet"><a href="#Componenet" class="headerlink" title="Componenet:"></a>Componenet:</h3><ol>
-<li><p>EditText | TextView <a href="\code\android\TextView.java">example code</a> </p>
-</li>
-<li><p>RadioGroup <a href="\code\android\RadioGroupDemo.java">example code</a> </p>
-</li>
-<li><p>CheckBox <a href="\code\android\CheckBoxDemo.java">example code</a></p>
-</li>
-<li><p>Spinner: dropdown menu <a href="\code\android\SpinnerDemo.java">example code</a></p>
-</li>
-<li><p>ListView: <a href="\code\android\ListViewDemo.java">example code</a></p>
-</li>
-<li><p>GridView: <a href="\code\android\GridDemo.java">example code</a></p>
-</li>
-<li><p>OptionsMenu: in the corner of screen <a href="\code\android\OptionsMenu.java">example code</a></p>
-</li>
-<li><p>ContextMenu: long press to show the menu. <a href="\code\android\MenuDemo.java">example code</a>.</p>
-</li>
-</ol>
-<h3 id="Advanced-Componenet"><a href="#Advanced-Componenet" class="headerlink" title="Advanced Componenet:"></a>Advanced Componenet:</h3><ol>
-<li><p><font color="red">Picker</font>: The DatePicker code is as follows and the TimePicker code is similar.</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Calendar dateAndTime=Calendar.getInstance();</span><br><span class="line">DatePickerDialog.OnDateSetListener mydiag=new DatePickerDialog.OnDateSetListener() &#123;</span><br><span class="line">	public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) &#123;</span><br><span class="line">		dateAndTime.set(Calendar.YEAR, year);</span><br><span class="line">		dateAndTime.set(Calendar.MONTH, monthOfYear);</span><br><span class="line">		dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);</span><br><span class="line">		updateLabel();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Button btn=(Button)findViewById(R.id.dateBtn);</span><br><span class="line">	</span><br><span class="line">btn.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		new DatePickerDialog(ChronoDemo.this, mydiag, year, month, day).show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>Number picker</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">NumberPicker np = (NumberPicker) findViewById(R.id.npId);</span><br><span class="line"></span><br><span class="line">np.setOnValueChangedListener(new OnValueChangeListener()</span><br><span class="line">&#123;</span><br><span class="line">    public void onValueChange(NumberPicker picker, int oldVal, int newVal)</span><br><span class="line">    &#123;</span><br><span class="line">        tv.setText(String.valueOf(newVal)); </span><br><span class="line">    &#125;        </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">np.setMaxValue(100);</span><br><span class="line">np.setMinValue(0);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Toast</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">Toast.makeText(Demo.this, &quot;warning msg&quot;, Toast.LENGTH_LONG).show();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Notification <a href="\code\android\Notification.java">example code</a></p>
-</li>
-<li><p>Alert dialog <a href="\code\android\Dialog.java">example code</a></p>
-</li>
-<li><p>Dial phone number</p>
-<ul>
-<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;&gt;&lt;/uses-permission&gt;</code></p>
-</li>
-<li><p>java code</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent phoneIntent = new Intent(&quot;android.intent.action.CALL&quot;, Uri.parse(&quot;tel:&quot; + inputStr));</span><br><span class="line">startActivity(phoneIntent);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Send message</p>
-<ul>
-<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&gt;</code></p>
-</li>
-<li><p>java code</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SmsManager smsManager = SmsManager.getDefault();</span><br><span class="line">PendingIntent sentIntent = PendingIntent.getBroadcast(act, 0, new Intent(), 0);</span><br><span class="line">smsManager.sendTextMessage(addressStr, null,contentStr, sentIntent, null);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Gallary <a href="\code\android\Gallary.java">example code</a></p>
-</li>
-<li><p>Timer</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">new Timer().schedule(new TimerTask()</span><br><span class="line">&#123;</span><br><span class="line">	public void run()</span><br><span class="line">	&#123;</span><br><span class="line">		handler.sendEmptyMessage(0x123);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;, 0, 200);</span><br><span class="line"></span><br><span class="line">Handler handler = new Handler()</span><br><span class="line">&#123;</span><br><span class="line">	public void handleMessage(Message msg)</span><br><span class="line">	&#123;</span><br><span class="line">		if (msg.what == 0x123)&#123;</span><br><span class="line">		&#125;</span><br><span class="line">		super.handleMessage(msg);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><ol>
-<li><p><code>&lt;uses-sdk android:minSdkVersion=&quot;2&quot; /&gt;</code> indicates the minimum requirement of SDK. <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&gt;</code> indicates the required permission.</p>
-</li>
-<li><p>To utilize the resouce in res/values: in java code, , R.id….R.string….; in XML file, @id/…..@string/……</p>
-</li>
-<li><p>Set no title or fullscreen, add the following code in <code>AndroidManifest.xml</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	&lt;activity android:theme=&quot;@android:style/Theme.NoTitleBar.Fullscreen&quot;</span><br><span class="line">	```  </span><br><span class="line"></span><br><span class="line">1. There are two types of intents: explicit and implicit. In explicit intents you provide the name of the Activity class. In implicit intents, you tell the system what to do rather than name the Activity class to launch.</span><br><span class="line"></span><br><span class="line">## Game Development ##</span><br><span class="line"></span><br><span class="line">1. Prepare music and image resources uder folder &quot;res&quot;</span><br><span class="line"></span><br><span class="line">1. Use Handler in the MainActivity</span><br><span class="line">	```android</span><br><span class="line">	hd=new Handler()&#123;</span><br><span class="line">		public void handleMessage(Message msg)&#123;</span><br><span class="line">	    	super.handleMessage(msg);        		</span><br><span class="line">	    	switch(msg.what)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>MenuView</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class ViewMainMenu extends SurfaceView implements SurfaceHolder.Callback&#123;</span><br><span class="line">	public void onDraw(Canvas canvas)&#123;</span><br><span class="line">	public void surfaceCreated(SurfaceHolder holder) &#123;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Create on thread for each function</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class KeyThread extends Thread&#123;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use GLRender for GameView, android opengl</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MySurfaceView extends GLSurfaceView &#123;</span><br><span class="line">	public MySurfaceView(Context context) &#123;</span><br><span class="line">			super(context);</span><br><span class="line">	        mRenderer = new SceneRenderer();</span><br><span class="line">	        setRenderer(mRenderer);						</span><br><span class="line">	        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);</span><br><span class="line">	&#125;	 </span><br><span class="line">	class SceneRenderer implements GLSurfaceView.Renderer&#123;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Zero-Shot Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
               </time>
             
 
@@ -1724,62 +374,56 @@
       
         
           
-            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
-<p>1) semantic relatedness: X-&gt;Y (semantic similarity; write classifier)</p>
-<p>2) semantic embedding: X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
-<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
-<p>1) inductive ZSL (do not use unlabeled test images in the training stage) v.s. semi-supervised/transductive ZSL (use unlabeled test images in the training stage)</p>
-<p>2) standard ZSL (test images only from unseen categories) v.s. generalized ZSL (test images from both seen and unseen categories) (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
-<p><strong>Ideas:</strong></p>
-<ol>
-<li><p>Mapping: dictionary learning, metric learning, etc</p>
+            <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>.</p>
+<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
+<li><p><a href="http://alphamatting.com/" target="_blank" rel="noopener">Alphamatting.com</a> Dataset: 25 train images, 8 test images, each has 3 different trimaps: small, large, user. Input: image and trimap.</p>
 </li>
-<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
+<li><p><a href="https://sites.google.com/view/deepimagematting" target="_blank" rel="noopener">Composition-1k Dataset</a>: 1000 images and 50 unique foregrounds.</p>
 </li>
-<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
+<li><p><a href="https://github.com/lizhengwei1992/Semantic_Human_Matting" target="_blank" rel="noopener">Matting Human Dataset</a>: 34427 images, annotation is not very accurate.</p>
 </li>
-<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
+<li><p><a href="https://github.com/wukaoliu/CVPR2020-HAttMatting" target="_blank" rel="noopener">Dinstinctions-646</a>: composed of 646 foreground images</p>
 </li>
-<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+<li><p><a href="https://openaccess.thecvf.com/content/WACV2021/papers/Kang_ATM_Attentional_Text_Matting_WACV_2021_paper.pdf" target="_blank" rel="noopener">Text matting dataset</a></p>
 </li>
-<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
+</ul>
+<h2 id="Evaluation-metrics"><a href="#Evaluation-metrics" class="headerlink" title="Evaluation metrics"></a>Evaluation metrics</h2><ul>
+<li>quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error.</li>
+</ul>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
+<li><p>Affinity-based <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </p>
 </li>
-<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
+<li><p>Sampling-based <a href="https://link.springer.com/chapter/10.1007/978-3-319-46475-6_13" target="_blank" rel="noopener">[8]</a>: the foreground/background color of unknown pixels can be obtained by sampling the foreground/background color of known pixels.</p>
 </li>
-</ol>
-<p><strong>Critical Issues:</strong></p>
-<ol>
-<li><p>generalized ZSL, why first predict seen or unseen?: As claimed in <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">[1]</a>, since we only see labeled data from seen classes, during training, the scoring functions of seen classes tend to dominate those of unseen classes, leading to biased predictions in GZSL and aggressively classifying a new data point into the label space of S because classifiers for the seen classes do not get trained on negative examples from the unseen classes.</p>
+<li><p>Learning-based</p>
+<ul>
+<li>With trimap:<ul>
+<li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and compositional loss; refine alpha.</li>
+<li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; compositional loss.</li>
+<li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and compositional loss.</li>
+<li>Learning based sampling <a href="http://people.inf.ethz.ch/aksoyy/papers/CVPR19-samplenet.pdf" target="_blank" rel="noopener">[7]</a></li>
+</ul>
 </li>
-<li><p>hubness problem <a href="https://arxiv.org/pdf/1412.6568.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>: As claimed in <a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>, one practical effect of the ZSL domain shift is the Hubness problem. Specifically, after the domain shift, there are a small set of hub test-class prototypes that become nearest or K nearest neighbours to the majority of testing samples in the semantic space, while others are NNs of no testing instances. This results in poor accuracy and highly biased predictions with the majority of testing examples being assigned to a small minority of classes. </p>
+<li>Without trimap:<ul>
+<li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block. </li>
+<li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
+<li><a href="https://arxiv.org/pdf/2004.00626.pdf" target="_blank" rel="noopener">[9]</a>: capture the background image without subject and a corresponding video with subject</li>
+</ul>
 </li>
-<li><p>projection domain shift: what is the impact on the decision values?</p>
-</li>
-</ol>
-<p><strong>Datasets:</strong></p>
-<ol>
-<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
-</li>
-<li><p>large-scale dataset: ImageNet</p>
-</li>
-</ol>
-<p><strong>Survey and Resource:</strong></p>
-<ol>
-<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
-</li>
-<li><p><a href="https://github.com/chichilicious/awesome-zero-shot-learning" target="_blank" rel="noopener">List of paper and datasets</a></p>
+</ul>
 </li>
 </ol>
-<p><strong>Other applications:</strong></p>
-<ol>
-<li>zero-shot object detection</li>
-<li>zero-shot figure-ground segmentation <a href="http://www.cs.umanitoba.ca/~ywang/papers/icpr16_segment.pdf" target="_blank" rel="noopener">[1]</a></li>
-<li>zero-shot semantic segmentation</li>
-<li>zero-shot retrieval</li>
-<li>zero-shot domain adaptation</li>
-</ol>
+<h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h2><p>Omnimatte <a href="https://arxiv.org/pdf/2105.06993.pdf" target="_blank" rel="noopener">[10]</a>: segment objects and scene effects related to the objects (shadows, reflections, smoke)</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” CVPR, 2017.</p>
+<p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
+<p>[3] Zhu, Bingke, et al. “Fast deep matting for portrait animation on mobile phone.” ACM MM, 2017.</p>
+<p>[4] Wang, Yu, et al. “Deep Propagation Based Image Matting.” IJCAI. 2018.</p>
+<p>[5] Quan Chen, Tiezheng Ge, Yanyu Xu, Zhiqiang Zhang, Xinxin Yang, Kun Gai, “Semantic Human Matting.” ACM MM, 2018.</p>
+<p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
+<p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
+<p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
+<p>[9] Soumyadip Sengupta, Vivek Jayaram, Brian Curless, Steve Seitz, Ira Kemelmacher-Shlizerman:<br>Background Matting: The World is Your Green Screen. CVPR, 2020.</p>
+<p>[10] Lu, Erika, et al. “Omnimatte: Associating Objects and Their Effects in Video.” CVPR, 2021.</p>
 
           
         
@@ -1828,7 +472,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/deep_learning/Word Vector/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Manipulation Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1847,7 +491,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/deep_learning/Word Vector/" itemprop="url">Word Vector</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Manipulation Detection/" itemprop="url">Image Manipulation Detection</a></h1>
         
 
         <div class="post-meta">
@@ -1859,8 +503,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
               </time>
             
 
@@ -1921,13 +565,35 @@
       
         
           
-            <h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><p>For a brief survey summarizing <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf" target="_blank" rel="noopener">skip-gram</a>, <a href="https://arxiv.org/pdf/1301.3781.pdf?" target="_blank" rel="noopener">CBOW</a>, <a href="http://www.aclweb.org/anthology/D14-1162" target="_blank" rel="noopener">GloVe</a>, etc, please refer to <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/word_vector_survey.pdf" target="_blank" rel="noopener">this</a>.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>word2vec: <a href="https://github.com/tensorflow/models/tree/master/tutorials/embedding" target="_blank" rel="noopener">TensorFlow</a></p>
-<p>GloVe: <a href="https://github.com/stanfordnlp/GloVe" target="_blank" rel="noopener">C</a>, <a href="https://github.com/shashankg7/glove-tensorflow" target="_blank" rel="noopener">TensorFlow</a></p>
-<h2 id="WikiCorpus"><a href="#WikiCorpus" class="headerlink" title="WikiCorpus"></a>WikiCorpus</h2><p>Download the <a href="https://dumps.wikimedia.org/enwiki/" target="_blank" rel="noopener">WikiCorpus</a> and use the <a href="\code\shellscript\get-wikimedia.sh">shellscript</a> to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.</p>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li>English word vectors: <a href="https://github.com/3Top/word2vec-api" target="_blank" rel="noopener">https://github.com/3Top/word2vec-api</a></li>
-<li>Non-English word vectors: <a href="https://github.com/Kyubyong/wordvectors" target="_blank" rel="noopener">https://github.com/Kyubyong/wordvectors</a></li>
+            <h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
+<li><p>Casia V1.0/2.0: <a href="https://ieeexplore.ieee.org/document/6625374" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/namtpham/casia1groundtruth" target="_blank" rel="noopener">[v1]</a> <a href="https://github.com/namtpham/casia2groundtruth" target="_blank" rel="noopener">[v2]</a></p>
+</li>
+<li><p>Columbia Uncompressed Image Splicing Detection: <a href="https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/" target="_blank" rel="noopener">[dataset]</a></p>
+</li>
+<li><p>Pawel korus-Realistic Tampering Dataset: <a href="https://pkorus.pl/downloads" target="_blank" rel="noopener">[dataset]</a></p>
+</li>
+<li><p>Coverage: <a href="https://stefan.winklerbros.net/Publications/icip2016b.pdf" target="_blank" rel="noopener">[dataset]</a></p>
+</li>
+<li><p>NIST16: <a href="https://mfc.nist.gov/users/sign_in" target="_blank" rel="noopener">[dataset]</a></p>
+</li>
+<li><p>DEFACTO: <a href="https://defactodataset.github.io/" target="_blank" rel="noopener">[dataset]</a></p>
+</li>
+<li><p>self-made dataset with <a href="https://github.com/pengzhou1108/RGB-N" target="_blank" rel="noopener">[code]</a></p>
+</li>
+</ul>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ul>
+<li><p>MantraNet <a href="https://github.com/RonyAbecidan/ManTraNet-pytorch" target="_blank" rel="noopener">[code]</a>: compare each pixel with neighboring pixels</p>
+</li>
+<li><p>MAGritte <a href="https://github.com/vlkniaz/MAGritte" target="_blank" rel="noopener">[code]</a>: a combination of generation and discrimination</p>
+</li>
+<li><p>H-LSTM <a href="https://arxiv.org/pdf/1903.02495.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/jawadbappy/forgery_localization_HLED" target="_blank" rel="noopener">[code]</a>: 1. resampling features 2. use Hilbert curve to determine the patch order </p>
+</li>
+<li><p>Constrained-RCNN <a href="https://github.com/HuizhouLi/Constrained-R-CNN" target="_blank" rel="noopener">[code]</a>: constrained convolution</p>
+</li>
+<li><p>GSRNet <a href="https://arxiv.org/pdf/1811.09729.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/pengzhou1108/GSRNet" target="_blank" rel="noopener">[code]</a>: data augmentation</p>
+</li>
+<li><p>SPAN <a href="https://github.com/ZhiHanZ/IRIS0-SPAN" target="_blank" rel="noopener">[code]</a>: pyramid self-attention</p>
+</li>
 </ul>
 
           
@@ -1977,7 +643,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/machine_learning/Vote Aggregation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1996,7 +662,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/machine_learning/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Loss/" itemprop="url">Image Loss</a></h1>
         
 
         <div class="post-meta">
@@ -2008,8 +674,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T14:22:56+08:00">
-                2018-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
               </time>
             
 
@@ -2070,11 +736,1160 @@
       
         
           
-            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
-<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
-<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
-<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
-<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
+            <ol>
+<li><p>perceptual loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: two images have similar semantic information</p>
+<script type="math/tex; mode=display">\frac{1}{C_j H_j W_j}||\phi_j(\hat{x})-\phi_j(x)||^2</script></li>
+<li><p>style loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[2]</a>: two images have similar channel correlation; related to bilinear pooling <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Lin_Bilinear_CNN_Models_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+<script type="math/tex; mode=display">||G_j^{\phi}(\hat{x})-G_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">G_j^{\phi}(x)_{c,c'}=\frac{1}{C_j H_j W_j}\sum_{h=1}^{H_j}\sum_{w=1}^{W_j}\phi_j(x)_{h,w,c}\phi_j(x)_{h,w,c'}</script></p>
+</li>
+<li><p>pairwise mean squared error (PMSE) <a href="https://papers.nips.cc/paper/5539-depth-map-prediction-from-a-single-image-using-a-multi-scale-deep-network.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1612.05424.pdf" target="_blank" rel="noopener">[4]</a>: scale-invariant mean squared error (in log space) </p>
+<script type="math/tex; mode=display">\frac{1}{n}\sum_i d_i^2 - \frac{1}{n^2}(\sum_i d_i)^2</script></li>
+<li><p>total variation (TV) loss <a href="https://arxiv.org/pdf/1603.08155.pdf" target="_blank" rel="noopener">[1]</a>: smoothness</p>
+<script type="math/tex; mode=display">\sum_{(i,j)} ||x_{i,j+1}-x_{i,j}||_1 +||x_{i+1,j}-x_{i,j}||_1</script></li>
+<li><p>alignment loss <a href="https://arxiv.org/pdf/1812.06145.pdf" target="_blank" rel="noopener">[5]</a>: two images have similar spatial correlation, complementary to style loss</p>
+<script type="math/tex; mode=display">||F_j^{\phi}(\hat{x})-F_j^{\phi}(x)||_F^2</script><p> with <script type="math/tex">F_j^{\phi}(x)_{d,d'}=\frac{1}{C_j H_j W_j}\sum_{c=1}^{C}\phi_j(x)_{d,c}\phi_j(x)_{d',c}</script></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” ECCV, 2016.</p>
+<p>[2] Gatys, Leon, Alexander S. Ecker, and Matthias Bethge. “Texture synthesis using convolutional neural networks.” NIPS, 2015.</p>
+<p>[3] Eigen, David, Christian Puhrsch, and Rob Fergus. “Depth map prediction from a single image using a multi-scale deep network.” NIPS, 2014.</p>
+<p>[4] Bousmalis, Konstantinos, et al. “Unsupervised pixel-level domain adaptation with generative adversarial networks.” CVPR, 2017.</p>
+<p>[5] Abavisani, Mahdi, Hamid Reza Vaezi Joze, and Vishal M. Patel. “Improving the performance of unimodal dynamic hand-gesture recognition with multimodal training.” CVPR, 2019.</p>
+<p>[6] Lin, Tsung-Yu, Aruni RoyChowdhury, and Subhransu Maji. “Bilinear cnn models for fine-grained visual recognition.” ICCV, 2015.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Inpainting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Inpainting/" itemprop="url">Image Inpainting</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Problem-definition"><a href="#Problem-definition" class="headerlink" title="Problem definition"></a>Problem definition</h3><ul>
+<li><p>pixels: valid pixels, invalid pixels, synthesized pixels</p>
+</li>
+<li><p>holes: regular holes, irregular holes, free-form holes</p>
+</li>
+<li><p>visual artifacts: color discrepancy, blurriness, obvious edge response</p>
+</li>
+<li><p>user guidance: dot, sketch</p>
+</li>
+</ul>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
+<li><p>losses: perceptual loss, style loss</p>
+</li>
+<li><p>operators: partial convolution, gated convolution</p>
+<ul>
+<li><p>partial convolution <a href="https://arxiv.org/pdf/1804.07723.pdf" target="_blank" rel="noopener">[1]</a>: hard-gating single-channel unlearnable layer</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/B20xmYt.jpg" width="40%"></p>
+</li>
+<li><p>gated convolution <a href="https://arxiv.org/pdf/1806.03589.pdf" target="_blank" rel="noopener">[2]</a>: soft-gating multi-channel learnable layer</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/GOC8MsV.jpg" width="40%"></p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/eG7JmBi.jpg" width="70%"></p>
+</li>
+</ul>
+</li>
+<li><p>filling priority <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/criminisi_tip2004.pdf" target="_blank" rel="noopener">[3]</a>: Priority is the product of confidence term (a measure of the amount of reliable information surrounding the pixel) and data term (a function of the strength of isophotes hitting the front). Select the patch to be filled based on the priority, similar to patch-based texture synthesis. </p>
+<p>  <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/bO5YXEQ.jpg" width="40%"> </p>
+</li>
+<li><p>Edge-enhanced image inpainting<br>Inpaint edge map and use complete edge map to help image inpainting <a href="https://arxiv.org/pdf/1901.00212" target="_blank" rel="noopener">[4]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xiong_Foreground-Aware_Image_Inpainting_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ul>
+<h3 id="Multi-modal-image-inpainting"><a href="#Multi-modal-image-inpainting" class="headerlink" title="Multi-modal image inpainting"></a>Multi-modal image inpainting</h3><ul>
+<li><p>random vector: use random vector to generate diverse and plausible outputs <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>attribute vector: use target attribute values to guide image inpainting <a href="https://arxiv.org/abs/1801.07632" target="_blank" rel="noopener">[7]</a></p>
+</li>
+<li><p>use autoregressive model: <a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">[11]</a> <a href="https://arxiv.org/pdf/2103.14031.pdf" target="_blank" rel="noopener">[12]</a></p>
+</li>
+</ul>
+<h3 id="Image-inpainting-with-auxiliary-semantic"><a href="#Image-inpainting-with-auxiliary-semantic" class="headerlink" title="Image inpainting with auxiliary semantic"></a>Image inpainting with auxiliary semantic</h3><ul>
+<li>enforce inpainted result to have expected semantics <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Li_Generative_Face_Completion_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li>first inpaint semantic map and then use complete semantic map as guidance <a href="https://arxiv.org/pdf/1805.03356v3.pdf" target="_blank" rel="noopener">[9]</a></li>
+<li>guide feature learning in the decoder <a href="https://arxiv.org/pdf/2003.06877.pdf" target="_blank" rel="noopener">[10]</a></li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li>Liu, Guilin, et al. “Image inpainting for irregular holes using partial convolutions.” ECCV, 2018.</li>
+<li>Yu, Jiahui, et al. “Free-form image inpainting with gated convolution.” ICCV, 2019.</li>
+<li>Criminisi, Antonio, Patrick Pérez, and Kentaro Toyama. “Region filling and object removal by exemplar-based image inpainting.” TIP, 2004.</li>
+<li>Nazeri, Kamyar, et al. “Edgeconnect: Generative image inpainting with adversarial edge learning.” arXiv preprint arXiv:1901.00212 (2019).</li>
+<li>Xiong, Wei, et al. “Foreground-aware image inpainting.” CVPR, 2019.</li>
+<li>Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</li>
+<li>Chen, Zeyuan, et al. “High resolution face completion with multiple controllable attributes via fully end-to-end progressive generative adversarial networks.” arXiv preprint arXiv:1801.07632 (2018).</li>
+<li>Li, Yijun, et al. “Generative face completion.” CVPR, 2017.</li>
+<li>Song, Yuhang, et al. “Spg-net: Segmentation prediction and guidance network for image inpainting.” arXiv preprint arXiv:1805.03356 (2018).</li>
+<li>Liao, Liang, et al. “Guidance and evaluation: Semantic-aware image inpainting for mixed scenes.” arXiv preprint arXiv:2003.06877 (2020).</li>
+<li>Peng, Jialun, et al. “Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE.” CVPR, 2021.</li>
+<li>Wan, Ziyu, et al. “High-Fidelity Pluralistic Image Completion with Transformers.” arXiv preprint arXiv:2103.14031 (2021).</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Harmonization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Harmonization/" itemprop="url">Image Harmonization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Fundamental"><a href="#Fundamental" class="headerlink" title="Fundamental"></a>Fundamental</h2><p><u>Image Statistics</u>: illuminance, color temperature, saturation, local contrast, hue, texture, tone</p>
+<p><u>Color spaces</u>: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).</p>
+<h2 id="Image-realism"><a href="#Image-realism" class="headerlink" title="Image realism"></a>Image realism</h2><ol>
+<li><p>Predict the realism using the discriminator learnt based on real images and fake images <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zhu_Learning_a_Discriminative_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[a]</a></p>
+</li>
+<li><p>Predict the realism based on global and local statistics: distance to neighboring realistic image, similarity between foreground and background <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.2272&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[a]</a></p>
+</li>
+</ol>
+<h2 id="Image-harmonization"><a href="#Image-harmonization" class="headerlink" title="Image harmonization"></a>Image harmonization</h2><p>After pasting the foreground on the background, harmonize the foreground. </p>
+<ul>
+<li><strong>Traditional methods:</strong> match the foreground with the background; match the foreground with other semantically or statistically close realistic images.<ul>
+<li>histogram matching: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[a]</a> <a href="https://people.csail.mit.edu/wojciech/Harmonization/Harmonization.pdf" target="_blank" rel="noopener">[b]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[c]</a></li>
+<li>Gaussian model matching: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[a]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[b]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.491.4250&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[c]</a></li>
+<li>pixel-level classification: MRF<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[a]</a></li>
+<li>gamma correction <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[a]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[b]</a> </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Deep learning methods:</strong> <a href="https://github.com/bcmi/Awesome-Image-Harmonization" target="_blank" rel="noopener">https://github.com/bcmi/Awesome-Image-Harmonization</a></li>
+</ul>
+<p>One interesting problem in image harmonization is whether the decomposition of reflectance and illumination is unique. If we have strong prior knowledge for the object reflectance (e.g., black-and-white zebra), the decomposition may be unique. Or if the object color is complex enough, which is equivalent to adding enough constraints, the decomposition may be unique. Otherwise, if we do not have strong prior knowledge for the object reflectance (e.g., a vase of arbitrary color) and the object color is simple (e.g., a single color), the decomposition is not unique. </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/source_to_target_color.png" width="50%"></p>
+<p>Given a source image and an obtained target image after applying color transfer, we hope to know whether there exists a valid path between source image and target image and whether there exist multiple valid paths between them. </p>
+<h2 id="Deep-painterly-harmonization"><a href="#Deep-painterly-harmonization" class="headerlink" title="Deep painterly harmonization"></a>Deep painterly harmonization</h2><ul>
+<li>deep painterly harmonization <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13478" target="_blank" rel="noopener">[1]</a> </li>
+<li>style harmonization <a href="https://bmvc2019.org/wp-content/uploads/papers/0425-paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>image blending <a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Zhang_Deep_Image_Blending_WACV_2020_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Luan, Fujun, et al. “Deep painterly harmonization.” Computer graphics forum. Vol. 37. No. 4. 2018.</p>
+<p>[2] Peng, Hwai-Jin, Chia-Ming Wang, and Yu-Chiang Frank Wang. “Element-Embedded Style Transfer Networks for Style Harmonization.” BMVC. 2019.</p>
+<p>[3] Zhang, Lingzhi, Tarmily Wen, and Jianbo Shi. “Deep image blending.” WACV. 2020.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Composition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Composition/" itemprop="url">Image Composition</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Simply speaking, image composition means cut-and-paste, that is, cutting one piece from one image and paste it on another image. The obtained composite image may be unrealistic due to the following reasons:</p>
+<ul>
+<li>The foreground is not well segmented, so there is an evident and unnatural boundary between foreground and background. </li>
+<li>The foreground and background may look incompatible due to different color and illumination statistics. For example, the foreground is captured in the daytime while the background is captured at night.</li>
+<li>The foreground is placed at an unreasonable location. For example, a horse is placed in the sky. </li>
+<li>The foreground needs to be geometrically transformed. For example, when pasting eye glasses on a face, the eye glasses should fit the eyes and ears on the face.</li>
+<li>The pasted foreground may also affect the background. For example, the foreground may cast a shadow on the background.</li>
+</ul>
+<p>Therefore, image composition is actually a combination of multiple subtasks.<br>Previously, some works only focus on one subtask such as harmonization or geometric transformation <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0380.pdf" target="_blank" rel="noopener">[1]</a>. Some other works attempt to solve all subtasks in a single package <a href="https://arxiv.org/pdf/1706.01021.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Toward_Realistic_Image_Compositing_With_Adversarial_Learning_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1910.11495.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Weng_MISC_Multi-Condition_Injection_and_Spatially-Adaptive_Compositing_for_Conditional_Person_Image_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2009.08255.pdf" target="_blank" rel="noopener">[6]</a>.</p>
+<p>Human matting+composition: <a href="https://arxiv.org/pdf/2011.02146.pdf" target="_blank" rel="noopener">[7]</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Lin, Chen-Hsuan, et al. “St-gan: Spatial transformer generative adversarial networks for image compositing.”, CVPR, 2018.</p>
+<p>[2] Tan, Fuwen, et al. “Where and who? automatic semantic-aware person composition.” WACV, 2018.</p>
+<p>[3] Chen, Bor-Chun, and Andrew Kae. “Toward Realistic Image Compositing with Adversarial Learning.” CVPR, 2019.</p>
+<p>[4] Lingzhi Zhang, Tarmily Wen, Jianbo Shi: Deep Image Blending. WACV 2020: 231-240</p>
+<p>[5] Weng, Shuchen, et al. “MISC: Multi-Condition Injection and Spatially-Adaptive Compositing for Conditional Person Image Synthesis.” CVPR, 2020.</p>
+<p>[6] Zhan, Fangneng, et al. “Adversarial Image Composition with Auxiliary Illumination.” arXiv preprint arXiv:2009.08255 (2020).</p>
+<p>[7] Zhang, He, et al. “Deep Image Compositing.” arXiv preprint arXiv:2011.02146 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Blending/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Blending/" itemprop="url">Image Blending</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Image Action Recognition with Unlabeled Videos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Image Action Recognition with Unlabeled Videos/" itemprop="url">Image Action Recognition with Unlabeled Videos</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Self-supervised learning: see video-to-image in this <a href="https://ustcnewly.github.io/2018/09/07/deep_learning/Self-supervised%20Learning/" target="_blank" rel="noopener">blog</a>. </p>
+</li>
+<li><p>predict optical flow and use two-stream network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gao_Im2Flow_Motion_Hallucination_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
+</li>
+<li><p>Predicting pose information (use poselet detector) <a href="http://openaccess.thecvf.com/content_cvpr_2013/papers/Chen_Watching_Unlabeled_Video_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018.</p>
+<p>[2] Chen, Chao-Yeh, and Kristen Grauman. “Watching unlabeled video helps learn new human actions from very few labeled snapshots.” CVPR, 2013.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/High-resolution Image Generation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/High-resolution Image Generation/" itemprop="url">High-resolution Image Generation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>stacked generators from low-resolution to high-resolution: <a href="http://papers.nips.cc/paper/5773-deep-generative-image-models-using-a-laplacian-pyramid-of-adversarial-networks.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Stacked_Generative_Adversarial_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_StackGAN_Text_to_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Photographic_Image_Synthesis_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+<li><p>low-resolution generator embedded in high-resolution generator, upsample low-resolution result and add residual:  <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1907.12296" target="_blank" rel="noopener">[7]</a> <a href="http://openaccess.thecvf.com/content_ECCVW_2018/papers/11131/Hamada_Full-body_High-resolution_Anime_Generation_with_Progressive_Structure-conditional_Generative_Adversarial_Networks_ECCVW_2018_paper.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://arxiv.org/pdf/1710.10196.pdf?__hstc=200028081.1bb630f9cde2cb5f07430159d50a3c91.1524009600081.1524009600082.1524009600083.1&amp;__hssc=200028081.1.1524009600084&amp;__hsfp=1773666937" target="_blank" rel="noopener">[9]</a> <a href="https://arxiv.org/pdf/2005.09704.pdf" target="_blank" rel="noopener">[12]</a></p>
+</li>
+<li><p>fuse low-resolution outputs: <a href="https://arxiv.org/pdf/2009.06613.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[11]</a></p>
+</li>
+<li><p>shallow mapping from large-scale input to large-scale output: <a href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf" target="_blank" rel="noopener">[2]</a>(look-up table)</p>
+</li>
+<li><p>joint upsampling: given high-resolution input and low-resolution output, get high-resolution output. 1) append high-resolution input <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[1]</a>  or the feature of high-resolution input <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Photographic_Image_Synthesis_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[10]</a> to refinement network. 2) guided filter <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Wu_Fast_End-to-End_Trainable_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[13]</a>, use high-resolution input as guidance and coarse high-resolution output as filter input. 3) attentional upsampling <a href="https://arxiv.org/pdf/2012.09904" target="_blank" rel="noopener">[14]</a></p>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018.</p>
+<p>[2] Zeng, Hui, et al. “Learning Image-adaptive 3D Lookup Tables for High Performance Photo Enhancement in Real-time.” PAMI, 2020.</p>
+<p>[3] Yu, Haichao, et al. “High-Resolution Deep Image Matting.” arXiv preprint arXiv:2009.06613 (2020).</p>
+<p>[4] Denton, Emily L., Soumith Chintala, and Rob Fergus. “Deep generative image models using a￼ laplacian pyramid of adversarial networks.” NIPS, 2015.</p>
+<p>[5] Huang, Xun, et al. “Stacked generative adversarial networks.” CVPR, 2017.</p>
+<p>[6] Zhang, Han, et al. “Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks.” ICCV, 2017.</p>
+<p>[7] Andreini, Paolo, et al. “A two stage gan for high resolution retinal image generation and segmentation.” arXiv preprint arXiv:1907.12296 (2019).</p>
+<p>[8] Hamada, K., Tachibana, K., Li, T., Honda, H., &amp; Uchida, Y. (2018). Full-body high-resolution anime generation with progressive structure-conditional generative adversarial networks. ECCV, 2018.</p>
+<p>[9] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017).</p>
+<p>[10] Chen, Qifeng, and Vladlen Koltun. “Photographic image synthesis with cascaded refinement networks.” ICCV, 2017.</p>
+<p>[11] Anokhin, Ivan, et al. “High-Resolution Daytime Translation Without Domain Labels.” CVPR, 2020.</p>
+<p>[12] Yi, Zili, et al. “Contextual residual aggregation for ultra high-resolution image inpainting.” CVPR, 2020.</p>
+<p>[13] Wu, Huikai, et al. “Fast end-to-end trainable guided filter.” CVPR, 2018.</p>
+<p>[14] Kundu, Souvik, et al. “Attention-based Image Upsampling.” arXiv preprint arXiv:2012.09904 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Gradient Regularization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Gradient Regularization/" itemprop="url">Gradient Regularization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:47+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>Gradient harmonization: <a href="https://arxiv.org/pdf/1811.05181.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+<p>[1] Gradient Harmonized Single-stage Detector, AAAI, 2019</p>
 
           
         
@@ -2164,7 +1979,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">205</span>
+                  <span class="site-state-item-count">206</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2186,7 +2001,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-count">103</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

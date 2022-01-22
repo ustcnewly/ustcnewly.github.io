@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/machine_learning/Knowledge Graph/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Class Imbalance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/02/machine_learning/Knowledge Graph/" itemprop="url">Knowledge Graph</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Class Imbalance/" itemprop="url">Class Imbalance</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-02T11:32:15+08:00">
-                2018-12-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -374,13 +374,12 @@
       
         
           
-            <p>Definition: entities, attributes, and relationships</p>
-<p>Two ways to construct knowledge graph:</p>
-<ol>
-<li><p>probabilistic models (graphical model/random walk)</p>
-</li>
-<li><p>embedding based models</p>
-</li>
+            <ol>
+<li>re-sampling</li>
+<li>synthetic samples: generate more samples for minor classes</li>
+<li>re-weighting</li>
+<li>few-shot learning</li>
+<li>decoupling representation and classifier learning: use normal sampling in the feature learning stage and use re-sampling in the classifier learning stage. </li>
 </ol>
 
           
@@ -430,7 +429,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/machine_learning/Soft Loss/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/machine_learning/Causality/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -449,7 +448,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/30/machine_learning/Soft Loss/" itemprop="url">Soft Loss</a></h1>
+                <a class="post-title-link" href="/2022/01/21/machine_learning/Causality/" itemprop="url">Causal Inference</a></h1>
         
 
         <div class="post-meta">
@@ -461,8 +460,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T19:26:13+08:00">
-                2018-11-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -523,17 +522,23 @@
       
         
           
-            <p>Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$.</p>
-<ol>
-<li><p>weighted softmax loss: $-\sum_{i} w_i \log p_i$</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1611.05916.pdf" target="_blank" rel="noopener">EMD softmax loss</a>: $-\sum_{i} w_i p_i$</p>
-</li>
-<li><p>softmax loss after <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">label flip layer</a>: $-\log{\sum_{i} w_i p_i}$</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">knowledge distillation</a>: $\sum_{i} (p_i-w_i)$</p>
-</li>
-</ol>
+            <p><strong>Big Names:</strong> Judy Pearl <a href="http://ftp.cs.ucla.edu/pub/stat_ser/r354-corrected-reprint.pdf" target="_blank" rel="noopener">[Tutorial]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/Judy_Pearl_CausalityIntro.pdf" target="_blank" rel="noopener">[slides]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/Causality_2nd_Edition.pdf" target="_blank" rel="noopener">[textbook]</a>, James Robin <a href="https://cdn1.sph.harvard.edu/wp-content/uploads/sites/1268/2018/08/hernanrobins_v1.10.36.pdf" target="_blank" rel="noopener">[Textbook]</a> <a href="https://grass.upc.edu/en/seminar/presentation-files/causal-inference/chapters-1-i-2" target="_blank" rel="noopener">[slides]</a></p>
+<p><strong>Tutorial:</strong> </p>
+<ul>
+<li>Causality for machine learning <a href="https://arxiv.org/pdf/1911.10500.pdf" target="_blank" rel="noopener">[4]</a></li>
+<li><a href="https://link.zhihu.com/?target=http%3A//bcmi.sjtu.edu.cn/home/niuli/download/A_briefing_on_causal_inference.pdf" target="_blank" rel="noopener">A briefing on causal inference</a> written by myself</li>
+</ul>
+<p><strong>Workshop:</strong> <a href="https://sites.google.com/view/nips2018causallearning/home" target="_blank" rel="noopener">NIPS2018 workshop on causal learning</a>, <a href="http://kdd2020tutorial.thumedialab.com/" target="_blank" rel="noopener">KDD2020 Tutorial on Causal Inference Meets Machine Learning</a></p>
+<p><strong>Material:</strong> <a href="https://www.bradyneal.com/causal-inference-course" target="_blank" rel="noopener">MILA Course</a></p>
+<p>Causality and disentanglement: <a href="https://arxiv.org/pdf/2011.11878" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2010.02637.pdf" target="_blank" rel="noopener">[6]</a></p>
+<p>Counterfactual and disentanglement: <a href="https://arxiv.org/pdf/2103.00887.pdf" target="_blank" rel="noopener">[7]</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chalupka K, Perona P, Eberhardt F. Visual causal feature learning. arXiv preprint arXiv:1412.2309, 2014.</p>
+<p>[2] Lopez-Paz D, Nishihara R, Chintala S, et al. Discovering causal signals in images. CVPR, 2017.</p>
+<p>[3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks. arXiv preprint arXiv:1811.10597, 2018.</p>
+<p>[4] Bernhard Schölkopf: CAUSALITY FOR MACHINE LEARNING. arXiv preprint arXiv:1911.10500, 2019.</p>
+<p>[5] Kim, Hyemi, et al. “Counterfactual Fairness with Disentangled Causal Effect Variational Autoencoder.” arXiv preprint arXiv:2011.11878 (2020).</p>
+<p>[6] Shen, Xinwei, et al. “Disentangled Generative Causal Representation Learning.” arXiv preprint arXiv:2010.02637 (2020).</p>
+<p>[7] Yue, Zhongqi, et al. “Counterfactual Zero-Shot and Open-Set Visual Recognition.” arXiv preprint arXiv:2103.00887 (2021).</p>
 
           
         
@@ -582,7 +587,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/deep_learning/Zoom in/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/hardware/GPU/GPU Cuda and CuDNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -601,7 +606,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/30/deep_learning/Zoom in/" itemprop="url">Zoom in</a></h1>
+                <a class="post-title-link" href="/2022/01/21/hardware/GPU/GPU Cuda and CuDNN/" itemprop="url">GPU Cuda and CuDNN</a></h1>
         
 
         <div class="post-meta">
@@ -613,8 +618,521 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T11:18:06+08:00">
-                2018-11-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/" itemprop="url" rel="index">
+                    <span itemprop="name">hardware</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/GPU/" itemprop="url" rel="index">
+                    <span itemprop="name">GPU</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
+<li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
+</li>
+<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
+</li>
+</ul>
+<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
+<li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
+</li>
+<li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
+</li>
+<li><p>Install NVIDIA GPU driver using apt-get</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:Ubuntu-x-swat/x-updates</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
+<ol>
+<li>Hit CTRL+ALT+F1 and login using your credentials.</li>
+<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
+<li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
+<li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
+</ol>
+</li>
+</ul>
+<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><p>When using anaconda to install deep learning platform, sometimes it is unnecessary to install CUDA by yourself. </p>
+<ol>
+<li><p>Preprocessing</p>
+<ul>
+<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
+<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
+<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
+</ul>
+</li>
+<li><p>Install Cuda</p>
+<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
+<p> and then add into PATH and LD_LIBRARY_PATH</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
+</li>
+</ol>
+<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/hardware/camera/Illumination Model/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/hardware/camera/Illumination Model/" itemprop="url">Illumination Model</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Dichromatic Reflection Model <a href="https://apps.dtic.mil/sti/pdfs/ADA150999.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-61864-3_17#enumeration" target="_blank" rel="noopener">[2]</a> <script type="math/tex">I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i}</script>, in which <script type="math/tex">i</script> is the pixel index, <script type="math/tex">L</script> is the global illumination, <script type="math/tex">C_i</script> is the sensor sensitivity. The chromatic terms <script type="math/tex">R_b</script> and <script type="math/tex">R_s</script> account for body and surface reflection, which are only related to object material.  </p>
+</li>
+<li><p>gray pixels:  pixels with equal RGB values. detecting gray pixels in a color-biased image is not easy. <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Qian_On_Finding_Gray_Pixels_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
+</li>
+<li><p>albedo, shading, gloss <a href="https://arxiv.org/pdf/2010.05907.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Yu_InverseRenderNet_Learning_Single_Image_Inverse_Rendering_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.<br>[2] Song, Shuangbing, et al. “Illumination Harmonization with Gray Mean Scale.” Computer Graphics International Conference. Springer, Cham, 2020.<br>[3] Qian, Yanlin, et al. “On finding gray pixels.” CVPR, 2019.<br>[4] Bhattad, Anand, and David A. Forsyth. “Cut-and-Paste Neural Rendering.” arXiv preprint arXiv:2010.05907 (2020).<br>[5] Yu, Ye, and William AP Smith. “InverseRenderNet: Learning single image inverse rendering.” CVPR, 2019.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/hardware/camera/Camera Survey/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/hardware/camera/Camera Survey/" itemprop="url">Camera Survey</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/" itemprop="url" rel="index">
+                    <span itemprop="name">hardware</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/camera/" itemprop="url" rel="index">
+                    <span itemprop="name">camera</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Interface-Type"><a href="#Interface-Type" class="headerlink" title="Interface Type:"></a>Interface Type:</h3><p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/L2j9XQP.jpg" width="900"></p>
+<p>GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission.</p>
+<h3 id="Color-v-s-Monochrome"><a href="#Color-v-s-Monochrome" class="headerlink" title="Color v.s. Monochrome"></a>Color v.s. Monochrome</h3><p>When the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file.</p>
+<p>Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.<br>Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution.</p>
+<h3 id="Sensor-Type"><a href="#Sensor-Type" class="headerlink" title="Sensor Type:"></a>Sensor Type:</h3><ul>
+<li><strong>CCD (Charged Coupling Devices)</strong>: special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light.</li>
+</ul>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/9NvqKXW.jpg" width="900"></p>
+<ul>
+<li><strong>CMOS (Complimentary Metal Oxide Semiconductor)</strong>: use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption</li>
+</ul>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/bozmHu7.jpg" width="900"></p>
+<h3 id="Readout-Method"><a href="#Readout-Method" class="headerlink" title="Readout Method:"></a>Readout Method:</h3><p><strong>Global v.s. rolling shutter:</strong> originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities.</p>
+<p><strong>Advantage of global shutter:</strong> global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. </p>
+<h3 id="Quantum-Efficiency"><a href="#Quantum-Efficiency" class="headerlink" title="Quantum Efficiency"></a>Quantum Efficiency</h3><p>The ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity.</p>
+<h3 id="Field-of-View"><a href="#Field-of-View" class="headerlink" title="Field of View"></a>Field of View</h3><p>FOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV.</p>
+<h3 id="Pixel-Size"><a href="#Pixel-Size" class="headerlink" title="Pixel Size"></a>Pixel Size</h3><p>A small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio. </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Zoom in/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Zoom in/" itemprop="url">Zoom in</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:49+08:00">
+                2022-01-21
               </time>
             
 
@@ -734,7 +1252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/deep_learning/Differential Programming/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Zero-Shot Semantic Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -753,7 +1271,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/29/deep_learning/Differential Programming/" itemprop="url">Differential Programming</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Zero-Shot Semantic Segmentation/" itemprop="url">Zero-Shot Semantic Segmentation</a></h1>
         
 
         <div class="post-meta">
@@ -765,8 +1283,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-29T11:14:33+08:00">
-                2018-11-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -827,8 +1345,16 @@
       
         
           
-            <p>The first work of differential programming is using network to approximate sparse coding. <a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9252E34D6078997E19677B5397A89074?doi=10.1.1.184.7256&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a></p>
-<p>Introduction tutorials: <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/intro_deep_unrolling.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/intro_differential_programming.pdf" target="_blank" rel="noopener">[2]</a></p>
+            <ul>
+<li><p>standard semantic segmentation: <a href="https://github.com/RohanDoshi2018/ZeroshotSemanticSegmentation/blob/master/rohan_doshi_senior_thesis.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xian_Semantic_Projection_Network_for_Zero-_and_Few-Label_Semantic_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1906.00817.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>binary segmentation: <a href="http://openaccess.thecvf.com/content_ICCVW_2019/papers/MDALC/Kato_Zero-Shot_Semantic_Segmentation_via_Variational_Mapping_ICCVW_2019_paper.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Rohan Doshi, Olga Russakovsky, “zero-shot semantic segmentation”, bachelor thesis.</p>
+<p>[2] Y. Xian, S. Choudhury, Y. He, B. Schiele and Z. Akata , “SPNet: Semantic Projection Network for Zero- and Few-Label Semantic Segmentation”, CVPR, 2019.</p>
+<p>[3] Maxime Bucher, Tuan-Hung Vu, Matthieu Cord, Sorbonne, Patrick Pérez, “Zero-Shot Semantic Segmentation”, 2019</p>
+<p>[4] Kato, Naoki, Toshihiko Yamasaki, and Kiyoharu Aizawa. “Zero-Shot Semantic Segmentation via Variational Mapping.” ICCV Workshops. 2019.</p>
 
           
         
@@ -877,7 +1403,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/deep_learning/Image Inpainting/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Zero-Shot Object Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -896,7 +1422,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/27/deep_learning/Image Inpainting/" itemprop="url">Image Inpainting</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Zero-Shot Object Detection/" itemprop="url">Zero-Shot Object Detection</a></h1>
         
 
         <div class="post-meta">
@@ -908,8 +1434,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-27T19:59:30+08:00">
-                2018-11-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -970,236 +1496,26 @@
       
         
           
-            <h3 id="Problem-definition"><a href="#Problem-definition" class="headerlink" title="Problem definition"></a>Problem definition</h3><ul>
-<li><p>pixels: valid pixels, invalid pixels, synthesized pixels</p>
-</li>
-<li><p>holes: regular holes, irregular holes, free-form holes</p>
-</li>
-<li><p>visual artifacts: color discrepancy, blurriness, obvious edge response</p>
-</li>
-<li><p>user guidance: dot, sketch</p>
-</li>
-</ul>
-<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
-<li><p>losses: perceptual loss, style loss</p>
-</li>
-<li><p>operators: partial convolution, gated convolution</p>
+            <ul>
+<li><p>ZSL based on bounding box features</p>
 <ul>
-<li><p>partial convolution <a href="https://arxiv.org/pdf/1804.07723.pdf" target="_blank" rel="noopener">[1]</a>: hard-gating single-channel unlearnable layer</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/B20xmYt.jpg" width="40%"></p>
-</li>
-<li><p>gated convolution <a href="https://arxiv.org/pdf/1806.03589.pdf" target="_blank" rel="noopener">[2]</a>: soft-gating multi-channel learnable layer</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/GOC8MsV.jpg" width="40%"></p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/eG7JmBi.jpg" width="70%"></p>
-</li>
+<li><a href="https://arxiv.org/pdf/1804.04340.pdf" target="_blank" rel="noopener">[1]</a>: use background bounding boxes from background classes</li>
+<li><a href="https://arxiv.org/pdf/1803.06049.pdf" target="_blank" rel="noopener">[3]</a>: classification loss with semantic clustering</li>
 </ul>
 </li>
-<li><p>filling priority <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/criminisi_tip2004.pdf" target="_blank" rel="noopener">[3]</a>: Priority is the product of confidence term (a measure of the amount of reliable information surrounding the pixel) and data term (a function of the strength of isophotes hitting the front). Select the patch to be filled based on the priority, similar to patch-based texture synthesis. </p>
-<p>  <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/bO5YXEQ.jpg" width="40%"> </p>
-</li>
-<li><p>Edge-enhanced image inpainting<br>Inpaint edge map and use complete edge map to help image inpainting <a href="https://arxiv.org/pdf/1901.00212" target="_blank" rel="noopener">[4]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xiong_Foreground-Aware_Image_Inpainting_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-</ul>
-<h3 id="Multi-modal-image-inpainting"><a href="#Multi-modal-image-inpainting" class="headerlink" title="Multi-modal image inpainting"></a>Multi-modal image inpainting</h3><ul>
-<li><p>random vector: use random vector to generate diverse and plausible outputs <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>attribute vector: use target attribute values to guide image inpainting <a href="https://arxiv.org/abs/1801.07632" target="_blank" rel="noopener">[7]</a></p>
-</li>
-<li><p>use autoregressive model: <a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">[11]</a> <a href="https://arxiv.org/pdf/2103.14031.pdf" target="_blank" rel="noopener">[12]</a></p>
-</li>
-</ul>
-<h3 id="Image-inpainting-with-auxiliary-semantic"><a href="#Image-inpainting-with-auxiliary-semantic" class="headerlink" title="Image inpainting with auxiliary semantic"></a>Image inpainting with auxiliary semantic</h3><ul>
-<li>enforce inpainted result to have expected semantics <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Li_Generative_Face_Completion_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[8]</a></li>
-<li>first inpaint semantic map and then use complete semantic map as guidance <a href="https://arxiv.org/pdf/1805.03356v3.pdf" target="_blank" rel="noopener">[9]</a></li>
-<li>guide feature learning in the decoder <a href="https://arxiv.org/pdf/2003.06877.pdf" target="_blank" rel="noopener">[10]</a></li>
-</ul>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
-<li>Liu, Guilin, et al. “Image inpainting for irregular holes using partial convolutions.” ECCV, 2018.</li>
-<li>Yu, Jiahui, et al. “Free-form image inpainting with gated convolution.” ICCV, 2019.</li>
-<li>Criminisi, Antonio, Patrick Pérez, and Kentaro Toyama. “Region filling and object removal by exemplar-based image inpainting.” TIP, 2004.</li>
-<li>Nazeri, Kamyar, et al. “Edgeconnect: Generative image inpainting with adversarial edge learning.” arXiv preprint arXiv:1901.00212 (2019).</li>
-<li>Xiong, Wei, et al. “Foreground-aware image inpainting.” CVPR, 2019.</li>
-<li>Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</li>
-<li>Chen, Zeyuan, et al. “High resolution face completion with multiple controllable attributes via fully end-to-end progressive generative adversarial networks.” arXiv preprint arXiv:1801.07632 (2018).</li>
-<li>Li, Yijun, et al. “Generative face completion.” CVPR, 2017.</li>
-<li>Song, Yuhang, et al. “Spg-net: Segmentation prediction and guidance network for image inpainting.” arXiv preprint arXiv:1805.03356 (2018).</li>
-<li>Liao, Liang, et al. “Guidance and evaluation: Semantic-aware image inpainting for mixed scenes.” arXiv preprint arXiv:2003.06877 (2020).</li>
-<li>Peng, Jialun, et al. “Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE.” CVPR, 2021.</li>
-<li>Wan, Ziyu, et al. “High-Fidelity Pluralistic Image Completion with Transformers.” arXiv preprint arXiv:2103.14031 (2021).</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/deep_learning/Image Harmonization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/27/deep_learning/Image Harmonization/" itemprop="url">Image Harmonization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-27T17:22:13+08:00">
-                2018-11-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Fundamental"><a href="#Fundamental" class="headerlink" title="Fundamental"></a>Fundamental</h2><p><u>Image Statistics</u>: illuminance, color temperature, saturation, local contrast, hue, texture, tone</p>
-<p><u>Color spaces</u>: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).</p>
-<h2 id="Image-realism"><a href="#Image-realism" class="headerlink" title="Image realism"></a>Image realism</h2><ol>
-<li><p>Predict the realism using the discriminator learnt based on real images and fake images <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zhu_Learning_a_Discriminative_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[a]</a></p>
-</li>
-<li><p>Predict the realism based on global and local statistics: distance to neighboring realistic image, similarity between foreground and background <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.2272&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[a]</a></p>
-</li>
-</ol>
-<h2 id="Image-harmonization"><a href="#Image-harmonization" class="headerlink" title="Image harmonization"></a>Image harmonization</h2><p>After pasting the foreground on the background, harmonize the foreground. </p>
+<li><p>End-to-end zero-shot object detection</p>
 <ul>
-<li><strong>Traditional methods:</strong> match the foreground with the background; match the foreground with other semantically or statistically close realistic images.<ul>
-<li>histogram matching: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[a]</a> <a href="https://people.csail.mit.edu/wojciech/Harmonization/Harmonization.pdf" target="_blank" rel="noopener">[b]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[c]</a></li>
-<li>Gaussian model matching: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[a]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[b]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.491.4250&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[c]</a></li>
-<li>pixel-level classification: MRF<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5620893" target="_blank" rel="noopener">[a]</a></li>
-<li>gamma correction <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Automatic_Content-Aware_Color_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[a]</a> <a href="http://www.cs.northwestern.edu/~bgooch/PDFs/ColorTransfer.pdf" target="_blank" rel="noopener">[b]</a> </li>
+<li><a href="https://arxiv.org/pdf/1803.07113.pdf" target="_blank" rel="noopener">[2]</a>: extend YOLO, concatenate three feature maps to predict confidence score.</li>
+<li><a href="https://arxiv.org/pdf/1811.08982.pdf" target="_blank" rel="noopener">[4]</a>: use polarity loss similar to focal loss and vocabulary to enhance word vector</li>
+<li><a href="https://arxiv.org/pdf/1805.06157.pdf" target="_blank" rel="noopener">[5]</a>: output both classification scores and semantic embeddings</li>
 </ul>
 </li>
 </ul>
-<ul>
-<li><strong>Deep learning methods:</strong> <a href="https://github.com/bcmi/Awesome-Image-Harmonization" target="_blank" rel="noopener">https://github.com/bcmi/Awesome-Image-Harmonization</a></li>
-</ul>
-<p>One interesting problem in image harmonization is whether the decomposition of reflectance and illumination is unique. If we have strong prior knowledge for the object reflectance (e.g., black-and-white zebra), the decomposition may be unique. Or if the object color is complex enough, which is equivalent to adding enough constraints, the decomposition may be unique. Otherwise, if we do not have strong prior knowledge for the object reflectance (e.g., a vase of arbitrary color) and the object color is simple (e.g., a single color), the decomposition is not unique. </p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/source_to_target_color.png" width="50%"></p>
-<p>Given a source image and an obtained target image after applying color transfer, we hope to know whether there exists a valid path between source image and target image and whether there exist multiple valid paths between them. </p>
-<h2 id="Deep-painterly-harmonization"><a href="#Deep-painterly-harmonization" class="headerlink" title="Deep painterly harmonization"></a>Deep painterly harmonization</h2><ul>
-<li>deep painterly harmonization <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13478" target="_blank" rel="noopener">[1]</a> </li>
-<li>style harmonization <a href="https://bmvc2019.org/wp-content/uploads/papers/0425-paper.pdf" target="_blank" rel="noopener">[2]</a></li>
-<li>image blending <a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Zhang_Deep_Image_Blending_WACV_2020_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Luan, Fujun, et al. “Deep painterly harmonization.” Computer graphics forum. Vol. 37. No. 4. 2018.</p>
-<p>[2] Peng, Hwai-Jin, Chia-Ming Wang, and Yu-Chiang Frank Wang. “Element-Embedded Style Transfer Networks for Style Harmonization.” BMVC. 2019.</p>
-<p>[3] Zhang, Lingzhi, Tarmily Wen, and Jianbo Shi. “Deep image blending.” WACV. 2020.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ankan Bansal, Karan Sikka, Gaurav Sharma, Rama Chellappa, Ajay Divakaran, “Zero-Shot Object Detection”, ECCV, 2018.</p>
+<p>[2] Pengkai Zhu, Hanxiao Wang, and Venkatesh Saligrama, “Zero Shot Detection”, T-CSVT, 2019.</p>
+<p>[3] Rahman, Shafin, Salman Khan, and Fatih Porikli. “Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts.” arXiv preprint arXiv:1803.06049 (2018).</p>
+<p>[4] Rahman, Shafin, Salman Khan, and Nick Barnes. “Polarity Loss for Zero-shot Object Detection.” arXiv preprint arXiv:1811.08982 (2018).</p>
+<p>[5] Demirel, Berkan, Ramazan Gokberk Cinbis, and Nazli Ikizler-Cinbis. “Zero-Shot Object Detection by Hybrid Region Embedding.” arXiv preprint arXiv:1805.06157 (2018).</p>
 
           
         
@@ -1248,7 +1564,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/deep_learning/Upsampling Layer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Zero-Shot Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1267,7 +1583,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/22/deep_learning/Upsampling Layer/" itemprop="url">Deconvolution Layer</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Zero-Shot Learning/" itemprop="url">Zero-Shot Learning</a></h1>
         
 
         <div class="post-meta">
@@ -1279,8 +1595,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-22T14:35:36+08:00">
-                2018-11-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -1341,270 +1657,61 @@
       
         
           
-            <ol>
-<li><p>unpooling</p>
-<p> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/Ot61UEE.jpg" widt="80%" width="50%"></p>
-</li>
-<li><p>transpose convolution (learnable upsampling)</p>
-<p> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/h7GQbIH.jpg" widt="90%" width="50%"></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/deep_learning/Scene Text Recognition/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/19/deep_learning/Scene Text Recognition/" itemprop="url">Scene Text Recognition</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-19T15:40:54+08:00">
-                2018-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
-<h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
-<p><strong>Paper list (in chronological order):</strong></p>
+            <p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) semantic relatedness: X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) semantic embedding: X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) inductive ZSL (do not use unlabeled test images in the training stage) v.s. semi-supervised/transductive ZSL (use unlabeled test images in the training stage)</p>
+<p>2) standard ZSL (test images only from unseen categories) v.s. generalized ZSL (test images from both seen and unseen categories) (<a href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf" target="_blank" rel="noopener">novelty detection</a>, <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">calibrated stacking</a>)</p>
+<p><strong>Ideas:</strong></p>
 <ol>
-<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.187&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Detecting Text in Natural Scenes with<br>Stroke Width Transform</a>, CVPR 2010: assume consistent stroke width within each character</p>
+<li><p>Mapping: dictionary learning, metric learning, etc</p>
 </li>
-<li><p><a href="http://www.iapr-tc11.org/dataset/MSRA-TD500/Detecting_Texts_of_Arbitrary_Orientations_in_Natural_Images.pdf" target="_blank" rel="noopener">Detecting Texts of Arbitrary Orientations in Natural Images</a>, CVPR 2012: design rotation-invariant features</p>
+<li><p>Embedding: multiple embedding <a href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf" target="_blank" rel="noopener">[1]</a>, free embedding <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a>, self-defined embedding <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2" target="_blank" rel="noopener">[1]</a></p>
 </li>
-<li><p><a href="http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/jaderberg14deep.pdf" target="_blank" rel="noopener">Deep Features for Text Spotting</a>, ECCV 2014: add three branches for prediction</p>
+<li><p>Application: video-&gt;object(attribute)-&gt;action <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
 </li>
-<li><p><a href="http://www.whuang.org/papers/whuang2014_eccv.pdf" target="_blank" rel="noopener">Robust scene text detection with convolution neural network induced mser trees</a>, ECCV 2014</p>
+<li><p>Combination: with active learning <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[2]</a>, online learning <a href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
-<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.4947&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Real-time Lexicon-free Scene Text<br>Localization and Recognition</a>, T-PAMI 2016</p>
+<li><p>External knowledge graph: WordNet-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[1]</a>, NELL-based <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
 </li>
-<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016</p>
+<li><p>Deep learning: graph neural network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, RNN <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a></p>
 </li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gupta_Synthetic_Data_for_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Synthetic Data for Text Localisation in Natural Images</a>, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Multi-Oriented_Text_Detection_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Multi-oriented text detection with fully convolutional networks</a>, CVPR 2016</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1609.03605.pdf" target="_blank" rel="noopener">Detecting Text in Natural Image with Connectionist Text Proposal Network</a>, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM.</p>
-</li>
-<li><p><a href="https://scholar.google.com/scholar?hl=zh-CN&amp;as_sdt=0%2C5&amp;q=SSD%3A+single+shot+multibox+detector&amp;btnG=" target="_blank" rel="noopener">SSD: single shot multibox detector</a>, ECCV 2016</p>
-</li>
-<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12256/12121" target="_blank" rel="noopener">Reading Scene Text in Deep Convolutional Sequences</a>, AAAI 2016</p>
-</li>
-<li><p><a href="Scene text detection via holistic, multi-channel prediction">Scene text detection via holistic, multi-channel prediction</a>, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linking<br>orientation map</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Deep_Direct_Regression_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep Direct Regression for Multi-Oriented Scene Text Detection</a>, ICCV 2017</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_WordSup_Exploiting_Word_ICCV_2017_paper.pdf" target="_blank" rel="noopener">WordSup: Exploiting Word Annotations for Character based Text Detection</a>, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training</p>
-</li>
-<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14202/14295" target="_blank" rel="noopener">TextBoxes: A Fast Text Detector with a Single Deep Neural Network</a>, AAAI 2017</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017: use <a href="https://arxiv.org/pdf/1509.04874.pdf" target="_blank" rel="noopener">DenseBox</a> to generate quadrangle proposals</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1801.02765.pdf" target="_blank" rel="noopener">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf" target="_blank" rel="noopener">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1801.01315.pdf" target="_blank" rel="noopener">PixelLink: Detecting Scene Text via Instance Segmentation</a>, AAAI 2018: rectangle enclosing instance segmentation mask, which is obtained based on text/non-text prediction and link prediction.</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1703.01086.pdf" target="_blank" rel="noopener">Arbitrary-Oriented Scene Text Detection via Rotation Proposals</a>, TMM 2018: generate rotated proposals</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1807.01544.pdf" target="_blank" rel="noopener">TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes</a>, ECCV 2018: infer the center line area (TCL) and associated circle radius/rotation</p>
+<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SP-AEN]</a> or synthetic features <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[SE-ZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[GAZSL]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf" target="_blank" rel="noopener">[f-xGAN]</a></p>
 </li>
 </ol>
-<h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>
-<p><strong>Paper list (in chronological order):</strong></p>
+<p><strong>Critical Issues:</strong></p>
 <ol>
-<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.354&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">End-to-End Scene Text Recognition</a>, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon</p>
+<li><p>generalized ZSL, why first predict seen or unseen?: As claimed in <a href="https://arxiv.org/pdf/1605.04253.pdf" target="_blank" rel="noopener">[1]</a>, since we only see labeled data from seen classes, during training, the scoring functions of seen classes tend to dominate those of unseen classes, leading to biased predictions in GZSL and aggressively classifying a new data point into the label space of S because classifiers for the seen classes do not get trained on negative examples from the unseen classes.</p>
 </li>
-<li><p><a href="https://hal.inria.fr/hal-00818178/document" target="_blank" rel="noopener">Top-down and bottom-up cues for scene text recognition</a>, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues</p>
+<li><p>hubness problem <a href="https://arxiv.org/pdf/1412.6568.pdf" target="_blank" rel="noopener">[1]</a><a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>: As claimed in <a href="https://arxiv.org/pdf/1511.04458.pdf" target="_blank" rel="noopener">[2]</a>, one practical effect of the ZSL domain shift is the Hubness problem. Specifically, after the domain shift, there are a small set of hub test-class prototypes that become nearest or K nearest neighbours to the majority of testing samples in the semantic space, while others are NNs of no testing instances. This results in poor accuracy and highly biased predictions with the majority of testing examples being assigned to a small minority of classes. </p>
 </li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shi_Scene_Text_Recognition_2013_CVPR_paper.pdf" target="_blank" rel="noopener">Scene text recognition using part-based tree-structured character detection</a>, CVPR 2013:  build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Bissacco_PhotoOCR_Reading_Text_2013_ICCV_paper.pdf" target="_blank" rel="noopener">PhotoOCR: Reading text in uncontrolled conditions</a>, ICCV 2013: automatically generate training data and perform OCR on web images</p>
-</li>
-<li><p><a href="https://link.springer.com/article/10.1007/s11263-014-0793-6" target="_blank" rel="noopener">Label embedding: A frugal baseline for text recognition</a>, IJCV 2015: learn a common space for image and word</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016 </p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Robust_Scene_Text_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Robust Scene Text Recognition with Automatic Rectification</a>, CVPR 2016</p>
-</li>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Recursive Recurrent Nets with Attention Modeling for OCR in the Wild</a>, CVPR 2016: character-level language model embodied in a recurrent neural network</p>
-</li>
-<li><p><a href="https://ieeexplore.ieee.org/abstract/document/7801919" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI 2017</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Cheng_Focusing_Attention_Towards_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Focusing Attention: Towards Accurate Text Recognition in Natural Images</a>, ICCV 2017: Focusing Network to handle the attention drift</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1706.01487.pdf" target="_blank" rel="noopener">Visual attention models for scene text recognition</a>, 2017 arxiv</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">AON: Towards Arbitrarily-Oriented Text Recognition
-</a>, CVPR 2018</p>
-</li>
-<li><p>(recommended by Guo)<a href="https://arxiv.org/pdf/1507.05717.pdf" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI, 2017</p>
+<li><p>projection domain shift: what is the impact on the decision values?</p>
 </li>
 </ol>
-<h2 id="End-to-end"><a href="#End-to-end" class="headerlink" title="End-to-end"></a>End-to-end</h2><p>Integrate scene text detection and recognition in an end-to-end system.</p>
-<p><strong>Paper list (in chronological order):</strong></p>
+<p><strong>Datasets:</strong></p>
 <ol>
-<li><p><a href="http://cmp.felk.cvut.cz/~matas/papers/neumann-text-accv10.pdf" target="_blank" rel="noopener">A method for text localization and recognition in real-world images</a>, ACCV 2010</p>
+<li><p>small-scale datasets:  <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" target="_blank" rel="noopener">CUB</a>, <a href="https://cvml.ist.ac.at/AwA2" target="_blank" rel="noopener">AwA</a>, <a href="http://cs.brown.edu/~gmpatter/sunattributes.html" target="_blank" rel="noopener">SUN</a>, <a href="http://vision.cs.uiuc.edu/attributes/" target="_blank" rel="noopener">aPY</a>, <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank" rel="noopener">Dogs</a>, <a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/" target="_blank" rel="noopener">FLO</a></p>
 </li>
-<li><p><a href="http://fadaei.semnan.ac.ir/uploads/MV7.pdf" target="_blank" rel="noopener">Real-Time Scene Text Localization and Recognition</a>, CVPR 2012</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Towards_End-To-End_Text_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Towards End-to-end Text Spotting with Convolutional<br>Recurrent Neural Networks</a>, ICCV 2017: designed for horizontal scene text</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busta_Deep_TextSpotter_An_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework</a>, ICCV 2017:  detect and recognize horizontal and multioriented<br>scene text</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf" target="_blank" rel="noopener">FOTS: Fast Oriented Text Spotting with a Unified Network</a>, CVPR 2018: using EAST as text detector and CRNN as text recognizer</p>
+<li><p>large-scale dataset: ImageNet</p>
 </li>
 </ol>
-<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
-<li><a href="http://mclab.eic.hust.edu.cn/icdar2017chinese/" target="_blank" rel="noopener">RCTW-17</a></li>
-<li><a href="http://rrc.cvc.uab.es/?ch=8" target="_blank" rel="noopener">MLT</a> </li>
-<li><a href="https://github.com/Yuliang-Liu/Curve-Text-Detector" target="_blank" rel="noopener">SCUT-CTW1500</a></li>
-<li><a href="https://github.com/cs-chan/Total-Text-Dataset" target="_blank" rel="noopener">Total-Text</a></li>
-<li><a href="http://rrc.cvc.uab.es/?ch=4&amp;com=introduction" target="_blank" rel="noopener">ICDAR 2015</a></li>
-<li><a href="http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500" target="_blank" rel="noopener">MSRA-TD500</a>)</li>
-<li><a href="http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html" target="_blank" rel="noopener">IIIT 5K-Word</a></li>
-<li><a href="https://vision.cornell.edu/se3/coco-text-2/" target="_blank" rel="noopener">COCO-Text</a></li>
-</ul>
-<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h2><ul>
-<li><a href="http://www.vlrlab.net/admin/uploads/avatars/FCS_TextSurvey_2015.pdf" target="_blank" rel="noopener">Scene text detection and recognition: Recent advances and future trends</a>, FCS 2015</li>
-<li><a href="https://ieeexplore.ieee.org/abstract/document/6945320" target="_blank" rel="noopener">Text detection and recognition in imagery: A survey</a>, T-PAMI 2015</li>
-</ul>
-<h2 id="Special-Sessions"><a href="#Special-Sessions" class="headerlink" title="Special Sessions"></a>Special Sessions</h2><ol>
-<li><p>Use Spatial Transformation Network (STN) <a href="https://arxiv.org/pdf/1509.05329.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1611.04298.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1707.08831.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1603.03915.pdf" target="_blank" rel="noopener">[4]</a></p>
+<p><strong>Survey and Resource:</strong></p>
+<ol>
+<li><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589" target="_blank" rel="noopener">Recent Advances in Zero-Shot Recognition</a></p>
 </li>
-<li><p>Use Deformable Convolution Network (DCN) <a href="https://arxiv.org/pdf/1805.01167" target="_blank" rel="noopener">[1]</a></p>
+<li><p><a href="https://arxiv.org/pdf/1707.00600.pdf" target="_blank" rel="noopener">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/" target="_blank" rel="noopener">[code]</a></p>
 </li>
+<li><p><a href="https://github.com/chichilicious/awesome-zero-shot-learning" target="_blank" rel="noopener">List of paper and datasets</a></p>
+</li>
+</ol>
+<p><strong>Other applications:</strong></p>
+<ol>
+<li>zero-shot object detection</li>
+<li>zero-shot figure-ground segmentation <a href="http://www.cs.umanitoba.ca/~ywang/papers/icpr16_segment.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>zero-shot semantic segmentation</li>
+<li>zero-shot retrieval</li>
+<li>zero-shot domain adaptation</li>
 </ol>
 
           
@@ -1654,7 +1761,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/others/How to Conduct Experiments/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/deep_learning/Word Vector/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1673,7 +1780,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/18/others/How to Conduct Experiments/" itemprop="url">How to Conduct Experiments</a></h1>
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Word Vector/" itemprop="url">Word Vector</a></h1>
         
 
         <div class="post-meta">
@@ -1685,8 +1792,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T10:11:04+08:00">
-                2018-11-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
+                2022-01-21
               </time>
             
 
@@ -1747,207 +1854,14 @@
       
         
           
-            <p>Experimental setting:</p>
-<ul>
-<li>Select more than 3 popular benchmark datasets. Most papers perform evaluation on 3~5 datasets.</li>
-<li>Determine the training/testing split. By default, strictly follow the setting in recent papers. If their settings are not applicable, we can determine our own setting reasonably and fully describe the details in the paper. </li>
+            <h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><p>For a brief survey summarizing <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf" target="_blank" rel="noopener">skip-gram</a>, <a href="https://arxiv.org/pdf/1301.3781.pdf?" target="_blank" rel="noopener">CBOW</a>, <a href="http://www.aclweb.org/anthology/D14-1162" target="_blank" rel="noopener">GloVe</a>, etc, please refer to <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/word_vector_survey.pdf" target="_blank" rel="noopener">this</a>.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>word2vec: <a href="https://github.com/tensorflow/models/tree/master/tutorials/embedding" target="_blank" rel="noopener">TensorFlow</a></p>
+<p>GloVe: <a href="https://github.com/stanfordnlp/GloVe" target="_blank" rel="noopener">C</a>, <a href="https://github.com/shashankg7/glove-tensorflow" target="_blank" rel="noopener">TensorFlow</a></p>
+<h2 id="WikiCorpus"><a href="#WikiCorpus" class="headerlink" title="WikiCorpus"></a>WikiCorpus</h2><p>Download the <a href="https://dumps.wikimedia.org/enwiki/" target="_blank" rel="noopener">WikiCorpus</a> and use the <a href="\code\shellscript\get-wikimedia.sh">shellscript</a> to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li>English word vectors: <a href="https://github.com/3Top/word2vec-api" target="_blank" rel="noopener">https://github.com/3Top/word2vec-api</a></li>
+<li>Non-English word vectors: <a href="https://github.com/Kyubyong/wordvectors" target="_blank" rel="noopener">https://github.com/Kyubyong/wordvectors</a></li>
 </ul>
-<p>Experimental implementation:</p>
-<ul>
-<li>For the commonly used model, avoid unnecessary reimplementation. Just use the released code and model.</li>
-<li>If closely related papers release their code, modify based on their code and avoid starting from scratch. </li>
-<li>Document your code with readable and meaningful comments. Otherwise, even your cannot understand your own code after a long time.</li>
-<li>Manage different versions of code carefully, otherwise your code will get messy very rapidly. Use advanced tool such as github to create branches, revert to old version, etc. The brutal approach is to create an individual folder for each version, which is not recommended.</li>
-</ul>
-<p>Experimental running:</p>
-<ul>
-<li>Avoid redundant or unncessary experiments.</li>
-<li>Run experiments parallelly using all available computing resources.</li>
-<li><a href="https://ustcnewly.github.io/2018/09/07/paper_note/Parameter%20Tuning/" target="_blank" rel="noopener">Tune hyper-parameters wisely</a>.</li>
-<li>Save final output and important intermediate output for future analysis.</li>
-</ul>
-<p>Experimental record:</p>
-<ul>
-<li>Make a to-do list for what experiments you are going to do.</li>
-<li>For the experiments you have done, summarize your observation and conclusion. Then, adjust the remaining to-do list accordingly. </li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/deep_learning/Adversarial Attack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/11/deep_learning/Adversarial Attack/" itemprop="url">Adversarial Attack</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-11T15:40:12+08:00">
-                2018-11-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>A comprehensive survey can be found <a href="https://arxiv.org/pdf/1801.00553.pdf" target="_blank" rel="noopener">here</a>.</p>
-<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology:"></a>Terminology:</h2><ul>
-<li><p>black-box/white-box attack: the adversarial example is generated with or without knowing the prior knowledge of the target model.</p>
-</li>
-<li><p>targeted/non-targeted attack: whether predicting a specific label for the adversarial example.</p>
-</li>
-<li><p>universal perturbation: fool a given model on any image with high probability. </p>
-</li>
-</ul>
-<h2 id="Attack"><a href="#Attack" class="headerlink" title="Attack"></a>Attack</h2><ol>
-<li><p>Backward Update</p>
-<ul>
-<li><p>add imperceptible distortion and increase the classification loss</p>
-</li>
-<li><p>universal adversarial perturbation: learn a residual perturbation that works on most clean images</p>
-</li>
-</ul>
-</li>
-<li><p>Forward Update</p>
-<ul>
-<li><p><a href="https://arxiv.org/pdf/1710.08864.pdf" target="_blank" rel="noopener">one-pixel attack</a>: use differential evolution algorithm</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1703.09387.pdf" target="_blank" rel="noopener">Adversarial Transformation Networks</a>: learn a network to translate clean image to adversarial example.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Defense"><a href="#Defense" class="headerlink" title="Defense"></a>Defense</h2><ol>
-<li><p>Use modified training samples during training or modified test samples during testing</p>
-</li>
-<li><p>Modify network: model parameters regularization, add a layer/module</p>
-</li>
-<li><p>Adversarial example detector: classify an example as adversarial or clean based on certain statistics</p>
-</li>
-</ol>
-<h2 id="New-perspective"><a href="#New-perspective" class="headerlink" title="New perspective"></a>New perspective</h2><p><a href="https://arxiv.org/pdf/1905.02175" target="_blank" rel="noopener">Adversarial examples are not bugs, they are features.</a></p>
 
           
         
@@ -2037,7 +1951,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">205</span>
+                  <span class="site-state-item-count">206</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2059,7 +1973,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-count">103</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
