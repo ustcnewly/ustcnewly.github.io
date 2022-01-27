@@ -281,6 +281,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/programming_language/cross-language/Call C in Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/programming_language/cross-language/Call C in Python/" itemprop="url">Call C in Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/cross-language/" itemprop="url" rel="index">
+                    <span itemprop="name">cross-language</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>C:</strong> build a library<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c -fPIC libtest.c</span><br><span class="line">gcc -shared libtest.o -o libtest.so</span><br></pre></td></tr></table></figure></p>
+<p><strong>Python:</strong> load the library<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</span><br><span class="line">libtest = cdll.LoadLibrary(libtest.so<span class="string">')</span></span><br><span class="line"><span class="string">print libtest.func(arg_list)</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="\code\call_C_in_Python\Makefile">Makefile sample</a> and <a href="\code\call_C_in_Python\sample.py">python sample code</a></p>
+<h3 id="c-void-p"><a href="#c-void-p" class="headerlink" title="c_void_p"></a>c_void_p</h3><p>For the types without need to know the detailed layout, we can just use <code>c_void_p</code>, especially when we cannot find the strictly matched self-defined type such as <code>LP_cfloat_1024</code>.</p>
+<h3 id="pointer-POINTER-byref"><a href="#pointer-POINTER-byref" class="headerlink" title="pointer, POINTER, byref"></a>pointer, POINTER, byref</h3><p>POINTER is used for defining type.</p>
+<p>pointer and byref function similarly. However, pointer does a lot more work since it constructs a real pointer object, so it is faster to use byref if you don’t need the pointer object in Python itself.</p>
+<h3 id="memory-issue"><a href="#memory-issue" class="headerlink" title="memory issue:"></a>memory issue:</h3><p>write free function in C code<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">freeme</span><span class="params">(<span class="keyword">char</span> *ptr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"freeing address: %p\n"</span>, ptr);</span><br><span class="line">    <span class="built_in">free</span>(ptr);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>call free function in Python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lib = cdll.LoadLibrary(<span class="string">'./string.so'</span>)</span><br><span class="line">lib.freeme.argtypes = c_void_p,</span><br><span class="line">lib.freeme.restype = <span class="keyword">None</span></span><br><span class="line">lib.freeme(ptr)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/programming_language/Caffe/Caffe/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1954,174 +2114,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/others/Reasons to Reject a Paper/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/others/Reasons to Reject a Paper/" itemprop="url">Reasons to Reject a Paper</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Strong reasons:</strong> </p>
-<ol>
-<li>Promise more than delivered (this is the first work….).</li>
-<li>Miss important references (closely related).</li>
-<li>Results are too incremental or too unconvincing, or lower than state-of-the-art.</li>
-<li>Poorly written or oraganized.</li>
-<li>Incorrect statements or statements without support.</li>
-<li>Lack of component analysis for important components.</li>
-</ol>
-<p><strong>Weak reasons:</strong></p>
-<ol>
-<li>Novelty is minor or incremental. Just an extension of A, or similar to A, or combination of A and B.</li>
-<li>Motivation is unclear or arguable.</li>
-<li>No theoretical guarantee of the effectiveness.</li>
-<li>No technical contribution: too few math formulations or the proposed method is too straightforward.</li>
-<li>Formulations are too dense and hard to follow.</li>
-<li>Paper writing has some flaws (e.g., ambiguity, redundancy, a few typos or grammar mistakes).</li>
-<li>Improvement is not very significant.</li>
-<li>Lack of component analysis for less important components.</li>
-<li>Lack of qualitative analysis.</li>
-<li>Unfair or insufficient comparison with state-of-the-art. Miss some baselines. Sometimes we need to create baselines if necessary.</li>
-<li>Hyper-parameter analysis: too many hyper-parameters, unclear how to set hyper-parameter, sensitivity to hyper-parameters. </li>
-<li>No significant test.</li>
-<li>Miss some details (e.g., technical details or experimental details), not self-contained. </li>
-<li>Miss less important references.</li>
-<li>Miss analyses on time/memory/model complexity</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2176,7 +2168,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">207</span>
+                  <span class="site-state-item-count">208</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Few-Shot Object Detection</title>
+    <url>/2022/01/27/deep_learning/Few-Shot%20Object%20Detection/</url>
+    <content><![CDATA[<ul>
+<li><p>Feature generation for novel categories: <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_Hallucination_Improves_Few-Shot_Object_Detection_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9354609&amp;tag=1" target="_blank" rel="noopener">[3]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Universal-Prototype_Enhancing_for_Few-Shot_Object_Detection_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[4]</a> </p>
+</li>
+<li><p>Model emsembling: <a href="https://arxiv.org/pdf/2011.10142.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Weilin, and Yu-Xiong Wang. “Hallucination Improves Few-Shot Object Detection.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.</p>
+<p>[2] Zhang, Weilin, Yu-Xiong Wang, and David A. Forsyth. “Cooperating RPN’s Improve Few-Shot Object Detection.” arXiv preprint arXiv:2011.10142 (2020).</p>
+<p>[3] Xu, Honghui, et al. “Few-Shot Object Detection via Sample Processing.” IEEE Access 9 (2021): 29207-29221.</p>
+<p>[4] Wu, Aming, et al. “Universal-prototype enhancing for few-shot object detection.” Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>object detection</tag>
+        <tag>few-shot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mask-aided Object Detection</title>
     <url>/2022/01/24/deep_learning/Mask-aided%20Object%20Detection/</url>
     <content><![CDATA[<h3 id="Help-generate-proposal"><a href="#Help-generate-proposal" class="headerlink" title="Help generate proposal:"></a>Help generate proposal:</h3><ol>
@@ -3802,12 +3824,23 @@ spyder
 <li><a href="https://arxiv.org/pdf/1805.06157.pdf" target="_blank" rel="noopener">[5]</a>: output both classification scores and semantic embeddings</li>
 </ul>
 </li>
+<li><p>Feature generation</p>
+</li>
+<li><ul>
+<li><p><a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Hayat_Synthesizing_the_Unseen_for_Zero-shot_Object_Detection_ACCV_2020_paper.pdf" target="_blank" rel="noopener">[6]</a>: synthesize<br>visual features for unseen classes</p>
+</li>
+<li><p><a href="https://ieeexplore.ieee.org/document/9153181" target="_blank" rel="noopener">[7]</a>: semantics-preserving graph propagation modules that enhance both category and region representations</p>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ankan Bansal, Karan Sikka, Gaurav Sharma, Rama Chellappa, Ajay Divakaran, “Zero-Shot Object Detection”, ECCV, 2018.</p>
 <p>[2] Pengkai Zhu, Hanxiao Wang, and Venkatesh Saligrama, “Zero Shot Detection”, T-CSVT, 2019.</p>
 <p>[3] Rahman, Shafin, Salman Khan, and Fatih Porikli. “Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts.” arXiv preprint arXiv:1803.06049 (2018).</p>
 <p>[4] Rahman, Shafin, Salman Khan, and Nick Barnes. “Polarity Loss for Zero-shot Object Detection.” arXiv preprint arXiv:1811.08982 (2018).</p>
 <p>[5] Demirel, Berkan, Ramazan Gokberk Cinbis, and Nazli Ikizler-Cinbis. “Zero-Shot Object Detection by Hybrid Region Embedding.” arXiv preprint arXiv:1805.06157 (2018).</p>
+<p>[6] Hayat, Nasir, et al. “Synthesizing the unseen for zero-shot object detection.” Proceedings of the Asian Conference on Computer Vision. 2020.</p>
+<p>[7] Yan, Caixia, et al. “Semantics-preserving graph propagation for zero-shot object detection.” IEEE Transactions on Image Processing 29 (2020): 8163-8176.</p>
 ]]></content>
       <categories>
         <category>paper note</category>

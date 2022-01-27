@@ -281,6 +281,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/operation_system/Ubuntu/Ubuntu Environment Variable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/operation_system/Ubuntu/Ubuntu Environment Variable/" itemprop="url">Ubuntu Environment Variable</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>For user-wide: ~/.profile or ~/.bashrc<br>For system-wide: /etc/profile</p>
+<p><code>source ~/.bashrc</code> or <code>source /etc/profile</code> can make the newly added (not the removed) environment variables for the current cmd window available immediately. However, you need to re-login to make them user-wide or system-wide.</p>
+<p>Note that after you <code>sudo su</code> (not using sudo privilege), the environment variables will be lost. You need to re-login. Because <code>sudo su</code> will erase newly exported variables.</p>
+<p>For permanent system-wide change even after <code>sudo su</code>, you should modify /etc/environment, which is not recommended. Because /etc/environment cannot recognize intermediate variable such as $JAVA_HOME. Sometimes misusing /etc/environment may result in your failure in login.</p>
+<p>Not recommend running <code>sudo su</code> and then modifying ~/.profile or ~/.bashrc.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/operation_system/Ubuntu/Ubuntu Crontab/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1660,164 +1806,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/21/network/Remote Desktop Connection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/network/Remote Desktop Connection/" itemprop="url">Remote Desktop Connection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Remote-Connect-to-Ubuntu-in-Windows"><a href="#Remote-Connect-to-Ubuntu-in-Windows" class="headerlink" title="Remote Connect to Ubuntu in Windows"></a>Remote Connect to Ubuntu in Windows</h3><hr>
-<p><strong>a) cmdline:</strong> putty, secureCRT</p>
-<p><strong>b) window:</strong></p>
-<p>xrdp: <a href="http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp</span><br><span class="line">sudo apt-get install vnc4server</span><br><span class="line">sudo apt-get install xubuntu-desktop</span><br><span class="line">echo "xfce4-session" &gt;~/.xsession</span><br><span class="line">sudo service xrdp restart</span><br></pre></td></tr></table></figure></p>
-<p>xrdp mm process login response login failed<br>When this error occurs, try the following methods, followed by “sudo service xrdp restart”.</p>
-<ol>
-<li><p>delete vnc processes</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep vnc</span><br><span class="line">kill -9 XXX</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>delete X sessions, .xrdp, .X11-unix, .X0-20</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp &amp;&amp; ls -a</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>modify “MaxSessions” number</p>
-<pre><code class="lang-shell"> sudo vim /etc/xrdp/sesman.ini
-</code></pre>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1872,7 +1860,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">207</span>
+                  <span class="site-state-item-count">208</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
