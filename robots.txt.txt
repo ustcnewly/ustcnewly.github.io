@@ -1,0 +1,6 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://ustcnewly.github.io/sitemap.xml
+Sitemap: https://ustcnewly.github.io/baidusitemap.xml
