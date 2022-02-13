@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Color%20Mapping/</loc>
+    <lastmod>2022-02-13</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/</loc>
+    <lastmod>2022-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/01/21/machine_learning/Transformer/</loc>
+    <lastmod>2022-02-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Weakly-supervised%20Classification/</loc>
+    <lastmod>2022-02-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/01/24/deep_learning/Mask-aided%20Object%20Detection/</loc>
+    <lastmod>2022-01-31</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Zero-Shot%20Object%20Detection/</loc>
     <lastmod>2022-01-27</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/27/deep_learning/Few-Shot%20Object%20Detection/</loc>
     <lastmod>2022-01-27</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/24/deep_learning/Mask-aided%20Object%20Detection/</loc>
-    <lastmod>2022-01-24</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/color/white_balance/</loc>
@@ -33,19 +49,11 @@
     <lastmod>2021-12-27</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Color%20Mapping/</loc>
-    <lastmod>2021-12-26</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Generative%20Model/</loc>
     <lastmod>2021-12-24</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/machine_learning/Distillation/</loc>
-    <lastmod>2021-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/</loc>
     <lastmod>2021-12-19</lastmod>
   </url>
   <url>
@@ -91,10 +99,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Image%20Matting/</loc>
     <lastmod>2021-09-17</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/machine_learning/Transformer/</loc>
-    <lastmod>2021-09-15</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Layout%20Generation/</loc>
@@ -223,10 +227,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Image%20Composition/</loc>
     <lastmod>2020-11-15</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Weakly-supervised%20Classification/</loc>
-    <lastmod>2020-11-13</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Non-local%20Network/</loc>

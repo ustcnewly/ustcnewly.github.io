@@ -374,23 +374,22 @@
       
         
           
-            <ul>
-<li><p>Conditioned on color values, location, semantic information, or other guidance. learn color transformation (explicit function or look-up table). HDRNet <a href="https://dl.acm.org/doi/pdf/10.1145/3072959.3073592" target="_blank" rel="noopener">[1]</a>, 3D LUT <a href="https://arxiv.org/pdf/2009.14468" target="_blank" rel="noopener">[2]</a> </p>
+            <h3 id="Transfer-strategy"><a href="#Transfer-strategy" class="headerlink" title="Transfer strategy"></a>Transfer strategy</h3><ul>
+<li><p>Feature transfer: AdaIN <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>, WCT <a href="https://arxiv.org/pdf/1705.08086.pdf" target="_blank" rel="noopener">[2]</a>, SANet <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_Arbitrary_Style_Transfer_With_Style-Attentional_Networks_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a>. </p>
 </li>
-<li><p>Fusion: AdaIN, WCT, SAnet</p>
+<li><p><a href="https://ustcnewly.github.io/2022/01/21/deep_learning/Color%20Mapping/">Color transfer</a>: Learn color transformation (explicit function or implicit function (e.g., look-up table) conditioned on color values, location, semantic information, or other guidance. </p>
 </li>
-<li><p>Losses: </p>
-<ul>
+</ul>
+<h3 id="Losses"><a href="#Losses" class="headerlink" title="Losses:"></a>Losses:</h3><ul>
 <li>paired supervision: L2 loss</li>
 <li>unpaired supervision: adversarial loss</li>
 <li>smooth loss: variation loss, Poisson loss</li>
 <li>content loss: perception loss</li>
 <li>style loss: style loss, AdaIn loss</li>
 </ul>
-</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Gharbi, Michaël, et al. “Deep bilateral learning for real-time image enhancement.” ACM Transactions on Graphics (TOG) 36.4 (2017): 1-12.</p>
-<p>[2] Zeng, Hui, et al. “Learning image-adaptive 3D lookup tables for high performance photo enhancement in real-time.” IEEE Transactions on Pattern Analysis and Machine Intelligence (2020).</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Huang, Xun, and Serge Belongie. “Arbitrary style transfer in real-time with adaptive instance normalization.” ICCV, 2017.</p>
+<p>[2] Li, Yijun, et al. “Universal style transfer via feature transforms.” NeurIPS, 2017.</p>
+<p>[3] Park, Dae Young, and Kwang Hee Lee. “Arbitrary style transfer with style-attentional networks.” CVPR, 2019.</p>
 
           
         
