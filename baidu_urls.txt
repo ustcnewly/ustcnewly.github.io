@@ -1,3 +1,4 @@
+https://ustcnewly.github.io/2022/02/14/deep_learning/MLP/
 https://ustcnewly.github.io/2022/01/27/deep_learning/Few-Shot Object Detection/
 https://ustcnewly.github.io/2022/01/24/deep_learning/Mask-aided Object Detection/
 https://ustcnewly.github.io/2022/01/21/software/VirtualBox/Install VirtualBox Guest Addition/
@@ -7,4 +8,3 @@ https://ustcnewly.github.io/2022/01/21/software/library/Ubuntu JDK/
 https://ustcnewly.github.io/2022/01/21/software/library/OpenCV/
 https://ustcnewly.github.io/2022/01/21/software/library/GStreamer+FFmpeg for Ubuntu14.04/
 https://ustcnewly.github.io/2022/01/21/software/IDE/Remote Debugging for Eclipse+PyDev/
-https://ustcnewly.github.io/2022/01/21/software/IDE/Install JDK and Eclipse/

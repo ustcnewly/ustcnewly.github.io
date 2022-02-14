@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MLP</title>
+    <url>/2022/02/14/deep_learning/MLP/</url>
+    <content><![CDATA[<ul>
+<li>classification <a href="https://proceedings.neurips.cc/paper/2021/file/cba0a4ee5ccd02fda0fe3f9a3e7b89fe-Paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2105.02723.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>detection, segmentation <a href="https://arxiv.org/pdf/2107.08391.pdf" target="_blank" rel="noopener">[3]</a></li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Tolstikhin, Ilya O., et al. “Mlp-mixer: An all-mlp architecture for vision.” Advances in Neural Information Processing Systems 34 (2021).</p>
+<p>[2] Melas-Kyriazi, Luke. “Do you even need attention? a stack of feed-forward layers does surprisingly well on imagenet.” arXiv preprint arXiv:2105.02723 (2021).</p>
+<p>[3] Lian, Dongze, et al. “As-mlp: An axial shifted mlp architecture for vision.” arXiv preprint arXiv:2107.08391 (2021).</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Few-Shot Object Detection</title>
     <url>/2022/01/27/deep_learning/Few-Shot%20Object%20Detection/</url>
     <content><![CDATA[<ul>
@@ -2830,7 +2845,7 @@ spyder
   </entry>
   <entry>
     <title>Transformer</title>
-    <url>/2022/01/21/machine_learning/Transformer/</url>
+    <url>/2022/01/21/deep_learning/Transformer/</url>
     <content><![CDATA[<p>Transformer <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf" target="_blank" rel="noopener">[1]</a> is multi-head self-attention, which can be used for sequence-to-sequence or sequence-to-label applications.</p>
 <h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h3><ul>
 <li>classification: ViT<a href="https://arxiv.org/pdf/2010.11929.pdf" target="_blank" rel="noopener">[2]</a> RVT <a href="https://arxiv.org/pdf/2105.07926.pdf" target="_blank" rel="noopener">[12]</a></li>
@@ -4318,12 +4333,12 @@ spyder
     <title>VAE</title>
     <url>/2022/01/21/deep_learning/VAE/</url>
     <content><![CDATA[<h2 id="Advanced-VAE"><a href="#Advanced-VAE" class="headerlink" title="Advanced VAE"></a>Advanced VAE</h2><ol>
-<li><p>VQVAE <a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">[1]</a>,VQVAE2 <a href="https://proceedings.neurips.cc/paper/2019/file/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Paper.pdf" target="_blank" rel="noopener">[2]</a>. Accelerate auto-regression: <a href="https://arxiv.org/pdf/2111.12701.pdf" target="_blank" rel="noopener">[4]</a></p>
+<li><p>VQVAE <a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">[1]</a>,VQVAE2 <a href="https://proceedings.neurips.cc/paper/2019/file/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Paper.pdf" target="_blank" rel="noopener">[2]</a>. Accelerate auto-regression: <a href="https://arxiv.org/pdf/2111.12701.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2202.04200.pdf" target="_blank" rel="noopener">[5]</a></p>
 </li>
 <li><p>NVAE <a href="https://arxiv.org/pdf/2007.03898.pdf" target="_blank" rel="noopener">[3]</a> </p>
 </li>
 </ol>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Oord, Aaron van den, Oriol Vinyals, and Koray Kavukcuoglu. “Neural discrete representation learning.” arXiv preprint arXiv:1711.00937 (2017).<br>[2] Razavi, Ali, Aaron van den Oord, and Oriol Vinyals. “Generating diverse high-fidelity images with vq-vae-2.” Advances in neural information processing systems. 2019.<br>[3] Vahdat, Arash, and Jan Kautz. “Nvae: A deep hierarchical variational autoencoder.” arXiv preprint arXiv:2007.03898 (2020).<br>[4] Bond-Taylor, Sam, et al. “Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes.” arXiv preprint arXiv:2111.12701 (2021).</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Oord, Aaron van den, Oriol Vinyals, and Koray Kavukcuoglu. “Neural discrete representation learning.” arXiv preprint arXiv:1711.00937 (2017).<br>[2] Razavi, Ali, Aaron van den Oord, and Oriol Vinyals. “Generating diverse high-fidelity images with vq-vae-2.” Advances in neural information processing systems. 2019.<br>[3] Vahdat, Arash, and Jan Kautz. “Nvae: A deep hierarchical variational autoencoder.” arXiv preprint arXiv:2007.03898 (2020).<br>[4] Bond-Taylor, Sam, et al. “Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes.” arXiv preprint arXiv:2111.12701 (2021).<br>[5] Huiwen Chang, Han Zhang, Lu Jiang, Ce Liu, William T. Freeman, “MaskGIT: Masked Generative Image Transformer”, arXiv preprint arXiv:2202.04200.</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -6690,14 +6705,15 @@ spyder
   <entry>
     <title>Color Mapping</title>
     <url>/2022/01/21/deep_learning/Color%20Mapping/</url>
-    <content><![CDATA[<h3 id="Global-color-mapping"><a href="#Global-color-mapping" class="headerlink" title="Global color mapping:"></a>Global color mapping:</h3><ul>
-<li>3D LUT: <a href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf" target="_blank" rel="noopener">https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf</a></li>
-<li>Color curve: <a href="https://arxiv.org/pdf/2109.05750.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/2109.05750.pdf</a></li>
+    <content><![CDATA[<h4 id="Global-color-mapping"><a href="#Global-color-mapping" class="headerlink" title="Global color mapping:"></a>Global color mapping:</h4><ul>
+<li>3D LUT: <a href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>curve function: <a href="https://arxiv.org/pdf/2109.05750.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>linear transformation: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
-<h3 id="Local-color-mapping"><a href="#Local-color-mapping" class="headerlink" title="Local color mapping:"></a>Local color mapping:</h3><ul>
-<li>Spatial-aware 3D LUT: <a href="https://arxiv.org/pdf/2108.08697.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/2108.08697.pdf</a></li>
-<li>Color curve: <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Song_StarEnhancer_Learning_Real-Time_and_Style-Aware_Image_Enhancement_ICCV_2021_paper.pdf" target="_blank" rel="noopener">https://openaccess.thecvf.com/content/ICCV2021/papers/Song_StarEnhancer_Learning_Real-Time_and_Style-Aware_Image_Enhancement_ICCV_2021_paper.pdf</a></li>
-<li>DCE: <a href="https://arxiv.org/pdf/2001.06826.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/2001.06826.pdf</a></li>
+<h4 id="Local-color-mapping"><a href="#Local-color-mapping" class="headerlink" title="Local color mapping:"></a>Local color mapping:</h4><ul>
+<li>3D LUT: <a href="https://arxiv.org/pdf/2108.08697.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>curve function: <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Song_StarEnhancer_Learning_Real-Time_and_Style-Aware_Image_Enhancement_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[1]</a>,<br>DCE<a href="https://arxiv.org/pdf/2001.06826.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>linear transformation: HDRNet<a href="https://arxiv.org/pdf/1707.02880" target="_blank" rel="noopener">[1]</a></li>
 </ul>
 ]]></content>
       <categories>
