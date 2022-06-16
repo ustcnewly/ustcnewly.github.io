@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Weakly-supervised Segmentation/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Video Instance Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Weakly-supervised Segmentation/" itemprop="url">Weakly-supervised Segmentation</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Video Instance Segmentation/" itemprop="url">Video Instance Segmentation</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -375,34 +375,16 @@
         
           
             <ul>
-<li><p>Using web data for semantic segmentation:</p>
-<ul>
-<li><p><a href="http://zpascal.net/cvpr2017/Jin_Webly_Supervised_Semantic_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: crawl web images with white background and generate composite images to initialize segmentation network</p>
+<li><p>Track-by-Detect: MaskTrack R-CNN <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Yang_Video_Instance_Segmentation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Bootstrapping_the_Performance_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a>: train a segmentation network using web data to obtain rough segmentation mask</p>
+<li><p>Clip-Match: Vistr <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_End-to-End_Video_Instance_Segmentation_With_Transformers_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
 </li>
-</ul>
-</li>
-<li><p>image-level semantic/instance segmentation: <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Learning_Instance_Activation_Maps_for_Weakly_Supervised_Instance_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[9]</a> <a href="https://arxiv.org/pdf/2002.08098.pdf" target="_blank" rel="noopener">[10]</a> <a href="https://arxiv.org/pdf/2101.11253.pdf" target="_blank" rel="noopener">[11]</a></p>
-</li>
-<li><p>box-level semantic/instance segmentation: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Dai_BoxSup_Exploiting_Bounding_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Khoreva_Simple_Does_It_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Ahn_Weakly_Supervised_Learning_of_Instance_Segmentation_With_Inter-Pixel_Relations_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://papers.nips.cc/paper/8885-weakly-supervised-instance-segmentation-using-the-bounding-box-tightness-prior.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>scribble-level semantic segmentaiton: <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Lin_ScribbleSup_Scribble-Supervised_Convolutional_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[7]</a></p>
-</li>
-<li><p>point-level semantic segmentation: <a href="https://arxiv.org/pdf/1506.02106.pdf" target="_blank" rel="noopener">[8]</a></p>
+<li><p>Propose-Reduce: <a href="https://arxiv.org/pdf/2103.13746.pdf" target="_blank" rel="noopener">[3]</a></p>
 </li>
 </ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bin Jin, Maria V. Ortiz Segovia, Sabine Süsstrunk:<br>Webly Supervised Semantic Segmentation. CVPR 2017.</p>
-<p>[2] Tong Shen, Guosheng Lin, Chunhua Shen, Ian D. Reid:<br>Bootstrapping the Performance of Webly Supervised Semantic Segmentation. CVPR 2018.</p>
-<p>[3] Dai, Jifeng, Kaiming He, and Jian Sun. “Boxsup: Exploiting bounding boxes to supervise convolutional networks for semantic segmentation.” ICCV, 2015.</p>
-<p>[4] Khoreva, Anna, et al. “Simple does it: Weakly supervised instance and semantic segmentation.” CVPR, 2017.</p>
-<p>[5] Ahn, Jiwoon, Sunghyun Cho, and Suha Kwak. “Weakly Supervised Learning of Instance Segmentation with Inter-pixel Relations.” CVPR, 2019.</p>
-<p>[6] Hsu, Cheng-Chun, et al. “Weakly Supervised Instance Segmentation using the Bounding Box Tightness Prior.” NeurIPS. 2019.</p>
-<p>[7] Lin, Di, et al. “Scribblesup: Scribble-supervised convolutional networks for semantic segmentation.” CVPR, 2016.</p>
-<p>[8] Bearman, Amy, et al. “What’s the point: Semantic segmentation with point supervision.” ECCV, 2016.</p>
-<p>[9] Zhu, Yi, et al. “Learning instance activation maps for weakly supervised instance segmentation.” CVPR, 2019.</p>
-<p>[10] Wang, Xiang, et al. “Weakly-Supervised Semantic Segmentation by Iterative Affinity Learning.” International Journal of Computer Vision (2020): 1-14.</p>
-<p>[11] Jo, Sanhyun, and In-Jae Yu. “Puzzle-CAM: Improved localization via matching partial and full features.” arXiv preprint arXiv:2101.11253 (2021).</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Yang, Linjie, Yuchen Fan, and Ning Xu. “Video instance segmentation.” ICCV, 2019.</p>
+<p>[2] Wang, Yuqing, et al. “End-to-end video instance segmentation with transformers.” CVPR, 2021.</p>
+<p>[3] Lin, Huaijia, et al. “Video instance segmentation with a propose-reduce paradigm.” ICCV, 2021.</p>
 
           
         
@@ -451,7 +433,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Weakly-supervised Object Detection/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Video Harmonization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -470,7 +452,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Weakly-supervised Object Detection/" itemprop="url">Weakly-supervised Object Detection</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Video Harmonization/" itemprop="url">Video Harmonization</a></h1>
         
 
         <div class="post-meta">
@@ -482,8 +464,151 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>First deep learning approach for video harmonization <a href="https://arxiv.org/pdf/1809.01372.pdf" target="_blank" rel="noopener">[1]</a></p>
+<p>[1] Haozhi Huang, Senzhe Xu, Junxiong Cai, Wei Liu, Shimin Hu, “Temporally Coherent Video Harmonization Using<br>Adversarial Networks”, arxiv, 2018.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Variants of Convolution in Deep Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Variants of Convolution in Deep Learning/" itemprop="url">Variants of Convolution in Deep Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -545,13 +670,21 @@
         
           
             <ol>
-<li><p>webly supervised object detection <a href="https://arxiv.org/pdf/1707.08721.pdf" target="_blank" rel="noopener">[1]</a></p>
+<li><p>Depthwise convolution: do not sum over all the channels. So when the number of input channels is $n_{in}$ and  the number of filters is $n_{filter}$, the number of output channels is $n_{in}\times n_{filter}$.</p>
 </li>
-<li><p>use a few bounding box annotations and a large number of image label annotations <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Ramanathan_DLWL_Improving_Detection_for_Lowshot_Classes_With_Weakly_Labelled_Data_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+<li><p>Pointwise convolution: pointwise fully connected across all the channels.</p>
+</li>
+<li><p>Group convolution: divide channels into several groups and perform pointwise convolution within each group. Note that Pointwise convolution is the special case of group convolution when there is only one group. Group convolution is used in <a href="https://arxiv.org/pdf/1707.01083.pdf" target="_blank" rel="noopener">ShuffleNet</a>.</p>
+</li>
+<li><p>Depthwise separable convolution = depthwise convolution + pointwise convolution</p>
+</li>
+<li><p>Dilation convolution or atrous convolution: increase the receptive field without increasing the number of parameters, typically used for <a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank" rel="noopener">segmentation</a>. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.06211.pdf" target="_blank" rel="noopener">Deformable convolution</a> (left) and <a href="https://arxiv.org/pdf/1506.02025.pdf" target="_blank" rel="noopener">spatial transformation network</a> (right): these two methods both belong to irregular convolution and tweak the coordinates on the input feature map. Deformable convolution learn sthe offset while spatial transformation network learns the affine transformation.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/ht5DXxp.jpg" width="100%" height="100%"></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1709.01507.pdf" target="_blank" rel="noopener">Squeeze-and-Excitation</a>: learn different weights for each channel.<br> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/CMk5i17.jpg" width="80%" height="80%"></p>
 </li>
 </ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Exploiting Web Images for Weakly Supervised Object Detection. IEEE Trans. Multimedia 21(5): 1135-1146 (2019)</p>
-<p>[2] DLWL: Improving Detection for Lowshot classes with Weakly Labelled data, Vignesh Ramanathan, Rui Wang, Dhruv Mahajan, CVPR2020</p>
 
           
         
@@ -600,7 +733,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Weakly-supervised Localization/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/VAE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -619,7 +752,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Weakly-supervised Localization/" itemprop="url">Weakly-supervised Localization</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/VAE/" itemprop="url">VAE</a></h1>
         
 
         <div class="post-meta">
@@ -631,8 +764,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -693,12 +826,13 @@
       
         
           
-            <p>Closely related to <a href="https://ustcnewly.github.io/2019/09/26/deep_learning/Weakly-supervised%20Segmentation/" target="_blank" rel="noopener">weakly-supervised segmentation</a>.</p>
-<ul>
-<li>attention based: <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Adversarial_Complementary_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaolin_Zhang_Self-produced_Guidance_for_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Xiaolin, et al. “Adversarial complementary learning for weakly supervised object localization.” CVPR, 2018.</p>
-<p>[2] Zhang, Xiaolin, et al. “Self-produced guidance for weakly-supervised object localization.” ECCV, 2018.</p>
+            <h2 id="Advanced-VAE"><a href="#Advanced-VAE" class="headerlink" title="Advanced VAE"></a>Advanced VAE</h2><ol>
+<li><p>VQVAE <a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">[1]</a>,VQVAE2 <a href="https://proceedings.neurips.cc/paper/2019/file/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Paper.pdf" target="_blank" rel="noopener">[2]</a>. Accelerate auto-regression: <a href="https://arxiv.org/pdf/2111.12701.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2202.04200.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+<li><p>NVAE <a href="https://arxiv.org/pdf/2007.03898.pdf" target="_blank" rel="noopener">[3]</a> </p>
+</li>
+</ol>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Oord, Aaron van den, Oriol Vinyals, and Koray Kavukcuoglu. “Neural discrete representation learning.” arXiv preprint arXiv:1711.00937 (2017).<br>[2] Razavi, Ali, Aaron van den Oord, and Oriol Vinyals. “Generating diverse high-fidelity images with vq-vae-2.” Advances in neural information processing systems. 2019.<br>[3] Vahdat, Arash, and Jan Kautz. “Nvae: A deep hierarchical variational autoencoder.” arXiv preprint arXiv:2007.03898 (2020).<br>[4] Bond-Taylor, Sam, et al. “Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes.” arXiv preprint arXiv:2111.12701 (2021).<br>[5] Huiwen Chang, Han Zhang, Lu Jiang, Ce Liu, William T. Freeman, “MaskGIT: Masked Generative Image Transformer”, arXiv preprint arXiv:2202.04200.</p>
 
           
         
@@ -747,7 +881,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Weakly-supervised Classification/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Upsampling Layer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -766,7 +900,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Weakly-supervised Classification/" itemprop="url">Weakly-supervised Classification</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Upsampling Layer/" itemprop="url">Deconvolution Layer</a></h1>
         
 
         <div class="post-meta">
@@ -778,8 +912,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -840,75 +974,166 @@
       
         
           
-            <p><strong>Two problems:</strong></p>
-<ul>
-<li><u>Label noise</u>: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category).</li>
-<li><u>Domain shift</u>: domain distribution mismatch between web data and consumer data.</li>
-</ul>
-<p><strong>Solutions:</strong></p>
+            <ol>
+<li><p>unpooling</p>
+<p> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/Ot61UEE.jpg" widt="80%" width="50%"></p>
+</li>
+<li><p>transpose convolution (learnable upsampling)</p>
+<p> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/h7GQbIH.jpg" widt="90%" width="50%"></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Tricky Back Propagation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Tricky Back Propagation/" itemprop="url">Tricky Back Propagation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Some operations are indifferentiable, which causes difficulties for back propagation.</p>
 <ol>
-<li><p>label flip layer: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Chen_Webly_Supervised_Learning_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
+<li><p>sample from distribution: reparameterization trick<br><a href="https://arxiv.org/pdf/1312.6114.pdf" target="_blank" rel="noopener">Auto-Encoding Variational Bayes</a> </p>
 </li>
-<li><p>multi-instance learning: <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhuang_Attend_in_Groups_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> (pixel-level attention) <a href="https://jiajunwu.com/papers/dmil_cvpr.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/1802.04712.pdf" target="_blank" rel="noopener">[6]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_MetaCleaner_Learning_to_Hallucinate_Clean_Representations_for_Noisy-Labeled_Visual_Recognition_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[19]</a>(image-level attention)</p>
+<li><p>argmax: soft argmax<br><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.4107&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Gradient Descent Optimization of Smoothed Information Retrieval Metrics</a> </p>
 </li>
-<li><p>reweight training samples: <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1411.7718.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
+<li><p>crop: two-dimension boxcar function<br><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Look_Closer_to_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-grained Image Recognition</a> </p>
 </li>
-<li><p>curriculumn learning: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[10]</a> <a href="https://arxiv.org/pdf/1712.05055.pdf" target="_blank" rel="noopener">[11]</a></p>
-</li>
-<li><p>bootstrapping: <a href="https://arxiv.org/pdf/1412.6596.pdf" target="_blank" rel="noopener">[12]</a></p>
-</li>
-<li><p>negative learning: <a href="https://arxiv.org/pdf/1908.07387.pdf" target="_blank" rel="noopener">[18]</a></p>
-</li>
-<li><p>Cyclical Training: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[20]</a></p>
+<li><p>delta function: lookup table+blur kernel<br><a href="https://arxiv.org/pdf/1801.05117.pdf" target="_blank" rel="noopener">Reblur2Deblur: Deblurring Videos via Self-Supervised Learning</a> </p>
 </li>
 </ol>
-<p><strong>Use auxiliary clean data</strong>:</p>
-<ol>
-<li><p>active learning (select training samples to annotate): <a href="https://arxiv.org/pdf/1511.06789.pdf" target="_blank" rel="noopener">[13]</a> </p>
-</li>
-<li><p>reinforcement learning (learn labeling policies): <a href="https://arxiv.org/pdf/1706.02884.pdf" target="_blank" rel="noopener">[14]</a></p>
-</li>
-<li><p>analogous to semi-supervised learning </p>
-<ul>
-<li>partial data with both noisy labels and clean labels as well as partial data with only noisy labels <a href="https://vision.cornell.edu/se3/wp-content/uploads/2017/04/DeepLabelCleaning_CVPR.pdf" target="_blank" rel="noopener">[15]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">[3]</a>  <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3435.pdf" target="_blank" rel="noopener">[7]</a></li>
-<li>partial data with noisy labels and partial data with clean labels <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7778168" target="_blank" rel="noopener">[16]</a> <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">[17]</a></li>
-</ul>
-</li>
-</ol>
-<p><strong>Datasets:</strong></p>
-<p>There are two types of label noise: synthetic label noise and web label noise.</p>
-<ul>
-<li><p>large-scale web datasets: <a href="https://www.vision.ee.ethz.ch/webvision/" target="_blank" rel="noopener">webvision v1</a>, <a href="https://data.vision.ee.ethz.ch/cvl/webvision/" target="_blank" rel="noopener">webvision v2</a></p>
-</li>
-<li><p>fine-grained web datasets: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">clothing</a>, <a href="https://bitbucket.org/jingruixiaozhuang/attend-in-groups-a-weakly-supervised-deep-learning-framework/src/master/" target="_blank" rel="noopener">car</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">Stanford Dogs</a>, <a href="https://kuanghuei.github.io/Food-101N/" target="_blank" rel="noopener">Food101N</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">MIT indoor67</a>, <a href="https://github.com/sxzrt/learning-from-web-data" target="_blank" rel="noopener">skin disease-198</a></p>
-</li>
-<li><p>synthetic noisy datasets via label flipping: <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener">CIFAR-10/100</a></p>
-</li>
-</ul>
-<p><strong>Surveys:</strong></p>
-<ul>
-<li><a href="https://arxiv.org/pdf/2011.04406.pdf" target="_blank" rel="noopener">A Survey of Label-noise Representation Learning: Past, Present and Future</a></li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chen, Xinlei, and Abhinav Gupta. “Webly supervised learning of convolutional networks.” ICCV, 2015.</p>
-<p>[2] Sukhbaatar, Sainbayar, et al. “Training convolutional networks with noisy labels.” arXiv preprint arXiv:1406.2080 (2014).</p>
-<p>[3] Xiao, Tong, et al. “Learning from massive noisy labeled data for image classification.” CVPR, 2015.</p>
-<p>[4] Zhuang, Bohan, et al. “Attend in groups: a weakly-supervised deep learning framework for learning from web data.” CVPR, 2017.</p>
-<p>[5] Wu, Jiajun, et al. “Deep multiple instance learning for image classification and auto-annotation.” CVPR, 2015.</p>
-<p>[6] Ilse, Maximilian, Jakub M. Tomczak, and Max Welling. “Attention-based deep multiple instance learning.” arXiv preprint arXiv:1802.04712 (2018).</p>
-<p>[7] Lee, Kuang-Huei, et al. “Cleannet: Transfer learning for scalable image classifier training with label noise.” CVPR, 2018.</p>
-<p>[8] Liu, Tongliang, and Dacheng Tao. “Classification with noisy labels by importance reweighting.” T-PAMI, 2015.</p>
-<p>[9] Misra, Ishan, et al. “Seeing through the human reporting bias: Visual classifiers from noisy human-centric labels.” CVPR, 2016.</p>
-<p>[10] Guo, Sheng, et al. “Curriculumnet: Weakly supervised learning from large-scale web images.” ECCV, 2018.</p>
-<p>[11] Jiang, Lu, et al. “Mentornet: Learning data-driven curriculum for very deep neural networks on corrupted labels.” arXiv preprint arXiv:1712.05055 (2017).</p>
-<p>[12] Reed, Scott, et al. “Training deep neural networks on noisy labels with bootstrapping.” arXiv preprint arXiv:1412.6596 (2014).</p>
-<p>[13] Krause, Jonathan, et al. “The unreasonable effectiveness of noisy data for fine-grained recognition.” ECCV, 2016. </p>
-<p>[14] Yeung, Serena, et al. “Learning to learn from noisy web videos.” CVPR, 2017.</p>
-<p>[15] Veit, Andreas, et al. “Learning from noisy large-scale datasets with minimal supervision.” CVPR, 2017.</p>
-<p>[16] Xu, Zhe, et al. “Webly-supervised fine-grained visual categorization via deep domain adaptation.” T-PAMI, 2016.</p>
-<p>[17] Li, Yuncheng, et al. “Learning from noisy labels with distillation.” ICCV, 2017.</p>
-<p>[18] Kim, Youngdong, et al. “Nlnl: Negative learning for noisy labels.” ICCV, 2019.</p>
-<p>[19] “MetaCleaner: Learning to Hallucinate Clean Representations for Noisy-Labeled Visual Recognition”, CVPR, 2019.</p>
-<p>[20] Huang, Jinchi, et al. “O2u-net: A simple noisy label detection approach for deep neural networks.” ICCV, 2019.</p>
 
           
         
@@ -957,7 +1182,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Weak-shot Object Detection/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -976,7 +1201,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Weak-shot Object Detection/" itemprop="url">Weak-shot Object Detection</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Transformer/" itemprop="url">Transformer</a></h1>
         
 
         <div class="post-meta">
@@ -988,8 +1213,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1050,16 +1275,41 @@
       
         
           
-            <p>Weak-shot object detection is also called cross-supervised or mixed-supervised object detection. Specifically, all categories are splitted into base categories and novel categories. Base categories have box-level annotation while novel categories only have image-level annotations. </p>
-<ul>
-<li><p>Transfer common objectness: <a href="https://arxiv.org/pdf/2007.07986.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1802.09778" target="_blank" rel="noopener">[3]</a></p>
-</li>
-<li><p>Transfer the mapping from inaccurate bounding boxes to accurate bounding boxes: <a href="https://arxiv.org/pdf/2006.15056.pdf" target="_blank" rel="noopener">[2]</a> </p>
-</li>
+            <p>Transformer <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf" target="_blank" rel="noopener">[1]</a> is multi-head self-attention, which can be used for sequence-to-sequence or sequence-to-label applications.</p>
+<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h3><ul>
+<li>classification: ViT<a href="https://arxiv.org/pdf/2010.11929.pdf" target="_blank" rel="noopener">[2]</a> RVT <a href="https://arxiv.org/pdf/2105.07926.pdf" target="_blank" rel="noopener">[12]</a></li>
+<li>object detection: DETR<a href="https://arxiv.org/pdf/2005.12872.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>person reID: <a href="https://arxiv.org/pdf/2102.04378.pdf" target="_blank" rel="noopener">[7]</a></li>
+<li>image-to-image translation: super-resolution, denoising, deraining <a href="https://arxiv.org/pdf/2012.00364.pdf" target="_blank" rel="noopener">[4]</a>, colorization <a href="https://openreview.net/pdf?id=5NA1PinlGFu" target="_blank" rel="noopener">[6]</a> </li>
+<li>unconditional GAN: <a href="https://arxiv.org/pdf/2102.07074.pdf" target="_blank" rel="noopener">[10]</a></li>
+<li>video understanding: <a href="https://arxiv.org/pdf/2102.05095.pdf" target="_blank" rel="noopener">[11]</a></li>
 </ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhong, Yuanyi, et al. “Boosting weakly supervised object detection with progressive knowledge transfer.” European Conference on Computer Vision. Springer, Cham, 2020.</p>
-<p>[2] Chen, Zitian, et al. “Cross-Supervised Object Detection.” arXiv preprint arXiv:2006.15056 (2020).</p>
-<p>[3] Li, Yan, et al. “Mixed supervised object detection with robust objectness transfer.” IEEE transactions on pattern analysis and machine intelligence 41.3 (2018): 639-653.</p>
+<h3 id="Combination-of-transformer-and-CNN"><a href="#Combination-of-transformer-and-CNN" class="headerlink" title="Combination of transformer and CNN:"></a>Combination of transformer and CNN:</h3><ul>
+<li>T2T-Vit <a href="https://arxiv.org/pdf/2101.11986.pdf" target="_blank" rel="noopener">[9]</a></li>
+<li>TransUNet <a href="https://arxiv.org/pdf/2102.04306.pdf" target="_blank" rel="noopener">[8]</a></li>
+</ul>
+<h3 id="Interpretability"><a href="#Interpretability" class="headerlink" title="Interpretability"></a>Interpretability</h3><ul>
+<li>beyond attention visualization <a href="https://arxiv.org/pdf/2012.09838" target="_blank" rel="noopener">[5]</a></li>
+</ul>
+<h3 id="Position-embedding"><a href="#Position-embedding" class="headerlink" title="Position embedding"></a>Position embedding</h3><ul>
+<li><a href="https://mp.weixin.qq.com/s/QlR528MYCioEuYwJIs20Pg" target="_blank" rel="noopener">A summary</a></li>
+</ul>
+<h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ul>
+<li><a href="https://arxiv.org/pdf/2012.12556.pdf" target="_blank" rel="noopener">A survey on visual transformer</a></li>
+<li><a href="https://arxiv.org/pdf/2101.01169.pdf" target="_blank" rel="noopener">Transformers in Vision: A Survey</a></li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Vaswani, Ashish, et al. “Attention is all you need.” NeurIPS, 2017.</p>
+<p>[2] Dosovitskiy, Alexey, et al. “An image is worth 16x16 words: Transformers for image recognition at scale.” arXiv preprint arXiv:2010.11929 (2020).</p>
+<p>[3] Carion, Nicolas, et al. “End-to-End Object Detection with Transformers.” arXiv preprint arXiv:2005.12872 (2020).</p>
+<p>[4] Chen, Hanting, et al. “Pre-Trained Image Processing Transformer.” arXiv preprint arXiv:2012.00364 (2020).</p>
+<p>[5] Chefer, Hila, Shir Gur, and Lior Wolf. “Transformer Interpretability Beyond Attention Visualization.” arXiv preprint arXiv:2012.09838 (2020).</p>
+<p>[6] Manoj Kumar, Dirk Weissenborn &amp; Nal Kalchbrenner, “COLORIZATION TRANSFORMER”, ICLR, 2021.</p>
+<p>[7] Shuting He, Hao Luo, Pichao Wang, Fan Wang, Hao Li, Wei Jiang, “TransReID: Transformer-based Object Re-Identification”, arXiv preprint arXiv:2102.04378 (2021).</p>
+<p>[8] Jieneng Chen, Yongyi Lu, Qihang Yu, Xiangde Luo, Ehsan Adeli, Yan Wang, Le Lu, Alan L. Yuille, Yuyin Zhou, “TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation”, arXiv preprint arXiv:2102.04306 (2021).</p>
+<p>[9] Li Yuan, Yunpeng Chen, Tao Wang, Weihao Yu, Yujun Shi, Francis EH Tay, Jiashi Feng, Shuicheng Yan, “Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet”, arXiv preprint arXiv:2101.11986 (2021).</p>
+<p>[10] Yifan Jiang, Shiyu Chang, Zhangyang Wang, “TransGAN: Two Transformers Can Make One Strong GAN”, arXiv preprint arXiv:2102.07074 (2021).</p>
+<p>[11] Is Space-Time Attention All You Need for Video Understanding.</p>
+<p>[12] Towards Robust Vision Transformer.</p>
 
           
         
@@ -1108,7 +1358,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Watermark Removal/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Texture Bias/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1127,7 +1377,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Watermark Removal/" itemprop="url">Watermark Removal</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Texture Bias/" itemprop="url">Texture Bias</a></h1>
         
 
         <div class="post-meta">
@@ -1139,8 +1389,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1201,20 +1451,19 @@
       
         
           
-            <ul>
-<li><p>watermark removal: ICA <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=4014106" target="_blank" rel="noopener">[4]</a>, inpainting <a href="https://scholars.lib.ntu.edu.tw/bitstream/123456789/123926/1/12.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-<li><p>watermarks consistent across a collection of images: multi-image matting and reconstruction <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Dekel_On_the_Effectiveness_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-</ul>
-<ul>
-<li>Survey papers on watermarking: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=939835" target="_blank" rel="noopener">[1]</a> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=1560462" target="_blank" rel="noopener">[2]</a></li>
-</ul>
+            <p>It is claimed in <a href="https://arxiv.org/pdf/1811.12231.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1907.12892.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1909.08245.pdf" target="_blank" rel="noopener">[3]</a> that CNN is biased towards texture, that is, CNN tends to classify an object based on its texture intead of its shape.</p>
+<p>In <a href="https://proceedings.neurips.cc/paper/2020/file/db5f9f42a7157abe65bb145000b5871a-Paper.pdf" target="_blank" rel="noopener">[4]</a>, it is claimed that texture-bias is caused by data augmentation approach. Using different data augmentation approaches can introduce either texture-bias or shape-bias. Similarly, <a href="https://arxiv.org/pdf/2010.05981.pdf" target="_blank" rel="noopener">[5]</a> debiases shape and texture.</p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li>Podilchuk, Christine I., and Edward J. Delp. “Digital watermarking: algorithms and applications.” IEEE signal processing Magazine 18.4 (2001): 33-46.</li>
-<li>Potdar, Vidyasagar M., Song Han, and Elizabeth Chang. “A survey of digital image watermarking techniques.” INDIN’05. 2005 3rd IEEE International Conference on Industrial Informatics, 2005.. IEEE, 2005.</li>
-<li>Dekel, Tali, et al. “On the effectiveness of visible watermarks.” CVPR, 2017.</li>
-<li></li>
+<li><p>Geirhos, Robert, et al. “ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness.” ICLR, 2019. <a href="https://github.com/rgeirhos/texture-vs-shape" target="_blank" rel="noopener">[code]</a></p>
+</li>
+<li><p>Brochu, Francis. “Increasing Shape Bias in ImageNet-Trained Networks Using Transfer Learning and Domain-Adversarial Methods.” arXiv preprint arXiv:1907.12892 (2019). </p>
+</li>
+<li><p>Asadi, Nader, Mehrdad Hosseinzadeh, and Mahdi Eftekhari. “Towards Shape Biased Unsupervised Representation Learning for Domain Generalization.” arXiv preprint arXiv:1909.08245 (2019).</p>
+</li>
+<li><p>Hermann, Katherine, Ting Chen, and Simon Kornblith. “The origins and prevalence of texture bias in convolutional neural networks.” NeurIPS, (2020).</p>
+</li>
+<li><p>Yingwei Li, Qihang Yu, Mingxing Tan, Jieru Mei, Peng Tang, Wei Shen, Alan Yuille, Cihang Xie, “SHAPE-TEXTURE DEBIASED NEURAL NETWORK TRAINING”， ICLR, 2021.</p>
+</li>
 </ol>
 
           
@@ -1264,7 +1513,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Visual Sentiment Analysis/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1283,7 +1532,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Visual Sentiment Analysis/" itemprop="url">Visual Sentiment Analysis</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/StyleGAN/" itemprop="url">StyleGAN</a></h1>
         
 
         <div class="post-meta">
@@ -1295,8 +1544,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1357,12 +1606,14 @@
       
         
           
-            <ol>
-<li><p><a href="https://www.ijcai.org/proceedings/2017/0456.pdf" target="_blank" rel="noopener">Joint Image Emotion Classification and Distribution Learning via Deep Convolutional Neural Network</a></p>
-</li>
-<li><p><a href="http://faculty.ucmerced.edu/mhyang/papers/cvpr2018_visual_sentiment.pdf" target="_blank" rel="noopener">Weakly Supervised Coupled Networks for Visual Sentiment Analysis</a></p>
-</li>
-</ol>
+            <ul>
+<li>StyleGAN of all trades <a href="https://arxiv.org/pdf/2111.01619.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>StyleGANv3<a href="https://papers.nips.cc/paper/2021/file/076ccd93ad68be51f23707988e934906-Paper.pdf" target="_blank" rel="noopener">[2]</a>: solve alias (texture sticking) issue, that is, detail appearing to glued to image coordinates instead of the surface of depicted objects.</li>
+<li>StyleGAN-XL <a href="https://arxiv.org/pdf/2202.00273.pdf" target="_blank" rel="noopener">[3]</a>: extend to large dataset</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chong, Min Jin, Hsin-Ying Lee, and David Forsyth. “StyleGAN of All Trades: Image Manipulation with Only Pretrained StyleGAN.” arXiv preprint arXiv:2111.01619 (2021).</p>
+<p>[2] Karras, Tero, et al. “Alias-free generative adversarial networks.” Thirty-Fifth Conference on Neural Information Processing Systems. 2021.</p>
+<p>[3] Sauer, Axel, Katja Schwarz, and Andreas Geiger. “Stylegan-xl: Scaling stylegan to large diverse datasets.” arXiv preprint arXiv:2202.00273 (2022).</p>
 
           
         
@@ -1411,7 +1662,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Visual Object Tracking/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Structural Reparameterization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1430,7 +1681,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Visual Object Tracking/" itemprop="url">Visual Object Tracking</a></h1>
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Structural Reparameterization/" itemprop="url">Structural Reparameterization</a></h1>
         
 
         <div class="post-meta">
@@ -1442,8 +1693,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1504,337 +1755,14 @@
       
         
           
-            <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Tracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect</p>
-<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><p>Tracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. </p>
-<ul>
-<li>Meanshift: density based, ASMS <a href="https://github.com/vojirt/asms" target="_blank" rel="noopener">https://github.com/vojirt/asms</a></li>
-<li>Particle filter: particle based statistical method</li>
-<li>Optical flow: match feature points between neighboring frames</li>
-<li>correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect.</li>
-<li>deep learning: GOTURN, MDNet, TCNN, SiamFC</li>
+            <ul>
+<li>DiracNet <a href="https://arxiv.org/pdf/1706.00388.pdf" target="_blank" rel="noopener">[1]</a>, </li>
+<li>Acnet <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Ding_ACNet_Strengthening_the_Kernel_Skeletons_for_Powerful_CNN_via_Asymmetric_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>RepVGG <a href="https://arxiv.org/pdf/2101.03697.pdf" target="_blank" rel="noopener">[3]</a></li>
 </ul>
-<p>Two research groups contribute to CF methods most:</p>
-<ul>
-<li>Oxford: <a href="https://www.robots.ox.ac.uk/~luca/" target="_blank" rel="noopener">https://www.robots.ox.ac.uk/~luca/</a>, </li>
-<li>Linkoping: <a href="http://users.isy.liu.se/en/cvl/marda26/" target="_blank" rel="noopener">http://users.isy.liu.se/en/cvl/marda26/</a></li>
-</ul>
-<p><strong>Comparison of Speed and Performance</strong><br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/LsTWGvk.jpg" alt=""></p>
-<h3 id="Survey-papers"><a href="#Survey-papers" class="headerlink" title="Survey papers"></a>Survey papers</h3><ul>
-<li>Object tracking: A survey, 2006</li>
-<li>Object tracking benchmark, 2015</li>
-</ul>
-<h3 id="Benchmark"><a href="#Benchmark" class="headerlink" title="Benchmark"></a>Benchmark</h3><ul>
-<li>OTB50/100: <a href="http://cvlab.hanyang.ac.kr/tracker_benchmark/" target="_blank" rel="noopener">http://cvlab.hanyang.ac.kr/tracker_benchmark/</a></li>
-<li>VOT2016: <a href="http://www.votchallenge.net/vot2016/dataset.html" target="_blank" rel="noopener">http://www.votchallenge.net/vot2016/dataset.html</a> </li>
-</ul>
-<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><ul>
-<li>Visual Object Tracking (VOT) challenge:<br><a href="http://www.votchallenge.net/challenges.html" target="_blank" rel="noopener">http://www.votchallenge.net/challenges.html</a><br>VOT2016 has released the code of many trackers: <a href="http://votchallenge.net/vot2016/trackers.html" target="_blank" rel="noopener">http://votchallenge.net/vot2016/trackers.html</a></li>
-<li>Multiple Object Tracking Challenge (MOT) challenge:<br><a href="https://motchallenge.net/" target="_blank" rel="noopener">https://motchallenge.net/</a></li>
-</ul>
-<h3 id="Detection-based-Tracking"><a href="#Detection-based-Tracking" class="headerlink" title="Detection based Tracking"></a>Detection based Tracking</h3><p>Detection based tracking is also named as  tracking by detection or multiple object tracking. (MOT Challenge)</p>
-<p>TLD (tracking-learning-detection): update tracker and detector during learning<br><a href="http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html" target="_blank" rel="noopener">http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Visual Dialogue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Visual Dialogue/" itemprop="url">Visual Dialogue</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Visual dialogue <a href="https://arxiv.org/pdf/1611.08669.pdf" target="_blank" rel="noopener">[1]</a>: a dialogue with one image</p>
-<p>Multimodal Dialogue <a href="https://arxiv.org/pdf/1704.00200.pdf" target="_blank" rel="noopener">[2]</a><a href="https://dl.acm.org/citation.cfm?id=3240605" target="_blank" rel="noopener">[3]</a>: a dialogue with multiple images</p>
-<p>[1] Visual Dialog</p>
-<p>[2] Towards Building Large Scale Multimodal Domain-Aware Conversation Systems</p>
-<p>[3] Knowledge-aware Multimodal Dialogue Systems</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Video Object Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Video Object Segmentation/" itemprop="url">Video Object Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:48+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. </p>
-<ol>
-<li><p>Davis challenge <a href="https://davischallenge.org/" target="_blank" rel="noopener">https://davischallenge.org/</a> held since 2017, related papers <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1704.00675.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>YouTube-VOS: A Large-Scale Benchmark for Video Object Segmentation <a href="https://youtube-vos.org/home" target="_blank" rel="noopener">https://youtube-vos.org/home</a></p>
-</li>
-<li><p>GyGO: an E-commerce Video Object Segmentation Dataset by Visualead <a href="https://github.com/ilchemla/gygo-dataset" target="_blank" rel="noopener">https://github.com/ilchemla/gygo-dataset</a></p>
-</li>
-</ol>
-<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ol>
-<li><p>Perazzi, Federico, et al. “A benchmark dataset and evaluation methodology for video object segmentation.” CVPR, 2016.</p>
-</li>
-<li><p>Pont-Tuset, Jordi, et al. “The 2017 davis challenge on video object segmentation.” arXiv preprint arXiv:1704.00675 (2017).</p>
-</li>
-</ol>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Zagoruyko, Sergey, and Nikos Komodakis. “Diracnets: Training very deep neural networks without skip-connections.” arXiv preprint arXiv:1706.00388 (2017).</p>
+<p>[2] Ding, Xiaohan, et al. “Acnet: Strengthening the kernel skeletons for powerful cnn via asymmetric convolution blocks.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
+<p>[3] “RepVGG: Making VGG-style ConvNets Great Again”, arXiv, 2021.  </p>
 
           
         

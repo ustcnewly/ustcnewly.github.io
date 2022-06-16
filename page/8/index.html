@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/operation_system/Ubuntu/Ubuntu Crontab/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/network/GitHub+Hexo for Personal Blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/operation_system/Ubuntu/Ubuntu Crontab/" itemprop="url">Ubuntu Crontab</a></h1>
+                <a class="post-title-link" href="/2022/06/16/network/GitHub+Hexo for Personal Blog/" itemprop="url">GitHub+Hexo for Personal Blog</a></h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -335,353 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>crontab -l //list crontab</p>
-</li>
-<li><p>crontab -r //remove crontab</p>
-</li>
-<li><p>crontab -e //edit crontab</p>
-<ul>
-<li>minute hour day-of-month month day-of-week cmd </li>
-<li>each term can be a single number, <em>e.g.</em>, 3, or a range, <em>e.g.</em>, 3-6, or a set, <em>e.g.</em>, 3,5,7, or interval, <em>e.g.</em>,  */10</li>
-<li>for example, “<em> </em>/10 <em> </em> * sh ~/cmd.sh” means executing cmd.sh every 10 minutes.</li>
-</ul>
-</li>
-</ul>
-<p>In windows, the function of contrab can be realized by using “task scheduler”.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/operation_system/Ubuntu/Linux Command Lines/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/operation_system/Ubuntu/Linux Command Lines/" itemprop="url">Ubuntu Command Lines</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Here is a website <a href="https://linux.gaomeluo.com/" target="_blank" rel="noopener">link</a> to query linux commands.</p>
-<hr>
-<ol>
-<li><p>create new user with home folder</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser XXX</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>sudo privilege: <code>vim /etc/sudoers</code> and add <code>$username ALL=(ALL) ALL</code> at the bottom.</p>
-</li>
-<li><p>start ssh on the server, the default port is 22</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo/etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list -a #including hidden files</span><br><span class="line">list -S #arrange by size</span><br><span class="line">list -t #arrange by time</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>view text</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat</span><br><span class="line">head/tail -n 10 tmp.txt #view the first/last 10 lines</span><br><span class="line">less #more powerful than more</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Change the privilege</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 ./</span><br><span class="line">chmod a+x ./</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Check disk or file size</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df -h </span><br><span class="line">du ./ --max-depth 2 -h</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Compress or uncompress files, refer to this <a href="http://www.cnblogs.com/eoiioe/archive/2008/09/20/1294681.html" target="_blank" rel="noopener">link</a>.</p>
-</li>
-<li><p>Grep + regular expression</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [xyz]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Search file</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">locate "keyword" #fast</span><br><span class="line">find ./ -maxdepth 1 -name "*keyword*" </span><br><span class="line">find ./ -name "*keyword*" -size +50M -size -100M </span><br><span class="line">find ./ -name "*keyword*" -mmin -10 #m:modify min:minute </span><br><span class="line">find ./ -name "*keyword*" -exec rm -r &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Pipe commands</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tr -s ' ' | cut -d ' ' -f 2 #tr to truncate space</span><br><span class="line">ls -l | sort -rnk2 #-r:reverse -n:numerical -k:k-th column</span><br><span class="line">ls -l | wc -l #count line</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>xargs:</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat python/requirements.txt | xargs -L 1 sudo pip install</span><br><span class="line">find . -name "*.c" | xargs rm -rf</span><br><span class="line">find . -name '*.c' | xargs grep 'stdlib.h'</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>alias: temporary alias command </p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias lnew="cd /home/niuli/caffe"</span><br><span class="line">unalias lnew</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>export: The export command is one of the bash shell built-in commands, which means it is part of your shell.</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export a=linux.com</span><br><span class="line">echo $a</span><br><span class="line">export -n a #remove variable</span><br><span class="line"></span><br><span class="line">printname () &#123; echo "Linuxcareer.com"; &#125;</span><br><span class="line">export -f printname #export function</span><br></pre></td></tr></table></figure>
-<p>add LD_LIBRARY_PATH</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shellscript sample</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">read -p "Please input your first name: " </span><br><span class="line">echo -e "\nYour full name is: $firstname $lastname" </span><br><span class="line">test ! -e $filename &amp;&amp; echo "The filename '$filename' DO NOT exist" &amp;&amp; exit 0</span><br><span class="line">test -f $filename &amp;&amp; filetype="regulare file" </span><br><span class="line">test -d $filename &amp;&amp; filetype="directory" </span><br><span class="line">[ "$yn" == "Y" -o "$yn" == "y" ] &amp;&amp; echo "OK, continue" &amp;&amp; exit 0</span><br><span class="line"></span><br><span class="line">if [ "$yn" == "Y" ] || [ "$yn" == "y" ]; then </span><br><span class="line">	echo "OK, continue" </span><br><span class="line">elif [ "$yn" == "N" ] || [ "$yn" == "n" ]; then </span><br><span class="line">	echo "Oh, interrupt!" </span><br><span class="line">else </span><br><span class="line">	echo "I don't know what your choice is" </span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">while [ "$yn" != "yes" -a "$yn" != "YES" ] </span><br><span class="line">do </span><br><span class="line">	read -p "Please input yes/YES to stop this program: " yn </span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for animal in dog cat elephant </span><br><span class="line">do </span><br><span class="line">	echo "There are $&#123;animal&#125;s.... " </span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/operation_system/Windows Command Lines/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/operation_system/Windows Command Lines/" itemprop="url">Windows Command Lines</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
                   </a>
                 </span>
 
@@ -720,312 +375,687 @@
         
           
             <ol>
-<li><p>zip/unzip</p>
-<p> <code>winrar x -y -ibck zip_file_name unzip_file_name</code> //x means unzip, -y means yes to interrupted queries, -ibck means running in the background</p>
+<li>Preinstallation<ul>
+<li>install Node.js <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>    </li>
+<li>install git <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>    </li>
+<li>install hexo: right click “git bash here”, <code>$npm install hexo-cli -g</code></li>
+</ul>
 </li>
-<li><p>generate the file list under one folder</p>
-<p> <code>dir D:\test /b &gt;list.txt</code> or <code>dir D:\test /b &gt;list.xls</code></p>
+<li>SSH keys<ul>
+<li>check whether ssh exists <code>$cd ~/.ssh</code>. If not, <code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code> to generate key file</li>
+<li>get the SSH key <code>$cat ~/.ssh/id_rsa.pub</code></li>
+<li>create the key in github: account setting-&gt;SSH</li>
+<li>check the SSH key <code>$ ssh -T git@github.com</code> </li>
+</ul>
 </li>
-<li><p>combine multiple compressed volumes</p>
-<p> <code>copy /b logs.tar.gza* logs.tar.gz</code></p>
+<li><p>create an empty folder as Hexo folder</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>hexo init</span><br><span class="line"><span class="meta">$</span>hexo generate</span><br><span class="line"><span class="meta">$</span>hexo server</span><br></pre></td></tr></table></figure>
+<p>local test: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> </p>
 </li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/operation_system/Install Ubuntu under Windows/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/operation_system/Install Ubuntu under Windows/" itemprop="url">Install Ubuntu under Windows</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>First check whether the file system is MBR+BIOS or GPT+UEFI. Nowadays, most computers are GPT+UEFI, so we only talk about GPT+UEFI here.</p>
-<ol>
-<li><p>Download Ubuntu iso and make a U-installer using rufus. When using rufus, notice the option of GPT+UEFI.</p>
-</li>
-<li><p>Start the computer from U-installer. The most important thing is making a proper partition for Ubuntu. At least make three partitions: / (ext4), swap (2G), reserved for UEFI (1G).  If necessary, make another partition /home. Note that ubuntu UEFI should be on the same disk as Windows UEFI.   </p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/operation_system/BIOS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/operation_system/BIOS/" itemprop="url">BIOS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>If something is wrong when attempting to enter the BIOS, try the following approaches:</p>
+<li><p>deploy local Hexo folder</p>
 <ul>
-<li>press F2, F12, ESC, DEL</li>
-<li>change the cable, adaptor, interface, etc (hardware reason)</li>
-<li>update BIOS to the latest version</li>
-<li>for Windows10, settings-&gt;recover-&gt;firmware</li>
-<li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
+<li><p>in Hexo folder, modify the _config.yml file as follows,                                     </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: $(SSH address from github)</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in Hexo folder,  install the deployer by <code>$npm install hexo-deployer-git --save</code></p>
+</li>
+<li>type <code>$hexo g</code> and <code>$hexo d</code>, or <code>$hexo d -g</code>. </li>
+</ul>
+</li>
+<li>change theme: go to the folder “/themes” and <code>git clone https://github.com/iissnan/hexo-theme-next</code>. config the theme in the file “/themes/XXXX/_config.yml”.</li>
+<li><p>local search</p>
+<ul>
+<li><code>$npm install hexo-generator-searchdb --save</code></li>
+<li><p>in the site _config.yml file, set <code>local_search: enable: true</code>. paste the following lines anywhere.</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post #post, page, all</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>add new page for some subcategory (e.g., write): in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">   write: /categories/write</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add social links: in the theme _config.yml file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/ustcnewly</span><br><span class="line">	Linkedin: https://www.linkedin.com/in/li-niu-b0905133/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latex: </p>
+<ul>
+<li>install <code>$npm install hexo-math --save</code> and restart Hexo</li>
+<li><p>in the theme _config.yml file, modify as follows (notice that <code>cdn</code> may change) </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">	enable: true</span><br><span class="line">	per_page: false</span><br><span class="line">	cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to address the conflict between MathJax and Hexo</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>npm uninstall hexo-renderer-marked --save</span><br><span class="line"><span class="meta">$</span>npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>push posts to the top</p>
+<ul>
+<li><code>$ npm install hexo-generator-index-pin-top --save</code>.</li>
+<li>for the target post, add <code>top: true</code> in Front-matter, or <code>top: 10</code> with larger number indicating higher priority.</li>
+</ul>
+</li>
+<li><p>insert code block</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert image</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Tips:</strong> </p>
+<ol>
+<li><p>If something is wrong with the representation and hard to tune, you can try deleting extra spaces or adopting an alternative format (e.g., two code block formats).</p>
+</li>
+<li><p>Case sensitive: sometimes you switch between capital letter and small letter, which may lead to 404 not found errors.</p>
+<ul>
+<li>set <code>ignorecase</code> as <code>false</code> in the file <code>.deploy_git/.git/config</code></li>
+<li>clean the folder <code>.deploy_git</code></li>
+<li><code>hexo clean</code> and <code>hexo d -g</code></li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Vote Aggregation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Vote Aggregation/" itemprop="url">Vote Aggregation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>We use the <a href="http://crowdsourcing-class.org/readings/downloads/ml/EM.pdf" target="_blank" rel="noopener">Dawid-Skene vote aggregation</a> algorithm to obtain the ground truth label for each snippet, since this is often considered ‘gold standard’ for aggregation in practice. DawidSkene is an unsupervised inference algorithm that gives the Maximum Likelihood Estimate of observer error rates using the EM algorithm.</p>
+<p>1) Using the labels given by multiple annotators, estimate the most likely “correct” label for each video snippet.</p>
+<p>2) Based on the estimated correct answer for each object, compute the error rates for each annotator.</p>
+<p>3) Taking into consideration the error rates for each annotator, recompute the most likely “correct” label for each object.</p>
+<p>4) Repeat steps 2 and 3 until one of the termination criteria is met (error rates are below a pre-specified threshold or a pre-specified number of iterations are completed).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Vector Quantization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Vector Quantization/" itemprop="url">Vector Quantization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Vector Quantization: VQVAE <a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">[1]</a>,VQVAE2 <a href="https://proceedings.neurips.cc/paper/2019/file/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Paper.pdf" target="_blank" rel="noopener">[2]</a>. </p>
+<p>Residual Quantization: RQVAE <a href="https://arxiv.org/pdf/2203.01941.pdf" target="_blank" rel="noopener">[3]</a></p>
+<p>Accelerate auto-regression: <a href="https://arxiv.org/pdf/2111.12701.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2202.04200.pdf" target="_blank" rel="noopener">[5]</a></p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Oord, Aaron van den, Oriol Vinyals, and Koray Kavukcuoglu. “Neural discrete representation learning.” arXiv preprint arXiv:1711.00937 (2017).</p>
+<p>[2] Razavi, Ali, Aaron van den Oord, and Oriol Vinyals. “Generating diverse high-fidelity images with vq-vae-2.” Advances in neural information processing systems. 2019.</p>
+<p>[3] Lee, Doyup, et al. “Autoregressive Image Generation using Residual Quantization.” arXiv preprint arXiv:2203.01941 (2022).</p>
+<p>[4] Bond-Taylor, Sam, et al. “Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes.” arXiv preprint arXiv:2111.12701 (2021).</p>
+<p>[5] Huiwen Chang, Han Zhang, Lu Jiang, Ce Liu, William T. Freeman, “MaskGIT: Masked Generative Image Transformer”, arXiv preprint arXiv:2202.04200.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Unsupervised Attribute Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Unsupervised Attribute Learning/" itemprop="url">Unsupervised Attribute Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>learn attribute vector based on the relation and difference between different categories (each dimension if uninterpretable): <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Yu_Designing_Category-Level_Attributes_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[1]</a> (Laplacian matrix),  <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Discriminative_Learning_of_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> (triplet loss)</p>
+</li>
+<li><p>exploit local information and encode them into attribute vector (each dimension is interpretable): <a href="https://link.springer.com/chapter/10.1007/978-3-642-33709-3_6#copyrightInformation" target="_blank" rel="noopener">[3]</a> (discriminative cluster, doublets),  <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Huang_Unsupervised_Learning_of_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[4]</a> (joint attribute learning and feature learning)</p>
+</li>
+<li><p>learn attention map for each latent attribute <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Yang_Towards_Rich_Feature_Discovery_With_Class_Activation_Maps_Augmentation_for_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><p>Yu, Felix X., et al. “Designing category-level attributes for discriminative visual recognition.” CVPR, 2013.</p>
+</li>
+<li><p>Li, Yan, et al. “Discriminative learning of latent features for zero-shot recognition.” CVPR, 2018.</p>
+</li>
+<li><p>Singh, Saurabh, Abhinav Gupta, and Alexei A. Efros. “Unsupervised discovery of mid-level discriminative patches.” ECCV, 2012.</p>
+</li>
+<li><p>Huang, Chen, Chen Change Loy, and Xiaoou Tang. “Unsupervised learning of discriminative attributes and visual representations.” CVPR, 2016.</p>
+</li>
+<li><p>Yang, Wenjie, et al. “Towards rich feature discovery with class activation maps augmentation for person re-identification.” CVPR, 2019.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Training Categories and Test Categories/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Training Categories and Test Categories/" itemprop="url">Training Categories and Test Categories</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Let us use $S$ to denote the set of training categories and $T$ to denote the set of testing categories.</p>
+<ul>
+<li>$S=T$: the most common case</li>
+<li>$S\cap T=\emptyset$: zero-shot learning</li>
+<li>$S\subset T$: generalized zero-shot learning</li>
+<li>$S\supset T$: pretrained model</li>
 </ul>
 
           
@@ -1075,7 +1105,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/network/Ubuntu VPN/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Synthetic Text Images/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1094,7 +1124,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/network/Ubuntu VPN/" itemprop="url">Ubuntu SSH</a></h1>
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Synthetic Text Images/" itemprop="url">Synthetic Text Images</a></h1>
         
 
         <div class="post-meta">
@@ -1106,8 +1136,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1129,8 +1159,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -1168,8 +1198,22 @@
       
         
           
-            <p>Sometimes Ubuntu fails to connect VPN. Open the PPTP advanced options, uncheck EAP and check MPPE.</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/cr0lyNn.jpg" alt=""></p>
+            <ol>
+<li><p>Blend text and background images. </p>
+<ul>
+<li>text image (font, color, border, blending): <a href="https://arxiv.org/pdf/1406.2227.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>scene-text image (font, color, border, blending, <u>geometry</u>): <a href="http://www.robots.ox.ac.uk/~ankush/textloc.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Fangneng_Zhan_Verisimilar_Image_Synthesis_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><ol>
+<li><p>Jaderberg, Max, et al. “Synthetic data and artificial neural networks for natural scene text recognition.” arXiv preprint arXiv:1406.2227 (2014).</p>
+</li>
+<li><p>Gupta, Ankush, Andrea Vedaldi, and Andrew Zisserman. “Synthetic data for text localisation in natural images.” CVPR, 2016.</p>
+</li>
+<li><p>Zhan, Fangneng, Shijian Lu, and Chuhui Xue. “Verisimilar image synthesis for accurate detection and recognition of texts in scenes.” ECCV, 2018.</p>
+</li>
+</ol>
 
           
         
@@ -1218,7 +1262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/network/Ubuntu VNC/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Subjective Annotation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1237,7 +1281,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/network/Ubuntu VNC/" itemprop="url">Ubuntu VNC</a></h1>
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Subjective Annotation/" itemprop="url">Subjective Annotation</a></h1>
         
 
         <div class="post-meta">
@@ -1249,8 +1293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1272,8 +1316,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -1311,18 +1355,9 @@
       
         
           
-            <h3 id="Server"><a href="#Server" class="headerlink" title="Server:"></a>Server:</h3><ol>
-<li><p>Install VNC server under Ubuntu: $sudo apt-get install vnc4server</p>
-</li>
-<li><p>Configure the VNC server, $vi ~/.vnc/xstartup<br>change the style to gnome-session &amp; in the last line.</p>
-</li>
-<li><p>start the VNC server: $vncserver</p>
-</li>
-</ol>
-<h3 id="Client"><a href="#Client" class="headerlink" title="Client:"></a>Client:</h3><ol>
-<li>Install VNC client under Windows: use http:\IP:580$ID to log in.</li>
-</ol>
-<p><strong>Tips:</strong> For 10060 error, run <code>$iptables -F</code> to close firewall.</p>
+            <p>As mentioned in <a href="https://arxiv.org/pdf/1606.01621.pdf" target="_blank" rel="noopener">[1]</a> One major concern of subjective annotation is that the annotations provided by different workers for each image may not be reliable, which calls for consistency analysis on the annotations. We use Spearman’s rank correlation ρ between pairs of workers to measure consistency and estimate p-values to evaluate statistical significance of the correlation relative to a null hypothesis of uncorrelated responses. We use the Benjamini-Hochberg<br>procedure to control the false discovery rate (FDR) for multiple comparisons <a href="ftp://swanson.seas.upenn.edu/pub/datamining/public_html/ReadingGroup/papers/fdr-dep.pdf" target="_blank" rel="noopener">[2]</a>. At an FDR level of 0.05, we find 98.45% batches have significant agreement among raters. Further consistency analysis of the dataset can be found in the supplementary material of <a href="https://arxiv.org/pdf/1606.01621.pdf" target="_blank" rel="noopener">[1]</a>.</p>
+<p>[1] Kong, Shu, et al. “Photo aesthetics ranking network with attributes and content adaptation.” European Conference on Computer Vision. Springer, Cham, 2016.</p>
+<p>[2] Benjamini, Yoav, and Daniel Yekutieli. “The control of the false discovery rate in multiple testing under dependency.” Annals of statistics (2001): 1165-1188.</p>
 
           
         
@@ -1371,7 +1406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/network/Ubuntu SSH/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Soft Loss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1390,7 +1425,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/network/Ubuntu SSH/" itemprop="url">Ubuntu SSH</a></h1>
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Soft Loss/" itemprop="url">Soft Loss</a></h1>
         
 
         <div class="post-meta">
@@ -1402,8 +1437,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1425,8 +1460,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -1464,165 +1499,15 @@
       
         
           
-            <p><strong>Server:</strong></p>
+            <p>Given the predicted softmax logits $p_i$, ground-truth softmax logits or free-form weights $w_i$.</p>
 <ol>
-<li><p>run <code>$sudo apt-get install openssh-server</code></p>
+<li><p>weighted softmax loss: $-\sum_{i} w_i \log p_i$</p>
 </li>
-<li><p>run <code>$ps -A |grep ssh</code>.<br>If there is sshd, then ssh-server has been started,<br>else run <code>$sudo /etc/init.d/ssh start</code> to start ssh-server.</p>
+<li><p><a href="https://arxiv.org/pdf/1611.05916.pdf" target="_blank" rel="noopener">EMD softmax loss</a>: $-\sum_{i} w_i p_i$</p>
 </li>
-</ol>
-<p>Tips: To stop ssh-server, execute <code>$sudo /etc/init.d/ssh stop</code>.<br>To modify the configuration, edit <code>/etc/ssh/sshd_config</code>. </p>
-<p><strong>Client:</strong></p>
-<p>ssh-client is usually already installed. If not, run<br><code>$sudo apt-get install openssh-client</code>.</p>
-<p>After installing ssh-client, run <code>$ssh username@192.168.1.112</code>.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/network/Remote Folder Mount/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/network/Remote Folder Mount/" itemprop="url">Remote Folder Mount</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Mount-Linux-folder-under-Linux"><a href="#Mount-Linux-folder-under-Linux" class="headerlink" title="Mount Linux folder under Linux"></a>Mount Linux folder under Linux</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cifs-utils</span><br><span class="line">sudo mount -t cifs -o username=XXX,password=XXX //10.70.1.82/src_dir tgt_dir</span><br></pre></td></tr></table></figure>
-<h3 id="Mount-Windows-folder-under-Windows"><a href="#Mount-Windows-folder-under-Windows" class="headerlink" title="Mount Windows folder under Windows"></a>Mount Windows folder under Windows</h3><p>add network device</p>
-<h3 id="Mount-Linux-folder-under-Windows"><a href="#Mount-Linux-folder-under-Windows" class="headerlink" title="Mount Linux folder under Windows"></a>Mount Linux folder under Windows</h3><hr>
-<ol>
-<li><p>Install Dokan and WinSSHFS: for Win10, recommend 1.6.1.13 <a href="https://github.com/feo-cz/win-sshfs/releases" target="_blank" rel="noopener">win-sshfs</a> and 1.0.3 <a href="https://github.com/dokan-dev/dokany/releases" target="_blank" rel="noopener">Dokan</a>.</p>
+<li><p>softmax loss after <a href="https://arxiv.org/pdf/1406.2080.pdf" target="_blank" rel="noopener">label flip layer</a>: $-\log{\sum_{i} w_i p_i}$</p>
 </li>
-<li><p>Open WinSSHFS, fill in the drive name, host, port, username, password, directory. The other entries can be left blank.</p>
+<li><p><a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">knowledge distillation</a>: $\sum_{i} (p_i-w_i)$</p>
 </li>
 </ol>
 
@@ -1673,7 +1558,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/network/Remote Desktop Connection/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Shadow-related Application/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -1692,7 +1577,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/01/21/network/Remote Desktop Connection/" itemprop="url">Remote Desktop Connection</a></h1>
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Shadow-related Application/" itemprop="url">Shadow-related Application</a></h1>
         
 
         <div class="post-meta">
@@ -1704,8 +1589,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
               </time>
             
 
@@ -1727,8 +1612,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
                   </a>
                 </span>
 
@@ -1766,23 +1651,218 @@
       
         
           
-            <h3 id="Remote-Connect-to-Ubuntu-in-Windows"><a href="#Remote-Connect-to-Ubuntu-in-Windows" class="headerlink" title="Remote Connect to Ubuntu in Windows"></a>Remote Connect to Ubuntu in Windows</h3><hr>
-<p><strong>a) cmdline:</strong> putty, secureCRT</p>
-<p><strong>b) window:</strong></p>
-<p>xrdp: <a href="http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/8ebacdf0cdc64949f75cd555.html</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp</span><br><span class="line">sudo apt-get install vnc4server</span><br><span class="line">sudo apt-get install xubuntu-desktop</span><br><span class="line">echo "xfce4-session" &gt;~/.xsession</span><br><span class="line">sudo service xrdp restart</span><br></pre></td></tr></table></figure></p>
-<p>xrdp mm process login response login failed<br>When this error occurs, try the following methods, followed by “sudo service xrdp restart”.</p>
+            <h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
+<li><p>Shadow detection: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Lei_Zhu_Bi-directional_Feature_Pyramid_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
+</li>
+<li><p>Object-shadow pair detection: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Shadow removal: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hu_Mask-ShadowGAN_Learning_to_Remove_Shadows_From_Unpaired_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Le_Shadow_Removal_via_Shadow_Image_Decomposition_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/1911.08718.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2008.00267.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>Shadow generation: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Zhan_Adversarial_Image_Composition_with_Auxiliary_Illumination_ACCV_2020_paper.pdf" target="_blank" rel="noopener">[8]</a></p>
+</li>
+<li><p>Remove occluder and its associated shadow <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_No_Shadow_Left_Behind_Removing_Objects_and_Their_Shadows_Using_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
+</ul>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>Shadow Generation</p>
 <ol>
-<li><p>delete vnc processes</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep vnc</span><br><span class="line">kill -9 XXX</span><br></pre></td></tr></table></figure>
+<li>Shadow-AR (rendered) <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>RGB-AO-depth (rendered) <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.13943" target="_blank" rel="noopener">paper</a></li>
+<li>Composition datasets: WILDTRACK, Penn-Fudan, UA-DETRAC, Cityscapes, ShapeNet <a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Zhan_Adversarial_Image_Composition_with_Auxiliary_Illumination_ACCV_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>Soft shadow dataset (rendered) <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Sheng_SSN_Soft_Shadow_Network_for_Image_Compositing_CVPR_2021_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>ShadowGAN (rendered, 12,400 rendered images, 9265 objects, 110 textures for rendering the plane, up to four objects in each scene) <a href="https://dc.tsinghuajournals.com/cgi/viewcontent.cgi?article=1127&amp;context=computational-visual-media" target="_blank" rel="noopener">paper</a></li>
+<li>SID (single object, 25, 000 images, 12, 500 3D objects, 50 homogeneous color and 200 variable set of textured patterns) <a href="https://arxiv.org/pdf/2009.06295.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SID2 (45,000 images, similar to SID, more than one object in each scene) <a href="https://arxiv.org/pdf/2009.08941.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SHAD3S <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Venkataramaiyer_SHAD3S_A_Model_to_Sketch_Shade_and_Shadow_WACV_2021_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ol>
+<p>Shadow Removal/Detection</p>
+<ol>
+<li>ISTD/ ISTD+ (1870 0 triplets of shadow, shadow mask and shadow-free images) <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Stacked_Conditional_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>USR(unpaired, 2,445 shadow images, 1,770 shadow-free) <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hu_Mask-ShadowGAN_Learning_to_Remove_Shadows_From_Unpaired_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SRD/ SRD+ (3088 pairs, paired shadow and shadow-free, without the ground-truth shadow mask) <a href="">paper</a></li>
+<li>LRSS (37 image pairs, soft shadow) <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Qu_DeshadowNet_A_Multi-Context_CVPR_2017_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>UIUC (76 pairs, paired shadow/shadow-free) <a href="https://dl.acm.org/doi/pdf/10.1145/2732407" target="_blank" rel="noopener">paper</a></li>
+<li>GTAV (5723 pairs, 5110 daylight scenes, occlude objects inside camera) <a href="https://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Sidorov_Conditional_GANs_for_Multi-Illuminant_Color_Constancy_Revolution_or_yet_Another_CVPRW_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SynShadow (based on USR, occlude objects outside camera, shadow/shadow-free/matte image triplets synthesized from rendered 10,000 matte images and about 1,800 background images) <a href="https://arxiv.org/pdf/2101.01713.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>UCF (245 pairs, shadow/shadow mask, only for detection)</li>
+<li>SBU (4727 pairs, shadow/shadow mask, only for detection)</li>
+<li>CUHK-Shadow (10,500 pairs, shadow/shadow mask, only for detection) <a href="https://arxiv.org/pdf/1911.06998.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SOBA (1013 images) <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ol>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li><p>Zhu, Lei, et al. “Bidirectional feature pyramid network with recurrent attention residual modules for shadow detection.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.</p>
 </li>
-<li><p>delete X sessions, .xrdp, .X11-unix, .X0-20</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp &amp;&amp; ls -a</span><br></pre></td></tr></table></figure>
+<li><p>Wang, Tianyu, et al. “Instance shadow detection.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.</p>
 </li>
-<li><p>modify “MaxSessions” number</p>
-<pre><code class="lang-shell"> sudo vim /etc/xrdp/sesman.ini
-</code></pre>
+<li><p>Hu, Xiaowei, et al. “Mask-ShadowGAN: Learning to remove shadows from unpaired data.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
+</li>
+<li><p>Le, Hieu, and Dimitris Samaras. “Shadow removal via shadow image decomposition.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
+</li>
+<li><p>Xiaodong, Cun, Pun Chi-Man, and Shi Cheng. “Towards Ghost-free Shadow Removal via Dual Hierarchical Aggregation Network and Shadow Matting GAN.” arXiv preprint arXiv:1911.08718 (2019).</p>
+</li>
+<li><p>Le, Hieu, and Dimitris Samaras. “From Shadow Segmentation to Shadow Removal.” European Conference on Computer Vision. Springer, Cham, 2020.</p>
+</li>
+<li><p>Liu, Daquan, et al. “ARShadowGAN: Shadow Generative Adversarial Network for Augmented Reality in Single Light Scenes.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.</p>
+</li>
+<li><p>Zhan, Fangneng, et al. “Adversarial Image Composition with Auxiliary Illumination.” Proceedings of the Asian Conference on Computer Vision. 2020.</p>
+</li>
+<li><p>Zhang, Edward, et al. “No Shadow Left Behind: Removing Objects and their Shadows using Approximate Lighting and Geometry.” CVPR, 2021.</p>
 </li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Outlier Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Outlier Detection/" itemprop="url">Outlier Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Statistical-methods"><a href="#Statistical-methods" class="headerlink" title="Statistical methods"></a>Statistical methods</h3><ul>
+<li>use a model (e.g., Gaussian) to fit the distribution of all data </li>
+<li>use two models to fit the distributions of non-outliers and outliers separately</li>
+<li>Grubbs’ test</li>
+</ul>
+<h3 id="Distance-based-methods"><a href="#Distance-based-methods" class="headerlink" title="Distance based methods"></a>Distance based methods</h3><ul>
+<li>the density within a neighborhood</li>
+<li>the distance from a nearest neighbor</li>
+</ul>
+<h3 id="Learning-based-method"><a href="#Learning-based-method" class="headerlink" title="Learning based method"></a>Learning based method</h3><ul>
+<li>clustering, the smallest cluster is likely to contain outliers</li>
+<li>one-class classifier (e.g., one-class SVM)</li>
+<li>binary classifier (e.g., naive bayes for spam filtering, weighted binary SVM)</li>
+</ul>
 
           
         
