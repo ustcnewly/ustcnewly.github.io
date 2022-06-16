@@ -281,6 +281,1368 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/24/deep_learning/Mask-aided Object Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/24/deep_learning/Mask-aided Object Detection/" itemprop="url">Mask-aided Object Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-24T13:31:50+08:00">
+                2022-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Help-generate-proposal"><a href="#Help-generate-proposal" class="headerlink" title="Help generate proposal:"></a>Help generate proposal:</h2><h3 id="Help-generate-proposal-1"><a href="#Help-generate-proposal-1" class="headerlink" title="Help generate proposal:"></a>Help generate proposal:</h3><ol>
+<li><p>Combine semantic mask with feature map (e.g., concatenation, summation) to help predict bounding boxes: <a href="https://papers.nips.cc/paper/2021/file/20885c72ca35d75619d6a378edea9f76-Paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2006.15056.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+<li><p>Generate proposals from semantic mask: <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Diba_Weakly_Supervised_Cascaded_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> </p>
+</li>
+</ol>
+<h3 id="Help-select-proposal"><a href="#Help-select-proposal" class="headerlink" title="Help select proposal:"></a>Help select proposal:</h3><ol>
+<li><p>Assign weights to proposals based on semantic mask: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Li_Weakly_Supervised_Object_Detection_With_Segmentation_Collaboration_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+<li><p>Use semantic mask surrounding each proposal as auxilary feature: <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Yunchao_Wei_TS2C_Tight_Box_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Yan Liu, Zhijie Zhang, Li Niu, Junjie Chen, Liqing Zhang, “Mixed Supervised Object Detection by Transferring Mask Prior and Semantic Similarity”, NeurIPS, 2021. </p>
+<p>[2] Zitian Chen, Zhiqiang Shen, Jiahui Yu, Erik Learned-Miller: “Cross-Supervised Object Detection.” arXiv preprint arXiv:2006.15056 (2020)</p>
+<p>[3] Zhao, Xiangyun, Shuang Liang, and Yichen Wei. “Pseudo mask augmented object detection.” CVPR, 2018.</p>
+<p>[4] Diba, Ali, et al. “Weakly supervised cascaded convolutional networks.” CVPR, 2017.</p>
+<p>[5] Li, Xiaoyan, et al. “Weakly supervised object detection with segmentation collaboration.” ICCV, 2019.</p>
+<p>[6] Wei, Yunchao, et al. “Ts2c: Tight box mining with surrounding segmentation context for weakly supervised object detection.” ECCV, 2018.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/VirtualBox/Install VirtualBox Guest Addition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/VirtualBox/Install VirtualBox Guest Addition/" itemprop="url">Install VirtualBox Guest Addition</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Before install guest addition from CD, do the following</p>
+<p> <code>sudo apt-get install dkms build-essential linux-headers-generic linux-headers-$(uname -r)</code></p>
+<p> For missing linux kernel headers or other common problems, refer to <a href="http://blog.ackx.net/virtualbox-guest-additions-common-errors.html" target="_blank" rel="noopener">this</a>.</p>
+<p> use <code>uname -r</code> or <code>uname -a</code> to look up the kernel version, use <code>dpkg --get-selections | grep linux</code> to check the installed linux kernels.</p>
+</li>
+<li><p>If you click the sharefolder item in the menubar and get the follwing error: ‘The VirtualBox Guest Additions do not seem to be available on this virtual machine, and shared folders cannot be used without them’, the following commands may be helpful.  </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install virtualbox-guest-additions-iso</span><br><span class="line">sudo apt-get update </span><br><span class="line">sudo apt-get dist-upgrade</span><br><span class="line">sudo apt-get install virtualbox-guest-x11</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/VirtualBox/Enlarge VirtualBox vdi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/VirtualBox/Enlarge VirtualBox vdi/" itemprop="url">Enlarge VirtualBox vdi</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Go to virtualbox installation directory and execute the following command:</p>
+<p>  <code>D:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyhd &quot;F:\VirtualBox\my ubuntu.vdi&quot; --resize 15360</code></p>
+<p> Note 15360 is the new size (M), this command can only enlarge the size.</p>
+</li>
+<li><p>Install gparted by <code>sudo apt-get install gparted</code> and make the extended disk space available to use.</p>
+</li>
+<li><p>Remount <code>/home</code> to the new disk. For concrete steps, refer to this <a href="https://help.ubuntu.com/community/Partitioning/Home/Moving" target="_blank" rel="noopener">link</a>. </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/version_control/Git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/version_control/Git/" itemprop="url">Git</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/version-control/" itemprop="url" rel="index">
+                    <span itemprop="name">version control</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/t0IXoZq.jpg" width="50%" height="50%"></p>
+<ol>
+<li><p><strong>Initialize center and local repository</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>init from scratch</span><br><span class="line">git init &lt;local_dir&gt;</span><br><span class="line"><span class="meta">#</span>for central repository without working directory, use --bare</span><br><span class="line">git init --bare &lt;local_dir&gt;</span><br><span class="line"><span class="meta">#</span>clone from GitHub, can just clone a subdirectory XXX/XXX</span><br><span class="line">git clone &lt;remote_repo&gt; &lt;remote_dir&gt;</span><br><span class="line"><span class="meta">#</span>pull from other local repository</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Configuration</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name $name</span><br><span class="line">git config --global user.email $email</span><br><span class="line">git config --global alias.$alias-name $git-command</span><br><span class="line">git config --system core.editor $editor # e.g., vim</span><br><span class="line">git config --global --edit</span><br></pre></td></tr></table></figure>
+<p><code>.git/config</code>  Repository-specific settings.<br><code>~/.gitconfig</code>  User-specific settings. This is where options set with the —global flag are stored.<br><code>/etc/gitconfig</code> System-wide settings.</p>
+</li>
+<li><p><strong>Staged snapshot in the staging area</strong><br>operations on tracked files:</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br><span class="line">git add &lt;dir&gt;</span><br><span class="line">git add . #add all the files in the current directory</span><br><span class="line">git add * #add  all the files and folders in the current directory</span><br><span class="line"><span class="meta">#</span>reversion for add</span><br><span class="line">git reset &lt;file&gt; #lead to untracked &lt;file&gt;</span><br><span class="line">rm &lt;file&gt; #del &lt;file&gt;</span><br><span class="line"></span><br><span class="line">git rm &lt;file&gt; #remove from both staging area and working directory  	</span><br><span class="line"><span class="meta">#</span>reversion for rm</span><br><span class="line">git reset HEAD &lt;file&gt; #lead to unstaged rm &lt;file&gt;</span><br><span class="line">git checkout &lt;file&gt; #recover &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>mv = rm+add, so its reversion is the combination of those for add and rm</span><br><span class="line">git mv &lt;old name&gt; &lt;new name&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>clear the entire staging area</span><br><span class="line">git reset HEAD</span><br></pre></td></tr></table></figure>
+<p>before using <code>git add .</code> or <code>git add *</code>, we can exclude the untracked files in <code>.gitignore</code> (e.g., <code>*.&lt;ext&gt;</code>, <code>&lt;dir&gt;/</code>, use <code>!&lt;file&gt;</code> for exception).<br>to untrack added files, use <code>git rm --cached &lt;filename&gt;</code></p>
+</li>
+<li><p><strong>Commit the staged snapshot</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "&lt;message&gt;"  #new commit node</span><br><span class="line">git commit --amend #old commit node</span><br><span class="line"><span class="meta">#</span>`-a` means staging all the modifications of tracked files</span><br><span class="line">git commit -a -m "&lt;message&gt;" </span><br><span class="line">git commit -a --amend</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Branch</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch #list local branches		</span><br><span class="line">git branch &lt;new_branch&gt; #create a new branch </span><br><span class="line">git branch -d &lt;old_branch&gt; #use -D enforce delete</span><br><span class="line">git checkout &lt;old_branch&gt; #switch to branch $branch </span><br><span class="line">git checkout -b &lt;new_branch&gt; #switch to a new branch $branch</span><br></pre></td></tr></table></figure>
+<p> (a) Imaging there exists a hash table of <code>key:value</code> pairs with branch name as key and commit node as value. When checkout a new branch b1, <code>b1:current-commit-code</code> will be stored in the hash table. When checkout an existing branch b1, you will reach the hashed commit code. In both cases, b1 (HEAD) will be used as the hash key for the next commit node, that is, when you commit next time, <code>b1:new-commit-code</code> will be updated in the hash table.<br> (b) Another perspective is treating the branch name as a pointer to the commit node and each branch is a retrospective history dating back from that node, which is essentially the same as (a).</p>
+<p> When checkout to another branch, git status (staged or unstaged modifications) will be transferred to that branch. If there exists file conflicts (operations on common yet different files), checkout will be forbidden. </p>
+<p> Besides <code>branch</code>, users can also add <code>tag</code> to each commit node.</p>
+<p> <img src="https://i.imgur.com/eZBhlc6.jpg" alt=""></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>assume the current branch is master</span><br><span class="line"><span class="meta">#</span>merge: merge experiment into master</span><br><span class="line"><span class="meta">#</span>master moves one step forward, both experiment and original master are its parents</span><br><span class="line">git merge experiment</span><br><span class="line"><span class="meta">#</span>assume the current branch is experiment</span><br><span class="line"><span class="meta">#</span>rebase: base experiment on master</span><br><span class="line"><span class="meta">#</span>duplicate the nodes between C2 and experiment after master, move experiment to up-to-date</span><br><span class="line">git rebase master</span><br><span class="line"><span class="meta">#</span>in the simple fast-forward case, assume &lt;branch&gt; is ahead of &lt;branch1&gt;</span><br><span class="line"><span class="meta">#</span>then, `merge &lt;branch1&gt; &lt;branch2&gt;` and `rebase &lt;branch1&gt; &lt;branch2&gt;` work the same, just move &lt;branch1&gt; to &lt;branch2&gt;.</span><br><span class="line"><span class="meta">#</span>whereas, `merge &lt;branch2&gt; &lt;branch1&gt;` or `rebase &lt;branch2&gt; &lt;branch1&gt;` are not allowed.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Tracking changes</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status </span><br><span class="line">git log #commit history</span><br><span class="line">git log -n &lt;limit&gt; --stat</span><br><span class="line">git log --grep="&lt;pattern&gt;"</span><br><span class="line">git log --author="John Smith" -p hello.py</span><br><span class="line">git diff #view unstaged modification</span><br><span class="line">git diff --cached #view staged modification</span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line">git diff &lt;repo&gt;/&lt;branch1&gt;..&lt;branch2&gt;</span><br></pre></td></tr></table></figure>
+<p>when using <code>git log</code>, it will only show the ancestral commit nodes of current node. </p>
+</li>
+<li><p><strong>Date back to history</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>revert the operations in &lt;commit&gt; and add one commit node ahead of HEAD</span><br><span class="line"><span class="meta">#</span>revert does not work on file</span><br><span class="line">git revert &lt;commit&gt;</span><br><span class="line"><span class="meta">#</span>go back to &lt;commit&gt;</span><br><span class="line"><span class="meta">#</span>git checkout &lt;commit&gt; &lt;file&gt; is just copying the &lt;file&gt; in &lt;commit&gt;</span><br><span class="line">git checkout &lt;commit&gt;  		</span><br><span class="line"><span class="meta">#</span>git reset &lt;commit&gt; changes branch name, working directory, and staged index</span><br><span class="line"><span class="meta">#</span>git reset &lt;file&gt; is removing the staged file</span><br><span class="line">git reset --mixed &lt;commit&gt; #default, save the working directory</span><br><span class="line">git reset --soft &lt;commit&gt; #save both working directory and staged index</span><br><span class="line">git reset --hard &lt;commit&gt; #save none, dangerous!</span><br></pre></td></tr></table></figure>
+<p>(a) For reset file, there are no options <code>--hard</code> and <code>--soft</code>.<br>(b) For reset commit, after <code>reset --mixed</code> or <code>reset --hard</code>, there are no staged snapshots. After <code>reset --soft</code>, staged snapshots enable the staged index to remain the same. More specifically, at the time before or after <code>reset --soft</code>, if you run <code>git commit</code>, the generated commit node should be the same. </p>
+</li>
+</ol>
+<ol>
+<li><p><strong>Communicate with remote repositories</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git remote -v #list remote repositories</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git branch -r #list the fetched branches of remote repositories</span><br><span class="line"></span><br><span class="line">git fetch &lt;repo&gt;  # fetch all of the remote branches</span><br><span class="line">git fetch &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git checkout -b &lt;new_branch&gt; &lt;repo&gt;/&lt;remote_branch&gt; # Checking out a local copy of specific branch</span><br><span class="line">git pull &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git push &lt;origin&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
+<p>after merging code to address the conflict, use <code>git commit -a -m &quot;$message&quot;</code>, then <code>git push</code>.</p>
+<p> <code>git pull</code> is equal to a <code>git fetch</code> followed by a <code>git merge</code>.</p>
+</li>
+<li><p><strong>Clean working directory</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clean -f/d #clean untracked files/directory</span><br><span class="line">git clean -f $path #clean untracked files in $path</span><br><span class="line"><span class="meta">#</span>`git clean` is often used togther with `git reset —hard`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Stashing</strong></p>
+<p>If you are working in your repository, and your workflow is interrupted by another project, you can save the current state of your repository (the working directory and the staging index) in the Git stash. When you are ready to start working where you left off, you can restore the stashed repository state. Note that doing a stash gives you a clean working directory, and leaves you at the last commit. </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git stash save # stash the current state</span><br><span class="line">git stash list # see what is in the Git stash:</span><br><span class="line">git stash apply # return your stashed state to the working directory</span><br><span class="line">git stash pop # return your stashed state to the working directory and delete it from the stash</span><br></pre></td></tr></table></figure>
+<p>Note the commit-tree grows. “git log” prints the path from root to current node. “leave behind” prints the path from current node to the first common ancestor between current node and new node. Detached head will be off any branch, so create a new branch for the detached head. </p>
+</li>
+</ol>
+<p><strong>Tips:</strong></p>
+<ol>
+<li><code>checkout</code> and <code>reset</code> work on both file and commit with different meanings and usages, while <code>revert</code> only works on commit.</li>
+<li><code>reset</code> is often used for cancelling uncommited changes while <code>revert</code> is often used for cancelling commited changes.</li>
+<li>Compared with <code>reset</code>, <code>checkout</code> and <code>revert</code> focus on the modification, so they are forbidden in many cases.</li>
+</ol>
+<p><strong>Github User:</strong></p>
+<ol>
+<li>create a repository on GitHub</li>
+<li>create a local folder</li>
+<li><code>git init</code></li>
+<li><code>git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</code></li>
+<li><code>git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
+<li><code>git push --set-upstream &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
+<li>add files</li>
+<li><code>git add *</code></li>
+<li><code>git commit -m &quot;msg&quot;</code></li>
+<li><code>git push</code> </li>
+</ol>
+<p><strong>Resources:</strong><br>A good Chinese tutorial for git is <a href="http://git.oschina.net/progit/index.html" target="_blank" rel="noopener">here</a>.<br>A good English tutorial for git is <a href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank" rel="noopener">here</a>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/library/Ubuntu JDK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/library/Ubuntu JDK/" itemprop="url">Ubuntu JDK</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Remove default OpenJDK</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge openjdk-\*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>download jdk(containing jre) and tar.</p>
+</li>
+<li><p>add into /etc/profile</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=&quot;/home/newly/Program_Files/Java/jdk1.8.0_65&quot;</span><br><span class="line">PATH=&quot;$PATH:$JAVA_HOME/jre/bin:$JAVA_HOME/bin&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>set newly installed jdk as default jdk.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install "/usr/bin/java" "java" "$JAVA_HOME/bin/java" 1</span><br><span class="line">sudo update-alternatives --install "/usr/bin/javac" "javac" "$JAVA_HOME/bin/javac" 1</span><br><span class="line">sudo update-alternatives --install "/usr/bin/javaws" "javaws" "$JAVA_HOME/bin/javaws" 1</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/library/OpenCV/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/library/OpenCV/" itemprop="url">OpenCV</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Locate-OpenCV"><a href="#Locate-OpenCV" class="headerlink" title="Locate OpenCV:"></a>Locate OpenCV:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg-config --modversion opencv //version</span><br><span class="line">pkg-config --cflags opencv //include file path</span><br><span class="line">pkg-config --libs opencv //library path</span><br></pre></td></tr></table></figure>
+<h3 id="Uninstall-OpenCV"><a href="#Uninstall-OpenCV" class="headerlink" title="Uninstall OpenCV:"></a>Uninstall OpenCV:</h3><ol>
+<li>go to the compile package and <code>make uninstall</code></li>
+<li>if cannot find the compile package, <code>sudo find / -name &quot;*opencv*&quot; -exec rm -i {} \;</code></li>
+</ol>
+<h3 id="Install-OpenCV"><a href="#Install-OpenCV" class="headerlink" title="Install OpenCV:"></a>Install OpenCV:</h3><p><strong>For Windows: C++(Visual Studio)</strong></p>
+<ol>
+<li>Download latest OpenCV from <a href="http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect" target="_blank" rel="noopener">http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect</a>.</li>
+<li>Make a dir named build. Use cmake to generate OpenCV.sln in build.</li>
+<li>Click OpenCV.sln and CMakeTargets-&gt;INSTALL-&gt;build. You can build it in both debug and release modes.</li>
+<li>In the environmental variables, add D:\Program Files\OpenCV_3.0.0\build\install\x64\vc11 as OPENCV_DIR, add Path with %OPENCV_DIR%\bin. </li>
+<li>Create a OpenCV project. C/C++-&gt;General-&gt;Additional Include Directories: $(OPENCV_DIR)\..\..\include</li>
+<li>Linker-&gt;General-&gt;Additional Library Directories: $(OPENCV_DIR)\lib</li>
+<li>Linker-&gt;Input-&gt;Additional Dependencies: copy all the lib files. <em>*</em>d.lib means debug mode.</li>
+</ol>
+<p>Note that there may be some problems for visual studio to recognize the updated environmental variable. Try to restart the visual studio or recreate the project.</p>
+<p><strong>For Linux: install for C++</strong></p>
+<ol>
+<li>pre-install packages<br>[compiler] sudo apt-get install build-essential<br>[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev<br>[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</li>
+<li>download the required version on <a href="https://sourceforge.net/projects/opencvlibrary/" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/</a></li>
+<li>make and install <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake ..     //cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Tips: if you want to install multiple versions of OpenCV, set CMAKE_INSTALL_PREFIX differently for different versions of OpenCV.</p>
+<pre><code class="lang-shell">cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D INSTALL_C_EXAMPLES=ON \
+    -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
+    -D PYTHON_EXECUTABLE=/usr/bin/python \
+    -D BUILD_EXAMPLES=ON ..
+</code></pre>
+<p>If want to turn off some modules, use <code>-D BUILD_opencv_xfeatures2d=OFF</code> </p>
+<p><strong>Switch between different versions of OpenCV:</strong></p>
+<p>switch from version 3.2 to version 2.4 <a href="\code\OpenCV\switch_to_2.4.13.sh">shell</a></p>
+<p>switch from version 2.4 to version 3.2 <a href="\code\OpenCV\switch_to_3.2.0.sh">shell</a></p>
+<p><strong>For Linux: Python(Anaconda)</strong></p>
+<pre><code class="lang-shell">source activate tgt_env
+conda install -c https://conda.binstar.org/menpo opencv
+spyder
+</code></pre>
+<p>Then try <code>import cv2</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/library/GStreamer+FFmpeg for Ubuntu14.04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/library/GStreamer+FFmpeg for Ubuntu14.04/" itemprop="url">GStreamer+FFmpeg for Ubuntu14.04</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>Install gst-plugin</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install gstffmpeg</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/IDE/Remote Debugging for Eclipse+PyDev/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/IDE/Remote Debugging for Eclipse+PyDev/" itemprop="url">Remote Debugging for Eclipse+PyDev</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/IDE/" itemprop="url" rel="index">
+                    <span itemprop="name">IDE</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="When-server-is-Linux-client-is-Windows-using-Python"><a href="#When-server-is-Linux-client-is-Windows-using-Python" class="headerlink" title="When server is Linux, client is Windows, using Python."></a>When server is Linux, client is Windows, using Python.</h2><h3 id="In-the-python-file"><a href="#In-the-python-file" class="headerlink" title="In the python file:"></a>In the python file:</h3><p>add the following code<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pydevd</span><br><span class="line">pydevd.settrace(<span class="string">'202.120.38.30'</span>, port=<span class="number">5678</span>)</span><br></pre></td></tr></table></figure></p>
+<p>in which the IP address is the Windows IP and the port is the default Eclipse debugger port.</p>
+<h3 id="Under-Linux"><a href="#Under-Linux" class="headerlink" title="Under Linux:"></a>Under Linux:</h3><ol>
+<li><code>pip install pydevd</code></li>
+<li>In the file <code>lib/python2.7/site-packages/pydevd_file_utils.py</code>, modify <code>PATHS_FROM_ECLIPSE_TO_PYTHON = [(r&#39;L:\test&#39;, r&#39;/home/niuli/test&#39;)]</code>, in which the former is Windows path and the latter is Linux path.</li>
+</ol>
+<h3 id="Under-Windows"><a href="#Under-Windows" class="headerlink" title="Under Windows:"></a>Under Windows:</h3><ol>
+<li>Install Eclipse IDE and PyDev plugin for Eclipse.</li>
+<li>Pydev-&gt;Start Debug Server</li>
+<li>Open the Debug perspective and watch Debug Server.</li>
+</ol>
+<p>After the above preparation, run python code under Linux and the debugging process will jump to the debug server under Windows. For interactive debugging, open PyDev Debug Console.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/IDE/Install JDK and Eclipse/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -600,1396 +1962,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/Medical Image Format/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/software/Medical Image Format/" itemprop="url">Medical Image Format</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h3><ol>
-<li><strong>DICOM:</strong> (Digital Imaging and COmmunications in Medicine) meta info + raw data</li>
-<li><strong>nrrd:</strong> meta info (e.g., sizes, dimension, encoding, endian) + raw data</li>
-</ol>
-<p>The meta info in <code>nrrd</code> mainly consists of the format of raw data while the meta info in <code>DICOM</code> contains the detailed information of patient, study, and series.<br>There exist matlab and python functions to read DICOM and nrdd files.</p>
-<ul>
-<li>MATLAB<ul>
-<li>DICOM: dicominfo, dicomread</li>
-<li>nrrd: <a href="\code\medical_image\nrrdread.m">nrrdread</a></li>
-<li>conversion from DICOM to nrrd: <a href="\code\medical_image\Dicom2nrrd.m">Dicom2nrrd</a></li>
-</ul>
-</li>
-</ul>
-<p>DICOM is generally a directory containing a sequence of slices while nrrd is a single file. The meta info of DICOM is more complicated and thus more error-prone than that of nrrd. Use <a href="https://github.com/Slicer/Slicer/tree/master/Modules/Scripted/DICOMPatcher" target="_blank" rel="noopener">DICOMPatcher</a> to fix up DICOM files if errors occur when loading them to 3D Slicer.</p>
-<h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><ol>
-<li><p><strong>3D Slicer</strong>: cross-platform, compatible with different formats (e.g., DICOM and nrrd), and convert between them.</p>
-</li>
-<li><p>Other softwares to view medical images: <a href="http://www.cabiatl.com/mricro/dicom/#links" target="_blank" rel="noopener">http://www.cabiatl.com/mricro/dicom/#links</a></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/MATLAB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/software/MATLAB/" itemprop="url">MATLAB</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>run MATLAB using shellscript</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matlab -nodisplay -r "vid2frames('../data/regular_videos/', 'RiceCam106.MP4', '../data/frames/', '.png');exit"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>VideoReader: NumberOfFrames is 0, cannot read frames.</p>
-<p> something is wrong with gstreamer, first get the right version of gstreamer (0.10 for MATLAB R2015b)    </p>
-<ul>
-<li><p>install gst-plugins</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install gstffmpeg</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/MarkdownPad/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/software/MarkdownPad/" itemprop="url">MarkdownPad</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p><strong>Problem</strong>: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControl<br><strong>solution</strong>: Win+R to open regedit: change the following value from 1 to 0<br> <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled</code></p>
-</li>
-<li><p><strong>Problem</strong>: How to suppport Latex: MathJax?<br><strong>solution</strong>: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following:</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span></span><br><span class="line">   src=<span class="string">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:</p>
-<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script></li>
-</ol>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
-<li>insert image: <code>&lt;center&gt;&lt;img src=&quot;http://....jpg&quot; width=50% border=&quot;0&quot;&gt;&lt;/center&gt;</code></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/LaTeX/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/software/LaTeX/" itemprop="url">LaTeX</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><ul>
-<li><p>Ubuntu</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	</span><br><span class="line">sudo apt-get install texmaker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Windows</p>
-<ol>
-<li>Install Miktex: <a href="https://miktex.org/download" target="_blank" rel="noopener">https://miktex.org/download</a></li>
-<li>Install texmaker or texstudio</li>
-</ol>
-</li>
-</ul>
-<h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension:"></a>Extension:</h2><ol>
-<li>Latexdiff<ul>
-<li>Install perl: <a href="http://www.perl.org/get.html" target="_blank" rel="noopener">http://www.perl.org/get.html</a> </li>
-<li>Download latexdiff.zip package from <a href="https://ctan.org/pkg/latexdiff" target="_blank" rel="noopener">https://ctan.org/pkg/latexdiff</a></li>
-<li>Unzip the latexdiff files and copy them to the Perl\perl\bin folder</li>
-<li><code>latexdiff draft.tex revision.tex &gt; diff.tex</code></li>
-</ul>
-</li>
-</ol>
-<h2 id="Math-input"><a href="#Math-input" class="headerlink" title="Math input:"></a>Math input:</h2><ol>
-<li><p>Include the <a href="\code\LaTeX\definition.py">definition.tex</a>  file with macro definition. <code>\input{definition}</code> in the main text.</p>
-</li>
-<li><p><a href="https://mathpix.com/" target="_blank" rel="noopener">Mathpix Snip</a> can convert images to LaTeX.</p>
-</li>
-<li><p><a href="http://www.jonathanleroux.org/software/iguanatex/" target="_blank" rel="noopener">IguanaTex</a> allows you to insert LaTeX formulations in PowerPoint.</p>
-</li>
-</ol>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
-<li><p>Refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/latex_symbols.pdf" target="_blank" rel="noopener">this</a> for commonly used symbols</p>
-</li>
-<li><p>Set color: <code>\usepackage{xcolor}</code> and <code>\textcolor{red}{}</code></p>
-</li>
-<li><p>Setlength: set the indentation in paragraphs <code>\setlength\parindent{0pt}</code>; set the separation between paragraphs <code>\setlength{\parskip}{10pt}</code>; set column width in table <code>\setlength{\tabcolsep}{12pt}</code>; set the space below table/figure <code>\setlength{\textfloatsep}{2pt}</code></p>
-</li>
-<li><p>Math annotation: expectation <code>\usepackage{amsfonts}</code> and <code>\mathbb{E}</code>; not imply: <code>\usepackage{amssymb}</code> and <code>\nRightarrow</code></p>
-</li>
-<li><p>Encoding error: try adding <code>\UseRawInputEncoding</code> or <code>\usepackage[utf8x]{inputenc}</code> or <code>\usepackage{newunicodechar}</code> <code>\newunicodechar{ﬁ}{fi}</code> </p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/TensorFlow Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/TensorFlow Learning Note/" itemprop="url">TensorFlow Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><hr>
-<p>shape = [batch,height,width,channel]<br><strong>constant:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.zeros(shape)</span><br><span class="line">tf.constant(<span class="number">0.4</span>, shape)</span><br><span class="line">tf.random_norm(shape, stddev=<span class="number">1e-1</span>)</span><br><span class="line">tf.truncated_norm(shape, stddev=<span class="number">1e-1</span>)</span><br></pre></td></tr></table></figure></p>
-<p><strong>variable:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_variable(varname, shape=[<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>], initializer=XXX)</span><br><span class="line">initializer=tf.zeros_initializer() <span class="comment"># bias</span></span><br><span class="line">initializer=tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>) </span><br><span class="line">initializer=tf.truncated_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">initializer=tf.contrib.layers.xavier_initializer() <span class="comment"># weight</span></span><br></pre></td></tr></table></figure></p>
-<p>Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal.</p>
-<h3 id="Summary-for-tensorboard"><a href="#Summary-for-tensorboard" class="headerlink" title="Summary for tensorboard"></a>Summary for tensorboard</h3><hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.scalar(<span class="string">'total_loss'</span>, total_loss) <span class="comment">#scalar, histogram, etc</span></span><br><span class="line">self.merged = tf.summary.merge_all()</span><br><span class="line">train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) <span class="comment">#include the sess graph</span></span><br><span class="line">train_writer.add_summary(summary, ibatch)</span><br></pre></td></tr></table></figure>
-<p>after running the code, open tensorboard <code>tensorboard --logdir=&#39;./train&#39;</code></p>
-<h3 id="Checkpoint"><a href="#Checkpoint" class="headerlink" title="Checkpoint"></a>Checkpoint</h3><hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># save all the variables</span></span><br><span class="line">saver = tf.train.Saver() </span><br><span class="line"><span class="comment"># save partial variables </span></span><br><span class="line">saver = tf.train.Saver(&#123;<span class="string">"my_v2"</span>: v2&#125;)</span><br><span class="line"><span class="comment"># save and restore</span></span><br><span class="line">saver.save(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line">saver.restore(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line"><span class="comment"># restore partial variables</span></span><br><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure>
-<p>inspect the checkpoint file<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python <span class="keyword">import</span> pywrap_tensorflow  </span><br><span class="line">checkpoint_path = os.path.join(model_dir, <span class="string">"model.ckpt"</span>)  </span><br><span class="line">reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path)  </span><br><span class="line">var_to_shape_map = reader.get_variable_to_shape_map()  </span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> var_to_shape_map:  </span><br><span class="line">    print(<span class="string">"tensor_name: "</span>, key)  </span><br><span class="line">    print(reader.get_tensor(key)) <span class="comment"># Remove this is you want to print only variable names</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h3><hr>
-<ul>
-<li><p>convolutional layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kernel = tf.Variable(tf.zeros([<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>]))</span><br><span class="line">tf.nn.conv2d(x, kernel, strides=[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>) <span class="comment"># padding is 'SAME' or 'VALID' depending on stride is 1 or larger</span></span><br><span class="line"></span><br><span class="line">tf.nn.bias_add(prev_layer, bias)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dropout layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line"><span class="comment"># set keep_prob as 0.5 during training and 1 during testing</span></span><br><span class="line">tf.nn.dropout(h_fc1, keep_prob)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>pooling layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(x, ksize=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>],  strides=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], padding=<span class="string">'VALID'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>loss layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))</span><br><span class="line">	tf.nn.l2_loss(prev_layer)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>metric layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculate top-k accuracy</span></span><br><span class="line">tf.nn.in_top_k(logits, label_holder, k) <span class="comment"># the accuracy of top k</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>activation layer<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(prev_layer)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>other layers<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tf.one_hot(self.input_class, self.n_class)</span><br><span class="line">tf.nn.embedding_lookup(codebook, indices)</span><br><span class="line">tf.nn.lrn() <span class="comment"># legacy</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Common-Operations"><a href="#Common-Operations" class="headerlink" title="Common Operations"></a>Common Operations</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tf.matmul</span><br><span class="line">tf.pow</span><br><span class="line">tf.diag_part</span><br><span class="line">tf.reduce_sum</span><br><span class="line">tf.reduce_mean</span><br><span class="line">tf.nn.softmax</span><br><span class="line">tf.tile(a,(<span class="number">2</span>,<span class="number">2</span>)) </span><br><span class="line">tf.nn.embedding_lookup</span><br><span class="line">sim.flatten</span><br><span class="line">tf.squeeze</span><br><span class="line">tf.reshape</span><br><span class="line">tf.concat(values=[a,b,c], axis=<span class="number">3</span>)</span><br><span class="line">tf.gather  <span class="comment">#get indexed value, only on 0-dim</span></span><br><span class="line">tf.gather_nd</span><br><span class="line">tf.map_fn</span><br><span class="line">tf.scan_fn</span><br><span class="line">tf.fold1/foldr</span><br></pre></td></tr></table></figure>
-<h3 id="Training-and-testing"><a href="#Training-and-testing" class="headerlink" title="Training and testing"></a>Training and testing</h3><hr>
-<ul>
-<li><p>training stage</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">optimizer = tf.train.GradientDescentOptimizer(<span class="number">0.01</span>)</span><br><span class="line">train = optimizer.minimize(loss)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>): <span class="comment">#note the iteration number here</span></span><br><span class="line">    sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>testing stage</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)</span><br><span class="line">sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><hr>
-<ul>
-<li><p>For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details.<br>  ``python<br>  with tf.Session(config=config) as sess:      </p>
-<pre><code>  coord = tf.train.Coordinator()
-  threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-  sess.run(tf.initialize_local_variables())
-  #main code
-  coord.request_stop()
-  coord.join(threads)
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* With tfrecord and slim, using queue is much easier by using 	`slim.queues.QueueRunners`</span><br><span class="line">	```python</span><br><span class="line">	with tf.Session(config=config) as sess:        </span><br><span class="line">		with slim.queues.QueueRunners(sess):</span><br><span class="line">	``` </span><br><span class="line">  or `sv.managed_session`</span><br><span class="line">	```python</span><br><span class="line">	sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None)        </span><br><span class="line">	    with sv.managed_session() as sess:</span><br></pre></td></tr></table></figure>
-<p>Sample code of generating tfrecord dataset and reading data via queue can downloaded <a href="\code\TensorFlow\generate_tfrecord.rar">here</a></p>
-</li>
-</ul>
-<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><hr>
-<ul>
-<li><p>check tensorflow version</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.__version__.split(<span class="string">'.'</span>)[<span class="number">0</span>] != <span class="string">"1"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>count parameter numbers</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) <span class="keyword">for</span> v <span class="keyword">in</span> tf.trainable_variables()])</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/TensorFlow Input Data with Queue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/TensorFlow Input Data with Queue/" itemprop="url">TensorFlow Input Data with Queue</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Input raw data (e.g., text, image address). There are many different implementations of queue.</p>
-<ul>
-<li><p>feature-label pair: <a href="\code\TensorFlow\queue\feature_label_pair\customize_enqueue_op.py">[enqueue-op]</a> <a href="\code\TensorFlow\queue\feature_label_pair\customize_prefetch_func.py">[fetch-func]</a> <a href="\code\TensorFlow\queue\feature_label_pair\slice_input_producer.py">[slice-input-producer]</a> <a href="\code\TensorFlow\queue\feature_label_pair\string_input_producer.py">[string-input-producer]</a></p>
-</li>
-<li><p>image-image pair: <a href="\code\TensorFlow\queue\image_image_pair\slice_input_producer.py">[slice-input-producer]</a><a href="\code\TensorFlow\queue\image_image_pair\string_input_producer.py">[string-input-producer]</a></p>
-</li>
-</ul>
-</li>
-<li><p>A more elegant way is converting raw data to tfrecord format.</p>
-</li>
-</ol>
-<p><strong>Tips:</strong></p>
-<ol>
-<li><p>setting large number_of_threading (e.g., 10) is helpful.</p>
-</li>
-<li><p>shuffle the training samples to avoid homogenuity when necessary.</p>
-</li>
-<li><p>place the training data in local disk instead of removable disk (consider I/O speed).</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/TensorFlow GPU Usage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/TensorFlow GPU Usage/" itemprop="url">TensorFlow GPU Usage</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
-<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
-<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
-<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
-<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/Slim Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/Slim Learning Note/" itemprop="url">Slim Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>slim = tf.contrib.slim</p>
-<h3 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h3><p>for certain functions, assign default values to certain parameters</p>
-<pre><code>with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....)
-</code></pre><p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib/layers" target="_blank" rel="noopener">https://www.tensorflow.org/api_docs/python/tf/contrib/layers</a></p>
-<ul>
-<li>slim.conv2d </li>
-<li>slim.max_pool2d</li>
-<li>slim.avg_pool2d</li>
-<li>slim.dropout</li>
-<li>slim.batch_norm</li>
-<li>slim.softmax</li>
-<li>tf.repeat(inputs, repetitions, layer, <em>args, *</em>kwargs)</li>
-</ul>
-<p>class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])):<br> net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net)</p>
-<h3 id="Load-pretrained-model"><a href="#Load-pretrained-model" class="headerlink" title="Load pretrained model"></a>Load pretrained model</h3><p>Note that initialization function must be associated with sess.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure></p>
-<h3 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a>Batch normalization</h3><p><strong>With slim</strong>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">batch_norm_params = &#123;</span><br><span class="line">	    <span class="comment"># Decay for the moving averages.</span></span><br><span class="line">	    <span class="string">'decay'</span>: batch_norm_decay,</span><br><span class="line">	    <span class="comment"># epsilon to prevent 0s in variance.</span></span><br><span class="line">	    <span class="string">'epsilon'</span>: batch_norm_epsilon,</span><br><span class="line">	    <span class="comment"># collection containing update_ops.</span></span><br><span class="line">	    <span class="string">'updates_collections'</span>: tf.GraphKeys.UPDATE_OPS,</span><br><span class="line"> &#125;</span><br><span class="line">slim.arg_scope([slim.conv2d],  normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params)</span><br></pre></td></tr></table></figure></p>
-<p>For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded  moving-mean an moving_variance are used.</p>
-<p>To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways.</p>
-<p>The first method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line">variables_to_train = _get_variables_to_train()</span><br><span class="line">grads_and_vars = optimizer.compute_gradients(total_loss,  variables_to_train)</span><br><span class="line">grad_updates = optimizer.apply_gradients(grads_and_vars)</span><br><span class="line">update_ops.append(grad_updates)</span><br><span class="line">update_op = tf.group(*update_ops)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies([update_op]):</span><br><span class="line">    train_op = tf.identity(total_loss)</span><br></pre></td></tr></table></figure></p>
-<p>The second method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies(update_ops):</span><br><span class="line">	train_op = optimizer.minimize(loss)</span><br></pre></td></tr></table></figure></p>
-<p>The third method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_op = slim.learning.create_train_op(total_loss, optimizer)</span><br></pre></td></tr></table></figure></p>
-<p>Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings.</p>
-<p>However, when trained on small-scale  datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue:</p>
-<ul>
-<li><p>in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch.</p>
-</li>
-<li><p>decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs.</p>
-</li>
-</ul>
-<p><strong>without slim</strong>: tf.nn.batch_normalization, no moving_mean/variance<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">batchnorm</span><span class="params">(bn_input)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> tf.variable_scope(<span class="string">"batchnorm"</span>):</span><br><span class="line">		<span class="comment"># this block looks like it has 3 inputs on the graph unless we do this</span></span><br><span class="line">		bn_input = tf.identity(bn_input)</span><br><span class="line">		</span><br><span class="line">		channels = bn_input.get_shape()[<span class="number">3</span>]</span><br><span class="line">		offset = tf.get_variable(<span class="string">"offset"</span>, [channels], dtype=tf.float32, initializer=tf.zeros_initializer())</span><br><span class="line">		scale = tf.get_variable(<span class="string">"scale"</span>, [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(<span class="number">1.0</span>, <span class="number">0.02</span>))</span><br><span class="line">		mean, variance = tf.nn.moments(bn_input, axes=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], keep_dims=<span class="keyword">False</span>)</span><br><span class="line">		normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=<span class="number">1e-5</span>)</span><br><span class="line">		<span class="keyword">return</span> normalized	</span><br></pre></td></tr></table></figure></p>
-<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><p>print all model variables<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) <span class="comment"># all the global variables</span></span><br><span class="line">slim.get_model_variables() <span class="keyword">or</span> tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) </span><br><span class="line"><span class="comment">#variables defined by slim (tf.contrib.framework.model_variable)</span></span><br><span class="line"><span class="comment">#excluding gradient variables</span></span><br><span class="line">tf.trainable_variables() <span class="comment">#excluding graident variables and batch_norm variables (moving_mean and moving_variance)</span></span><br></pre></td></tr></table></figure></p>
-<p>print regularization losses(weight decay) and other losses<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slim.losses.get_regularization_losses()</span><br><span class="line">slim.losses.get_losses() <span class="comment"># losses except weight decay</span></span><br><span class="line">slim.losses.get_total_loss(add_regularization_losses=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2039,7 +2016,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">209</span>
+                  <span class="site-state-item-count">211</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

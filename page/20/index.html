@@ -281,6 +281,335 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Different Ways of Injecting Latent Code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Different Ways of Injecting Latent Code/" itemprop="url">Different Ways of Injecting Latent Code</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:46+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Given latent code z, how to inject it into an auto-encoder. skip-yes/no means whether using skip-connection is possible.</p>
+<ol>
+<li><p>Append it to the input image <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[1]</a>* or add it to the input image <a href="https://arxiv.org/pdf/1905.01164.pdf" target="_blank" rel="noopener">[7]</a> (skip-yes)</p>
+</li>
+<li><p>Append it to each layer in encoder <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a> (skip-yes)</p>
+</li>
+<li><p>Add it to the bottleneck feature <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> (skip-no)</p>
+</li>
+<li><p>Add to decoder layers using AdaIn <a href="https://arxiv.org/pdf/1812.04948.pdf" target="_blank" rel="noopener">[4]</a>* (skip-no) or a variant of AdaIn <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[5]</a> (skip-yes)</p>
+</li>
+<li><p>Add to decoder layers without AdaIn <a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>*</p>
+</li>
+</ol>
+<p>Injecting structured latent code <a href="https://arxiv.org/pdf/2004.12411.pdf" target="_blank" rel="noopener">[9]</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
+<p>[2] Toward Multimodal Image-to-Image Translation</p>
+<p>[3] Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</p>
+<p>[4] Karras, Tero, Samuli Laine, and Timo Aila. “A style-based generator architecture for generative adversarial networks.” CVPR, 2019.</p>
+<p>[5] High-Resolution Daytime Translation Without Domain Labels</p>
+<p>[6] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
+<p>[7] Tamar Rott Shaham, Tali Dekel, Tomer Michaeli, “SinGAN: Learning a Generative Model from a Single Natural Image”, ICCV2019</p>
+<p>[8] Lee, Hsin-Ying, et al. “Diverse image-to-image translation via disentangled representations.” ECCV, 2018.</p>
+<p>[9] Yazeed Alharbi, Peter Wonka: Disentangled Image Generation Through Structured Noise Injection. CVPR, 2020.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Deep Learning Platform/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/deep_learning/Deep Learning Platform/" itemprop="url">Deep Learning Platform</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:46+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Ready-made DevBox:</p>
+<ul>
+<li><a href="https://www.dell.com/en-us/gaming/alienware-desktops?cid=312465046&amp;st=alienware&amp;lid=59673390274&amp;ptaid=kwd-24191410&amp;VEN1=suyunKW6A%2C282265229036%2C901pdb6671%2Cc%2CM68G1rWA%2C%2C56626657187%2Ckwd-24191410&amp;VEN2=e%2Calienware&amp;pgrid=56626657187&amp;dgc=st&amp;dgseg=dhs&amp;acd=1230923830920560&amp;VEN3=113804489962527442" target="_blank" rel="noopener">Dell Alienware</a>: at most 2 GPUs</li>
+<li><a href="https://www.newegg.com/Product/Product.aspx?Item=9SIAB946K29620" target="_blank" rel="noopener">newegg</a>: 4 GPUs</li>
+<li><a href="https://lambdal.com/raw-configurator?product=quad-amd" target="_blank" rel="noopener">Lambda Labs</a>: 4 GPUs</li>
+</ul>
+</li>
+<li><p>Assemble: cheap, but no warranty</p>
+<ul>
+<li><a href="https://sites.google.com/site/ustcnewly/download/newegg_list.pdf?attredirects=0" target="_blank" rel="noopener">part list</a>: most things are out of date. <a href="https://www.tomshardware.com/" target="_blank" rel="noopener">Tom’s hardware</a> is a good website for comparison. </li>
+</ul>
+</li>
+<li><p>Nvidia</p>
+<ul>
+<li><p>microarchitecture: maxwell-&gt;pascal-&gt;volta</p>
+</li>
+<li><p><a href="https://www.nvidia.com/en-us/data-center/" target="_blank" rel="noopener">DGX-systems</a></p>
+</li>
+</ul>
+</li>
+<li><p>GPU cloud</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Deep Feature Invariance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1487,312 +1816,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Boundary-guided Semantic Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Boundary-guided Semantic Segmentation/" itemprop="url">Boundary-guided Semantic Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:46+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>propagate information within each non-boundary region <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Ding_Boundary-Aware_Feature_Propagation_for_Scene_Segmentation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
-</li>
-<li><p>focus on unconfident boundary regions <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Marin_Efficient_Segmentation_Learning_Downsampling_Near_Semantic_Boundaries_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>fuse boundary feature and image feature <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Takikawa_Gated-SCNN_Gated_Shape_CNNs_for_Semantic_Segmentation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ding, Henghui, et al. “Boundary-aware feature propagation for scene segmentation.” ICCV, 2019.</p>
-<p>[2] Marin, Dmitrii, et al. “Efficient segmentation: Learning downsampling near semantic boundaries.” ICCV, 2019.</p>
-<p>[3] Takikawa, Towaki, et al. “Gated-scnn: Gated shape cnns for semantic segmentation.” ICCV, 2019.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/deep_learning/Bio-inspired Network/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/deep_learning/Bio-inspired Network/" itemprop="url">Bio-inspired Network</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:46+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Use the first few layers to simulate neuron activation in human brain <a href="https://www.biorxiv.org/content/biorxiv/early/2020/10/22/2020.06.16.154542.full.pdf" target="_blank" rel="noopener">[1]</a> </p>
-</li>
-<li><p>Use the attention learnt by network to mimick human attention <a href="https://arxiv.org/pdf/1805.08819.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Dapello, Joel, et al. “Simulating a primary visual cortex at the front of CNNs improves robustness to image perturbations.” BioRxiv (2020).</p>
-<p>[2] Linsley, Drew, et al. “Learning what and where to attend.” arXiv preprint arXiv:1805.08819 (2018).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1842,7 +1870,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">209</span>
+                  <span class="site-state-item-count">211</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

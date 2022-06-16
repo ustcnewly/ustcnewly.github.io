@@ -281,6 +281,1391 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/Medical Image Format/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/Medical Image Format/" itemprop="url">Medical Image Format</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h3><ol>
+<li><strong>DICOM:</strong> (Digital Imaging and COmmunications in Medicine) meta info + raw data</li>
+<li><strong>nrrd:</strong> meta info (e.g., sizes, dimension, encoding, endian) + raw data</li>
+</ol>
+<p>The meta info in <code>nrrd</code> mainly consists of the format of raw data while the meta info in <code>DICOM</code> contains the detailed information of patient, study, and series.<br>There exist matlab and python functions to read DICOM and nrdd files.</p>
+<ul>
+<li>MATLAB<ul>
+<li>DICOM: dicominfo, dicomread</li>
+<li>nrrd: <a href="\code\medical_image\nrrdread.m">nrrdread</a></li>
+<li>conversion from DICOM to nrrd: <a href="\code\medical_image\Dicom2nrrd.m">Dicom2nrrd</a></li>
+</ul>
+</li>
+</ul>
+<p>DICOM is generally a directory containing a sequence of slices while nrrd is a single file. The meta info of DICOM is more complicated and thus more error-prone than that of nrrd. Use <a href="https://github.com/Slicer/Slicer/tree/master/Modules/Scripted/DICOMPatcher" target="_blank" rel="noopener">DICOMPatcher</a> to fix up DICOM files if errors occur when loading them to 3D Slicer.</p>
+<h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><ol>
+<li><p><strong>3D Slicer</strong>: cross-platform, compatible with different formats (e.g., DICOM and nrrd), and convert between them.</p>
+</li>
+<li><p>Other softwares to view medical images: <a href="http://www.cabiatl.com/mricro/dicom/#links" target="_blank" rel="noopener">http://www.cabiatl.com/mricro/dicom/#links</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/MATLAB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/MATLAB/" itemprop="url">MATLAB</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>run MATLAB using shellscript</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matlab -nodisplay -r "vid2frames('../data/regular_videos/', 'RiceCam106.MP4', '../data/frames/', '.png');exit"</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>VideoReader: NumberOfFrames is 0, cannot read frames.</p>
+<p> something is wrong with gstreamer, first get the right version of gstreamer (0.10 for MATLAB R2015b)    </p>
+<ul>
+<li><p>install gst-plugins</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>install gstffmpeg</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/MarkdownPad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/MarkdownPad/" itemprop="url">MarkdownPad</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p><strong>Problem</strong>: HTML cannot be rendered: the view has crashed awesomium: Awesomium.Windows.Controls.WebControl<br><strong>solution</strong>: Win+R to open regedit: change the following value from 1 to 0<br> <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled</code></p>
+</li>
+<li><p><strong>Problem</strong>: How to suppport Latex: MathJax?<br><strong>solution</strong>: tools &gt; Options &gt; Advanced &gt; HTML Head Editor, add the following:</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span></span><br><span class="line">   src=<span class="string">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>After adding the above, a simple example in the MarkDownPad: When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:</p>
+<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script></li>
+</ol>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
+<li>insert image: <code>&lt;center&gt;&lt;img src=&quot;http://....jpg&quot; width=50% border=&quot;0&quot;&gt;&lt;/center&gt;</code></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/software/LaTeX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/software/LaTeX/" itemprop="url">LaTeX</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><ul>
+<li><p>Ubuntu</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install texlive-full	</span><br><span class="line">sudo apt-get install texmaker</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows</p>
+<ol>
+<li>Install Miktex: <a href="https://miktex.org/download" target="_blank" rel="noopener">https://miktex.org/download</a></li>
+<li>Install texmaker or texstudio</li>
+</ol>
+</li>
+</ul>
+<h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension:"></a>Extension:</h2><ol>
+<li>Latexdiff<ul>
+<li>Install perl: <a href="http://www.perl.org/get.html" target="_blank" rel="noopener">http://www.perl.org/get.html</a> </li>
+<li>Download latexdiff.zip package from <a href="https://ctan.org/pkg/latexdiff" target="_blank" rel="noopener">https://ctan.org/pkg/latexdiff</a></li>
+<li>Unzip the latexdiff files and copy them to the Perl\perl\bin folder</li>
+<li><code>latexdiff draft.tex revision.tex &gt; diff.tex</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="Math-input"><a href="#Math-input" class="headerlink" title="Math input:"></a>Math input:</h2><ol>
+<li><p>Include the <a href="\code\LaTeX\definition.py">definition.tex</a>  file with macro definition. <code>\input{definition}</code> in the main text.</p>
+</li>
+<li><p><a href="https://mathpix.com/" target="_blank" rel="noopener">Mathpix Snip</a> can convert images to LaTeX.</p>
+</li>
+<li><p><a href="http://www.jonathanleroux.org/software/iguanatex/" target="_blank" rel="noopener">IguanaTex</a> allows you to insert LaTeX formulations in PowerPoint.</p>
+</li>
+</ol>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
+<li><p>Refer to <a href="http://bcmi.sjtu.edu.cn/~niuli/download/latex_symbols.pdf" target="_blank" rel="noopener">this</a> for commonly used symbols</p>
+</li>
+<li><p>Set color: <code>\usepackage{xcolor}</code> and <code>\textcolor{red}{}</code></p>
+</li>
+<li><p>Setlength: set the indentation in paragraphs <code>\setlength\parindent{0pt}</code>; set the separation between paragraphs <code>\setlength{\parskip}{10pt}</code>; set column width in table <code>\setlength{\tabcolsep}{12pt}</code>; set the space below table/figure <code>\setlength{\textfloatsep}{2pt}</code></p>
+</li>
+<li><p>Math annotation: expectation <code>\usepackage{amsfonts}</code> and <code>\mathbb{E}</code>; not imply: <code>\usepackage{amssymb}</code> and <code>\nRightarrow</code></p>
+</li>
+<li><p>Encoding error: try adding <code>\UseRawInputEncoding</code> or <code>\usepackage[utf8x]{inputenc}</code> or <code>\usepackage{newunicodechar}</code> <code>\newunicodechar{ﬁ}{fi}</code> </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/TensorFlow Learning Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/TensorFlow Learning Note/" itemprop="url">TensorFlow Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><hr>
+<p>shape = [batch,height,width,channel]<br><strong>constant:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.zeros(shape)</span><br><span class="line">tf.constant(<span class="number">0.4</span>, shape)</span><br><span class="line">tf.random_norm(shape, stddev=<span class="number">1e-1</span>)</span><br><span class="line">tf.truncated_norm(shape, stddev=<span class="number">1e-1</span>)</span><br></pre></td></tr></table></figure></p>
+<p><strong>variable:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_variable(varname, shape=[<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>], initializer=XXX)</span><br><span class="line">initializer=tf.zeros_initializer() <span class="comment"># bias</span></span><br><span class="line">initializer=tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>) </span><br><span class="line">initializer=tf.truncated_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">initializer=tf.contrib.layers.xavier_initializer() <span class="comment"># weight</span></span><br></pre></td></tr></table></figure></p>
+<p>Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal.</p>
+<h3 id="Summary-for-tensorboard"><a href="#Summary-for-tensorboard" class="headerlink" title="Summary for tensorboard"></a>Summary for tensorboard</h3><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.scalar(<span class="string">'total_loss'</span>, total_loss) <span class="comment">#scalar, histogram, etc</span></span><br><span class="line">self.merged = tf.summary.merge_all()</span><br><span class="line">train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) <span class="comment">#include the sess graph</span></span><br><span class="line">train_writer.add_summary(summary, ibatch)</span><br></pre></td></tr></table></figure>
+<p>after running the code, open tensorboard <code>tensorboard --logdir=&#39;./train&#39;</code></p>
+<h3 id="Checkpoint"><a href="#Checkpoint" class="headerlink" title="Checkpoint"></a>Checkpoint</h3><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># save all the variables</span></span><br><span class="line">saver = tf.train.Saver() </span><br><span class="line"><span class="comment"># save partial variables </span></span><br><span class="line">saver = tf.train.Saver(&#123;<span class="string">"my_v2"</span>: v2&#125;)</span><br><span class="line"><span class="comment"># save and restore</span></span><br><span class="line">saver.save(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line">saver.restore(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line"><span class="comment"># restore partial variables</span></span><br><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure>
+<p>inspect the checkpoint file<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python <span class="keyword">import</span> pywrap_tensorflow  </span><br><span class="line">checkpoint_path = os.path.join(model_dir, <span class="string">"model.ckpt"</span>)  </span><br><span class="line">reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path)  </span><br><span class="line">var_to_shape_map = reader.get_variable_to_shape_map()  </span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> var_to_shape_map:  </span><br><span class="line">    print(<span class="string">"tensor_name: "</span>, key)  </span><br><span class="line">    print(reader.get_tensor(key)) <span class="comment"># Remove this is you want to print only variable names</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h3><hr>
+<ul>
+<li><p>convolutional layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kernel = tf.Variable(tf.zeros([<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>]))</span><br><span class="line">tf.nn.conv2d(x, kernel, strides=[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>) <span class="comment"># padding is 'SAME' or 'VALID' depending on stride is 1 or larger</span></span><br><span class="line"></span><br><span class="line">tf.nn.bias_add(prev_layer, bias)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dropout layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line"><span class="comment"># set keep_prob as 0.5 during training and 1 during testing</span></span><br><span class="line">tf.nn.dropout(h_fc1, keep_prob)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pooling layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(x, ksize=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>],  strides=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], padding=<span class="string">'VALID'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>loss layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))</span><br><span class="line">	tf.nn.l2_loss(prev_layer)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>metric layer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculate top-k accuracy</span></span><br><span class="line">tf.nn.in_top_k(logits, label_holder, k) <span class="comment"># the accuracy of top k</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>activation layer<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(prev_layer)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>other layers<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tf.one_hot(self.input_class, self.n_class)</span><br><span class="line">tf.nn.embedding_lookup(codebook, indices)</span><br><span class="line">tf.nn.lrn() <span class="comment"># legacy</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Common-Operations"><a href="#Common-Operations" class="headerlink" title="Common Operations"></a>Common Operations</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tf.matmul</span><br><span class="line">tf.pow</span><br><span class="line">tf.diag_part</span><br><span class="line">tf.reduce_sum</span><br><span class="line">tf.reduce_mean</span><br><span class="line">tf.nn.softmax</span><br><span class="line">tf.tile(a,(<span class="number">2</span>,<span class="number">2</span>)) </span><br><span class="line">tf.nn.embedding_lookup</span><br><span class="line">sim.flatten</span><br><span class="line">tf.squeeze</span><br><span class="line">tf.reshape</span><br><span class="line">tf.concat(values=[a,b,c], axis=<span class="number">3</span>)</span><br><span class="line">tf.gather  <span class="comment">#get indexed value, only on 0-dim</span></span><br><span class="line">tf.gather_nd</span><br><span class="line">tf.map_fn</span><br><span class="line">tf.scan_fn</span><br><span class="line">tf.fold1/foldr</span><br></pre></td></tr></table></figure>
+<h3 id="Training-and-testing"><a href="#Training-and-testing" class="headerlink" title="Training and testing"></a>Training and testing</h3><hr>
+<ul>
+<li><p>training stage</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">optimizer = tf.train.GradientDescentOptimizer(<span class="number">0.01</span>)</span><br><span class="line">train = optimizer.minimize(loss)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>): <span class="comment">#note the iteration number here</span></span><br><span class="line">    sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>testing stage</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)</span><br><span class="line">sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><hr>
+<ul>
+<li><p>For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details.<br>  ``python<br>  with tf.Session(config=config) as sess:      </p>
+<pre><code>  coord = tf.train.Coordinator()
+  threads = tf.train.start_queue_runners(sess=sess, coord=coord)
+  sess.run(tf.initialize_local_variables())
+  #main code
+  coord.request_stop()
+  coord.join(threads)
+</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* With tfrecord and slim, using queue is much easier by using 	`slim.queues.QueueRunners`</span><br><span class="line">	```python</span><br><span class="line">	with tf.Session(config=config) as sess:        </span><br><span class="line">		with slim.queues.QueueRunners(sess):</span><br><span class="line">	``` </span><br><span class="line">  or `sv.managed_session`</span><br><span class="line">	```python</span><br><span class="line">	sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None)        </span><br><span class="line">	    with sv.managed_session() as sess:</span><br></pre></td></tr></table></figure>
+<p>Sample code of generating tfrecord dataset and reading data via queue can downloaded <a href="\code\TensorFlow\generate_tfrecord.rar">here</a></p>
+</li>
+</ul>
+<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><hr>
+<ul>
+<li><p>check tensorflow version</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.__version__.split(<span class="string">'.'</span>)[<span class="number">0</span>] != <span class="string">"1"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>count parameter numbers</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) <span class="keyword">for</span> v <span class="keyword">in</span> tf.trainable_variables()])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/TensorFlow Input Data with Queue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/TensorFlow Input Data with Queue/" itemprop="url">TensorFlow Input Data with Queue</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Input raw data (e.g., text, image address). There are many different implementations of queue.</p>
+<ul>
+<li><p>feature-label pair: <a href="\code\TensorFlow\queue\feature_label_pair\customize_enqueue_op.py">[enqueue-op]</a> <a href="\code\TensorFlow\queue\feature_label_pair\customize_prefetch_func.py">[fetch-func]</a> <a href="\code\TensorFlow\queue\feature_label_pair\slice_input_producer.py">[slice-input-producer]</a> <a href="\code\TensorFlow\queue\feature_label_pair\string_input_producer.py">[string-input-producer]</a></p>
+</li>
+<li><p>image-image pair: <a href="\code\TensorFlow\queue\image_image_pair\slice_input_producer.py">[slice-input-producer]</a><a href="\code\TensorFlow\queue\image_image_pair\string_input_producer.py">[string-input-producer]</a></p>
+</li>
+</ul>
+</li>
+<li><p>A more elegant way is converting raw data to tfrecord format.</p>
+</li>
+</ol>
+<p><strong>Tips:</strong></p>
+<ol>
+<li><p>setting large number_of_threading (e.g., 10) is helpful.</p>
+</li>
+<li><p>shuffle the training samples to avoid homogenuity when necessary.</p>
+</li>
+<li><p>place the training data in local disk instead of removable disk (consider I/O speed).</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/TensorFlow GPU Usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/TensorFlow GPU Usage/" itemprop="url">TensorFlow GPU Usage</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
+<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
+<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
+<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
+<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/TensorFlow/Slim Learning Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/21/programming_language/TensorFlow/Slim Learning Note/" itemprop="url">Slim Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
+                2022-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>slim = tf.contrib.slim</p>
+<h3 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h3><p>for certain functions, assign default values to certain parameters</p>
+<pre><code>with slim.arg_scope([func1, func2, ....], arg1=val1, arg2=val2, ....)
+</code></pre><p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib/layers" target="_blank" rel="noopener">https://www.tensorflow.org/api_docs/python/tf/contrib/layers</a></p>
+<ul>
+<li>slim.conv2d </li>
+<li>slim.max_pool2d</li>
+<li>slim.avg_pool2d</li>
+<li>slim.dropout</li>
+<li>slim.batch_norm</li>
+<li>slim.softmax</li>
+<li>tf.repeat(inputs, repetitions, layer, <em>args, *</em>kwargs)</li>
+</ul>
+<p>class Block(collections.namedtuple(‘Block’, [‘scope’, ‘unit_fn’, ‘args’])):<br> net = slim.utils.collect_named_outputs(outputs_collections, sc.name, net)</p>
+<h3 id="Load-pretrained-model"><a href="#Load-pretrained-model" class="headerlink" title="Load pretrained model"></a>Load pretrained model</h3><p>Note that initialization function must be associated with sess.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a>Batch normalization</h3><p><strong>With slim</strong>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">batch_norm_params = &#123;</span><br><span class="line">	    <span class="comment"># Decay for the moving averages.</span></span><br><span class="line">	    <span class="string">'decay'</span>: batch_norm_decay,</span><br><span class="line">	    <span class="comment"># epsilon to prevent 0s in variance.</span></span><br><span class="line">	    <span class="string">'epsilon'</span>: batch_norm_epsilon,</span><br><span class="line">	    <span class="comment"># collection containing update_ops.</span></span><br><span class="line">	    <span class="string">'updates_collections'</span>: tf.GraphKeys.UPDATE_OPS,</span><br><span class="line"> &#125;</span><br><span class="line">slim.arg_scope([slim.conv2d],  normalizer_fn=slim.batch_norm, normalizer_params=normalizer_params)</span><br></pre></td></tr></table></figure></p>
+<p>For tf.contrib.layers or tf.slim, when is_training=True, mean and variance based on each batch are used and moving_mean and moving_variance are updated if applicable. When is_training=False, loaded  moving-mean an moving_variance are used.</p>
+<p>To launch the update of moving_mean and moving_variance, special attention needs to be paid because this update operation is detached from gradient descent, which can be realized in the following ways.</p>
+<p>The first method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line">variables_to_train = _get_variables_to_train()</span><br><span class="line">grads_and_vars = optimizer.compute_gradients(total_loss,  variables_to_train)</span><br><span class="line">grad_updates = optimizer.apply_gradients(grads_and_vars)</span><br><span class="line">update_ops.append(grad_updates)</span><br><span class="line">update_op = tf.group(*update_ops)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies([update_op]):</span><br><span class="line">    train_op = tf.identity(total_loss)</span><br></pre></td></tr></table></figure></p>
+<p>The second method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)</span><br><span class="line"><span class="keyword">with</span> tf.control_dependencies(update_ops):</span><br><span class="line">	train_op = optimizer.minimize(loss)</span><br></pre></td></tr></table></figure></p>
+<p>The third method:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_op = slim.learning.create_train_op(total_loss, optimizer)</span><br></pre></td></tr></table></figure></p>
+<p>Otherwise, one can set updates_collections=None in slim.batch_norm to force the updates in place, but that can have a speed penalty, especially in distributed settings.</p>
+<p>However, when trained on small-scale  datasets, using moving_mean and moving_variance in the test stage often leads to extremely poor performance (close to random guess). This is due to the code start which renders moving_mean/variance unstable. There are two ways to fix the cold-start issue:</p>
+<ul>
+<li><p>in the testing stage, also set is_training=True, i.e., use the mean and variance based on each test batch.</p>
+</li>
+<li><p>decrease batch_norm running average decay from default 0.999 to something like 0.99, which can speed up the start-up. When tuning decay, there is a trade-off between warm-up speed and statistical accuracy. For small-scale datasets, warm-up may take exceedingly long time, e.g., 300 epochs.</p>
+</li>
+</ul>
+<p><strong>without slim</strong>: tf.nn.batch_normalization, no moving_mean/variance<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">batchnorm</span><span class="params">(bn_input)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> tf.variable_scope(<span class="string">"batchnorm"</span>):</span><br><span class="line">		<span class="comment"># this block looks like it has 3 inputs on the graph unless we do this</span></span><br><span class="line">		bn_input = tf.identity(bn_input)</span><br><span class="line">		</span><br><span class="line">		channels = bn_input.get_shape()[<span class="number">3</span>]</span><br><span class="line">		offset = tf.get_variable(<span class="string">"offset"</span>, [channels], dtype=tf.float32, initializer=tf.zeros_initializer())</span><br><span class="line">		scale = tf.get_variable(<span class="string">"scale"</span>, [channels], dtype=tf.float32, initializer=tf.random_normal_initializer(<span class="number">1.0</span>, <span class="number">0.02</span>))</span><br><span class="line">		mean, variance = tf.nn.moments(bn_input, axes=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], keep_dims=<span class="keyword">False</span>)</span><br><span class="line">		normalized = tf.nn.batch_normalization(bn_input, mean, variance, offset, scale, variance_epsilon=<span class="number">1e-5</span>)</span><br><span class="line">		<span class="keyword">return</span> normalized	</span><br></pre></td></tr></table></figure></p>
+<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><p>print all model variables<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) <span class="comment"># all the global variables</span></span><br><span class="line">slim.get_model_variables() <span class="keyword">or</span> tf.get_collection(tf.GraphKeys.MODEL_VARIABLES) </span><br><span class="line"><span class="comment">#variables defined by slim (tf.contrib.framework.model_variable)</span></span><br><span class="line"><span class="comment">#excluding gradient variables</span></span><br><span class="line">tf.trainable_variables() <span class="comment">#excluding graident variables and batch_norm variables (moving_mean and moving_variance)</span></span><br></pre></td></tr></table></figure></p>
+<p>print regularization losses(weight decay) and other losses<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slim.losses.get_regularization_losses()</span><br><span class="line">slim.losses.get_losses() <span class="comment"># losses except weight decay</span></span><br><span class="line">slim.losses.get_total_loss(add_regularization_losses=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/PyTorch/PyTorch Learning Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -792,1487 +2177,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/Python2/Python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/Python2/Python/" itemprop="url">Python</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>check type</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(n,int)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">t1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">t2 = [<span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span>];</span><br><span class="line">t1.extend(t2);</span><br><span class="line">t1.append(<span class="string">'g'</span>);</span><br><span class="line">t1 = t1+[<span class="string">'g'</span>]</span><br><span class="line">t1.sort();</span><br><span class="line"><span class="keyword">del</span> t1[<span class="number">1</span>:<span class="number">3</span>];</span><br><span class="line">t1.remove(<span class="string">'b'</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dictionary</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">eng2sp = &#123;<span class="string">'one'</span>: <span class="string">'uno'</span>, <span class="string">'two'</span>: <span class="string">'dos'</span>, <span class="string">'three'</span>: <span class="string">'tres'</span>&#125;</span><br><span class="line">eng2sp.values() <span class="comment">#'uno','dos','tres'</span></span><br><span class="line">eng2sp.items()</span><br><span class="line"><span class="string">'one'</span> <span class="keyword">in</span> eng2sp <span class="comment">#true</span></span><br><span class="line">inverse = invert_dict(eng2sp)  </span><br><span class="line">d = dict(zip(<span class="string">'abc'</span>,range(<span class="number">3</span>)))</span><br><span class="line">d.get(word,<span class="number">0</span>) <span class="comment">#d[word] if word in d, 0 otherwise</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tupe: similar with list but immutable</p>
-</li>
-<li><p>file operation</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fout = os.getcwd()</span><br><span class="line">os.path.abspath(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.exists(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.isfile/isdir</span><br><span class="line">os.listdir(cwd)</span><br><span class="line">fout = open(<span class="string">'output.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">fout.write(<span class="string">'hehe'</span>)</span><br><span class="line">fout.close()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/Python2/Python Send Email/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/Python2/Python Send Email/" itemprop="url">Python Send Email</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Open SMTP service for your email and obtain the SMTP password.</p>
-</li>
-<li><p>Create a Python script</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> win32serviceutil</span><br><span class="line"><span class="keyword">import</span> win32service</span><br><span class="line"><span class="keyword">import</span> win32event</span><br><span class="line"><span class="keyword">import</span> servicemanager</span><br><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Getmyip</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">visit</span><span class="params">(self,url)</span>:</span></span><br><span class="line">        opener = urllib2.urlopen(url)</span><br><span class="line">        <span class="keyword">if</span> url == opener.geturl():</span><br><span class="line">            IPstr = opener.read()</span><br><span class="line">        <span class="keyword">return</span> re.search(<span class="string">'\d+\.\d+\.\d+\.\d+'</span>,IPstr).group(<span class="number">0</span>)</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getip</span><span class="params">(self)</span>:</span></span><br><span class="line">        myip = self.visit(<span class="string">"http://www.net.cn/static/customercare/yourip.asp"</span>)</span><br><span class="line">        <span class="keyword">return</span> myip</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppServerSvc</span> <span class="params">(win32serviceutil.ServiceFramework)</span>:</span></span><br><span class="line">    _svc_name_ = <span class="string">"TestService"</span></span><br><span class="line">    _svc_display_name_ = <span class="string">"Test Service"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,args)</span>:</span></span><br><span class="line">        win32serviceutil.ServiceFramework.__init__(self,args)</span><br><span class="line">        self.hWaitStop = win32event.CreateEvent(<span class="keyword">None</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">None</span>)</span><br><span class="line">        self.run = <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">SvcStop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)</span><br><span class="line">        win32event.SetEvent(self.hWaitStop)</span><br><span class="line">        self.run = <span class="keyword">False</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">SvcDoRun</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">while</span>(self.run==<span class="keyword">True</span>):</span><br><span class="line">            self.main()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></span><br><span class="line">        fromaddr = <span class="string">'XXX@qq.com'</span></span><br><span class="line">        toaddrs  = <span class="string">'XXX@qq.com'</span> </span><br><span class="line">        </span><br><span class="line">        server = smtplib.SMTP_SSL(<span class="string">'smtp.qq.com'</span>)</span><br><span class="line">        server.set_debuglevel(<span class="number">1</span>)    </span><br><span class="line">        print(<span class="string">"--- Need Authentication ---"</span>)</span><br><span class="line">        username = <span class="string">'XXX'</span> </span><br><span class="line">        password = <span class="string">'XXX'</span> </span><br><span class="line">        server.login(username, password)</span><br><span class="line">        </span><br><span class="line">        prev_msg = <span class="string">''</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">True</span>):</span><br><span class="line">            getmyip=Getmyip()</span><br><span class="line">            msg = getmyip.getip()</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> msg==prev_msg:</span><br><span class="line">                server.sendmail(fromaddr, toaddrs, msg)</span><br><span class="line">                prev_msg = msg</span><br><span class="line">            time.sleep(<span class="number">10</span>)</span><br><span class="line">        </span><br><span class="line">        server.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">if</span> len(sys.argv) == <span class="number">1</span>:</span><br><span class="line">        servicemanager.Initialize()</span><br><span class="line">        servicemanager.PrepareToHostSingle(AppServerSvc)</span><br><span class="line">        servicemanager.StartServiceCtrlDispatcher()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32serviceutil.HandleCommandLine(AppServerSvc)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Make python file into an exe</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -F MyService.py</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Make exe into a Windows service</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sc create MyServer binPath=$exe_path</span><br><span class="line">sc start MyServer</span><br><span class="line">sc stop MyServer</span><br><span class="line">sc delete MyServer</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/Python2/Python Draw Text on Image/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/Python2/Python Draw Text on Image/" itemprop="url">Python Draw Text on Image</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:51+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Use-PIL"><a href="#Use-PIL" class="headerlink" title="Use PIL"></a>Use PIL</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.ImageDraw</span><br><span class="line"><span class="keyword">import</span> PIL.Image</span><br><span class="line"><span class="keyword">import</span> PIL.ImageFont</span><br><span class="line"></span><br><span class="line">pil_img = PIL.Image.fromarray(bb_img)</span><br><span class="line">draw = PIL.ImageDraw.Draw(pil_img)</span><br><span class="line">font = PIL.ImageFont.truetype(<span class="string">"/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf"</span>,<span class="number">20</span>)</span><br><span class="line">draw.text((<span class="number">10</span>, <span class="number">10</span>),<span class="string">"Frame: %09d"</span>%(iframe),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),font=font)</span><br></pre></td></tr></table></figure>
-<h3 id="Use-OpenCV"><a href="#Use-OpenCV" class="headerlink" title="Use OpenCV"></a>Use OpenCV</h3><p>—</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">cv2.putText(cv_img, <span class="string">'Frame: %d'</span>%(iframe), (<span class="number">10</span>,<span class="number">20</span>),  cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.65</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>), <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/Python2/Python bottle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/Python2/Python bottle/" itemprop="url">Python bottle</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Use <code>route</code> to indicate path, 80 is the default port for HTTP. </p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bottle</span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.route('/hello')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello World!"</span></span><br><span class="line"></span><br><span class="line">bottle.run(host=<span class="string">'localhost'</span>, port=<span class="number">80</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Dynamic path V.S. static path. We can use filter such as <code>&lt;id:int&gt;</code> to convert input variables to certain type. </p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bottle</span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.route('/hello/&amp;lt;name&gt;/&amp;lt;address&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name,address)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello "</span>+name</span><br><span class="line"></span><br><span class="line">bottle.run(host=<span class="string">'localhost'</span>, port=<span class="number">80</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use local resources. Pay special attention to the path. Local resource names should start with ‘/‘. </p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bottle.route('/&lt;filename:path&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">server_static</span><span class="params">(filename)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> bottle.static_file(filename, root=<span class="string">'./resource/'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>The default HTTP request method for <code>route()</code> is <code>get()</code>, we can use other methods <code>post()</code>, <code>put()</code>, <code>delete()</code>, <code>patch()</code>. The <strong>POST</strong> method is commonly used for HTML form submission. When entering URL address, <strong>GET</strong> method is used.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bottle</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_login</span><span class="params">(username, password)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> username==<span class="string">'niuli'</span> <span class="keyword">and</span> password==<span class="string">'niuli'</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">@bottle.get('/login') # or @route('/login')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'''</span></span><br><span class="line"><span class="string">        &amp;lt;form action="/login" method="post"&gt;</span></span><br><span class="line"><span class="string">            Username: &amp;lt;input name="username" type="text" /&gt;</span></span><br><span class="line"><span class="string">            Password: &amp;lt;input name="password" type="password" /&gt;</span></span><br><span class="line"><span class="string">            &amp;lt;input value="Login" type="submit" /&gt;</span></span><br><span class="line"><span class="string">        &amp;lt;/form&gt;</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.post('/login') # or @route('/login', method='POST')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_login</span><span class="params">()</span>:</span></span><br><span class="line">    username = bottle.request.forms.get(<span class="string">'username'</span>)</span><br><span class="line">    password = bottle.request.forms.get(<span class="string">'password'</span>)</span><br><span class="line">    <span class="keyword">if</span> check_login(username, password):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&amp;lt;p&gt;Your login information was correct.&amp;lt;/p&gt;"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&amp;lt;p&gt;Login failed.&amp;lt;/p&gt;"</span></span><br><span class="line"></span><br><span class="line">bottle.run(host=<span class="string">'localhost'</span>, port=<span class="number">80</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Return local files <code>localhost/filename</code>. Note <code>path:path</code> is important, otherwise the filename containing ‘/‘ may not be correctly recognized.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bottle <span class="keyword">import</span> static_file</span><br><span class="line"></span><br><span class="line"><span class="meta">	@route(’/&lt;filepath:path&gt;’)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">server_static</span><span class="params">(filepath)</span>:</span></span><br><span class="line">	    <span class="keyword">return</span> static_file(filepath, root=’./resource’)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use <code>redirect</code> to jump to another page: <code>bottle.redirect(&#39;/login&#39;)</code></p>
-</li>
-<li><p>Use the HTML template. In the template file, the lines starting with <code>%</code> are python codes and others are HTML codes. We can include other templates in the current template by using <code>% include(&#39;header.tpl&#39;, title=&#39;Page Title&#39;)</code>. Cookies, HTTP header, HTML &lt;form&gt; fields and other request data is available through the global <code>request</code> object.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bottle.route('/&lt;name&gt;')</span></span><br><span class="line"><span class="meta">@bottle.view('my_template.html')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">root</span><span class="params">(name=<span class="string">"default"</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> bottle.template(<span class="string">'my_template'</span>, name=name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bottle.post('/login') # or @route('/login', method='POST')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_login</span><span class="params">()</span>:</span></span><br><span class="line">    username = bottle.request.forms.get(<span class="string">'username'</span>)</span><br><span class="line">    password = bottle.request.forms.get(<span class="string">'password'</span>)</span><br><span class="line">    bottle.redirect(<span class="string">'/'</span>+username)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Some tricks for helping development </p>
-<ul>
-<li><p><code>bottle.debug(True)</code> The default error page shows a traceback. Templates are not cached. Plugins are applied immediately.</p>
-</li>
-<li><p><code>run(reloader=True)</code> Every time you edit a module file, the reloader restarts the server process and loads the newest version of your code.</p>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/Python2/Fastest Way to Read Text, Image, and Video in Python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/Python2/Fastest Way to Read Text, Image, and Video in Python/" itemprop="url">Fastest Way to Read Text, Image, and Video in Python</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>When comparing the efficiency of different libraries, there may exist a few orders of magnitude difference. In the implementation in demand of high efficiency, locate the time-consuming function and replace it with the most efficient library function.</p>
-<ol>
-<li><p>Text: Pandas<br>Installation: <code>pip install pandas</code> or <code>conda install pandas</code></p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_csv(text_name, sep=<span class="string">','</span>, header=<span class="keyword">None</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Image: Pillow-SIMD, skimage, OpenCV, imageio</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> skimage</span><br><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment">#read a 1280x720 image</span></span><br><span class="line">pil_im = Image.open(image_name) <span class="comment">#0.0057s</span></span><br><span class="line">pil_im = pil_im.resize((<span class="number">448</span>,<span class="number">448</span>)) <span class="comment">#0.025s</span></span><br><span class="line"></span><br><span class="line">sk_im = skimage.io.imread(image_name) <span class="comment">#0.026s</span></span><br><span class="line">sk_im = skimage.transform.resize(sk_im, (<span class="number">448</span>, <span class="number">448</span>)) <span class="comment">#0.060S</span></span><br><span class="line"></span><br><span class="line">cv_im = cv2.imread(image_name) <span class="comment">#0.021s</span></span><br><span class="line">cv_im = cv2.resize(cv_im, (<span class="number">448</span>, <span class="number">448</span>)) <span class="comment">#0.0016s</span></span><br><span class="line"></span><br><span class="line">im = imageio.imread(image_name) <span class="comment">#0.033s</span></span><br></pre></td></tr></table></figure>
-<p>Pillow-SIMD is faster than Pillow, which is not reported here. OpenCV is the most efficient one here.</p>
-</li>
-<li><p>Video: OpenCV, skvideo, imageio</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line"><span class="keyword">import</span> skvideo</span><br><span class="line"></span><br><span class="line"><span class="comment">#read 30fps video with each frame 1280x720 </span></span><br><span class="line">cap = cv2.VideoCapture(video_name)</span><br><span class="line">ret, frame = cap.read() <span class="comment">#0.002s</span></span><br><span class="line"></span><br><span class="line">vid = imageio.get_reader(video_name, <span class="string">'ffmpeg'</span>)</span><br><span class="line"><span class="keyword">for</span> image <span class="keyword">in</span> vid.iter_data(): <span class="comment">#0.004s</span></span><br><span class="line"></span><br><span class="line">skvideo.setFFmpegPath(os.path.dirname(sys.executable))</span><br><span class="line">videogen = skvideo.io.vreader(video_name)</span><br><span class="line"><span class="keyword">for</span> img <span class="keyword">in</span> videogen: <span class="comment">#0.073s</span></span><br></pre></td></tr></table></figure>
-<p>For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, <code>/usr/bin/python</code> is recommended. imageio and OpenCV are comparable here.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/Python2/Anaconda/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/Python2/Anaconda/" itemprop="url">Anaconda</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>python virtual environment: creat an isolated environment for each python version set, similar with pyenv.</p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><p><strong>For Windows:</strong></p>
-<p>Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment.</p>
-<p>Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment.</p>
-<p><strong>For Linux:</strong></p>
-<pre><code>bash Anaconda2-4.3.1-Linux-x86_64.sh
-</code></pre><h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p>list: conda info —envs</p>
-<p>create: <code>conda create --name $newenv python=2.7</code> (if copy, use —clone $oldenv)</p>
-<p>activate: source activate $newenv</p>
-<p>revert: source deactivate</p>
-<p>delete: conda remove —name $newenv —all</p>
-<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>list: conda list</p>
-<p>search: conda search pack</p>
-<p>install new packages:</p>
-<ol>
-<li>conda install pack</li>
-<li>conda install pack=1.8.2 # install certain version</li>
-<li>conda install —name env pack</li>
-<li>search on <a href="http://anaconda.org/" target="_blank" rel="noopener">http://anaconda.org/</a>, no need to register</li>
-<li>pip install pack</li>
-<li>install from local pack</li>
-</ol>
-<p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/MATLAB/MATLAB draw plot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/MATLAB/MATLAB draw plot/" itemprop="url">MATLAB draw plot</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/MATLAB/" itemprop="url" rel="index">
-                    <span itemprop="name">MATLAB</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% Set some nice settings.</span></span><br><span class="line">grid on;</span><br><span class="line">format long;</span><br><span class="line"></span><br><span class="line"><span class="comment">% Hold the graphics output until we are good to go.</span></span><br><span class="line">hold all;</span><br><span class="line"></span><br><span class="line"><span class="comment">% To create some random test data.</span></span><br><span class="line">x1 = <span class="number">100</span> : <span class="number">100</span> : <span class="number">1000</span>;</span><br><span class="line">raw_y1 = [<span class="number">0.76</span>,<span class="number">0.79</span>,<span class="number">0.80</span>,<span class="number">0.80</span>,<span class="number">0.81</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.81</span>];</span><br><span class="line">raw_y2 = [<span class="number">0.85</span>,<span class="number">0.81</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.79</span>,<span class="number">0.78</span>,<span class="number">0.80</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">raw_y3 = [<span class="number">0.85</span>,<span class="number">0.84</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">legendText = cell(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">plot(x1,y1,<span class="string">'--go'</span>,<span class="string">'MarkerSize'</span>,<span class="number">5</span>, <span class="string">'MarkerFaceColor'</span>,<span class="string">'g'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'CUB'</span> &#125;;</span><br><span class="line"></span><br><span class="line">plot(x1,y2,<span class="string">':bo'</span>, <span class="string">'MarkerSize'</span>,<span class="number">5</span>, <span class="string">'MarkerFaceColor'</span>,<span class="string">'b'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'SUN'</span> &#125;;</span><br><span class="line"></span><br><span class="line">plot(x1,y3,<span class="string">'-ro'</span>, <span class="string">'MarkerSize'</span>,<span class="number">5</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>, <span class="string">'LineWidth'</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">'Dogs'</span> &#125;;</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">100</span> <span class="number">1000</span>]);</span><br><span class="line">ylim([<span class="number">0.72</span> <span class="number">0.90</span>]);</span><br><span class="line"></span><br><span class="line">set(gca,<span class="string">'fontsize'</span>,<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% set sticks on x and y axis</span></span><br><span class="line">get(gca, <span class="string">'xtick'</span>);</span><br><span class="line">set(gca, <span class="string">'xtick'</span>, <span class="number">100</span>:<span class="number">100</span>:<span class="number">1000</span>);</span><br><span class="line">get(gca, <span class="string">'ytick'</span>);</span><br><span class="line">set(gca, <span class="string">'ytick'</span>, <span class="number">0.72</span>:<span class="number">0.02</span>:<span class="number">0.90</span>);</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">'# web training instances per category'</span>);</span><br><span class="line">ylabel(<span class="string">'Accuracy'</span>);</span><br><span class="line"></span><br><span class="line">legend(legendText,<span class="string">'location'</span>,<span class="string">'southeast'</span>);</span><br><span class="line"></span><br><span class="line">hold off;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/01/21/programming_language/HTML/HTML+CSS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/01/21/programming_language/HTML/HTML+CSS/" itemprop="url">HTML+CSS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-21T12:50:50+08:00">
-                2022-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Website consists of three components: structure(HTML), representation(CSS), action(Javascript). XHTML is a strict version of HTML. The structure of webpage is previously done based on table, but currently via CSS.</p>
-</li>
-<li><p>Escape character in HTML source code: <code>&amp;lt;</code>:&lt;, <code>&amp;gt;</code>:&gt;, <code>&amp;nbsp;</code>:space</p>
-</li>
-<li><p><code>&lt;p&gt;</code>:paragraph, <code>&lt;br&gt;</code>:break, <code>&lt;blockquote&gt;</code>:indented paragraph, <code>&lt;b&gt;</code>:bold, <code>&lt;i&gt;</code>:italic, <code>&lt;u&gt;</code>:underline, <code>&lt;s&gt;</code>:deleteline, <code>&lt;strong&gt;</code>:emphasize, <code>&lt;ul&gt;&lt;li&gt;</code>:unordered list, <code>&lt;ol&gt;&lt;li&gt;</code>:ordered list. </p>
-</li>
-<li><p><code>&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</code>:hyperlink.  <code>&lt;a href=&quot;mailto:ustcnewly@gmail.com&quot;&gt;&lt;/a&gt;</code>. An area on the image can also be used to establish hyperlink based on <code>&lt;map&gt;</code> and <code>&lt;ared&gt;</code>. </p>
-</li>
-<li><p>Use <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> to split webpage. Note <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> belong to the the same level as <code>&lt;body&gt;</code>. <code>&lt;frameset cols=&quot;30%, 30%, *&quot;&gt;&lt;frame src=left.html&gt;</code>. <code>&lt;frame&gt;</code> is obsolete in HTML5. </p>
-</li>
-<li><p><code>&lt;table border=&quot;1&quot; cellpadding=&quot;4&quot; cellspacing=&quot;6&quot; &gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/table&gt;</code>. Don’t miss any <code>&lt;tr&gt;</code> or <code>&lt;td&gt;</code>, otherwise the table will be messy. Use <code>&lt;colspan&gt;</code> or <code>&lt;rowspan&gt;</code> to merge cells. For professional table, we can use <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>. <code>&lt;table&gt;</code> is now rarely used for layout design. </p>
-</li>
-<li><p>Insert multimedia elements: </p>
-<ul>
-<li>image: <code>&lt;img src=&quot;a.jpg&quot; height=&quot;200&quot; width=&quot;200&quot; alt=&quot;desc&quot;/&gt;</code>  </li>
-<li>flash: <code>&lt;embed src=&quot;a.swf&quot;  width=&quot;490&quot; height=&quot;400&quot; wmode=&quot;transparent&quot; &gt;&lt;/embed&gt;</code> </li>
-<li>bgmusic: <code>&lt;audio src=&quot;a.mp3&quot; hidden=&quot;true&quot; autoplay=&quot;true&quot; loop=&quot;true&quot;&gt;&lt;/audio&gt;</code></li>
-<li>bgtile: <code>&lt;body background=&quot;a.png&quot;&gt;&lt;/body&gt;</code></li>
-</ul>
-</li>
-<li><p>Css: object, attribute, and value. Refer to <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">official website</a> for details.</p>
- <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.myclass&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line">&amp;lt;p class="myclass"&gt;&amp;lt;/p&gt;</span><br><span class="line"></span><br><span class="line">#myid&#123;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">&#125;</span><br><span class="line">&amp;lt;p id="myid"&gt;&amp;lt;/p&gt;</span><br><span class="line"># one id name should be used only once in one html file.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Methods to use Css. </p>
-<ul>
-<li><p>a. Directly insert contents into <code>&lt;style&gt;&lt;/style&gt;</code>.</p>
-</li>
-<li><p>b. <code>&lt;link href=&quot;mycss.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
-</li>
-<li><p>c. <code>&lt;style type=&quot;text/css&quot;&gt;@import &quot;mycss.css&quot;&lt;/style&gt;</code>. One html file can import more than one Css files. A Css file can also import other Css files.</p>
-<p> The priority of a is higher than b/c. The more special, the higher priority. For the methods with equal priority, override principle is applied. The difference between b and c is that c loads all the Css codes while b only loads the corresponding Css code when necessary. </p>
-</li>
-</ul>
-</li>
-<li><p>Some special usage of Css.</p>
-<ul>
-<li>class for specific tag: <code>p.special{}</code></li>
-<li>union of multiple tags: <code>h1,h2,p{}</code></li>
-<li>embeded tags: <code>p span{}</code> for descendents and <code>p&gt;span{}</code> for child. complex embedding mixing tags, classes, and ids: <code>td.out .inside strong{}</code>. The easiest way to recognize this kind of embedding is “(tag)(.class) (tag)(#id)”</li>
-<li>consecutive tags: <code>th+td+td+td{}</code>, the style is applied to the third <code>td</code>.</li>
-</ul>
-</li>
-<li><p>Css formats for some commonly used tags.</p>
-<ul>
-<li><p>body:</p>
-   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">    background-image:a.jpg;</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">    background-position:200px 100px;</span><br><span class="line">	background-attachment:fixed;</span><br><span class="line">	background-size: 20% 100%;</span><br><span class="line">	cursor:pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>text:</p>
-   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">p&#123;	    </span><br><span class="line">    float:left;</span><br><span class="line">    font-family:Calibri;</span><br><span class="line">    font-size:15px;</span><br><span class="line">    font-style:italic;</span><br><span class="line">    font-weight:bold;</span><br><span class="line">    color:red;</span><br><span class="line">    text-indent:2em;</span><br><span class="line">    text-decoration:underline;</span><br><span class="line">    text-transform:lowercase; #capitalize</span><br><span class="line">    text-align:justify; </span><br><span class="line">    margin:5px 0px #top/down margin left/right margin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>image:</p>
-   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img&#123;</span><br><span class="line">	float:left;</span><br><span class="line">	border:1px #9999CC dashed;</span><br><span class="line">	margin:5px; #margin-left/right/top/bottom</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><code>&lt;div&gt;</code> box layout from inside to outside: content, padding, border, margin. Note <code>width</code> and <code>height</code> are for content instead of the whole box. margin can be assigned negative values. Assigning attribute values in <strong>clock-wise</strong> order. Missing values are equal to the values of opposite side. We should first understand the standard flow without the constraints of boxes.</p>
-<ul>
-<li>block-level (vertical arrangement): <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;div&gt;</code></li>
-<li><p>inline (horizontal arrangement): <code>&lt;strong&gt;</code>,<code>&lt;a&gt;</code>, <code>&lt;span&gt;</code></p>
-<p><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are both blocks. <code>&lt;div&gt;</code> is vertial while <code>&lt;span&gt;</code> is horizontal. <code>&lt;span&gt;</code> can be used where no other proper tags can be used,s for instance, <code>&lt;span&gt;&lt;img src=&quot;a.jpg&quot;&gt;&lt;/span&gt;</code>.</p>
-<p>when using <code>&lt;div&gt;</code>, the margin between the top block and bottom block is max(top_block.bottom_margin,bottom_block.top_margin). when using <code>&lt;span&gt;</code>, the margin between the top block and bottom block is top_block.bottom_margin+bottom_block.top_margin.</p>
-</li>
-</ul>
-</li>
-<li><p>floating box: Arrange the non-floating boxes first and then float the floating box to the left or right in the father content. The stuff in the non-floating boxes surrounds the floating box. For floating box: <code>float:left</code>. For non-floating box: <code>clear:left</code>.</p>
-</li>
-<li><p>box location: static(default), relative, absolute</p>
-<ul>
-<li><p>relative: <code>position:relative; left:30px; top:30px</code>. Relative shift from original position. Relative has no impact on father box and sibling box.</p>
-</li>
-<li><p>absolute: <code>position:absolute; top:0px; right:0px</code>. Absolute coordinate in the nearest non-static ancestor. Other boxes treat this absolute box as non-existence.</p>
-</li>
-</ul>
-</li>
-<li><p><code>&lt;div style=&quot;display:inline&quot;&gt;&lt;/div&gt;</code>, <code>&lt;span style=&quot;display:block&quot;&gt;&lt;/span&gt;</code>, use display to modifiy the vertical or horizontal order. Set as <code>none</code> to make it invisible. </p>
-</li>
-<li><p>For hyperlink, <code>a</code> has pseudo classes:<code>link</code>, <code>visited</code>, <code>hover</code>, for example:</p>
- <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#navigation li a:link, #navigation li a:visited</span><br><span class="line">&#123;</span><br><span class="line">	background-color:#1136c1;</span><br><span class="line">	color:#FFFFFF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use <code>div</code> to split columns</p>
-<ul>
-<li><p>absolute method: left column uses absolute position (Note to change the position of father div to relative) and right column use left margin. The drawback is that bottom row will ignore the left column.</p>
-</li>
-<li><p>float method: float left and float right. It is easy for fixed width or fixed ratio. For the mixed width such as <code>100%-30px</code>, use the wrapper trick (negative margin).</p>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> name =<span class="string">"newly"</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"my name is: "</span>+name)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>variable types</p>
-<ul>
-<li><code>null</code>: empty variable</li>
-<li>string: <code>parseFloat(string)</code>, <code>parseInt(string)</code>,  <code>str.substring(0,3)</code>, <code>str.slice(3,5)</code>, <code>str.charAt(0)</code>, <code>str.bold()</code>, <code>str.fontcolor(&quot;red&quot;)</code>, <code>str.length</code></li>
-<li>number: <code>Math.PI</code>, <code>Math.max</code>, <code>isNaN(value)</code>,</li>
-<li>bool: <code>true</code> or <code>false</code></li>
-<li><p>Array: can be a mixture of numbers and strings, <code>var a = new Array(10, 20, &quot;newly&quot;)</code></p>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(n <span class="keyword">in</span> actorAry)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"&amp;lt;li&amp;gt;"</span>+actorAry[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>myarr.toString()</code>, <code>myarr.join(&#39;-&#39;)</code>, <code>myarr.concat(tailarr)</code>, <code>myarr.reverse()</code>, <code>myarr.sort(cmpfunc)</code>, <code>slice</code>, <code>splice</code><br><br>stack&amp;&amp;queue operations: <code>myarr.push(&quot;newstr&quot;)</code>, <code>myarr.pop()</code>, <code>myarr.shift()</code>(dequeue), <code>myarr.unshift()</code>(pushfront)<br></p>
-</li>
-<li><p>Structure: There is no concept: class. Use function to construct an object. <code>var mycard = Card(&quot;newly&quot;, 20)</code>, <code>showCardInof.call(mycard,arg1,arg2)</code> or <code>mycard.showCardInfo(arg1,arg2)</code>, <code>mycard=null</code></p>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showCardInfo</span>(<span class="params">arg1,arg2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="keyword">this</span>.owner);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Card</span>(<span class="params">owner, rate</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.owner = owner;</span><br><span class="line">    <span class="keyword">this</span>.rate = rate;</span><br><span class="line">    <span class="keyword">this</span>.showCardInfo=<span class="function"><span class="keyword">function</span>(<span class="params">arg1,arg2</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="keyword">this</span>.owner);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type related: <code>nameList instanceof Array</code>, <code>typeof(&quot;newly&quot;)</code></p>
-</li>
-</ul>
-</li>
-<li><p>commonly used built-in functions or classes</p>
-<ul>
-<li><p>alert dialogue: <code>alert(&quot;msg&quot;)</code></p>
-</li>
-<li><p>input diaglogue: <code>var age=prompt(&quot;Input your age&quot;, &quot;0&quot;)</code></p>
-</li>
-<li><p>confirm dialogue: <code>confirm(&quot;Are you sure?&quot;)</code></p>
-</li>
-<li><p>Date and time:</p>
-   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cur = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">cur.setYear(<span class="number">2016</span>);</span><br><span class="line"><span class="keyword">var</span> seconds = cur.getSeconds();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Error:</p>
-   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> e = <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line"><span class="built_in">document</span>.write(e.number&amp;<span class="number">0xFFFF</span>+e.description);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>operate on the html elements </p>
-<p> <code>&lt;img src=&quot;./images/web_fig.jpg&quot; width=500px&gt;</code></p>
-<p> The whole HTML page is a DOM tree. </p>
-<ul>
-<li><p>Visit the DOM elements</p>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.myform.elements[<span class="number">0</span>].value  <span class="comment">//myform is the form name</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myid"</span>).childNodes[<span class="number">0</span>].nodeName/nodeValue/nodeType</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myid"</span>).childNodes[<span class="number">0</span>].getAttribute(<span class="string">"attr"</span>)/setAttribute(<span class="string">"attr"</span>,<span class="string">"attval"</span>)	</span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">"tag"</span>)	</span><br><span class="line"><span class="built_in">document</span>.getElementsByName(<span class="string">"name"</span>)</span><br></pre></td></tr></table></figure>
-<p>Since <code>id</code> is unique, we use single form element for <code>Id</code>, but plural form elements for <code>Name</code> and <code>TagName</code>.</p>
-</li>
-<li><p>Change the DOM elements</p>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> docBody = <span class="built_in">document</span>.getElementById(<span class="string">"DocBody"</span>);</span><br><span class="line"><span class="keyword">var</span> imgObj = <span class="built_in">document</span>.createElement(<span class="string">"&lt;img&gt;"</span>);</span><br><span class="line"><span class="keyword">var</span> newTextNode = <span class="built_in">document</span>.createElement(<span class="string">"content"</span>);</span><br><span class="line">imgObj.src = url;</span><br><span class="line">docBody.appendChild(imgObj);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>use Javascript to modify the CSS style, <code>document.vlinkColor</code>, <code>document.linkColor</code>, <code>document.alinkColor</code>, <code>document.bgColor</code>, <code>document.fgColor</code>, <code>document.body.text</code>, <code>name1.vspace</code>, <code>name1.hspace</code>. </p>
-</li>
-<li><p>event handling: we can set event triggering function for certain element or a class of elements.</p>
-<ul>
-<li>commonly used events (case insensitive): <code>onblur</code>, <code>onchange</code>, <code>onclick</code>, <code>onfocus</code>, <code>onload</code>, <code>onmouseover</code>, <code>onmouseout</code>,  <code>onmousedown</code>, <code>onmouseup</code>, <code>onselect</code>, <code>onsubmit</code>, <code>onunload</code>. Form-related events: <code>myform.onReset</code>, <code>myform.onSubmit</code>, <code>myform.action=&quot;mailto:ustcnewly@gmail.com&quot;</code></li>
-<li><p>three approaches to trigger event function<br>a) directly embed function scripts: <code>onlick=&quot;javascript:alert(&quot;msg&quot;)&quot;</code>  //<code>javascript:</code> can be eliminated<br>   b) call the event function: <code>onkeyup = &quot;OnKeyUp()&quot;</code></p>
-   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">OnKeyUp</span>(<span class="params">_e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e = _e?_e:<span class="built_in">window</span>.event;</span><br><span class="line">    <span class="keyword">if</span> (event.keyCode==<span class="number">13</span>)</span><br><span class="line">    &#123;</span><br><span class="line">	    alert(<span class="string">"Your input is "</span>+Text1.value);</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>c) set the event attribute for certain elements:</p>
-<pre><code class="lang-javascript">   &lt;script for=&quot;document&quot; event=&quot;oncontextmenu&quot;&gt; 
-   window.event.returnValue = false;
-   document.oncontextmenu = hideContextMenu2;
-   &lt;/script&gt;;
-</code></pre>
-</li>
-</ul>
-</li>
-<li><p>time control:<code>to=window.setTimeout(&quot;func()&quot;,3000)</code>, <code>clearTimeout(to)</code>, <code>tm=setInterval(&quot;func()&quot;,1000)</code>, <code>clearInterval(tm)</code></p>
-</li>
-<li><p>redirect href location or set anchor point:<code>window.location.href=&quot;www.baidu.com&quot;</code>, <code>&lt;a name=&quot;anchor1&quot;&gt;&lt;/a&gt;</code></p>
-</li>
-<li><p>history: <code>history.back()</code>,  <code>history.forward()</code>, <code>history.go(n)</code>, n&gt;0 means go back n pages, otherwise go forward n pages. </p>
-</li>
-<li><p>cookie contains key-value pairs: <code>document.cookie=&quot;user=newly;passwd=hehe;&quot;</code></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2322,7 +2231,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">209</span>
+                  <span class="site-state-item-count">211</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

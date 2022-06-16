@@ -1,10 +1,10 @@
+https://ustcnewly.github.io/2022/06/16/machine_learning/Vector Quantization/
+https://ustcnewly.github.io/2022/06/16/machine_learning/Causality/
+https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/
+https://ustcnewly.github.io/2022/06/16/deep_learning/Jigsaw Puzzle/
+https://ustcnewly.github.io/2022/06/16/deep_learning/Image Inpainting/
+https://ustcnewly.github.io/2022/06/16/deep_learning/Generative Model/
+https://ustcnewly.github.io/2022/06/16/deep_learning/Frequency Domain/
+https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot Image Generation From Base Categories to Novel Categories/
 https://ustcnewly.github.io/2022/02/14/deep_learning/MLP/
 https://ustcnewly.github.io/2022/01/27/deep_learning/Few-Shot Object Detection/
-https://ustcnewly.github.io/2022/01/24/deep_learning/Mask-aided Object Detection/
-https://ustcnewly.github.io/2022/01/21/software/VirtualBox/Install VirtualBox Guest Addition/
-https://ustcnewly.github.io/2022/01/21/software/VirtualBox/Enlarge VirtualBox vdi/
-https://ustcnewly.github.io/2022/01/21/software/version_control/Git/
-https://ustcnewly.github.io/2022/01/21/software/library/Ubuntu JDK/
-https://ustcnewly.github.io/2022/01/21/software/library/OpenCV/
-https://ustcnewly.github.io/2022/01/21/software/library/GStreamer+FFmpeg for Ubuntu14.04/
-https://ustcnewly.github.io/2022/01/21/software/IDE/Remote Debugging for Eclipse+PyDev/

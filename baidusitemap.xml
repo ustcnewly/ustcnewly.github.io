@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Inpainting/</loc>
+    <lastmod>2022-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Frequency%20Domain/</loc>
+    <lastmod>2022-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Generative%20Model/</loc>
+    <lastmod>2022-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/</loc>
+    <lastmod>2022-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/</loc>
+    <lastmod>2022-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
+    <lastmod>2022-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Causality/</loc>
+    <lastmod>2022-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Jigsaw%20Puzzle/</loc>
+    <lastmod>2022-04-07</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Color%20Mapping/</loc>
     <lastmod>2022-02-14</lastmod>
   </url>
@@ -57,16 +89,8 @@
     <lastmod>2021-12-27</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Generative%20Model/</loc>
-    <lastmod>2021-12-24</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/01/21/machine_learning/Distillation/</loc>
     <lastmod>2021-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Frequency%20Domain/</loc>
-    <lastmod>2021-12-10</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Memory%20Network/</loc>
@@ -79,10 +103,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Repeated%20Patterns/</loc>
     <lastmod>2021-12-10</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/StyleGAN/</loc>
-    <lastmod>2021-11-30</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/others/Dictionary%20for%20Paper%20Writing/</loc>
@@ -113,10 +133,6 @@
     <lastmod>2021-07-06</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/</loc>
-    <lastmod>2021-07-06</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Few-Shot%20Feature%20Generation/</loc>
     <lastmod>2021-07-06</lastmod>
   </url>
@@ -129,10 +145,6 @@
     <lastmod>2021-05-21</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Image%20Inpainting/</loc>
-    <lastmod>2021-04-03</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Texture%20Bias/</loc>
     <lastmod>2021-04-03</lastmod>
   </url>
@@ -143,10 +155,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Aesthetic%20Evaluation%20and%20Cropping/</loc>
     <lastmod>2021-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/01/21/machine_learning/Causality/</loc>
-    <lastmod>2021-03-19</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/01/21/deep_learning/Attention%20Mechanism/</loc>
