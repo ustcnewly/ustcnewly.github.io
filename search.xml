@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Network Architecture</title>
+    <url>/2022/07/15/deep_learning/Network%20Architecture/</url>
+    <content><![CDATA[<ol>
+<li><p><a href="https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/">Transformer</a></p>
+</li>
+<li><p>Large kernel: <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ding_Scaling_Up_Your_Kernels_to_31x31_Revisiting_Large_Kernel_Design_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2207.03620.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+</ol>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>[1] Liu, Zhuang, et al. “A convnet for the 2020s.” CVPR, 2022.</p>
+<p>[2] Ding, Xiaohan, et al. “Scaling up your kernels to 31x31: Revisiting large kernel design in cnns.” CVPR, 2022.</p>
+<p>[3] More ConvNets in the 2020s: Scaling up Kernels Beyond 51 × 51 using Sparsity</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>network structure</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Install VirtualBox Guest Addition</title>
     <url>/2022/06/16/software/VirtualBox/Install%20VirtualBox%20Guest%20Addition/</url>
     <content><![CDATA[<ol>
@@ -5651,11 +5671,12 @@ spyder
     <content><![CDATA[<ul>
 <li><a href="https://ustcnewly.github.io/2018/09/07/deep_learning/GAN/">GAN</a></li>
 <li><a href="https://ustcnewly.github.io/2021/10/08/deep_learning/VAE/">VAE</a></li>
-<li>diffusion model: <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2206.00364.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>diffusion model: <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2206.00364.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a></li>
 </ul>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021).</p>
 <p>[2] GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models </p>
 <p>[3] Elucidating the Design Space of Diffusion-Based Generative Models</p>
+<p>[4] Wang, Tengfei, et al. “Pretraining is All You Need for Image-to-Image Translation.” arXiv preprint arXiv:2205.12952 (2022).</p>
 ]]></content>
       <categories>
         <category>paper note</category>

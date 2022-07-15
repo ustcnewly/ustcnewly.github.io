@@ -1,3 +1,4 @@
+https://ustcnewly.github.io/2022/07/15/deep_learning/Network Architecture/
 https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install VirtualBox Guest Addition/
 https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Enlarge VirtualBox vdi/
 https://ustcnewly.github.io/2022/06/16/software/version_control/Git/
@@ -7,4 +8,3 @@ https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg for Ubu
 https://ustcnewly.github.io/2022/06/16/software/IDE/Remote Debugging for Eclipse+PyDev/
 https://ustcnewly.github.io/2022/06/16/software/IDE/Install JDK and Eclipse/
 https://ustcnewly.github.io/2022/06/16/software/Ubuntu MATLAB/
-https://ustcnewly.github.io/2022/06/16/software/Medical Image Format/
