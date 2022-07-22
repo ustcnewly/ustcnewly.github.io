@@ -281,6 +281,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Shadow-related Application/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Shadow-related Application/" itemprop="url">Shadow-related Application</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
+<li><p>Shadow detection: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Lei_Zhu_Bi-directional_Feature_Pyramid_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
+</li>
+<li><p>Object-shadow pair detection: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Shadow removal: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hu_Mask-ShadowGAN_Learning_to_Remove_Shadows_From_Unpaired_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Le_Shadow_Removal_via_Shadow_Image_Decomposition_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/1911.08718.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2008.00267.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>Shadow generation: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Zhan_Adversarial_Image_Composition_with_Auxiliary_Illumination_ACCV_2020_paper.pdf" target="_blank" rel="noopener">[8]</a></p>
+</li>
+<li><p>Remove occluder and its associated shadow <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_No_Shadow_Left_Behind_Removing_Objects_and_Their_Shadows_Using_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
+</ul>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>Shadow Generation</p>
+<ol>
+<li>Shadow-AR (rendered) <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>RGB-AO-depth (rendered) <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.13943" target="_blank" rel="noopener">paper</a></li>
+<li>Composition datasets: WILDTRACK, Penn-Fudan, UA-DETRAC, Cityscapes, ShapeNet <a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Zhan_Adversarial_Image_Composition_with_Auxiliary_Illumination_ACCV_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>Soft shadow dataset (rendered) <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Sheng_SSN_Soft_Shadow_Network_for_Image_Compositing_CVPR_2021_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>ShadowGAN (rendered, 12,400 rendered images, 9265 objects, 110 textures for rendering the plane, up to four objects in each scene) <a href="https://dc.tsinghuajournals.com/cgi/viewcontent.cgi?article=1127&amp;context=computational-visual-media" target="_blank" rel="noopener">paper</a></li>
+<li>SID (single object, 25, 000 images, 12, 500 3D objects, 50 homogeneous color and 200 variable set of textured patterns) <a href="https://arxiv.org/pdf/2009.06295.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SID2 (45,000 images, similar to SID, more than one object in each scene) <a href="https://arxiv.org/pdf/2009.08941.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SHAD3S <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Venkataramaiyer_SHAD3S_A_Model_to_Sketch_Shade_and_Shadow_WACV_2021_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ol>
+<p>Shadow Removal/Detection</p>
+<ol>
+<li>ISTD/ ISTD+ (1870 0 triplets of shadow, shadow mask and shadow-free images) <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Stacked_Conditional_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>USR(unpaired, 2,445 shadow images, 1,770 shadow-free) <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hu_Mask-ShadowGAN_Learning_to_Remove_Shadows_From_Unpaired_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SRD/ SRD+ (3088 pairs, paired shadow and shadow-free, without the ground-truth shadow mask) <a href="">paper</a></li>
+<li>LRSS (37 image pairs, soft shadow) <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Qu_DeshadowNet_A_Multi-Context_CVPR_2017_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>UIUC (76 pairs, paired shadow/shadow-free) <a href="https://dl.acm.org/doi/pdf/10.1145/2732407" target="_blank" rel="noopener">paper</a></li>
+<li>GTAV (5723 pairs, 5110 daylight scenes, occlude objects inside camera) <a href="https://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Sidorov_Conditional_GANs_for_Multi-Illuminant_Color_Constancy_Revolution_or_yet_Another_CVPRW_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SynShadow (based on USR, occlude objects outside camera, shadow/shadow-free/matte image triplets synthesized from rendered 10,000 matte images and about 1,800 background images) <a href="https://arxiv.org/pdf/2101.01713.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>UCF (245 pairs, shadow/shadow mask, only for detection)</li>
+<li>SBU (4727 pairs, shadow/shadow mask, only for detection)</li>
+<li>CUHK-Shadow (10,500 pairs, shadow/shadow mask, only for detection) <a href="https://arxiv.org/pdf/1911.06998.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>SOBA (1013 images) <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ol>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li><p>Zhu, Lei, et al. “Bidirectional feature pyramid network with recurrent attention residual modules for shadow detection.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.</p>
+</li>
+<li><p>Wang, Tianyu, et al. “Instance shadow detection.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.</p>
+</li>
+<li><p>Hu, Xiaowei, et al. “Mask-ShadowGAN: Learning to remove shadows from unpaired data.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
+</li>
+<li><p>Le, Hieu, and Dimitris Samaras. “Shadow removal via shadow image decomposition.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
+</li>
+<li><p>Xiaodong, Cun, Pun Chi-Man, and Shi Cheng. “Towards Ghost-free Shadow Removal via Dual Hierarchical Aggregation Network and Shadow Matting GAN.” arXiv preprint arXiv:1911.08718 (2019).</p>
+</li>
+<li><p>Le, Hieu, and Dimitris Samaras. “From Shadow Segmentation to Shadow Removal.” European Conference on Computer Vision. Springer, Cham, 2020.</p>
+</li>
+<li><p>Liu, Daquan, et al. “ARShadowGAN: Shadow Generative Adversarial Network for Augmented Reality in Single Light Scenes.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.</p>
+</li>
+<li><p>Zhan, Fangneng, et al. “Adversarial Image Composition with Auxiliary Illumination.” Proceedings of the Asian Conference on Computer Vision. 2020.</p>
+</li>
+<li><p>Zhang, Edward, et al. “No Shadow Left Behind: Removing Objects and their Shadows using Approximate Lighting and Geometry.” CVPR, 2021.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Outlier Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1685,170 +1883,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Incremental SVM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/machine_learning/Incremental SVM/" itemprop="url">Incremental SVM</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1) Approximate incremental SVM: pass through the dataset many times</p>
-<ul>
-<li><p>Pegasos: select a training batch in each iteration</p>
-<ul>
-<li>python: <a href="https://github.com/ejlb/pegasos" target="_blank" rel="noopener">https://github.com/ejlb/pegasos</a><pre><code>   https://github.com/avaitla/Pegasos
-</code></pre></li>
-<li>C: <a href="https://www.cs.huji.ac.il/~shais/code/index.html" target="_blank" rel="noopener">https://www.cs.huji.ac.il/~shais/code/index.html</a></li>
-<li>matlab: <a href="https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function" target="_blank" rel="noopener">https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function</a></li>
-</ul>
-</li>
-<li><p>sklearn.linear_model: SGD</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clf= sklearn.linear_model.SGDClassifier(learning_rate = <span class="string">'constant'</span>, eta0 = <span class="number">0.1</span>, shuffle = <span class="keyword">False</span>, n_iter = <span class="number">1</span>)</span><br><span class="line"><span class="comment"># get x1, y1 as a new instance</span></span><br><span class="line">clf.partial_fit(x1, y1)</span><br><span class="line"><span class="comment"># get x2, y2</span></span><br><span class="line"><span class="comment"># update accuracy if needed</span></span><br><span class="line">clf.partial_fit(x2, y2)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>2) Exact incremental or decremental SVM: only pass through the dataset once</p>
-<ul>
-<li><p>Incremental and Decremental Support Vector Machine Learning<br><a href="http://www.isn.ucsd.edu/svm/incremental" target="_blank" rel="noopener">http://www.isn.ucsd.edu/svm/incremental</a></p>
-</li>
-<li><p>SVM Incremental Learning, Adaptation and Optimization: extend the work above<br>matlab: <a href="https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB" target="_blank" rel="noopener">https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB</a></p>
-</li>
-<li><p>Incremental and decremental training for linear classification: extension of liblinear focusing on linear problem<br><a href="http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html</a></p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1903,7 +1937,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">212</span>
+                  <span class="site-state-item-count">213</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
