@@ -380,6 +380,8 @@
 </li>
 <li><p>object detection: ViLD <a href="https://arxiv.org/pdf/2104.13921.pdf" target="_blank" rel="noopener">[4]</a>, ZSD-YOLO <a href="https://arxiv.org/pdf/2109.12066.pdf" target="_blank" rel="noopener">[6]</a></p>
 </li>
+<li><p>segmentation: <a href="https://arxiv.org/pdf/2112.14757.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://arxiv.org/pdf/2112.10003.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
 <li><p>visual grounding: CPT <a href="https://arxiv.org/pdf/2109.11797.pdf" target="_blank" rel="noopener">[5]</a> </p>
 </li>
 <li><p>image translation: StyleClip <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Patashnik_StyleCLIP_Text-Driven_Manipulation_of_StyleGAN_Imagery_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[7]</a> </p>
@@ -392,6 +394,8 @@
 <p>[5] Yao, Yuan, et al. “CPT: Colorful Prompt Tuning for Pre-trained Vision-Language Models.” arXiv preprint arXiv:2109.11797 (2021).</p>
 <p>[6] Xie, Johnathan, and Shuai Zheng. “ZSD-YOLO: Zero-Shot YOLO Detection using Vision-Language KnowledgeDistillation.” arXiv preprint arXiv:2109.12066 (2021).</p>
 <p>[7] Patashnik, Or, et al. “Styleclip: Text-driven manipulation of stylegan imagery.” ICCV, 2021.</p>
+<p>[8] Xu, Mengde, et al. “A simple baseline for zero-shot semantic segmentation with pre-trained vision-language model.” arXiv preprint arXiv:2112.14757 (2021).</p>
+<p>[9] Lüddecke, Timo, and Alexander Ecker. “Image Segmentation Using Text and Image Prompts.” CVPR, 2022.</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -2880,12 +2884,16 @@
 <h3 id="Combination-of-transformer-and-CNN"><a href="#Combination-of-transformer-and-CNN" class="headerlink" title="Combination of transformer and CNN:"></a>Combination of transformer and CNN:</h3><ul>
 <li>T2T-Vit <a href="https://arxiv.org/pdf/2101.11986.pdf" target="_blank" rel="noopener">[9]</a></li>
 <li>TransUNet <a href="https://arxiv.org/pdf/2102.04306.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li>Next-ViT <a href="https://arxiv.org/pdf/2207.05501.pdf" target="_blank" rel="noopener">[14]</a></li>
 </ul>
 <h3 id="Interpretability"><a href="#Interpretability" class="headerlink" title="Interpretability"></a>Interpretability</h3><ul>
 <li>beyond attention visualization <a href="https://arxiv.org/pdf/2012.09838" target="_blank" rel="noopener">[5]</a></li>
 </ul>
 <h3 id="Position-embedding"><a href="#Position-embedding" class="headerlink" title="Position embedding"></a>Position embedding</h3><ul>
 <li><a href="https://mp.weixin.qq.com/s/QlR528MYCioEuYwJIs20Pg" target="_blank" rel="noopener">A summary</a></li>
+</ul>
+<h3 id="Lightweight-Transformer"><a href="#Lightweight-Transformer" class="headerlink" title="Lightweight Transformer"></a>Lightweight Transformer</h3><ul>
+<li>XFormer <a href="https://arxiv.org/pdf/2207.07268.pdf" target="_blank" rel="noopener">[13]</a></li>
 </ul>
 <h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ul>
 <li><a href="https://arxiv.org/pdf/2012.12556.pdf" target="_blank" rel="noopener">A survey on visual transformer</a></li>
@@ -2903,6 +2911,8 @@
 <p>[10] Yifan Jiang, Shiyu Chang, Zhangyang Wang, “TransGAN: Two Transformers Can Make One Strong GAN”, arXiv preprint arXiv:2102.07074 (2021).</p>
 <p>[11] Is Space-Time Attention All You Need for Video Understanding.</p>
 <p>[12] Towards Robust Vision Transformer.</p>
+<p>[13] Zhao, Youpeng, et al. “Lightweight Vision Transformer with Cross Feature Attention.” arXiv preprint arXiv:2207.07268 (2022).</p>
+<p>[14] Li, Jiashi, et al. “Next-ViT: Next Generation Vision Transformer for Efficient Deployment in Realistic Industrial Scenarios.” arXiv preprint arXiv:2207.05501 (2022).</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -7247,5 +7257,26 @@ spyder
       <tags>
         <tag>paper</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Mask Form</title>
+    <url>/2022/07/25/machine_learning/Mask%20Form/</url>
+    <content><![CDATA[<ol>
+<li><p>binary map</p>
+</li>
+<li><p>frequency: DCT <a href="https://arxiv.org/pdf/2011.09876.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>PolarMask <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Xie_PolarMask_Single_Shot_Instance_Segmentation_With_Polar_Representation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Hyperbolic <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Atigh_Hyperbolic_Image_Segmentation_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+</ol>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>[1] Shen, Xing, et al. “Dct-mask: Discrete cosine transform mask representation for instance segmentation.” CVPR, 2021.</p>
+<p>[2] Xie, Enze, et al. “Polarmask: Single shot instance segmentation with polar representation.” CVPR, 2020.</p>
+<p>[3] GhadimiAtigh, Mina, et al. “Hyperbolic Image Segmentation.” arXiv preprint arXiv:2203.05898 (2022).</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
   </entry>
 </search>
