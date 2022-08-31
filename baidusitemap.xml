@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Frequency%20Domain/</loc>
-    <lastmod>2022-08-05</lastmod>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
+    <lastmod>2022-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/</loc>
+    <lastmod>2022-08-22</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/</loc>
+    <lastmod>2022-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Frequency%20Domain/</loc>
     <lastmod>2022-08-05</lastmod>
   </url>
   <url>
@@ -38,10 +46,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/</loc>
-    <lastmod>2022-04-09</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
     <lastmod>2022-04-09</lastmod>
   </url>
   <url>

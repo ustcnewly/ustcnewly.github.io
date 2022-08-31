@@ -1,3 +1,4 @@
+https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/
 https://ustcnewly.github.io/2022/07/25/machine_learning/Mask Form/
 https://ustcnewly.github.io/2022/07/22/others/To a Beginner on Paper Writing/
 https://ustcnewly.github.io/2022/07/15/deep_learning/Network Architecture/
@@ -7,4 +8,3 @@ https://ustcnewly.github.io/2022/06/16/software/version_control/Git/
 https://ustcnewly.github.io/2022/06/16/software/library/Ubuntu JDK/
 https://ustcnewly.github.io/2022/06/16/software/library/OpenCV/
 https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg for Ubuntu14.04/
-https://ustcnewly.github.io/2022/06/16/software/IDE/Remote Debugging for Eclipse+PyDev/
