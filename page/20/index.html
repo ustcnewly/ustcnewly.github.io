@@ -281,6 +281,539 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Domain Translation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Domain Translation/" itemprop="url">Domain Translation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div class="table-container">
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>supervised</th>
+<th>multi-domain</th>
+<th>multi-modal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pix2pix <a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">[1]</a></td>
+<td>yes</td>
+<td>no</td>
+<td>no </td>
+</tr>
+<tr>
+<td>BicycleGAN <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[6]</a>, <a href="https://arxiv.org/pdf/1805.09730.pdf" target="_blank" rel="noopener">[7]</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1704.04886.pdf" target="_blank" rel="noopener">[10]</a></td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>cycleGAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>, UNIT <a href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf" target="_blank" rel="noopener">[3]</a></td>
+<td>no</td>
+<td>no</td>
+<td>no </td>
+</tr>
+<tr>
+<td>MUNIT <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Xun_Huang_Multimodal_Unsupervised_Image-to-image_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[4]</a>, AugCGAN <a href="https://arxiv.org/pdf/1802.10151.pdf" target="_blank" rel="noopener">[5]</a></td>
+<td>no</td>
+<td>no</td>
+<td>yes </td>
+</tr>
+<tr>
+<td>starGAN <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[8]</a>, <a href="https://arxiv.org/pdf/1712.02050.pdf" target="_blank" rel="noopener">[9]</a>, <a href="https://arxiv.org/pdf/1811.07483.pdf" target="_blank" rel="noopener">[11]</a>, <a href="https://arxiv.org/pdf/1901.04604.pdf" target="_blank" rel="noopener">[12]</a>, ComboGAN <a href="http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w13/Anoosheh_ComboGAN_Unrestrained_Scalability_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[13]</a>, <a href="http://papers.nips.cc/paper/7525-a-unified-feature-disentangler-for-multi-domain-image-translation-and-manipulation.pdf" target="_blank" rel="noopener">[14]</a></td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>SMIT<a href="https://arxiv.org/pdf/1905.01270.pdf" target="_blank" rel="noopener">[15]</a>, DRIT++<a href="https://arxiv.org/pdf/1905.01270.pdf" target="_blank" rel="noopener">[16]</a>, starGANv2<a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">[19]</a></td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/sqrtSjK.jpg" width="70%" border="0"></p>
+<p><strong>Exemplar-guided domain translation:</strong> use an exemplar to define the target domain <a href="https://arxiv.org/pdf/2004.05571.pdf" target="_blank" rel="noopener">[17]</a> <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[18]</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Image-to-Image Translation with Conditional Adversarial Networks</p>
+<p>[2] Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</p>
+<p>[3] Unsupervised image-to-image translation networks</p>
+<p>[4] Multimodal Unsupervised Image-to-Image Translation</p>
+<p>[5] Augmented CycleGAN: Learning Many-to-Many Mappings from Unpaired Data</p>
+<p>[6] Toward Multimodal Image-to-Image Translation</p>
+<p>[7] Image-to-image translation for cross-domain disentanglement</p>
+<p>[8] StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
+<p>[9] Unsupervised Multi-Domain Image Translation with Domain-specific Encoders/Decoders</p>
+<p>[10] Multi-view image Generation from a single-view</p>
+<p>[11] Show, Attend and Translate- Unpaired Multi-Domain Image-to-Image Translation with Visual Attention</p>
+<p>[12] Dual Generator Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
+<p>[13] ComboGAN: Unrestrained Scalability for Image Domain Translation</p>
+<p>[14] A Unified Feature Disentangler for Multi-Domain Image Translation and Manipulation</p>
+<p>[15] SMIT: Stochastic Multi-Label Image-to-Image Translation</p>
+<p>[16] DRIT++: Diverse Image-to-Image Translation via Disentangled Representations</p>
+<p>[17] Cross-domain Correspondence Learning for Exemplar-based Image Translation</p>
+<p>[18] High-Resolution Daytime Translation Without Domain Labels</p>
+<p>[19] StarGAN v2: Diverse Image Synthesis for Multiple Domains</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Domain Generalization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Domain Generalization/" itemprop="url">Domain Generalization</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>a) When the domain labels are known: </p>
+<ul>
+<li><p>reduce the distance between different domains: MMD <a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2932.pdf" target="_blank" rel="noopener">[1]</a><a href="http://proceedings.mlr.press/v28/muandet13.pdf" target="_blank" rel="noopener">[2]</a>, mutual information</p>
+</li>
+<li><p>domain-invariant and domain-specific components: <a href="">[1]</a><a href="https://arxiv.org/pdf/1710.03077.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ul>
+<p>b) When the domain labels are unkown:</p>
+<ul>
+<li>first discover multiple latent domains: cluster <a href="https://people.eecs.berkeley.edu/~jhoffman/papers/Hoffman_ECCV2012.pdf" target="_blank" rel="noopener">[1]</a><a href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_ECCV2014.pdf" target="_blank" rel="noopener">[2]</a>, max margin separation <a href="http://papers.nips.cc/paper/5210-reshaping-visual-datasets-for-domain-adaptation.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Domain Adaptive Segmentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Domain Adaptive Segmentation/" itemprop="url">Domain Adaptative Segmentation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Domain-adaptation"><a href="#Domain-adaptation" class="headerlink" title="Domain adaptation:"></a>Domain adaptation:</h3><ul>
+<li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>, cycle consistency <a href="https://papers.nips.cc/paper/2020/file/243be2818a23c980ad664f30f48e5d19-Paper.pdf" target="_blank" rel="noopener">[11]</a></p>
+</li>
+<li><p>Translation source domain image to target domain image: <a href="https://arxiv.org/pdf/1711.03213.pdf" target="_blank" rel="noopener">[5]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sankaranarayanan_Learning_From_Synthetic_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[6]</a><a href="https://arxiv.org/pdf/1904.10620.pdf" target="_blank" rel="noopener">[10]</a> (combine with target domain pseudo labels).</p>
+</li>
+<li><p>Training with pseudo labels on the target domain: Curriculumn learning <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> (global image label distribution and landmark superpixel label distribution); self-training <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yang_Zou_Unsupervised_Domain_Adaptation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[7]</a>; use multiple models to vote for pseudo labels <a href="https://arxiv.org/pdf/1711.03694.pdf" target="_blank" rel="noopener">[9]</a> </p>
+</li>
+</ul>
+<h3 id="Domain-adaptation-with-privileged-information"><a href="#Domain-adaptation-with-privileged-information" class="headerlink" title="Domain adaptation with privileged information:"></a>Domain adaptation with privileged information:</h3><ul>
+<li>Domain adaptation with privileged information like depth: SPIGAN <a href="https://arxiv.org/pdf/1810.03756.pdf" target="_blank" rel="noopener">[2]</a> (enforce synthetic image and generated image to predict the same depth), <a href="https://arxiv.org/pdf/1904.01886.pdf" target="_blank" rel="noopener">[3]</a> (adversarial learning on depth)</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Yang, Philip David, and Boqing Gong. “Curriculum domain adaptation for semantic segmentation of urban scenes.” ICCV, 2017.</p>
+<p>[2] Lee, Kuan-Hui, et al. “SPIGAN: Privileged Adversarial Learning from Simulation.” ICLR, 2019.</p>
+<p>[3] Vu, Tuan-Hung, et al. “DADA: Depth-aware Domain Adaptation in Semantic Segmentation.” arXiv preprint arXiv:1904.01886 (2019).</p>
+<p>[4] Chen, Yuhua, Wen Li, and Luc Van Gool. “Road: Reality oriented adaptation for semantic segmentation of urban scenes.” CVPR, 2018.</p>
+<p>[5] Hoffman, Judy, et al. “Cycada: Cycle-consistent adversarial domain adaptation.” arXiv preprint arXiv:1711.03213 (2017).</p>
+<p>[6] Sankaranarayanan, Swami, et al. “Learning from synthetic data: Addressing domain shift for semantic segmentation.” CVPR, 2018.</p>
+<p>[7] Zou, Yang, et al. “Unsupervised domain adaptation for semantic segmentation via class-balanced self-training.”, ECCV, 2018.</p>
+<p>[8] Hong, Weixiang, et al. “Conditional generative adversarial network for structured domain adaptation.” CVPR, 2018.</p>
+<p>[9] Zhang, Junting, Chen Liang, and C-C. Jay Kuo. “A fully convolutional tri-branch network (FCTN) for domain adaptation.” ICASSP, 2018.</p>
+<p>[10] Li, Yunsheng, Lu Yuan, and Nuno Vasconcelos. “Bidirectional Learning for Domain Adaptation of Semantic Segmentation.” arXiv preprint arXiv:1904.10620 (2019).</p>
+<p>[11] Kang, Guoliang, et al. “Pixel-Level Cycle Association: A New Perspective for Domain Adaptive Semantic Segmentation.” Advances in Neural Information Processing Systems 33 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Domain Adaptation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1461,459 +1994,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Deep EM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Deep EM/" itemprop="url">Deep EM</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Learning from Massive Noisy Labeled Data for Image Classification</a>: hidden variable is the label noise type</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1907.13426.pdf" target="_blank" rel="noopener">Expectation-Maximization Attention Networks for Semantic Segmentation</a>: hidden variable is dictionary basis</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Cut and Paste/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Cut and Paste/" itemprop="url">Cut and Paste</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Do segmentation, image enhancemnet, and inpainting simultaneously <a href="https://arxiv.org/pdf/1811.07630.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>Learning to Segment via Cut-and-Paste <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Tal_Remez_Learning_to_Segment_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ostyakov, Pavel, et al. “SEIGAN: Towards Compositional Image Generation by Simultaneously Learning to Segment, Enhance, and Inpaint.” arXiv preprint arXiv:1811.07630 (2018).</p>
-<p>[2] Remez, Tal, Jonathan Huang, and Matthew Brown. “Learning to segment via cut-and-paste.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Conditional GAN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Conditional GAN/" itemprop="url">Conditional GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:08+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Conditioned on label vector: conditional GAN <a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">[4]</a>, CVAE-GAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>Conditioned on a single image</p>
-<ul>
-<li>pix2pix <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>; high-resolution pix2pix <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[2]</a> (add coarse-to-fine strategy); BicycleGAN <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">[3]</a> (combination of cVAE-GAN and cLR-GAN)</li>
-<li>DAGAN <a href="https://arxiv.org/pdf/1711.04340" target="_blank" rel="noopener">[5]</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Isola, Phillip, et al. “Image-to-image translation with conditional adversarial networks.” CVPR, 2017</p>
-<p>[2] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018.</p>
-<p>[3] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” NIPS, 2017.</p>
-<p>[4] Mirza, Mehdi, and Simon Osindero. “Conditional generative adversarial nets.” arXiv preprint arXiv:1411.1784 (2014).</p>
-<p>[5] Antoniou, Antreas, Amos Storkey, and Harrison Edwards. “Data augmentation generative adversarial networks.” arXiv preprint arXiv:1711.04340 (2017).</p>
-<p>[6] Bao, Jianmin, et al. “CVAE-GAN: fine-grained image generation through asymmetric training.” ICCV, 2017.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1968,7 +2048,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">215</span>
+                  <span class="site-state-item-count">218</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1990,7 +2070,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">105</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

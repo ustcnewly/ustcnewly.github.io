@@ -281,6 +281,459 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modality Fusion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Multi-modality Fusion/" itemprop="url">Multi-modality Fusion</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>Concatenation/summation, or weighted (attention mechanism) concatenation/summation.</li>
+<li>P(y|x1,x2)=P(y|x1)P(y|x2), with Gaussian distribution assumption <a href="https://arxiv.org/pdf/2112.05130.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li>Huang, Xun, et al. “Multimodal Conditional Image Synthesis with Product-of-Experts GANs.” arXiv preprint arXiv:2112.05130 (2021).</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modal Problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Multi-modal Problem/" itemprop="url">Multi-modal Problem</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Multi-modal problem means that given an input, there exist multiple possible outputs instead of a single deterministic output. The key problem is the mode collapse problem.</p>
+<ol>
+<li><p>The ground-truth output belongs to one of K generated possibilities <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Vondrick_Anticipating_Visual_Representations_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a>. K is set beforehand.</p>
+</li>
+<li><p>Ensure bijection between random vector and output: Associate random factor (e.g., random vector z) with specific information <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a>. Either random factor is conditioned on specific information, or the generated output can recognize random factor. If the mapping from random vector to output is invertible (e.g., glow), there is a natural bijection between random vector and output <a href="http://de.arxiv.org/pdf/2006.14200?gitT" target="_blank" rel="noopener">[6]</a>. </p>
+<center><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/gAVVos7.jpg" width="50%" border="0"></center>
+</li>
+<li><p>Enforce different random vectors to produce different outputs: push apart the outputs generated from different random vectors z with diversity loss or mode seeking loss <a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1901.09024.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Normalized_Diversification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016.</p>
+<p>[2] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” Advances in Neural Information Processing Systems. 2017.</p>
+<p>[3] Qi Mao, Hsin-Ying Lee, Hung-Yu Tseng, Siwei Ma, and Ming-Hsuan Yang. Mode seeking generative adversarial networks for diverse image synthesis. In CVPR, 2019.</p>
+<p>[4] Dingdong Yang, Seunghoon Hong, Yunseok Jang, Tianchen Zhao, and Honglak Lee. Diversity-sensitive<br>conditional generative adversarial networks. arXiv preprint arXiv:1901.09024, 2019.</p>
+<p>[5] Shaohui Liu, Xiao Zhang, Jianqiao Wangni, Jianbo Shi: Normalized Diversification. CVPR 2019: 10306-10315</p>
+<p>[6] Lugmayr, Andreas, et al. “SRFlow: Learning the Super-Resolution Space with Normalizing Flow.” arXiv preprint arXiv:2006.14200 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/MLP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/MLP/" itemprop="url">MLP</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>classification <a href="https://proceedings.neurips.cc/paper/2021/file/cba0a4ee5ccd02fda0fe3f9a3e7b89fe-Paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2105.02723.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>detection, segmentation <a href="https://arxiv.org/pdf/2107.08391.pdf" target="_blank" rel="noopener">[3]</a></li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Tolstikhin, Ilya O., et al. “Mlp-mixer: An all-mlp architecture for vision.” Advances in Neural Information Processing Systems 34 (2021).</p>
+<p>[2] Melas-Kyriazi, Luke. “Do you even need attention? a stack of feed-forward layers does surprisingly well on imagenet.” arXiv preprint arXiv:2105.02723 (2021).</p>
+<p>[3] Lian, Dongze, et al. “As-mlp: An axial shifted mlp architecture for vision.” arXiv preprint arXiv:2107.08391 (2021).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Memory Network/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -388,6 +841,8 @@
 <li><p>few-shot learning with memory module <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Linchao_Zhu_Compound_Memory_Networks_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1605.06065.pdf" target="_blank" rel="noopener">[3]</a></p>
 </li>
 <li><p>global memory <a href="https://arxiv.org/abs/2101.11939" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>short-term memory and long-term memory <a href="https://arxiv.org/pdf/2207.07115.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
 </ul>
 
@@ -1341,621 +1796,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image to Image Translation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Image to Image Translation/" itemprop="url">Image to Image Translation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Update-the-input-image"><a href="#Update-the-input-image" class="headerlink" title="Update the input image:"></a>Update the input image:</h3><ul>
-<li><p>texture synthesis</p>
-<ul>
-<li>Texture synthesis using convolutional neural networks. <a href="http://papers.nips.cc/paper/5633-texture-synthesis-using-convolutional-neural-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>feature inversion</p>
-<ul>
-<li>Understanding Deep Image Representations by Inverting Them. </li>
-</ul>
-</li>
-<li><p>style transfer = feature inversion + texture synthesis</p>
-<ul>
-<li><p>Image style transfer using convolutional neural networks. <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/hwalsuklee/tensorflow-style-transfer" target="_blank" rel="noopener">[code]</a> (no training, test is slow)</p>
-</li>
-<li><p>Perceptual Losses for Real-Time Style Transfer and Super-Resolution. <a href="https://arxiv.org/pdf/1603.08155.pdf%7C" target="_blank" rel="noopener">[pdf]</a> (train a network for each style using style image and content image as inputs, real-time test, belong to one-to-one image mapping)</p>
-</li>
-<li><p>Texture Networks: Feed-forward Synthesis of Textures and Stylized Image. <a href="http://proceedings.mlr.press/v48/ulyanov16.pdf" target="_blank" rel="noopener">[pdf]</a></p>
-</li>
-<li><p>A learned representation for artistic style. <a href="https://arxiv.org/pdf/1610.07629.pdf" target="_blank" rel="noopener">[pdf]</a> (train a unified network for multiple styles)</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Learn-the-mapping-from-image-to-image"><a href="#Learn-the-mapping-from-image-to-image" class="headerlink" title="Learn the mapping from image to image"></a>Learn the mapping from image to image</h3><ul>
-<li><p>super-resolution</p>
-<ul>
-<li><p>Learning a deep convolutional network for image super-resolution. <a href="http://ai2-s2-pdfs.s3.amazonaws.com/5763/c2c62463c61926c7e192dcc340c4691ee3aa.pdf" target="_blank" rel="noopener">[pdf]</a></p>
-</li>
-<li><p>Accurate Image Super-Resolution Using Very Deep Convolutional Networks <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kim_Accurate_Image_Super-Resolution_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/Jongchan/tensorflow-vdsr" target="_blank" rel="noopener">[code]</a> (VGG learns residual)</p>
-</li>
-<li><p>Accelerating the Super-Resolution Convolutional Neural Network. <a href="https://arxiv.org/pdf/1608.00367.pdf" target="_blank" rel="noopener">[pdf]</a> (hourglass structure, deconv)</p>
-</li>
-<li><p>Deeply-recursive convolutional network for image super-resolution. <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kim_Deeply-Recursive_Convolutional_Network_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[pdf]</a></p>
-</li>
-<li><p>Photo-realistic single image super-resolution using a generative adversarial network. <a href="https://arxiv.org/pdf/1609.04802.pdf" target="_blank" rel="noopener">[pdf]</a> (content_loss, adversarial loss)</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>inpainting or hole-filling</p>
-<ul>
-<li>Deep Image Inpainting. <a href="http://cs231n.stanford.edu/reports/2017/pdfs/328.pdf" target="_blank" rel="noopener">[pdf]</a> </li>
-<li>Context Encoders: Feature Learning by Inpainting <a href="http://people.eecs.berkeley.edu/~pathak/papers/cvpr16.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/pathak22/context-encoder" target="_blank" rel="noopener">[code]</a></li>
-</ul>
-</li>
-<li><p>colorization</p>
-<ul>
-<li><p>Colorful image colorization. <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/richzhang/colorization" target="_blank" rel="noopener">[code]</a></p>
-</li>
-<li><p>Learning Representations for Automatic Colorization. <a href="https://arxiv.org/pdf/1603.06668.pdf" target="_blank" rel="noopener">[pdf]</a> [<a href="https://github.com/gustavla/autocolorize" target="_blank" rel="noopener">code</a></p>
-</li>
-</ul>
-</li>
-<li><p>denoising</p>
-<ul>
-<li>Image Restoration Using Very Deep Convolutional EncoderDecoder Networks with Symmetric Skip Connections <a href="https://arxiv.org/pdf/1603.09056.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://bitbucket.org/chhshen/image-denoising/" target="_blank" rel="noopener">[code]</a>:(conv and deconv)</li>
-</ul>
-</li>
-<li><p>decompression</p>
-<ul>
-<li>Compression Artifacts Reduction by a Deep Convolutional Network <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Dong_Compression_Artifacts_Reduction_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li></li>
-</ul>
-</li>
-<li><p>dehaze</p>
-<ul>
-<li>Dehazenet: An end-to-end system for single image haze removal <a href="https://arxiv.org/pdf/1601.07661.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>demosaicking</p>
-<ul>
-<li>Deep joint demosaicking and denoising <a href="http://delivery.acm.org.ezproxy.rice.edu/10.1145/2990000/2982399/a191-gharbi.pdf?ip=128.42.202.150&amp;id=2982399&amp;acc=ACTIVE%20SERVICE&amp;key=B63ACEF81C6334F5%2EBB994C37505169BD%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;CFID=1002713420&amp;CFTOKEN=54421672&amp;__acm__=1509998099_5a382ee2ab7d300c852e5055dcf99b99" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>domain adaptation</p>
-<ul>
-<li>Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network. <a href="Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network">[pdf]</a> <a href="https://github.com/tensorflow/models/tree/master/research/domain_adaptation/pixel_domain_adaptation" target="_blank" rel="noopener">[code]</a></li>
-</ul>
-</li>
-<li><p><a href="https://ustcnewly.github.io/2018/11/27/deep_learning/Image%20Harmonization/">image harmonization</a></p>
-</li>
-<li><p><a href="https://ustcnewly.github.io/2019/04/16/deep_learning/Image%20Matting/">image matting</a></p>
-</li>
-<li><p>general image-to-image translation</p>
-<ul>
-<li><p>paired training data</p>
-<ul>
-<li><p>Image-to-Image Translation with Conditional Adversarial Nets. <a href="https://arxiv.org/pdf/1611.07004v1.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://phillipi.github.io/pix2pix/" target="_blank" rel="noopener">[code]</a>  (pixelGAN)</p>
-</li>
-<li><p>High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs. <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[pdf]</a>: extend pixel2pixel GAN with coarse-to-fine strategy.</p>
-</li>
-</ul>
-</li>
-<li><p>unpaired training data</p>
-<ul>
-<li><p>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. <a href="https://arxiv.org/pdf/1703.10593.pdf" target="_blank" rel="noopener">[pdf]</a><a href="https://github.com/junyanz/CycleGAN" target="_blank" rel="noopener">[code]</a> (CycleGAN)</p>
-<ul>
-<li>DualGAN: Unsupervised Dual Learning for Image-to-Image Translation <a href="https://arxiv.org/pdf/1704.02510.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-</ul>
-</li>
-<li><p>Learning to Discover Cross-Domain Relations with Generative Adversarial Networks. <a href="https://arxiv.org/pdf/1703.05192.pdf" target="_blank" rel="noopener">[pdf]</a> (discoGAN)</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h3><ul>
-<li><a href="https://arxiv.org/pdf/2101.08629.pdf" target="_blank" rel="noopener">Image-to-Image Translation: Methods and Applications</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image Matting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Image Matting/" itemprop="url">Image Matting</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>.</p>
-<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
-<li><p><a href="http://alphamatting.com/" target="_blank" rel="noopener">Alphamatting.com</a> Dataset: 25 train images, 8 test images, each has 3 different trimaps: small, large, user. Input: image and trimap.</p>
-</li>
-<li><p><a href="https://sites.google.com/view/deepimagematting" target="_blank" rel="noopener">Composition-1k Dataset</a>: 1000 images and 50 unique foregrounds.</p>
-</li>
-<li><p><a href="https://github.com/lizhengwei1992/Semantic_Human_Matting" target="_blank" rel="noopener">Matting Human Dataset</a>: 34427 images, annotation is not very accurate.</p>
-</li>
-<li><p><a href="https://github.com/wukaoliu/CVPR2020-HAttMatting" target="_blank" rel="noopener">Dinstinctions-646</a>: composed of 646 foreground images</p>
-</li>
-<li><p><a href="https://openaccess.thecvf.com/content/WACV2021/papers/Kang_ATM_Attentional_Text_Matting_WACV_2021_paper.pdf" target="_blank" rel="noopener">Text matting dataset</a></p>
-</li>
-</ul>
-<h2 id="Evaluation-metrics"><a href="#Evaluation-metrics" class="headerlink" title="Evaluation metrics"></a>Evaluation metrics</h2><ul>
-<li>quantitative: Sum of Absolute Differences (SAD), Mean Square Error (MSE), Gradient error, Connectivity error.</li>
-</ul>
-<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
-<li><p>Affinity-based <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Aksoy_Designing_Effective_Inter-Pixel_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: pixel similarity metrics that rely on color similarity or spatial proximity. </p>
-</li>
-<li><p>Sampling-based <a href="https://link.springer.com/chapter/10.1007/978-3-319-46475-6_13" target="_blank" rel="noopener">[8]</a>: the foreground/background color of unknown pixels can be obtained by sampling the foreground/background color of known pixels.</p>
-</li>
-<li><p>Learning-based</p>
-<ul>
-<li>With trimap:<ul>
-<li>Encoder-Decoder network <a href="https://arxiv.org/pdf/1703.03872.pdf" target="_blank" rel="noopener">[2]</a> is the first end-to-end method for image matting: input image and trimap, output alpha; alpha loss and compositional loss; refine alpha.</li>
-<li>DeepMattePropNet <a href="https://www.ijcai.org/proceedings/2018/0139.pdf" target="_blank" rel="noopener">[4]</a>: use deep learning to approximate affinity-based matting method; compositional loss.</li>
-<li>AlphaGAN <a href="https://arxiv.org/pdf/1807.10088.pdf" target="_blank" rel="noopener">[6]</a>: combine GAN with alpha loss and compositional loss.</li>
-<li>Learning based sampling <a href="http://people.inf.ethz.ch/aksoyy/papers/CVPR19-samplenet.pdf" target="_blank" rel="noopener">[7]</a></li>
-</ul>
-</li>
-<li>Without trimap:<ul>
-<li>Light Dense Network (LDN) + Feathering Block (FB) <a href="https://arxiv.org/pdf/1707.08289.pdf" target="_blank" rel="noopener">[3]</a>: generate segmentation mask and refine the mask with feathering block. </li>
-<li>T-Net+M-net <a href="https://arxiv.org/pdf/1809.01354.pdf" target="_blank" rel="noopener">[5]</a>: use segmentation task as trimap</li>
-<li><a href="https://arxiv.org/pdf/2004.00626.pdf" target="_blank" rel="noopener">[9]</a>: capture the background image without subject and a corresponding video with subject</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h2><p>Omnimatte <a href="https://arxiv.org/pdf/2105.06993.pdf" target="_blank" rel="noopener">[10]</a>: segment objects and scene effects related to the objects (shadows, reflections, smoke)</p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” CVPR, 2017.</p>
-<p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
-<p>[3] Zhu, Bingke, et al. “Fast deep matting for portrait animation on mobile phone.” ACM MM, 2017.</p>
-<p>[4] Wang, Yu, et al. “Deep Propagation Based Image Matting.” IJCAI. 2018.</p>
-<p>[5] Quan Chen, Tiezheng Ge, Yanyu Xu, Zhiqiang Zhang, Xinxin Yang, Kun Gai, “Semantic Human Matting.” ACM MM, 2018.</p>
-<p>[6] Lutz, Sebastian, Konstantinos Amplianitis, and Aljosa Smolic. “AlphaGAN: Generative adversarial networks for natural image matting.” BMVC, 2018.</p>
-<p>[7] Jingwei Tang, Yagız Aksoy, Cengiz Oztireli, Markus Gross, Tunc Ozan Aydın. “Learning-based Sampling for Natural Image Matting”, CVPR, 2019.</p>
-<p>[8] Feng, Xiaoxue, Xiaohui Liang, and Zili Zhang. “A cluster sampling method for image matting via sparse coding.” ECCV, 2016.</p>
-<p>[9] Soumyadip Sengupta, Vivek Jayaram, Brian Curless, Steve Seitz, Ira Kemelmacher-Shlizerman:<br>Background Matting: The World is Your Green Screen. CVPR, 2020.</p>
-<p>[10] Lu, Erika, et al. “Omnimatte: Associating Objects and Their Effects in Video.” CVPR, 2021.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image Manipulation Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Image Manipulation Detection/" itemprop="url">Image Manipulation Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
-<li><p>Casia V1.0/2.0: <a href="https://ieeexplore.ieee.org/document/6625374" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/namtpham/casia1groundtruth" target="_blank" rel="noopener">[v1]</a> <a href="https://github.com/namtpham/casia2groundtruth" target="_blank" rel="noopener">[v2]</a></p>
-</li>
-<li><p>Columbia Uncompressed Image Splicing Detection: <a href="https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/" target="_blank" rel="noopener">[dataset]</a></p>
-</li>
-<li><p>Pawel korus-Realistic Tampering Dataset: <a href="https://pkorus.pl/downloads" target="_blank" rel="noopener">[dataset]</a></p>
-</li>
-<li><p>Coverage: <a href="https://stefan.winklerbros.net/Publications/icip2016b.pdf" target="_blank" rel="noopener">[dataset]</a></p>
-</li>
-<li><p>NIST16: <a href="https://mfc.nist.gov/users/sign_in" target="_blank" rel="noopener">[dataset]</a></p>
-</li>
-<li><p>DEFACTO: <a href="https://defactodataset.github.io/" target="_blank" rel="noopener">[dataset]</a></p>
-</li>
-<li><p>self-made dataset with <a href="https://github.com/pengzhou1108/RGB-N" target="_blank" rel="noopener">[code]</a></p>
-</li>
-</ul>
-<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ul>
-<li><p>MantraNet <a href="https://github.com/RonyAbecidan/ManTraNet-pytorch" target="_blank" rel="noopener">[code]</a>: compare each pixel with neighboring pixels</p>
-</li>
-<li><p>MAGritte <a href="https://github.com/vlkniaz/MAGritte" target="_blank" rel="noopener">[code]</a>: a combination of generation and discrimination</p>
-</li>
-<li><p>H-LSTM <a href="https://arxiv.org/pdf/1903.02495.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/jawadbappy/forgery_localization_HLED" target="_blank" rel="noopener">[code]</a>: 1. resampling features 2. use Hilbert curve to determine the patch order </p>
-</li>
-<li><p>Constrained-RCNN <a href="https://github.com/HuizhouLi/Constrained-R-CNN" target="_blank" rel="noopener">[code]</a>: constrained convolution</p>
-</li>
-<li><p>GSRNet <a href="https://arxiv.org/pdf/1811.09729.pdf" target="_blank" rel="noopener">[paper]</a> <a href="https://github.com/pengzhou1108/GSRNet" target="_blank" rel="noopener">[code]</a>: data augmentation</p>
-</li>
-<li><p>SPAN <a href="https://github.com/ZhiHanZ/IRIS0-SPAN" target="_blank" rel="noopener">[code]</a>: pyramid self-attention</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2010,7 +1850,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">215</span>
+                  <span class="site-state-item-count">218</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2032,7 +1872,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">105</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

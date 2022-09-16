@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Shadow-related%20Application/</loc>
+    <lastmod>2022-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/09/10/deep_learning/Virtual%20Try-on/</loc>
+    <lastmod>2022-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/09/09/deep_learning/Exemplar-guided%20Image%20Translation/</loc>
+    <lastmod>2022-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion%20Model/</loc>
+    <lastmod>2022-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Generative%20Model/</loc>
+    <lastmod>2022-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20to%20Image%20Translation/</loc>
+    <lastmod>2022-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/</loc>
+    <lastmod>2022-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Color%20Mapping/</loc>
+    <lastmod>2022-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Memory%20Network/</loc>
+    <lastmod>2022-09-01</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
     <lastmod>2022-08-31</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/</loc>
-    <lastmod>2022-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/</loc>
     <lastmod>2022-08-22</lastmod>
   </url>
   <url>
@@ -29,19 +69,11 @@
     <lastmod>2022-07-22</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Generative%20Model/</loc>
-    <lastmod>2022-07-15</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/07/15/deep_learning/Network%20Architecture/</loc>
     <lastmod>2022-07-15</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Inpainting/</loc>
-    <lastmod>2022-06-05</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/</loc>
     <lastmod>2022-06-05</lastmod>
   </url>
   <url>
@@ -285,10 +317,6 @@
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Shadow-related%20Application/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Subjective%20Annotation/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
@@ -509,10 +537,6 @@
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Color%20Mapping/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Conditional%20GAN/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
@@ -665,10 +689,6 @@
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20to%20Image%20Translation/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image-text%20Retrieval/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
@@ -694,10 +714,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Mask-aided%20Object%20Detection/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Memory%20Network/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
@@ -842,10 +858,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Adversarial%20Attack/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>

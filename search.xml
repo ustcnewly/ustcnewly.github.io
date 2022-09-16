@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Virtual Try-on</title>
+    <url>/2022/09/10/deep_learning/Virtual%20Try-on/</url>
+    <content><![CDATA[<h4 id="warping"><a href="#warping" class="headerlink" title="warping"></a>warping</h4><ul>
+<li>correspondence matrix <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CT-Net_Complementary_Transfering_Network_for_Garment_Transfer_With_Arbitrary_Geometric_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022W/CVFAD/papers/Morelli_Dress_Code_High-Resolution_Multi-Category_Virtual_Try-On_CVPRW_2022_paper.pdf" target="_blank" rel="noopener">[4]</a></li>
+<li>TPS <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CT-Net_Complementary_Transfering_Network_for_Garment_Transfer_With_Arbitrary_Geometric_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022W/CVFAD/papers/Fenocchi_Dual-Branch_Collaborative_Transformer_for_Virtual_Try-On_CVPRW_2022_paper.pdf" target="_blank" rel="noopener">[3]</a> </li>
+<li>offset and weight <a href="https://arxiv.org/pdf/2207.09161.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+<h4 id="target-person"><a href="#target-person" class="headerlink" title="target person"></a>target person</h4><p>Garment Transfer: <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CT-Net_Complementary_Transfering_Network_for_Garment_Transfer_With_Arbitrary_Geometric_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9525061" target="_blank" rel="noopener">[6]</a> <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Amit_Raj_SwapNet_Garment_Transfer_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[8]</a></p>
+<p>Controllable person image synthesis: <a href="https://arxiv.org/pdf/2208.00712.pdf" target="_blank" rel="noopener">[7]</a></p>
+<p>Recurrent Person Image Generation: <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Cui_Dressing_in_Order_Recurrent_Person_Image_Generation_for_Pose_Transfer_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[9]</a></p>
+<h4 id="References"><a href="#References" class="headerlink" title="References"></a>References</h4><ol>
+<li><p>Yang, Fan, and Guosheng Lin. “CT-Net: Complementary Transfering Network for Garment Transfer with Arbitrary Geometric Changes.” CVPR, 2021.</p>
+</li>
+<li><p>Bai, Shuai, et al. “Single Stage Virtual Try-on via Deformable Attention Flows.” arXiv preprint arXiv:2207.09161 (2022).</p>
+</li>
+<li><p>Fenocchi, Emanuele, et al. “Dual-Branch Collaborative Transformer for Virtual Try-On.” CVPR, 2022.</p>
+</li>
+<li><p>Morelli, Davide, et al. “Dress Code: High-Resolution Multi-Category Virtual Try-On.” CVPR, 2022.</p>
+</li>
+<li><p>Fan Yang, Guosheng Lin. “CT-Net: Complementary Transfering Network for Garment Transfer with Arbitrary Geometric Changes.” CVPR, 2021.</p>
+</li>
+<li><p>Liu, Ting, et al. “Spatial-aware texture transformer for high-fidelity garment transfer.” IEEE Transactions on Image Processing 30 (2021): 7499-7510.</p>
+</li>
+<li><p>Zhou, Xinyue, et al. “Cross Attention Based Style Distribution for Controllable Person Image Synthesis.” arXiv preprint arXiv:2208.00712 (2022).</p>
+</li>
+<li><p>Raj, Amit, et al. “Swapnet: Image based garment transfer.” European Conference on Computer Vision. Springer, Cham, 2018.</p>
+</li>
+<li><p>Cui, Aiyu, Daniel McKee, and Svetlana Lazebnik. “Dressing in order: Recurrent person image generation for pose transfer, virtual try-on and outfit editing.” ICCV, 2021.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Diffusion Model</title>
+    <url>/2022/09/09/deep_learning/Diffusion%20Model/</url>
+    <content><![CDATA[<ul>
+<li>Diffusion model: <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2206.00364.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a></li>
+</ul>
+<p>Survey: <a href="https://arxiv.org/pdf/2209.00796.pdf" target="_blank" rel="noopener">Diffusion Models: A Comprehensive Survey of Methods and Applications</a></p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021).</p>
+<p>[2] GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models </p>
+<p>[3] Elucidating the Design Space of Diffusion-Based Generative Models</p>
+<p>[4] Wang, Tengfei, et al. “Pretraining is All You Need for Image-to-Image Translation.” arXiv preprint arXiv:2205.12952 (2022).</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>generative model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Exemplar-guided Image Translation</title>
+    <url>/2022/09/09/deep_learning/Exemplar-guided%20Image%20Translation/</url>
+    <content><![CDATA[<p>Task: Each exemplar represents one domain. Transfer the style of exemplar image to the input image. </p>
+<p><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhang_Cross-Domain_Correspondence_Learning_for_Exemplar-Based_Image_Translation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
+<ul>
+<li><p>reconstruct the style code: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Anokhin_High-Resolution_Daytime_Translation_Without_Domain_Labels_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>use pretrained network (prior knowledge) to extract the style code: <a href="https://arxiv.org/pdf/2201.00424.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+</ul>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><p>Zhang, Pan, et al. “Cross-domain correspondence learning for exemplar-based image translation.” CVPR, 2020.</p>
+</li>
+<li><p>Anokhin, Ivan, et al. “High-resolution daytime translation without domain labels.” CVPR, 2020.</p>
+</li>
+<li><p>Tumanyan, Narek, et al. “Splicing ViT Features for Semantic Appearance Transfer.” CVPR, 2022.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>image translation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NERF</title>
     <url>/2022/08/22/deep_learning/NERF/</url>
     <content><![CDATA[<ul>
@@ -2955,7 +3037,7 @@ spyder
     <content><![CDATA[<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
 <li><p>Shadow detection: <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Lei_Zhu_Bi-directional_Feature_Pyramid_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
 </li>
-<li><p>Object-shadow pair detection: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+<li><p>Object-shadow pair detection/matting: <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Instance_Shadow_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Single-Stage_Instance_Shadow_Detection_With_Bidirectional_Relation_Learning_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[10]</a> <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Lu_Omnimatte_Associating_Objects_and_Their_Effects_in_Video_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[11]</a></p>
 </li>
 <li><p>Shadow removal: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hu_Mask-ShadowGAN_Learning_to_Remove_Shadows_From_Unpaired_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Le_Shadow_Removal_via_Shadow_Image_Decomposition_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/1911.08718.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2008.00267.pdf" target="_blank" rel="noopener">[6]</a></p>
 </li>
@@ -3007,6 +3089,10 @@ spyder
 <li><p>Zhan, Fangneng, et al. “Adversarial Image Composition with Auxiliary Illumination.” Proceedings of the Asian Conference on Computer Vision. 2020.</p>
 </li>
 <li><p>Zhang, Edward, et al. “No Shadow Left Behind: Removing Objects and their Shadows using Approximate Lighting and Geometry.” CVPR, 2021.</p>
+</li>
+<li><p>Wang, Tianyu, et al. “Single-stage instance shadow detection with bidirectional relation learning.” CVPR, 2021.</p>
+</li>
+<li><p>Lu, Erika, et al. “Omnimatte: Associating objects and their effects in video.” CVPR, 2021.</p>
 </li>
 </ol>
 ]]></content>
@@ -4383,9 +4469,11 @@ spyder
 <li>classification: ViT<a href="https://arxiv.org/pdf/2010.11929.pdf" target="_blank" rel="noopener">[2]</a> RVT <a href="https://arxiv.org/pdf/2105.07926.pdf" target="_blank" rel="noopener">[12]</a></li>
 <li>object detection: DETR<a href="https://arxiv.org/pdf/2005.12872.pdf" target="_blank" rel="noopener">[3]</a></li>
 <li>person reID: <a href="https://arxiv.org/pdf/2102.04378.pdf" target="_blank" rel="noopener">[7]</a></li>
-<li>image-to-image translation: low-level vision (super-resolution, denoising, deraining) <a href="https://arxiv.org/pdf/2012.00364.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2106.03106.pdf" target="_blank" rel="noopener">[16]</a>, colorization <a href="https://openreview.net/pdf?id=5NA1PinlGFu" target="_blank" rel="noopener">[6]</a>, style transfer <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Deng_StyTr2_Image_Style_Transfer_With_Transformers_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[15]</a></li>
+<li>general low-level vision (super-resolution, denoising, deraining) <a href="https://arxiv.org/pdf/2012.00364.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2106.03106.pdf" target="_blank" rel="noopener">[16]</a></li>
 <li>unconditional GAN: <a href="https://arxiv.org/pdf/2102.07074.pdf" target="_blank" rel="noopener">[10]</a></li>
 <li>video understanding: <a href="https://arxiv.org/pdf/2102.05095.pdf" target="_blank" rel="noopener">[11]</a></li>
+<li>image colorization: <a href="https://openreview.net/pdf?id=5NA1PinlGFu" target="_blank" rel="noopener">[6]</a> <a href="https://ci.idm.pku.edu.cn/Weng_ECCV22b.pdf" target="_blank" rel="noopener">[17]</a></li>
+<li>style transfer: <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Deng_StyTr2_Image_Style_Transfer_With_Transformers_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[15]</a></li>
 </ul>
 <h3 id="Combination-of-transformer-and-CNN"><a href="#Combination-of-transformer-and-CNN" class="headerlink" title="Combination of transformer and CNN:"></a>Combination of transformer and CNN:</h3><ul>
 <li>T2T-Vit <a href="https://arxiv.org/pdf/2101.11986.pdf" target="_blank" rel="noopener">[9]</a></li>
@@ -4421,6 +4509,7 @@ spyder
 <p>[14] Li, Jiashi, et al. “Next-ViT: Next Generation Vision Transformer for Efficient Deployment in Realistic Industrial Scenarios.” arXiv preprint arXiv:2207.05501 (2022).</p>
 <p>[15] Deng, Yingying, et al. “StyTr2: Image Style Transfer with Transformers.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2022.</p>
 <p>[16] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, Houqiang Li. “Uformer: A General U-Shaped Transformer for Image Restoration.”</p>
+<p>[17] Shuchen Weng, Jimeng Sun, Yu Li, Si Li, and Boxin Shi. “CT2: Colorization Transformer via Color Tokens”, ECCV, 2022.</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -4458,10 +4547,12 @@ spyder
 <li>StyleGAN of all trades <a href="https://arxiv.org/pdf/2111.01619.pdf" target="_blank" rel="noopener">[1]</a></li>
 <li>StyleGANv3<a href="https://papers.nips.cc/paper/2021/file/076ccd93ad68be51f23707988e934906-Paper.pdf" target="_blank" rel="noopener">[2]</a>: solve alias (texture sticking) issue, that is, detail appearing to glued to image coordinates instead of the surface of depicted objects.</li>
 <li>StyleGAN-XL <a href="https://arxiv.org/pdf/2202.00273.pdf" target="_blank" rel="noopener">[3]</a>: extend to large dataset</li>
+<li>3D styleGAN <a href="https://arxiv.org/pdf/2207.10642.pdf" target="_blank" rel="noopener">[4]</a></li>
 </ul>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chong, Min Jin, Hsin-Ying Lee, and David Forsyth. “StyleGAN of All Trades: Image Manipulation with Only Pretrained StyleGAN.” arXiv preprint arXiv:2111.01619 (2021).</p>
 <p>[2] Karras, Tero, et al. “Alias-free generative adversarial networks.” Thirty-Fifth Conference on Neural Information Processing Systems. 2021.</p>
 <p>[3] Sauer, Axel, Katja Schwarz, and Andreas Geiger. “Stylegan-xl: Scaling stylegan to large diverse datasets.” arXiv preprint arXiv:2202.00273 (2022).</p>
+<p>[4] Xiaoming Zhao, Fangchang Ma, David Güera, Zhile Ren, Alexander G. Schwing, Alex Colburn. “Generative Multiplane Images: Making a 2D GAN 3D-Aware”</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -5051,6 +5142,8 @@ spyder
 </li>
 <li><p>global memory <a href="https://arxiv.org/abs/2101.11939" target="_blank" rel="noopener">[1]</a></p>
 </li>
+<li><p>short-term memory and long-term memory <a href="https://arxiv.org/pdf/2207.07115.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -5192,7 +5285,7 @@ spyder
   <entry>
     <title>Image to Image Translation</title>
     <url>/2022/06/16/deep_learning/Image%20to%20Image%20Translation/</url>
-    <content><![CDATA[<h3 id="Update-the-input-image"><a href="#Update-the-input-image" class="headerlink" title="Update the input image:"></a>Update the input image:</h3><ul>
+    <content><![CDATA[<h3 id="Optimization-based"><a href="#Optimization-based" class="headerlink" title="Optimization-based:"></a>Optimization-based:</h3><ul>
 <li><p>texture synthesis</p>
 <ul>
 <li>Texture synthesis using convolutional neural networks. <a href="http://papers.nips.cc/paper/5633-texture-synthesis-using-convolutional-neural-networks.pdf" target="_blank" rel="noopener">[pdf]</a></li>
@@ -5216,7 +5309,7 @@ spyder
 </ul>
 </li>
 </ul>
-<h3 id="Learn-the-mapping-from-image-to-image"><a href="#Learn-the-mapping-from-image-to-image" class="headerlink" title="Learn the mapping from image to image"></a>Learn the mapping from image to image</h3><ul>
+<h3 id="Feedforward-based"><a href="#Feedforward-based" class="headerlink" title="Feedforward-based:"></a>Feedforward-based:</h3><ul>
 <li><p>super-resolution</p>
 <ul>
 <li><p>Learning a deep convolutional network for image super-resolution. <a href="http://ai2-s2-pdfs.s3.amazonaws.com/5763/c2c62463c61926c7e192dcc340c4691ee3aa.pdf" target="_blank" rel="noopener">[pdf]</a></p>
@@ -5255,10 +5348,9 @@ spyder
 <li><p>decompression</p>
 <ul>
 <li>Compression Artifacts Reduction by a Deep Convolutional Network <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Dong_Compression_Artifacts_Reduction_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[pdf]</a></li>
-<li></li>
 </ul>
 </li>
-<li><p>dehaze</p>
+<li><p>dehaze/deraining</p>
 <ul>
 <li>Dehazenet: An end-to-end system for single image haze removal <a href="https://arxiv.org/pdf/1601.07661.pdf" target="_blank" rel="noopener">[pdf]</a></li>
 </ul>
@@ -5268,15 +5360,16 @@ spyder
 <li>Deep joint demosaicking and denoising <a href="http://delivery.acm.org.ezproxy.rice.edu/10.1145/2990000/2982399/a191-gharbi.pdf?ip=128.42.202.150&amp;id=2982399&amp;acc=ACTIVE%20SERVICE&amp;key=B63ACEF81C6334F5%2EBB994C37505169BD%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;CFID=1002713420&amp;CFTOKEN=54421672&amp;__acm__=1509998099_5a382ee2ab7d300c852e5055dcf99b99" target="_blank" rel="noopener">[pdf]</a></li>
 </ul>
 </li>
-<li><p>domain adaptation</p>
+<li><p><a href="https://ustcnewly.github.io/2018/11/27/deep_learning/Image%20Harmonization/">image harmonization</a></p>
+</li>
+</ul>
 <ul>
+<li>domain adaptation<ul>
 <li>Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network. <a href="Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Network">[pdf]</a> <a href="https://github.com/tensorflow/models/tree/master/research/domain_adaptation/pixel_domain_adaptation" target="_blank" rel="noopener">[code]</a></li>
 </ul>
 </li>
-<li><p><a href="https://ustcnewly.github.io/2018/11/27/deep_learning/Image%20Harmonization/">image harmonization</a></p>
-</li>
-<li><p><a href="https://ustcnewly.github.io/2019/04/16/deep_learning/Image%20Matting/">image matting</a></p>
-</li>
+</ul>
+<ul>
 <li><p>general image-to-image translation</p>
 <ul>
 <li><p>paired training data</p>
@@ -5310,6 +5403,7 @@ spyder
       </categories>
       <tags>
         <tag>GAN</tag>
+        <tag>image translation</tag>
       </tags>
   </entry>
   <entry>
@@ -5744,6 +5838,13 @@ spyder
 <li><a href="https://ustcnewly.github.io/2018/09/07/deep_learning/GAN/">GAN</a></li>
 <li><a href="https://ustcnewly.github.io/2021/10/08/deep_learning/VAE/">VAE</a></li>
 <li>diffusion model: <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2206.00364.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a></li>
+</ul>
+<p>Tutorial of generative models:</p>
+<ul>
+<li><p><a href="https://arxiv.org/pdf/2208.11970.pdf" target="_blank" rel="noopener">Understanding Diffusion Models: A Unified Perspective</a></p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2209.02606" target="_blank" rel="noopener">Unifying Generative Models with GFlowNets</a></p>
+</li>
 </ul>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021).</p>
 <p>[2] GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models </p>
@@ -6841,7 +6942,7 @@ spyder
     <title>Color Mapping</title>
     <url>/2022/06/16/deep_learning/Color%20Mapping/</url>
     <content><![CDATA[<h4 id="Global-color-mapping"><a href="#Global-color-mapping" class="headerlink" title="Global color mapping:"></a>Global color mapping:</h4><ul>
-<li>3D LUT: <a href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>3D LUT: <a href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf" target="_blank" rel="noopener">[1]</a>, <a href="https://arxiv.org/pdf/2204.13983.pdf" target="_blank" rel="noopener">[2]</a> non-uniform LUT</li>
 <li>curve function: <a href="https://arxiv.org/pdf/2109.05750.pdf" target="_blank" rel="noopener">[1]</a></li>
 <li>linear transformation: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
 </ul>
@@ -7037,7 +7138,7 @@ spyder
 <li>unpaired supervision: adversarial loss</li>
 <li>smooth loss: variation loss, Poisson loss</li>
 <li>content loss: perception loss</li>
-<li>style loss: style loss, AdaIn loss</li>
+<li>style loss: Gram loss, AdaIn loss</li>
 </ul>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Huang, Xun, and Serge Belongie. “Arbitrary style transfer in real-time with adaptive instance normalization.” ICCV, 2017.</p>
 <p>[2] Li, Yijun, et al. “Universal style transfer via feature transforms.” NeurIPS, 2017.</p>

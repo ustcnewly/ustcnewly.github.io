@@ -1,3 +1,6 @@
+https://ustcnewly.github.io/2022/09/10/deep_learning/Virtual Try-on/
+https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion Model/
+https://ustcnewly.github.io/2022/09/09/deep_learning/Exemplar-guided Image Translation/
 https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/
 https://ustcnewly.github.io/2022/07/25/machine_learning/Mask Form/
 https://ustcnewly.github.io/2022/07/22/others/To a Beginner on Paper Writing/
@@ -5,6 +8,3 @@ https://ustcnewly.github.io/2022/07/15/deep_learning/Network Architecture/
 https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install VirtualBox Guest Addition/
 https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Enlarge VirtualBox vdi/
 https://ustcnewly.github.io/2022/06/16/software/version_control/Git/
-https://ustcnewly.github.io/2022/06/16/software/library/Ubuntu JDK/
-https://ustcnewly.github.io/2022/06/16/software/library/OpenCV/
-https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg for Ubuntu14.04/
