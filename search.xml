@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Consistent Video Editing</title>
+    <url>/2022/09/20/deep_learning/Consistent%20Video%20Editing/</url>
+    <content><![CDATA[<ul>
+<li>Template based: <a href="https://arxiv.org/pdf/2109.11418.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ye_Deformable_Sprites_for_Unsupervised_Video_Decomposition_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li><p>Kasten, Yoni, et al. “Layered neural atlases for consistent video editing.” ACM Transactions on Graphics (TOG) 40.6 (2021): 1-12.</p>
+</li>
+<li><p>Ye, Vickie, et al. “Deformable Sprites for Unsupervised Video Decomposition.” CVPR, 2022.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Artistic and Photorealistic Style Transfer</title>
+    <url>/2022/09/19/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/</url>
+    <content><![CDATA[<h3 id="Transfer-strategy"><a href="#Transfer-strategy" class="headerlink" title="Transfer strategy"></a>Transfer strategy</h3><ul>
+<li><p>Feature transfer: AdaIN <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>, WCT <a href="https://arxiv.org/pdf/1705.08086.pdf" target="_blank" rel="noopener">[2]</a>, SANet <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_Arbitrary_Style_Transfer_With_Style-Attentional_Networks_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a>. </p>
+</li>
+<li><p><a href="https://ustcnewly.github.io/2022/01/21/deep_learning/Color%20Mapping/">Color transfer</a>: Learn color transformation (explicit function or implicit function (e.g., look-up table) conditioned on color values, location, semantic information, or other guidance. </p>
+</li>
+</ul>
+<h3 id="Losses"><a href="#Losses" class="headerlink" title="Losses:"></a>Losses:</h3><ul>
+<li>paired supervision: L2 loss</li>
+<li>unpaired supervision: adversarial loss</li>
+<li>smooth loss: variation loss, Poisson loss</li>
+<li>content loss: perception loss</li>
+<li>style loss: Gram loss, AdaIn loss</li>
+</ul>
+<h3 id="Multi-scale-stylization"><a href="#Multi-scale-stylization" class="headerlink" title="Multi-scale stylization"></a>Multi-scale stylization</h3><ul>
+<li><p>parallel: <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_AdaAttN_Revisit_Attention_Mechanism_in_Arbitrary_Neural_Style_Transfer_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+<li><p>sequential: <a href="https://arxiv.org/pdf/2004.10955.pdf" target="_blank" rel="noopener">[5]</a></p>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Huang, Xun, and Serge Belongie. “Arbitrary style transfer in real-time with adaptive instance normalization.” ICCV, 2017.</p>
+<p>[2] Li, Yijun, et al. “Universal style transfer via feature transforms.” NeurIPS, 2017.</p>
+<p>[3] Park, Dae Young, and Kwang Hee Lee. “Arbitrary style transfer with style-attentional networks.” CVPR, 2019.</p>
+<p>[4] Liu, Songhua, et al. “Adaattn: Revisit attention mechanism in arbitrary neural style transfer.” ICCV, 2021.</p>
+<p>[5] Xia, Xide, et al. “Joint bilateral learning for real-time universal photorealistic style transfer.” ECCV, 2020.</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>style transfer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dynamic Kernel</title>
+    <url>/2022/09/19/deep_learning/Dynamic%20Kernel/</url>
+    <content><![CDATA[<p>Dynamic kernels: <a href="https://proceedings.neurips.cc/paper/2016/file/8bf1211fd4b7b94528899de0a43b9fb3-Paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2003.05664.pdf" target="_blank" rel="noopener">[2]</a></p>
+<p>Survey: <a href="https://arxiv.org/pdf/2102.04906" target="_blank" rel="noopener">[Dynamic neural networks: A survey]</a></p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li><p>Jia, Xu, et al. “Dynamic filter networks.” Advances in neural information processing systems 29 (2016).</p>
+</li>
+<li><p>Tian, Zhi, Chunhua Shen, and Hao Chen. “Conditional convolutions for instance segmentation.” European conference on computer vision. Springer, Cham, 2020.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Virtual Try-on</title>
     <url>/2022/09/10/deep_learning/Virtual%20Try-on/</url>
     <content><![CDATA[<h4 id="warping"><a href="#warping" class="headerlink" title="warping"></a>warping</h4><ul>
@@ -7122,33 +7190,6 @@ spyder
       </categories>
       <tags>
         <tag>attention</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Artistic and Photorealistic Style Transfer</title>
-    <url>/2022/06/16/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/</url>
-    <content><![CDATA[<h3 id="Transfer-strategy"><a href="#Transfer-strategy" class="headerlink" title="Transfer strategy"></a>Transfer strategy</h3><ul>
-<li><p>Feature transfer: AdaIN <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>, WCT <a href="https://arxiv.org/pdf/1705.08086.pdf" target="_blank" rel="noopener">[2]</a>, SANet <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_Arbitrary_Style_Transfer_With_Style-Attentional_Networks_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a>. </p>
-</li>
-<li><p><a href="https://ustcnewly.github.io/2022/01/21/deep_learning/Color%20Mapping/">Color transfer</a>: Learn color transformation (explicit function or implicit function (e.g., look-up table) conditioned on color values, location, semantic information, or other guidance. </p>
-</li>
-</ul>
-<h3 id="Losses"><a href="#Losses" class="headerlink" title="Losses:"></a>Losses:</h3><ul>
-<li>paired supervision: L2 loss</li>
-<li>unpaired supervision: adversarial loss</li>
-<li>smooth loss: variation loss, Poisson loss</li>
-<li>content loss: perception loss</li>
-<li>style loss: Gram loss, AdaIn loss</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Huang, Xun, and Serge Belongie. “Arbitrary style transfer in real-time with adaptive instance normalization.” ICCV, 2017.</p>
-<p>[2] Li, Yijun, et al. “Universal style transfer via feature transforms.” NeurIPS, 2017.</p>
-<p>[3] Park, Dae Young, and Kwang Hee Lee. “Arbitrary style transfer with style-attentional networks.” CVPR, 2019.</p>
-]]></content>
-      <categories>
-        <category>paper note</category>
-      </categories>
-      <tags>
-        <tag>style transfer</tag>
       </tags>
   </entry>
   <entry>

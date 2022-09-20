@@ -281,6 +281,466 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image Blending/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Image Blending/" itemprop="url">Image Blending</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image Action Recognition with Unlabeled Videos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Image Action Recognition with Unlabeled Videos/" itemprop="url">Image Action Recognition with Unlabeled Videos</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Self-supervised learning: see video-to-image in this <a href="https://ustcnewly.github.io/2018/09/07/deep_learning/Self-supervised%20Learning/">blog</a>. </p>
+</li>
+<li><p>predict optical flow and use two-stream network <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gao_Im2Flow_Motion_Hallucination_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
+</li>
+<li><p>Predicting pose information (use poselet detector) <a href="http://openaccess.thecvf.com/content_cvpr_2013/papers/Chen_Watching_Unlabeled_Video_2013_CVPR_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Gao, Ruohan, Bo Xiong, and Kristen Grauman. “Im2flow: Motion hallucination from static images for action recognition.” CVPR, 2018.</p>
+<p>[2] Chen, Chao-Yeh, and Kristen Grauman. “Watching unlabeled video helps learn new human actions from very few labeled snapshots.” CVPR, 2013.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/High-resolution Image Generation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/High-resolution Image Generation/" itemprop="url">High-resolution Image Generation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>stacked generators from low-resolution to high-resolution: <a href="http://papers.nips.cc/paper/5773-deep-generative-image-models-using-a-laplacian-pyramid-of-adversarial-networks.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Stacked_Generative_Adversarial_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_StackGAN_Text_to_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Photographic_Image_Synthesis_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+<li><p>low-resolution generator embedded in high-resolution generator, upsample low-resolution result and add residual:  <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1907.12296" target="_blank" rel="noopener">[7]</a> <a href="http://openaccess.thecvf.com/content_ECCVW_2018/papers/11131/Hamada_Full-body_High-resolution_Anime_Generation_with_Progressive_Structure-conditional_Generative_Adversarial_Networks_ECCVW_2018_paper.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://arxiv.org/pdf/1710.10196.pdf?__hstc=200028081.1bb630f9cde2cb5f07430159d50a3c91.1524009600081.1524009600082.1524009600083.1&amp;__hssc=200028081.1.1524009600084&amp;__hsfp=1773666937" target="_blank" rel="noopener">[9]</a> <a href="https://arxiv.org/pdf/2005.09704.pdf" target="_blank" rel="noopener">[12]</a></p>
+</li>
+<li><p>fuse low-resolution outputs: <a href="https://arxiv.org/pdf/2009.06613.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[11]</a></p>
+</li>
+<li><p>shallow mapping from large-scale input to large-scale output: <a href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf" target="_blank" rel="noopener">[2]</a>(look-up table)</p>
+</li>
+<li><p>joint upsampling: given high-resolution input and low-resolution output, get high-resolution output. 1) append high-resolution input <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[1]</a>  or the feature of high-resolution input <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Photographic_Image_Synthesis_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[10]</a> to refinement network. 2) guided filter <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Wu_Fast_End-to-End_Trainable_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[13]</a>, use high-resolution input as guidance and coarse high-resolution output as filter input. 3) attentional upsampling <a href="https://arxiv.org/pdf/2012.09904" target="_blank" rel="noopener">[14]</a></p>
+</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Wang, Ting-Chun, et al. “High-resolution image synthesis and semantic manipulation with conditional gans.” CVPR, 2018.</p>
+<p>[2] Zeng, Hui, et al. “Learning Image-adaptive 3D Lookup Tables for High Performance Photo Enhancement in Real-time.” PAMI, 2020.</p>
+<p>[3] Yu, Haichao, et al. “High-Resolution Deep Image Matting.” arXiv preprint arXiv:2009.06613 (2020).</p>
+<p>[4] Denton, Emily L., Soumith Chintala, and Rob Fergus. “Deep generative image models using a￼ laplacian pyramid of adversarial networks.” NIPS, 2015.</p>
+<p>[5] Huang, Xun, et al. “Stacked generative adversarial networks.” CVPR, 2017.</p>
+<p>[6] Zhang, Han, et al. “Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks.” ICCV, 2017.</p>
+<p>[7] Andreini, Paolo, et al. “A two stage gan for high resolution retinal image generation and segmentation.” arXiv preprint arXiv:1907.12296 (2019).</p>
+<p>[8] Hamada, K., Tachibana, K., Li, T., Honda, H., &amp; Uchida, Y. (2018). Full-body high-resolution anime generation with progressive structure-conditional generative adversarial networks. ECCV, 2018.</p>
+<p>[9] Karras, Tero, et al. “Progressive growing of gans for improved quality, stability, and variation.” arXiv preprint arXiv:1710.10196 (2017).</p>
+<p>[10] Chen, Qifeng, and Vladlen Koltun. “Photographic image synthesis with cascaded refinement networks.” ICCV, 2017.</p>
+<p>[11] Anokhin, Ivan, et al. “High-Resolution Daytime Translation Without Domain Labels.” CVPR, 2020.</p>
+<p>[12] Yi, Zili, et al. “Contextual residual aggregation for ultra high-resolution image inpainting.” CVPR, 2020.</p>
+<p>[13] Wu, Huikai, et al. “Fast end-to-end trainable guided filter.” CVPR, 2018.</p>
+<p>[14] Kundu, Souvik, et al. “Attention-based Image Upsampling.” arXiv preprint arXiv:2012.09904 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Gradient Regularization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1457,494 +1917,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/From Weak to Strong Supervision/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/From Weak to Strong Supervision/" itemprop="url">From Weak to Strong Supervision</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Object Detection:</strong></p>
-<ol>
-<li><p>image label: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Bilen_Weakly_Supervised_Deep_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[WSDDN]</a></p>
-</li>
-<li><p>points that indicate the location of the object</p>
-</li>
-<li><p>bounding boxes</p>
-</li>
-</ol>
-<p><strong>Segmentation:</strong></p>
-<ol>
-<li><p>image label: <a href="https://arxiv.org/pdf/1603.06098.pdf]" target="_blank" rel="noopener">[SEC]</a></p>
-</li>
-<li><p>points that indicate the location of the object</p>
-</li>
-<li><p>scribbles that imply the extent of the object</p>
-</li>
-<li><p>bounding boxes</p>
-</li>
-<li><p>segmentation masks</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/From Anchor to ROI/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/From Anchor to ROI/" itemprop="url">From Anchor to ROI</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="layer-area"><a href="#layer-area" class="headerlink" title="layer area"></a>layer area</h2><p>From layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, </p>
-<script type="math/tex; mode=display">r_{i+1} = (r_i+2p_i-k_i)/s_i+1.</script><p>In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area.</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/5oklFvo.png" alt=""></p>
-<h2 id="coordinate-map"><a href="#coordinate-map" class="headerlink" title="coordinate map"></a>coordinate map</h2><p>Now consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$,</p>
-<script type="math/tex; mode=display">x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.</script><p>The above coordinate system starts from 1. When the coordinate system starts from 0, </p>
-<script type="math/tex; mode=display">x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,</script><p>which can be simplified as</p>
-<script type="math/tex; mode=display">x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).</script><p>when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case.</p>
-<p>By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution</p>
-<script type="math/tex; mode=display">x_1 = \alpha_L x_{L}+\beta_L,</script><p>in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ </p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/acLbSez.png" alt=""></p>
-<h2 id="anchor-box-to-ROI"><a href="#anchor-box-to-ROI" class="headerlink" title="anchor box to ROI"></a>anchor box to ROI</h2><p>Given two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Frequency Domain/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Frequency Domain/" itemprop="url">Frequency Domain</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Distinguish generated fake images and real images in the freqency domain. <a href="https://arxiv.org/pdf/1912.11035.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-<li><p>Use frequency map as network input or output <a href="https://arxiv.org/pdf/2002.12416.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2012.01832.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2011.09876.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>Use intermediate frequency features <a href="https://arxiv.org/pdf/2109.07161.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://proceedings.neurips.cc/paper/2020/file/a23156abfd4a114c35b930b836064e8b-Paper.pdf" target="_blank" rel="noopener">[9]</a></p>
-</li>
-<li><p>An image can be composed of or decomposed into low-frequency part and high-frequency part <a href="https://openreview.net/pdf?id=Syhr6pxCW" target="_blank" rel="noopener">[3]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Yu_WaveFill_A_Wavelet-Based_Generation_Network_for_Image_Inpainting_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://arxiv.org/pdf/2004.05498.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Cai_Frequency_Domain_Image_Translation_More_Photo-Realistic_Better_Identity-Preserving_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[10]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li><p>Kai Xu, Minghai Qin, Fei Sun, Yuhao Wang, Yen-Kuang Chen, Fengbo Ren, “Learning in the Frequency Domain”, CVPR, 2020.</p>
-</li>
-<li><p>Wang, Sheng-Yu, et al. “CNN-generated images are surprisingly easy to spot… for now.” arXiv preprint arXiv:1912.11035 (2019).</p>
-</li>
-<li><p>ayush Bansal, Yaser Sheikh, Deva Ramanan, “PixelNN: Example-based Image Synthesis”, ICLR 2018.</p>
-</li>
-<li><p>Yanchao Yang, Stefano Soatto, “FDA: Fourier Domain Adaptation for Semantic Segmentation”, CVPR 2020.</p>
-</li>
-<li><p>Roy, Hiya, et al. “Image inpainting using frequency domain priors.” arXiv preprint arXiv:2012.01832 (2020).</p>
-</li>
-<li><p>Shen, Xing, et al. “DCT-Mask: Discrete Cosine Transform Mask Representation for Instance Segmentation.” arXiv preprint arXiv:2011.09876 (2020).</p>
-</li>
-<li><p>Suvorov, Roman, et al. “Resolution-robust Large Mask Inpainting with Fourier Convolutions.” WACV (2021).</p>
-</li>
-<li><p>Yu, Yingchen, et al. “WaveFill: A Wavelet-based Generation Network for Image Inpainting.” ICCV, 2021.</p>
-</li>
-<li><p>Mardani, Morteza, et al. “Neural ffts for universal texture image synthesis.” NeurIPS (2020).</p>
-</li>
-<li><p>Cai, Mu, et al. “Frequency domain image translation: More photo-realistic, better identity-preserving.” ICCV, 2021.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1999,7 +1971,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">218</span>
+                  <span class="site-state-item-count">220</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

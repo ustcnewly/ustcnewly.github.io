@@ -281,6 +281,508 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Class Imbalance/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Class Imbalance/" itemprop="url">Class Imbalance</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>re-sampling</li>
+<li>synthetic samples: generate more samples for minor classes</li>
+<li>re-weighting</li>
+<li>few-shot learning</li>
+<li>decoupling representation and classifier learning: use normal sampling in the feature learning stage and use re-sampling in the classifier learning stage. </li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Causality/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Causality/" itemprop="url">Causal Inference</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Big Names:</strong> Judy Pearl <a href="http://ftp.cs.ucla.edu/pub/stat_ser/r354-corrected-reprint.pdf" target="_blank" rel="noopener">[Tutorial]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/Judy_Pearl_CausalityIntro.pdf" target="_blank" rel="noopener">[slides]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/Causality_2nd_Edition.pdf" target="_blank" rel="noopener">[textbook]</a>, James Robin <a href="https://cdn1.sph.harvard.edu/wp-content/uploads/sites/1268/2018/08/hernanrobins_v1.10.36.pdf" target="_blank" rel="noopener">[Textbook]</a> <a href="https://grass.upc.edu/en/seminar/presentation-files/causal-inference/chapters-1-i-2" target="_blank" rel="noopener">[slides]</a></p>
+<p><strong>Tutorial:</strong> </p>
+<ul>
+<li>Causality for machine learning <a href="https://arxiv.org/pdf/1911.10500.pdf" target="_blank" rel="noopener">[4]</a></li>
+<li>Towards Causal Representation Learning <a href="https://arxiv.org/pdf/2102.11107.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li><a href="https://link.zhihu.com/?target=http%3A//bcmi.sjtu.edu.cn/home/niuli/download/A_briefing_on_causal_inference.pdf" target="_blank" rel="noopener">A briefing on causal inference</a> written by myself</li>
+</ul>
+<p><strong>Workshop:</strong> <a href="https://sites.google.com/view/nips2018causallearning/home" target="_blank" rel="noopener">NIPS2018 workshop on causal learning</a>, <a href="http://kdd2020tutorial.thumedialab.com/" target="_blank" rel="noopener">KDD2020 Tutorial on Causal Inference Meets Machine Learning</a></p>
+<p><strong>Material:</strong> <a href="https://www.bradyneal.com/causal-inference-course" target="_blank" rel="noopener">MILA Course</a></p>
+<p>Causality and disentanglement: <a href="https://arxiv.org/pdf/2011.11878" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2010.02637.pdf" target="_blank" rel="noopener">[6]</a></p>
+<p>Counterfactual and disentanglement: <a href="https://arxiv.org/pdf/2103.00887.pdf" target="_blank" rel="noopener">[7]</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chalupka K, Perona P, Eberhardt F. Visual causal feature learning. arXiv preprint arXiv:1412.2309, 2014.</p>
+<p>[2] Lopez-Paz D, Nishihara R, Chintala S, et al. Discovering causal signals in images. CVPR, 2017.</p>
+<p>[3] Bau D, Zhu J Y, Strobelt H, et al. GAN Dissection: Visualizing and Understanding Generative Adversarial Networks. arXiv preprint arXiv:1811.10597, 2018.</p>
+<p>[4] Bernhard Schölkopf: CAUSALITY FOR MACHINE LEARNING. arXiv preprint arXiv:1911.10500, 2019.</p>
+<p>[5] Kim, Hyemi, et al. “Counterfactual Fairness with Disentangled Causal Effect Variational Autoencoder.” arXiv preprint arXiv:2011.11878 (2020).</p>
+<p>[6] Shen, Xinwei, et al. “Disentangled Generative Causal Representation Learning.” arXiv preprint arXiv:2010.02637 (2020).</p>
+<p>[7] Yue, Zhongqi, et al. “Counterfactual Zero-Shot and Open-Set Visual Recognition.” arXiv preprint arXiv:2103.00887 (2021).</p>
+<p>[8] Schölkopf, Bernhard, et al. “Towards causal representation learning.” arXiv preprint arXiv:2102.11107 (2021).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU Cuda and CuDNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/hardware/GPU/GPU Cuda and CuDNN/" itemprop="url">GPU Cuda and CuDNN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/" itemprop="url" rel="index">
+                    <span itemprop="name">hardware</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/GPU/" itemprop="url" rel="index">
+                    <span itemprop="name">GPU</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
+<li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
+</li>
+<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
+</li>
+</ul>
+<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
+<li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
+</li>
+<li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
+</li>
+<li><p>Install NVIDIA GPU driver using apt-get</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:Ubuntu-x-swat/x-updates</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
+<ol>
+<li>Hit CTRL+ALT+F1 and login using your credentials.</li>
+<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
+<li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
+<li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
+</ol>
+</li>
+</ul>
+<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><p>When using anaconda to install deep learning platform, sometimes it is unnecessary to install CUDA by yourself. </p>
+<ol>
+<li><p>Preprocessing</p>
+<ul>
+<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
+<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
+<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
+</ul>
+</li>
+<li><p>Install Cuda</p>
+<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
+<p> and then add into PATH and LD_LIBRARY_PATH</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
+</li>
+</ol>
+<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/hardware/camera/Illumination Model/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1408,472 +1910,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Weakly-supervised Segmentation/" itemprop="url">Weakly-supervised Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>Using web data for semantic segmentation:</p>
-<ul>
-<li><p><a href="http://zpascal.net/cvpr2017/Jin_Webly_Supervised_Semantic_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a>: crawl web images with white background and generate composite images to initialize segmentation network</p>
-</li>
-<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Bootstrapping_the_Performance_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a>: train a segmentation network using web data to obtain rough segmentation mask</p>
-</li>
-</ul>
-</li>
-<li><p>image-level semantic/instance segmentation: <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Learning_Instance_Activation_Maps_for_Weakly_Supervised_Instance_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[9]</a> <a href="https://arxiv.org/pdf/2002.08098.pdf" target="_blank" rel="noopener">[10]</a> <a href="https://arxiv.org/pdf/2101.11253.pdf" target="_blank" rel="noopener">[11]</a></p>
-</li>
-<li><p>box-level semantic/instance segmentation: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Dai_BoxSup_Exploiting_Bounding_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Khoreva_Simple_Does_It_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Ahn_Weakly_Supervised_Learning_of_Instance_Segmentation_With_Inter-Pixel_Relations_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://papers.nips.cc/paper/8885-weakly-supervised-instance-segmentation-using-the-bounding-box-tightness-prior.pdf" target="_blank" rel="noopener">[6]</a></p>
-</li>
-<li><p>scribble-level semantic segmentaiton: <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Lin_ScribbleSup_Scribble-Supervised_Convolutional_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[7]</a></p>
-</li>
-<li><p>point-level semantic segmentation: <a href="https://arxiv.org/pdf/1506.02106.pdf" target="_blank" rel="noopener">[8]</a></p>
-</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bin Jin, Maria V. Ortiz Segovia, Sabine Süsstrunk:<br>Webly Supervised Semantic Segmentation. CVPR 2017.</p>
-<p>[2] Tong Shen, Guosheng Lin, Chunhua Shen, Ian D. Reid:<br>Bootstrapping the Performance of Webly Supervised Semantic Segmentation. CVPR 2018.</p>
-<p>[3] Dai, Jifeng, Kaiming He, and Jian Sun. “Boxsup: Exploiting bounding boxes to supervise convolutional networks for semantic segmentation.” ICCV, 2015.</p>
-<p>[4] Khoreva, Anna, et al. “Simple does it: Weakly supervised instance and semantic segmentation.” CVPR, 2017.</p>
-<p>[5] Ahn, Jiwoon, Sunghyun Cho, and Suha Kwak. “Weakly Supervised Learning of Instance Segmentation with Inter-pixel Relations.” CVPR, 2019.</p>
-<p>[6] Hsu, Cheng-Chun, et al. “Weakly Supervised Instance Segmentation using the Bounding Box Tightness Prior.” NeurIPS. 2019.</p>
-<p>[7] Lin, Di, et al. “Scribblesup: Scribble-supervised convolutional networks for semantic segmentation.” CVPR, 2016.</p>
-<p>[8] Bearman, Amy, et al. “What’s the point: Semantic segmentation with point supervision.” ECCV, 2016.</p>
-<p>[9] Zhu, Yi, et al. “Learning instance activation maps for weakly supervised instance segmentation.” CVPR, 2019.</p>
-<p>[10] Wang, Xiang, et al. “Weakly-Supervised Semantic Segmentation by Iterative Affinity Learning.” International Journal of Computer Vision (2020): 1-14.</p>
-<p>[11] Jo, Sanhyun, and In-Jae Yu. “Puzzle-CAM: Improved localization via matching partial and full features.” arXiv preprint arXiv:2101.11253 (2021).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised Object Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Weakly-supervised Object Detection/" itemprop="url">Weakly-supervised Object Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>webly supervised object detection <a href="https://arxiv.org/pdf/1707.08721.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>use a few bounding box annotations and a large number of image label annotations <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Ramanathan_DLWL_Improving_Detection_for_Lowshot_Classes_With_Weakly_Labelled_Data_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Exploiting Web Images for Weakly Supervised Object Detection. IEEE Trans. Multimedia 21(5): 1135-1146 (2019)</p>
-<p>[2] DLWL: Improving Detection for Lowshot classes with Weakly Labelled data, Vignesh Ramanathan, Rui Wang, Dhruv Mahajan, CVPR2020</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised Localization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Weakly-supervised Localization/" itemprop="url">Weakly-supervised Localization</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Closely related to <a href="https://ustcnewly.github.io/2019/09/26/deep_learning/Weakly-supervised%20Segmentation/">weakly-supervised segmentation</a>.</p>
-<ul>
-<li>attention based: <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Adversarial_Complementary_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaolin_Zhang_Self-produced_Guidance_for_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Xiaolin, et al. “Adversarial complementary learning for weakly supervised object localization.” CVPR, 2018.</p>
-<p>[2] Zhang, Xiaolin, et al. “Self-produced guidance for weakly-supervised object localization.” ECCV, 2018.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1928,7 +1964,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">218</span>
+                  <span class="site-state-item-count">220</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

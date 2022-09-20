@@ -1,3 +1,6 @@
+https://ustcnewly.github.io/2022/09/20/deep_learning/Consistent Video Editing/
+https://ustcnewly.github.io/2022/09/19/deep_learning/Artistic and Photorealistic Style Transfer/
+https://ustcnewly.github.io/2022/09/19/deep_learning/Dynamic Kernel/
 https://ustcnewly.github.io/2022/09/10/deep_learning/Virtual Try-on/
 https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion Model/
 https://ustcnewly.github.io/2022/09/09/deep_learning/Exemplar-guided Image Translation/
@@ -5,6 +8,3 @@ https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/
 https://ustcnewly.github.io/2022/07/25/machine_learning/Mask Form/
 https://ustcnewly.github.io/2022/07/22/others/To a Beginner on Paper Writing/
 https://ustcnewly.github.io/2022/07/15/deep_learning/Network Architecture/
-https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install VirtualBox Guest Addition/
-https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Enlarge VirtualBox vdi/
-https://ustcnewly.github.io/2022/06/16/software/version_control/Git/
