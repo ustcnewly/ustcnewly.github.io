@@ -281,6 +281,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/programming_language/Python2/Python/" itemprop="url">Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>check type</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(n,int)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">t1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">t2 = [<span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span>];</span><br><span class="line">t1.extend(t2);</span><br><span class="line">t1.append(<span class="string">'g'</span>);</span><br><span class="line">t1 = t1+[<span class="string">'g'</span>]</span><br><span class="line">t1.sort();</span><br><span class="line"><span class="keyword">del</span> t1[<span class="number">1</span>:<span class="number">3</span>];</span><br><span class="line">t1.remove(<span class="string">'b'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dictionary</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">eng2sp = &#123;<span class="string">'one'</span>: <span class="string">'uno'</span>, <span class="string">'two'</span>: <span class="string">'dos'</span>, <span class="string">'three'</span>: <span class="string">'tres'</span>&#125;</span><br><span class="line">eng2sp.values() <span class="comment">#'uno','dos','tres'</span></span><br><span class="line">eng2sp.items()</span><br><span class="line"><span class="string">'one'</span> <span class="keyword">in</span> eng2sp <span class="comment">#true</span></span><br><span class="line">inverse = invert_dict(eng2sp)  </span><br><span class="line">d = dict(zip(<span class="string">'abc'</span>,range(<span class="number">3</span>)))</span><br><span class="line">d.get(word,<span class="number">0</span>) <span class="comment">#d[word] if word in d, 0 otherwise</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tupe: similar with list but immutable</p>
+</li>
+<li><p>file operation</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fout = os.getcwd()</span><br><span class="line">os.path.abspath(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.exists(<span class="string">'tmp.txt'</span>)</span><br><span class="line">os.path.isfile/isdir</span><br><span class="line">os.listdir(cwd)</span><br><span class="line">fout = open(<span class="string">'output.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">fout.write(<span class="string">'hehe'</span>)</span><br><span class="line">fout.close()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python Send Email/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1856,181 +2024,6 @@
 <p>pointer and byref function similarly. However, pointer does a lot more work since it constructs a real pointer object, so it is faster to use byref if you don’t need the pointer object in Python itself.</p>
 <h3 id="memory-issue"><a href="#memory-issue" class="headerlink" title="memory issue:"></a>memory issue:</h3><p>write free function in C code<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">freeme</span><span class="params">(<span class="keyword">char</span> *ptr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"freeing address: %p\n"</span>, ptr);</span><br><span class="line">    <span class="built_in">free</span>(ptr);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>call free function in Python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lib = cdll.LoadLibrary(<span class="string">'./string.so'</span>)</span><br><span class="line">lib.freeme.argtypes = c_void_p,</span><br><span class="line">lib.freeme.restype = <span class="keyword">None</span></span><br><span class="line">lib.freeme(ptr)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/Caffe/Caffe/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/programming_language/Caffe/Caffe/" itemprop="url">Caffe</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Fundamental Stuff:</strong></p>
-<ol>
-<li><a href="http://caffe.berkeleyvision.org/tutorial/" target="_blank" rel="noopener">Caffe Tutorial</a></li>
-<li><a href="https://docs.google.com/presentation/d/1UeKXVgRvvxg9OUdh_UiC5G71UMscNPlvArsWER41PsU/edit#slide=id.p" target="_blank" rel="noopener">Caffe Official Slides</a></li>
-</ol>
-<p><strong>Key Notes:</strong></p>
-<p>Required Packages:</p>
-<ol>
-<li><p><a href="http://www.nvidia.com/object/cuda_home_new.html" target="_blank" rel="noopener">CUDA</a></p>
-</li>
-<li><p><a href="http://opencv.org/" target="_blank" rel="noopener">OpenCV</a></p>
-</li>
-<li><p><a href="http://www.netlib.org/blas/" target="_blank" rel="noopener">BLAS</a>: (Basic Linear Algebra Subprograms)<br>operations like matrix multiplication, matrix addition,<br>both implementation for CPU(cBLAS) and GPU(cuBLAS).<br>provided by MKL(INTEL), ATLAS, openBLAS, etc. </p>
-</li>
-<li><p><a href="http://www.boost.org/" target="_blank" rel="noopener">Boost</a>: a c++ library, use some of its math functions and shared_pointer.</p>
-</li>
-<li><p><a href="https://github.com/google/glog" target="_blank" rel="noopener">glog</a>,<a href="http://gflags.github.io/gflags/" target="_blank" rel="noopener">gflags</a>:provide logging &amp; command line utilities. Essential for debugging. </p>
-</li>
-<li><p><a href="https://github.com/google/leveldb" target="_blank" rel="noopener">leveldb</a><a href="http://symas.com/mdb/" target="_blank" rel="noopener">lmdb</a>: database io for your program. Need to know this for preparing your own data.</p>
-</li>
-<li><p><a href="https://github.com/google/protobuf" target="_blank" rel="noopener">protobuf</a>:  an efficient and flexible way to define data structure. Need to know this for defining new layers.</p>
-</li>
-</ol>
 
           
         
