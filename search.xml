@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Prompt for Vision</title>
+    <url>/2022/10/17/deep_learning/Prompt%20for%20Vision/</url>
+    <content><![CDATA[<ul>
+<li><p>Prompt for image-to-image translation: <a href="https://arxiv.org/pdf/1811.05181.pdf" target="_blank" rel="noopener">[1]</a></p>
+</li>
+<li><p>Prompt for visual grounding: <a href="https://arxiv.org/pdf/2109.11797.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Bar, Amir, et al. “Visual Prompting via Image Inpainting.” arXiv preprint arXiv:2209.00647 (2022).</p>
+<p>[2] Yao, Yuan, et al. “Cpt: Colorful prompt tuning for pre-trained vision-language models.” arXiv preprint arXiv:2109.11797 (2021).</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Smoothness Loss</title>
+    <url>/2022/10/15/deep_learning/Smoothness%20Loss/</url>
+    <content><![CDATA[<ol>
+<li>Total Variation (TV) loss  </li>
+<li>Poisson blending loss <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_Auto-Exposure_Fusion_for_Single-Image_Shadow_Removal_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Gradient loss <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_A_Late_Fusion_CNN_for_Digital_Matting_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Laplacian loss <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hou_Context-Aware_Image_Matting_for_Simultaneous_Foreground_and_Alpha_Estimation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Image Matting</title>
     <url>/2022/09/23/deep_learning/Image%20Matting/</url>
     <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The target is separating foreground from background given some user annotation (e.g., trimask, scribble). The prevalent technique <a href="http://www.alphamatting.com/code.php" target="_blank" rel="noopener">alpha matting</a> is to solve $\mathbf{\alpha}$ (primary target), $\mathbf{F}$, $\mathbf{B}$ (subordinate target) in  $\mathbf{I}=\mathbf{\alpha}\circ\mathbf{F}+(1-\mathbf{\alpha})\circ \mathbf{B}$ <a href="https://dl.acm.org/ft_gateway.cfm?id=808606&amp;ftid=63750&amp;dwn=1&amp;CFID=4983534&amp;CFTOKEN=96dd1cd10963517e-788E0FD4-99DA-7734-E93FEF8C75E17956" target="_blank" rel="noopener">[1]</a> <a href="http://delivery.acm.org/10.1145/810000/808606/p253-porter.pdf?ip=202.120.14.211&amp;id=808606&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E17676C47DFB149BF%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1544674017_517758b7f09ff19d5c0dc0db95a9091e" target="_blank" rel="noopener">[2]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.3736&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[3]</a>.</p>
@@ -4627,6 +4657,7 @@ spyder
 <h3 id="Lightweight-Transformer"><a href="#Lightweight-Transformer" class="headerlink" title="Lightweight Transformer"></a>Lightweight Transformer</h3><ul>
 <li>XFormer <a href="https://arxiv.org/pdf/2207.07268.pdf" target="_blank" rel="noopener">[13]</a></li>
 </ul>
+<p><a href="https://mp.weixin.qq.com/s/HRRS5Piy_SsZy41WYg-H8Q" target="_blank" rel="noopener">A summary of efficient Transformers</a></p>
 <h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ul>
 <li><a href="https://arxiv.org/pdf/2012.12556.pdf" target="_blank" rel="noopener">A survey on visual transformer</a></li>
 <li><a href="https://arxiv.org/pdf/2101.01169.pdf" target="_blank" rel="noopener">Transformers in Vision: A Survey</a></li>

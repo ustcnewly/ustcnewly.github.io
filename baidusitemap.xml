@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/10/17/deep_learning/Prompt%20for%20Vision/</loc>
+    <lastmod>2022-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/10/15/deep_learning/Smoothness%20Loss/</loc>
+    <lastmod>2022-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/</loc>
+    <lastmod>2022-10-16</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Shadow-related%20Application/</loc>
     <lastmod>2022-10-13</lastmod>
   </url>
@@ -47,10 +59,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Color%20Mapping/</loc>
     <lastmod>2022-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Transformer/</loc>
-    <lastmod>2022-09-01</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/</loc>
