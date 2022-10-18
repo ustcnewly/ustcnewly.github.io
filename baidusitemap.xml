@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Different%20Ways%20of%20Injecting%20Latent%20Code/</loc>
+    <lastmod>2022-10-18</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/10/17/deep_learning/Prompt%20for%20Vision/</loc>
     <lastmod>2022-10-17</lastmod>
   </url>
@@ -578,10 +582,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Differential%20Programming/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Different%20Ways%20of%20Injecting%20Latent%20Code/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>

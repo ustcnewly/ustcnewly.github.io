@@ -6903,20 +6903,24 @@ spyder
   <entry>
     <title>Different Ways of Injecting Latent Code</title>
     <url>/2022/06/16/deep_learning/Different%20Ways%20of%20Injecting%20Latent%20Code/</url>
-    <content><![CDATA[<p>Given latent code z, how to inject it into an auto-encoder. skip-yes/no means whether using skip-connection is possible.</p>
-<ol>
-<li><p>Append it to the input image <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[1]</a>* or add it to the input image <a href="https://arxiv.org/pdf/1905.01164.pdf" target="_blank" rel="noopener">[7]</a> (skip-yes)</p>
+    <content><![CDATA[<h4 id="Inject-a-latent-vector-into-network"><a href="#Inject-a-latent-vector-into-network" class="headerlink" title="Inject a latent vector into network:"></a>Inject a latent vector into network:</h4><ol>
+<li><p>Concatenate or add it to the input image <a href="https://arxiv.org/pdf/1805.09731.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1905.01164.pdf" target="_blank" rel="noopener">[7]</a> </p>
 </li>
-<li><p>Append it to each layer in encoder <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a> (skip-yes)</p>
+<li><p>Concatenate or add it to encoder layer <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a> </p>
 </li>
-<li><p>Add it to the bottleneck feature <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> (skip-no)</p>
+<li><p>Concatenate or add it to the bottleneck <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
 </li>
-<li><p>Add to decoder layers using AdaIn <a href="https://arxiv.org/pdf/1812.04948.pdf" target="_blank" rel="noopener">[4]</a>* (skip-no) or a variant of AdaIn <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[5]</a> (skip-yes)</p>
+<li><p>Concatenate or add it to decoder layer <a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[8]</a></p>
 </li>
-<li><p>Add to decoder layers without AdaIn <a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>*</p>
+<li><p>Add to decoder layers using AdaIn <a href="https://arxiv.org/pdf/1812.04948.pdf" target="_blank" rel="noopener">[4]</a> (without skip connection), <a href="https://arxiv.org/pdf/2003.08791.pdf" target="_blank" rel="noopener">[5]</a> (with skip connection)</p>
 </li>
 </ol>
-<p>Injecting structured latent code <a href="https://arxiv.org/pdf/2004.12411.pdf" target="_blank" rel="noopener">[9]</a></p>
+<h4 id="Inject-a-latent-map-into-network"><a href="#Inject-a-latent-map-into-network" class="headerlink" title="Inject a latent map into network:"></a>Inject a latent map into network:</h4><ol>
+<li><p>For concatenation or addition, spatially stack latent codes <a href="https://arxiv.org/pdf/2004.12411.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
+<li><p>Spatially adaptive AdaIn: SPADE <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Park_Semantic_Image_Synthesis_With_Spatially-Adaptive_Normalization_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[10]</a>, OASIS <a href="https://arxiv.org/pdf/2012.04781.pdf" target="_blank" rel="noopener">[11]</a></p>
+</li>
+</ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</p>
 <p>[2] Toward Multimodal Image-to-Image Translation</p>
 <p>[3] Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</p>
@@ -6926,6 +6930,8 @@ spyder
 <p>[7] Tamar Rott Shaham, Tali Dekel, Tomer Michaeli, “SinGAN: Learning a Generative Model from a Single Natural Image”, ICCV2019</p>
 <p>[8] Lee, Hsin-Ying, et al. “Diverse image-to-image translation via disentangled representations.” ECCV, 2018.</p>
 <p>[9] Yazeed Alharbi, Peter Wonka: Disentangled Image Generation Through Structured Noise Injection. CVPR, 2020.</p>
+<p>[10] Park, Taesung, et al. “Semantic image synthesis with spatially-adaptive normalization.” CVPR, 2019.</p>
+<p>[11] Sushko, Vadim, et al. “You only need adversarial supervision for semantic image synthesis.” ICLR, 2021</p>
 ]]></content>
       <categories>
         <category>paper note</category>
