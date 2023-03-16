@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Blender</title>
+    <url>/2022/11/14/software/Blender/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://github.com/yuki-koyama/blender-cli-rendering" target="_blank" rel="noopener">https://github.com/yuki-koyama/blender-cli-rendering</a></li>
+<li><a href="https://github.com/FrozenBurning/Text2Light" target="_blank" rel="noopener">https://github.com/FrozenBurning/Text2Light</a> </li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>rendering</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Prompt for Vision</title>
     <url>/2022/10/17/deep_learning/Prompt%20for%20Vision/</url>
     <content><![CDATA[<ul>
@@ -4222,9 +4237,7 @@ spyder
 </li>
 <li><p>box-level semantic/instance segmentation: <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Dai_BoxSup_Exploiting_Bounding_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Khoreva_Simple_Does_It_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Ahn_Weakly_Supervised_Learning_of_Instance_Segmentation_With_Inter-Pixel_Relations_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://papers.nips.cc/paper/8885-weakly-supervised-instance-segmentation-using-the-bounding-box-tightness-prior.pdf" target="_blank" rel="noopener">[6]</a></p>
 </li>
-<li><p>scribble-level semantic segmentaiton: <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Lin_ScribbleSup_Scribble-Supervised_Convolutional_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[7]</a></p>
-</li>
-<li><p>point-level semantic segmentation: <a href="https://arxiv.org/pdf/1506.02106.pdf" target="_blank" rel="noopener">[8]</a></p>
+<li><p>scribble/point-level semantic segmentaiton: <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Lin_ScribbleSup_Scribble-Supervised_Convolutional_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1506.02106.pdf" target="_blank" rel="noopener">[8]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tang_Normalized_Cut_Loss_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[12]</a> <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Meng_Tang_On_Regularized_Losses_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[13]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Marin_Beyond_Gradient_Descent_for_Regularized_Segmentation_Losses_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[14]</a> <a href="https://opus.lib.uts.edu.au/bitstream/10453/141475/2/0508.pdf" target="_blank" rel="noopener">[15]</a> <a href="http://openaccess.thecvf.com/content/ICCV2021/papers/Pan_Scribble-Supervised_Semantic_Segmentation_by_Uncertainty_Reduction_on_Neural_Representation_and_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[16]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Xu_Scribble-Supervised_Semantic_Segmentation_Inference_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[17]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Seminar_Learning_for_Click-Level_Weakly_Supervised_Semantic_Segmentation_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[18]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liang_Tree_Energy_Loss_Towards_Sparsely_Annotated_Semantic_Segmentation_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[19]</a></p>
 </li>
 </ul>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bin Jin, Maria V. Ortiz Segovia, Sabine Süsstrunk:<br>Webly Supervised Semantic Segmentation. CVPR 2017.</p>
@@ -4238,6 +4251,14 @@ spyder
 <p>[9] Zhu, Yi, et al. “Learning instance activation maps for weakly supervised instance segmentation.” CVPR, 2019.</p>
 <p>[10] Wang, Xiang, et al. “Weakly-Supervised Semantic Segmentation by Iterative Affinity Learning.” International Journal of Computer Vision (2020): 1-14.</p>
 <p>[11] Jo, Sanhyun, and In-Jae Yu. “Puzzle-CAM: Improved localization via matching partial and full features.” arXiv preprint arXiv:2101.11253 (2021).</p>
+<p>[12] Tang, Meng, et al. “Normalized cut loss for weakly-supervised cnn segmentation.” CVPR, 2018.</p>
+<p>[13] Tang, Meng, et al. “On regularized losses for weakly-supervised cnn segmentation.” ECCV, 2018.</p>
+<p>[14] Marin, Dmitrii, et al. “Beyond gradient descent for regularized segmentation losses.” CVPR, 2019.</p>
+<p>[15] Wang, Bin, et al. “Boundary perception guidance: A scribble-supervised semantic segmentation approach.” IJCAI, 2019.</p>
+<p>[16] Pan, Zhiyi, et al. “Scribble-supervised semantic segmentation by uncertainty reduction on neural representation and self-supervision on neural eigenspace.” ICCV, 2021.</p>
+<p>[17] Xu, Jingshan, et al. “Scribble-supervised semantic segmentation inference.” ICCV, 2021.</p>
+<p>[18] Chen, Hongjun, et al. “Seminar learning for click-level weakly supervised semantic segmentation.” Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.</p>
+<p>[19] Liang, Zhiyuan, et al. “Tree energy loss: Towards sparsely annotated semantic segmentation.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2022.</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -4714,6 +4735,8 @@ spyder
     <url>/2022/06/16/deep_learning/StyleGAN/</url>
     <content><![CDATA[<ul>
 <li>StyleGAN of all trades <a href="https://arxiv.org/pdf/2111.01619.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>StyleGANv1<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Karras_A_Style-Based_Generator_Architecture_for_Generative_Adversarial_Networks_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></li>
+<li>StyleGANv2<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Karras_Analyzing_and_Improving_the_Image_Quality_of_StyleGAN_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[6]</a>: remove blob-shaped artifacts that resemble water droplets.</li>
 <li>StyleGANv3<a href="https://papers.nips.cc/paper/2021/file/076ccd93ad68be51f23707988e934906-Paper.pdf" target="_blank" rel="noopener">[2]</a>: solve alias (texture sticking) issue, that is, detail appearing to glued to image coordinates instead of the surface of depicted objects.</li>
 <li>StyleGAN-XL <a href="https://arxiv.org/pdf/2202.00273.pdf" target="_blank" rel="noopener">[3]</a>: extend to large dataset</li>
 <li>3D styleGAN <a href="https://arxiv.org/pdf/2207.10642.pdf" target="_blank" rel="noopener">[4]</a></li>
@@ -4721,7 +4744,9 @@ spyder
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Chong, Min Jin, Hsin-Ying Lee, and David Forsyth. “StyleGAN of All Trades: Image Manipulation with Only Pretrained StyleGAN.” arXiv preprint arXiv:2111.01619 (2021).</p>
 <p>[2] Karras, Tero, et al. “Alias-free generative adversarial networks.” Thirty-Fifth Conference on Neural Information Processing Systems. 2021.</p>
 <p>[3] Sauer, Axel, Katja Schwarz, and Andreas Geiger. “Stylegan-xl: Scaling stylegan to large diverse datasets.” arXiv preprint arXiv:2202.00273 (2022).</p>
-<p>[4] Xiaoming Zhao, Fangchang Ma, David Güera, Zhile Ren, Alexander G. Schwing, Alex Colburn. “Generative Multiplane Images: Making a 2D GAN 3D-Aware”</p>
+<p>[4] Xiaoming Zhao, Fangchang Ma, David Güera, Zhile Ren, Alexander G. Schwing, Alex Colburn. “Generative Multiplane Images: Making a 2D GAN 3D-Aware”.</p>
+<p>[5] Karras, Tero, Samuli Laine, and Timo Aila. “A style-based generator architecture for generative adversarial networks.” Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019.</p>
+<p>[6] Karras, Tero, et al. “Analyzing and improving the image quality of stylegan.” Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2020.</p>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -6091,6 +6116,12 @@ spyder
 </li>
 <li><p>Conditioned on a single image: pix2pix <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[11]</a>; high-resolution pix2pix <a href="https://arxiv.org/pdf/1711.11585.pdf" target="_blank" rel="noopener">[12]</a> (add coarse-to-fine strategy); BicycleGAN <a href="https://papers.nips.cc/paper/6650-toward-multimodal-image-to-image-translation.pdf" target="_blank" rel="noopener">[13]</a> (combination of cVAE-GAN and cLR-GAN); DAGAN <a href="https://arxiv.org/pdf/1711.04340" target="_blank" rel="noopener">[15]</a></p>
 </li>
+<li><p>StyleGAN-XL <a href="https://dl.acm.org/doi/pdf/10.1145/3528233.3530738" target="_blank" rel="noopener">[23]</a></p>
+</li>
+<li><p>StyleGAN-T <a href="https://arxiv.org/pdf/2301.09515.pdf" target="_blank" rel="noopener">[22]</a></p>
+</li>
+<li><p>GigaGAN  <a href="https://arxiv.org/pdf/2303.05511.pdf" target="_blank" rel="noopener">[21]</a></p>
+</li>
 </ul>
 <h3 id="Measurement："><a href="#Measurement：" class="headerlink" title="Measurement："></a>Measurement：</h3><p><u>Results</u>: Besides qualitative results, there are some quantitative metric like Inception score and Frechet Inception Distance.</p>
 <p><u>Stability</u>: for the stability of generator and discriminator, refer to <a href="https://arxiv.org/pdf/1809.11096.pdf" target="_blank" rel="noopener">[1]</a>.</p>
@@ -6124,6 +6155,9 @@ spyder
 <p>[18] Han Zhang, Ian J. Goodfellow, Dimitris N. Metaxas, Augustus Odena, “Self-Attention Generative Adversarial Networks”. CoRR abs/1805.08318 (2018)</p>
 <p>[19] Wu, Yan, et al. “LOGAN: Latent Optimisation for Generative Adversarial Networks.” arXiv preprint arXiv:1912.00953 (2019).</p>
 <p>[20] Brock, Andrew, Jeff Donahue, and Karen Simonyan. “Large scale gan training for high fidelity natural image synthesis.” arXiv preprint arXiv:1809.11096 (2018).</p>
+<p>[21] Kang, Minguk, et al. “Scaling up GANs for Text-to-Image Synthesis.” arXiv preprint arXiv:2303.05511 (2023).</p>
+<p>[22] Sauer, Axel, et al. “Stylegan-t: Unlocking the power of gans for fast large-scale text-to-image synthesis.” arXiv preprint arXiv:2301.09515 (2023).</p>
+<p>[24] Sauer, Axel, Katja Schwarz, and Andreas Geiger. “Stylegan-xl: Scaling stylegan to large diverse datasets.” ACM SIGGRAPH 2022 conference proceedings. 2022.</p>
 ]]></content>
       <categories>
         <category>paper note</category>

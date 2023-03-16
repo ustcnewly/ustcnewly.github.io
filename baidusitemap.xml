@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Segmentation/</loc>
+    <lastmod>2023-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/GAN/</loc>
+    <lastmod>2023-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/</loc>
+    <lastmod>2023-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/11/14/software/Blender/</loc>
+    <lastmod>2022-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Different%20Ways%20of%20Injecting%20Latent%20Code/</loc>
     <lastmod>2022-10-18</lastmod>
   </url>
@@ -63,10 +79,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Color%20Mapping/</loc>
     <lastmod>2022-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/StyleGAN/</loc>
-    <lastmod>2022-09-01</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Memory%20Network/</loc>
@@ -226,10 +238,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Localization/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Segmentation/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
@@ -654,10 +662,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Forecast%20Future%20based%20on%20One%20Still%20Image/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/GAN/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>

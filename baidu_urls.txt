@@ -1,3 +1,4 @@
+https://ustcnewly.github.io/2022/11/14/software/Blender/
 https://ustcnewly.github.io/2022/10/17/deep_learning/Prompt for Vision/
 https://ustcnewly.github.io/2022/10/15/deep_learning/Smoothness Loss/
 https://ustcnewly.github.io/2022/09/23/deep_learning/Image Matting/
@@ -7,4 +8,3 @@ https://ustcnewly.github.io/2022/09/19/deep_learning/Dynamic Kernel/
 https://ustcnewly.github.io/2022/09/10/deep_learning/Virtual Try-on/
 https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion Model/
 https://ustcnewly.github.io/2022/09/09/deep_learning/Exemplar-guided Image Translation/
-https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/

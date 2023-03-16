@@ -281,6 +281,208 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image Inpainting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Image Inpainting/" itemprop="url">Image Inpainting</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Partial-and-Gated-Convolution"><a href="#Partial-and-Gated-Convolution" class="headerlink" title="Partial and Gated Convolution"></a>Partial and Gated Convolution</h3><ul>
+<li><p>partial convolution <a href="https://arxiv.org/pdf/1804.07723.pdf" target="_blank" rel="noopener">[1]</a>: hard-gating single-channel unlearnable layer</p>
+<p>  <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/B20xmYt.jpg" width="40%"></p>
+</li>
+<li><p>gated convolution <a href="https://arxiv.org/pdf/1806.03589.pdf" target="_blank" rel="noopener">[2]</a>: soft-gating multi-channel learnable layer</p>
+<p> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/GOC8MsV.jpg" width="40%"></p>
+<p> <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/eG7JmBi.jpg" width="70%"></p>
+</li>
+</ul>
+<h3 id="Filling-Priority"><a href="#Filling-Priority" class="headerlink" title="Filling Priority"></a>Filling Priority</h3><p>filling priority <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/criminisi_tip2004.pdf" target="_blank" rel="noopener">[3]</a>: Priority is the product of confidence term (a measure of the amount of reliable information surrounding the pixel) and data term (a function of the strength of isophotes hitting the front). Select the patch to be filled based on the priority, similar to patch-based texture synthesis. </p>
+<pre><code>&lt;img src=&quot;http://bcmi.sjtu.edu.cn/~niuli/github_images/bO5YXEQ.jpg&quot; width=&quot;40%&quot;&gt; 
+</code></pre><h3 id="Diverse-image-inpainting"><a href="#Diverse-image-inpainting" class="headerlink" title="Diverse image inpainting"></a>Diverse image inpainting</h3><ul>
+<li><p>random vector: use random vector to generate diverse and plausible outputs <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>attribute vector: use target attribute values to guide image inpainting <a href="https://arxiv.org/abs/1801.07632" target="_blank" rel="noopener">[7]</a></p>
+</li>
+<li><p>use autoregressive model: <a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">[11]</a> <a href="https://arxiv.org/pdf/2103.14031.pdf" target="_blank" rel="noopener">[12]</a></p>
+</li>
+</ul>
+<h3 id="Auxiliary-Information"><a href="#Auxiliary-Information" class="headerlink" title="Auxiliary Information"></a>Auxiliary Information</h3><ul>
+<li><p>Semantics</p>
+<ul>
+<li>enforce inpainted result to have expected semantics <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Li_Generative_Face_Completion_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li>first inpaint semantic map and then use complete semantic map as guidance <a href="https://arxiv.org/pdf/1805.03356v3.pdf" target="_blank" rel="noopener">[9]</a></li>
+<li>guide feature learning in the decoder <a href="https://arxiv.org/pdf/2003.06877.pdf" target="_blank" rel="noopener">[10]</a></li>
+<li>semantic-aware attention <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Liao_Image_Inpainting_Guided_by_Coherence_Priors_of_Semantics_and_Textures_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[13]</a></li>
+</ul>
+</li>
+<li><p>Edges</p>
+<ul>
+<li>Inpaint edge map and use complete edge map to help image inpainting <a href="https://arxiv.org/pdf/1901.00212" target="_blank" rel="noopener">[4]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xiong_Foreground-Aware_Image_Inpainting_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Frequency-Domain"><a href="#Frequency-Domain" class="headerlink" title="Frequency Domain"></a>Frequency Domain</h3><ul>
+<li>using frequency map as network input <a href="https://arxiv.org/pdf/2012.01832.pdf" target="_blank" rel="noopener">[14]</a>  </li>
+<li>fourier convolution: LAMA<a href="(https://arxiv.org/pdf/2109.07161.pdf">[15]</a>)</li>
+<li>wavelet <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Yu_WaveFill_A_Wavelet-Based_Generation_Network_for_Image_Inpainting_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[16]</a></li>
+</ul>
+<h3 id="Bridging-Inpainting-and-Generation"><a href="#Bridging-Inpainting-and-Generation" class="headerlink" title="Bridging Inpainting and Generation"></a>Bridging Inpainting and Generation</h3><ul>
+<li>Co-Mod <a href="https://openreview.net/pdf?id=sSjqmfsk95O" target="_blank" rel="noopener">[17]</a></li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
+<li>Liu, Guilin, et al. “Image inpainting for irregular holes using partial convolutions.” ECCV, 2018.</li>
+<li>Yu, Jiahui, et al. “Free-form image inpainting with gated convolution.” ICCV, 2019.</li>
+<li>Criminisi, Antonio, Patrick Pérez, and Kentaro Toyama. “Region filling and object removal by exemplar-based image inpainting.” TIP, 2004.</li>
+<li>Nazeri, Kamyar, et al. “Edgeconnect: Generative image inpainting with adversarial edge learning.” arXiv preprint arXiv:1901.00212 (2019).</li>
+<li>Xiong, Wei, et al. “Foreground-aware image inpainting.” CVPR, 2019.</li>
+<li>Zheng, Chuanxia, Tat-Jen Cham, and Jianfei Cai. “Pluralistic image completion.” CVPR, 2019.</li>
+<li>Chen, Zeyuan, et al. “High resolution face completion with multiple controllable attributes via fully end-to-end progressive generative adversarial networks.” arXiv preprint arXiv:1801.07632 (2018).</li>
+<li>Li, Yijun, et al. “Generative face completion.” CVPR, 2017.</li>
+<li>Song, Yuhang, et al. “Spg-net: Segmentation prediction and guidance network for image inpainting.” arXiv preprint arXiv:1805.03356 (2018).</li>
+<li>Liao, Liang, et al. “Guidance and evaluation: Semantic-aware image inpainting for mixed scenes.” arXiv preprint arXiv:2003.06877 (2020).</li>
+<li>Peng, Jialun, et al. “Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE.” CVPR, 2021.</li>
+<li>Wan, Ziyu, et al. “High-Fidelity Pluralistic Image Completion with Transformers.” arXiv preprint arXiv:2103.14031 (2021).</li>
+<li>Liao, Liang, et al. “Image inpainting guided by coherence priors of semantics and textures.” CVPR, 2021.</li>
+<li>Roy, Hiya, et al. “Image inpainting using frequency domain priors.” arXiv preprint arXiv:2012.01832 (2020).</li>
+<li>Suvorov, Roman, et al. “Resolution-robust Large Mask Inpainting with Fourier Convolutions.” WACV (2021).</li>
+<li>Yu, Yingchen, et al. “WaveFill: A Wavelet-based Generation Network for Image Inpainting.” ICCV, 2021.</li>
+<li>Zhao, Shengyu, et al. “Large scale image completion via co-modulated generative adversarial networks.” ICLR (2021).</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Image Harmonization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1670,163 +1872,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Generative Model/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Generative Model/" itemprop="url">Generative Model</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><a href="https://ustcnewly.github.io/2018/09/07/deep_learning/GAN/">GAN</a></li>
-<li><a href="https://ustcnewly.github.io/2021/10/08/deep_learning/VAE/">VAE</a></li>
-<li>diffusion model: <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2206.00364.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a></li>
-</ul>
-<p>Tutorial of generative models:</p>
-<ul>
-<li><p><a href="https://arxiv.org/pdf/2208.11970.pdf" target="_blank" rel="noopener">Understanding Diffusion Models: A Unified Perspective</a></p>
-</li>
-<li><p><a href="https://arxiv.org/abs/2209.02606" target="_blank" rel="noopener">Unifying Generative Models with GFlowNets</a></p>
-</li>
-</ul>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021).</p>
-<p>[2] GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models </p>
-<p>[3] Elucidating the Design Space of Diffusion-Based Generative Models</p>
-<p>[4] Wang, Tengfei, et al. “Pretraining is All You Need for Image-to-Image Translation.” arXiv preprint arXiv:2205.12952 (2022).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1881,7 +1926,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">222</span>
+                  <span class="site-state-item-count">223</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1903,7 +1948,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1962,7 +2007,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
