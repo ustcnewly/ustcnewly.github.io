@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion%20Model/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-31</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Inpainting/</loc>
+    <lastmod>2023-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/09/23/deep_learning/Image%20Matting/</loc>
+    <lastmod>2023-03-30</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Segmentation/</loc>
@@ -43,10 +51,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/High-resolution%20Image%20Generation/</loc>
     <lastmod>2022-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/09/23/deep_learning/Image%20Matting/</loc>
-    <lastmod>2022-09-23</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/09/20/deep_learning/Consistent%20Video%20Editing/</loc>
@@ -111,10 +115,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/07/15/deep_learning/Network%20Architecture/</loc>
     <lastmod>2022-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Inpainting/</loc>
-    <lastmod>2022-06-05</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/</loc>

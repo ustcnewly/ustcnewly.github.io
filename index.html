@@ -856,6 +856,7 @@
 </ol>
 <h2 id="Losses"><a href="#Losses" class="headerlink" title="Losses"></a>Losses</h2><p>gradient loss <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_A_Late_Fusion_CNN_for_Digital_Matting_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[11]</a> Laplacian loss <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hou_Context-Aware_Image_Matting_for_Simultaneous_Foreground_and_Alpha_Estimation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[12]</a></p>
 <h2 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h2><p>Omnimatte <a href="https://arxiv.org/pdf/2105.06993.pdf" target="_blank" rel="noopener">[10]</a>: segment objects and scene effects related to the objects (shadows, reflections, smoke)</p>
+<h2 id="User-guided-Image-Matting"><a href="#User-guided-Image-Matting" class="headerlink" title="User-guided Image Matting"></a>User-guided Image Matting</h2><p>unified interactive image matting: <a href="https://arxiv.org/pdf/2205.08324.pdf" target="_blank" rel="noopener">[13]</a></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p>[1] Aksoy, Yagiz, Tunc Ozan Aydin, and Marc Pollefeys. “Designing effective inter-pixel information flow for natural image matting.” CVPR, 2017.</p>
 <p>[2] Xu, Ning, et al. “Deep image matting.” CVPR, 2017.</p>
 <p>[3] Zhu, Bingke, et al. “Fast deep matting for portrait animation on mobile phone.” ACM MM, 2017.</p>
@@ -868,6 +869,7 @@
 <p>[10] Lu, Erika, et al. “Omnimatte: Associating Objects and Their Effects in Video.” CVPR, 2021.</p>
 <p>[11] Zhang, Yunke, et al. “A late fusion cnn for digital matting.” CVPR, 2019.</p>
 <p>[12] Hou, Qiqi, and Feng Liu. “Context-aware image matting for simultaneous foreground and alpha estimation.” ICCV. 2019.</p>
+<p>[13] Yang, Stephen, et al. “Unified interactive image matting.” arXiv preprint arXiv:2205.08324 (2022).</p>
 
           
         
@@ -1643,27 +1645,48 @@
         
           
             <ul>
-<li><p>Unconditional image generation</p>
+<li><p>class-conditioned image generation:  <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
-<li><p>Image-to-image translation <a href="https://arxiv.org/pdf/2209.15264.pdf" target="_blank" rel="noopener">[7]</a>(fix), <a href="https://arxiv.org/pdf/2108.02938.pdf" target="_blank" rel="noopener">[6]</a>(fix), <a href="https://openreview.net/pdf?id=aBsCjcPu_tE" target="_blank" rel="noopener">[8]</a> (fix)</p>
+<li><p>Image-to-image translation: <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a>, <a href="https://arxiv.org/pdf/2209.15264.pdf" target="_blank" rel="noopener">[7]</a>, <a href="https://arxiv.org/pdf/2108.02938.pdf" target="_blank" rel="noopener">[6]</a>, <a href="https://openreview.net/pdf?id=aBsCjcPu_tE" target="_blank" rel="noopener">[8]</a> </p>
 </li>
-<li><p>Image composition <a href="https://arxiv.org/pdf/2302.10167.pdf" target="_blank" rel="noopener">[5]</a>(fix) <a href="https://arxiv.org/pdf/2211.13227.pdf" target="_blank" rel="noopener">[9]</a></p>
+<li><p>Image-to-image translation with guidance: GLIDE<a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a>(global: text), <a href="https://arxiv.org/pdf/2211.13752.pdf" target="_blank" rel="noopener">[20]</a>(global: text, sketch), <a href="https://arxiv.org/pdf/2211.15518.pdf" target="_blank" rel="noopener">[21]</a>(region, text), <a href="https://arxiv.org/pdf/2301.07093.pdf" target="_blank" rel="noopener">[22]</a>(local: text, image), ControlNet<a href="https://arxiv.org/pdf/2302.05543.pdf" target="_blank" rel="noopener">[23]</a>(global: mixture), T2I-Adapter<a href="https://arxiv.org/pdf/2302.08453.pdf" target="_blank" rel="noopener">[24]</a>(global: mixture), <a href="https://arxiv.org/pdf/2302.09778.pdf" target="_blank" rel="noopener">[25]</a>(local: mixture)</p>
 </li>
-<li><p>Image inpainting</p>
-<p><a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/2206.00364.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a></p>
+<li><p>unpaired Image-to-image translation: <a href="https://arxiv.org/pdf/2209.15264.pdf" target="_blank" rel="noopener">[19]</a></p>
+</li>
+<li><p>Image composition: SDEdit <a href="https://openreview.net/pdf?id=aBsCjcPu_tE" target="_blank" rel="noopener">[17]</a>, ILVR <a href="https://arxiv.org/pdf/2108.02938.pdf" target="_blank" rel="noopener">[18]</a>, <a href="https://arxiv.org/pdf/2302.10167.pdf" target="_blank" rel="noopener">[5]</a>, <a href="https://arxiv.org/pdf/2211.13227.pdf" target="_blank" rel="noopener">[9]</a>, <a href="https://arxiv.org/pdf/2212.00932.pdf" target="_blank" rel="noopener">[15]</a></p>
+</li>
+<li><p>Image inpainting: <a href="http://openaccess.thecvf.com/content/CVPR2022/papers/Lugmayr_RePaint_Inpainting_Using_Denoising_Diffusion_Probabilistic_Models_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[10]</a>,  <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[11]</a>, <a href="https://arxiv.org/pdf/2212.02963.pdf" target="_blank" rel="noopener">[12]</a>, <a href="https://arxiv.org/pdf/2212.06909.pdf" target="_blank" rel="noopener">[13]</a></p>
 </li>
 </ul>
+<p>MileStone: DDPM <a href="https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf" target="_blank" rel="noopener">[3]</a>, Stable diffusion <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf" target="_blank" rel="noopener">v1</a>, <a href="https://github.com/Stability-AI/stablediffusion" target="_blank" rel="noopener">v2</a></p>
+<p>Acceleration: DDIM <a href="https://arxiv.org/pdf/2010.02502.pdf" target="_blank" rel="noopener">[14]</a>, PLMS <a href="https://arxiv.org/pdf/2202.09778.pdf" target="_blank" rel="noopener">[16]</a></p>
 <p>Survey: <a href="https://arxiv.org/pdf/2209.00796.pdf" target="_blank" rel="noopener">Diffusion Models: A Comprehensive Survey of Methods and Applications</a></p>
 <p>Tutorial materials: <a href="https://mp.weixin.qq.com/s/WGC6bhSNasqk8b0D2r8S1g" target="_blank" rel="noopener">[a]</a> <a href="https://zhuanlan.zhihu.com/p/610012156?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=1016221980986503168&amp;utm_psn=1614159296316567552&amp;utm_source=wechat_session" target="_blank" rel="noopener">[b]</a></p>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021).</p>
-<p>[2] GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models </p>
-<p>[3] Elucidating the Design Space of Diffusion-Based Generative Models</p>
+<p>[2] Nichol, Alex, et al. “Glide: Towards photorealistic image generation and editing with text-guided diffusion models.” arXiv preprint arXiv:2112.10741 (2021).</p>
+<p>[3] Ho, Jonathan, Ajay Jain, and Pieter Abbeel. “Denoising diffusion probabilistic models.” Advances in Neural Information Processing Systems 33 (2020): 6840-6851.</p>
 <p>[4] Wang, Tengfei, et al. “Pretraining is All You Need for Image-to-Image Translation.” arXiv preprint arXiv:2205.12952 (2022).</p>
 <p>[5] Hachnochi, Roy, et al. “Cross-domain Compositing with Pretrained Diffusion Models.” arXiv preprint arXiv:2302.10167 (2023).</p>
 <p>[6] Choi, Jooyoung, et al. “ILVR: Conditioning Method for Denoising Diffusion Probabilistic Models.” ICCV, 2021.</p>
 <p>[7] Kwon, Gihyun, and Jong Chul Ye. “Diffusion-based image translation using disentangled style and content representation.” ICLR, 2023.</p>
 <p>[8] Meng, Chenlin, et al. “Sdedit: Guided image synthesis and editing with stochastic differential equations.” ICLR, 2021.</p>
 <p>[9] Yang, Binxin, et al. “Paint by Example: Exemplar-based Image Editing with Diffusion Models.” arXiv preprint arXiv:2211.13227 (2022).</p>
+<p>[10] Lugmayr, Andreas, et al. “Repaint: Inpainting using denoising diffusion probabilistic models.” CVPR, 2022.</p>
+<p>[11] Rombach, Robin, et al. “High-resolution image synthesis with latent diffusion models.” CVPR, 2022.</p>
+<p>[12] Li, Wenbo, et al. “SDM: Spatial Diffusion Model for Large Hole Image Inpainting.” arXiv preprint arXiv:2212.02963 (2022).</p>
+<p>[13] Wang, Su, et al. “Imagen Editor and EditBench: Advancing and Evaluating Text-Guided Image Inpainting.” arXiv preprint arXiv:2212.06909 (2022).</p>
+<p>[14] Song, Jiaming, Chenlin Meng, and Stefano Ermon. “Denoising diffusion implicit models.” arXiv preprint arXiv:2010.02502 (2020).</p>
+<p>[15] Song, Yizhi, et al. “ObjectStitch: Generative Object Compositing.” CVPR, 2023.</p>
+<p>[16] Liu, Luping, et al. “Pseudo numerical methods for diffusion models on manifolds.” ICLR, (2022).</p>
+<p>[17] Meng, Chenlin, et al. “Sdedit: Guided image synthesis and editing with stochastic differential equations.” ICLR, 2021.</p>
+<p>[18] Choi, Jooyoung, et al. “Ilvr: Conditioning method for denoising diffusion probabilistic models.” arXiv preprint arXiv:2108.02938 (2021).</p>
+<p>[19] Kwon, Gihyun, and Jong Chul Ye. “Diffusion-based image translation using disentangled style and content representation.” ILCR, 2023.</p>
+<p>[20] Voynov, Andrey, Kfir Aberman, and Daniel Cohen-Or. “Sketch-Guided Text-to-Image Diffusion Models.” arXiv preprint arXiv:2211.13752 (2022).</p>
+<p>[21] Yang, Zhengyuan, et al. “ReCo: Region-Controlled Text-to-Image Generation.” arXiv preprint arXiv:2211.15518 (2022).</p>
+<p>[22] Li, Yuheng, et al. “GLIGEN: Open-Set Grounded Text-to-Image Generation.” arXiv preprint arXiv:2301.07093 (2023).</p>
+<p>[23] Zhang, Lvmin, and Maneesh Agrawala. “Adding conditional control to text-to-image diffusion models.” arXiv preprint arXiv:2302.05543 (2023).</p>
+<p>[24] Mou, Chong, et al. “T2i-adapter: Learning adapters to dig out more controllable ability for text-to-image diffusion models.” arXiv preprint arXiv:2302.08453 (2023).</p>
+<p>[25] Huang, Lianghua, et al. “Composer: Creative and controllable image synthesis with composable conditions.” arXiv preprint arXiv:2302.09778 (2023).</p>
 
           
         

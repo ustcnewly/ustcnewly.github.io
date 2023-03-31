@@ -88,7 +88,7 @@
 <meta property="og:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/B20xmYt.jpg">
 <meta property="og:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/GOC8MsV.jpg">
 <meta property="og:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/eG7JmBi.jpg">
-<meta property="og:updated_time" content="2022-06-05T09:24:18.000Z">
+<meta property="og:updated_time" content="2023-03-30T08:14:00.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Inpainting">
 <meta name="twitter:description" content="Partial and Gated Convolution partial convolution [1]: hard-gating single-channel unlearnable layer     gated convolution [2]: soft-gating multi-channel learnable layer       Filling Priorityfilling p">
@@ -420,6 +420,8 @@
 <h3 id="Bridging-Inpainting-and-Generation"><a href="#Bridging-Inpainting-and-Generation" class="headerlink" title="Bridging Inpainting and Generation"></a>Bridging Inpainting and Generation</h3><ul>
 <li>Co-Mod <a href="https://openreview.net/pdf?id=sSjqmfsk95O" target="_blank" rel="noopener">[17]</a></li>
 </ul>
+<h3 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h3><p><a href="https://arxiv.org/pdf/2103.14031.pdf" target="_blank" rel="noopener">[12]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Zheng_Bridging_Global_Context_Interactions_for_High-Fidelity_Image_Completion_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[18]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_MAT_Mask-Aware_Transformer_for_Large_Hole_Image_Inpainting_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[19]</a></p>
+<h3 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h3><p><a href="http://openaccess.thecvf.com/content/CVPR2022/papers/Lugmayr_RePaint_Inpainting_Using_Denoising_Diffusion_Probabilistic_Models_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[20]</a>  <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[21]</a> <a href="https://arxiv.org/pdf/2212.02963.pdf" target="_blank" rel="noopener">[22]</a> <a href="https://arxiv.org/pdf/2212.06909.pdf" target="_blank" rel="noopener">[23]</a></p>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
 <li>Liu, Guilin, et al. “Image inpainting for irregular holes using partial convolutions.” ECCV, 2018.</li>
 <li>Yu, Jiahui, et al. “Free-form image inpainting with gated convolution.” ICCV, 2019.</li>
@@ -438,6 +440,12 @@
 <li>Suvorov, Roman, et al. “Resolution-robust Large Mask Inpainting with Fourier Convolutions.” WACV (2021).</li>
 <li>Yu, Yingchen, et al. “WaveFill: A Wavelet-based Generation Network for Image Inpainting.” ICCV, 2021.</li>
 <li>Zhao, Shengyu, et al. “Large scale image completion via co-modulated generative adversarial networks.” ICLR (2021).</li>
+<li>Zheng, Chuanxia, et al. “Bridging global context interactions for high-fidelity image completion.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2022.</li>
+<li>Li, Wenbo, et al. “Mat: Mask-aware transformer for large hole image inpainting.” Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2022.</li>
+<li>Lugmayr, Andreas, et al. “Repaint: Inpainting using denoising diffusion probabilistic models.” CVPR, 2022.</li>
+<li>Rombach, Robin, et al. “High-resolution image synthesis with latent diffusion models.” CVPR, 2022.</li>
+<li>Li, Wenbo, et al. “SDM: Spatial Diffusion Model for Large Hole Image Inpainting.” arXiv preprint arXiv:2212.02963 (2022).</li>
+<li>Wang, Su, et al. “Imagen Editor and EditBench: Advancing and Evaluating Text-Guided Image Inpainting.” arXiv preprint arXiv:2212.06909 (2022).</li>
 </ol>
 
       
@@ -639,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Partial-and-Gated-Convolution"><span class="nav-number">1.</span> <span class="nav-text">Partial and Gated Convolution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filling-Priority"><span class="nav-number">2.</span> <span class="nav-text">Filling Priority</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diverse-image-inpainting"><span class="nav-number">3.</span> <span class="nav-text">Diverse image inpainting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auxiliary-Information"><span class="nav-number">4.</span> <span class="nav-text">Auxiliary Information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Frequency-Domain"><span class="nav-number">5.</span> <span class="nav-text">Frequency Domain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bridging-Inpainting-and-Generation"><span class="nav-number">6.</span> <span class="nav-text">Bridging Inpainting and Generation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#References"><span class="nav-number">7.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Partial-and-Gated-Convolution"><span class="nav-number">1.</span> <span class="nav-text">Partial and Gated Convolution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filling-Priority"><span class="nav-number">2.</span> <span class="nav-text">Filling Priority</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diverse-image-inpainting"><span class="nav-number">3.</span> <span class="nav-text">Diverse image inpainting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auxiliary-Information"><span class="nav-number">4.</span> <span class="nav-text">Auxiliary Information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Frequency-Domain"><span class="nav-number">5.</span> <span class="nav-text">Frequency Domain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bridging-Inpainting-and-Generation"><span class="nav-number">6.</span> <span class="nav-text">Bridging Inpainting and Generation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Transformer"><span class="nav-number">7.</span> <span class="nav-text">Transformer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diffusion-Model"><span class="nav-number">8.</span> <span class="nav-text">Diffusion Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#References"><span class="nav-number">9.</span> <span class="nav-text">References</span></a></li></ol></div>
             
 
           </div>
