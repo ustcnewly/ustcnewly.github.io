@@ -281,6 +281,332 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/GAN Evaluation Metric/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/GAN Evaluation Metric/" itemprop="url">GAN Evaluation Metric</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Objective-Evaluation"><a href="#Objective-Evaluation" class="headerlink" title="Objective Evaluation:"></a>Objective Evaluation:</h2><p>An empirical study on evaluation metrics of generative adversarial networks <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">[1]</a> with <a href="https://github.com/xuqiantong/GAN-Metrics" target="_blank" rel="noopener">code</a>.</p>
+<ol>
+<li><p>Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet</p>
+<script type="math/tex; mode=display">IS=\exp\{E_x[KL(p_M(y|x)||p_M(y))]\}</script><p> in which $p_M(y)$ is the marginal distribution of  $p_M(y|x)$. Expect $p_M(y)$ to be of low entropy while $p_M(y|x)$ to be of high entropy. The higher, the better.</p>
+</li>
+<li><p>Mode score: extension of Inception score</p>
+</li>
+<li><p>Kernel MMD: MMD distance between two data distributions</p>
+</li>
+<li><p>Wasserstein distance: Wasserstein distance (Earth mover’s distance) between two data distributions.</p>
+</li>
+<li><p>Fréchet Inception Distance (FID): extract InceptionNet features and measure the data distribution distance. The lower, the better.</p>
+<script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+trace(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
+<li><p>KNN score: treat true data as positive and generated data as negative. Calculate the leave-one-out (LOO) accuracy based on 1-NN classifier.</p>
+</li>
+<li><p>Learned Perceptual Image Patch Similarity (LPIPS): <script type="math/tex">d(x,x_0)=\sum_l \frac{1}{H_l W_l}\sum_{h,w}\|w_l\circ (\hat{y}_{hw}^l-\hat{y}^l_{0hw})\|^2</script> <a href="https://arxiv.org/pdf/1801.03924.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://github.com/richzhang/PerceptualSimilarity#a-basic-usage" target="_blank" rel="noopener">[code]</a> </p>
+</li>
+</ol>
+<h2 id="Subjective-Evaluation"><a href="#Subjective-Evaluation" class="headerlink" title="Subjective Evaluation:"></a>Subjective Evaluation:</h2><ol>
+<li>Each user sees two randomly selected results at a time and is asked to choose the one that looks more realistic.  After obtaining all the pairwise results, Bradley-Terry model (B-T model) is used to calculate the global ranking score for each method. <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tsai_Deep_Image_Harmonization_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li>Xu, Qiantong, et al. “An empirical study on evaluation metrics of generative adversarial networks.” arXiv preprint arXiv:1806.07755 (2018).</li>
+<li>Tsai, Yi-Hsuan, et al. “Deep image harmonization.” CVPR, 2017.</li>
+<li>Zhang, Richard, et al. “The unreasonable effectiveness of deep features as a perceptual metric.” CVPR, 2018.</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Finding Datasets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Finding Datasets/" itemprop="url">Finding Datasets</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p><a href="https://www.kaggle.com/datasets" target="_blank" rel="noopener">Kaggle datasets</a></p>
+</li>
+<li><p><a href="https://registry.opendata.aws/" target="_blank" rel="noopener">Amazon datasets</a></p>
+</li>
+<li><p><a href="https://archive.ics.uci.edu/ml/datasets.html" target="_blank" rel="noopener">UCI datasets</a></p>
+</li>
+<li><p><a href="https://toolbox.google.com/datasetsearch/" target="_blank" rel="noopener">Google dataset search</a></p>
+</li>
+<li><p><a href="https://msropendata.com/" target="_blank" rel="noopener">Microsoft datasets</a></p>
+</li>
+<li><p><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank" rel="noopener">Awesome public datasets</a></p>
+</li>
+<li><p><a href="https://www.visualdata.io/" target="_blank" rel="noopener">Computer vision datasets</a></p>
+</li>
+<li><p><a href="https://www.graviti.com/open-datasets/" target="_blank" rel="noopener">Graviti</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Euler Angle (yaw,pitch,roll)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1572,325 +1898,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/hardware/camera/Illumination Model/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/hardware/camera/Illumination Model/" itemprop="url">Illumination Model</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Dichromatic Reflection Model <a href="https://apps.dtic.mil/sti/pdfs/ADA150999.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-61864-3_17#enumeration" target="_blank" rel="noopener">[2]</a> <script type="math/tex">I_i=\gamma_b C_i L_i R_{b,i}+\gamma_s C_i L_i R_{s,i}</script>, in which <script type="math/tex">i</script> is the pixel index, <script type="math/tex">L</script> is the global illumination, <script type="math/tex">C_i</script> is the sensor sensitivity. The chromatic terms <script type="math/tex">R_b</script> and <script type="math/tex">R_s</script> account for body and surface reflection, which are only related to object material.  </p>
-</li>
-<li><p>gray pixels:  pixels with equal RGB values. detecting gray pixels in a color-biased image is not easy. <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Qian_On_Finding_Gray_Pixels_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[3]</a> </p>
-</li>
-<li><p>albedo, shading, gloss <a href="https://arxiv.org/pdf/2010.05907.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Yu_InverseRenderNet_Learning_Single_Image_Inverse_Rendering_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Shafer, Steven A. “Using color to separate reflection components.” Color Research &amp; Application 10.4 (1985): 210-218.<br>[2] Song, Shuangbing, et al. “Illumination Harmonization with Gray Mean Scale.” Computer Graphics International Conference. Springer, Cham, 2020.<br>[3] Qian, Yanlin, et al. “On finding gray pixels.” CVPR, 2019.<br>[4] Bhattad, Anand, and David A. Forsyth. “Cut-and-Paste Neural Rendering.” arXiv preprint arXiv:2010.05907 (2020).<br>[5] Yu, Ye, and William AP Smith. “InverseRenderNet: Learning single image inverse rendering.” CVPR, 2019.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/hardware/camera/Camera Survey/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/hardware/camera/Camera Survey/" itemprop="url">Camera Survey</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/" itemprop="url" rel="index">
-                    <span itemprop="name">hardware</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/camera/" itemprop="url" rel="index">
-                    <span itemprop="name">camera</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Interface-Type"><a href="#Interface-Type" class="headerlink" title="Interface Type:"></a>Interface Type:</h3><p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/L2j9XQP.jpg" width="900"></p>
-<p>GigE and USB interfaces are commonly used. The advantage of GigE is long-distance transmission.</p>
-<h3 id="Color-v-s-Monochrome"><a href="#Color-v-s-Monochrome" class="headerlink" title="Color v.s. Monochrome"></a>Color v.s. Monochrome</h3><p>When the exposure begins, each photosite is uncovered to collect incoming light. When the exposure ends, the occupancy of each photosite is read as an electrical signal, which is then quantified and stored as a numerical value in an image file.</p>
-<p>Unlike color sensors, monochrome sensors capture all incoming light at each pixel regardless of color.<br>Unlike with color, monochrome sensors also do not require demosaicing to create the final image because the values recorded at each photosite effectively just become the values at each pixel. As a result, monochrome sensors are able to achieve a slightly higher resolution.</p>
-<h3 id="Sensor-Type"><a href="#Sensor-Type" class="headerlink" title="Sensor Type:"></a>Sensor Type:</h3><ul>
-<li><strong>CCD (Charged Coupling Devices)</strong>: special manufacturing process that allows the conversion to take place in the chip without distortion, which makes them more expensive. CCD can capture high-quality image with low noise and is sensitive to light.</li>
-</ul>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/9NvqKXW.jpg" width="900"></p>
-<ul>
-<li><strong>CMOS (Complimentary Metal Oxide Semiconductor)</strong>: use transistors at each pixel to move the charge through traditional wires. Traditional manufacturing processes are used to make CMOS, which is the same as creating microchips. CMOS is cheaper and has low power consumption</li>
-</ul>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/bozmHu7.jpg" width="900"></p>
-<h3 id="Readout-Method"><a href="#Readout-Method" class="headerlink" title="Readout Method:"></a>Readout Method:</h3><p><strong>Global v.s. rolling shutter:</strong> originally, CCD uses global shutter while CMOS uses rolling shutter. Rolling shutter is always active and rolling through the pixels line by line from top to bottom. In contrast, global shutter stores their electrical charges and reads out when the shutter is closed and the pixel is reset for the next exposure, allowing the entire sensor area to be output simultaneously. Nowadays, CMOS can also have global shutter capabilities.</p>
-<p><strong>Advantage of global shutter:</strong> global shutter can manage motions and pulsed light conditions rather well as the scene is viewed or exposed at one moment in time by enabling synchronous timing of the light or motion to the open shutter phase. However, rolling shutter can also manage motions and pulsed light conditions to an extent through a combination of fast shutter speeds and timing of the light source. </p>
-<h3 id="Quantum-Efficiency"><a href="#Quantum-Efficiency" class="headerlink" title="Quantum Efficiency"></a>Quantum Efficiency</h3><p>The ability of a pixel to convert an incident photon to charge is specified by its quantum efficiency. For example, if for ten incident photons, four photo-electrons are produced, then the quantum efficiency is 40%. Typical values of quantum efficiency are in the range of 30 - 60%. The quantum efficiency depends on wavelength and is not necessarily uniform over the response to light intensity.</p>
-<h3 id="Field-of-View"><a href="#Field-of-View" class="headerlink" title="Field of View"></a>Field of View</h3><p>FOV (Field of View) depends on the lens size. Generally, larger sensors yield greater FOV.</p>
-<h3 id="Pixel-Size"><a href="#Pixel-Size" class="headerlink" title="Pixel Size"></a>Pixel Size</h3><p>A small pixel size is desirable because it results in a smaller die size and/or higher spatial resolution; a large pixel size is desirable because it results in higher dynamic range and signal-to-noise ratio. </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1945,7 +1952,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">224</span>
+                  <span class="site-state-item-count">226</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1967,7 +1974,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">108</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -281,6 +281,364 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/software/library/Ubuntu JDK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/software/library/Ubuntu JDK/" itemprop="url">Ubuntu JDK</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Remove default OpenJDK</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge openjdk-\*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>download jdk(containing jre) and tar.</p>
+</li>
+<li><p>add into /etc/profile</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=&quot;/home/newly/Program_Files/Java/jdk1.8.0_65&quot;</span><br><span class="line">PATH=&quot;$PATH:$JAVA_HOME/jre/bin:$JAVA_HOME/bin&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>set newly installed jdk as default jdk.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install "/usr/bin/java" "java" "$JAVA_HOME/bin/java" 1</span><br><span class="line">sudo update-alternatives --install "/usr/bin/javac" "javac" "$JAVA_HOME/bin/javac" 1</span><br><span class="line">sudo update-alternatives --install "/usr/bin/javaws" "javaws" "$JAVA_HOME/bin/javaws" 1</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/software/library/OpenCV/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/software/library/OpenCV/" itemprop="url">OpenCV</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Locate-OpenCV"><a href="#Locate-OpenCV" class="headerlink" title="Locate OpenCV:"></a>Locate OpenCV:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg-config --modversion opencv //version</span><br><span class="line">pkg-config --cflags opencv //include file path</span><br><span class="line">pkg-config --libs opencv //library path</span><br></pre></td></tr></table></figure>
+<h3 id="Uninstall-OpenCV"><a href="#Uninstall-OpenCV" class="headerlink" title="Uninstall OpenCV:"></a>Uninstall OpenCV:</h3><ol>
+<li>go to the compile package and <code>make uninstall</code></li>
+<li>if cannot find the compile package, <code>sudo find / -name &quot;*opencv*&quot; -exec rm -i {} \;</code></li>
+</ol>
+<h3 id="Install-OpenCV"><a href="#Install-OpenCV" class="headerlink" title="Install OpenCV:"></a>Install OpenCV:</h3><p><strong>For Windows: C++(Visual Studio)</strong></p>
+<ol>
+<li>Download latest OpenCV from <a href="http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect" target="_blank" rel="noopener">http://sourceforge.net/projects/opencvlibrary/?source=typ_redirect</a>.</li>
+<li>Make a dir named build. Use cmake to generate OpenCV.sln in build.</li>
+<li>Click OpenCV.sln and CMakeTargets-&gt;INSTALL-&gt;build. You can build it in both debug and release modes.</li>
+<li>In the environmental variables, add D:\Program Files\OpenCV_3.0.0\build\install\x64\vc11 as OPENCV_DIR, add Path with %OPENCV_DIR%\bin. </li>
+<li>Create a OpenCV project. C/C++-&gt;General-&gt;Additional Include Directories: $(OPENCV_DIR)\..\..\include</li>
+<li>Linker-&gt;General-&gt;Additional Library Directories: $(OPENCV_DIR)\lib</li>
+<li>Linker-&gt;Input-&gt;Additional Dependencies: copy all the lib files. <em>*</em>d.lib means debug mode.</li>
+</ol>
+<p>Note that there may be some problems for visual studio to recognize the updated environmental variable. Try to restart the visual studio or recreate the project.</p>
+<p><strong>For Linux: install for C++</strong></p>
+<ol>
+<li>pre-install packages<br>[compiler] sudo apt-get install build-essential<br>[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev<br>[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</li>
+<li>download the required version on <a href="https://sourceforge.net/projects/opencvlibrary/" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/</a></li>
+<li>make and install <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake ..     //cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Tips: if you want to install multiple versions of OpenCV, set CMAKE_INSTALL_PREFIX differently for different versions of OpenCV.</p>
+<pre><code class="lang-shell">cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D INSTALL_C_EXAMPLES=ON \
+    -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
+    -D PYTHON_EXECUTABLE=/usr/bin/python \
+    -D BUILD_EXAMPLES=ON ..
+</code></pre>
+<p>If want to turn off some modules, use <code>-D BUILD_opencv_xfeatures2d=OFF</code> </p>
+<p><strong>Switch between different versions of OpenCV:</strong></p>
+<p>switch from version 3.2 to version 2.4 <a href="\code\OpenCV\switch_to_2.4.13.sh">shell</a></p>
+<p>switch from version 2.4 to version 3.2 <a href="\code\OpenCV\switch_to_3.2.0.sh">shell</a></p>
+<p><strong>For Linux: Python(Anaconda)</strong></p>
+<pre><code class="lang-shell">source activate tgt_env
+conda install -c https://conda.binstar.org/menpo opencv
+spyder
+</code></pre>
+<p>Then try <code>import cv2</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg for Ubuntu14.04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1575,399 +1933,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow Learning Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/programming_language/TensorFlow/TensorFlow Learning Note/" itemprop="url">TensorFlow Learning Note</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><hr>
-<p>shape = [batch,height,width,channel]<br><strong>constant:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.zeros(shape)</span><br><span class="line">tf.constant(<span class="number">0.4</span>, shape)</span><br><span class="line">tf.random_norm(shape, stddev=<span class="number">1e-1</span>)</span><br><span class="line">tf.truncated_norm(shape, stddev=<span class="number">1e-1</span>)</span><br></pre></td></tr></table></figure></p>
-<p><strong>variable:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.get_variable(varname, shape=[<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>], initializer=XXX)</span><br><span class="line">initializer=tf.zeros_initializer() <span class="comment"># bias</span></span><br><span class="line">initializer=tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>) </span><br><span class="line">initializer=tf.truncated_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">initializer=tf.contrib.layers.xavier_initializer() <span class="comment"># weight</span></span><br></pre></td></tr></table></figure></p>
-<p>Empirically, for weight initialization, xavier is better than truncated_norm, better than random_normal.</p>
-<h3 id="Summary-for-tensorboard"><a href="#Summary-for-tensorboard" class="headerlink" title="Summary for tensorboard"></a>Summary for tensorboard</h3><hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.scalar(<span class="string">'total_loss'</span>, total_loss) <span class="comment">#scalar, histogram, etc</span></span><br><span class="line">self.merged = tf.summary.merge_all()</span><br><span class="line">train_writer = tf.summary.FileWriter(summary_folder, model.sess.graph) <span class="comment">#include the sess graph</span></span><br><span class="line">train_writer.add_summary(summary, ibatch)</span><br></pre></td></tr></table></figure>
-<p>after running the code, open tensorboard <code>tensorboard --logdir=&#39;./train&#39;</code></p>
-<h3 id="Checkpoint"><a href="#Checkpoint" class="headerlink" title="Checkpoint"></a>Checkpoint</h3><hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># save all the variables</span></span><br><span class="line">saver = tf.train.Saver() </span><br><span class="line"><span class="comment"># save partial variables </span></span><br><span class="line">saver = tf.train.Saver(&#123;<span class="string">"my_v2"</span>: v2&#125;)</span><br><span class="line"><span class="comment"># save and restore</span></span><br><span class="line">saver.save(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line">saver.restore(sess, <span class="string">"/tmp/model.ckpt"</span>)</span><br><span class="line"><span class="comment"># restore partial variables</span></span><br><span class="line">init_fn = slim.assign_from_checkpoint_fn(checkpoint_path, slim.get_variables_to_restore())</span><br><span class="line">init_fn(sess)</span><br></pre></td></tr></table></figure>
-<p>inspect the checkpoint file<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.python <span class="keyword">import</span> pywrap_tensorflow  </span><br><span class="line">checkpoint_path = os.path.join(model_dir, <span class="string">"model.ckpt"</span>)  </span><br><span class="line">reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path)  </span><br><span class="line">var_to_shape_map = reader.get_variable_to_shape_map()  </span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> var_to_shape_map:  </span><br><span class="line">    print(<span class="string">"tensor_name: "</span>, key)  </span><br><span class="line">    print(reader.get_tensor(key)) <span class="comment"># Remove this is you want to print only variable names</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Layer"><a href="#Layer" class="headerlink" title="Layer"></a>Layer</h3><hr>
-<ul>
-<li><p>convolutional layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kernel = tf.Variable(tf.zeros([<span class="number">5</span>,<span class="number">5</span>,<span class="number">64</span>,<span class="number">192</span>]))</span><br><span class="line">tf.nn.conv2d(x, kernel, strides=[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>) <span class="comment"># padding is 'SAME' or 'VALID' depending on stride is 1 or larger</span></span><br><span class="line"></span><br><span class="line">tf.nn.bias_add(prev_layer, bias)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dropout layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line"><span class="comment"># set keep_prob as 0.5 during training and 1 during testing</span></span><br><span class="line">tf.nn.dropout(h_fc1, keep_prob)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>pooling layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.max_pool(x, ksize=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>],  strides=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], padding=<span class="string">'VALID'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>loss layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))</span><br><span class="line">	tf.nn.l2_loss(prev_layer)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>metric layer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculate top-k accuracy</span></span><br><span class="line">tf.nn.in_top_k(logits, label_holder, k) <span class="comment"># the accuracy of top k</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>activation layer<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.relu(prev_layer)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>other layers<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tf.one_hot(self.input_class, self.n_class)</span><br><span class="line">tf.nn.embedding_lookup(codebook, indices)</span><br><span class="line">tf.nn.lrn() <span class="comment"># legacy</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Common-Operations"><a href="#Common-Operations" class="headerlink" title="Common Operations"></a>Common Operations</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tf.matmul</span><br><span class="line">tf.pow</span><br><span class="line">tf.diag_part</span><br><span class="line">tf.reduce_sum</span><br><span class="line">tf.reduce_mean</span><br><span class="line">tf.nn.softmax</span><br><span class="line">tf.tile(a,(<span class="number">2</span>,<span class="number">2</span>)) </span><br><span class="line">tf.nn.embedding_lookup</span><br><span class="line">sim.flatten</span><br><span class="line">tf.squeeze</span><br><span class="line">tf.reshape</span><br><span class="line">tf.concat(values=[a,b,c], axis=<span class="number">3</span>)</span><br><span class="line">tf.gather  <span class="comment">#get indexed value, only on 0-dim</span></span><br><span class="line">tf.gather_nd</span><br><span class="line">tf.map_fn</span><br><span class="line">tf.scan_fn</span><br><span class="line">tf.fold1/foldr</span><br></pre></td></tr></table></figure>
-<h3 id="Training-and-testing"><a href="#Training-and-testing" class="headerlink" title="Training and testing"></a>Training and testing</h3><hr>
-<ul>
-<li><p>training stage</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">optimizer = tf.train.GradientDescentOptimizer(<span class="number">0.01</span>)</span><br><span class="line">train = optimizer.minimize(loss)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>): <span class="comment">#note the iteration number here</span></span><br><span class="line">    sess.run(train, feed_dict=&#123;x:x_train, y:y_train&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>testing stage</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acc.eval(feed_dict=&#123;x:x_test, y:y_test&#125;)</span><br><span class="line">sess.run(acc, feed_dict=&#123;x:x_test, y:y_test&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><hr>
-<ul>
-<li><p>For plain TensorFlow, reading data via queue is cumbersome. Refer to my another blog ‘TensorFlow Input Data’ for more details.<br>  ``python<br>  with tf.Session(config=config) as sess:      </p>
-<pre><code>  coord = tf.train.Coordinator()
-  threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-  sess.run(tf.initialize_local_variables())
-  #main code
-  coord.request_stop()
-  coord.join(threads)
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* With tfrecord and slim, using queue is much easier by using 	`slim.queues.QueueRunners`</span><br><span class="line">	```python</span><br><span class="line">	with tf.Session(config=config) as sess:        </span><br><span class="line">		with slim.queues.QueueRunners(sess):</span><br><span class="line">	``` </span><br><span class="line">  or `sv.managed_session`</span><br><span class="line">	```python</span><br><span class="line">	sv = tf.train.Supervisor(logdir=logdir, save_summaries_secs=0, saver=None)        </span><br><span class="line">	    with sv.managed_session() as sess:</span><br></pre></td></tr></table></figure>
-<p>Sample code of generating tfrecord dataset and reading data via queue can downloaded <a href="\code\TensorFlow\generate_tfrecord.rar">here</a></p>
-</li>
-</ul>
-<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><hr>
-<ul>
-<li><p>check tensorflow version</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tf.__version__.split(<span class="string">'.'</span>)[<span class="number">0</span>] != <span class="string">"1"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>count parameter numbers</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) <span class="keyword">for</span> v <span class="keyword">in</span> tf.trainable_variables()])</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow Input Data with Queue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/programming_language/TensorFlow/TensorFlow Input Data with Queue/" itemprop="url">TensorFlow Input Data with Queue</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Input raw data (e.g., text, image address). There are many different implementations of queue.</p>
-<ul>
-<li><p>feature-label pair: <a href="\code\TensorFlow\queue\feature_label_pair\customize_enqueue_op.py">[enqueue-op]</a> <a href="\code\TensorFlow\queue\feature_label_pair\customize_prefetch_func.py">[fetch-func]</a> <a href="\code\TensorFlow\queue\feature_label_pair\slice_input_producer.py">[slice-input-producer]</a> <a href="\code\TensorFlow\queue\feature_label_pair\string_input_producer.py">[string-input-producer]</a></p>
-</li>
-<li><p>image-image pair: <a href="\code\TensorFlow\queue\image_image_pair\slice_input_producer.py">[slice-input-producer]</a><a href="\code\TensorFlow\queue\image_image_pair\string_input_producer.py">[string-input-producer]</a></p>
-</li>
-</ul>
-</li>
-<li><p>A more elegant way is converting raw data to tfrecord format.</p>
-</li>
-</ol>
-<p><strong>Tips:</strong></p>
-<ol>
-<li><p>setting large number_of_threading (e.g., 10) is helpful.</p>
-</li>
-<li><p>shuffle the training samples to avoid homogenuity when necessary.</p>
-</li>
-<li><p>place the training data in local disk instead of removable disk (consider I/O speed).</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2022,7 +1987,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">224</span>
+                  <span class="site-state-item-count">226</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2044,7 +2009,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">108</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

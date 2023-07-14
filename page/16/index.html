@@ -281,6 +281,440 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Self-supervised Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Self-supervised Learning/" itemprop="url">Self-supervised Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Design a proxy task using unlabeled or weakly-labeled data to help the original task. Essentially, self-supervised learning is multi-task learning with the proxy task not relying on heavy human annotation. The problem is which proxy task without human annotation is the most effective one.</p>
+<p>Please refer to the tutorial slides <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_naiyanwang.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/self_supervised_learning_tutorial_zisserman.pdf" target="_blank" rel="noopener">[2]</a>, the <a href="https://arxiv.org/pdf/1902.06162.pdf" target="_blank" rel="noopener">survey</a>, and the <a href="https://github.com/jason718/awesome-self-supervised-learning" target="_blank" rel="noopener">paper list</a>.</p>
+<ol>
+<li><p>image-to-image</p>
+<ul>
+<li>image-to-image translation: colorization <a href="https://arxiv.org/pdf/1603.08511.pdf" target="_blank" rel="noopener">[1]</a>, inpainting <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Pathak_Context_Encoders_Feature_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[2]</a>, cross-channel generation <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_Split-Brain_Autoencoders_Unsupervised_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>spatial location: relative location <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Doersch_Unsupervised_Visual_Representation_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, jigsaw <a href="https://arxiv.org/pdf/1603.09246.pdf" target="_blank" rel="noopener">[2]</a>, predicting rotation <a href="https://arxiv.org/pdf/1803.07728.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>contrastive learning: instance-wise contrastive learning (e.g., MOCO), prototypical contrastive learning (clustering) <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2005.04966" target="_blank" rel="noopener">[2]</a> </li>
+<li>MAE: <a href="https://siam-mae-video.github.io/resources/paper.pdf" target="_blank" rel="noopener">Siamese MAE</a></li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>video-to-image</p>
+<ul>
+<li>temporal coherence: <a href="http://people.csail.mit.edu/hmobahi/pubs/embedvideo.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.386.1586&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[2]</a> <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Jayaraman_Slow_and_Steady_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>temporal order:  <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wang_Unsupervised_Learning_of_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1603.08561.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[3]</a></li>
+<li>unsupervised image tasks with video clues: clustering <a href="https://arxiv.org/pdf/1406.6909.pdf" target="_blank" rel="noopener">[1]</a>, optical flow prediction <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Walker_Dense_Optical_Flow_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, unsupervised segmentation based on optical flow <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Pathak_Learning_Features_by_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a>,unsupervised depth estimation based on optical flow <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Huaizu_Jiang_Self-Supervised_Relative_Depth_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>video generation <a href="https://arxiv.org/pdf/1502.04681.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>cross-modal consistency: consistency between visual kernel and optical flow kernel <a href="http://www.robots.ox.ac.uk/~vgg/publications/2018/Mahendran18/mahendran18.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+<li><p>video-to-video: all video-to-image methods can be used for video-to-video by averaging frame features.</p>
+<ul>
+<li>3D rotation <a href="https://arxiv.org/pdf/1811.11387.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>Cubic puzzle <a href="https://www.aaai.org/Papers/AAAI/2019/AAAI-KimD.1806.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>video localization and classification <a href="https://arxiv.org/pdf/1904.03597.pdf" target="_blank" rel="noopener">[1]</a></li>
+</ul>
+</li>
+</ol>
+<p><strong>Muti-task self-supervised learning:</strong> integrate multiple proxy tasks <a href="https://arxiv.org/pdf/1804.10069.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/abs/1708.07860" target="_blank" rel="noopener">[2]</a></p>
+<p><strong>Combined with other frameworks:</strong> self-supervised GAN <a href="https://arxiv.org/pdf/1811.11212.pdf" target="_blank" rel="noopener">[1]</a></p>
+<p>  A recent paper <a href="https://arxiv.org/pdf/1901.09005.pdf" target="_blank" rel="noopener">[1*]</a> claims that the best self-supervised learning method is still the earliest image inpainting model. The design of network architecture has a significant impact on the performance of self-supevivsed learning methods.</p>
+<p>SimCLR <a href="https://arxiv.org/pdf/2002.05709.pdf" target="_blank" rel="noopener">[2*]</a> is a SOTA self-supervised learning method with performance approaching supervised learning. </p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1*] Alexander Kolesnikov, Xiaohua Zhai, Lucas Beyer: Revisiting Self-Supervised Visual Representation Learning. CVPR 2019.</p>
+<p>[2*] Chen, Ting, et al. “A simple framework for contrastive learning of visual representations.” arXiv preprint arXiv:2002.05709 (2020).</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Scene Text Recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Scene Text Recognition/" itemprop="url">Scene Text Recognition</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
+<h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.187&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Detecting Text in Natural Scenes with<br>Stroke Width Transform</a>, CVPR 2010: assume consistent stroke width within each character</p>
+</li>
+<li><p><a href="http://www.iapr-tc11.org/dataset/MSRA-TD500/Detecting_Texts_of_Arbitrary_Orientations_in_Natural_Images.pdf" target="_blank" rel="noopener">Detecting Texts of Arbitrary Orientations in Natural Images</a>, CVPR 2012: design rotation-invariant features</p>
+</li>
+<li><p><a href="http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/jaderberg14deep.pdf" target="_blank" rel="noopener">Deep Features for Text Spotting</a>, ECCV 2014: add three branches for prediction</p>
+</li>
+<li><p><a href="http://www.whuang.org/papers/whuang2014_eccv.pdf" target="_blank" rel="noopener">Robust scene text detection with convolution neural network induced mser trees</a>, ECCV 2014</p>
+</li>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.4947&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Real-time Lexicon-free Scene Text<br>Localization and Recognition</a>, T-PAMI 2016</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gupta_Synthetic_Data_for_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Synthetic Data for Text Localisation in Natural Images</a>, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Multi-Oriented_Text_Detection_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Multi-oriented text detection with fully convolutional networks</a>, CVPR 2016</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1609.03605.pdf" target="_blank" rel="noopener">Detecting Text in Natural Image with Connectionist Text Proposal Network</a>, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM.</p>
+</li>
+<li><p><a href="https://scholar.google.com/scholar?hl=zh-CN&amp;as_sdt=0%2C5&amp;q=SSD%3A+single+shot+multibox+detector&amp;btnG=" target="_blank" rel="noopener">SSD: single shot multibox detector</a>, ECCV 2016</p>
+</li>
+<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12256/12121" target="_blank" rel="noopener">Reading Scene Text in Deep Convolutional Sequences</a>, AAAI 2016</p>
+</li>
+<li><p><a href="Scene text detection via holistic, multi-channel prediction">Scene text detection via holistic, multi-channel prediction</a>, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linking<br>orientation map</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Deep_Direct_Regression_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep Direct Regression for Multi-Oriented Scene Text Detection</a>, ICCV 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_WordSup_Exploiting_Word_ICCV_2017_paper.pdf" target="_blank" rel="noopener">WordSup: Exploiting Word Annotations for Character based Text Detection</a>, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training</p>
+</li>
+<li><p><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14202/14295" target="_blank" rel="noopener">TextBoxes: A Fast Text Detector with a Single Deep Neural Network</a>, AAAI 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf" target="_blank" rel="noopener">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017: use <a href="https://arxiv.org/pdf/1509.04874.pdf" target="_blank" rel="noopener">DenseBox</a> to generate quadrangle proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.02765.pdf" target="_blank" rel="noopener">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf" target="_blank" rel="noopener">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1801.01315.pdf" target="_blank" rel="noopener">PixelLink: Detecting Scene Text via Instance Segmentation</a>, AAAI 2018: rectangle enclosing instance segmentation mask, which is obtained based on text/non-text prediction and link prediction.</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1703.01086.pdf" target="_blank" rel="noopener">Arbitrary-Oriented Scene Text Detection via Rotation Proposals</a>, TMM 2018: generate rotated proposals</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1807.01544.pdf" target="_blank" rel="noopener">TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes</a>, ECCV 2018: infer the center line area (TCL) and associated circle radius/rotation</p>
+</li>
+</ol>
+<h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.354&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">End-to-End Scene Text Recognition</a>, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon</p>
+</li>
+<li><p><a href="https://hal.inria.fr/hal-00818178/document" target="_blank" rel="noopener">Top-down and bottom-up cues for scene text recognition</a>, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shi_Scene_Text_Recognition_2013_CVPR_paper.pdf" target="_blank" rel="noopener">Scene text recognition using part-based tree-structured character detection</a>, CVPR 2013:  build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Bissacco_PhotoOCR_Reading_Text_2013_ICCV_paper.pdf" target="_blank" rel="noopener">PhotoOCR: Reading text in uncontrolled conditions</a>, ICCV 2013: automatically generate training data and perform OCR on web images</p>
+</li>
+<li><p><a href="https://link.springer.com/article/10.1007/s11263-014-0793-6" target="_blank" rel="noopener">Label embedding: A frugal baseline for text recognition</a>, IJCV 2015: learn a common space for image and word</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1412.1842.pdf" target="_blank" rel="noopener">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016 </p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Robust_Scene_Text_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Robust Scene Text Recognition with Automatic Rectification</a>, CVPR 2016</p>
+</li>
+<li><p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Recursive Recurrent Nets with Attention Modeling for OCR in the Wild</a>, CVPR 2016: character-level language model embodied in a recurrent neural network</p>
+</li>
+<li><p><a href="https://ieeexplore.ieee.org/abstract/document/7801919" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI 2017</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Cheng_Focusing_Attention_Towards_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Focusing Attention: Towards Accurate Text Recognition in Natural Images</a>, ICCV 2017: Focusing Network to handle the attention drift</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1706.01487.pdf" target="_blank" rel="noopener">Visual attention models for scene text recognition</a>, 2017 arxiv</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">AON: Towards Arbitrarily-Oriented Text Recognition
+</a>, CVPR 2018</p>
+</li>
+<li><p>(recommended by Guo)<a href="https://arxiv.org/pdf/1507.05717.pdf" target="_blank" rel="noopener">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI, 2017</p>
+</li>
+</ol>
+<h2 id="End-to-end"><a href="#End-to-end" class="headerlink" title="End-to-end"></a>End-to-end</h2><p>Integrate scene text detection and recognition in an end-to-end system.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a href="http://cmp.felk.cvut.cz/~matas/papers/neumann-text-accv10.pdf" target="_blank" rel="noopener">A method for text localization and recognition in real-world images</a>, ACCV 2010</p>
+</li>
+<li><p><a href="http://fadaei.semnan.ac.ir/uploads/MV7.pdf" target="_blank" rel="noopener">Real-Time Scene Text Localization and Recognition</a>, CVPR 2012</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Towards_End-To-End_Text_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Towards End-to-end Text Spotting with Convolutional<br>Recurrent Neural Networks</a>, ICCV 2017: designed for horizontal scene text</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busta_Deep_TextSpotter_An_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework</a>, ICCV 2017:  detect and recognize horizontal and multioriented<br>scene text</p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf" target="_blank" rel="noopener">FOTS: Fast Oriented Text Spotting with a Unified Network</a>, CVPR 2018: using EAST as text detector and CRNN as text recognizer</p>
+</li>
+</ol>
+<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
+<li><a href="http://mclab.eic.hust.edu.cn/icdar2017chinese/" target="_blank" rel="noopener">RCTW-17</a></li>
+<li><a href="http://rrc.cvc.uab.es/?ch=8" target="_blank" rel="noopener">MLT</a> </li>
+<li><a href="https://github.com/Yuliang-Liu/Curve-Text-Detector" target="_blank" rel="noopener">SCUT-CTW1500</a></li>
+<li><a href="https://github.com/cs-chan/Total-Text-Dataset" target="_blank" rel="noopener">Total-Text</a></li>
+<li><a href="http://rrc.cvc.uab.es/?ch=4&amp;com=introduction" target="_blank" rel="noopener">ICDAR 2015</a></li>
+<li><a href="http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500" target="_blank" rel="noopener">MSRA-TD500</a>)</li>
+<li><a href="http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html" target="_blank" rel="noopener">IIIT 5K-Word</a></li>
+<li><a href="https://vision.cornell.edu/se3/coco-text-2/" target="_blank" rel="noopener">COCO-Text</a></li>
+</ul>
+<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h2><ul>
+<li><a href="http://www.vlrlab.net/admin/uploads/avatars/FCS_TextSurvey_2015.pdf" target="_blank" rel="noopener">Scene text detection and recognition: Recent advances and future trends</a>, FCS 2015</li>
+<li><a href="https://ieeexplore.ieee.org/abstract/document/6945320" target="_blank" rel="noopener">Text detection and recognition in imagery: A survey</a>, T-PAMI 2015</li>
+</ul>
+<h2 id="Special-Sessions"><a href="#Special-Sessions" class="headerlink" title="Special Sessions"></a>Special Sessions</h2><ol>
+<li><p>Use Spatial Transformation Network (STN) <a href="https://arxiv.org/pdf/1509.05329.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1611.04298.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1707.08831.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1603.03915.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+<li><p>Use Deformable Convolution Network (DCN) <a href="https://arxiv.org/pdf/1805.01167" target="_blank" rel="noopener">[1]</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Scale Variation for Object Detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1555,311 +1989,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modality Fusion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Multi-modality Fusion/" itemprop="url">Multi-modality Fusion</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>Concatenation/summation, or weighted (attention mechanism) concatenation/summation.</li>
-<li>P(y|x1,x2)=P(y|x1)P(y|x2), with Gaussian distribution assumption <a href="https://arxiv.org/pdf/2112.05130.pdf" target="_blank" rel="noopener">[1]</a></li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li>Huang, Xun, et al. “Multimodal Conditional Image Synthesis with Product-of-Experts GANs.” arXiv preprint arXiv:2112.05130 (2021).</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modal Problem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Multi-modal Problem/" itemprop="url">Multi-modal Problem</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Multi-modal problem means that given an input, there exist multiple possible outputs instead of a single deterministic output. The key problem is the mode collapse problem.</p>
-<ol>
-<li><p>The ground-truth output belongs to one of K generated possibilities <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Vondrick_Anticipating_Visual_Representations_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a>. K is set beforehand.</p>
-</li>
-<li><p>Ensure bijection between random vector and output: Associate random factor (e.g., random vector z) with specific information <a href="https://arxiv.org/pdf/1711.11586.pdf" target="_blank" rel="noopener">[2]</a>. Either random factor is conditioned on specific information, or the generated output can recognize random factor. If the mapping from random vector to output is invertible (e.g., glow), there is a natural bijection between random vector and output <a href="http://de.arxiv.org/pdf/2006.14200?gitT" target="_blank" rel="noopener">[6]</a>. </p>
-<center><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/gAVVos7.jpg" width="50%" border="0"></center>
-</li>
-<li><p>Enforce different random vectors to produce different outputs: push apart the outputs generated from different random vectors z with diversity loss or mode seeking loss <a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1901.09024.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Normalized_Diversification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Vondrick, Carl, Hamed Pirsiavash, and Antonio Torralba. “Anticipating visual representations from unlabeled video.” CVPR, 2016.</p>
-<p>[2] Zhu, Jun-Yan, et al. “Toward multimodal image-to-image translation.” Advances in Neural Information Processing Systems. 2017.</p>
-<p>[3] Qi Mao, Hsin-Ying Lee, Hung-Yu Tseng, Siwei Ma, and Ming-Hsuan Yang. Mode seeking generative adversarial networks for diverse image synthesis. In CVPR, 2019.</p>
-<p>[4] Dingdong Yang, Seunghoon Hong, Yunseok Jang, Tianchen Zhao, and Honglak Lee. Diversity-sensitive<br>conditional generative adversarial networks. arXiv preprint arXiv:1901.09024, 2019.</p>
-<p>[5] Shaohui Liu, Xiao Zhang, Jianqiao Wangni, Jianbo Shi: Normalized Diversification. CVPR 2019: 10306-10315</p>
-<p>[6] Lugmayr, Andreas, et al. “SRFlow: Learning the Super-Resolution Space with Normalizing Flow.” arXiv preprint arXiv:2006.14200 (2020).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1914,7 +2043,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">224</span>
+                  <span class="site-state-item-count">226</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1936,7 +2065,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">108</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

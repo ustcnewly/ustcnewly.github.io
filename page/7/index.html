@@ -281,6 +281,335 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/Hyper Parameter Tuning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/others/Hyper Parameter Tuning/" itemprop="url">Hyper Parameter Tuning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="Parameter-searching"><a href="#Parameter-searching" class="headerlink" title="Parameter searching:"></a>Parameter searching:</h5><ul>
+<li><p>grid search</p>
+</li>
+<li><p><a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf" target="_blank" rel="noopener">random search</a></p>
+</li>
+<li><p>Bayesian Optimization: <a href="https://sigopt.com/" target="_blank" rel="noopener">SigOpt</a> is providing parameter tuning service based on Bayesian optimization. <a href="https://ustcnewly.github.io/2018/07/18/paper_note/Simple%20Bayesian%20Optimization/">This</a> is a good place to start.</p>
+<ul>
+<li><a href="https://github.com/hyperopt/hyperopt" target="_blank" rel="noopener">hyperopt</a> (tree parzen estimator)</li>
+<li><a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">BayesianOptimization</a>, <a href="https://github.com/JasperSnoek/spearmint" target="_blank" rel="noopener">Spearmint</a>, <a href="https://github.com/Yelp/MOE" target="_blank" rel="noopener">MOE</a> (Gaussian process) </li>
+<li><p><a href="http://www.cs.ubc.ca/labs/beta/Projects/SMAC/" target="_blank" rel="noopener">SMAC</a> (random forest regression)</p>
+<p>related papers:  <a href="http://papers.nips.cc/paper/5086-multi-task-bayesian-optimization.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/f6c3/ba9e1ccb7931ab1bacb806c7e314ab4d8b06.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://proceedings.mlr.press/v37/snoek15.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf" target="_blank" rel="noopener">[4]</a></p>
+</li>
+</ul>
+</li>
+<li><p>Spectral Optimization: <a href="https://arxiv.org/pdf/1706.00764.pdf" target="_blank" rel="noopener">Harmonica</a> <a href="https://github.com/callowbird/Harmonica" target="_blank" rel="noopener">[github]</a> currently only supports tuning binary parameters.</p>
+</li>
+</ul>
+<h4 id="Model-ensembling"><a href="#Model-ensembling" class="headerlink" title="Model ensembling:"></a>Model ensembling:</h4><ul>
+<li>different initialization</li>
+<li>different epochs</li>
+<li>different hyperparameters</li>
+</ul>
+<p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/How to Conduct Experiments/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/others/How to Conduct Experiments/" itemprop="url">How to Conduct Experiments</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Experimental setting:</p>
+<ul>
+<li>Select more than 3 popular benchmark datasets. Most papers perform evaluation on 3~5 datasets.</li>
+<li>Determine the training/testing split. By default, strictly follow the setting in recent papers. If their settings are not applicable, we can determine our own setting reasonably and fully describe the details in the paper. </li>
+</ul>
+<p>Experimental implementation:</p>
+<ul>
+<li>For the commonly used model, avoid unnecessary reimplementation. Just use the released code and model.</li>
+<li>If closely related papers release their code, modify based on their code and avoid starting from scratch. </li>
+<li>Document your code with readable and meaningful comments. Otherwise, even your cannot understand your own code after a long time.</li>
+<li>Manage different versions of code carefully, otherwise your code will get messy very rapidly. Use advanced tool such as github to create branches, revert to old version, etc. The brutal approach is to create an individual folder for each version, which is not recommended.</li>
+</ul>
+<p>Experimental running:</p>
+<ul>
+<li>Avoid redundant or unncessary experiments.</li>
+<li>Run experiments parallelly using all available computing resources.</li>
+<li><a href="https://ustcnewly.github.io/2018/09/07/paper_note/Parameter%20Tuning/">Tune hyper-parameters wisely</a>.</li>
+<li>Save final output and important intermediate output for future analysis.</li>
+</ul>
+<p>Experimental record:</p>
+<ul>
+<li>Make a to-do list for what experiments you are going to do.</li>
+<li>For the experiments you have done, summarize your observation and conclusion. Then, adjust the remaining to-do list accordingly. </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/How to Come up with Ideas/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1611,311 +1940,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu Software Management/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/operation_system/Ubuntu/Ubuntu Software Management/" itemprop="url">Ubuntu Software Management</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="raw-dpkg"><a href="#raw-dpkg" class="headerlink" title="raw: dpkg"></a>raw: dpkg</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i xxx.deb</span><br><span class="line">dpkg -r xxx.deb</span><br><span class="line">dpkg --purge xxx.deb</span><br><span class="line">dpkg -L xxx.deb</span><br><span class="line">dpkg --info xxx.deb</span><br><span class="line">dpkg -reconfigure xxx</span><br></pre></td></tr></table></figure>
-<p>dkpg is raw method to install without solving dependencies and existing software.</p>
-<h3 id="mature-apt-get"><a href="#mature-apt-get" class="headerlink" title="mature: apt-get"></a>mature: apt-get</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-get install softname1 softname2 softname3……</span><br><span class="line">apt-get remove softname1 softname2 softname3……</span><br><span class="line">apt-get remove --purge softname1</span><br><span class="line">apt-get autoremove</span><br><span class="line">apt-get clean //clean /var/cache/apt/archives </span><br><span class="line">apt-get autoclean //clean the out-of-date files in /var/cache/apt/archives</span><br><span class="line"></span><br><span class="line">apt-get update //update software information and database command</span><br><span class="line">apt-get upgrade //update the system</span><br><span class="line"></span><br><span class="line">apt-cache search rough_name</span><br><span class="line">apt-cache show exact_name</span><br><span class="line"></span><br><span class="line">pkg-config --libs opencv</span><br><span class="line">pkg-config --cflags opencv </span><br><span class="line">pkg-config --modversion opencv</span><br></pre></td></tr></table></figure>
-<p>apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg.</p>
-<h3 id="more-mature-aptitude-GUI"><a href="#more-mature-aptitude-GUI" class="headerlink" title="more mature: aptitude (GUI)"></a>more mature: aptitude (GUI)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aptitude install softname1</span><br><span class="line">aptitude remove softname1</span><br></pre></td></tr></table></figure>
-<p>aptitude is also built on dkpg and more powerful than apt-get.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu Shell Scripts/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/operation_system/Ubuntu/Ubuntu Shell Scripts/" itemprop="url">Ubuntu Shell Scripts</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/" itemprop="url" rel="index">
-                    <span itemprop="name">OS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><code>#!/bin/bash</code> at the head of file indicates shell type</p>
-<ol>
-<li><p>strict format</p>
-<p> For <code>if [[ $input == &quot;hello&quot; ]]</code>, note that the space after [[ and before ]] is very strict, since [[]] can be used for matching regular expression</p>
-</li>
-<li><p>arguments</p>
-<ul>
-<li>$@: stores all the arguments in a list of string</li>
-<li>$*: stores all the arguments as a single string</li>
-<li>$#: stores the number of arguments</li>
-<li>shift: remove the first argument</li>
-</ul>
-</li>
-</ol>
-<p>When starting login or interative shells, certain files will be executed based on the following tables:</p>
-<p>For bash:<br>login-y interactive-y: profile<br>login-y interactive-n: profile<br>login-n interactive-y: bashrc</p>
-<p>For zsh:<br>login-y interactive-y: zshenv zprofile zshrc zlogin<br>login-y interactive-n: zshenv zprofile zlogin<br>login-n interactive-y: zshenv zshrc<br>login-n interactive-n: zshenv</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1970,7 +1994,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">224</span>
+                  <span class="site-state-item-count">226</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1992,7 +2016,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">108</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

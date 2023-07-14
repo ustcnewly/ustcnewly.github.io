@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2023/07/14/deep_learning/Segment%20Anything/</loc>
+    <lastmod>2023-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2023/07/14/deep_learning/Drag%20Image%20Editing/</loc>
+    <lastmod>2023-07-14</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2023/06/20/deep_learning/Disentangled%20Generative%20Model/</loc>
     <lastmod>2023-06-23</lastmod>
   </url>
