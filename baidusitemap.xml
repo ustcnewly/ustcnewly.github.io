@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2023/09/04/software/Docker/</loc>
+    <lastmod>2023-09-04</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion%20Model/</loc>
     <lastmod>2023-08-30</lastmod>
   </url>

@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker</title>
+    <url>/2023/09/04/software/Docker/</url>
+    <content><![CDATA[<h3 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h3><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
+<h3 id="Command-lines"><a href="#Command-lines" class="headerlink" title="Command lines"></a>Command lines</h3><ul>
+<li>docker image ls/rm</li>
+<li><p>docker container ls/rm/prune</p>
+</li>
+<li><p>docker build -t img:tag . </p>
+</li>
+<li><p>docker run img:tag</p>
+</li>
+<li><p>docker run -it img:tag bash </p>
+</li>
+<li><p>container status: (a)none (b)live (c)dead</p>
+<ul>
+<li>(a)-&gt;(b): <code>docker run img:tag</code> to create a container</li>
+<li>(b)-&gt;(c): after running, the container becomes dead</li>
+<li>(b)-&gt;(a): <code>docker container rm conID -f</code></li>
+<li>(c)-&gt;(a): <code>docker container rm conID</code></li>
+<li>(c)-&gt;(b): <code>docker start conID</code></li>
+</ul>
+</li>
+<li><p>Enter the live docker: <code>docker exec -it conID bash</code></p>
+</li>
+</ul>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><pre><code>FROM python:3.7
+WORKDIR ./docker_demo
+ADD . .
+RUN pip install -r requirements.txt
+CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
+</code></pre>]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Segment Anything</title>
     <url>/2023/07/14/deep_learning/Segment%20Anything/</url>
     <content><![CDATA[<ul>

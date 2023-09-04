@@ -1,3 +1,4 @@
+https://ustcnewly.github.io/2023/09/04/software/Docker/
 https://ustcnewly.github.io/2023/07/14/deep_learning/Segment Anything/
 https://ustcnewly.github.io/2023/07/14/deep_learning/Drag Image Editing/
 https://ustcnewly.github.io/2023/06/20/deep_learning/Disentangled Generative Model/
@@ -7,4 +8,3 @@ https://ustcnewly.github.io/2022/10/15/deep_learning/Smoothness Loss/
 https://ustcnewly.github.io/2022/09/23/deep_learning/Image Matting/
 https://ustcnewly.github.io/2022/09/20/deep_learning/Consistent Video Editing/
 https://ustcnewly.github.io/2022/09/19/deep_learning/Artistic and Photorealistic Style Transfer/
-https://ustcnewly.github.io/2022/09/19/deep_learning/Dynamic Kernel/
