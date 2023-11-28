@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Diffusion Model</title>
+    <url>/2023/11/27/deep_learning/Diffusion%20Model%20Acceleration/</url>
+    <content><![CDATA[<p>Acceleration: DDIM <a href="https://arxiv.org/pdf/2010.02502.pdf" target="_blank" rel="noopener">[1]</a>, PLMS <a href="https://arxiv.org/pdf/2202.09778.pdf" target="_blank" rel="noopener">[2]</a></p>
+<p>Distillation:</p>
+<p><a href="https://arxiv.org/pdf/2202.00512.pdf" target="_blank" rel="noopener">[4]</a>, <a href="https://arxiv.org/pdf/2101.02388.pdf" target="_blank" rel="noopener">[5]</a><br><a href="https://arxiv.org/pdf/2210.03142.pdf" target="_blank" rel="noopener">[6]</a>, <a href="https://arxiv.org/pdf/2211.12039.pdf" target="_blank" rel="noopener">[7]</a>, <a href="https://arxiv.org/pdf/2306.00980.pdf" target="_blank" rel="noopener">[3]</a> </p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Song, Jiaming, Chenlin Meng, and Stefano Ermon. “Denoising diffusion implicit models.” arXiv preprint arXiv:2010.02502 (2020).</p>
+<p>[2] Liu, Luping, et al. “Pseudo numerical methods for diffusion models on manifolds.” ICLR, (2022).</p>
+<p>[3] Li, Yanyu, et al. “SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds.” NeurIPS(2023).</p>
+<p>[4] Salimans, Tim, and Jonathan Ho. “Progressive distillation for fast sampling of diffusion models.” ICLR, 2022. </p>
+<p>[5] Luhman, Eric, and Troy Luhman. “Knowledge distillation in iterative generative models for improved sampling speed.” arXiv preprint arXiv:2101.02388 (2021).</p>
+<p>[6] Meng, Chenlin, et al. “On distillation of guided diffusion models.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.</p>
+<p>[7] Sun, Wujie, et al. “Accelerating diffusion sampling with classifier-based feature distillation.” 2023 IEEE International Conference on Multimedia and Expo (ICME). IEEE, 2023.</p>
+<p>[8] </p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>generative model</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Diffusion Model for Sketches</title>
     <url>/2023/10/23/deep_learning/Diffusion%20Model%20for%20Sketches/</url>
     <content><![CDATA[<h2 id="text-to-sketch"><a href="#text-to-sketch" class="headerlink" title="text-to-sketch"></a>text-to-sketch</h2><ul>
@@ -400,6 +422,8 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 </ul>
 <p>MileStone: DDPM <a href="https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf" target="_blank" rel="noopener">[3]</a>, Stable diffusion <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf" target="_blank" rel="noopener">v1</a>, <a href="https://github.com/Stability-AI/stablediffusion" target="_blank" rel="noopener">v2</a></p>
 <p>Acceleration: DDIM <a href="https://arxiv.org/pdf/2010.02502.pdf" target="_blank" rel="noopener">[14]</a>, PLMS <a href="https://arxiv.org/pdf/2202.09778.pdf" target="_blank" rel="noopener">[16]</a></p>
+<p>High-resolution: <a href="https://arxiv.org/pdf/2310.15111.pdf" target="_blank" rel="noopener">[34]</a> progressive training</p>
+<p>Light-weight: <a href="https://arxiv.org/pdf/2306.00980.pdf" target="_blank" rel="noopener">[35]</a> </p>
 <p>Failure case analyses: <a href="https://arxiv.org/pdf/2306.02583.pdf" target="_blank" rel="noopener">[30]</a></p>
 <p>Surveys</p>
 <ul>
@@ -439,6 +463,8 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 <p>[31] Wu, Weijia, et al. “Diffumask: Synthesizing images with pixel-level annotations for semantic segmentation using diffusion models.” arXiv preprint arXiv:2303.11681 (2023).</p>
 <p>[32] Xie, Shaoan, et al. “Smartbrush: Text and shape guided object inpainting with diffusion model.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.</p>
 <p>[33] Ma, Jian, et al. “GlyphDraw: Learning to Draw Chinese Characters in Image Synthesis Models Coherently.” arXiv preprint arXiv:2303.17870 (2023).</p>
+<p>[34] Gu, Jiatao, et al. “Matryoshka Diffusion Models.” arXiv preprint arXiv:2310.15111 (2023).  </p>
+<p>[35] Li, Yanyu, et al. “SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds.” NeurIPS(2023).</p>
 ]]></content>
       <categories>
         <category>paper note</category>

@@ -281,6 +281,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot Classification/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Few-Shot Classification/" itemprop="url">Few-Shot Classification</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="One-shot-few-shot-learning"><a href="#One-shot-few-shot-learning" class="headerlink" title="One-shot/few-shot learning"></a>One-shot/few-shot learning</h2><p>The first one-shot learning paper dates back to <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=1597116" target="_blank" rel="noopener">2006</a>, but becomes more popular recently.</p>
+<h3 id="Concepts"><a href="#Concepts" class="headerlink" title="Concepts"></a>Concepts</h3><p><u>training/validation/test categories</u>: Training categories and test categories have no overlap</p>
+<p><u>support(sample)/query(batch) set</u>: In the testing stage, for each test category, we preserve some instances to form the support set and sample from the remaining instances to form the query set</p>
+<p><u>C-way K-shot</u>: The test set has C categories. For each test category, we preserve K instances as the support set</p>
+<p><u>episode</u>: Episode-based strategy used in the training stage to match the inference in the testing stage. First sample some categories and then sample the suppport/query set for each category</p>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
+<li><p>Metric based:</p>
+<ul>
+<li><p><a href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf" target="_blank" rel="noopener">Siamese network</a>: the earliest and simplest metric-learning based few-shot learning, standard verification problem.</p>
+</li>
+<li><p><a href="https://arxiv.org/abs/1606.04080" target="_blank" rel="noopener">Matching network</a>: map a support set to a classification function p(y|x,S) (KNN or LSTM). For the LSTM version, there is another similar <a href="https://arxiv.org/pdf/1605.06065.pdf" target="_blank" rel="noopener">work</a> using memory module. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">Relation network</a>: calculate the relation score for 1-shot, calculate the average of relation scores for k-shot</p>
+</li>
+<li><p><a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">Prototypical network</a>: compare with the prototype representations of each class. Each class can have more than one prototype representation. There are some other prototype-based methods <a href="https://link.springer.com/chapter/10.1007/978-3-642-33709-3_35" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Linchao_Zhu_Compound_Memory_Networks_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Optimization (gradient) based:</p>
+<ul>
+<li><p>[MAML] (<a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1703.03400.pdf</a>)</p>
+</li>
+<li><p><a href="(https://arxiv.org/abs/1803.02999">REPTILE</a>) (an approximation of MAML)</p>
+</li>
+<li><p><a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">Meta-Learner LSTM</a></p>
+</li>
+</ul>
+</li>
+<li><p>Model based:</p>
+<ul>
+<li><p><a href="http://papers.nips.cc/paper/6068-learning-feed-forward-one-shot-learners.pdf" target="_blank" rel="noopener">[learnet]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gidaris_Dynamic_Few-Shot_Visual_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qiao_Few-Shot_Image_Recognition_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://link.springer.com/chapter/10.1007/978-3-030-01267-0_2" target="_blank" rel="noopener">[5]</a>: predict the parameters of classifiers for novel categories. </p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cai_Memory_Matching_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>: predict the parameters of CNN feature extractor by virtue of memory module.</p>
+</li>
+</ul>
+</li>
+<li><p>Generation based: generate more features for novel categories <a href="https://www.cse.ust.hk/~yqsong/papers/2018-NIPS-MetaGAN-long.pdf" target="_blank" rel="noopener">[1]</a>, <a href="https://arxiv.org/pdf/1806.04734.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Pretraind and fine-tune: use the whole meta-training set to learn feature extractor <a href="https://arxiv.org/pdf/2003.11539.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1909.02729.pdf" target="_blank" rel="noopener">[2]</a> pretrain+MatchingNet <a href="https://arxiv.org/pdf/2003.04390.pdf" target="_blank" rel="noopener">[3]</a></p>
+</li>
+</ul>
+<h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ol>
+<li><p><a href="https://arxiv.org/pdf/1904.05046.pdf" target="_blank" rel="noopener">Generalizing from a Few Examples: A Survey on Few-Shot Learning</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/2007.15484.pdf" target="_blank" rel="noopener">Learning from Few Samples: A Survey</a></p>
+</li>
+</ol>
+<h3 id="Datsets"><a href="#Datsets" class="headerlink" title="Datsets"></a>Datsets</h3><ol>
+<li><a href="https://github.com/google-research/meta-dataset" target="_blank" rel="noopener">Meta-Dataset</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Face Verification and Recognition/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1887,154 +2080,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Differential Programming/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Differential Programming/" itemprop="url">Differential Programming</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>The first work of differential programming is using network to approximate sparse coding. <a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9252E34D6078997E19677B5397A89074?doi=10.1.1.184.7256&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a></p>
-<p>Introduction tutorials: <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/intro_deep_unrolling.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://bcmi.sjtu.edu.cn/home/niuli/download/intro_differential_programming.pdf" target="_blank" rel="noopener">[2]</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2084,7 +2134,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">230</span>
+                  <span class="site-state-item-count">231</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
