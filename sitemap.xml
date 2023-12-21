@@ -4,7 +4,16 @@
   <url>
     <loc>https://ustcnewly.github.io/2023/11/27/deep_learning/Diffusion%20Model%20Acceleration/</loc>
     
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Aesthetic%20Evaluation%20and%20Cropping/</loc>
+    
+    <lastmod>2023-12-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -371,178 +380,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/MATLAB/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/Ubuntu%20MATLAB/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/MarkdownPad/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/LaTeX/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/Medical%20Image%20Format/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/PyTorch/PyTorch%20Learning%20Note/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/MATLAB/MATLAB%20draw%20plot/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python%20Draw%20Text%20on%20Image/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow%20GPU%20Usage/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow%20Input%20Data%20with%20Queue/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow%20Learning%20Note/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Fastest%20Way%20to%20Read%20Text,%20Image,%20and%20Video%20in%20Python/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Anaconda/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python%20bottle/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python%20Send%20Email/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/wxPython/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/Slim%20Learning%20Note/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/IDE/Install%20JDK%20and%20Eclipse/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/IDE/Remote%20Debugging%20for%20Eclipse+PyDev/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install%20VirtualBox%20Guest%20Addition/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -560,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg%20for%20Ubuntu14.04/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/version_control/Git/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -587,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/version_control/Git/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg%20for%20Ubuntu14.04/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -596,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install%20VirtualBox%20Guest%20Addition/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/IDE/Remote%20Debugging%20for%20Eclipse+PyDev/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -605,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Classification/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/IDE/Install%20JDK%20and%20Eclipse/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -614,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/Ubuntu%20MATLAB/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -623,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Localization/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/Medical%20Image%20Format/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -632,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Word%20Vector/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/MATLAB/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -641,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zero-Shot%20Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/MarkdownPad/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -650,7 +488,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zero-Shot%20Learning/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/LaTeX/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -659,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Class%20Imbalance/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow%20Learning%20Note/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -668,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Clothes%20Dataset/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow%20Input%20Data%20with%20Queue/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -677,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zero-Shot%20Semantic%20Segmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow%20GPU%20Usage/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -686,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zoom%20in/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/Slim%20Learning%20Note/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -695,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Data%20Augmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/PyTorch/PyTorch%20Learning%20Note/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -704,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Distillation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/wxPython/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -713,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Finding%20Datasets/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -722,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/GAN%20Evaluation%20Metric/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python%20Send%20Email/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -731,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Euler%20Angle%20(yaw,pitch,roll)/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python%20Draw%20Text%20on%20Image/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -740,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Endovascular%20Surgery/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Python%20bottle/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -749,7 +587,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Image%20Matching/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Fastest%20Way%20to%20Read%20Text,%20Image,%20and%20Video%20in%20Python/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -758,7 +596,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Knowledge%20Graph/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Anaconda/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -767,511 +605,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Image%20and%20Video%20Proposals/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Graph%20Neural%20Network/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Latent%20Variable%20Regularization/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Implicit%20Modelling/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Incremental%20SVM/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Label%20Vector%20Interpolation/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Lifelong%20Learning/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Meta%20Learning/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Normalization/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Mutual%20Information/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Outlier%20Detection/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Soft%20Loss/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Optical%20Flow/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Training%20Categories%20and%20Test%20Categories/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Synthetic%20Text%20Images/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Unsupervised%20Attribute%20Learning/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vote%20Aggregation/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Subjective%20Annotation/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/GitHub+Hexo%20for%20Personal%20Blog/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/Remote%20Folder%20Mount/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/Ubuntu%20SSH/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/Ubuntu%20VNC/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/Ubuntu%20VPN/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/BIOS/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Install%20Ubuntu%20under%20Windows/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/Remote%20Desktop%20Connection/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Windows%20Command%20Lines/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/network/kinit/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Bibliography%20Collection/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Conference%20Rebuttal/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Determine%20Baselines/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Dictionary%20for%20Paper%20Writing/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Entering%20a%20New%20Research%20Field/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Fair%20Comparison/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Ensure%20the%20Novelty%20of%20Your%20Idea/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Make%20Presentation/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/How%20to%20Come%20up%20with%20Ideas/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/How%20to%20Conduct%20Experiments/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/My%20Clumsy%20Research%20Experience/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Hyper%20Parameter%20Tuning/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Paper%20Writing/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Simple%20Bayesian%20Optimization/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Paper%20Proofread/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/others/Reasons%20to%20Reject%20a%20Paper/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/hardware/camera/Illumination%20Model/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/hardware/camera/Camera%20Survey/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU%20Cuda%20and%20CuDNN/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Log-in%20Failure/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Language/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Environment%20Variable/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Mount/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Crontab/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Linux%20Command%20Lines/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Shell%20Scripts/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Software%20Management/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Android/Android/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Caffe/Caffe/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/MATLAB/MATLAB%20draw%20plot/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1307,43 +641,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_lexical_cast/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_array/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_file_system/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_regex/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_installation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Caffe/Caffe/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1361,7 +659,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Camouflaged%20Object%20Detection%20and%20Segmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_regex/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1370,7 +668,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Capsule%20Network/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_lexical_cast/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1379,7 +677,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Deep%20EM/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_installation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1388,7 +686,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Conditional%20GAN/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_file_system/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1397,7 +695,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Cut%20and%20Paste/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_array/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1406,7 +704,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Deep%20Feature%20Invariance/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/programming_language/Android/Android/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1415,7 +713,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Differential%20Programming/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Simple%20Bayesian%20Optimization/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1424,7 +722,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Disentangle%20Datasets/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Reasons%20to%20Reject%20a%20Paper/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1433,7 +731,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Adaptation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Paper%20Writing/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1442,7 +740,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Deep%20Learning%20Platform/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Paper%20Proofread/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1451,7 +749,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Adaptive%20Segmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/My%20Clumsy%20Research%20Experience/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1460,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Generalization/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Make%20Presentation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1469,7 +767,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Translation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Hyper%20Parameter%20Tuning/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1478,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Edge%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/How%20to%20Conduct%20Experiments/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1487,7 +785,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Energy%20Efficient%20Deep%20Learning/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/How%20to%20Come%20up%20with%20Ideas/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1496,7 +794,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Face%20Verification%20and%20Recognition/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Fair%20Comparison/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1505,7 +803,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Classification/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Entering%20a%20New%20Research%20Field/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1514,7 +812,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Feature%20Generation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Ensure%20the%20Novelty%20of%20Your%20Idea/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1523,7 +821,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Dictionary%20for%20Paper%20Writing/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1532,7 +830,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Large%20Dataset%20to%20Small%20Dataset/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Determine%20Baselines/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1541,7 +839,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Fine-grained%20Classification/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Conference%20Rebuttal/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1550,7 +848,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/From%20Weak%20to%20Strong%20Supervision/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/others/Bibliography%20Collection/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1559,7 +857,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/From%20Anchor%20to%20ROI/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Software%20Management/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1568,7 +866,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Forecast%20Future%20based%20on%20One%20Still%20Image/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Shell%20Scripts/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1577,7 +875,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Geometry%20Transformation%20for%20Image%20Composition/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Mount/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1586,7 +884,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Gaze%20Estimation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Log-in%20Failure/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1595,7 +893,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/GNN%20for%20Segmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Language/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1604,7 +902,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Geometry-aware%20Deep%20Feature/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Environment%20Variable/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1613,7 +911,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Gradient%20Regularization/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Ubuntu%20Crontab/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1622,7 +920,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Composition/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Ubuntu/Linux%20Command%20Lines/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1631,7 +929,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Harmonization/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Windows%20Command%20Lines/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1640,7 +938,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Blending/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/Install%20Ubuntu%20under%20Windows/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1649,7 +947,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Action%20Recognition%20with%20Unlabeled%20Videos/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/operation_system/BIOS/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1658,7 +956,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Loss/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/Ubuntu%20VPN/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1667,7 +965,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Manipulation%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/Ubuntu%20VNC/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1676,7 +974,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Instance%20Image%20to%20Image%20Translation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/Ubuntu%20SSH/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1685,7 +983,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Interpretable%20Machine%20Learning/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/Remote%20Folder%20Mount/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1694,7 +992,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/MLP/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/Remote%20Desktop%20Connection/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1703,7 +1001,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Jigsaw%20Puzzle/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/kinit/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1712,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image-text%20Retrieval/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/network/GitHub+Hexo%20for%20Personal%20Blog/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1721,7 +1019,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Mask-aided%20Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vote%20Aggregation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1730,7 +1028,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Layout%20Generation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Unsupervised%20Attribute%20Learning/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1739,7 +1037,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modality%20Fusion/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Training%20Categories%20and%20Test%20Categories/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1748,7 +1046,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Non-local%20Network/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Synthetic%20Text%20Images/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1757,7 +1055,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modal%20Problem/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Subjective%20Annotation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1766,7 +1064,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Object%20Detection%20Loss/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Soft%20Loss/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1775,7 +1073,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Outlier%20Detection/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1784,7 +1082,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Privileged%20Information/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Optical%20Flow/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1793,7 +1091,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Repeated%20Patterns/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Normalization/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1802,7 +1100,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Receptive%20Field/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Mutual%20Information/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1811,7 +1109,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/ROI%20feature/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Meta%20Learning/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1820,7 +1118,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Scale%20Variation%20for%20Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Lifelong%20Learning/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1829,7 +1127,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Statistics%20in%20Deep%20Learning/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Latent%20Variable%20Regularization/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1838,7 +1136,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Scene%20Text%20Recognition/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Label%20Vector%20Interpolation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1847,7 +1145,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Spatial%20Transformation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Knowledge%20Graph/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1856,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Structural%20Reparameterization/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Incremental%20SVM/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1865,7 +1163,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Semi-supervised%20Learning/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Implicit%20Modelling/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1874,7 +1172,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Upsampling%20Layer/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Image%20Matching/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1883,7 +1181,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Video%20Harmonization/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Image%20and%20Video%20Proposals/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1892,7 +1190,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/VAE/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Graph%20Neural%20Network/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1901,7 +1199,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Texture%20Bias/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/GAN%20Evaluation%20Metric/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1910,7 +1208,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Video%20Object%20Segmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Finding%20Datasets/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1919,7 +1217,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Tricky%20Back%20Propagation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Euler%20Angle%20(yaw,pitch,roll)/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1928,7 +1226,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Variants%20of%20Convolution%20in%20Deep%20Learning/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Endovascular%20Surgery/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1937,7 +1235,7 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Video%20Instance%20Segmentation/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Distillation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1946,7 +1244,133 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Visual%20Dialogue/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Data%20Augmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Clothes%20Dataset/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Class%20Imbalance/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU%20Cuda%20and%20CuDNN/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/hardware/camera/Illumination%20Model/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/hardware/camera/Camera%20Survey/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zoom%20in/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zero-Shot%20Semantic%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zero-Shot%20Object%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Zero-Shot%20Learning/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Word%20Vector/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Object%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Localization/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weakly-supervised%20Classification/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weak-shot%20Object%20Detection/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -1982,7 +1406,655 @@
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Weak-shot%20Object%20Detection/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Visual%20Dialogue/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Video%20Object%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Video%20Instance%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Video%20Harmonization/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Variants%20of%20Convolution%20in%20Deep%20Learning/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/VAE/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Upsampling%20Layer/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Tricky%20Back%20Propagation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Texture%20Bias/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Structural%20Reparameterization/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Statistics%20in%20Deep%20Learning/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Spatial%20Transformation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Semi-supervised%20Learning/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Scene%20Text%20Recognition/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Scale%20Variation%20for%20Object%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/ROI%20feature/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Repeated%20Patterns/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Receptive%20Field/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Privileged%20Information/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Object%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Object%20Detection%20Loss/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Non-local%20Network/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modality%20Fusion/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Multi-modal%20Problem/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/MLP/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Mask-aided%20Object%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Layout%20Generation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Jigsaw%20Puzzle/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Interpretable%20Machine%20Learning/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Instance%20Image%20to%20Image%20Translation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image-text%20Retrieval/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Manipulation%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Loss/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Harmonization/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Composition/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Blending/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Image%20Action%20Recognition%20with%20Unlabeled%20Videos/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Gradient%20Regularization/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/GNN%20for%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Geometry-aware%20Deep%20Feature/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Geometry%20Transformation%20for%20Image%20Composition/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Gaze%20Estimation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/From%20Weak%20to%20Strong%20Supervision/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/From%20Anchor%20to%20ROI/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Forecast%20Future%20based%20on%20One%20Still%20Image/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Fine-grained%20Classification/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Object%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Large%20Dataset%20to%20Small%20Dataset/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Feature%20Generation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot%20Classification/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Face%20Verification%20and%20Recognition/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Energy%20Efficient%20Deep%20Learning/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Edge%20Detection/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Translation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Generalization/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Adaptive%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Domain%20Adaptation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Disentangle%20Datasets/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Differential%20Programming/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Deep%20Learning%20Platform/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Deep%20Feature%20Invariance/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Deep%20EM/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Cut%20and%20Paste/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Conditional%20GAN/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Capsule%20Network/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Camouflaged%20Object%20Detection%20and%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Boundary-guided%20Semantic%20Segmentation/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Bio-inspired%20Network/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Attention%20Mechanism/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Adversarial%20Attack/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/3D%20Photography/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/compiler/Makefile/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/compiler/CMake/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -2001,78 +2073,6 @@
   
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/color/white_balance/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/compiler/CMake/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/3D%20Photography/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Adversarial%20Attack/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Bio-inspired%20Network/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/compiler/Makefile/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Aesthetic%20Evaluation%20and%20Cropping/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Attention%20Mechanism/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Boundary-guided%20Semantic%20Segmentation/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
@@ -2128,7 +2128,7 @@
 
   <url>
     <loc>https://ustcnewly.github.io/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2136,763 +2136,763 @@
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CMake/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Eclipse/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/3D/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/adversarial-attack/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Makefile/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/object-detection/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/segmentation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/aesthetic-cropping/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/attention/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/boundary/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/semantic-segmentation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/network-structure/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/EM/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GAN/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/domain-translation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/disentangle/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/style-transfer/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/domain-adaptation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/representation-learning/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/edge-detection/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/face-verification/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/face-recognition/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/generative-model/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/few-shot/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-translation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/fine-grained/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/weakly-supervised/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/gaze-estimation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GNN/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VAE/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/composition/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/harmonization/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/blending/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/action-recognition/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-generation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-manipulation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/inpainting/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/matting/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/webly-supervised/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/cross-modal-retrieval/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/memory/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/privileged-information/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/ROI/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/self-supervised/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/scene-text/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/semi-supervised/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/video-object-segmentation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/instance-segmentation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VQA/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/watermark/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/visual-sentiment/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/object-tracking/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/word-vector/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/zero-shot/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/distillation/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/causality/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/surgery/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/knowledge-graph/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/proposal/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/SVM/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/lifelong-learning/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/meta-learning/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/MI/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/outlier-detection/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/optical-flow/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/attribute/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GitHub/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Hexo/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/mount/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Ubuntu/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/SSH/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VNC/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/BIOS/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Windows/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/paper/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/shadow/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/MATLAB/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/hyper-parameter/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/MarkdownPad/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/LaTeX/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/medical/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/camera/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GPU/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CUDA/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CuDNN/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/crontab/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Shell/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Adroid/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Caffe/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/PyTorch/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/HTML/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CSS/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Python/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/TensorFlow/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Anaconda/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/wxPython/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/C/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Java/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/JDK/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/C/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VirtualBox/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GStreamer/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/FFmpeg/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/OpenCV/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Git/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/rendering/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/diffusion-model/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-editing/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/docker/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -2901,126 +2901,126 @@
   
   <url>
     <loc>https://ustcnewly.github.io/categories/compiler/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/paper-note/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/network/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/OS/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/hardware/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/hardware/camera/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/hardware/GPU/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/HTML/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/Android/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/MATLAB/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/Python/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/C/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/cross-language/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/IDE/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/library/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/version-control/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

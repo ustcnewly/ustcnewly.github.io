@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ustcnewly.github.io/2023/11/27/deep_learning/Diffusion%20Model%20Acceleration/</loc>
-    <lastmod>2023-11-28</lastmod>
+    <lastmod>2023-12-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Aesthetic%20Evaluation%20and%20Cropping/</loc>
+    <lastmod>2023-12-21</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/09/09/deep_learning/Diffusion%20Model/</loc>
@@ -910,10 +914,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/compiler/Makefile/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Aesthetic%20Evaluation%20and%20Cropping/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
