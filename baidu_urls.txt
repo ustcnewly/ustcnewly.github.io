@@ -1,10 +1,10 @@
-https://ustcnewly.github.io/2023/11/27/deep_learning/Diffusion Model Acceleration/
-https://ustcnewly.github.io/2023/10/23/deep_learning/Diffusion Model for Sketches/
-https://ustcnewly.github.io/2023/09/30/deep_learning/Diffusion Model for Videos/
+https://ustcnewly.github.io/2023/11/27/image_video_synthesis/Diffusion Model Acceleration/
+https://ustcnewly.github.io/2023/10/23/image_video_synthesis/Diffusion Model for Sketches/
+https://ustcnewly.github.io/2023/09/30/image_video_synthesis/Diffusion Model for Videos/
 https://ustcnewly.github.io/2023/09/04/software/Deep Learning Model Deployment/
 https://ustcnewly.github.io/2023/09/04/software/Docker/
-https://ustcnewly.github.io/2023/07/14/deep_learning/Segment Anything/
-https://ustcnewly.github.io/2023/07/14/deep_learning/Drag Image Editing/
-https://ustcnewly.github.io/2023/06/20/deep_learning/Disentangled Generative Model/
+https://ustcnewly.github.io/2023/07/14/image_video_synthesis/Segment Anything/
+https://ustcnewly.github.io/2023/07/14/image_video_synthesis/Drag Image Editing/
+https://ustcnewly.github.io/2023/06/20/image_video_synthesis/Disentangled Generative Model/
 https://ustcnewly.github.io/2022/11/14/software/Blender/
 https://ustcnewly.github.io/2022/10/17/deep_learning/Prompt for Vision/

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Diffusion Model Acceleration</title>
-    <url>/2023/11/27/deep_learning/Diffusion%20Model%20Acceleration/</url>
+    <url>/2023/11/27/image_video_synthesis/Diffusion%20Model%20Acceleration/</url>
     <content><![CDATA[<p>Simplify model architecture: <a href="https://arxiv.org/pdf/2306.00980.pdf" target="_blank" rel="noopener">[3]</a></p>
 <p>Reduce sampling times: DDIM <a href="https://arxiv.org/pdf/2010.02502.pdf" target="_blank" rel="noopener">[1]</a>, PLMS <a href="https://arxiv.org/pdf/2202.09778.pdf" target="_blank" rel="noopener">[2]</a></p>
 <p>Step distillation: <a href="https://arxiv.org/pdf/2306.00980.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/2202.00512.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2101.02388.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2210.03142.pdf" target="_blank" rel="noopener">[6]</a></p>
@@ -24,7 +24,7 @@
   </entry>
   <entry>
     <title>Diffusion Model for Sketches</title>
-    <url>/2023/10/23/deep_learning/Diffusion%20Model%20for%20Sketches/</url>
+    <url>/2023/10/23/image_video_synthesis/Diffusion%20Model%20for%20Sketches/</url>
     <content><![CDATA[<h2 id="text-to-sketch"><a href="#text-to-sketch" class="headerlink" title="text-to-sketch"></a>text-to-sketch</h2><ul>
 <li><a href="https://arxiv.org/pdf/2306.14685.pdf" target="_blank" rel="noopener">[1]</a>[SVG]: a) use text-to-image model to generate an image. Align image and sketch through CLIP. b) Align text and sketch through diffusion model.  </li>
 <li><a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/21f76686538a5f06dc431efea5f475f5-Paper-Conference.pdf" target="_blank" rel="noopener">[2]</a>[SVG]: a) Align text and sketch through CLIP</li>
@@ -50,7 +50,7 @@
   </entry>
   <entry>
     <title>Diffusion Model for Videos</title>
-    <url>/2023/09/30/deep_learning/Diffusion%20Model%20for%20Videos/</url>
+    <url>/2023/09/30/image_video_synthesis/Diffusion%20Model%20for%20Videos/</url>
     <content><![CDATA[<p><a href="https://arxiv.org/pdf/2308.09592v1.pdf" target="_blank" rel="noopener">[1]</a> The edited previous frame serves as condition for editing the next frame. </p>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Chai, Wenhao, et al. “StableVideo: Text-driven Consistency-aware Diffusion Video Editing.” arXiv preprint arXiv:2308.09592 (2023).</p>
 ]]></content>
@@ -114,7 +114,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
   </entry>
   <entry>
     <title>Segment Anything</title>
-    <url>/2023/07/14/deep_learning/Segment%20Anything/</url>
+    <url>/2023/07/14/image_video_synthesis/Segment%20Anything/</url>
     <content><![CDATA[<ul>
 <li><p>SAM <a href="https://arxiv.org/pdf/2304.02643.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
@@ -139,7 +139,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
   </entry>
   <entry>
     <title>Drag Image Editing</title>
-    <url>/2023/07/14/deep_learning/Drag%20Image%20Editing/</url>
+    <url>/2023/07/14/image_video_synthesis/Drag%20Image%20Editing/</url>
     <content><![CDATA[<ul>
 <li>DragGAN <a href="https://vcai.mpi-inf.mpg.de/projects/DragGAN/data/paper.pdf" target="_blank" rel="noopener">[1]</a>: motion supervision and point tracking</li>
 <li>DragDiffusion <a href="https://arxiv.org/pdf/2306.14435.pdf" target="_blank" rel="noopener">[2]</a>: motion supervision and point tracking, similar to [1]</li>
@@ -160,7 +160,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
   </entry>
   <entry>
     <title>Disentangled Generative Model</title>
-    <url>/2023/06/20/deep_learning/Disentangled%20Generative%20Model/</url>
+    <url>/2023/06/20/image_video_synthesis/Disentangled%20Generative%20Model/</url>
     <content><![CDATA[<p>A survey on disentangled representation learning <a href="https://arxiv.org/pdf/2211.11695.pdf" target="_blank" rel="noopener">[1]</a></p>
 <h3 id="Disentangled-Diffusion-Model"><a href="#Disentangled-Diffusion-Model" class="headerlink" title="Disentangled Diffusion Model"></a>Disentangled Diffusion Model</h3><ul>
 <li><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_Uncovering_the_Disentanglement_Capability_in_Text-to-Image_Diffusion_Models_CVPR_2023_paper.pdf" target="_blank" rel="noopener">[2]</a>: make adjustment based on text embedding, learn optimal combination coefficients for different time steps. </li>
@@ -296,7 +296,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
   </entry>
   <entry>
     <title>Consistent Video Editing</title>
-    <url>/2022/09/20/deep_learning/Consistent%20Video%20Editing/</url>
+    <url>/2022/09/20/image_video_synthesis/Consistent%20Video%20Editing/</url>
     <content><![CDATA[<ul>
 <li>Template based: <a href="https://arxiv.org/pdf/2109.11418.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ye_Deformable_Sprites_for_Unsupervised_Video_Decomposition_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
 </ul>
@@ -403,7 +403,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
   </entry>
   <entry>
     <title>Diffusion Model</title>
-    <url>/2022/09/09/deep_learning/Diffusion%20Model/</url>
+    <url>/2022/09/09/image_video_synthesis/Diffusion%20Model/</url>
     <content><![CDATA[<ul>
 <li><p>class-conditioned image generation:  <a href="https://arxiv.org/pdf/2105.05233.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
@@ -475,7 +475,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
   </entry>
   <entry>
     <title>Exemplar-guided Image Translation</title>
-    <url>/2022/09/09/deep_learning/Exemplar-guided%20Image%20Translation/</url>
+    <url>/2022/09/09/image_video_synthesis/Exemplar-guided%20Image%20Translation/</url>
     <content><![CDATA[<p>Task: Each exemplar represents one domain. Transfer the style of exemplar image to the input image. </p>
 <p><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhang_Cross-Domain_Correspondence_Learning_for_Exemplar-Based_Image_Translation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
 <ul>
@@ -2475,7 +2475,12 @@ spyder
 <li>different epochs</li>
 <li>different hyperparameters</li>
 </ul>
-<p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
+<h4 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h4><ul>
+<li><p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
+</li>
+<li><p><a href="https://github.com/google-research/tuning_playbook/tree/main" target="_blank" rel="noopener">Tuning playbook</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>paper note</category>
@@ -4313,7 +4318,7 @@ spyder
   </entry>
   <entry>
     <title>Zero-Shot Semantic Segmentation</title>
-    <url>/2022/06/16/deep_learning/Zero-Shot%20Semantic%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Zero-Shot%20Semantic%20Segmentation/</url>
     <content><![CDATA[<ul>
 <li><p>standard semantic segmentation: <a href="https://github.com/RohanDoshi2018/ZeroshotSemanticSegmentation/blob/master/rohan_doshi_senior_thesis.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xian_Semantic_Projection_Network_for_Zero-_and_Few-Label_Semantic_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[2]</a> <a href="https://arxiv.org/pdf/1906.00817.pdf" target="_blank" rel="noopener">[3]</a></p>
 </li>
@@ -4335,7 +4340,7 @@ spyder
   </entry>
   <entry>
     <title>Zero-Shot Object Detection</title>
-    <url>/2022/06/16/deep_learning/Zero-Shot%20Object%20Detection/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Zero-Shot%20Object%20Detection/</url>
     <content><![CDATA[<ul>
 <li><p>ZSL based on bounding box features</p>
 <ul>
@@ -4378,7 +4383,7 @@ spyder
   </entry>
   <entry>
     <title>Zero-Shot Learning</title>
-    <url>/2022/06/16/deep_learning/Zero-Shot%20Learning/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Zero-Shot%20Learning/</url>
     <content><![CDATA[<p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
 <p>1) semantic relatedness: X-&gt;Y (semantic similarity; write classifier)</p>
 <p>2) semantic embedding: X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
@@ -4464,7 +4469,7 @@ spyder
   </entry>
   <entry>
     <title>Weakly-supervised Segmentation</title>
-    <url>/2022/06/16/deep_learning/Weakly-supervised%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Weakly-supervised%20Segmentation/</url>
     <content><![CDATA[<ul>
 <li><p>Using web data for semantic segmentation:</p>
 <ul>
@@ -4511,7 +4516,7 @@ spyder
   </entry>
   <entry>
     <title>Weakly-supervised Object Detection</title>
-    <url>/2022/06/16/deep_learning/Weakly-supervised%20Object%20Detection/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Weakly-supervised%20Object%20Detection/</url>
     <content><![CDATA[<ol>
 <li><p>webly supervised object detection <a href="https://arxiv.org/pdf/1707.08721.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
@@ -4531,7 +4536,7 @@ spyder
   </entry>
   <entry>
     <title>Weakly-supervised Localization</title>
-    <url>/2022/06/16/deep_learning/Weakly-supervised%20Localization/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Weakly-supervised%20Localization/</url>
     <content><![CDATA[<p>Closely related to <a href="https://ustcnewly.github.io/2019/09/26/deep_learning/Weakly-supervised%20Segmentation/">weakly-supervised segmentation</a>.</p>
 <ul>
 <li>attention based: <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Adversarial_Complementary_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaolin_Zhang_Self-produced_Guidance_for_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
@@ -4548,7 +4553,7 @@ spyder
   </entry>
   <entry>
     <title>Weakly-supervised Classification</title>
-    <url>/2022/06/16/deep_learning/Weakly-supervised%20Classification/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Weakly-supervised%20Classification/</url>
     <content><![CDATA[<p><strong>Two problems:</strong></p>
 <ul>
 <li><u>Label noise</u>: label flip noise (belong to other training categories) and outlier noise (does not belong to any training category).</li>
@@ -4629,7 +4634,7 @@ spyder
   </entry>
   <entry>
     <title>Weak-shot Object Detection</title>
-    <url>/2022/06/16/deep_learning/Weak-shot%20Object%20Detection/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Weak-shot%20Object%20Detection/</url>
     <content><![CDATA[<p>Weak-shot object detection is also called cross-supervised or mixed-supervised object detection. Specifically, all categories are splitted into base categories and novel categories. Base categories have box-level annotation while novel categories only have image-level annotations. </p>
 <ul>
 <li><p>Transfer common objectness: <a href="https://arxiv.org/pdf/2007.07986.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1802.09778" target="_blank" rel="noopener">[3]</a></p>
@@ -4650,7 +4655,7 @@ spyder
   </entry>
   <entry>
     <title>Watermark Removal</title>
-    <url>/2022/06/16/deep_learning/Watermark%20Removal/</url>
+    <url>/2022/06/16/image_video_synthesis/Watermark%20Removal/</url>
     <content><![CDATA[<ul>
 <li><p>watermark removal: ICA <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=4014106" target="_blank" rel="noopener">[4]</a>, inpainting <a href="https://scholars.lib.ntu.edu.tw/bitstream/123456789/123926/1/12.pdf" target="_blank" rel="noopener">[5]</a></p>
 </li>
@@ -4749,7 +4754,7 @@ spyder
   </entry>
   <entry>
     <title>Video Object Segmentation</title>
-    <url>/2022/06/16/deep_learning/Video%20Object%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Video%20Object%20Segmentation/</url>
     <content><![CDATA[<p>Given the segmentation mask of the first frame of a video clip, predict the segmentation masks in the subsequent frames. </p>
 <ol>
 <li><p>Davis challenge <a href="https://davischallenge.org/" target="_blank" rel="noopener">https://davischallenge.org/</a> held since 2017, related papers <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/1704.00675.pdf" target="_blank" rel="noopener">[2]</a></p>
@@ -4775,7 +4780,7 @@ spyder
   </entry>
   <entry>
     <title>Video Instance Segmentation</title>
-    <url>/2022/06/16/deep_learning/Video%20Instance%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Video%20Instance%20Segmentation/</url>
     <content><![CDATA[<ul>
 <li><p>Track-by-Detect: MaskTrack R-CNN <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Yang_Video_Instance_Segmentation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
@@ -4797,7 +4802,7 @@ spyder
   </entry>
   <entry>
     <title>Video Harmonization</title>
-    <url>/2022/06/16/deep_learning/Video%20Harmonization/</url>
+    <url>/2022/06/16/image_video_synthesis/Video%20Harmonization/</url>
     <content><![CDATA[<p>First deep learning approach for video harmonization <a href="https://arxiv.org/pdf/1809.01372.pdf" target="_blank" rel="noopener">[1]</a></p>
 <p>[1] Haozhi Huang, Senzhe Xu, Junxiong Cai, Wei Liu, Shimin Hu, “Temporally Coherent Video Harmonization Using<br>Adversarial Networks”, arxiv, 2018.</p>
 ]]></content>
@@ -4837,7 +4842,7 @@ spyder
   </entry>
   <entry>
     <title>VAE</title>
-    <url>/2022/06/16/deep_learning/VAE/</url>
+    <url>/2022/06/16/image_video_synthesis/VAE/</url>
     <content><![CDATA[<h2 id="Advanced-VAE"><a href="#Advanced-VAE" class="headerlink" title="Advanced VAE"></a>Advanced VAE</h2><ol>
 <li><p>VQVAE <a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">[1]</a>,VQVAE2 <a href="https://proceedings.neurips.cc/paper/2019/file/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Paper.pdf" target="_blank" rel="noopener">[2]</a>. Accelerate auto-regression: <a href="https://arxiv.org/pdf/2111.12701.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://arxiv.org/pdf/2202.04200.pdf" target="_blank" rel="noopener">[5]</a></p>
 </li>
@@ -4973,7 +4978,7 @@ spyder
   </entry>
   <entry>
     <title>StyleGAN</title>
-    <url>/2022/06/16/deep_learning/StyleGAN/</url>
+    <url>/2022/06/16/image_video_synthesis/StyleGAN/</url>
     <content><![CDATA[<ul>
 <li>StyleGAN of all trades <a href="https://arxiv.org/pdf/2111.01619.pdf" target="_blank" rel="noopener">[1]</a></li>
 <li>StyleGANv1<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Karras_A_Style-Based_Generator_Architecture_for_Generative_Adversarial_Networks_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[5]</a></li>
@@ -5136,7 +5141,7 @@ spyder
   </entry>
   <entry>
     <title>Scene Text Recognition</title>
-    <url>/2022/06/16/deep_learning/Scene%20Text%20Recognition/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Scene%20Text%20Recognition/</url>
     <content><![CDATA[<p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
 <h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
 <p><strong>Paper list (in chronological order):</strong></p>
@@ -5263,7 +5268,7 @@ spyder
   </entry>
   <entry>
     <title>Scale Variation for Object Detection</title>
-    <url>/2022/06/16/deep_learning/Scale%20Variation%20for%20Object%20Detection/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Scale%20Variation%20for%20Object%20Detection/</url>
     <content><![CDATA[<p>This problem is well discussed in <a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a>. Different schemes for addressing multiple scales and sizes: (a) multi-scale input images (b) multi-scale feature maps (c) multi-scale anchor boxes on one feature map.</p>
 <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/HlFdOUN.jpg" width="100%"></p>
 <ol>
@@ -5437,7 +5442,7 @@ spyder
   </entry>
   <entry>
     <title>Object Detection</title>
-    <url>/2022/06/16/deep_learning/Object%20Detection/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Object%20Detection/</url>
     <content><![CDATA[<p><strong>two-stage:</strong> use region proposal network (RPN) to generate proposals</p>
 <ol>
 <li><p><a href="http://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf" target="_blank" rel="noopener">faster-RCNN</a> </p>
@@ -5476,7 +5481,7 @@ spyder
   </entry>
   <entry>
     <title>Object Detection Loss</title>
-    <url>/2022/06/16/deep_learning/Object%20Detection%20Loss/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Object%20Detection%20Loss/</url>
     <content><![CDATA[<h3 id="Fast-RCNN"><a href="#Fast-RCNN" class="headerlink" title="Fast RCNN"></a>Fast RCNN</h3><script type="math/tex; mode=display">L(p,u,t^u,v)  L_{cls} (p,u) + \lambda[u\geq 1]L_{loc}(t^u,v),</script><p>   where $p$ is $(K+1)$-dim class probability vector with 0 being the background class, $u$ is the groundtruth class, $v$ is the ground-truth regression tuple, and $t^u$ is the predicted regression tuple for class $u$. $L_{cls}$ is a multi-class softmax loss and $L_{loc}$ is  a smooth L1 loss.</p>
 <h3 id="Faster-RCNN"><a href="#Faster-RCNN" class="headerlink" title="Faster RCNN"></a>Faster RCNN</h3><script type="math/tex; mode=display">L(p_i,t_i)=L_{cls} (p_i,p_i^*) + \lambda p_i^*L_{reg}(t_i,t_i^*),</script><p> where $L_{cls}$ is a two-class (e.g., obj or not obg) (resp., multi-class) softmax loss for RPN (resp., gen)  and $L_{reg}$ is a smooth L1 loss. So the loss of faster RCNN is basically the same as fast RCNN.</p>
 <p> fast and faster RCNN generate proposals, so they have the pos/neg labels for anchor boxes. However, the following SSD and YOLO do not generate proposals, so they need to match anchor boxes with ground-truth boxes.</p>
@@ -5687,7 +5692,7 @@ spyder
   </entry>
   <entry>
     <title>Instance Image-to-Image Translation</title>
-    <url>/2022/06/16/deep_learning/Instance%20Image%20to%20Image%20Translation/</url>
+    <url>/2022/06/16/image_video_synthesis/Instance%20Image%20to%20Image%20Translation/</url>
     <content><![CDATA[<p>Translate one or multiple instances in an image: <a href="https://arxiv.org/pdf/1812.10889.pdf&amp;xid=17259,15700023,15700186,15700191,15700256,15700259,15700262,15700264.pdf" target="_blank" rel="noopener">[1]</a></p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Mo, Sangwoo, Minsu Cho, and Jinwoo Shin. “Instagan: Instance-aware image-to-image translation.” arXiv preprint arXiv:1812.10889 (2018).</p>
 ]]></content>
@@ -5722,7 +5727,7 @@ spyder
   </entry>
   <entry>
     <title>Image to Image Translation</title>
-    <url>/2022/06/16/deep_learning/Image%20to%20Image%20Translation/</url>
+    <url>/2022/06/16/image_video_synthesis/Image%20to%20Image%20Translation/</url>
     <content><![CDATA[<h3 id="Optimization-based"><a href="#Optimization-based" class="headerlink" title="Optimization-based:"></a>Optimization-based:</h3><ul>
 <li><p>texture synthesis</p>
 <ul>
@@ -5915,7 +5920,7 @@ spyder
   </entry>
   <entry>
     <title>Image Inpainting</title>
-    <url>/2022/06/16/deep_learning/Image%20Inpainting/</url>
+    <url>/2022/06/16/image_video_synthesis/Image%20Inpainting/</url>
     <content><![CDATA[<h3 id="Partial-and-Gated-Convolution"><a href="#Partial-and-Gated-Convolution" class="headerlink" title="Partial and Gated Convolution"></a>Partial and Gated Convolution</h3><ul>
 <li><p>partial convolution <a href="https://arxiv.org/pdf/1804.07723.pdf" target="_blank" rel="noopener">[1]</a>: hard-gating single-channel unlearnable layer</p>
 <p>  <img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/B20xmYt.jpg" width="40%"></p>
@@ -5995,7 +6000,7 @@ spyder
   </entry>
   <entry>
     <title>Image Harmonization</title>
-    <url>/2022/06/16/deep_learning/Image%20Harmonization/</url>
+    <url>/2022/06/16/image_video_synthesis/Image%20Harmonization/</url>
     <content><![CDATA[<h2 id="Fundamental"><a href="#Fundamental" class="headerlink" title="Fundamental"></a>Fundamental</h2><p><u>Image Statistics</u>: illuminance, color temperature, saturation, local contrast, hue, texture, tone</p>
 <p><u>Color spaces</u>: RGB color space, CIELab color space (saturation/chrominance, hue, luminance).</p>
 <h2 id="Image-realism"><a href="#Image-realism" class="headerlink" title="Image realism"></a>Image realism</h2><ol>
@@ -6038,7 +6043,7 @@ spyder
   </entry>
   <entry>
     <title>Image Composition</title>
-    <url>/2022/06/16/deep_learning/Image%20Composition/</url>
+    <url>/2022/06/16/image_video_synthesis/Image%20Composition/</url>
     <content><![CDATA[<p>Simply speaking, image composition means cut-and-paste, that is, cutting one piece from one image and paste it on another image. The obtained composite image may be unrealistic due to the following reasons:</p>
 <ul>
 <li>The foreground is not well segmented, so there is an evident and unnatural boundary between foreground and background. </li>
@@ -6066,7 +6071,7 @@ spyder
   </entry>
   <entry>
     <title>Image Blending</title>
-    <url>/2022/06/16/deep_learning/Image%20Blending/</url>
+    <url>/2022/06/16/image_video_synthesis/Image%20Blending/</url>
     <content><![CDATA[<p>The target is to cut the foreground from one image and paste it on another image, followed by adjusting the foreground. The prevalent technique <a href="http://eric-yuan.me/poisson-blending/" target="_blank" rel="noopener">Poisson blending</a> <a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf" target="_blank" rel="noopener">[1]</a> <a href="http://people.csail.mit.edu/sparis/publi/2013/ijcv/Tao_IP_Error-tolerant_Image_Compositing.pdf" target="_blank" rel="noopener">[2]</a>, also called seamless cloning, is matching the gradient with boundary conditions via solving Poisson equation. In image harmonization, the original image containing the foreground may be unavailable.</p>
 ]]></content>
       <categories>
@@ -6099,7 +6104,7 @@ spyder
   </entry>
   <entry>
     <title>High-resolution Image Generation</title>
-    <url>/2022/06/16/deep_learning/High-resolution%20Image%20Generation/</url>
+    <url>/2022/06/16/image_video_synthesis/High-resolution%20Image%20Generation/</url>
     <content><![CDATA[<ul>
 <li><p>stacked generators from low-resolution to high-resolution: <a href="http://papers.nips.cc/paper/5773-deep-generative-image-models-using-a-laplacian-pyramid-of-adversarial-networks.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Stacked_Generative_Adversarial_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_StackGAN_Text_to_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Photographic_Image_Synthesis_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[10]</a></p>
 </li>
@@ -6151,7 +6156,7 @@ spyder
   </entry>
   <entry>
     <title>GNN for Segmentation</title>
-    <url>/2022/06/16/deep_learning/GNN%20for%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/GNN%20for%20Segmentation/</url>
     <content><![CDATA[<ol>
 <li>row-wise and column-wise LSTM on feature map: <a href="https://arxiv.org/pdf/1604.05000.pdf" target="_blank" rel="noopener">[1]</a> </li>
 <li>graph LSTM on superpixels: <a href="https://arxiv.org/pdf/1603.07063.pdf" target="_blank" rel="noopener">[2]</a></li>
@@ -6192,7 +6197,7 @@ spyder
   </entry>
   <entry>
     <title>Geometry Transformation for Image Composition</title>
-    <url>/2022/06/16/deep_learning/Geometry%20Transformation%20for%20Image%20Composition/</url>
+    <url>/2022/06/16/image_video_synthesis/Geometry%20Transformation%20for%20Image%20Composition/</url>
     <content><![CDATA[<ul>
 <li><p>Only geometry: <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Lin_ST-GAN_Spatial_Transformer_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a>, <a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/CVFAD/Kikuchi_Regularized_Adversarial_Training_for_Single-Shot_Virtual_Try-On_ICCVW_2019_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
 </li>
@@ -6220,7 +6225,7 @@ spyder
   </entry>
   <entry>
     <title>Generative Model</title>
-    <url>/2022/06/16/deep_learning/Generative%20Model/</url>
+    <url>/2022/06/16/image_video_synthesis/Generative%20Model/</url>
     <content><![CDATA[<ul>
 <li><a href="https://ustcnewly.github.io/2018/09/07/deep_learning/GAN/">GAN</a></li>
 <li><a href="https://ustcnewly.github.io/2021/10/08/deep_learning/VAE/">VAE</a></li>
@@ -6293,7 +6298,7 @@ spyder
   </entry>
   <entry>
     <title>GAN</title>
-    <url>/2022/06/16/deep_learning/GAN/</url>
+    <url>/2022/06/16/image_video_synthesis/GAN/</url>
     <content><![CDATA[<h3 id="Training-tricks"><a href="#Training-tricks" class="headerlink" title="Training tricks:"></a>Training tricks:</h3><p>17 tricks for training GAN: <a href="https://github.com/soumith/ganhacks" target="_blank" rel="noopener">https://github.com/soumith/ganhacks</a></p>
 <ul>
 <li><p>soft label: replace 1 with 0.9 and 0 with 0.3</p>
@@ -6453,7 +6458,7 @@ spyder
   </entry>
   <entry>
     <title>From Anchor to ROI</title>
-    <url>/2022/06/16/deep_learning/From%20Anchor%20to%20ROI/</url>
+    <url>/2022/06/16/classification_detection_segmentation/From%20Anchor%20to%20ROI/</url>
     <content><![CDATA[<h2 id="layer-area"><a href="#layer-area" class="headerlink" title="layer area"></a>layer area</h2><p>From layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, </p>
 <script type="math/tex; mode=display">r_{i+1} = (r_i+2p_i-k_i)/s_i+1.</script><p>In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area.</p>
 <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/5oklFvo.png" alt=""></p>
@@ -6547,7 +6552,7 @@ spyder
   </entry>
   <entry>
     <title>Fine-grained Dataset</title>
-    <url>/2022/06/16/deep_learning/Fine-grained%20Classification/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Fine-grained%20Classification/</url>
     <content><![CDATA[<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys:"></a>Surveys:</h2><ol>
 <li><p>Deep learning for fine-grained image analysis: A survey <a href="https://arxiv.org/pdf/1907.03069.pdf" target="_blank" rel="noopener">[1]</a>: include few-shot classification, few-shot retrieval, and few-shot generation</p>
 </li>
@@ -6576,7 +6581,7 @@ spyder
   </entry>
   <entry>
     <title>Few-Shot Object Detection</title>
-    <url>/2022/06/16/deep_learning/Few-Shot%20Object%20Detection/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Few-Shot%20Object%20Detection/</url>
     <content><![CDATA[<ul>
 <li><p>Feature generation for novel categories: <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_Hallucination_Improves_Few-Shot_Object_Detection_CVPR_2021_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9354609&amp;tag=1" target="_blank" rel="noopener">[3]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Universal-Prototype_Enhancing_for_Few-Shot_Object_Detection_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[4]</a> </p>
 </li>
@@ -6598,7 +6603,7 @@ spyder
   </entry>
   <entry>
     <title>Few-Shot Image Generation From Large Dataset to Small Dataset</title>
-    <url>/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Large%20Dataset%20to%20Small%20Dataset/</url>
+    <url>/2022/06/16/image_video_synthesis/Few-Shot%20Image%20Generation%20From%20Large%20Dataset%20to%20Small%20Dataset/</url>
     <content><![CDATA[<ol>
 <li><p>Transfer a large proportion of parameters and only update a few parameters <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Noguchi_Image_Generation_From_Small_Datasets_via_Batch_Statistics_Adaptation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a> updates scaling and shifting parameters. <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_MineGAN_Effective_Knowledge_Transfer_From_GANs_to_Target_Domains_With_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[2]</a> updates the miner before generator. <a href="https://arxiv.org/pdf/2012.02780.pdf" target="_blank" rel="noopener">[3]</a> uses Fisher information to select the parameters to be updates. Empirically, the last layers are prone to be frozen. Similarly, in <a href="http://proceedings.mlr.press/v119/zhao20a/zhao20a.pdf" target="_blank" rel="noopener">[6]</a>, the last layers are frozen and scaling/shifting parameters are predicted.</p>
 </li>
@@ -6632,7 +6637,7 @@ spyder
   </entry>
   <entry>
     <title>Few-Shot Image Generation From Base Categories to Novel Categories</title>
-    <url>/2022/06/16/deep_learning/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/</url>
+    <url>/2022/06/16/image_video_synthesis/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/</url>
     <content><![CDATA[<ol>
 <li><p>Fusion-based method: Generative Matching Network (GMN) <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">[1]</a> (VAE with matching network for generator and recognizer). MatchingGAN <a href="https://arxiv.org/pdf/2003.03497.pdf" target="_blank" rel="noopener">[3]</a> learns reasonable interpolation coefficients. F2GAN <a href="https://arxiv.org/pdf/2008.01999.pdf" target="_blank" rel="noopener">[5]</a> first fuses high-level features and then fills in low-level details. </p>
 </li>
@@ -6681,7 +6686,7 @@ spyder
   </entry>
   <entry>
     <title>Few-Shot Classification</title>
-    <url>/2022/06/16/deep_learning/Few-Shot%20Classification/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Few-Shot%20Classification/</url>
     <content><![CDATA[<h2 id="One-shot-few-shot-learning"><a href="#One-shot-few-shot-learning" class="headerlink" title="One-shot/few-shot learning"></a>One-shot/few-shot learning</h2><p>The first one-shot learning paper dates back to <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=1597116" target="_blank" rel="noopener">2006</a>, but becomes more popular recently.</p>
 <h3 id="Concepts"><a href="#Concepts" class="headerlink" title="Concepts"></a>Concepts</h3><p><u>training/validation/test categories</u>: Training categories and test categories have no overlap</p>
 <p><u>support(sample)/query(batch) set</u>: In the testing stage, for each test category, we preserve some instances to form the support set and sample from the remaining instances to form the query set</p>
@@ -6744,7 +6749,7 @@ spyder
   </entry>
   <entry>
     <title>Face Verification and Recognition</title>
-    <url>/2022/06/16/deep_learning/Face%20Verification%20and%20Recognition/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Face%20Verification%20and%20Recognition/</url>
     <content><![CDATA[<h3 id="Framework"><a href="#Framework" class="headerlink" title="Framework:"></a>Framework:</h3><p>The similarity between two faces Ia and Ib can be unified in the following formulation:</p>
 <p><strong>M[W(F(S(Ia))), W(F(S(Ib)))]</strong></p>
 <p>in which <strong>S</strong> is synthesis operation (<em>e.g.</em>, face alignment, frontalization), <strong>F</strong> is robust feature extraction, <strong>W</strong> is transformation subspace learning, <strong>M</strong> means face matching algorithm (<em>e.g.</em>, NN, SVM, metric learning).</p>
@@ -6854,7 +6859,7 @@ spyder
   </entry>
   <entry>
     <title>Domain Translation</title>
-    <url>/2022/06/16/deep_learning/Domain%20Translation/</url>
+    <url>/2022/06/16/image_video_synthesis/Domain%20Translation/</url>
     <content><![CDATA[<div class="table-container">
 <table>
 <thead>
@@ -6964,7 +6969,7 @@ spyder
   </entry>
   <entry>
     <title>Domain Adaptative Segmentation</title>
-    <url>/2022/06/16/deep_learning/Domain%20Adaptive%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Domain%20Adaptive%20Segmentation/</url>
     <content><![CDATA[<h3 id="Domain-adaptation"><a href="#Domain-adaptation" class="headerlink" title="Domain adaptation:"></a>Domain adaptation:</h3><ul>
 <li><p>Align source feature map and target feature map: reduce H-divergence of regional feature map <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_ROAD_Reality_Oriented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[4]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[8]</a>, cycle consistency <a href="https://papers.nips.cc/paper/2020/file/243be2818a23c980ad664f30f48e5d19-Paper.pdf" target="_blank" rel="noopener">[11]</a></p>
 </li>
@@ -7314,7 +7319,7 @@ spyder
   </entry>
   <entry>
     <title>Cut and Paste</title>
-    <url>/2022/06/16/deep_learning/Cut%20and%20Paste/</url>
+    <url>/2022/06/16/image_video_synthesis/Cut%20and%20Paste/</url>
     <content><![CDATA[<ol>
 <li><p>Do segmentation, image enhancemnet, and inpainting simultaneously <a href="https://arxiv.org/pdf/1811.07630.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
@@ -7333,7 +7338,7 @@ spyder
   </entry>
   <entry>
     <title>Conditional GAN</title>
-    <url>/2022/06/16/deep_learning/Conditional%20GAN/</url>
+    <url>/2022/06/16/image_video_synthesis/Conditional%20GAN/</url>
     <content><![CDATA[<ol>
 <li><p>Conditioned on label vector: conditional GAN <a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">[4]</a>, CVAE-GAN <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">[6]</a></p>
 </li>
@@ -7429,7 +7434,7 @@ spyder
   </entry>
   <entry>
     <title>Camouflaged Object Detection and Segmentation</title>
-    <url>/2022/06/16/deep_learning/Camouflaged%20Object%20Detection%20and%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Camouflaged%20Object%20Detection%20and%20Segmentation/</url>
     <content><![CDATA[<ul>
 <li><p>Camouflaged Object Detection: <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">[1]</a></p>
 </li>
@@ -7453,7 +7458,7 @@ spyder
   </entry>
   <entry>
     <title>Boundary-guided Semantic Segmentation</title>
-    <url>/2022/06/16/deep_learning/Boundary-guided%20Semantic%20Segmentation/</url>
+    <url>/2022/06/16/classification_detection_segmentation/Boundary-guided%20Semantic%20Segmentation/</url>
     <content><![CDATA[<ol>
 <li><p>propagate information within each non-boundary region <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Ding_Boundary-Aware_Feature_Propagation_for_Scene_Segmentation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">[1]</a> </p>
 </li>
