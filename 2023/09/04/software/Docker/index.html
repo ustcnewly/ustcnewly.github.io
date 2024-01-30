@@ -77,18 +77,21 @@
 
 
 
-<meta name="description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Command lines docker image ls/rm docker container ls/rm/prune  docker build -t img:tag .   docker">
+<meta name="description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Installationhttps://docs.docker.com/engine/install/ubuntu/ Uninstallation Uninstall the Docker Eng">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker">
 <meta property="og:url" content="https://ustcnewly.github.io/2023/09/04/software/Docker/index.html">
 <meta property="og:site_name" content="Newly Blog">
-<meta property="og:description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Command lines docker image ls/rm docker container ls/rm/prune  docker build -t img:tag .   docker">
+<meta property="og:description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Installationhttps://docs.docker.com/engine/install/ubuntu/ Uninstallation Uninstall the Docker Eng">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-09-04T13:45:17.163Z">
+<meta property="og:image" content="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png">
+<meta property="og:image" content="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg">
+<meta property="og:updated_time" content="2024-01-30T04:36:37.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker">
-<meta name="twitter:description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Command lines docker image ls/rm docker container ls/rm/prune  docker build -t img:tag .   docker">
+<meta name="twitter:description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Installationhttps://docs.docker.com/engine/install/ubuntu/ Uninstallation Uninstall the Docker Eng">
+<meta name="twitter:image" content="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png">
 
 
 
@@ -374,30 +377,36 @@
       
 
       
-        <h3 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h3><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
-<h3 id="Command-lines"><a href="#Command-lines" class="headerlink" title="Command lines"></a>Command lines</h3><ul>
-<li>docker image ls/rm</li>
-<li><p>docker container ls/rm/prune</p>
-</li>
-<li><p>docker build -t img:tag . </p>
-</li>
-<li><p>docker run img:tag</p>
-</li>
-<li><p>docker run -it img:tag bash </p>
-</li>
-<li><p>container status: (a)none (b)live (c)dead</p>
+        <h2 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h2><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noopener">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<h2 id="Uninstallation"><a href="#Uninstallation" class="headerlink" title="Uninstallation"></a>Uninstallation</h2><ul>
+<li>Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages: <code>sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras</code></li>
+</ul>
 <ul>
-<li>(a)-&gt;(b): <code>docker run img:tag</code> to create a container</li>
-<li>(b)-&gt;(c): after running, the container becomes dead</li>
-<li>(b)-&gt;(a): <code>docker container rm conID -f</code></li>
-<li>(c)-&gt;(a): <code>docker container rm conID</code></li>
-<li>(c)-&gt;(b): <code>docker start conID</code></li>
+<li>Images, containers, volumes, or custom configuration files on your host aren’t automatically removed. To delete all images, containers, and volumes: <code>sudo rm -rf /var/lib/docker</code>, <code>sudo rm -rf /var/lib/containerd</code></li>
 </ul>
-</li>
-<li><p>Enter the live docker: <code>docker exec -it conID bash</code></p>
-</li>
-</ul>
-<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><pre><code>FROM python:3.7
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p> <img src="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png" width="50%"></p>
+<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker pull $image_name:$version</code></p>
+<p> <code>docker image build -t $image_name .</code> </p>
+<p> <code>docker image ls</code></p>
+<p> <code>docker image rm $image_name</code></p>
+<p> <code>docker image save $image_name &gt; $filename</code></p>
+<p> <code>docker load &lt; $filename</code></p>
+<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg" width="25%"></p>
+<p>  <code>docker container create $image_name</code></p>
+<p>  <code>docker container start $container_ID</code></p>
+<p>  <code>docker container run $image_name</code> # <em>run</em> is equal to <em>create</em> and <em>start</em></p>
+<p>  <code>docker container ls</code>, <code>docker container ls --a</code> </p>
+<p>  <code>docker container pause $container_ID</code> </p>
+<p>  <code>docker container unpause $container_ID</code> </p>
+<p>  <code>docker container stop $container_ID</code> </p>
+<p>  <code>docker container kill $container_ID</code> # the difference between <em>stop</em> and <em>kill</em> is that <em>stop</em> may do some clean-up before killing the container</p>
+<p>  <code>docker container rm $container_ID</code></p>
+<p>  <code>docker container prune</code> # remove all the exit containers</p>
+<p>  <code>docker container exec -it $containe_ID /bin/bash</code></p>
+<p>  <code>docker container cp $container_ID:$file_path .</code></p>
+<p>  <code>docker container commit $container_ID  $image_name:$version</code></p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><pre><code>FROM python:3.7
 WORKDIR ./docker_demo
 ADD . .
 RUN pip install -r requirements.txt
@@ -526,7 +535,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">231</span>
+                  <span class="site-state-item-count">232</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -548,7 +557,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">109</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -603,7 +612,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Difference-between-VM-and-Docker"><span class="nav-number">1.</span> <span class="nav-text">Difference between VM and Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Command-lines"><span class="nav-number">2.</span> <span class="nav-text">Command lines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dockerfile"><span class="nav-number">3.</span> <span class="nav-text">Dockerfile</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Difference-between-VM-and-Docker"><span class="nav-number">1.</span> <span class="nav-text">Difference between VM and Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uninstallation"><span class="nav-number">3.</span> <span class="nav-text">Uninstallation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commands"><span class="nav-number">4.</span> <span class="nav-text">Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#image"><span class="nav-number">4.1.</span> <span class="nav-text">image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#container"><span class="nav-number">4.2.</span> <span class="nav-text">container</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">5.</span> <span class="nav-text">Dockerfile</span></a></li></ol></div>
             
 
           </div>

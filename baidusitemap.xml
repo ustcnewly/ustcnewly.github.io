@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2023/09/04/software/Docker/</loc>
+    <lastmod>2024-01-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU%20Cuda%20and%20CuDNN/</loc>
+    <lastmod>2024-01-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2024/01/03/classification_detection_segmentation/Line%20Detection/</loc>
+    <lastmod>2024-01-03</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/others/Hyper%20Parameter%20Tuning/</loc>
     <lastmod>2023-12-25</lastmod>
   </url>
@@ -23,10 +35,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2023/09/30/image_video_synthesis/Diffusion%20Model%20for%20Videos/</loc>
     <lastmod>2023-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2023/09/04/software/Docker/</loc>
-    <lastmod>2023-09-04</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2023/09/04/software/Deep%20Learning%20Model%20Deployment/</loc>
@@ -502,10 +510,6 @@
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/hardware/camera/Camera%20Survey/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU%20Cuda%20and%20CuDNN/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>

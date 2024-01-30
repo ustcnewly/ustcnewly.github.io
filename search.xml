@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Line Detection</title>
+    <url>/2024/01/03/classification_detection_segmentation/Line%20Detection/</url>
+    <content><![CDATA[<p>[1] <a href="https://arxiv.org/abs/2106.00186" target="_blank" rel="noopener">MLSD</a></p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>[1] Gu, Geonmo, et al. “Towards light-weight and real-time line segment detection.” Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 36. No. 1. 2022.</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>Line detection</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Diffusion Model Acceleration</title>
     <url>/2023/11/27/image_video_synthesis/Diffusion%20Model%20Acceleration/</url>
     <content><![CDATA[<p>Simplify model architecture: <a href="https://arxiv.org/pdf/2306.00980.pdf" target="_blank" rel="noopener">[3]</a></p>
@@ -75,30 +88,36 @@
   <entry>
     <title>Docker</title>
     <url>/2023/09/04/software/Docker/</url>
-    <content><![CDATA[<h3 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h3><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
-<h3 id="Command-lines"><a href="#Command-lines" class="headerlink" title="Command lines"></a>Command lines</h3><ul>
-<li>docker image ls/rm</li>
-<li><p>docker container ls/rm/prune</p>
-</li>
-<li><p>docker build -t img:tag . </p>
-</li>
-<li><p>docker run img:tag</p>
-</li>
-<li><p>docker run -it img:tag bash </p>
-</li>
-<li><p>container status: (a)none (b)live (c)dead</p>
+    <content><![CDATA[<h2 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h2><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noopener">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<h2 id="Uninstallation"><a href="#Uninstallation" class="headerlink" title="Uninstallation"></a>Uninstallation</h2><ul>
+<li>Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages: <code>sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras</code></li>
+</ul>
 <ul>
-<li>(a)-&gt;(b): <code>docker run img:tag</code> to create a container</li>
-<li>(b)-&gt;(c): after running, the container becomes dead</li>
-<li>(b)-&gt;(a): <code>docker container rm conID -f</code></li>
-<li>(c)-&gt;(a): <code>docker container rm conID</code></li>
-<li>(c)-&gt;(b): <code>docker start conID</code></li>
+<li>Images, containers, volumes, or custom configuration files on your host aren’t automatically removed. To delete all images, containers, and volumes: <code>sudo rm -rf /var/lib/docker</code>, <code>sudo rm -rf /var/lib/containerd</code></li>
 </ul>
-</li>
-<li><p>Enter the live docker: <code>docker exec -it conID bash</code></p>
-</li>
-</ul>
-<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><pre><code>FROM python:3.7
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p> <img src="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png" width="50%"></p>
+<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker pull $image_name:$version</code></p>
+<p> <code>docker image build -t $image_name .</code> </p>
+<p> <code>docker image ls</code></p>
+<p> <code>docker image rm $image_name</code></p>
+<p> <code>docker image save $image_name &gt; $filename</code></p>
+<p> <code>docker load &lt; $filename</code></p>
+<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg" width="25%"></p>
+<p>  <code>docker container create $image_name</code></p>
+<p>  <code>docker container start $container_ID</code></p>
+<p>  <code>docker container run $image_name</code> # <em>run</em> is equal to <em>create</em> and <em>start</em></p>
+<p>  <code>docker container ls</code>, <code>docker container ls --a</code> </p>
+<p>  <code>docker container pause $container_ID</code> </p>
+<p>  <code>docker container unpause $container_ID</code> </p>
+<p>  <code>docker container stop $container_ID</code> </p>
+<p>  <code>docker container kill $container_ID</code> # the difference between <em>stop</em> and <em>kill</em> is that <em>stop</em> may do some clean-up before killing the container</p>
+<p>  <code>docker container rm $container_ID</code></p>
+<p>  <code>docker container prune</code> # remove all the exit containers</p>
+<p>  <code>docker container exec -it $containe_ID /bin/bash</code></p>
+<p>  <code>docker container cp $container_ID:$file_path .</code></p>
+<p>  <code>docker container commit $container_ID  $image_name:$version</code></p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><pre><code>FROM python:3.7
 WORKDIR ./docker_demo
 ADD . .
 RUN pip install -r requirements.txt
@@ -4198,7 +4217,8 @@ spyder
   <entry>
     <title>GPU Cuda and CuDNN</title>
     <url>/2022/06/16/hardware/GPU/GPU%20Cuda%20and%20CuDNN/</url>
-    <content><![CDATA[<h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
+    <content><![CDATA[<p><img src="https://www.ustcnewly.com/github_images/GPU_CUDA.png" style="width:600px;"></p>
+<h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
 <li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
 </li>
 <li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
@@ -4231,15 +4251,21 @@ spyder
 </ul>
 </li>
 <li><p>Install Cuda</p>
-<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
-<p> and then add into PATH and LD_LIBRARY_PATH</p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p> Download the *.run file from NVIDIA website</p>
+<ul>
+<li>The latest version: <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a> </li>
+<li><p>All versions: <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-toolkit-archive</a> </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
+<p>and then add into PATH and LD_LIBRARY_PATH</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
 </li>
 </ol>
-<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>hardware</category>

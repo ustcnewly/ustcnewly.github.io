@@ -281,6 +281,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Gaze Estimation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Gaze Estimation/" itemprop="url">Gaze Estimation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/VDw1UW6.jpg" width="50%" height="50%"></p>
+<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><ol>
+<li><p>Corneal reflection-based methods</p>
+<ul>
+<li>NIR or LED illumination, learning the mapping (e.g., regression, ) between glint vector and gaze direction.</li>
+</ul>
+</li>
+<li><p>Appearance based methods</p>
+<ul>
+<li>Limbus model <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.486.489&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">[pdf]</a>: fit a limbus model (a fixed-diameter disc) to detected iris edges.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Auxiliary-Tools"><a href="#Auxiliary-Tools" class="headerlink" title="Auxiliary Tools"></a>Auxiliary Tools</h3><ol>
+<li><p>Calibration: obtain the visual axis and kappa angle for each person.</p>
+</li>
+<li><p>Facial landmarks detection</p>
+<ul>
+<li>One Millisecond Face Alignment with an Ensemble of Regression Trees <a href="http://openaccess.thecvf.com/content_cvpr_2014/papers/Kazemi_One_Millisecond_Face_2014_CVPR_paper.pdf" target="_blank" rel="noopener">[pdf]</a> <a href="https://github.com/cheind/dest" target="_blank" rel="noopener">[code]</a></li>
+<li>Continuous Conditional Neural Fields for Structured Regression <a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=1133&amp;context=lti" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+<li><p>Head Pose Estimation</p>
+<ul>
+<li>EPnP algorithm <a href="https://infoscience.epfl.ch/record/160138/files/top.pdf" target="_blank" rel="noopener">[pdf]</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><ol>
+<li><p><a href="https://www.mpi-inf.mpg.de/de/abteilungen/computer-vision-and-multimodal-computing/research/gaze-based-human-computer-interaction/appearance-based-gaze-estimation-in-the-wild-mpiigaze/" target="_blank" rel="noopener">[MPIIGaze]</a>: fine-grained annotation</p>
+</li>
+<li><p><a href="https://www.idiap.ch/dataset/eyediap" target="_blank" rel="noopener">[Eyediap]</a>: RGB-D </p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/image_video_synthesis/GAN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1807,157 +1982,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Few-Shot Feature Generation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Few-Shot Feature Generation/" itemprop="url">Few-Shot Feature Generation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Few-shot-Feature-Generation"><a href="#Few-shot-Feature-Generation" class="headerlink" title="Few-shot Feature Generation"></a>Few-shot Feature Generation</h2><ol>
-<li><p>Meta-learning method: <a href="https://www.cse.ust.hk/~yqsong/papers/2018-NIPS-MetaGAN-long.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>Delta-based: delta between each pair of samples <a href="https://arxiv.org/pdf/1806.04734.pdf" target="_blank" rel="noopener">[2]</a>; delta between each sample and class center <a href="https://arxiv.org/pdf/2002.10826.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.09014.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Zhang, Ruixiang, et al. “Metagan: An adversarial approach to few-shot learning.” NIPS, 2018.</p>
-<p>[2] Schwartz, Eli, et al. “Delta-encoder: an effective sample synthesis method for few-shot object recognition.” Advances in Neural Information Processing Systems. 2018.</p>
-<p>[3] Liu, Jialun, et al. “Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective.” arXiv preprint arXiv:2002.10826 (2020).</p>
-<p>[4] Yin, Xi, et al. “Feature transfer learning for face recognition with under-represented data.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2012,7 +2036,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">231</span>
+                  <span class="site-state-item-count">232</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2034,7 +2058,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">109</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

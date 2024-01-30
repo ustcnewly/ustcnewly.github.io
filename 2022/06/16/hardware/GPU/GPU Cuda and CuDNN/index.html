@@ -77,18 +77,20 @@
 
 
 
-<meta name="description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   GPU Driver check the latest driver information on http://www.nvidia.com/Down">
+<meta name="description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   GPU Driver check the latest driver information on http://www.nvidia.com/Dow">
 <meta name="keywords" content="GPU,CUDA,CuDNN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GPU Cuda and CuDNN">
 <meta property="og:url" content="https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU Cuda and CuDNN/index.html">
 <meta property="og:site_name" content="Newly Blog">
-<meta property="og:description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   GPU Driver check the latest driver information on http://www.nvidia.com/Down">
+<meta property="og:description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   GPU Driver check the latest driver information on http://www.nvidia.com/Dow">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-07T23:14:24.000Z">
+<meta property="og:image" content="https://www.ustcnewly.com/github_images/GPU_CUDA.png">
+<meta property="og:updated_time" content="2024-01-09T09:47:43.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GPU Cuda and CuDNN">
-<meta name="twitter:description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   GPU Driver check the latest driver information on http://www.nvidia.com/Down">
+<meta name="twitter:description" content="GPU look up GPU information: lspci or lshw -C display   NVIDIA system management interface, monitor GPU usage: nvidia-smi   GPU Driver check the latest driver information on http://www.nvidia.com/Dow">
+<meta name="twitter:image" content="https://www.ustcnewly.com/github_images/GPU_CUDA.png">
 
 
 
@@ -385,7 +387,8 @@
       
 
       
-        <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
+        <p><img src="https://www.ustcnewly.com/github_images/GPU_CUDA.png" style="width:600px;"></p>
+<h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
 <li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
 </li>
 <li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
@@ -418,15 +421,21 @@
 </ul>
 </li>
 <li><p>Install Cuda</p>
-<p> Download the *.run file from NVIDIA website<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
-<p> and then add into PATH and LD_LIBRARY_PATH</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p> Download the *.run file from NVIDIA website</p>
+<ul>
+<li>The latest version: <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a> </li>
+<li><p>All versions: <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-toolkit-archive</a> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
+<p>and then add into PATH and LD_LIBRARY_PATH</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
 </li>
 </ol>
-<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.<br>Email: ustcnewly@gmail.com<br>passwd: the same for RICE netID<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure></p>
+<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -554,7 +563,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">231</span>
+                  <span class="site-state-item-count">232</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -576,7 +585,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">109</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -281,6 +281,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2024/01/03/classification_detection_segmentation/Line Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/01/03/classification_detection_segmentation/Line Detection/" itemprop="url">Line Detection</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-03T17:16:51+08:00">
+                2024-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[1] <a href="https://arxiv.org/abs/2106.00186" target="_blank" rel="noopener">MLSD</a></p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>[1] Gu, Geonmo, et al. “Towards light-weight and real-time line segment detection.” Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 36. No. 1. 2022.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2023/11/27/image_video_synthesis/Diffusion Model Acceleration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -969,30 +1112,36 @@
       
         
           
-            <h3 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h3><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
-<h3 id="Command-lines"><a href="#Command-lines" class="headerlink" title="Command lines"></a>Command lines</h3><ul>
-<li>docker image ls/rm</li>
-<li><p>docker container ls/rm/prune</p>
-</li>
-<li><p>docker build -t img:tag . </p>
-</li>
-<li><p>docker run img:tag</p>
-</li>
-<li><p>docker run -it img:tag bash </p>
-</li>
-<li><p>container status: (a)none (b)live (c)dead</p>
+            <h2 id="Difference-between-VM-and-Docker"><a href="#Difference-between-VM-and-Docker" class="headerlink" title="Difference between VM and Docker"></a>Difference between VM and Docker</h2><p>VM: guest OS -&gt; BINS&amp;LIBS -&gt; App<br>Docker: BINS*LIBS -&gt; App</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noopener">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<h2 id="Uninstallation"><a href="#Uninstallation" class="headerlink" title="Uninstallation"></a>Uninstallation</h2><ul>
+<li>Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages: <code>sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras</code></li>
+</ul>
 <ul>
-<li>(a)-&gt;(b): <code>docker run img:tag</code> to create a container</li>
-<li>(b)-&gt;(c): after running, the container becomes dead</li>
-<li>(b)-&gt;(a): <code>docker container rm conID -f</code></li>
-<li>(c)-&gt;(a): <code>docker container rm conID</code></li>
-<li>(c)-&gt;(b): <code>docker start conID</code></li>
+<li>Images, containers, volumes, or custom configuration files on your host aren’t automatically removed. To delete all images, containers, and volumes: <code>sudo rm -rf /var/lib/docker</code>, <code>sudo rm -rf /var/lib/containerd</code></li>
 </ul>
-</li>
-<li><p>Enter the live docker: <code>docker exec -it conID bash</code></p>
-</li>
-</ul>
-<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><pre><code>FROM python:3.7
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p> <img src="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png" width="50%"></p>
+<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker pull $image_name:$version</code></p>
+<p> <code>docker image build -t $image_name .</code> </p>
+<p> <code>docker image ls</code></p>
+<p> <code>docker image rm $image_name</code></p>
+<p> <code>docker image save $image_name &gt; $filename</code></p>
+<p> <code>docker load &lt; $filename</code></p>
+<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg" width="25%"></p>
+<p>  <code>docker container create $image_name</code></p>
+<p>  <code>docker container start $container_ID</code></p>
+<p>  <code>docker container run $image_name</code> # <em>run</em> is equal to <em>create</em> and <em>start</em></p>
+<p>  <code>docker container ls</code>, <code>docker container ls --a</code> </p>
+<p>  <code>docker container pause $container_ID</code> </p>
+<p>  <code>docker container unpause $container_ID</code> </p>
+<p>  <code>docker container stop $container_ID</code> </p>
+<p>  <code>docker container kill $container_ID</code> # the difference between <em>stop</em> and <em>kill</em> is that <em>stop</em> may do some clean-up before killing the container</p>
+<p>  <code>docker container rm $container_ID</code></p>
+<p>  <code>docker container prune</code> # remove all the exit containers</p>
+<p>  <code>docker container exec -it $containe_ID /bin/bash</code></p>
+<p>  <code>docker container cp $container_ID:$file_path .</code></p>
+<p>  <code>docker container commit $container_ID  $image_name:$version</code></p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><pre><code>FROM python:3.7
 WORKDIR ./docker_demo
 ADD . .
 RUN pip install -r requirements.txt
@@ -1637,155 +1786,6 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/10/17/deep_learning/Prompt for Vision/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/17/deep_learning/Prompt for Vision/" itemprop="url">Prompt for Vision</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-17T08:38:08+08:00">
-                2022-10-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>Prompt for image-to-image translation: <a href="https://arxiv.org/pdf/1811.05181.pdf" target="_blank" rel="noopener">[1]</a></p>
-</li>
-<li><p>Prompt for visual grounding: <a href="https://arxiv.org/pdf/2109.11797.pdf" target="_blank" rel="noopener">[2]</a></p>
-</li>
-</ul>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Bar, Amir, et al. “Visual Prompting via Image Inpainting.” arXiv preprint arXiv:2209.00647 (2022).</p>
-<p>[2] Yao, Yuan, et al. “Cpt: Colorful prompt tuning for pre-trained vision-language models.” arXiv preprint arXiv:2109.11797 (2021).</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1840,7 +1840,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">231</span>
+                  <span class="site-state-item-count">232</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1862,7 +1862,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">109</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
