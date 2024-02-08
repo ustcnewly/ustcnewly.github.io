@@ -281,6 +281,364 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/Android/Android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/programming_language/Android/Android/" itemprop="url">Android</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><ol>
+<li><p>Download and install <a href="https://developer.android.com/sdk/index.html" target="_blank" rel="noopener">SDK</a></p>
+</li>
+<li><p>Install via SDK manager and AVD manager</p>
+</li>
+<li><p>Add  <font color="green">C:\Program Files (x86)\Android\android-sdk\tools</font> to environment path</p>
+</li>
+<li><p>Install ADT plugin in Eclipse by entering “ADT Plugin” for the Name and the following URL for the Location: <a href="https://dl-ssl.google.com/android/eclipse/" target="_blank" rel="noopener">https://dl-ssl.google.com/android/eclipse/</a></p>
+</li>
+<li><p>The first time to lauch AVD may take rather long time, just be patient. Leave the launched AVD open until your project is finished.</p>
+</li>
+</ol>
+<p><strong>Possible problems during installation:</strong></p>
+<ol>
+<li><p>java basis is unresolved: Project-&gt;Properties-&gt;Java Build Path-&gt;Libraries, add JRE lib</p>
+</li>
+<li><p>Android is unresolved: Project-&gt;Properties-&gt;Android, choose project build target and apply. For some Eclipse versions, clean and rebuild.</p>
+</li>
+</ol>
+<h3 id="Resource"><a href="#Resource" class="headerlink" title="Resource:"></a>Resource:</h3><ol>
+<li><p><a href="http://developer.android.com/reference/packages.html" target="_blank" rel="noopener">Android API</a> </p>
+</li>
+<li><p><a href="http://zetcode.com/mob/android/" target="_blank" rel="noopener">http://zetcode.com/mob/android/</a></p>
+</li>
+<li><p><a href="https://www.embeddedlinux.org.cn/AndroidEssentials/" target="_blank" rel="noopener">https://www.embeddedlinux.org.cn/AndroidEssentials/</a></p>
+</li>
+<li><p>Begining Android2: code is downloaded from <a href="https://www.apress.com" target="_blank" rel="noopener">https://www.apress.com</a></p>
+</li>
+</ol>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application:"></a>Application:</h3><p><code>Application</code> consists of <code>Activity</code>, <code>Service</code>, <code>BroadcastReceiver</code>, and <code>Content Provider</code>, in which <code>Activity</code> is a regular App, <code>Service</code> can run independently in the background, such as MP3 player, <code>BroadcastReceiver</code> reacts to outcoming events, <code>Content Provider</code> save data via SQLite or share data with other applications.</p>
+<ol>
+<li><p><font color="red">activity</font>: Most common application. <a href="\code\android\AndroidManifest_activity.xml">[AndroidManifest example]</a> <a href="http://bcmi.sjtu.edu.cn/~niuli/github_images/BPUcRFH.jpg" target="_blank" rel="noopener">[activity cycle]</a></p>
+</li>
+<li><p><font color="red">service</font>: Similar with activity but without user interface.   <a href="\code\android\AndroidManifest_service.xml">[AndroidManifest example]</a>    <a href="http://bcmi.sjtu.edu.cn/~niuli/github_images/cira5BF.jpg" target="_blank" rel="noopener">[service cycle]</a></p>
+<ul>
+<li><p>independent service</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.service.FIRST_SERVICE&quot;);</span><br><span class="line">startService(intent);</span><br><span class="line">stopService(intent);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>service has connection with activity via <code>IBinder</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BindService.MyBinder binder;</span><br><span class="line">private ServiceConnection conn = new ServiceConnection()&#123;</span><br><span class="line">	public void onServiceConnected(ComponentName name, IBinder service)&#123;</span><br><span class="line">		binder = (BindService.MyBinder) service; </span><br><span class="line">	&#125;</span><br><span class="line">	public void onServiceDisconnected(ComponentName name)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">bindService(intent, conn, Service.BIND_AUTO_CREATE);</span><br><span class="line">unbindService(conn);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>to create a new thread, extend class <code>IntentService</code></p>
+</li>
+<li><p>for interprocess communication, use AIDL, i.e., extends <code>Stub</code> as IBinder interface. The others are the same as <code>Service</code>.</p>
+</li>
+</ul>
+</li>
+<li><p><font color="red">receiver</font>: a global listener. <a href="\code\android\AndroidManifest_receiver.xml">AndroidManifest example</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent();</span><br><span class="line">intent.setAction(&quot;org.crazyit.action.CRAZY_BROADCAST&quot;);</span><br><span class="line">intent.putExtra(&quot;msg&quot;, &quot;hello world&quot;);</span><br><span class="line">sendBroadcast(intent);</span><br></pre></td></tr></table></figure>
+<p>use IntentFilter to filter the received broadcast</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IntentFilter filter = new IntentFilter();</span><br><span class="line">filter.addAction(MusicBox.CTL_ACTION);</span><br><span class="line">registerReceiver(serviceReceiver, filter);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><font color="red">provider</font>: globally share data. <a href="\code\android\AndroidManifest_provider.xml">AndroidManifest example</a></p>
+<p> The joint point is Uri:  <code>content://org.crazyit.providers.dictprovider/words/id</code></p>
+<p> ContentProvider: an extended class <code>public class DictProvider extends ContentProvider</code> which provides <code>query</code>, <code>insert</code>, <code>delete</code>, <code>update</code> functions.</p>
+<p> ContentResolver: </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver contentResolver = getContentResolver();</span><br><span class="line">contentResolver.insert(Words.Word.DICT_CONTENT_URI, values);</span><br></pre></td></tr></table></figure>
+<p> Most system applications provide their own ContentProvider, we need to know their Uri. </p>
+</li>
+</ol>
+<h3 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter:"></a>Adapter:</h3><p>Adapters are the link between a set of data (ArrayList, Cursor) and the AdapterView (ListView, GridView, Spinner) that displays the data. AdapterViews are ViewGroups that display child views given to it by an adapter.</p>
+<ol>
+<li><p>ArrayAdapter: </p>
+<p> In the simplest case, just use the String array <code>items</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayAdapter&lt;String&gt;aa = new ArrayAdapter&lt;String&gt;(this, adnroid.R.layout.simple_spinner_item, items);</span><br><span class="line">aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</span><br><span class="line">spin.setAdapter(aa);</span><br></pre></td></tr></table></figure>
+<p> Extend ArrayAdapter to satisfy your own needs,</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MyArrayAdapter adapter = new MyArrayAdapter(this, R.layout.my_list_view, MyObjectItemData);</span><br><span class="line">ListView listViewItems = new ListView(this);</span><br><span class="line">listViewItems.setAdapter(adapter);</span><br><span class="line">listViewItems.setOnItemClickListener(new OnItemClickListenerListViewItem());</span><br></pre></td></tr></table></figure>
+<p> The code for class <code>MyArrayAdapter</code> is <a href="\code\android\MyArrayAdapter.java">here</a>. The code for class <code>OnItemClickListenerListViewItem</code> is <a href="\code\android\OnItemClickListenerListViewItem.java">here</a>. Note here <code>inflate</code> is used to convert XML format to View. One trick is to check whether convertView is null so that duplicated reflation could be avoided, otherwise your device would be slowed down when crolling the screen. ConvertView can be bined with a newly defined class by using <code>setTag</code> and <code>getTag</code>. When the adapter is changed (e.g., add a new row), <code>adapter.notifyDataSetChanged()</code>. </p>
+</li>
+<li><p>CursorAdapter:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SimpleCursorAdapter adapter=new SimpleCursorAdapter(this, R.layout.row, constantsCursor, new String[] &#123;&quot;tag&quot;, &quot;value&quot;&#125;, new int[] &#123;R.id,tag, R.id.value&#125;);</span><br><span class="line">listviewItems.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
+<p> Extend CursorAdapter, see <a href="\code\android\MyCursorAdapter.java">here</a></p>
+</li>
+</ol>
+<h3 id="XML-format"><a href="#XML-format" class="headerlink" title="XML format:"></a>XML format:</h3><ol>
+<li><p>Use XML to format Layout: In XML file, <code>android:id=&quot;@+id/button</code>. In Java, <code>btn=(Button)findViewById(R.id.button)</code>. Similarly,  in XML file, <code>android:id=&quot;@string/app_name</code>, in Java, <code>Resources myres = getResources(); myres.getString();</code>.</p>
+</li>
+<li><p>Use XML to format componenet style: in res\values\<a href="\code\android\text_style.xml">text_style.xml</a>,  in \res\layout\main.xml, <code>style=&quot;@style/style2&quot;</code>. </p>
+</li>
+<li><p>Use XML to format window style: in res\values\<a href="\code\android\window_style.xml">window_style.xml</a>, in <code>onCreate()</code> function, add <code>setTheme(R.style.crazytheme)</code>, or <code>&lt;application android:theme=&quot;@style/crazytheme&quot;&gt;</code>.</p>
+</li>
+<li><p>Use XML to format menu style: \res\menu\<a href="\code\android\contextmenu_style.xml">contextmenu_style.xml</a> <a href="\code\android\optionmenu_style.xml">optionmenu_style.xml</a>. </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MenuInflater inflator = new MenuInflater(this);</span><br><span class="line">inflator.inflate(R.menu.my_menu, menu);</span><br><span class="line">//return super.onCreateOptionsMenu(menu);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use XML to inflate a view and thus format dialogue style, click <a href="\code\android\login.xml">login.xml</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TableLayout loginForm = (TableLayout)getLayoutInflater().inflate(R.layout.login, null);</span><br><span class="line">ad.setView(loginForm);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Event"><a href="#Event" class="headerlink" title="Event:"></a>Event:</h3><ol>
+<li><p><font color="red">Add EventListener</font>: there exist several types of implement. We take the most common event “click” as an example to demonstrate five types of implements.</p>
+<ul>
+<li><p>Override function <code>onClick</code> in class <code>OnClickListener</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	button1.setOnClickListener(new OnClickListener()&#123; </span><br><span class="line">	    public void onClick(View v)&#123;</span><br><span class="line">	&#125;);</span><br><span class="line">	```	</span><br><span class="line">* Extend class `OnClickListener`, essentially equal to a)</span><br><span class="line">	```android</span><br><span class="line">	private Button1_OnClickListener mListener1 = new Button1_OnClickListener();</span><br><span class="line">	class Button1_OnClickListener implements OnClickListener &#123; </span><br><span class="line">		public void onClick(View v) &#123; </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	mButton1.setOnClickListener(mListener1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Bind event listener in XML</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android:onClick=&quot;clickHandler&quot;</span><br><span class="line"></span><br><span class="line">function clickHandler()&#123;</span><br></pre></td></tr></table></figure>
+<p>For key event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new OnKeyListener()&#123;</span><br><span class="line">	public boolean onKey(View source, int keyCode, KeyEvent event&#123;</span><br><span class="line">		switch(event.getKeyCode())</span><br></pre></td></tr></table></figure>
+<p>For long click:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new OnLongClickListener&#123;</span><br><span class="line">	public boolean onLongClick(View source)&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="red">Override Recall Function</font>: extend View or Activity class to override event recall functions.</p>
+<pre><code>* Extends Activity Class 
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class TestEvent2 extends Activity implements OnClickListener&#123;</span><br><span class="line">	public void onClick(View v) &#123; 			</span><br><span class="line"></span><br><span class="line">public class TestEvent2 extends Activity&#123; </span><br><span class="line">	boolean onKeyDown(int keycode, KeyEvent event)&#123;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li>Extends View Class  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyButton extends Button&#123;</span><br><span class="line">	public boolean onKeyDown(int keyCode, KeyEvent event)&#123;</span><br><span class="line"></span><br><span class="line">public class DrawView extends View&#123;</span><br><span class="line">	public boolean onTouchEvent(MotionEvent event)&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout:"></a>Layout:</h4><ol>
+<li><p>Common attributes</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:layout_width|height=&quot;fill_parent&quot;|&quot;wrap_content&quot;|&quot;10dip&quot;	</span><br><span class="line">	android:gravity=&quot;center_horizontal&quot;|&quot;right&quot;</span><br><span class="line">	android:background=&quot;#FF909090&quot;</span><br><span class="line">	android:padding=&quot;3dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FrameLayout: fundamental layout, allow overlap or replacement for flexible usage.</p>
+</li>
+<li><p>LinearLayout: <a href="\code\android\linear.xml">example code</a>    </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_weight=&quot;1&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AbsoluteLayout: <a href="\code\android\absolute.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:layout_x|layout_y=&quot;250dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RelativeLayout: <a href="\code\android\relative.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android:layout_below=&quot;@id/label&quot;</span><br><span class="line">android:layout_toLeftOf=&quot;@id/ok&quot;</span><br><span class="line">android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">android:layout_alignTop=&quot;@id/ok&quot;</span><br><span class="line">android:layout_marginLeft=&quot;10dip&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TableLayout: <a href="\code\android\table.xml">example code</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:layout_span=&quot;3&quot;</span><br><span class="line">android:layout_column=&quot;2&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make the layout scrollable, add <code>&lt;ScrollView&gt;</code> as in <a href="\code\android\scroll.xml">example code</a></p>
+</li>
+</ol>
+<h3 id="Componenet"><a href="#Componenet" class="headerlink" title="Componenet:"></a>Componenet:</h3><ol>
+<li><p>EditText | TextView <a href="\code\android\TextView.java">example code</a> </p>
+</li>
+<li><p>RadioGroup <a href="\code\android\RadioGroupDemo.java">example code</a> </p>
+</li>
+<li><p>CheckBox <a href="\code\android\CheckBoxDemo.java">example code</a></p>
+</li>
+<li><p>Spinner: dropdown menu <a href="\code\android\SpinnerDemo.java">example code</a></p>
+</li>
+<li><p>ListView: <a href="\code\android\ListViewDemo.java">example code</a></p>
+</li>
+<li><p>GridView: <a href="\code\android\GridDemo.java">example code</a></p>
+</li>
+<li><p>OptionsMenu: in the corner of screen <a href="\code\android\OptionsMenu.java">example code</a></p>
+</li>
+<li><p>ContextMenu: long press to show the menu. <a href="\code\android\MenuDemo.java">example code</a>.</p>
+</li>
+</ol>
+<h3 id="Advanced-Componenet"><a href="#Advanced-Componenet" class="headerlink" title="Advanced Componenet:"></a>Advanced Componenet:</h3><ol>
+<li><p><font color="red">Picker</font>: The DatePicker code is as follows and the TimePicker code is similar.</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Calendar dateAndTime=Calendar.getInstance();</span><br><span class="line">DatePickerDialog.OnDateSetListener mydiag=new DatePickerDialog.OnDateSetListener() &#123;</span><br><span class="line">	public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) &#123;</span><br><span class="line">		dateAndTime.set(Calendar.YEAR, year);</span><br><span class="line">		dateAndTime.set(Calendar.MONTH, monthOfYear);</span><br><span class="line">		dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);</span><br><span class="line">		updateLabel();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Button btn=(Button)findViewById(R.id.dateBtn);</span><br><span class="line">	</span><br><span class="line">btn.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		new DatePickerDialog(ChronoDemo.this, mydiag, year, month, day).show();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Number picker</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">NumberPicker np = (NumberPicker) findViewById(R.id.npId);</span><br><span class="line"></span><br><span class="line">np.setOnValueChangedListener(new OnValueChangeListener()</span><br><span class="line">&#123;</span><br><span class="line">    public void onValueChange(NumberPicker picker, int oldVal, int newVal)</span><br><span class="line">    &#123;</span><br><span class="line">        tv.setText(String.valueOf(newVal)); </span><br><span class="line">    &#125;        </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">np.setMaxValue(100);</span><br><span class="line">np.setMinValue(0);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Toast</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">Toast.makeText(Demo.this, &quot;warning msg&quot;, Toast.LENGTH_LONG).show();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Notification <a href="\code\android\Notification.java">example code</a></p>
+</li>
+<li><p>Alert dialog <a href="\code\android\Dialog.java">example code</a></p>
+</li>
+<li><p>Dial phone number</p>
+<ul>
+<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;&gt;&lt;/uses-permission&gt;</code></p>
+</li>
+<li><p>java code</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent phoneIntent = new Intent(&quot;android.intent.action.CALL&quot;, Uri.parse(&quot;tel:&quot; + inputStr));</span><br><span class="line">startActivity(phoneIntent);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Send message</p>
+<ul>
+<li><p>add permission in AndroidManifest.xml <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&gt;</code></p>
+</li>
+<li><p>java code</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SmsManager smsManager = SmsManager.getDefault();</span><br><span class="line">PendingIntent sentIntent = PendingIntent.getBroadcast(act, 0, new Intent(), 0);</span><br><span class="line">smsManager.sendTextMessage(addressStr, null,contentStr, sentIntent, null);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Gallary <a href="\code\android\Gallary.java">example code</a></p>
+</li>
+<li><p>Timer</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">new Timer().schedule(new TimerTask()</span><br><span class="line">&#123;</span><br><span class="line">	public void run()</span><br><span class="line">	&#123;</span><br><span class="line">		handler.sendEmptyMessage(0x123);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;, 0, 200);</span><br><span class="line"></span><br><span class="line">Handler handler = new Handler()</span><br><span class="line">&#123;</span><br><span class="line">	public void handleMessage(Message msg)</span><br><span class="line">	&#123;</span><br><span class="line">		if (msg.what == 0x123)&#123;</span><br><span class="line">		&#125;</span><br><span class="line">		super.handleMessage(msg);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><ol>
+<li><p><code>&lt;uses-sdk android:minSdkVersion=&quot;2&quot; /&gt;</code> indicates the minimum requirement of SDK. <code>&lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&gt;</code> indicates the required permission.</p>
+</li>
+<li><p>To utilize the resouce in res/values: in java code, , R.id….R.string….; in XML file, @id/…..@string/……</p>
+</li>
+<li><p>Set no title or fullscreen, add the following code in <code>AndroidManifest.xml</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	&lt;activity android:theme=&quot;@android:style/Theme.NoTitleBar.Fullscreen&quot;</span><br><span class="line">	```  </span><br><span class="line"></span><br><span class="line">1. There are two types of intents: explicit and implicit. In explicit intents you provide the name of the Activity class. In implicit intents, you tell the system what to do rather than name the Activity class to launch.</span><br><span class="line"></span><br><span class="line">## Game Development ##</span><br><span class="line"></span><br><span class="line">1. Prepare music and image resources uder folder &quot;res&quot;</span><br><span class="line"></span><br><span class="line">1. Use Handler in the MainActivity</span><br><span class="line">	```android</span><br><span class="line">	hd=new Handler()&#123;</span><br><span class="line">		public void handleMessage(Message msg)&#123;</span><br><span class="line">	    	super.handleMessage(msg);        		</span><br><span class="line">	    	switch(msg.what)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MenuView</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class ViewMainMenu extends SurfaceView implements SurfaceHolder.Callback&#123;</span><br><span class="line">	public void onDraw(Canvas canvas)&#123;</span><br><span class="line">	public void surfaceCreated(SurfaceHolder holder) &#123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create on thread for each function</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class KeyThread extends Thread&#123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use GLRender for GameView, android opengl</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MySurfaceView extends GLSurfaceView &#123;</span><br><span class="line">	public MySurfaceView(Context context) &#123;</span><br><span class="line">			super(context);</span><br><span class="line">	        mRenderer = new SceneRenderer();</span><br><span class="line">	        setRenderer(mRenderer);						</span><br><span class="line">	        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);</span><br><span class="line">	&#125;	 </span><br><span class="line">	class SceneRenderer implements GLSurfaceView.Renderer&#123;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/Simple Bayesian Optimization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1763,161 +2121,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/Fair Comparison/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/others/Fair Comparison/" itemprop="url">Fair comparison</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>Carefully compare your experiments settings with those described in previous papers. The experimental settings include training/testing split, input format (e.g., image size), evaluation metric, backbone network, etc. If they are not exactly the same, you need to re-run their methods with exactly the same experimental settings as yours for fair comparison. For example, if the baseline uses 32x32 image size while you use 244x244 image size, that is unfair comparison. If the baseline uses AlexNet as backbone while you use ResNet as backbone, that is unfair comparison.</p>
-</li>
-<li><p>The baseline methods may use more or less information, compared with your method. Based on using more/less information and their performance is better/worse than yours, we could have the following table. </p>
-<ul>
-<li>If the baseline uses more information but achieves worse results, never mind. Just brag your own method.</li>
-<li>If the baseline uses less information but achieves better results, it is a serious problem. You have to check your method.</li>
-<li>If the baseline uses less information and achieves worse results, that is reasonable. But you may be accused of unfair comparison because your method uses more information. For safety, please augment the baseline with extra information and compare again. </li>
-<li><p>If the baseline uses more information and achieves better results, that is reasonable. But do not casually put them in the paper because dumb reviewers may ignore these details and point out your method is not good enough. That is very risky! Please remove the extra information from the baseline and compare again.</p>
-<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/Its6ekq.jpg" width="80%"></p>
-</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1972,7 +2175,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">233</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

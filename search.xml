@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Mirror Resources</title>
+    <url>/2024/02/04/others/Mirror%20Resources/</url>
+    <content><![CDATA[<p>arXiv:  <a href="http://xxx.itp.ac.cn/......pdf" target="_blank" rel="noopener">http://xxx.itp.ac.cn/......pdf</a></p>
+<p>hugging face: <a href="https://hf-mirror.com" target="_blank" rel="noopener">https://hf-mirror.com</a></p>
+<pre><code>export HF_ENDPOINT=https://hf-mirror.com
+
+from huggingface_hub import snapshot_download
+
+snapshot_download(repo_id=&#39;Qwen/Qwen-7B&#39;,
+                  repo_type=&#39;model&#39;,
+                  local_dir=&#39;./model_dir&#39;,
+                  resume_download=True)
+</code></pre><p>modelscope: <a href="https://modelscope.cn/home" target="_blank" rel="noopener">https://modelscope.cn/home</a></p>
+<pre><code>from modelscope.hub.snapshot_download import snapshot_download
+
+model_dir = snapshot_download(&#39;qwen/Qwen-7B&#39;, 
+                              cache_dir=&#39;./model_dir&#39;, 
+                              revision=&#39;master&#39;)
+</code></pre>]]></content>
+  </entry>
+  <entry>
     <title>Line Detection</title>
     <url>/2024/01/03/classification_detection_segmentation/Line%20Detection/</url>
     <content><![CDATA[<p>[1] <a href="https://arxiv.org/abs/2106.00186" target="_blank" rel="noopener">MLSD</a></p>
@@ -97,16 +118,19 @@
 <li>Images, containers, volumes, or custom configuration files on your host aren’t automatically removed. To delete all images, containers, and volumes: <code>sudo rm -rf /var/lib/docker</code>, <code>sudo rm -rf /var/lib/containerd</code></li>
 </ul>
 <h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p> <img src="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png" width="50%"></p>
-<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker pull $image_name:$version</code></p>
+<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker image pull $image_name:$version</code></p>
+<p> <code>docker image tag $image_name:version $registryIP:port/username/image_name:version</code></p>
+<p> <code>docker image push $registryIP:port/username/image_name:version</code></p>
 <p> <code>docker image build -t $image_name .</code> </p>
 <p> <code>docker image ls</code></p>
 <p> <code>docker image rm $image_name</code></p>
 <p> <code>docker image save $image_name &gt; $filename</code></p>
 <p> <code>docker load &lt; $filename</code></p>
-<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg" width="25%"></p>
+<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://www.ustcnewly.com/github_images/077ev7.png" width="25%"></p>
 <p>  <code>docker container create $image_name</code></p>
 <p>  <code>docker container start $container_ID</code></p>
 <p>  <code>docker container run $image_name</code> # <em>run</em> is equal to <em>create</em> and <em>start</em></p>
+<p>  <code>docker container run -it  $image_name</code> /bin/bash</p>
 <p>  <code>docker container ls</code>, <code>docker container ls --a</code> </p>
 <p>  <code>docker container pause $container_ID</code> </p>
 <p>  <code>docker container unpause $container_ID</code> </p>
@@ -123,6 +147,12 @@ ADD . .
 RUN pip install -r requirements.txt
 CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 </code></pre><p>Tutorial: <a href="https://yeasy.gitbook.io/docker_practice/introduction/what" target="_blank" rel="noopener">[1]</a></p>
+<h2 id="Use-GPU-in-docker"><a href="#Use-GPU-in-docker" class="headerlink" title="Use GPU in docker"></a>Use GPU in docker</h2><ol>
+<li><p>Install nvidia-docker <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html" target="_blank" rel="noopener">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html</a></p>
+</li>
+<li><p><code>docker run --gpus all -it $image_name</code></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>software</category>

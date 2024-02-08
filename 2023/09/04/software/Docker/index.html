@@ -86,8 +86,8 @@
 <meta property="og:description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Installationhttps://docs.docker.com/engine/install/ubuntu/ Uninstallation Uninstall the Docker Eng">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png">
-<meta property="og:image" content="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg">
-<meta property="og:updated_time" content="2024-01-30T04:36:37.257Z">
+<meta property="og:image" content="https://www.ustcnewly.com/github_images/077ev7.png">
+<meta property="og:updated_time" content="2024-02-08T09:20:58.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker">
 <meta name="twitter:description" content="Difference between VM and DockerVM: guest OS -&amp;gt; BINS&amp;amp;LIBS -&amp;gt; AppDocker: BINS*LIBS -&amp;gt; App Installationhttps://docs.docker.com/engine/install/ubuntu/ Uninstallation Uninstall the Docker Eng">
@@ -386,16 +386,19 @@
 <li>Images, containers, volumes, or custom configuration files on your host aren’t automatically removed. To delete all images, containers, and volumes: <code>sudo rm -rf /var/lib/docker</code>, <code>sudo rm -rf /var/lib/containerd</code></li>
 </ul>
 <h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p> <img src="https://files.mdnice.com/user/21592/15a1e052-91fa-4388-94b4-497016e19a1e.png" width="50%"></p>
-<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker pull $image_name:$version</code></p>
+<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p> <code>docker image pull $image_name:$version</code></p>
+<p> <code>docker image tag $image_name:version $registryIP:port/username/image_name:version</code></p>
+<p> <code>docker image push $registryIP:port/username/image_name:version</code></p>
 <p> <code>docker image build -t $image_name .</code> </p>
 <p> <code>docker image ls</code></p>
 <p> <code>docker image rm $image_name</code></p>
 <p> <code>docker image save $image_name &gt; $filename</code></p>
 <p> <code>docker load &lt; $filename</code></p>
-<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://files.mdnice.com/user/21592/53759aa5-6cb7-4bf3-8e13-4c2b80d77e7b.jpg" width="25%"></p>
+<h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><p> <img src="https://www.ustcnewly.com/github_images/077ev7.png" width="25%"></p>
 <p>  <code>docker container create $image_name</code></p>
 <p>  <code>docker container start $container_ID</code></p>
 <p>  <code>docker container run $image_name</code> # <em>run</em> is equal to <em>create</em> and <em>start</em></p>
+<p>  <code>docker container run -it  $image_name</code> /bin/bash</p>
 <p>  <code>docker container ls</code>, <code>docker container ls --a</code> </p>
 <p>  <code>docker container pause $container_ID</code> </p>
 <p>  <code>docker container unpause $container_ID</code> </p>
@@ -412,6 +415,12 @@ ADD . .
 RUN pip install -r requirements.txt
 CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 </code></pre><p>Tutorial: <a href="https://yeasy.gitbook.io/docker_practice/introduction/what" target="_blank" rel="noopener">[1]</a></p>
+<h2 id="Use-GPU-in-docker"><a href="#Use-GPU-in-docker" class="headerlink" title="Use GPU in docker"></a>Use GPU in docker</h2><ol>
+<li><p>Install nvidia-docker <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html" target="_blank" rel="noopener">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html</a></p>
+</li>
+<li><p><code>docker run --gpus all -it $image_name</code></p>
+</li>
+</ol>
 
       
     </div>
@@ -535,7 +544,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">233</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -612,7 +621,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Difference-between-VM-and-Docker"><span class="nav-number">1.</span> <span class="nav-text">Difference between VM and Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uninstallation"><span class="nav-number">3.</span> <span class="nav-text">Uninstallation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commands"><span class="nav-number">4.</span> <span class="nav-text">Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#image"><span class="nav-number">4.1.</span> <span class="nav-text">image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#container"><span class="nav-number">4.2.</span> <span class="nav-text">container</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">5.</span> <span class="nav-text">Dockerfile</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Difference-between-VM-and-Docker"><span class="nav-number">1.</span> <span class="nav-text">Difference between VM and Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uninstallation"><span class="nav-number">3.</span> <span class="nav-text">Uninstallation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commands"><span class="nav-number">4.</span> <span class="nav-text">Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#image"><span class="nav-number">4.1.</span> <span class="nav-text">image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#container"><span class="nav-number">4.2.</span> <span class="nav-text">container</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">5.</span> <span class="nav-text">Dockerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-GPU-in-docker"><span class="nav-number">6.</span> <span class="nav-text">Use GPU in docker</span></a></li></ol></div>
             
 
           </div>
