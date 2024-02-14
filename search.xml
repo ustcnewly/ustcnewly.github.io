@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Sketch Simplification</title>
+    <url>/2024/02/14/sketch/sketch_simplification/</url>
+    <content><![CDATA[<p><a href="https://esslab.jp/~ess/publications/SimoSerraSIGGRAPH2016.pdf" target="_blank" rel="noopener">[1]</a> fully-conv network, data augmentation (synthesize rough sketches), vectorization: high-pass filter+binarization+potrace</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Simo-Serra, Edgar, et al. “Learning to simplify: fully convolutional networks for rough sketch cleanup.” ACM Transactions on Graphics (TOG) 35.4 (2016): 1-11.</p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>sketch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mirror Resources</title>
     <url>/2024/02/04/others/Mirror%20Resources/</url>
     <content><![CDATA[<p>arXiv:  <a href="http://xxx.itp.ac.cn/......pdf" target="_blank" rel="noopener">http://xxx.itp.ac.cn/......pdf</a></p>
