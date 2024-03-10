@@ -84,12 +84,10 @@
 <meta property="og:site_name" content="Newly Blog">
 <meta property="og:description" content="Non-trivial ideas require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. Trivial ideas are much easier with the aid of some short formul">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/eMf9QQ4.png">
-<meta property="og:updated_time" content="2022-04-07T23:14:24.000Z">
+<meta property="og:updated_time" content="2024-02-27T10:28:22.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Come up with Ideas">
 <meta name="twitter:description" content="Non-trivial ideas require deep understanding and thinking, solid math background, excellent engineering skills, and sometimes good luck. Trivial ideas are much easier with the aid of some short formul">
-<meta name="twitter:image" content="http://bcmi.sjtu.edu.cn/~niuli/github_images/eMf9QQ4.png">
 
 
 
@@ -379,6 +377,8 @@
 <ol>
 <li><p>naive combination: e.g., combine regularizers, combine network modules</p>
 </li>
+<li><p>kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. </p>
+</li>
 <li><p>from single to multiple: create multiple-XXX learning setting, e.g., multi-view learning, multi-instance learning, multi-label learning, multi-task learning.</p>
 </li>
 <li><p>separate common and specific components: in multi-XXX learning setting, we can separate XXX-invariant components from XXX-specific components. e.g., for multiple domains (resp, categories), we can separate domain (resp., category)-invariant components from domain (resp., category)-specific components.</p>
@@ -391,18 +391,23 @@
 </li>
 <li><p>from simple structure to advanced structure: e.g., from sequence network to tree network to graph network, form vector representation to matrix representation to tensor representation.</p>
 </li>
-<li><p>kernelize: project from low dimension to high and even infinite dimension, which is very popular before the deep learning era. </p>
-</li>
+</ol>
+<ol>
 <li><p>introduce auxiliary/side information to help the original task: the auxiliary/side information is usually more accessible.</p>
 </li>
 <li><p>learn different weights on different components: the essence of machine learning is learning weights, e.g., assign different weights on different feature dimensions (linear classifier), on different kernels (multiple-kernel learning), on different training samples (sample reweighting).</p>
 </li>
-<li><p>fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method, as illustrated below.</p>
+<li><p>fill in the table: analyzie the existing methods and summarize them in one table. Then, find the hole in the table and fill it with your own method. </p>
 </li>
 </ol>
-<center><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/eMf9QQ4.png" width="35%"></center>
-
-
+<p>My previous research works can be organized into the following groups:</p>
+<ol>
+<li>data-centric: how to obtain training data</li>
+<li>input format: e.g., color space, spatial/frequency domain</li>
+<li>output format: redefine the output format </li>
+<li>basic model: upgrade CNN to transformer or diffusion model</li>
+<li>essential math: extract and solve the essential math problem </li>
+</ol>
 
       
     </div>
@@ -511,7 +516,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">234</span>
+                  <span class="site-state-item-count">233</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
