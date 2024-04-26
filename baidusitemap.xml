@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/09/09/image_video_synthesis/Diffusion%20Model/</loc>
+    <lastmod>2024-04-22</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/version_control/Git/</loc>
+    <lastmod>2024-03-13</lastmod>
+  </url>
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/IDE/Remote%20Debugging%20for%20Visual%20Code/</loc>
+    <lastmod>2024-03-13</lastmod>
+  </url>
+  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/others/How%20to%20Come%20up%20with%20Ideas/</loc>
     <lastmod>2024-02-27</lastmod>
   </url>
@@ -31,10 +47,6 @@
   <url>
     <loc>https://ustcnewly.github.io/2022/06/16/deep_learning/Aesthetic%20Evaluation%20and%20Cropping/</loc>
     <lastmod>2023-12-21</lastmod>
-  </url>
-  <url>
-    <loc>https://ustcnewly.github.io/2022/09/09/image_video_synthesis/Diffusion%20Model/</loc>
-    <lastmod>2023-11-07</lastmod>
   </url>
   <url>
     <loc>https://ustcnewly.github.io/2023/10/23/image_video_synthesis/Diffusion%20Model%20for%20Sketches/</loc>
@@ -153,10 +165,6 @@
     <lastmod>2022-09-01</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
-    <lastmod>2022-08-31</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/08/22/deep_learning/NERF/</loc>
     <lastmod>2022-08-22</lastmod>
   </url>
@@ -265,10 +273,6 @@
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/IDE/Remote%20Debugging%20for%20Eclipse+PyDev/</loc>
-    <lastmod>2022-04-07</lastmod>
-  </url>
-  <url>
     <loc>https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Enlarge%20VirtualBox%20vdi/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
@@ -285,11 +289,11 @@
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/version_control/Git/</loc>
+    <loc>https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install%20VirtualBox%20Guest%20Addition/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/software/VirtualBox/Install%20VirtualBox%20Guest%20Addition/</loc>
+    <loc>https://ustcnewly.github.io/2024/03/12/software/IDE/Remote%20Debugging%20for%20Eclipse+PyDev%20-%20%E5%89%AF%E6%9C%AC/</loc>
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>

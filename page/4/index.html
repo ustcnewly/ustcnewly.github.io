@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/software/IDE/Remote Debugging for Eclipse+PyDev/">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/software/library/GStreamer+FFmpeg for Ubuntu14.04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Niu">
@@ -300,7 +300,167 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/06/16/software/IDE/Remote Debugging for Eclipse+PyDev/" itemprop="url">Remote Debugging for Eclipse+PyDev</a></h1>
+                <a class="post-title-link" href="/2022/06/16/software/library/GStreamer+FFmpeg for Ubuntu14.04/" itemprop="url">GStreamer+FFmpeg for Ubuntu14.04</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/library/" itemprop="url" rel="index">
+                    <span itemprop="name">library</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>Install gst-plugin</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ddalex/gstreamer</span><br><span class="line">sudo apt-get install gstreamer0.10-*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install gstffmpeg</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:mc3man/gstffmpeg-keep</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gstreamer0.10-ffmpeg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/software/IDE/Remote Debugging for Visual Code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/software/IDE/Remote Debugging for Visual Code/" itemprop="url">Remote Debugging for Visual Code</a></h1>
         
 
         <div class="post-meta">
@@ -385,18 +545,10 @@
       
         
           
-            <h2 id="When-server-is-Linux-client-is-Windows-using-Python"><a href="#When-server-is-Linux-client-is-Windows-using-Python" class="headerlink" title="When server is Linux, client is Windows, using Python."></a>When server is Linux, client is Windows, using Python.</h2><h3 id="In-the-python-file"><a href="#In-the-python-file" class="headerlink" title="In the python file:"></a>In the python file:</h3><p>add the following code<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pydevd</span><br><span class="line">pydevd.settrace(<span class="string">'202.120.38.30'</span>, port=<span class="number">5678</span>)</span><br></pre></td></tr></table></figure></p>
-<p>in which the IP address is the Windows IP and the port is the default Eclipse debugger port.</p>
-<h3 id="Under-Linux"><a href="#Under-Linux" class="headerlink" title="Under Linux:"></a>Under Linux:</h3><ol>
-<li><code>pip install pydevd</code></li>
-<li>In the file <code>lib/python2.7/site-packages/pydevd_file_utils.py</code>, modify <code>PATHS_FROM_ECLIPSE_TO_PYTHON = [(r&#39;L:\test&#39;, r&#39;/home/niuli/test&#39;)]</code>, in which the former is Windows path and the latter is Linux path.</li>
-</ol>
-<h3 id="Under-Windows"><a href="#Under-Windows" class="headerlink" title="Under Windows:"></a>Under Windows:</h3><ol>
-<li>Install Eclipse IDE and PyDev plugin for Eclipse.</li>
-<li>Pydev-&gt;Start Debug Server</li>
-<li>Open the Debug perspective and watch Debug Server.</li>
-</ol>
-<p>After the above preparation, run python code under Linux and the debugging process will jump to the debug server under Windows. For interactive debugging, open PyDev Debug Console.</p>
+            <p>Remote-SSH: Open SSH Configuration File  ~/.ssh/config</p>
+<p>Host jump-box<br>    HostName <ip><br>    User <username><br>    Port <portnumber></portnumber></username></ip></p>
+<p>Host target-box<br>    HostName <innerip><br>    User <username><br>    Port 22<br>    ProxyCommand ssh -q -W %h:%p jump-box</username></innerip></p>
+<p>Remote Explorer</p>
 
           
         
@@ -1808,163 +1960,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/TensorFlow/TensorFlow GPU Usage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/programming_language/TensorFlow/TensorFlow GPU Usage/" itemprop="url">TensorFlow GPU Usage</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
-<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
-<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
-<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
-<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2019,7 +2014,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">233</span>
+                  <span class="site-state-item-count">234</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
