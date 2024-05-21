@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
+    <loc>https://ustcnewly.github.io/2022/09/09/image_video_synthesis/Diffusion%20Model/</loc>
     
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ustcnewly.github.io/2022/09/09/image_video_synthesis/Diffusion%20Model/</loc>
+    <loc>https://ustcnewly.github.io/2024/05/20/deep_learning/Human%20Generation/</loc>
     
-    <lastmod>2024-04-22</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2024/05/08/deep_learning/Mixture-of-Experts/</loc>
+    
+    <lastmod>2024-05-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/2022/06/16/machine_learning/Vector%20Quantization/</loc>
+    
+    <lastmod>2024-04-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2155,7 +2173,7 @@
 
   <url>
     <loc>https://ustcnewly.github.io/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2163,777 +2181,784 @@
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CMake/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Eclipse/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/3D/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/adversarial-attack/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Makefile/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/object-detection/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/segmentation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/aesthetic-cropping/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/attention/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/boundary/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/semantic-segmentation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/network-structure/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/EM/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GAN/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/domain-translation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/disentangle/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/style-transfer/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/domain-adaptation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/representation-learning/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/edge-detection/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/face-verification/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/face-recognition/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/generative-model/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/few-shot/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-translation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/fine-grained/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/weakly-supervised/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/gaze-estimation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GNN/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VAE/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/composition/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/harmonization/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/blending/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/action-recognition/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-generation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-manipulation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/inpainting/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/matting/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/webly-supervised/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/cross-modal-retrieval/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/memory/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/privileged-information/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/ROI/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/self-supervised/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/scene-text/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/semi-supervised/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/video-object-segmentation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/instance-segmentation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VQA/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/watermark/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/visual-sentiment/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/object-tracking/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/word-vector/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/zero-shot/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/distillation/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/causality/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/surgery/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/knowledge-graph/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/proposal/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/SVM/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/lifelong-learning/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/meta-learning/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/MI/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/outlier-detection/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/optical-flow/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/attribute/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GitHub/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Hexo/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/mount/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Ubuntu/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/SSH/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VNC/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/BIOS/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Windows/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/paper/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/shadow/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/MATLAB/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/hyper-parameter/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/MarkdownPad/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/LaTeX/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/medical/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/camera/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GPU/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CUDA/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CuDNN/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/crontab/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Shell/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Adroid/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Caffe/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/PyTorch/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/HTML/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/CSS/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Python/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/TensorFlow/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Anaconda/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/wxPython/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/C/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Java/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/JDK/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/C/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/VirtualBox/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/GStreamer/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/FFmpeg/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/OpenCV/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Git/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/rendering/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/diffusion-model/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/image-editing/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/docker/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/Line-detection/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/tags/sketch/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ustcnewly.github.io/tags/MoE/</loc>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -2942,126 +2967,126 @@
   
   <url>
     <loc>https://ustcnewly.github.io/categories/compiler/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/paper-note/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/network/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/OS/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/hardware/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/hardware/camera/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/hardware/GPU/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/HTML/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/Android/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/MATLAB/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/Python/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/C/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/programming-language/cross-language/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/IDE/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/library/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ustcnewly.github.io/categories/software/version-control/</loc>
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

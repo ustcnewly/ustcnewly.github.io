@@ -281,6 +281,344 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Meta Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Meta Learning/" itemprop="url">Meta Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Taxonomy"><a href="#Taxonomy" class="headerlink" title="Taxonomy"></a>Taxonomy</h3><p>1) <strong>metric-based:</strong>  learn a good metric</p>
+<ul>
+<li>matching network <a href="https://arxiv.org/pdf/1606.04080.pdf" target="_blank" rel="noopener">[1]</a></li>
+<li>relation network <a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">[2]</a></li>
+<li>prototypical network <a href="http://papers.nips.cc/paper/6996-prototypical-networks-for-few-shot-learning.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://arxiv.org/pdf/1803.00676.pdf" target="_blank" rel="noopener">[4]</a></li>
+</ul>
+<p>2) <strong>optimization-based:</strong> gradient</p>
+<ul>
+<li>Meta-Learner LSTM <a href="https://openreview.net/pdf?id=rJY0-Kcll" target="_blank" rel="noopener">[5]</a></li>
+<li>MAML <a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">[6]</a> <a href="https://arxiv.org/pdf/1710.11622.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://arxiv.org/pdf/1801.08930.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li><p>REPTILE (an approximation of MAML) <a href="https://arxiv.org/abs/1803.02999" target="_blank" rel="noopener">[9]</a></p>
+<center><img src="https://i.imgur.com/ZYN2cQ5.png" width="60%" border="0"></center>
+
+<p>Optimization based methods aim to obtain good parameter initilization. If we simply train multiple tasks, the obtained model parameters may lead to sub optimum for each task. </p>
+<center><img src="https://i.imgur.com/FBax49a.jpg" width="60%" border="0"></center>
+
+</li>
+</ul>
+<p>3) <strong>model-based:</strong> predict model parameters</p>
+<ul>
+<li>MANN <a href="http://proceedings.mlr.press/v48/santoro16.pdf" target="_blank" rel="noopener">[10]</a></li>
+<li>MetaNet <a href="https://arxiv.org/pdf/1703.00837.pdf" target="_blank" rel="noopener">[11]</a></li>
+</ul>
+<p><strong>Reference:</strong></p>
+<ol>
+<li>Vinyals, Oriol, et al. “Matching networks for one shot learning.” NIPS, 2016.</li>
+<li>Sung, Flood, et al. “Learning to compare: Relation network for few-shot learning.” CVPR, 2018.</li>
+<li>Snell, Jake, Kevin Swersky, and Richard Zemel. “Prototypical networks for few-shot learning.” NIPS, 2017.</li>
+<li>Ren, Mengye, et al. “Meta-learning for semi-supervised few-shot classification.” arXiv preprint arXiv:1803.00676 (2018).</li>
+<li>Sachin Ravi and Hugo Larochelle. “Optimization as a Model for Few-Shot Learning.” ICLR, 2017.</li>
+<li>Chelsea Finn, Pieter Abbeel, and Sergey Levine. “Model-agnostic meta-learning for fast adaptation of deep networks.” ICML, 2017.</li>
+<li>Finn, Chelsea, and Sergey Levine. “Meta-learning and universality: Deep representations and gradient descent can approximate any learning algorithm.” arXiv preprint arXiv:1710.11622 (2017).</li>
+<li>Grant, Erin, et al. “Recasting gradient-based meta-learning as hierarchical bayes.” arXiv preprint arXiv:1801.08930 (2018).</li>
+<li>A. Nichol, J. Achiam, and J. Schulman. On first-order meta-learning algorithms. arXiv, 1803.02999v2, 2018.</li>
+<li>Adam Santoro, et al. “Meta-learning with memory-augmented neural networks.” ICML. 2016.</li>
+<li>Munkhdalai, Tsendsuren, and Hong Yu. “Meta networks.” ICML, 2017.</li>
+</ol>
+<h3 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials:"></a>Tutorials:</h3><ul>
+<li><p><a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html</a></p>
+</li>
+<li><p><a href="http://metalearning-symposium.ml/files/vinyals.pdf" target="_blank" rel="noopener">http://metalearning-symposium.ml/files/vinyals.pdf</a></p>
+</li>
+<li><p><a href="https://github.com/floodsung/Meta-Learning-Papers" target="_blank" rel="noopener">https://github.com/floodsung/Meta-Learning-Papers</a></p>
+</li>
+<li><p>A more comprehensive survey: <a href="https://arxiv.org/pdf/1810.03548.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1810.03548.pdf</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Lifelong Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Lifelong Learning/" itemprop="url">Lifelong Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Related concepts: online learning, incremental learning, continual learning</p>
+<h3 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h3><ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0893608019300231" target="_blank" rel="noopener">Continual lifelong learning with neural networks: A review</a></li>
+<li><a href="https://homes.esat.kuleuven.be/~konijn/publications/2020/DeLange2.pdf" target="_blank" rel="noopener">A continual learning survey: Defying forgetting in classification tasks</a></li>
+<li><a href="https://arxiv.org/pdf/2010.15277" target="_blank" rel="noopener">Class-incremental learning: survey and performance evaluation</a></li>
+</ul>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><ul>
+<li><a href="https://cs330.stanford.edu/slides/cs330_lifelonglearning_karol.pdf" target="_blank" rel="noopener">Stanford course</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Latent Variable Regularization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1549,332 +1887,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/GAN Evaluation Metric/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/machine_learning/GAN Evaluation Metric/" itemprop="url">GAN Evaluation Metric</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Objective-Evaluation"><a href="#Objective-Evaluation" class="headerlink" title="Objective Evaluation:"></a>Objective Evaluation:</h2><p>An empirical study on evaluation metrics of generative adversarial networks <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">[1]</a> with <a href="https://github.com/xuqiantong/GAN-Metrics" target="_blank" rel="noopener">code</a>.</p>
-<ol>
-<li><p>Inception Score (IS): classification score using the InceptionNet pretrained on ImageNet</p>
-<script type="math/tex; mode=display">IS=\exp\{E_x[KL(p_M(y|x)||p_M(y))]\}</script><p> in which $p_M(y)$ is the marginal distribution of  $p_M(y|x)$. Expect $p_M(y)$ to be of low entropy while $p_M(y|x)$ to be of high entropy. The higher, the better.</p>
-</li>
-<li><p>Mode score: extension of Inception score</p>
-</li>
-<li><p>Kernel MMD: MMD distance between two data distributions</p>
-</li>
-<li><p>Wasserstein distance: Wasserstein distance (Earth mover’s distance) between two data distributions.</p>
-</li>
-<li><p>Fréchet Inception Distance (FID): extract InceptionNet features and measure the data distribution distance. The lower, the better.</p>
-<script type="math/tex; mode=display">FID=\|\mu_r-\mu_g\|+trace(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{\frac{1}{2}})</script></li>
-<li><p>KNN score: treat true data as positive and generated data as negative. Calculate the leave-one-out (LOO) accuracy based on 1-NN classifier.</p>
-</li>
-<li><p>Learned Perceptual Image Patch Similarity (LPIPS): <script type="math/tex">d(x,x_0)=\sum_l \frac{1}{H_l W_l}\sum_{h,w}\|w_l\circ (\hat{y}_{hw}^l-\hat{y}^l_{0hw})\|^2</script> <a href="https://arxiv.org/pdf/1801.03924.pdf" target="_blank" rel="noopener">[3]</a> <a href="https://github.com/richzhang/PerceptualSimilarity#a-basic-usage" target="_blank" rel="noopener">[code]</a> </p>
-</li>
-</ol>
-<h2 id="Subjective-Evaluation"><a href="#Subjective-Evaluation" class="headerlink" title="Subjective Evaluation:"></a>Subjective Evaluation:</h2><ol>
-<li>Each user sees two randomly selected results at a time and is asked to choose the one that looks more realistic.  After obtaining all the pairwise results, Bradley-Terry model (B-T model) is used to calculate the global ranking score for each method. <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tsai_Deep_Image_Harmonization_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ol>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li>Xu, Qiantong, et al. “An empirical study on evaluation metrics of generative adversarial networks.” arXiv preprint arXiv:1806.07755 (2018).</li>
-<li>Tsai, Yi-Hsuan, et al. “Deep image harmonization.” CVPR, 2017.</li>
-<li>Zhang, Richard, et al. “The unreasonable effectiveness of deep features as a perceptual metric.” CVPR, 2018.</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Finding Datasets/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/machine_learning/Finding Datasets/" itemprop="url">Finding Datasets</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p><a href="https://www.kaggle.com/datasets" target="_blank" rel="noopener">Kaggle datasets</a></p>
-</li>
-<li><p><a href="https://registry.opendata.aws/" target="_blank" rel="noopener">Amazon datasets</a></p>
-</li>
-<li><p><a href="https://archive.ics.uci.edu/ml/datasets.html" target="_blank" rel="noopener">UCI datasets</a></p>
-</li>
-<li><p><a href="https://toolbox.google.com/datasetsearch/" target="_blank" rel="noopener">Google dataset search</a></p>
-</li>
-<li><p><a href="https://msropendata.com/" target="_blank" rel="noopener">Microsoft datasets</a></p>
-</li>
-<li><p><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank" rel="noopener">Awesome public datasets</a></p>
-</li>
-<li><p><a href="https://www.visualdata.io/" target="_blank" rel="noopener">Computer vision datasets</a></p>
-</li>
-<li><p><a href="https://www.graviti.com/open-datasets/" target="_blank" rel="noopener">Graviti</a></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1929,7 +1941,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">234</span>
+                  <span class="site-state-item-count">236</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1951,7 +1963,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">112</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

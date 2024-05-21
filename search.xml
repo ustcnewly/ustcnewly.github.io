@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Human Generation</title>
+    <url>/2024/05/20/deep_learning/Human%20Generation/</url>
+    <content><![CDATA[<p>Combine different components: <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Fruhstuck_InsetGAN_for_Full-Body_Image_Generation_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2404.15267" target="_blank" rel="noopener">[2]</a></p>
+<h4 id="References"><a href="#References" class="headerlink" title="References"></a>References</h4><ol>
+<li><p>Frühstück, Anna, et al. “Insetgan for full-body image generation.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2022.</p>
+</li>
+<li><p>Huang, Zehuan, et al. “From Parts to Whole: A Unified Reference Framework for Controllable Human Image Generation.” arXiv preprint arXiv:2404.15267 (2024).</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mixture-of-Experts</title>
+    <url>/2024/05/08/deep_learning/Mixture-of-Experts/</url>
+    <content><![CDATA[<p>The first paper: <a href="https://www.cs.toronto.edu/~hinton/absps/jjnh91.pdf" target="_blank" rel="noopener">[1]</a></p>
+<p>SwitchTransformer: <a href="https://arxiv.org/pdf/1701.06538" target="_blank" rel="noopener">[2]</a></p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4>]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>MoE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Remote Debugging for Eclipse+PyDev</title>
     <url>/2024/03/12/software/IDE/Remote%20Debugging%20for%20Eclipse+PyDev%20-%20%E5%89%AF%E6%9C%AC/</url>
     <content><![CDATA[<h2 id="When-server-is-Linux-client-is-Windows-using-Python"><a href="#When-server-is-Linux-client-is-Windows-using-Python" class="headerlink" title="When server is Linux, client is Windows, using Python."></a>When server is Linux, client is Windows, using Python.</h2><h3 id="In-the-python-file"><a href="#In-the-python-file" class="headerlink" title="In the python file:"></a>In the python file:</h3><p>add the following code<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pydevd</span><br><span class="line">pydevd.settrace(<span class="string">'202.120.38.30'</span>, port=<span class="number">5678</span>)</span><br></pre></td></tr></table></figure></p>
@@ -483,7 +511,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 </li>
 <li><p>Image-to-image translation: <a href="https://arxiv.org/pdf/2205.12952.pdf" target="_blank" rel="noopener">[4]</a>, <a href="https://arxiv.org/pdf/2209.15264.pdf" target="_blank" rel="noopener">[7]</a>, <a href="https://arxiv.org/pdf/2108.02938.pdf" target="_blank" rel="noopener">[6]</a>, <a href="https://openreview.net/pdf?id=aBsCjcPu_tE" target="_blank" rel="noopener">[8]</a> </p>
 </li>
-<li><p>Image-to-image translation with guidance: GLIDE<a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a>(global: text), <a href="https://arxiv.org/pdf/2211.13752.pdf" target="_blank" rel="noopener">[20]</a>(global: text, sketch), <a href="https://arxiv.org/pdf/2211.15518.pdf" target="_blank" rel="noopener">[21]</a>(local: text), <a href="https://arxiv.org/pdf/2301.07093.pdf" target="_blank" rel="noopener">[22]</a>(local: text, image), ControlNet<a href="https://arxiv.org/pdf/2302.05543.pdf" target="_blank" rel="noopener">[23]</a>(global: mixture), T2I-Adapter<a href="https://arxiv.org/pdf/2302.08453.pdf" target="_blank" rel="noopener">[24]</a>(global: mixture), <a href="https://arxiv.org/pdf/2302.09778.pdf" target="_blank" rel="noopener">[25]</a>(local: mixture), <a href="https://arxiv.org/pdf/2302.13848.pdf" target="_blank" rel="noopener">[26]</a>(global: text), <a href="https://arxiv.org/pdf/2305.16322.pdf" target="_blank" rel="noopener">[27]</a> </p>
+<li><p>Image-to-image translation with guidance: GLIDE<a href="https://arxiv.org/pdf/2112.10741v1.pdf" target="_blank" rel="noopener">[2]</a>(global: text), <a href="https://arxiv.org/pdf/2211.13752.pdf" target="_blank" rel="noopener">[20]</a>(global: text, sketch), <a href="https://arxiv.org/pdf/2211.15518.pdf" target="_blank" rel="noopener">[21]</a>(local: text), <a href="https://arxiv.org/pdf/2301.07093.pdf" target="_blank" rel="noopener">[22]</a>(local: text, image), ControlNet<a href="https://arxiv.org/pdf/2302.05543.pdf" target="_blank" rel="noopener">[23]</a>(global: mixture), T2I-Adapter<a href="https://arxiv.org/pdf/2302.08453.pdf" target="_blank" rel="noopener">[24]</a>(global: mixture), <a href="https://arxiv.org/pdf/2302.09778.pdf" target="_blank" rel="noopener">[25]</a>(local: mixture), <a href="https://arxiv.org/pdf/2302.13848.pdf" target="_blank" rel="noopener">[26]</a>(global: text), <a href="https://arxiv.org/pdf/2305.16322.pdf" target="_blank" rel="noopener">[27]</a>, Ctrl-Adapter <a href="https://arxiv.org/pdf/2404.09967" target="_blank" rel="noopener">[36]</a></p>
 </li>
 <li><p>unpaired Image-to-image translation: <a href="https://arxiv.org/pdf/2209.15264.pdf" target="_blank" rel="noopener">[19]</a> <a href="https://arxiv.org/pdf/2104.05358.pdf" target="_blank" rel="noopener">[28]</a> <a href="https://arxiv.org/pdf/2203.08382.pdf" target="_blank" rel="noopener">[29]</a></p>
 </li>
@@ -539,6 +567,7 @@ CMD [&quot;python&quot;, &quot;./src/main.py&quot;]
 <p>[33] Ma, Jian, et al. “GlyphDraw: Learning to Draw Chinese Characters in Image Synthesis Models Coherently.” arXiv preprint arXiv:2303.17870 (2023).</p>
 <p>[34] Gu, Jiatao, et al. “Matryoshka Diffusion Models.” arXiv preprint arXiv:2310.15111 (2023).  </p>
 <p>[35] Li, Yanyu, et al. “SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds.” NeurIPS(2023).</p>
+<p>[36] Lin, Han, et al. “Ctrl-Adapter: An Efficient and Versatile Framework for Adapting Diverse Controls to Any Diffusion Model.” arXiv preprint arXiv:2404.09967 (2024).</p>
 ]]></content>
       <categories>
         <category>paper note</category>

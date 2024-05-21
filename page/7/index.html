@@ -281,6 +281,347 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/programming_language/C++/boost/Boost_installation/" itemprop="url">Boost_installation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
+<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
+<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
+<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
+<hr>
+<p>If you have installed boost, using it in a VC project just takes two steps:</p>
+<ol>
+<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
+</li>
+<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
+</li>
+<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
+</li>
+</ol>
+<p>Notes:</p>
+<ol>
+<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
+<li>build-&gt;configuration manager</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_file_system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/programming_language/C++/boost/Boost_file_system/" itemprop="url">Boost_file_system</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/filesystem.hpp&gt;  </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::filesystem;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>file name operation    </p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Note the difference between /= and +=, /= means appending directory， += means string concatenation </span></span><br><span class="line"><span class="function">path <span class="title">dir</span><span class="params">(<span class="string">"C:\\Windows"</span>)</span></span>;</span><br><span class="line">dir /= <span class="string">"System32"</span>;       </span><br><span class="line">dir /= <span class="string">"services.exe"</span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.<span class="built_in">string</span>() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           </span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.parent_path()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;        /C:\Windows\System32</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.filename()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           /services.exe</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.stem()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;               <span class="comment">//services</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.extension()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;          <span class="comment">//.exe</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>file operation: rename, remove, copy</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">exists(path);                               </span><br><span class="line">is_directory(path); </span><br><span class="line">is_regular_file(path);                    </span><br><span class="line">                                          </span><br><span class="line">remove_all(<span class="keyword">const</span> Path&amp; p);  <span class="comment">//remove all files recursively                                                              </span></span><br><span class="line">rename(<span class="keyword">const</span> Path1&amp; from_p, <span class="keyword">const</span> Path2&amp; to_p);                        </span><br><span class="line">copy_file(<span class="keyword">const</span> Path1&amp; from_fp, <span class="keyword">const</span> Path2&amp; to_fp);                    </span><br><span class="line">create_directory(<span class="keyword">const</span> Path &amp; p);</span><br><span class="line">create_directories(<span class="keyword">const</span> Path &amp; p); <span class="comment">//make directory recursively&lt;/pre&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>shallow visit directory</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">directory_iterator end;</span><br><span class="line"><span class="keyword">for</span> (directory_iterator pos(dir2); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *pos &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>deep visit directory: like DFS, stack push&amp;&amp;pop</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> recursive_directory_iterator rd_iterator;</span><br><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"E:\\Student"</span>)</span></span>;</span><br><span class="line">rd_iterator end;</span><br><span class="line"><span class="keyword">for</span> (rd_iterator pos(dir); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_directory(*pos) &amp;&amp; pos.level() &gt; <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.no_push();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*pos == <span class="string">"nofind.txt"</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.pop();</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; pos-&gt;path().filename().<span class="built_in">string</span>()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>catch error</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">    assert(is_directory(dir2));          </span><br><span class="line">    assert(exists(dir2));          </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(filesystem_error&amp; e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.path1() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.what() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1778,340 +2119,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/Hyper Parameter Tuning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/others/Hyper Parameter Tuning/" itemprop="url">Hyper Parameter Tuning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="Parameter-searching"><a href="#Parameter-searching" class="headerlink" title="Parameter searching:"></a>Parameter searching:</h5><ul>
-<li><p>grid search</p>
-</li>
-<li><p><a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf" target="_blank" rel="noopener">random search</a></p>
-</li>
-<li><p>Bayesian Optimization: <a href="https://sigopt.com/" target="_blank" rel="noopener">SigOpt</a> is providing parameter tuning service based on Bayesian optimization. <a href="https://ustcnewly.github.io/2018/07/18/paper_note/Simple%20Bayesian%20Optimization/">This</a> is a good place to start.</p>
-<ul>
-<li><a href="https://github.com/hyperopt/hyperopt" target="_blank" rel="noopener">hyperopt</a> (tree parzen estimator)</li>
-<li><a href="https://github.com/fmfn/BayesianOptimization" target="_blank" rel="noopener">BayesianOptimization</a>, <a href="https://github.com/JasperSnoek/spearmint" target="_blank" rel="noopener">Spearmint</a>, <a href="https://github.com/Yelp/MOE" target="_blank" rel="noopener">MOE</a> (Gaussian process) </li>
-<li><p><a href="http://www.cs.ubc.ca/labs/beta/Projects/SMAC/" target="_blank" rel="noopener">SMAC</a> (random forest regression)</p>
-<p>related papers:  <a href="http://papers.nips.cc/paper/5086-multi-task-bayesian-optimization.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://pdfs.semanticscholar.org/f6c3/ba9e1ccb7931ab1bacb806c7e314ab4d8b06.pdf" target="_blank" rel="noopener">[2]</a> <a href="http://proceedings.mlr.press/v37/snoek15.pdf" target="_blank" rel="noopener">[3]</a> <a href="http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf" target="_blank" rel="noopener">[4]</a></p>
-</li>
-</ul>
-</li>
-<li><p>Spectral Optimization: <a href="https://arxiv.org/pdf/1706.00764.pdf" target="_blank" rel="noopener">Harmonica</a> <a href="https://github.com/callowbird/Harmonica" target="_blank" rel="noopener">[github]</a> currently only supports tuning binary parameters.</p>
-</li>
-</ul>
-<h4 id="Model-ensembling"><a href="#Model-ensembling" class="headerlink" title="Model ensembling:"></a>Model ensembling:</h4><ul>
-<li>different initialization</li>
-<li>different epochs</li>
-<li>different hyperparameters</li>
-</ul>
-<h4 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h4><ul>
-<li><p>A toolkit sealing all types of parameter tuning methods: <a href="https://github.com/tobegit3hub/advisor" target="_blank" rel="noopener">Google Vizier</a></p>
-</li>
-<li><p><a href="https://github.com/google-research/tuning_playbook/tree/main" target="_blank" rel="noopener">Tuning playbook</a></p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/others/How to Conduct Experiments/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/others/How to Conduct Experiments/" itemprop="url">How to Conduct Experiments</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Experimental setting:</p>
-<ul>
-<li>Select more than 3 popular benchmark datasets. Most papers perform evaluation on 3~5 datasets.</li>
-<li>Determine the training/testing split. By default, strictly follow the setting in recent papers. If their settings are not applicable, we can determine our own setting reasonably and fully describe the details in the paper. </li>
-</ul>
-<p>Experimental implementation:</p>
-<ul>
-<li>For the commonly used model, avoid unnecessary reimplementation. Just use the released code and model.</li>
-<li>If closely related papers release their code, modify based on their code and avoid starting from scratch. </li>
-<li>Document your code with readable and meaningful comments. Otherwise, even your cannot understand your own code after a long time.</li>
-<li>Manage different versions of code carefully, otherwise your code will get messy very rapidly. Use advanced tool such as github to create branches, revert to old version, etc. The brutal approach is to create an individual folder for each version, which is not recommended.</li>
-</ul>
-<p>Experimental running:</p>
-<ul>
-<li>Avoid redundant or unncessary experiments.</li>
-<li>Run experiments parallelly using all available computing resources.</li>
-<li><a href="https://ustcnewly.github.io/2018/09/07/paper_note/Parameter%20Tuning/">Tune hyper-parameters wisely</a>.</li>
-<li>Save final output and important intermediate output for future analysis.</li>
-</ul>
-<p>Experimental record:</p>
-<ul>
-<li>Make a to-do list for what experiments you are going to do.</li>
-<li>For the experiments you have done, summarize your observation and conclusion. Then, adjust the remaining to-do list accordingly. </li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2166,7 +2173,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">234</span>
+                  <span class="site-state-item-count">236</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2188,7 +2195,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">112</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

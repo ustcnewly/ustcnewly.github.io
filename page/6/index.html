@@ -281,6 +281,347 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Fastest Way to Read Text, Image, and Video in Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/programming_language/Python2/Fastest Way to Read Text, Image, and Video in Python/" itemprop="url">Fastest Way to Read Text, Image, and Video in Python</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>When comparing the efficiency of different libraries, there may exist a few orders of magnitude difference. In the implementation in demand of high efficiency, locate the time-consuming function and replace it with the most efficient library function.</p>
+<ol>
+<li><p>Text: Pandas<br>Installation: <code>pip install pandas</code> or <code>conda install pandas</code></p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_csv(text_name, sep=<span class="string">','</span>, header=<span class="keyword">None</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Image: Pillow-SIMD, skimage, OpenCV, imageio</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> skimage</span><br><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment">#read a 1280x720 image</span></span><br><span class="line">pil_im = Image.open(image_name) <span class="comment">#0.0057s</span></span><br><span class="line">pil_im = pil_im.resize((<span class="number">448</span>,<span class="number">448</span>)) <span class="comment">#0.025s</span></span><br><span class="line"></span><br><span class="line">sk_im = skimage.io.imread(image_name) <span class="comment">#0.026s</span></span><br><span class="line">sk_im = skimage.transform.resize(sk_im, (<span class="number">448</span>, <span class="number">448</span>)) <span class="comment">#0.060S</span></span><br><span class="line"></span><br><span class="line">cv_im = cv2.imread(image_name) <span class="comment">#0.021s</span></span><br><span class="line">cv_im = cv2.resize(cv_im, (<span class="number">448</span>, <span class="number">448</span>)) <span class="comment">#0.0016s</span></span><br><span class="line"></span><br><span class="line">im = imageio.imread(image_name) <span class="comment">#0.033s</span></span><br></pre></td></tr></table></figure>
+<p>Pillow-SIMD is faster than Pillow, which is not reported here. OpenCV is the most efficient one here.</p>
+</li>
+<li><p>Video: OpenCV, skvideo, imageio</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line"><span class="keyword">import</span> skvideo</span><br><span class="line"></span><br><span class="line"><span class="comment">#read 30fps video with each frame 1280x720 </span></span><br><span class="line">cap = cv2.VideoCapture(video_name)</span><br><span class="line">ret, frame = cap.read() <span class="comment">#0.002s</span></span><br><span class="line"></span><br><span class="line">vid = imageio.get_reader(video_name, <span class="string">'ffmpeg'</span>)</span><br><span class="line"><span class="keyword">for</span> image <span class="keyword">in</span> vid.iter_data(): <span class="comment">#0.004s</span></span><br><span class="line"></span><br><span class="line">skvideo.setFFmpegPath(os.path.dirname(sys.executable))</span><br><span class="line">videogen = skvideo.io.vreader(video_name)</span><br><span class="line"><span class="keyword">for</span> img <span class="keyword">in</span> videogen: <span class="comment">#0.073s</span></span><br></pre></td></tr></table></figure>
+<p>For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, <code>/usr/bin/python</code> is recommended. imageio and OpenCV are comparable here.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/Python2/Anaconda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/programming_language/Python2/Anaconda/" itemprop="url">Anaconda</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming-language/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>python virtual environment: creat an isolated environment for each python version set, similar with pyenv.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><p><strong>For Windows:</strong></p>
+<p>Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment.</p>
+<p>Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment.</p>
+<p><strong>For Linux:</strong></p>
+<pre><code>bash Anaconda2-4.3.1-Linux-x86_64.sh
+</code></pre><h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p>list: conda info —envs</p>
+<p>create: <code>conda create --name $newenv python=2.7</code> (if copy, use —clone $oldenv)</p>
+<p>activate: source activate $newenv</p>
+<p>revert: source deactivate</p>
+<p>delete: conda remove —name $newenv —all</p>
+<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>list: conda list</p>
+<p>search: conda search pack</p>
+<p>install new packages:</p>
+<ol>
+<li>conda install pack</li>
+<li>conda install pack=1.8.2 # install certain version</li>
+<li>conda install —name env pack</li>
+<li>search on <a href="http://anaconda.org/" target="_blank" rel="noopener">http://anaconda.org/</a>, no need to register</li>
+<li>pip install pack</li>
+<li>install from local pack</li>
+</ol>
+<p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/MATLAB/MATLAB draw plot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1716,347 +2057,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_installation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/programming_language/C++/boost/Boost_installation/" itemprop="url">Boost_installation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Problem:</strong> When installing boost, “cl not found”. Or unresolved reference.</p>
-<p><strong>Solution:</strong> cd Microsoft Visual Studio 11.0\VC, run <code>vcvarsall.bat amd64</code>. add Microsoft Visual Studio 11.0\VC\bin into environmental Path. Refer to <a href="http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html" target="_blank" rel="noopener">http://www.boost.org/doc/libs/1_59_0/more/getting_started/windows.html</a> for installation details. </p>
-<p>Note that 32 bit and 64 bit should be treated differently when using b2.exe. For 32 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\i386 stage</code>. For 64 bit, run <code>b2 toolset=msvc-11.0 --build-type=complete --libdir=C:\Boost\lib\x64 architecture=x86 address-model=64 stage</code>. </p>
-<p>To put it simple, download binary files from <a href="http://sourceforge.net/projects/boost/files/boost-binaries/" target="_blank" rel="noopener">http://sourceforge.net/projects/boost/files/boost-binaries/</a>. Boost is auto-link which means you don’t need to add all lib files manually.</p>
-<hr>
-<p>If you have installed boost, using it in a VC project just takes two steps:</p>
-<ol>
-<li><p>C/C++-&gt;General: Additional Include Directories D:\Program_Files\boost_1_59_0_binary\boost;</p>
-</li>
-<li><p>Linker-&gt;General: Additional Library Directories D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0;</p>
-</li>
-<li><p>Add D:\Program_Files\boost_1_59_0_binary\lib64-msvc-11.0 in the environmental variable Path.</p>
-</li>
-</ol>
-<p>Notes:</p>
-<ol>
-<li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
-<li>build-&gt;configuration manager</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/programming_language/C++/boost/Boost_file_system/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/programming_language/C++/boost/Boost_file_system/" itemprop="url">Boost_file_system</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; boost/filesystem.hpp&gt;  </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::filesystem;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>file name operation    </p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Note the difference between /= and +=, /= means appending directory， += means string concatenation </span></span><br><span class="line"><span class="function">path <span class="title">dir</span><span class="params">(<span class="string">"C:\\Windows"</span>)</span></span>;</span><br><span class="line">dir /= <span class="string">"System32"</span>;       </span><br><span class="line">dir /= <span class="string">"services.exe"</span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.<span class="built_in">string</span>() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           </span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.parent_path()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;        /C:\Windows\System32</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.filename()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;           /services.exe</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.stem()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;               <span class="comment">//services</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; dir.extension()&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;          <span class="comment">//.exe</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>file operation: rename, remove, copy</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">exists(path);                               </span><br><span class="line">is_directory(path); </span><br><span class="line">is_regular_file(path);                    </span><br><span class="line">                                          </span><br><span class="line">remove_all(<span class="keyword">const</span> Path&amp; p);  <span class="comment">//remove all files recursively                                                              </span></span><br><span class="line">rename(<span class="keyword">const</span> Path1&amp; from_p, <span class="keyword">const</span> Path2&amp; to_p);                        </span><br><span class="line">copy_file(<span class="keyword">const</span> Path1&amp; from_fp, <span class="keyword">const</span> Path2&amp; to_fp);                    </span><br><span class="line">create_directory(<span class="keyword">const</span> Path &amp; p);</span><br><span class="line">create_directories(<span class="keyword">const</span> Path &amp; p); <span class="comment">//make directory recursively&lt;/pre&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shallow visit directory</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">directory_iterator end;</span><br><span class="line"><span class="keyword">for</span> (directory_iterator pos(dir2); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *pos &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>deep visit directory: like DFS, stack push&amp;&amp;pop</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> recursive_directory_iterator rd_iterator;</span><br><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"E:\\Student"</span>)</span></span>;</span><br><span class="line">rd_iterator end;</span><br><span class="line"><span class="keyword">for</span> (rd_iterator pos(dir); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_directory(*pos) &amp;&amp; pos.level() &gt; <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.no_push();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*pos == <span class="string">"nofind.txt"</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.pop();</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; pos-&gt;path().filename().<span class="built_in">string</span>()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>catch error</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">"c:\\Windows\\System32"</span>)</span></span>;</span><br><span class="line">    assert(is_directory(dir2));          </span><br><span class="line">    assert(exists(dir2));          </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(filesystem_error&amp; e)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.path1() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e.what() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2111,7 +2111,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">234</span>
+                  <span class="site-state-item-count">236</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2133,7 +2133,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">112</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

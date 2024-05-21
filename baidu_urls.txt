@@ -1,3 +1,5 @@
+https://ustcnewly.github.io/2024/05/20/deep_learning/Human Generation/
+https://ustcnewly.github.io/2024/05/08/deep_learning/Mixture-of-Experts/
 https://ustcnewly.github.io/2024/03/12/software/IDE/Remote Debugging for Eclipse+PyDev - 副本/
 https://ustcnewly.github.io/2024/02/04/others/Mirror Resources/
 https://ustcnewly.github.io/2024/01/03/classification_detection_segmentation/Line Detection/
@@ -6,5 +8,3 @@ https://ustcnewly.github.io/2023/10/23/image_video_synthesis/Diffusion Model for
 https://ustcnewly.github.io/2023/09/30/image_video_synthesis/Diffusion Model for Videos/
 https://ustcnewly.github.io/2023/09/04/software/Deep Learning Model Deployment/
 https://ustcnewly.github.io/2023/09/04/software/Docker/
-https://ustcnewly.github.io/2023/07/14/image_video_synthesis/Segment Anything/
-https://ustcnewly.github.io/2023/07/14/image_video_synthesis/Drag Image Editing/
