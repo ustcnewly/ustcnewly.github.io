@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Generative Composition</title>
+    <url>/2025/01/06/deep_learning/Generative%20Composition/</url>
+    <content><![CDATA[<h3 id="Object-Text-Guided"><a href="#Object-Text-Guided" class="headerlink" title="(Object+Text)-Guided"></a>(Object+Text)-Guided</h3><h4 id="Training-free"><a href="#Training-free" class="headerlink" title="Training-free"></a>Training-free</h4><ul>
+<li>Pengzhi Li, Qiang Nie, Ying Chen, Xi Jiang, Kai Wu, Yuhuan Lin, Yong Liu, Jinlong Peng, Chengjie Wang, Feng Zheng: “<em>Tuning-Free Image Customization with Image and Text Guidance.</em>“  arXiv preprint arXiv:2403.12658 (2024) <a href="https://arxiv.org/pdf/2403.12658" target="_blank" rel="noopener">[arXiv]</a><h4 id="Training-based"><a href="#Training-based" class="headerlink" title="Training-based"></a>Training-based</h4></li>
+<li>Yicheng Yang, Pengxiang Li, Lu Zhang, Liqian Ma, Ping Hu, Siyu Du, Yunzhi Zhuge, Xu Jia, Huchuan Lu: “<em>DreamMix: Decoupling Object Attributes for Enhanced Editability in Customized Image Inpainting.</em>“ arXiv preprint arXiv:2411.17223 (2024) <a href="https://arxiv.org/pdf/2411.17223" target="_blank" rel="noopener">[arXiv]</a> <a href="https://github.com/mycfhs/dreammix" target="_blank" rel="noopener">[code]</a></li>
+<li>Shaoan Xie, Yang Zhao, Zhisheng Xiao, Kelvin C.K. Chan, Yandong Li, Yanwu Xu, Kun Zhang, Tingbo Hou: “<em>DreamInpainter: Text-Guided Subject-Driven Image Inpainting with Diffusion Models.</em>“ arXiv preprint arXiv:2312.03771 (2023) <a href="https://arxiv.org/pdf/2312.03771" target="_blank" rel="noopener">[arXiv]</a></li>
+<li>Yulin Pan, Chaojie Mao, Zeyinzi Jiang, Zhen Han, Jingfeng Zhang: “<em>Locate, Assign, Refine: Taming Customized Image Inpainting with Text-Subject Guidance.</em>“ arXiv preprint arXiv:2403.19534 (2024) <a href="https://arxiv.org/pdf/2403.19534" target="_blank" rel="noopener">[arXiv]</a> <a href="https://github.com/modelscope/scepter" target="_blank" rel="noopener">[code]</a></li>
+</ul>
+<h4 id="Foreground-3D-Background-image"><a href="#Foreground-3D-Background-image" class="headerlink" title="Foreground: 3D;  Background: image"></a>Foreground: 3D;  Background: image</h4><ul>
+<li>Jinghao Zhou, Tomas Jakab, Philip Torr, Christian Rupprecht: “<em>Scene-Conditional 3D Object Stylization and Composition.</em>“ arXiv preprint arXiv:2312.12419 (2023) <a href="https://arxiv.org/pdf/2312.12419.pdf" target="_blank" rel="noopener">[arXiv]</a> <a href="https://github.com/shallowtoil/scene-cond-3d" target="_blank" rel="noopener">[code]</a></li>
+</ul>
+<h4 id="Foreground-3D-Background-3D"><a href="#Foreground-3D-Background-3D" class="headerlink" title="Foreground: 3D;  Background: 3D"></a>Foreground: 3D;  Background: 3D</h4><ul>
+<li>Mohamad Shahbazi, Liesbeth Claessens, Michael Niemeyer, Edo Collins, Alessio Tonioni, Luc Van Gool, Federico Tombari: “<em>InseRF: Text-Driven Generative Object Insertion in Neural 3D Scenes.</em>“ arXiv preprint arXiv:2401.05335 (2024) <a href="https://arxiv.org/pdf/2401.05335.pdf" target="_blank" rel="noopener">[arXiv]</a></li>
+<li>Rahul Goel, Dhawal Sirikonda, Saurabh Saini, PJ Narayanan: “<em>Interactive Segmentation of Radiance Fields.</em>“ CVPR (2023) <a href="https://arxiv.org/abs/2212.13545" target="_blank" rel="noopener">[arXiv]</a> <a href="https://github.com/rahul-goel/isrf_code" target="_blank" rel="noopener">[code]</a></li>
+<li>Rahul Goel, Dhawal Sirikonda, Rajvi Shah, PJ Narayanan: “<em>FusedRF: Fusing Multiple Radiance Fields.</em>“ CVPR Workshop (2023) <a href="https://arxiv.org/abs/2306.04180" target="_blank" rel="noopener">[arXiv]</a></li>
+<li>Verica Lazova, Vladimir Guzov, Kyle Olszewski, Sergey Tulyakov, Gerard Pons-Moll: “<em>Control-NeRF: Editable Feature Volumes for Scene Rendering and Manipulation.</em>“ WACV (2023) <a href="https://arxiv.org/abs/2204.10850" target="_blank" rel="noopener">[arXiv]</a></li>
+<li>Jiaxiang Tang, Xiaokang Chen, Jingbo Wang, Gang Zeng: “<em>Compressible-composable NeRF via Rank-residual Decomposition.</em>“ NIPS (2022) <a href="https://arxiv.org/abs/2205.14870" target="_blank" rel="noopener">[arXiv]</a> <a href="https://github.com/ashawkey/CCNeRF" target="_blank" rel="noopener">[code]</a></li>
+<li>Bangbang Yang, Yinda Zhang, Yinghao Xu, Yijin Li, Han Zhou, Hujun Bao, Guofeng Zhang, Zhaopeng Cui: “<em>Learning Object-Compositional Neural Radiance Field for Editable Scene Rendering.</em>“ ICCV (2021) <a href="https://arxiv.org/abs/2109.01847" target="_blank" rel="noopener">[arXiv]</a> <a href="https://github.com/zju3dv/object_nerf" target="_blank" rel="noopener">[code]</a></li>
+</ul>
+<h4 id="Foreground-video-Background-image"><a href="#Foreground-video-Background-image" class="headerlink" title="Foreground: video;  Background: image"></a>Foreground: video;  Background: image</h4><ul>
+<li>Boxiao Pan, Zhan Xu, Chun-Hao Paul Huang, Krishna Kumar Singh, Yang Zhou, Leonidas J. Guibas, Jimei Yang: “<em>ActAnywhere: Subject-Aware Video Background Generation.</em>“ arXiv preprint arXiv:2401.10822 (2024) <a href="https://arxiv.org/pdf/2401.10822.pdf" target="_blank" rel="noopener">[arXiv]</a> </li>
+</ul>
+<h4 id="Foreground-video-Background-video"><a href="#Foreground-video-Background-video" class="headerlink" title="Foreground: video;  Background: video"></a>Foreground: video;  Background: video</h4><ul>
+<li><p>Jiaqi Guo, Sitong Su, Junchen Zhu, Lianli Gao, Jingkuan Song: “<em>Training-Free Semantic Video Composition via Pre-trained Diffusion Model.</em>“ arXiv preprint arXiv:2401.09195 (2024) <a href="https://arxiv.org/pdf/2401.09195v1.pdf" target="_blank" rel="noopener">[arXiv]</a></p>
+</li>
+<li><p>Donghoon Lee, Tomas Pfister, Ming-Hsuan Yang: “<em>Inserting Videos into Videos.</em>“ CVPR (2019) <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Lee_Inserting_Videos_Into_Videos_CVPR_2019_paper.pdf" target="_blank" rel="noopener">[pdf]</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Human Generation</title>
     <url>/2024/05/20/deep_learning/Human%20Generation/</url>
     <content><![CDATA[<p>Combine different components: <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Fruhstuck_InsetGAN_for_Full-Body_Image_Generation_CVPR_2022_paper.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2404.15267" target="_blank" rel="noopener">[2]</a></p>
@@ -4306,11 +4340,13 @@ spyder
 <h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
 <li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
 </li>
-<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
+<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code>  (GPU driver version and CUDA user-mode version)</p>
 </li>
 </ul>
 <h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
 <li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
+</li>
+<li><p>check the compatibility between CUDA runtime version and driver version: <a href="https://docs.nvidia.com/deploy/cuda-compatibility/" target="_blank" rel="noopener">https://docs.nvidia.com/deploy/cuda-compatibility/</a></p>
 </li>
 <li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
 </li>

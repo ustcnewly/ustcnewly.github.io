@@ -281,6 +281,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/Graph Neural Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/machine_learning/Graph Neural Network/" itemprop="url">Graph Neural Network</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Representative-methods"><a href="#Representative-methods" class="headerlink" title="Representative methods"></a>Representative methods</h2><p><a href="http://bcmi.sjtu.edu.cn/~niuli/download/AAAI_tutorial_GNN.pdf" target="_blank" rel="noopener">Tutorial slides on AAAI2019</a> </p>
+<ul>
+<li>Graph Convolutional Network (GCN) <a href="https://arxiv.org/abs/1609.02907" target="_blank" rel="noopener">[6]</a></li>
+<li>Graph Attention Network <a href="https://arxiv.org/abs/1710.10903" target="_blank" rel="noopener">[7]</a></li>
+<li>GraphSAGE(SAmple and aggreGatE) <a href="https://papers.nips.cc/paper/6703-inductive-representation-learning-on-large-graphs.pdf" target="_blank" rel="noopener">[8]</a></li>
+<li>Transformer <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf" target="_blank" rel="noopener">[9]</a>: transformer can be deemed as a type of GNN. </li>
+</ul>
+<h2 id="Avoid-oversmoothing-and-go-deeper"><a href="#Avoid-oversmoothing-and-go-deeper" class="headerlink" title="Avoid oversmoothing and go deeper"></a>Avoid oversmoothing and go deeper</h2><ul>
+<li><p>Initial residual and Identity mapping <a href="http://xxx.itp.ac.cn/pdf/2007.02133v1" target="_blank" rel="noopener">[12]</a></p>
+</li>
+<li><p>GCN and PageRank <a href="http://xxx.itp.ac.cn/pdf/1810.05997v5" target="_blank" rel="noopener">[13]</a></p>
+</li>
+</ul>
+<h2 id="Graph-similarity-matching"><a href="#Graph-similarity-matching" class="headerlink" title="Graph similarity/matching"></a>Graph similarity/matching</h2><p>A survey on graph similarity <a href="https://arxiv.org/pdf/1912.11615.pdf" target="_blank" rel="noopener">[4]</a></p>
+<h2 id="Graph-transformation"><a href="#Graph-transformation" class="headerlink" title="Graph transformation:"></a>Graph transformation:</h2><p>pooling/unpooling <a href="https://arxiv.org/pdf/1905.05178.pdf" target="_blank" rel="noopener">[5]</a></p>
+<h2 id="Dynamic-Graph"><a href="#Dynamic-Graph" class="headerlink" title="Dynamic Graph:"></a>Dynamic Graph:</h2><ul>
+<li>Pointer Graph Network <a href="https://arxiv.org/pdf/2006.06380.pdf" target="_blank" rel="noopener">[11]</a></li>
+</ul>
+<h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><ul>
+<li><p>GNN for zero-shot learning <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf" target="_blank" rel="noopener">[1]</a><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf" target="_blank" rel="noopener">[2]</a>: treat each category as a graph node</p>
+</li>
+<li><p>GNN for multi-view learning <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Dongang_Wang_Dividing_and_Aggregating_ECCV_2018_paper.pdf" target="_blank" rel="noopener">[3]</a>: treat each view as a graph node</p>
+</li>
+<li><p>GNN for clustering <a href="https://arxiv.org/pdf/2002.01633.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+</ul>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ol>
+<li><p>Wang, Xiaolong, Yufei Ye, and Abhinav Gupta. “Zero-shot recognition via semantic embeddings and knowledge graphs.” CVPR, 2018.</p>
+</li>
+<li><p>Lee, Chung-Wei, et al. “Multi-label zero-shot learning with structured knowledge graphs.” CVPR, 2018.</p>
+</li>
+<li><p>Wang, Dongang, et al. “Dividing and aggregating network for multi-view action recognition.” ECCV, 2018.</p>
+</li>
+<li><p>Ma, Guixiang, et al. “Deep Graph Similarity Learning: A Survey.” arXiv preprint arXiv:1912.11615 (2019).</p>
+</li>
+<li><p>Hongyang Gao, Shuiwang Ji: Graph U-Nets. CoRR abs/1905.05178 (2019)</p>
+</li>
+<li><p>Kipf, Thomas N., and Max Welling. “Semi-supervised classification with graph convolutional networks.” arXiv preprint arXiv:1609.02907 (2016).</p>
+</li>
+<li><p>Veličković, Petar, et al. “Graph attention networks.” arXiv preprint arXiv:1710.10903 (2017).</p>
+</li>
+<li><p>Hamilton, Will, Zhitao Ying, and Jure Leskovec. “Inductive representation learning on large graphs.” NeurIPS, 2017.</p>
+</li>
+<li><p>Vaswani, Ashish, et al. “Attention is all you need.” NeurIPS, 2017.</p>
+</li>
+<li><p>Bo, Deyu, et al. “Structural Deep Clustering Network.” Proceedings of The Web Conference 2020. 2020.</p>
+</li>
+<li><p>Veličković, Petar, et al. “Pointer Graph Networks.” arXiv preprint arXiv:2006.06380 (2020).</p>
+</li>
+<li><p>Chen, Ming, et al. “Simple and deep graph convolutional networks.” arXiv preprint arXiv:2007.02133 (2020).</p>
+</li>
+<li><p>Klicpera, Johannes, Aleksandar Bojchevski, and Stephan Günnemann. “Predict then propagate: Graph neural networks meet personalized pagerank.” arXiv preprint arXiv:1810.05997 (2018).</p>
+</li>
+<li><p>Dosovitskiy, Alexey, et al. “An image is worth 16x16 words: Transformers for image recognition at scale.” arXiv preprint arXiv:2010.11929 (2020).</p>
+</li>
+<li><p>Carion, Nicolas, et al. “End-to-End Object Detection with Transformers.” arXiv preprint arXiv:2005.12872 (2020).</p>
+</li>
+<li><p>Chen, Hanting, et al. “Pre-Trained Image Processing Transformer.” arXiv preprint arXiv:2012.00364 (2020).</p>
+</li>
+<li><p>Chefer, Hila, Shir Gur, and Lior Wolf. “Transformer Interpretability Beyond Attention Visualization.” arXiv preprint arXiv:2012.09838 (2020).</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/machine_learning/GAN Evaluation Metric/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1704,207 +1907,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/hardware/GPU/GPU Cuda and CuDNN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/hardware/GPU/GPU Cuda and CuDNN/" itemprop="url">GPU Cuda and CuDNN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/" itemprop="url" rel="index">
-                    <span itemprop="name">hardware</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hardware/GPU/" itemprop="url" rel="index">
-                    <span itemprop="name">GPU</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="https://www.ustcnewly.com/github_images/GPU_CUDA.png" style="width:600px;"></p>
-<h3 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h3><ul>
-<li><p>look up GPU information: <code>lspci</code> or <code>lshw -C display</code> </p>
-</li>
-<li><p>NVIDIA system management interface, monitor GPU usage: <code>nvidia-smi</code></p>
-</li>
-</ul>
-<h3 id="GPU-Driver"><a href="#GPU-Driver" class="headerlink" title="GPU Driver"></a>GPU Driver</h3><ul>
-<li><p>check the latest driver information on <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a>. Then, look up driver information on local machine: <code>cat /proc/driver/nvidia/version</code></p>
-</li>
-<li><p>Install NVIDIA GPU driver using GUI: Software &amp; Updates -&gt; Additional Drivers</p>
-</li>
-<li><p>Install NVIDIA GPU driver using apt-get</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:Ubuntu-x-swat/x-updates</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nvidia-current nvidia-current-modaliases nvidia-settings</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install NVIDIA GPU driver using *.run file downloaded from <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a></p>
-<ol>
-<li>Hit CTRL+ALT+F1 and login using your credentials.</li>
-<li>Stop your current X server session by typing <code>sudo service lightdm stop</code></li>
-<li>Enter runlevel 3 by typing <code>sudo init 3</code> and install your *.run file.</li>
-<li>You might be required to reboot when the installation finishes. If not, run <code>sudo service lightdm start</code> or <code>sudo start lightdm</code> to start your X server again.</li>
-</ol>
-</li>
-</ul>
-<h3 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h3><p>When using anaconda to install deep learning platform, sometimes it is unnecessary to install CUDA by yourself. </p>
-<ol>
-<li><p>Preprocessing</p>
-<ul>
-<li>uninstall the GPU driver first: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get remove --purge nvidia*</code> and <code>sudo apt-get autoremove</code>; <code>sudo reboot</code></li>
-<li>blacklist nouveau: add “blacklist nouveau” and “options nouveau modeset=0” at the end of /etc/modprobe.d/blacklist.conf; <code>sudo update-initramfs -u</code>; <code>sudo reboot</code></li>
-<li>Stop your current X server session: <code>sudo service lightdm stop</code></li>
-</ul>
-</li>
-<li><p>Install Cuda</p>
-<p> Download the *.run file from NVIDIA website</p>
-<ul>
-<li>The latest version: <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a> </li>
-<li><p>All versions: <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-toolkit-archive</a> </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh cuda_10.0.130_410.48_linux.run</span><br></pre></td></tr></table></figure>
-<p>and then add into PATH and LD_LIBRARY_PATH</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH=/usr/local/cuda/bin:$PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>check Cuda version after installation: <code>nvcc -V</code>. Compile and run the cuda samples.</p>
-</li>
-</ol>
-<h3 id="CuDNN"><a href="#CuDNN" class="headerlink" title="CuDNN"></a>CuDNN</h3><p>CuDNN is to accelerate Cuda, from <a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a>, just download compressed package.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $CUDNN_PATH	</span><br><span class="line">sudo cp include/* /usr/local/cuda/include/</span><br><span class="line">sudo cp -P lib64/* /usr/local/cuda/lib64/ #use -P to retain symbolic links</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1959,7 +1961,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">236</span>
+                  <span class="site-state-item-count">237</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2040,7 +2042,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
