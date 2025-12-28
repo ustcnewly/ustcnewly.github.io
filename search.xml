@@ -7951,4 +7951,49 @@ model_dir = snapshot_download(&#39;qwen/Qwen-7B&#39;,
         <category>paper note</category>
       </categories>
   </entry>
+  <entry>
+    <title>Dataset Pruning</title>
+    <url>/2025/12/28/deep_learning/Dataset%20Pruning/</url>
+    <content><![CDATA[<p>a) data selection, coreset selection, dataset pruning: select a subset of training data</p>
+<ul>
+<li>survey on coreset selection: <a href="https://arxiv.org/pdf/2505.17799" target="_blank" rel="noopener">https://arxiv.org/pdf/2505.17799</a></li>
+</ul>
+<ul>
+<li><p>some papers of dataset pruning for generative model:</p>
+<pre><code>  * Li, Yize, et al. &quot;Pruning then reweighting: Towards data-efficient training of diffusion models.&quot; ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2025.
+
+  * Moser, Brian B., Federico Raue, and Andreas Dengel. &quot;A study in dataset pruning for image super-resolution.&quot; International Conference on Artificial Neural Networks. Cham: Springer Nature Switzerland, 2024.
+</code></pre></li>
+<li><p>dataset quantization: divide the training set into different bins and select representative samples in each bin. It could be used as a data selection strategy. </p>
+</li>
+<li><p>data attribution: survey on data attribution: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5451054" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5451054</a>. It could be used as a measurement for data selection. Some papers of data attribution for generative model:</p>
+<pre><code>  * Georgiev, Kristian, et al. &quot;The journey, not the destination: How data guides diffusion models.&quot; arXiv preprint arXiv:2312.06205 (2023).
+  * Zheng, Xiaosen, et al. &quot;Intriguing properties of data attribution on diffusion models.&quot; arXiv preprint arXiv:2311.00500 (2023).
+  * Lin, Jinxu, et al. &quot;Diffusion Attribution Score: Evaluating Training Data Influence in Diffusion Models.&quot; arXiv preprint arXiv:2410.18639 (2024).
+</code></pre></li>
+</ul>
+<p>b) dataset distillation: optimize the training set, the optimized training images are not realistic images. There is no work using distilled images to train generative model. </p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>efficiency</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>data pruning generative model</title>
+    <url>/2025/11/06/data_pruning/data_pruning_generative_model/</url>
+    <content><![CDATA[<ol>
+<li></li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] </p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>data pruning</tag>
+      </tags>
+  </entry>
 </search>

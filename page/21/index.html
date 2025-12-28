@@ -281,6 +281,331 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/classification_detection_segmentation/From Anchor to ROI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/classification_detection_segmentation/From Anchor to ROI/" itemprop="url">From Anchor to ROI</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="layer-area"><a href="#layer-area" class="headerlink" title="layer area"></a>layer area</h2><p>From layer i to layer i+1, assume the parameters on layer i are $s_i$ (stride), $p_i$ (patch), $k_i$ (kernel filter size), the width or height of layer i are $r_i$. Then, based on common sense, </p>
+<script type="math/tex; mode=display">r_{i+1} = (r_i+2p_i-k_i)/s_i+1.</script><p>In the reverse process, $r_i = s_i r_{i+1}-s_i-2p_i+k_i$ or $r_i = s_i r_{i+1}-s_i+k_i$ if counting in padding area.</p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/5oklFvo.png" alt=""></p>
+<h2 id="coordinate-map"><a href="#coordinate-map" class="headerlink" title="coordinate map"></a>coordinate map</h2><p>Now consider mapping the point $x_i$ on the ROI to the point $x_{i+1}$ on the feature map, which can be transformed to the layer area problem above. In particular, the receptive field formed by left-up corner and $x_i$ on the ROI can be mapped to the region formed by left-up corner and $x_{i+1}$ on the feature map. Based on the similar formula for the layer area problem above (note the only difference is that we only include left padding and up padding, and subtract the radius of kernel filter $(k_i-1)/2$,</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}-s_i-p_i+k_i-(k_i-1)/2.</script><p>The above coordinate system starts from 1. When the coordinate system starts from 0, </p>
+<script type="math/tex; mode=display">x_i+1=s_i (x_{i+1}+1)-s_i-p_i+k_i-(k_i-1)/2,</script><p>which can be simplified as</p>
+<script type="math/tex; mode=display">x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i).</script><p>when $p_i=floor(k_i/2)$, $x_i=s_i x_{i+1}$ approximately, which is the simplest case.</p>
+<p>By applying $x_i=s_i x_{i+1}+(\frac{k_i-1}{2}-p_i)$ recursively, we can achieve a general solution</p>
+<script type="math/tex; mode=display">x_1 = \alpha_L x_{L}+\beta_L,</script><p>in which $\alpha_L = \prod_{l=1}^{L-1} s_l$ and $\beta_L=\sum_{l=1}^{L-1} (\prod_{n=1}^{l-1} s_n)(\frac{k_l-1}{2}-p_l) $ </p>
+<p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/acLbSez.png" alt=""></p>
+<h2 id="anchor-box-to-ROI"><a href="#anchor-box-to-ROI" class="headerlink" title="anchor box to ROI"></a>anchor box to ROI</h2><p>Given two corner points of an anchor box on the feature map, we can find their corresponding points on the original image, which determine the ROI.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Frequency Domain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Niu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/16/deep_learning/Frequency Domain/" itemprop="url">Frequency Domain</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
+                2022-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-note/" itemprop="url" rel="index">
+                    <span itemprop="name">paper note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Distinguish generated fake images and real images in the freqency domain. <a href="https://arxiv.org/pdf/1912.11035.pdf" target="_blank" rel="noopener">[2]</a></p>
+</li>
+<li><p>Use frequency map as network input or output <a href="https://arxiv.org/pdf/2002.12416.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://arxiv.org/pdf/2012.01832.pdf" target="_blank" rel="noopener">[5]</a> <a href="https://arxiv.org/pdf/2011.09876.pdf" target="_blank" rel="noopener">[6]</a></p>
+</li>
+<li><p>Use intermediate frequency features <a href="https://arxiv.org/pdf/2109.07161.pdf" target="_blank" rel="noopener">[7]</a> <a href="https://proceedings.neurips.cc/paper/2020/file/a23156abfd4a114c35b930b836064e8b-Paper.pdf" target="_blank" rel="noopener">[9]</a></p>
+</li>
+<li><p>An image can be composed of or decomposed into low-frequency part and high-frequency part <a href="https://openreview.net/pdf?id=Syhr6pxCW" target="_blank" rel="noopener">[3]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Yu_WaveFill_A_Wavelet-Based_Generation_Network_for_Image_Inpainting_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[8]</a> <a href="https://arxiv.org/pdf/2004.05498.pdf" target="_blank" rel="noopener">[4]</a> <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Cai_Frequency_Domain_Image_Translation_More_Photo-Realistic_Better_Identity-Preserving_ICCV_2021_paper.pdf" target="_blank" rel="noopener">[10]</a></p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><p>Kai Xu, Minghai Qin, Fei Sun, Yuhao Wang, Yen-Kuang Chen, Fengbo Ren, “Learning in the Frequency Domain”, CVPR, 2020.</p>
+</li>
+<li><p>Wang, Sheng-Yu, et al. “CNN-generated images are surprisingly easy to spot… for now.” arXiv preprint arXiv:1912.11035 (2019).</p>
+</li>
+<li><p>ayush Bansal, Yaser Sheikh, Deva Ramanan, “PixelNN: Example-based Image Synthesis”, ICLR 2018.</p>
+</li>
+<li><p>Yanchao Yang, Stefano Soatto, “FDA: Fourier Domain Adaptation for Semantic Segmentation”, CVPR 2020.</p>
+</li>
+<li><p>Roy, Hiya, et al. “Image inpainting using frequency domain priors.” arXiv preprint arXiv:2012.01832 (2020).</p>
+</li>
+<li><p>Shen, Xing, et al. “DCT-Mask: Discrete Cosine Transform Mask Representation for Instance Segmentation.” arXiv preprint arXiv:2011.09876 (2020).</p>
+</li>
+<li><p>Suvorov, Roman, et al. “Resolution-robust Large Mask Inpainting with Fourier Convolutions.” WACV (2021).</p>
+</li>
+<li><p>Yu, Yingchen, et al. “WaveFill: A Wavelet-based Generation Network for Image Inpainting.” ICCV, 2021.</p>
+</li>
+<li><p>Mardani, Morteza, et al. “Neural ffts for universal texture image synthesis.” NeurIPS (2020).</p>
+</li>
+<li><p>Cai, Mu, et al. “Frequency domain image translation: More photo-realistic, better identity-preserving.” ICCV, 2021.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Forecast Future based on One Still Image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1576,335 +1901,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Energy Efficient Deep Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Energy Efficient Deep Learning/" itemprop="url">Energy Efficient Deep Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>Light-weighted network structure</p>
-<ul>
-<li><a href="https://arxiv.org/abs/1610.02357" target="_blank" rel="noopener">Xception</a>: strictly speaking, not light-weighted CNN</li>
-<li><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></li>
-<li><a href="https://arxiv.org/abs/1704.04861" target="_blank" rel="noopener">MobileNet</a></li>
-<li><a href="https://arxiv.org/abs/1707.01083" target="_blank" rel="noopener">ShuffleNet</a></li>
-<li><a href="https://arxiv.org/pdf/2011.12289.pdf" target="_blank" rel="noopener">MicroNet</a></li>
-</ul>
-<p>SqueezeNet, MobileNet, and ShuffleNet share the same idea: decouple the temporal convolution and spatial convolution to reduce the nummber of parameters, sharing the similar spirit with <a href="https://arxiv.org/pdf/1711.10305.pdf" target="_blank" rel="noopener">Pseudo-3D Residual Networks</a>. SqueezeNet is serial while MobileNet and ShuffleNet are parrallel. MobileNet is a special case of ShuffleNet when using only one group.</p>
-<p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Zhang_Efficient_and_Accurate_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Low-rank approximation</a> ($k\times k \times c\times d = k\times k\times c\times d’ + 1\times 1\times d’\times d$) also falls into the above scope. The difference between MobileNet and Low-rank approximation is layerwise convolution or not.</p>
-</li>
-<li><p>Tweak network structure</p>
-<ul>
-<li>prune nodes based on certain criteria (e.g., <a href="https://arxiv.org/pdf/1510.00149.pdf" target="_blank" rel="noopener">response value</a>, <a href="https://arxiv.org/pdf/1801.05787.pdf" target="_blank" rel="noopener">Fisher information</a>): require special implementation and take up more space than expected due to irregular network structure.</li>
-</ul>
-</li>
-<li><p>Compress weights</p>
-<ul>
-<li>Quantization (fixed bit number): learn codebook and encode weights. Fine-tune codebook after quantizatizing weights, which averages the gradient of weights belonging to the same cluster. Extreme cases are <a href="https://arxiv.org/pdf/1510.03009.pdf" target="_blank" rel="noopener">binary net</a> and <a href="https://arxiv.org/pdf/1612.01064.pdf" target="_blank" rel="noopener">ternary net</a>. Binary (resp, ternary) net are quantized to [-1, 1] (resp, [-1, 0, 1]), with different weights $\alpha$ for different layers.</li>
-<li>Huffman Coding (flexible bit number): applied after quantization for further compression.</li>
-</ul>
-</li>
-<li><p>Computation</p>
-<ul>
-<li>spatial domain to frequency domain: convert convolution to pointwise multiplication by using FFT</li>
-</ul>
-</li>
-<li><p>Sparsity regularization</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/1712.01312.pdf" target="_blank" rel="noopener">L0 norm</a></li>
-</ul>
-</li>
-<li><p>Efficient Inference</p>
-<ul>
-<li>cascade of networks, early exit network (predict whether to exit or not after each layer) <a href="https://arxiv.org/pdf/1702.07811.pdf" target="_blank" rel="noopener">[1]</a> <a href="https://papers.nips.cc/paper/7058-adaptive-classification-for-prediction-under-a-budget.pdf" target="_blank" rel="noopener">[2]</a></li>
-</ul>
-</li>
-</ol>
-<p>Good introduction slides: <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf" target="_blank" rel="noopener">http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture15.pdf</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ustcnewly.github.io/2022/06/16/deep_learning/Edge Detection/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Niu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/16/deep_learning/Edge Detection/" itemprop="url">Edge Detection</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-16T12:10:09+08:00">
-                2022-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper-note/" itemprop="url" rel="index">
-                    <span itemprop="name">paper note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Multi-scale fusion: HED <a href="https://openaccess.thecvf.com/content_iccv_2015/papers/Xie_Holistically-Nested_Edge_Detection_ICCV_2015_paper.pdf" target="_blank" rel="noopener">[1]</a>, RCF <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Liu_Richer_Convolutional_Features_CVPR_2017_paper.pdf" target="_blank" rel="noopener">[2]</a></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li><p>Xie, Saining, and Zhuowen Tu. “Holistically-nested edge detection.” ICCV, 2015.</p>
-</li>
-<li><p>Liu, Yun, et al. “Richer convolutional features for edge detection.” CVPR, 2017.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1959,7 +1955,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">237</span>
+                  <span class="site-state-item-count">239</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1981,7 +1977,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">112</span>
+                  <span class="site-state-item-count">114</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

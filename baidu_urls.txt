@@ -1,3 +1,5 @@
+https://ustcnewly.github.io/2025/12/28/deep_learning/Dataset Pruning/
+https://ustcnewly.github.io/2025/11/06/data_pruning/data_pruning_generative_model/
 https://ustcnewly.github.io/2025/01/06/deep_learning/Generative Composition/
 https://ustcnewly.github.io/2024/05/20/deep_learning/Human Generation/
 https://ustcnewly.github.io/2024/05/08/deep_learning/Mixture-of-Experts/
@@ -6,5 +8,3 @@ https://ustcnewly.github.io/2024/02/04/others/Mirror Resources/
 https://ustcnewly.github.io/2024/01/03/classification_detection_segmentation/Line Detection/
 https://ustcnewly.github.io/2023/11/27/image_video_synthesis/Diffusion Model Acceleration/
 https://ustcnewly.github.io/2023/10/23/image_video_synthesis/Diffusion Model for Sketches/
-https://ustcnewly.github.io/2023/09/30/image_video_synthesis/Diffusion Model for Videos/
-https://ustcnewly.github.io/2023/09/04/software/Deep Learning Model Deployment/
