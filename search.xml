@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Dataset Selection</title>
+    <url>/2025/12/28/deep_learning/Data%20Selection/</url>
+    <content><![CDATA[<p>a) clustering: select representative samples and remove outliers. clustering based on loss, gradient, etc. </p>
+<p>b) data contribution: measure the contribution of each sample</p>
+<ul>
+<li>The performance difference using or without using this sample</li>
+</ul>
+<p>c) learn the weights of training samples: train with weighted loss and test on the validation test </p>
+]]></content>
+      <categories>
+        <category>paper note</category>
+      </categories>
+      <tags>
+        <tag>efficiency</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Dataset Pruning</title>
     <url>/2025/12/28/deep_learning/Dataset%20Pruning/</url>
     <content><![CDATA[<p>a) data selection, coreset selection, dataset pruning: select a subset of training data</p>
