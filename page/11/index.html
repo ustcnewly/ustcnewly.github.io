@@ -176,12 +176,14 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+          <a href="/categories/">
         <span class="site-state-item-count">18</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+          <a href="/tags/">
         <span class="site-state-item-count">114</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -763,111 +765,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/machine_learning/Euler%20Angle%20(yaw,pitch,roll)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/machine_learning/Euler%20Angle%20(yaw,pitch,roll)/" class="post-title-link" itemprop="url">Euler Angle (yaw,pitch,roll)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Borrowing aviation terminology, these rotations will be referred to as yaw, pitch, and roll:</p>
-<p>A yaw is a counterclockwise rotation of \( \alpha\) about the \(z\)-axis. The rotation matrix is given by</p>
-<script type="math/tex; mode=display">\displaystyle R_z(\alpha) = \begin{pmatrix}\cos\alpha & -\sin\alpha & 0 \\\\ \sin\alpha & \cos\alpha & 0 \\\\  0 & 0 & 1  \end{pmatrix} .</script><p>A pitch is a counterclockwise rotation of \( \beta\) about the \( y\)-axis. The rotation matrix is given by</p>
-<script type="math/tex; mode=display">\displaystyle R_y(\beta) = \begin{pmatrix}\cos\beta & 0 & \sin\beta \\\\ 0 & 1 & 0 \\\\ -\sin\beta & 0 & \cos\beta  \end{pmatrix} .</script><p>A roll is a counterclockwise rotation of \( \gamma\) about the \( x\)-axis. The rotation matrix is given by</p>
-<script type="math/tex; mode=display">\displaystyle R_x(\gamma) = \begin{pmatrix}1 & 0 & 0 \\\\ 0 & \cos\gamma & -\sin\gamma \\\\ 0 & \sin\gamma & \cos\gamma  \end{pmatrix} .</script><p>Note that \( R(\alpha,\beta,\gamma)\) performs the roll first, then the pitch, and finally the yaw. If the order of these operations is changed, a different rotation matrix would result.</p>
-<p>For gaze direction, roll does not change gaze direction, so only yaw and pitch affect gaze direction. Given a normalized 3D vector (x,y,z), how to determine the yaw and pitch angles?<br>The problem should be discussed based on the order of doing yaw/pitch.</p>
-<p>Consider an eye rigid model (bound with a head rigid model), aligned with original coordinate system, is facing x positive direction. Since roll has no effect on eye direction, we only perform yaw and pitch. For coordinate transformation, we consider the reverse process.</p>
-<p>The eye direction in new coordinate system is \(c_1 = (1,0,0)\) but \(c_2 = (x_0,y_0,z_0)\) in the original coordinate system. </p>
-<ul>
-<li><p>If true rotation order is yaw-&gt;pitch, then <script type="math/tex">c\_2=R\_z(-\alpha)R\_y (-\beta)c\_1.</script>. Then, \(\beta=arsin(z_0),\alpha=-artan(y_0/x_0)\). </p>
-</li>
-<li><p>If true rotation order is pitch-&gt;yaw, then <script type="math/tex">c\_2=R\_y(-\beta)R\_z (-\alpha)c\_1.</script>. Then, \(\alpha=-arsin(y_0),\beta=artan(z_0/x_0)\). </p>
-</li>
-</ul>
-<p>If we insert \(R_x(\gamma)\) before \(c_1\), the results won’t change, which demonstrates that roll will not influence eye direction. In other words, if the true rotation order is yaw-&gt;pitch-&gt;roll or pitch-&gt;yaw-&gt;roll, the above analysis still holds. </p>
-<p>Notice:<br>-</p>
-<ul>
-<li>we used right-hand coordinate system, that is, thumb along the z-axis and fingers from x-axis to y-axis.</li>
-<li>rotation \(\theta\) around some axis means rotating counter clockwise \(\theta\) when looking along the positive direction of that axis</li>
-<li>when doing rotations in sequence, each rotation is based on the up-to-date coordinate system (x-axis, y-axis, z-axis).</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/machine_learning/Endovascular%20Surgery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -951,6 +848,111 @@
 <li>2D or 3D</li>
 <li>real-time or stored (using stored image can reduce fluoroscopy time and radiation exposure)</li>
 <li>anteroposterior/lateral/endoluminal view</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/machine_learning/Euler%20Angle%20(yaw,pitch,roll)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/machine_learning/Euler%20Angle%20(yaw,pitch,roll)/" class="post-title-link" itemprop="url">Euler Angle (yaw,pitch,roll)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Borrowing aviation terminology, these rotations will be referred to as yaw, pitch, and roll:</p>
+<p>A yaw is a counterclockwise rotation of \( \alpha\) about the \(z\)-axis. The rotation matrix is given by</p>
+<script type="math/tex; mode=display">\displaystyle R_z(\alpha) = \begin{pmatrix}\cos\alpha & -\sin\alpha & 0 \\\\ \sin\alpha & \cos\alpha & 0 \\\\  0 & 0 & 1  \end{pmatrix} .</script><p>A pitch is a counterclockwise rotation of \( \beta\) about the \( y\)-axis. The rotation matrix is given by</p>
+<script type="math/tex; mode=display">\displaystyle R_y(\beta) = \begin{pmatrix}\cos\beta & 0 & \sin\beta \\\\ 0 & 1 & 0 \\\\ -\sin\beta & 0 & \cos\beta  \end{pmatrix} .</script><p>A roll is a counterclockwise rotation of \( \gamma\) about the \( x\)-axis. The rotation matrix is given by</p>
+<script type="math/tex; mode=display">\displaystyle R_x(\gamma) = \begin{pmatrix}1 & 0 & 0 \\\\ 0 & \cos\gamma & -\sin\gamma \\\\ 0 & \sin\gamma & \cos\gamma  \end{pmatrix} .</script><p>Note that \( R(\alpha,\beta,\gamma)\) performs the roll first, then the pitch, and finally the yaw. If the order of these operations is changed, a different rotation matrix would result.</p>
+<p>For gaze direction, roll does not change gaze direction, so only yaw and pitch affect gaze direction. Given a normalized 3D vector (x,y,z), how to determine the yaw and pitch angles?<br>The problem should be discussed based on the order of doing yaw/pitch.</p>
+<p>Consider an eye rigid model (bound with a head rigid model), aligned with original coordinate system, is facing x positive direction. Since roll has no effect on eye direction, we only perform yaw and pitch. For coordinate transformation, we consider the reverse process.</p>
+<p>The eye direction in new coordinate system is \(c_1 = (1,0,0)\) but \(c_2 = (x_0,y_0,z_0)\) in the original coordinate system. </p>
+<ul>
+<li><p>If true rotation order is yaw-&gt;pitch, then <script type="math/tex">c\_2=R\_z(-\alpha)R\_y (-\beta)c\_1.</script>. Then, \(\beta=arsin(z_0),\alpha=-artan(y_0/x_0)\). </p>
+</li>
+<li><p>If true rotation order is pitch-&gt;yaw, then <script type="math/tex">c\_2=R\_y(-\beta)R\_z (-\alpha)c\_1.</script>. Then, \(\alpha=-arsin(y_0),\beta=artan(z_0/x_0)\). </p>
+</li>
+</ul>
+<p>If we insert \(R_x(\gamma)\) before \(c_1\), the results won’t change, which demonstrates that roll will not influence eye direction. In other words, if the true rotation order is yaw-&gt;pitch-&gt;roll or pitch-&gt;yaw-&gt;roll, the above analysis still holds. </p>
+<p>Notice:<br>-</p>
+<ul>
+<li>we used right-hand coordinate system, that is, thumb along the z-axis and fingers from x-axis to y-axis.</li>
+<li>rotation \(\theta\) around some axis means rotating counter clockwise \(\theta\) when looking along the positive direction of that axis</li>
+<li>when doing rotations in sequence, each rotation is based on the up-to-date coordinate system (x-axis, y-axis, z-axis).</li>
 </ul>
 
       
