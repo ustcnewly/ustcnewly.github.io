@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zero-Shot Learning">
+<meta property="og:url" content="http://example.com/2026/03/17/classification_detection_segmentation/Zero-Shot%20Learning/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-17T03:25:43.466Z">
+<meta property="article:modified_time" content="2022-04-07T23:14:24.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="zero-shot">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/03/17/classification_detection_segmentation/Zero-Shot%20Learning/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/03/17/classification_detection_segmentation/Zero-Shot%20Learning/","path":"2026/03/17/classification_detection_segmentation/Zero-Shot Learning/","title":"Zero-Shot Learning"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Zero-Shot Learning | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/classification_detection_segmentation/Zero-Shot%20Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Zero-Shot Learning | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Zero-Shot Learning
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Zero-shot learning focuses on the relation between visual features X, semantic embeddings A, and category labels Y. Based on the approach, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) semantic relatedness: X-&gt;Y (semantic similarity; write classifier)</p>
+<p>2) semantic embedding: X-&gt;A-&gt;Y (map from X to A; map from A to X; map between A and X into common space)</p>
+<p>Based on the setting, existing zero-shot learning works can be roughly categorized into the following groups:</p>
+<p>1) inductive ZSL (do not use unlabeled test images in the training stage) v.s. semi-supervised/transductive ZSL (use unlabeled test images in the training stage)</p>
+<p>2) standard ZSL (test images only from unseen categories) v.s. generalized ZSL (test images from both seen and unseen categories) (<a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/5027-zero-shot-learning-through-cross-modal-transfer.pdf">novelty detection</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1605.04253.pdf">calibrated stacking</a>)</p>
+<p><strong>Ideas:</strong></p>
+<ol>
+<li><p>Mapping: dictionary learning, metric learning, etc</p>
+</li>
+<li><p>Embedding: multiple embedding <a target="_blank" rel="noopener" href="https://yanweifu.github.io/embedding/embedding_paper_eccv14.pdf">[1]</a>, free embedding <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Akata_Evaluation_of_Output_2015_CVPR_paper.pdf">[1]</a>, self-defined embedding <a target="_blank" rel="noopener" href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/6368/FuEtAl_PAMI2014_GREEN.pdf?sequence=2">[1]</a></p>
+</li>
+<li><p>Application: video-&gt;object(attribute)-&gt;action <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Jain_Objects2action_Classifying_and_ICCV_2015_paper.pdf">[1]</a>, image-&gt;object(attribute)-&gt;scene</p>
+</li>
+<li><p>Combination: with active learning <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Wah_Attribute-Based_Detection_of_2013_CVPR_paper.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gavves_Active_Transfer_Learning_ICCV_2015_paper.pdf">[2]</a>, online learning <a target="_blank" rel="noopener" href="https://pdfs.semanticscholar.org/8b72/4754d7c7d7e5f98c1982b144fddb66add843.pdf">[1]</a></p>
+</li>
+<li><p>External knowledge graph: WordNet-based <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf">[1]</a>, NELL-based <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf">[2]</a></p>
+</li>
+<li><p>Deep learning: graph neural network <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Zero-Shot_Recognition_via_CVPR_2018_paper.pdf">[1]</a>, RNN <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2486.pdf">[2]</a></p>
+</li>
+<li><p>Generate synthetic exemplars for unseen categories: synthetic images <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Zero-Shot_Visual_Recognition_CVPR_2018_paper.pdf">[SP-AEN]</a> or synthetic features <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_Generalized_Zero-Shot_Learning_CVPR_2018_paper.pdf">[SE-ZSL]</a> <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_A_Generative_Adversarial_CVPR_2018_paper.pdf">[GAZSL]</a> <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2709.pdf">[f-xGAN]</a></p>
+</li>
+</ol>
+<p><strong>Critical Issues:</strong></p>
+<ol>
+<li><p>generalized ZSL, why first predict seen or unseen?: As claimed in <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1605.04253.pdf">[1]</a>, since we only see labeled data from seen classes, during training, the scoring functions of seen classes tend to dominate those of unseen classes, leading to biased predictions in GZSL and aggressively classifying a new data point into the label space of S because classifiers for the seen classes do not get trained on negative examples from the unseen classes.</p>
+</li>
+<li><p>hubness problem <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1412.6568.pdf">[1]</a><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1511.04458.pdf">[2]</a>: As claimed in <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1511.04458.pdf">[2]</a>, one practical effect of the ZSL domain shift is the Hubness problem. Specifically, after the domain shift, there are a small set of hub test-class prototypes that become nearest or K nearest neighbours to the majority of testing samples in the semantic space, while others are NNs of no testing instances. This results in poor accuracy and highly biased predictions with the majority of testing examples being assigned to a small minority of classes. </p>
+</li>
+<li><p>projection domain shift: what is the impact on the decision values?</p>
+</li>
+</ol>
+<p><strong>Datasets:</strong></p>
+<ol>
+<li><p>small-scale datasets:  <a target="_blank" rel="noopener" href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html">CUB</a>, <a target="_blank" rel="noopener" href="https://cvml.ist.ac.at/AwA2">AwA</a>, <a target="_blank" rel="noopener" href="http://cs.brown.edu/~gmpatter/sunattributes.html">SUN</a>, <a target="_blank" rel="noopener" href="http://vision.cs.uiuc.edu/attributes/">aPY</a>, <a target="_blank" rel="noopener" href="http://vision.stanford.edu/aditya86/ImageNetDogs/">Dogs</a>, <a target="_blank" rel="noopener" href="http://www.robots.ox.ac.uk/~vgg/data/flowers/102/">FLO</a></p>
+</li>
+<li><p>large-scale dataset: ImageNet</p>
+</li>
+</ol>
+<p><strong>Survey and Resource:</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8253589">Recent Advances in Zero-Shot Recognition</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1707.00600.pdf">Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly</a> <a target="_blank" rel="noopener" href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/">[code]</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/chichilicious/awesome-zero-shot-learning">List of paper and datasets</a></p>
+</li>
+</ol>
+<p><strong>Other applications:</strong></p>
+<ol>
+<li>zero-shot object detection</li>
+<li>zero-shot figure-ground segmentation <a target="_blank" rel="noopener" href="http://www.cs.umanitoba.ca/~ywang/papers/icpr16_segment.pdf">[1]</a></li>
+<li>zero-shot semantic segmentation</li>
+<li>zero-shot retrieval</li>
+<li>zero-shot domain adaptation</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/zero-shot/" rel="tag"># zero-shot</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/17/classification_detection_segmentation/Weakly-supervised%20Segmentation/" rel="prev" title="Weakly-supervised Segmentation">
+                  <i class="fa fa-angle-left"></i> Weakly-supervised Segmentation
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/17/classification_detection_segmentation/Zero-Shot%20Object%20Detection/" rel="next" title="Zero-Shot Object Detection">
+                  Zero-Shot Object Detection <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

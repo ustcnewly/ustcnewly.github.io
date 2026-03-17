@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Attention in CNN:According to [4], attention can be categorized into bottom-up attention (visual saliency, unsupervised) and top-down attention (task-driven, supervised). According to [5], attention c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Attention Mechanism">
+<meta property="og:url" content="http://example.com/2026/03/17/deep_learning/Attention%20Mechanism/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Attention in CNN:According to [4], attention can be categorized into bottom-up attention (visual saliency, unsupervised) and top-down attention (task-driven, supervised). According to [5], attention c">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-17T03:25:43.488Z">
+<meta property="article:modified_time" content="2022-04-07T23:14:20.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="attention">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/03/17/deep_learning/Attention%20Mechanism/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/03/17/deep_learning/Attention%20Mechanism/","path":"2026/03/17/deep_learning/Attention Mechanism/","title":"Attention Mechanism"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Attention Mechanism | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention-in-CNN"><span class="nav-number">1.</span> <span class="nav-text">Attention in CNN:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention-in-RNN"><span class="nav-number">2.</span> <span class="nav-text">Attention in RNN:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">2.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Attention%20Mechanism/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Attention Mechanism | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Attention Mechanism
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:20" itemprop="dateModified" datetime="2022-04-08T07:14:20+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Attention-in-CNN"><a href="#Attention-in-CNN" class="headerlink" title="Attention in CNN:"></a>Attention in CNN:</h2><p>According to <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1805.08819.pdf">[4]</a>, attention can be categorized into bottom-up attention (visual saliency, unsupervised) and top-down attention (task-driven, supervised).</p>
+<p>According to <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1804.02391.pdf">[5]</a>, attention can be categorized into forward attention, post-hoc attention, and query-based attention.</p>
+<ul>
+<li><p>forward attention: spatial attention <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhu_An_Empirical_Study_of_Spatial_Attention_Mechanisms_in_Deep_Networks_ICCV_2019_paper.pdf">[16]</a>, channel attention <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1802.08122.pdf">[10]</a> <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.pdf">[17]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2012.11879.pdf">[18]</a>,  full attention <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Cheng_Wang_Mancs_A_Multi-task_ECCV_2018_paper.pdf">[11]</a>, Deformable CNN v1 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1703.06211.pdf">[8]</a> v2 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1811.11168.pdf">[9]</a>, </p>
+</li>
+<li><p>post-hoc attention: CAM <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1512.04150.pdf">[6]</a>, GradCAM <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1610.02391.pdf">[7]</a>, scoreCAM <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1910.01279">[14]</a>, trainable CAM <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2101.11253.pdf">[20]</a><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Araslanov_Single-Stage_Semantic_Segmentation_From_Image_Labels_CVPR_2020_paper.pdf">[21]</a></p>
+</li>
+<li><p>query-based attention: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1804.02391.pdf">[5]</a></p>
+</li>
+<li><p>erase attention: <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Adversarial_Complementary_Learning_CVPR_2018_paper.pdf">[19]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1702.04595.pdf">[12]</a> <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Fong_Interpretable_Explanations_of_ICCV_2017_paper.pdf">[13]</a></p>
+</li>
+<li><p>high-order attention <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Mixed_High-Order_Attention_Network_for_Person_Re-Identification_ICCV_2019_paper.pdf">[15]</a></p>
+</li>
+</ul>
+<h2 id="Attention-in-RNN"><a href="#Attention-in-RNN" class="headerlink" title="Attention in RNN:"></a>Attention in RNN:</h2><p>survey paper: survey on the attention based RNN model and its applications in computer vision [<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1601.06823.pdf">1</a>]</p>
+<ul>
+<li><p>soft/hard attention: binary weight or soft weight </p>
+</li>
+<li><p>item-wise/location-wise attention: location-wise attention is to convert an image to a sequence of local regions, which is essentially item-wise.</p>
+</li>
+</ul>
+<p>Earliest papers [<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1409.0473.pdf">2</a>] [<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1412.7449.pdf">3</a>] are basically the same except design specs of RNN unit.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Wang, Feng, and David MJ Tax. “Survey on the attention based RNN model and its applications in computer vision.” arXiv preprint arXiv:1601.06823 (2016).</p>
+<p>[2] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).</p>
+<p>[3] Vinyals, Oriol, et al. “Grammar as a foreign language.” NIPS, 2015.</p>
+<p>[4] Drew Linsley, Dan Shiebler, Sven Eberhardt, Thomas Serre: Learning what and where to attend. ICLR, 2019.</p>
+<p>[5] Saumya Jetley, Nicholas A. Lord, Namhoon Lee, Philip H. S. Torr: Learn to Pay Attention. ICLR, 2018.</p>
+<p>[6] Bolei Zhou, Aditya Khosla, Àgata Lapedriza, Aude Oliva, Antonio Torralba: Learning Deep Features for Discriminative Localization. CVPR 2016.</p>
+<p>[7] Ramprasaath R. Selvaraju, Michael Cogswell, Abhishek Das, Ramakrishna Vedantam, Devi Parikh, Dhruv Batra:<br>Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. ICCV 2017.</p>
+<p>[8] Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei:<br>Deformable Convolutional Networks. ICCV 2017.</p>
+<p>[9] Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai: Deformable ConvNets v2: More Deformable, Better Results. CoRR abs/1811.11168 (2018)</p>
+<p>[10] Wei Li, Xiatian Zhu, Shaogang Gong: Harmonious Attention Network for Person Re-Identification. CVPR 2018.</p>
+<p>[11] Cheng Wang, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang: Mancs: A Multi-task Attentional Network with Curriculum Sampling for Person Re-Identification. ECCV (4) 2018.</p>
+<p>[12] Zintgraf, Luisa M., et al. “Visualizing deep neural network decisions: Prediction difference analysis.” arXiv preprint arXiv:1702.04595 (2017).</p>
+<p>[13] Fong, Ruth C., and Andrea Vedaldi. “Interpretable explanations of black boxes by meaningful perturbation.” ICCV, 2017.</p>
+<p>[14] Wang, Haofan, et al. “Score-CAM: Improved Visual Explanations Via Score-Weighted Class Activation Mapping.” arXiv preprint arXiv:1910.01279 (2019).</p>
+<p>[15] Chen, Binghui, Weihong Deng, and Jiani Hu. “Mixed high-order attention network for person re-identification.” Proceedings of the IEEE International Conference on Computer Vision. 2019.</p>
+<p>[16] Zhu, Xizhou, et al. “An empirical study of spatial attention mechanisms in deep networks.” ICCV, 2019.</p>
+<p>[17] Wang, Qilong, et al. “ECA-net: Efficient channel attention for deep convolutional neural networks.” CVPR, 2020.</p>
+<p>[18] Qin, Zequn, et al. “FcaNet: Frequency Channel Attention Networks.” arXiv preprint arXiv:2012.11879 (2020).</p>
+<p>[19] Zhang, Xiaolin, et al. “Adversarial complementary learning for weakly supervised object localization.” CVPR, 2018.</p>
+<p>[20] Jo, Sanhyun, and In-Jae Yu. “Puzzle-CAM: Improved localization via matching partial and full features.” arXiv preprint arXiv:2101.11253 (2021).</p>
+<p>[21] Araslanov, Nikita, and Stefan Roth. “Single-stage semantic segmentation from image labels.” CVPR, 2020.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/attention/" rel="tag"># attention</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/17/deep_learning/Artistic%20and%20Photorealistic%20Style%20Transfer/" rel="prev" title="Artistic and Photorealistic Style Transfer">
+                  <i class="fa fa-angle-left"></i> Artistic and Photorealistic Style Transfer
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/17/deep_learning/Bio-inspired%20Network/" rel="next" title="Bio-inspired Network">
+                  Bio-inspired Network <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

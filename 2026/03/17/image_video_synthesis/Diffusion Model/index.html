@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="class-conditioned image generation:  [1]  Image-to-image translation: [4], [7], [6], [8]   Image-to-image translation with guidance: GLIDE[2](global: text), [20](global: text, sketch), [21](local: te">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Diffusion Model">
+<meta property="og:url" content="http://example.com/2026/03/17/image_video_synthesis/Diffusion%20Model/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="class-conditioned image generation:  [1]  Image-to-image translation: [4], [7], [6], [8]   Image-to-image translation with guidance: GLIDE[2](global: text), [20](global: text, sketch), [21](local: te">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-17T03:25:43.640Z">
+<meta property="article:modified_time" content="2024-05-20T08:09:05.571Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="generative model">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/03/17/image_video_synthesis/Diffusion%20Model/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/03/17/image_video_synthesis/Diffusion%20Model/","path":"2026/03/17/image_video_synthesis/Diffusion Model/","title":"Diffusion Model"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Diffusion Model | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#References"><span class="nav-number">1.</span> <span class="nav-text">References</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/image_video_synthesis/Diffusion%20Model/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Diffusion Model | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Diffusion Model
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-05-20 16:09:05" itemprop="dateModified" datetime="2024-05-20T16:09:05+08:00">2024-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><ul>
+<li><p>class-conditioned image generation:  <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2105.05233.pdf">[1]</a></p>
+</li>
+<li><p>Image-to-image translation: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2205.12952.pdf">[4]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.15264.pdf">[7]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2108.02938.pdf">[6]</a>, <a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=aBsCjcPu_tE">[8]</a> </p>
+</li>
+<li><p>Image-to-image translation with guidance: GLIDE<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2112.10741v1.pdf">[2]</a>(global: text), <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2211.13752.pdf">[20]</a>(global: text, sketch), <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2211.15518.pdf">[21]</a>(local: text), <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2301.07093.pdf">[22]</a>(local: text, image), ControlNet<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.05543.pdf">[23]</a>(global: mixture), T2I-Adapter<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.08453.pdf">[24]</a>(global: mixture), <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.09778.pdf">[25]</a>(local: mixture), <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.13848.pdf">[26]</a>(global: text), <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2305.16322.pdf">[27]</a>, Ctrl-Adapter <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2404.09967">[36]</a></p>
+</li>
+<li><p>unpaired Image-to-image translation: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.15264.pdf">[19]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2104.05358.pdf">[28]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2203.08382.pdf">[29]</a></p>
+</li>
+<li><p>Image composition: SDEdit <a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=aBsCjcPu_tE">[17]</a>, ILVR <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2108.02938.pdf">[6]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.10167.pdf">[5]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2211.13227.pdf">[9]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2212.00932.pdf">[15]</a></p>
+</li>
+<li><p>Image inpainting: <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content/CVPR2022/papers/Lugmayr_RePaint_Inpainting_Using_Denoising_Diffusion_Probabilistic_Models_CVPR_2022_paper.pdf">[10]</a>,  <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf">[11]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2212.02963.pdf">[12]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2212.06909.pdf">[13]</a></p>
+</li>
+<li><p>Predict mask: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2303.11681.pdf">[31]</a> cross-attention and post processing; <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2212.05034.pdf">[32]</a> add one output channel; <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2303.17870.pdf">[33]</a> predict masks using the feature maps in early steps. </p>
+</li>
+</ul>
+<p>MileStone: DDPM <a target="_blank" rel="noopener" href="https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf">[3]</a>, Stable diffusion <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf">v1</a>, <a target="_blank" rel="noopener" href="https://github.com/Stability-AI/stablediffusion">v2</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2307.01952.pdf">XL</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2403.03206.pdf">v3</a></p>
+<p>Acceleration: DDIM <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.02502.pdf">[14]</a>, PLMS <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2202.09778.pdf">[16]</a></p>
+<p>High-resolution: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2310.15111.pdf">[34]</a> progressive training</p>
+<p>Light-weight: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2306.00980.pdf">[35]</a> </p>
+<p>Failure case analyses: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2306.02583.pdf">[30]</a></p>
+<p>Surveys</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.00796.pdf">Diffusion Models: A Comprehensive Survey of Methods and Applications</a></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2209.04747.pdf">Diffusion Models in Vision: A Survey</a></li>
+</ul>
+<p>Tutorial materials: <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/WGC6bhSNasqk8b0D2r8S1g">[a]</a> <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/610012156?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=1016221980986503168&amp;utm_psn=1614159296316567552&amp;utm_source=wechat_session">[b]</a></p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Dhariwal, Prafulla, and Alex Nichol. “Diffusion models beat gans on image synthesis.” arXiv preprint arXiv:2105.05233 (2021).</p>
+<p>[2] Nichol, Alex, et al. “Glide: Towards photorealistic image generation and editing with text-guided diffusion models.” arXiv preprint arXiv:2112.10741 (2021).</p>
+<p>[3] Ho, Jonathan, Ajay Jain, and Pieter Abbeel. “Denoising diffusion probabilistic models.” Advances in Neural Information Processing Systems 33 (2020): 6840-6851.</p>
+<p>[4] Wang, Tengfei, et al. “Pretraining is All You Need for Image-to-Image Translation.” arXiv preprint arXiv:2205.12952 (2022).</p>
+<p>[5] Hachnochi, Roy, et al. “Cross-domain Compositing with Pretrained Diffusion Models.” arXiv preprint arXiv:2302.10167 (2023).</p>
+<p>[6] Choi, Jooyoung, et al. “ILVR: Conditioning Method for Denoising Diffusion Probabilistic Models.” ICCV, 2021.</p>
+<p>[7] Kwon, Gihyun, and Jong Chul Ye. “Diffusion-based image translation using disentangled style and content representation.” ICLR, 2023.</p>
+<p>[8] Meng, Chenlin, et al. “Sdedit: Guided image synthesis and editing with stochastic differential equations.” ICLR, 2021.</p>
+<p>[9] Yang, Binxin, et al. “Paint by Example: Exemplar-based Image Editing with Diffusion Models.” arXiv preprint arXiv:2211.13227 (2022).</p>
+<p>[10] Lugmayr, Andreas, et al. “Repaint: Inpainting using denoising diffusion probabilistic models.” CVPR, 2022.</p>
+<p>[11] Rombach, Robin, et al. “High-resolution image synthesis with latent diffusion models.” CVPR, 2022.</p>
+<p>[12] Li, Wenbo, et al. “SDM: Spatial Diffusion Model for Large Hole Image Inpainting.” arXiv preprint arXiv:2212.02963 (2022).</p>
+<p>[13] Wang, Su, et al. “Imagen Editor and EditBench: Advancing and Evaluating Text-Guided Image Inpainting.” arXiv preprint arXiv:2212.06909 (2022).</p>
+<p>[14] Song, Jiaming, Chenlin Meng, and Stefano Ermon. “Denoising diffusion implicit models.” arXiv preprint arXiv:2010.02502 (2020).</p>
+<p>[15] Song, Yizhi, et al. “ObjectStitch: Generative Object Compositing.” CVPR, 2023.</p>
+<p>[16] Liu, Luping, et al. “Pseudo numerical methods for diffusion models on manifolds.” ICLR, (2022).</p>
+<p>[17] Meng, Chenlin, et al. “Sdedit: Guided image synthesis and editing with stochastic differential equations.” ICLR, 2021.</p>
+<p>[19] Kwon, Gihyun, and Jong Chul Ye. “Diffusion-based image translation using disentangled style and content representation.” ILCR, 2023.</p>
+<p>[20] Voynov, Andrey, Kfir Aberman, and Daniel Cohen-Or. “Sketch-Guided Text-to-Image Diffusion Models.” arXiv preprint arXiv:2211.13752 (2022).</p>
+<p>[21] Yang, Zhengyuan, et al. “ReCo: Region-Controlled Text-to-Image Generation.” arXiv preprint arXiv:2211.15518 (2022).</p>
+<p>[22] Li, Yuheng, et al. “GLIGEN: Open-Set Grounded Text-to-Image Generation.” arXiv preprint arXiv:2301.07093 (2023).</p>
+<p>[23] Zhang, Lvmin, and Maneesh Agrawala. “Adding conditional control to text-to-image diffusion models.” arXiv preprint arXiv:2302.05543 (2023).</p>
+<p>[24] Mou, Chong, et al. “T2i-adapter: Learning adapters to dig out more controllable ability for text-to-image diffusion models.” arXiv preprint arXiv:2302.08453 (2023).</p>
+<p>[25] Huang, Lianghua, et al. “Composer: Creative and controllable image synthesis with composable conditions.” arXiv preprint arXiv:2302.09778 (2023).</p>
+<p>[26] Wei, Yuxiang, et al. “Elite: Encoding visual concepts into textual embeddings for customized text-to-image generation.” arXiv preprint arXiv:2302.13848 (2023).</p>
+<p>[27] Zhao, Shihao, et al. “Uni-ControlNet: All-in-One Control to Text-to-Image Diffusion Models.” arXiv preprint arXiv:2305.16322 (2023).</p>
+<p>[28] Sasaki, Hiroshi, Chris G. Willcocks, and Toby P. Breckon. “Unit-ddpm: Unpaired image translation with denoising diffusion probabilistic models.” arXiv preprint arXiv:2104.05358 (2021).</p>
+<p>[29] Su, Xuan, et al. “Dual diffusion implicit bridges for image-to-image translation.” arXiv preprint arXiv:2203.08382 (2022).</p>
+<p>[30] Chengbin Du, Yanxi Li, Zhongwei Qiu, Chang Xu, “Stable Diffusion is Unstable”. </p>
+<p>[31] Wu, Weijia, et al. “Diffumask: Synthesizing images with pixel-level annotations for semantic segmentation using diffusion models.” arXiv preprint arXiv:2303.11681 (2023).</p>
+<p>[32] Xie, Shaoan, et al. “Smartbrush: Text and shape guided object inpainting with diffusion model.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.</p>
+<p>[33] Ma, Jian, et al. “GlyphDraw: Learning to Draw Chinese Characters in Image Synthesis Models Coherently.” arXiv preprint arXiv:2303.17870 (2023).</p>
+<p>[34] Gu, Jiatao, et al. “Matryoshka Diffusion Models.” arXiv preprint arXiv:2310.15111 (2023).  </p>
+<p>[35] Li, Yanyu, et al. “SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds.” NeurIPS(2023).</p>
+<p>[36] Lin, Han, et al. “Ctrl-Adapter: An Efficient and Versatile Framework for Adapting Diverse Controls to Any Diffusion Model.” arXiv preprint arXiv:2404.09967 (2024).</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/generative-model/" rel="tag"># generative model</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/17/image_video_synthesis/Diffusion%20Model%20for%20Videos/" rel="prev" title="Diffusion Model for Videos">
+                  <i class="fa fa-angle-left"></i> Diffusion Model for Videos
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/17/image_video_synthesis/Disentangled%20Generative%20Model/" rel="next" title="Disentangled Generative Model">
+                  Disentangled Generative Model <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual.  Scene text detection:The">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scene Text Recognition">
+<meta property="og:url" content="http://example.com/2026/03/17/classification_detection_segmentation/Scene%20Text%20Recognition/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual.  Scene text detection:The">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-17T03:25:43.457Z">
+<meta property="article:modified_time" content="2022-04-07T23:14:22.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="scene text">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/03/17/classification_detection_segmentation/Scene%20Text%20Recognition/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/03/17/classification_detection_segmentation/Scene%20Text%20Recognition/","path":"2026/03/17/classification_detection_segmentation/Scene Text Recognition/","title":"Scene Text Recognition"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Scene Text Recognition | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Scene-text-detection"><span class="nav-number">1.</span> <span class="nav-text">Scene text detection:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scene-text-recognition"><span class="nav-number">2.</span> <span class="nav-text">Scene text recognition:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#End-to-end"><span class="nav-number">3.</span> <span class="nav-text">End-to-end</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Datasets"><span class="nav-number">4.</span> <span class="nav-text">Datasets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Surveys"><span class="nav-number">5.</span> <span class="nav-text">Surveys</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Special-Sessions"><span class="nav-number">6.</span> <span class="nav-text">Special Sessions</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/classification_detection_segmentation/Scene%20Text%20Recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Scene Text Recognition | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Scene Text Recognition
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:22" itemprop="dateModified" datetime="2022-04-08T07:14:22+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Scene text detection and recognition are challenging due to the following issues: scattered and sparse, blur, illumination, partial occlusion, multi-oriented, multi-lingual. </p>
+<h2 id="Scene-text-detection"><a href="#Scene-text-detection" class="headerlink" title="Scene text detection:"></a>Scene text detection:</h2><p>The detection methods can be grouped into proposal-based method and part-based method.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.187&amp;rep=rep1&amp;type=pdf">Detecting Text in Natural Scenes with<br>Stroke Width Transform</a>, CVPR 2010: assume consistent stroke width within each character</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.iapr-tc11.org/dataset/MSRA-TD500/Detecting_Texts_of_Arbitrary_Orientations_in_Natural_Images.pdf">Detecting Texts of Arbitrary Orientations in Natural Images</a>, CVPR 2012: design rotation-invariant features</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/jaderberg14deep.pdf">Deep Features for Text Spotting</a>, ECCV 2014: add three branches for prediction</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.whuang.org/papers/whuang2014_eccv.pdf">Robust scene text detection with convolution neural network induced mser trees</a>, ECCV 2014</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.4947&amp;rep=rep1&amp;type=pdf">Real-time Lexicon-free Scene Text<br>Localization and Recognition</a>, T-PAMI 2016</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1412.1842.pdf">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gupta_Synthetic_Data_for_CVPR_2016_paper.pdf">Synthetic Data for Text Localisation in Natural Images</a>, CVPR 2016: directly predict the bounding boxes, generate synthetic dataset</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Multi-Oriented_Text_Detection_CVPR_2016_paper.pdf">Multi-oriented text detection with fully convolutional networks</a>, CVPR 2016</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1609.03605.pdf">Detecting Text in Natural Image with Connectionist Text Proposal Network</a>, ECCV 2016: look for text lines an fine vertical text pieces. sliding windows fed to Bi-LSTM.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?hl=zh-CN&amp;as_sdt=0%2C5&amp;q=SSD%3A+single+shot+multibox+detector&amp;btnG=">SSD: single shot multibox detector</a>, ECCV 2016</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12256/12121">Reading Scene Text in Deep Convolutional Sequences</a>, AAAI 2016</p>
+</li>
+<li><p><a href="Scene text detection via holistic, multi-channel prediction">Scene text detection via holistic, multi-channel prediction</a>, arxiv 2016: holistic and pixel-wise predictions on text region map, character map, and linking<br>orientation map</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Deep_Direct_Regression_ICCV_2017_paper.pdf">Deep Direct Regression for Multi-Oriented Scene Text Detection</a>, ICCV 2017</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_WordSup_Exploiting_Word_ICCV_2017_paper.pdf">WordSup: Exploiting Word Annotations for Character based Text Detection</a>, ICCV 2017: a weakly supervised framework that can utilize word annotations for character detector training</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14202/14295">TextBoxes: A Fast Text Detector with a Single Deep Neural Network</a>, AAAI 2017</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Shi_Detecting_Oriented_Text_CVPR_2017_paper.pdf">Detecting Oriented Text in Natural Images by Linking Segments</a>, CVPR 2017: detect text with segments and links</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_EAST_An_Efficient_CVPR_2017_paper.pdf">EAST: An Efficient and Accurate Scene Text Detector</a>, CVPR 2017: use <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1509.04874.pdf">DenseBox</a> to generate quadrangle proposals</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1801.02765.pdf">TextBoxes++: A Single-Shot Oriented Scene Text Detector</a>, TIP 2018:  extension of TextBoxes</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf">Rotation-sensitive Regression for Oriented Scene Text Detection</a>, CVPR 2018: rotation-sensitive feature maps for regression and rotation-invariant features for classification </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf">Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation</a>, CVPR 2018: combine corner localization and region segmentation</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1801.01315.pdf">PixelLink: Detecting Scene Text via Instance Segmentation</a>, AAAI 2018: rectangle enclosing instance segmentation mask, which is obtained based on text/non-text prediction and link prediction.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1703.01086.pdf">Arbitrary-Oriented Scene Text Detection via Rotation Proposals</a>, TMM 2018: generate rotated proposals</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1807.01544.pdf">TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes</a>, ECCV 2018: infer the center line area (TCL) and associated circle radius/rotation</p>
+</li>
+</ol>
+<h2 id="Scene-text-recognition"><a href="#Scene-text-recognition" class="headerlink" title="Scene text recognition:"></a>Scene text recognition:</h2><p>The recognition methods can be grouped into character-level, word-level, and sequence-level.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.648.354&amp;rep=rep1&amp;type=pdf">End-to-End Scene Text Recognition</a>, ICCV 2011: detection using Random Ferns and recognition via Pictorial Structure with a Lexicon</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://hal.inria.fr/hal-00818178/document">Top-down and bottom-up cues for scene text recognition</a>, CVPR 2012: construct a CRF model to impose both bottom-up (i.e. character detections) and top-down (i.e. language statistics) cues</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shi_Scene_Text_Recognition_2013_CVPR_paper.pdf">Scene text recognition using part-based tree-structured character detection</a>, CVPR 2013:  build a CRF model to incorporate the detection scores, spatial constraints and linguistic knowledge into one framework</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Bissacco_PhotoOCR_Reading_Text_2013_ICCV_paper.pdf">PhotoOCR: Reading text in uncontrolled conditions</a>, ICCV 2013: automatically generate training data and perform OCR on web images</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11263-014-0793-6">Label embedding: A frugal baseline for text recognition</a>, IJCV 2015: learn a common space for image and word</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1412.1842.pdf">Reading Text in the Wild with Convolutional Neural Networks</a>, IJCV 2016 </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Robust_Scene_Text_CVPR_2016_paper.pdf">Robust Scene Text Recognition with Automatic Rectification</a>, CVPR 2016</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf">Recursive Recurrent Nets with Attention Modeling for OCR in the Wild</a>, CVPR 2016: character-level language model embodied in a recurrent neural network</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/7801919">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI 2017</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Cheng_Focusing_Attention_Towards_ICCV_2017_paper.pdf">Focusing Attention: Towards Accurate Text Recognition in Natural Images</a>, ICCV 2017: Focusing Network to handle the attention drift</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1706.01487.pdf">Visual attention models for scene text recognition</a>, 2017 arxiv</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf">AON: Towards Arbitrarily-Oriented Text Recognition
+</a>, CVPR 2018</p>
+</li>
+<li><p>(recommended by Guo)<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1507.05717.pdf">An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition</a>, T-PAMI, 2017</p>
+</li>
+</ol>
+<h2 id="End-to-end"><a href="#End-to-end" class="headerlink" title="End-to-end"></a>End-to-end</h2><p>Integrate scene text detection and recognition in an end-to-end system.</p>
+<p><strong>Paper list (in chronological order):</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="http://cmp.felk.cvut.cz/~matas/papers/neumann-text-accv10.pdf">A method for text localization and recognition in real-world images</a>, ACCV 2010</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://fadaei.semnan.ac.ir/uploads/MV7.pdf">Real-Time Scene Text Localization and Recognition</a>, CVPR 2012</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Towards_End-To-End_Text_ICCV_2017_paper.pdf">Towards End-to-end Text Spotting with Convolutional<br>Recurrent Neural Networks</a>, ICCV 2017: designed for horizontal scene text</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busta_Deep_TextSpotter_An_ICCV_2017_paper.pdf">Deep TextSpotter: An End-To-End Trainable Scene Text Localization and Recognition Framework</a>, ICCV 2017:  detect and recognize horizontal and multioriented<br>scene text</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf">FOTS: Fast Oriented Text Spotting with a Unified Network</a>, CVPR 2018: using EAST as text detector and CRNN as text recognizer</p>
+</li>
+</ol>
+<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://mclab.eic.hust.edu.cn/icdar2017chinese/">RCTW-17</a></li>
+<li><a target="_blank" rel="noopener" href="http://rrc.cvc.uab.es/?ch=8">MLT</a> </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Yuliang-Liu/Curve-Text-Detector">SCUT-CTW1500</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cs-chan/Total-Text-Dataset">Total-Text</a></li>
+<li><a target="_blank" rel="noopener" href="http://rrc.cvc.uab.es/?ch=4&amp;com=introduction">ICDAR 2015</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500">MSRA-TD500</a>)</li>
+<li><a target="_blank" rel="noopener" href="http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html">IIIT 5K-Word</a></li>
+<li><a target="_blank" rel="noopener" href="https://vision.cornell.edu/se3/coco-text-2/">COCO-Text</a></li>
+</ul>
+<h2 id="Surveys"><a href="#Surveys" class="headerlink" title="Surveys"></a>Surveys</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.vlrlab.net/admin/uploads/avatars/FCS_TextSurvey_2015.pdf">Scene text detection and recognition: Recent advances and future trends</a>, FCS 2015</li>
+<li><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/6945320">Text detection and recognition in imagery: A survey</a>, T-PAMI 2015</li>
+</ul>
+<h2 id="Special-Sessions"><a href="#Special-Sessions" class="headerlink" title="Special Sessions"></a>Special Sessions</h2><ol>
+<li><p>Use Spatial Transformation Network (STN) <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1509.05329.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1611.04298.pdf">[2]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1707.08831.pdf">[3]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1603.03915.pdf">[4]</a></p>
+</li>
+<li><p>Use Deformable Convolution Network (DCN) <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1805.01167">[1]</a></p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/scene-text/" rel="tag"># scene text</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/17/classification_detection_segmentation/Scale%20Variation%20for%20Object%20Detection/" rel="prev" title="Scale Variation for Object Detection">
+                  <i class="fa fa-angle-left"></i> Scale Variation for Object Detection
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/17/classification_detection_segmentation/Video%20Instance%20Segmentation/" rel="next" title="Video Instance Segmentation">
+                  Video Instance Segmentation <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

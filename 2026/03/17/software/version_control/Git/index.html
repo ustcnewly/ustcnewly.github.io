@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Initialize center and local repository  1234567891011#init from scratchgit init &lt;local_dir&gt;#for central repository without working directory, use --baregit init --bare &lt;local_dir&gt;#clone">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://example.com/2026/03/17/software/version_control/Git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Initialize center and local repository  1234567891011#init from scratchgit init &lt;local_dir&gt;#for central repository without working directory, use --baregit init --bare &lt;local_dir&gt;#clone">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.ustcnewly.com/github_images/t0IXoZq.jpg">
+<meta property="og:image" content="https://i.imgur.com/eZBhlc6.jpg">
+<meta property="article:published_time" content="2026-03-17T03:25:43.883Z">
+<meta property="article:modified_time" content="2024-03-13T05:27:35.614Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.ustcnewly.com/github_images/t0IXoZq.jpg">
+
+
+<link rel="canonical" href="http://example.com/2026/03/17/software/version_control/Git/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/03/17/software/version_control/Git/","path":"2026/03/17/software/version_control/Git/","title":"Git"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Git | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/software/version_control/Git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Git | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-13 13:27:35" itemprop="dateModified" datetime="2024-03-13T13:27:35+08:00">2024-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/version-control/" itemprop="url" rel="index"><span itemprop="name">version control</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img src="https://www.ustcnewly.com/github_images/t0IXoZq.jpg" width="50%" height="50%"></p>
+<ol>
+<li><p><strong>Initialize center and local repository</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">init from scratch</span></span><br><span class="line">git init &lt;local_dir&gt;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">for</span> central repository without working directory, use --bare</span></span><br><span class="line">git init --bare &lt;local_dir&gt;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">clone</span> from GitHub, can just <span class="built_in">clone</span> a subdirectory. pull all the remote branches. <span class="built_in">set</span> up <span class="string">&quot;main&quot;</span> branch to track <span class="string">&quot;origin/main&quot;</span>.</span>  </span><br><span class="line">git clone &lt;remote_repo&gt; &lt;remote_dir&gt;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">pull from other <span class="built_in">local</span> repository</span></span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">   git pull # only pull the default branch</span><br><span class="line">git pull &lt;remote_repo&gt; &lt;remote_branch&gt; # pull is equal to fetch and merge</span><br><span class="line">   git fetch &lt;remote_repo&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Configuration</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name $name</span><br><span class="line">git config --global user.email $email</span><br><span class="line">   git config --global credential.helper store</span><br><span class="line">git config --global alias.$alias-name $git-command</span><br><span class="line">git config --system core.editor $editor # e.g., vim</span><br><span class="line">git config --global --edit</span><br></pre></td></tr></table></figure>
+<p><code>.git/config</code>  Repository-specific settings.<br><code>~/.gitconfig</code>  User-specific settings. This is where options set with the —global flag are stored.<br><code>/etc/gitconfig</code> System-wide settings.</p>
+</li>
+<li><p><strong>Staged snapshot in the staging area</strong><br>operations on tracked files:</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br><span class="line">git add &lt;dir&gt;</span><br><span class="line">git add . # add all the files in the current directory</span><br><span class="line">git add * # add  all the files and folders in the current directory </span><br><span class="line"><span class="meta prompt_">   # </span><span class="language-bash">before using `git add .` or `git add *`, we can exclude the untracked files <span class="keyword">in</span> `.gitignore` (e.g., `*.&lt;ext&gt;`, `&lt;<span class="built_in">dir</span>&gt;/`, use `!&lt;file&gt;` <span class="keyword">for</span> exception).</span></span><br><span class="line"></span><br><span class="line">git rm &lt;file&gt; # delete the file</span><br><span class="line">   git rm --cached &lt;file&gt; # untrack the file</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git mv &lt;old name&gt; &lt;new name&gt; # mv = rm+add</span><br><span class="line"></span><br><span class="line">git restore --staged &lt;file&gt; # move staged changes to unstaged changes</span><br><span class="line">   git restore &lt;file&gt; # remove unstaged changes</span><br><span class="line">   </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">clear the entire staging area</span></span><br><span class="line">git reset HEAD # move all staged changes to unstaged changes</span><br><span class="line">   git reset --hard HEAD # remove all staged and unstaged changes</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p><strong>Commit the staged snapshot</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;&lt;message&gt;&quot;  #new commit node</span><br><span class="line">git commit --amend #old commit node</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">`-a` means staging all the changes of tracked files</span></span><br><span class="line">git commit -a -m &quot;&lt;message&gt;&quot; </span><br><span class="line">git commit -a --amend </span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Branch</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git branch #list local branches		</span><br><span class="line">   git branch -r # list remote branches</span><br><span class="line">   git branch -a # list both remote branches and local branches</span><br><span class="line">   git branch -vv # list local branches and their tracked remote branches	</span><br><span class="line">git branch -d &lt;old_branch&gt; #use -D enforce delete</span><br><span class="line">git checkout &lt;old_branch&gt; #switch to branch $branch </span><br><span class="line">git branch &lt;new_branch&gt; #create a new branch </span><br><span class="line">git checkout -b &lt;new_branch&gt; #switch to a new branch $branch</span><br></pre></td></tr></table></figure>
+<p> (a) Imaging there exists a hash table of <code>key:value</code> pairs with branch name as key and commit node as value. When checkout a new branch b1, <code>b1:current-commit-code</code> will be stored in the hash table. When checkout an existing branch b1, you will reach the hashed commit code. In both cases, b1 (HEAD) will be used as the hash key for the next commit node, that is, when you commit next time, <code>b1:new-commit-code</code> will be updated in the hash table.<br> (b) Another perspective is treating the branch name as a pointer to the commit node and each branch is a retrospective history dating back from that node, which is essentially the same as (a).</p>
+<p> When checkout to another branch, git status (staged or unstaged modifications) will be transferred to that branch. If there exists file conflicts (operations on common yet different files), checkout will be forbidden. </p>
+<p> Besides <code>branch</code>, users can also add <code>tag</code> to each commit node.</p>
+<p> <img src="https://i.imgur.com/eZBhlc6.jpg" alt=""></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">assume the current branch is master</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">merge: merge experiment into master</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">master moves one step forward, both experiment and original master are its parents</span></span><br><span class="line">git merge experiment</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">assume the current branch is experiment</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rebase: base experiment on master</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">duplicate the nodes between C2 and experiment after master, move experiment to up-to-date</span></span><br><span class="line">git rebase master</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">in</span> the simple fast-forward <span class="keyword">case</span>, assume &lt;branch&gt; is ahead of &lt;branch1&gt;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">then</span>, `merge &lt;branch1&gt; &lt;branch2&gt;` and `rebase &lt;branch1&gt; &lt;branch2&gt;` work the same, just move &lt;branch1&gt; to &lt;branch2&gt;.</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">whereas, `merge &lt;branch2&gt; &lt;branch1&gt;` or `rebase &lt;branch2&gt; &lt;branch1&gt;` are not allowed.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Tracking changes</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git status </span><br><span class="line">git log #commit history</span><br><span class="line">git log -n &lt;limit&gt; --stat</span><br><span class="line">   git log --all --graph --oneline # show the tree structure of all branches</span><br><span class="line">git log --grep=&quot;&lt;pattern&gt;&quot;</span><br><span class="line">git log --author=&quot;John Smith&quot; -p hello.py</span><br><span class="line">git diff #view unstaged modification</span><br><span class="line">git diff --cached #view staged modification</span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line">git diff &lt;repo&gt;/&lt;branch1&gt;..&lt;branch2&gt;</span><br></pre></td></tr></table></figure>
+<p>when using <code>git log</code>, it will only show the ancestral commit nodes of current node. </p>
+</li>
+<li><p><strong>Date back to history</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">revert the operations <span class="keyword">in</span> &lt;commit&gt; and add one commit node ahead of HEAD</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">revert does not work on file</span></span><br><span class="line">git revert &lt;commit&gt;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">go back to &lt;commit&gt;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">git checkout &lt;commit&gt; &lt;file&gt; is just copying the &lt;file&gt; <span class="keyword">in</span> &lt;commit&gt;</span></span><br><span class="line">git checkout &lt;commit&gt;  		</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">git reset &lt;commit&gt; changes branch name, working directory, and staged index</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">git reset &lt;file&gt; is removing the staged file</span></span><br><span class="line">git reset --mixed &lt;commit&gt; #default, save the working directory</span><br><span class="line">git reset --soft &lt;commit&gt; #save both working directory and staged index</span><br><span class="line">git reset --hard &lt;commit&gt; #save none, dangerous!</span><br></pre></td></tr></table></figure>
+<p>(a) For reset file, there are no options <code>--hard</code> and <code>--soft</code>.<br>(b) For reset commit, after <code>reset --mixed</code> or <code>reset --hard</code>, there are no staged snapshots. After <code>reset --soft</code>, staged snapshots enable the staged index to remain the same. More specifically, at the time before or after <code>reset --soft</code>, if you run <code>git commit</code>, the generated commit node should be the same. </p>
+</li>
+</ol>
+<ol>
+<li><p><strong>Communicate with remote repositories</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git remote -v #list remote repositories</span><br><span class="line">git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</span><br><span class="line">git branch -r #list the fetched branches of remote repositories</span><br><span class="line"></span><br><span class="line">git fetch &lt;repo&gt;  # fetch all of the remote branches</span><br><span class="line">git fetch &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git checkout -b &lt;new_branch&gt; &lt;repo&gt;/&lt;remote_branch&gt; # Checking out a local copy of specific branch</span><br><span class="line">git pull &lt;repo&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;</span><br><span class="line">git push &lt;origin&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;    </span><br></pre></td></tr></table></figure>
+<p>after merging code to address the conflict, use <code>git commit -a -m &quot;$message&quot;</code>, then <code>git push</code>.</p>
+<p> <code>git pull</code> is equal to a <code>git fetch</code> followed by a <code>git merge</code>.</p>
+</li>
+<li><p><strong>Clean working directory</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clean -f/d #clean untracked files/directory</span><br><span class="line">git clean -f $path #clean untracked files in $path</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">`git clean` is often used togther with `git reset —hard`</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Stashing</strong></p>
+<p>If you are working in your repository, and your workflow is interrupted by another project, you can save the current state of your repository (the working directory and the staging index) in the Git stash. When you are ready to start working where you left off, you can restore the stashed repository state. Note that doing a stash gives you a clean working directory, and leaves you at the last commit. </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git stash save # stash the current state</span><br><span class="line">git stash list # see what is in the Git stash:</span><br><span class="line">git stash apply # return your stashed state to the working directory</span><br><span class="line">git stash pop # return your stashed state to the working directory and delete it from the stash</span><br></pre></td></tr></table></figure>
+<p>Note the commit-tree grows. “git log” prints the path from root to current node. “leave behind” prints the path from current node to the first common ancestor between current node and new node. Detached head will be off any branch, so create a new branch for the detached head. </p>
+</li>
+</ol>
+<p><strong>Tips:</strong></p>
+<ol>
+<li><code>checkout</code> and <code>reset</code> work on both file and commit with different meanings and usages, while <code>revert</code> only works on commit.</li>
+<li><code>reset</code> is often used for cancelling uncommited changes while <code>revert</code> is often used for cancelling commited changes.</li>
+<li>Compared with <code>reset</code>, <code>checkout</code> and <code>revert</code> focus on the modification, so they are forbidden in many cases.</li>
+</ol>
+<p><strong>Github User:</strong></p>
+<ol>
+<li>create a repository on GitHub</li>
+<li>create a local folder</li>
+<li><code>git init</code></li>
+<li><code>git remote add &lt;remote_repo&gt; &lt;remote_address&gt;</code></li>
+<li><code>git pull &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
+<li><code>git push --set-upstream &lt;remote_repo&gt; &lt;remote_branch&gt;</code></li>
+<li>add files</li>
+<li><code>git add *</code></li>
+<li><code>git commit -m &quot;msg&quot;</code></li>
+<li><code>git push</code> </li>
+</ol>
+<p><strong>Resources:</strong><br>A good Chinese tutorial for git is <a target="_blank" rel="noopener" href="http://git.oschina.net/progit/index.html">here</a>.<br>A good English tutorial for git is <a target="_blank" rel="noopener" href="https://www.atlassian.com/git/tutorials/what-is-version-control">here</a>.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Git/" rel="tag"># Git</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/17/software/library/Ubuntu%20JDK/" rel="prev" title="Ubuntu JDK">
+                  <i class="fa fa-angle-left"></i> Ubuntu JDK
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/17/software/VirtualBox/Enlarge%20VirtualBox%20vdi/" rel="next" title="Enlarge VirtualBox vdi">
+                  Enlarge VirtualBox vdi <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

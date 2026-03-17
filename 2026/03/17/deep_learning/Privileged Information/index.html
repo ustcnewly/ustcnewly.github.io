@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in [the first paper]. High-level ideas: Use privileged information in the same way as for multi-view learning Transfer betwe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Privileged Information">
+<meta property="og:url" content="http://example.com/2026/03/17/deep_learning/Privileged%20Information/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in [the first paper]. High-level ideas: Use privileged information in the same way as for multi-view learning Transfer betwe">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-17T03:25:43.580Z">
+<meta property="article:modified_time" content="2022-04-07T23:14:22.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="privileged information">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/03/17/deep_learning/Privileged%20Information/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/03/17/deep_learning/Privileged%20Information/","path":"2026/03/17/deep_learning/Privileged Information/","title":"Privileged Information"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Privileged Information | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#High-level-ideas"><span class="nav-number">1.</span> <span class="nav-text">High-level ideas:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Applications"><span class="nav-number">2.</span> <span class="nav-text">Applications:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Settings"><span class="nav-number">3.</span> <span class="nav-text">Settings:</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Privileged%20Information/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Privileged Information | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Privileged Information
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:22" itemprop="dateModified" datetime="2022-04-08T07:14:22+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Learning Using Privileged Information (LUPI) or SVM+ was proposed by Vapnik in <a target="_blank" rel="noopener" href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf">[the first paper]</a>.</p>
+<h3 id="High-level-ideas"><a href="#High-level-ideas" class="headerlink" title="High-level ideas:"></a>High-level ideas:</h3><ul>
+<li>Use privileged information in the same way as for multi-view learning</li>
+<li>Transfer between privileged information and primary information</li>
+<li>Use privileged information to control the training process like training uncertainty or training difficulty (e.g., training loss, noise). </li>
+</ul>
+<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications:"></a>Applications:</h3><ul>
+<li><p>SVM for binary classification</p>
+<ul>
+<li>model the slack variable : SVM+ <a target="_blank" rel="noopener" href="http://www.jmlr.org/papers/volume16/vapnik15b/vapnik15b.pdf">[1]</a></li>
+<li>model the margin: <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Sharmanska_Learning_to_Rank_2013_ICCV_paper.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1410.0389.pdf">[2]</a></li>
+<li>structural SVM: <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/5561-object-localization-based-on-structural-svm-using-privileged-information.pdf">[1]</a></li>
+<li>theoretical analysis: <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/3960-on-the-theory-of-learnining-with-privileged-information.pdf">[1]</a> <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.765.6609&amp;rep=rep1&amp;type=pdf">[2]</a></li>
+</ul>
+</li>
+<li><p>Gaussian process classification</p>
+<ul>
+<li>GPC <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/5373-mind-the-nuisance-gaussian-process-classification-using-privileged-noise.pdf">[1]</a></li>
+</ul>
+</li>
+<li><p>L2 loss for classification/Hash</p>
+<ul>
+<li>multi-labeling <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1702.08681.pdf">[1]</a></li>
+<li>Hash ITQ <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1605.04034.pdf">[1]</a></li>
+</ul>
+</li>
+<li><p>clustering</p>
+<ul>
+<li>clustering <a target="_blank" rel="noopener" href="https://s3.amazonaws.com/academia.edu.documents/37761842/15.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1511467863&amp;Signature=vuLos7m4wT%2Bh%2BLPqPFAOJwB3nu8%3D&amp;response-content-disposition=inline%3B%20filename%3DPrivileged_Information_for_Data_Clusteri.pdf">[1]</a></li>
+</ul>
+</li>
+<li><p>metric learning for verification/classification</p>
+<ul>
+<li>ITML+ <a target="_blank" rel="noopener" href="http://www.vision.ee.ethz.ch/~liwenw/papers/Xu_TNNLS2015.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://pdfs.semanticscholar.org/2412/9967f9e6c4fca95165a7b9e6745c9debe0dd.pdf">[2]</a></li>
+<li>DML+ <a target="_blank" rel="noopener" href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8080246">[1]</a></li>
+<li>OITML <a target="_blank" rel="noopener" href="https://pdfs.semanticscholar.org/eb43/d52f2f707115acf59fd9c744aa32c8e8de29.pdf">[1]</a>: ordinal-based ITML</li>
+</ul>
+</li>
+<li><p>CRF</p>
+<ul>
+<li>probilistic inference <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w38/Vrigkas_Inferring_Human_Activities_ICCV_2017_paper.pdf">[1]</a>: similar with multi-view, but integral over the latent privileged information space during testing</li>
+</ul>
+</li>
+<li><p>random forest</p>
+<ul>
+<li>conditional regression forest <a target="_blank" rel="noopener" href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6553766">[1]</a>: design node splitting criterion</li>
+</ul>
+</li>
+<li><p>matrix factorization for collaborative filtering</p>
+<ul>
+<li>PriMF <a target="_blank" rel="noopener" href="https://www.ijcai.org/proceedings/2017/0223.pdf">[1]</a></li>
+</ul>
+</li>
+<li><p>Maximum Entropy Discrimination</p>
+<ul>
+<li>MED <a target="_blank" rel="noopener" href="https://www.ijcai.org/Proceedings/16/Papers/263.pdf">[1]</a></li>
+</ul>
+</li>
+<li><p>Deep Learning</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hoffman_Learning_With_Side_CVPR_2016_paper.pdf">Hallucination network</a></li>
+<li>classification loss <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1702.08681.pdf">[1]</a></li>
+<li>model drop-out <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Lambert_Deep_Learning_Under_CVPR_2018_paper.pdf">[1]</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings:"></a>Settings:</h3><ul>
+<li>multi-view + LUPI <a target="_blank" rel="noopener" href="http://ieeexplore.ieee.org.ezproxy.rice.edu/stamp/stamp.jsp?arnumber=8008811">[1]</a></li>
+<li>multi-task multi-class LUPI <a target="_blank" rel="noopener" href="http://f4k.dieei.unict.it/proceedings/ICPR2012/media/files/1223.pdf">[1]</a></li>
+<li>multi-instance LUPI <a target="_blank" rel="noopener" href="http://bcmi.sjtu.edu.cn/home/niuli/paper/Exploiting%20Privileged%20Information%20from%20Web%20Data%20for%20Image%20Categorization.pdf">[1]</a></li>
+<li>active learning + LUPI <a target="_blank" rel="noopener" href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7552533">[1]</a></li>
+<li>distillation + LUPI <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1511.03643.pdf">[1]</a></li>
+<li>domain adaptation + LUPI <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1810.03756.pdf">[1]</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/privileged-information/" rel="tag"># privileged information</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/17/deep_learning/Non-local%20Network/" rel="prev" title="Non-local Network">
+                  <i class="fa fa-angle-left"></i> Non-local Network
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/17/deep_learning/Prompt%20for%20Vision/" rel="next" title="Prompt for Vision">
+                  Prompt for Vision <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
