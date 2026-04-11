@@ -171,7 +171,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-count">245</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -182,7 +182,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-count">115</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,96 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/operation_system/Ubuntu/Ubuntu%20Software%20Management/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/operation_system/Ubuntu/Ubuntu%20Software%20Management/" class="post-title-link" itemprop="url">Ubuntu Software Management</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="raw-dpkg"><a href="#raw-dpkg" class="headerlink" title="raw: dpkg"></a>raw: dpkg</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i xxx.deb</span><br><span class="line">dpkg -r xxx.deb</span><br><span class="line">dpkg --purge xxx.deb</span><br><span class="line">dpkg -L xxx.deb</span><br><span class="line">dpkg --info xxx.deb</span><br><span class="line">dpkg -reconfigure xxx</span><br></pre></td></tr></table></figure>
+<p>dkpg is raw method to install without solving dependencies and existing software.</p>
+<h3 id="mature-apt-get"><a href="#mature-apt-get" class="headerlink" title="mature: apt-get"></a>mature: apt-get</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-get install softname1 softname2 softname3……</span><br><span class="line">apt-get remove softname1 softname2 softname3……</span><br><span class="line">apt-get remove --purge softname1</span><br><span class="line">apt-get autoremove</span><br><span class="line">apt-get clean //clean /var/cache/apt/archives </span><br><span class="line">apt-get autoclean //clean the out-of-date files in /var/cache/apt/archives</span><br><span class="line"></span><br><span class="line">apt-get update //update software information and database command</span><br><span class="line">apt-get upgrade //update the system</span><br><span class="line"></span><br><span class="line">apt-cache search rough_name</span><br><span class="line">apt-cache show exact_name</span><br><span class="line"></span><br><span class="line">pkg-config --libs opencv</span><br><span class="line">pkg-config --cflags opencv </span><br><span class="line">pkg-config --modversion opencv</span><br></pre></td></tr></table></figure>
+<p>apt-get is built on dkpg without saving the deb file. apt-get can solve dependencies and existing software. Note that when using dkpg, dkpg can circumvent apt-get, so apt-get don’t know the software installed by dkpg.</p>
+<h3 id="more-mature-aptitude-GUI"><a href="#more-mature-aptitude-GUI" class="headerlink" title="more mature: aptitude (GUI)"></a>more mature: aptitude (GUI)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aptitude install softname1</span><br><span class="line">aptitude remove softname1</span><br></pre></td></tr></table></figure>
+<p>aptitude is also built on dkpg and more powerful than apt-get.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1060,98 +1150,6 @@
 <li><p>Start the computer from U-installer. The most important thing is making a proper partition for Ubuntu. At least make three partitions: / (ext4), swap (2G), reserved for UEFI (1G).  If necessary, make another partition /home. Note that ubuntu UEFI should be on the same disk as Windows UEFI.   </p>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/operation_system/BIOS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/operation_system/BIOS/" class="post-title-link" itemprop="url">BIOS</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>If something is wrong when attempting to enter the BIOS, try the following approaches:</p>
-<ul>
-<li>press F2, F12, ESC, DEL</li>
-<li>change the cable, adaptor, interface, etc (hardware reason)</li>
-<li>update BIOS to the latest version</li>
-<li>for Windows10, settings-&gt;recover-&gt;firmware</li>
-<li>close fast-boot option in the operation system because fast-boot may directly skip the BIOS stage</li>
-</ul>
 
       
     </div>

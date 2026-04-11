@@ -171,7 +171,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-count">245</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -182,7 +182,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">114</span>
+        <span class="site-state-item-count">115</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,99 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/TensorFlow/TensorFlow%20GPU%20Usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/programming_language/TensorFlow/TensorFlow%20GPU%20Usage/" class="post-title-link" itemprop="url">TensorFlow GPU Usage</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>All the GPU memory will be notoriously filled up even if you designate one GPU device.</p>
+<h3 id="maximum-fraction"><a href="#maximum-fraction" class="headerlink" title="maximum fraction"></a>maximum fraction</h3><p>gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)<br>sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))</p>
+<h3 id="automatic-growth"><a href="#automatic-growth" class="headerlink" title="automatic growth"></a>automatic growth</h3><p>config = tf.ConfigProto()<br>config.gpu_options.allow_growth=True<br>sess = tf.Session(config=config) </p>
+<h3 id="visible-GPU"><a href="#visible-GPU" class="headerlink" title="visible GPU:"></a>visible GPU:</h3><p> os.environ[“CUDA_VISIBLE_DEVICES”] = “0,1” # use python to set environment variables</p>
+<h3 id="use-multiple-GPUs"><a href="#use-multiple-GPUs" class="headerlink" title="use multiple GPUs"></a>use multiple GPUs</h3><p>One typical to use mulitple GPU is to average gradients, please refer to the <a href="\code\TensorFlow\multiGPU\multigpu_cnn.py">sample code</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1323,94 +1416,6 @@
 </ol>
 <p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/MATLAB/MATLAB%20draw%20plot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/programming_language/MATLAB/MATLAB%20draw%20plot/" class="post-title-link" itemprop="url">MATLAB draw plot</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/MATLAB/" itemprop="url" rel="index"><span itemprop="name">MATLAB</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% Set some nice settings.</span></span><br><span class="line">grid on;</span><br><span class="line">format long;</span><br><span class="line"></span><br><span class="line"><span class="comment">% Hold the graphics output until we are good to go.</span></span><br><span class="line"><span class="built_in">hold</span> all;</span><br><span class="line"></span><br><span class="line"><span class="comment">% To create some random test data.</span></span><br><span class="line">x1 = <span class="number">100</span> : <span class="number">100</span> : <span class="number">1000</span>;</span><br><span class="line">raw_y1 = [<span class="number">0.76</span>,<span class="number">0.79</span>,<span class="number">0.80</span>,<span class="number">0.80</span>,<span class="number">0.81</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.81</span>];</span><br><span class="line">raw_y2 = [<span class="number">0.85</span>,<span class="number">0.81</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.79</span>,<span class="number">0.78</span>,<span class="number">0.80</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">raw_y3 = [<span class="number">0.85</span>,<span class="number">0.84</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.83</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>,<span class="number">0.82</span>];</span><br><span class="line">legendText = cell(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x1,y1,<span class="string">&#x27;--go&#x27;</span>,<span class="string">&#x27;MarkerSize&#x27;</span>,<span class="number">5</span>, <span class="string">&#x27;MarkerFaceColor&#x27;</span>,<span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">&#x27;CUB&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x1,y2,<span class="string">&#x27;:bo&#x27;</span>, <span class="string">&#x27;MarkerSize&#x27;</span>,<span class="number">5</span>, <span class="string">&#x27;MarkerFaceColor&#x27;</span>,<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">&#x27;SUN&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x1,y3,<span class="string">&#x27;-ro&#x27;</span>, <span class="string">&#x27;MarkerSize&#x27;</span>,<span class="number">5</span>,  <span class="string">&#x27;MarkerFaceColor&#x27;</span>,<span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">3</span>);</span><br><span class="line">legendText(<span class="keyword">end</span>+<span class="number">1</span>) = &#123; <span class="string">&#x27;Dogs&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line">xlim([<span class="number">100</span> <span class="number">1000</span>]);</span><br><span class="line">ylim([<span class="number">0.72</span> <span class="number">0.90</span>]);</span><br><span class="line"></span><br><span class="line">set(gca,<span class="string">&#x27;fontsize&#x27;</span>,<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% set sticks on x and y axis</span></span><br><span class="line">get(gca, <span class="string">&#x27;xtick&#x27;</span>);</span><br><span class="line">set(gca, <span class="string">&#x27;xtick&#x27;</span>, <span class="number">100</span>:<span class="number">100</span>:<span class="number">1000</span>);</span><br><span class="line">get(gca, <span class="string">&#x27;ytick&#x27;</span>);</span><br><span class="line">set(gca, <span class="string">&#x27;ytick&#x27;</span>, <span class="number">0.72</span>:<span class="number">0.02</span>:<span class="number">0.90</span>);</span><br><span class="line"></span><br><span class="line">xlabel(<span class="string">&#x27;# web training instances per category&#x27;</span>);</span><br><span class="line">ylabel(<span class="string">&#x27;Accuracy&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">legend</span>(legendText,<span class="string">&#x27;location&#x27;</span>,<span class="string">&#x27;southeast&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> off;</span><br></pre></td></tr></table></figure>
       
     </div>
 
