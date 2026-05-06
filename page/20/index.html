@@ -171,18 +171,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">245</span>
+          <span class="site-state-item-count">246</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">115</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,124 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Gaze%20Estimation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/deep_learning/Gaze%20Estimation/" class="post-title-link" itemprop="url">Gaze Estimation</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:22" itemprop="dateModified" datetime="2022-04-08T07:14:22+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/VDw1UW6.jpg" width="50%" height="50%" /></p>
+<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><ol>
+<li><p>Corneal reflection-based methods</p>
+<ul>
+<li>NIR or LED illumination, learning the mapping (e.g., regression, ) between glint vector and gaze direction.</li>
+</ul>
+</li>
+<li><p>Appearance based methods</p>
+<ul>
+<li>Limbus model <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.486.489&amp;rep=rep1&amp;type=pdf">[pdf]</a>: fit a limbus model (a fixed-diameter disc) to detected iris edges.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Auxiliary-Tools"><a href="#Auxiliary-Tools" class="headerlink" title="Auxiliary Tools"></a>Auxiliary Tools</h3><ol>
+<li><p>Calibration: obtain the visual axis and kappa angle for each person.</p>
+</li>
+<li><p>Facial landmarks detection</p>
+<ul>
+<li>One Millisecond Face Alignment with an Ensemble of Regression Trees <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2014/papers/Kazemi_One_Millisecond_Face_2014_CVPR_paper.pdf">[pdf]</a> <a target="_blank" rel="noopener" href="https://github.com/cheind/dest">[code]</a></li>
+<li>Continuous Conditional Neural Fields for Structured Regression <a target="_blank" rel="noopener" href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=1133&amp;context=lti">[pdf]</a></li>
+</ul>
+</li>
+<li><p>Head Pose Estimation</p>
+<ul>
+<li>EPnP algorithm <a target="_blank" rel="noopener" href="https://infoscience.epfl.ch/record/160138/files/top.pdf">[pdf]</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.mpi-inf.mpg.de/de/abteilungen/computer-vision-and-multimodal-computing/research/gaze-based-human-computer-interaction/appearance-based-gaze-estimation-in-the-wild-mpiigaze/">[MPIIGaze]</a>: fine-grained annotation</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.idiap.ch/dataset/eyediap">[Eyediap]</a>: RGB-D </p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1189,129 +1307,6 @@
 <li>Datasets and code: <a target="_blank" rel="noopener" href="https://github.com/jindongwang/transferlearning">[1]</a></li>
 <li>A Comprehensive Survey on Transfer Learning <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1911.02685.pdf">[pdf]</a></li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Disentangled%20Representation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/deep_learning/Disentangled%20Representation/" class="post-title-link" itemprop="url">Disentangled Representation</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-13 09:12:34" itemprop="dateModified" datetime="2023-06-13T09:12:34+08:00">2023-06-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods:"></a>Methods:</h2><p>The goal of Disentangled Representation [4] is to extract explanatory factors of the data in the input distribution and generate a more meaningful representation. disentangle codes/encodings/representations/latent factors/latent variables. single-dimension attribute encoding or multi-dimension attribute encoding.</p>
-<p>A math definition of disentangled representation <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1812.02230.pdf">[11]</a></p>
-<p>A survey on disentangled representation learning <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2211.11695.pdf">[19]</a></p>
-<ul>
-<li><p>Unsupervised disentanglement</p>
-<p>  Recently, InfoGAN [5] utilizes GAN framework and maximizes the mutual information between a subset of the latent variables to learn disentangled representations in an unsupervised manner. Different latent variables are enforced to be independent based on the independence assumption [6].  </p>
-</li>
-<li><p>Supervised disentanglement</p>
-<p>  Swapping attribute representation with the supervision of attribute annotation such as Dual Swap GAN [7] (semi-supervised) and DNA-GAN [8].</p>
-</li>
-<li><p>Disentangle representation for domain adaptation, disentangle representation into Class/domain-invariant and class/domain-specific: [9][10]<a target="_blank" rel="noopener" href="http://128.84.21.203/pdf/1906.11796">[12]</a> <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hadad_A_Two-Step_Disentanglement_CVPR_2018_paper.pdf">[13]</a></p>
-</li>
-<li><p>instance-level disentangle<a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Shen_Towards_Instance-Level_Image-To-Image_Translation_CVPR_2019_paper.pdf">[14]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1812.10889.pdf">[15]</a> FUNIT<a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_Few-Shot_Unsupervised_Image-to-Image_Translation_ICCV_2019_paper.pdf">[16]</a> COCO-FUNIT[<a target="_blank" rel="noopener" href="http://xxx.itp.ac.cn/pdf/2007.07431v1">17</a></p>
-</li>
-<li><p>close-form disentanglement <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2007.06600.pdf">[18]</a>: after the model is trained, perform eigen decomposition to obtain orthogonal directions. </p>
-</li>
-</ul>
-<h2 id="Disentanglement-metric"><a href="#Disentanglement-metric" class="headerlink" title="Disentanglement metric:"></a>Disentanglement metric:</h2><ul>
-<li>disentangement metric score <a href="(https://pdfs.semanticscholar.org/a902/26c41b79f8b06007609f39f82757073641e2.pdf">[1]</a>)</li>
-<li>perceptual path length,  linear separabilit <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Karras_A_Style-Based_Generator_Architecture_for_Generative_Adversarial_Networks_CVPR_2019_paper.pdf">[2]</a></li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1]  Higgins, Irina, et al. “beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework.” ICLR 2.5 (2017): 6. </p>
-<p>[2] Karras, Tero, Samuli Laine, and Timo Aila. “A style-based generator architecture for generative adversarial networks.” CVPR, 2019.</p>
-<p>[4] <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1206.5538.pdf">Representation learning: A review and new perspectives</a></p>
-<p>[5] <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/6399-infogan-interpretable-representation-learning-by-information-maximizing-generative-adversarial-nets.pdf">Infogan: Interpretable representation learning by information maximizing generative adversarial nets</a></p>
-<p>[6] <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1710.05050.pdf">Learning Independent Features with adversarial Nets for Non-linear ICA</a></p>
-<p>[7] <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/7830-dual-swap-disentangling.pdf">Dual Swap Disentangling</a></p>
-<p>[8] <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1711.05415.pdf">DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images</a></p>
-<p>[9] <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1805.09730.pdf">Image-to-image translation for cross-domain disentanglement</a></p>
-<p>[10] <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf">Diverse Image-to-Image Translation via Disentangled Representations</a></p>
-<p>[11] Higgins, Irina, et al. “Towards a definition of disentangled representations.” arXiv preprint arXiv:1812.02230 (2018).</p>
-<p>[12] Gabbay, Aviv, and Yedid Hoshen. “Demystifying Inter-Class Disentanglement.” arXiv preprint arXiv:1906.11796 (2019).</p>
-<p>[13] Hadad, Naama, Lior Wolf, and Moni Shahar. “A two-step disentanglement method.” CVPR, 2018.</p>
-<p>[14] Shen, Zhiqiang, et al. “Towards instance-level image-to-image translation.” CVPR, 2019.</p>
-<p>[15] Sangwoo Mo, Minsu Cho, Jinwoo Shin:<br>InstaGAN: Instance-aware Image-to-Image Translation. ICLR, 2019.</p>
-<p>[16] Liu, Ming-Yu, et al. “Few-shot unsupervised image-to-image translation.” ICCV, 2019.</p>
-<p>[17] Saito, Kuniaki, Kate Saenko, and Ming-Yu Liu. “COCO-FUNIT: Few-Shot Unsupervised Image Translation with a Content Conditioned Style Encoder.” arXiv preprint arXiv:2007.07431 (2020).</p>
-<p>[18] Shen, Yujun, and Bolei Zhou. “Closed-Form Factorization of Latent Semantics in GANs.” arXiv preprint arXiv:2007.06600 (2020).</p>
-<p>[19] Xin Wang, Hong Chen, Siao Tang, Zihao Wu, and Wenwu Zhu. “Disentangled Representation Learning.”</p>
 
       
     </div>

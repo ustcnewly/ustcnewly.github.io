@@ -171,18 +171,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">245</span>
+          <span class="site-state-item-count">246</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">115</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,119 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/software/IDE/Install%20JDK%20and%20Eclipse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/software/IDE/Install%20JDK%20and%20Eclipse/" class="post-title-link" itemprop="url">Install JDK and Eclipse</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/IDE/" itemprop="url" rel="index"><span itemprop="name">IDE</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="For-Windows"><a href="#For-Windows" class="headerlink" title="For Windows"></a>For Windows</h3><ol>
+<li><p>Download Java JDK from <a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> and install. Note that JDK contains JRE. Modify the following environment variables:</p>
+<ul>
+<li>add JAVAHOME D:\Program Files (x86)\Java\jdk1.7.051</li>
+<li>add Path %JAVA_HOME%\bin;\%JAVA_HOME%\jre\bin;</li>
+<li>add CLASSPATH %JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\rt.jar</li>
+</ul>
+</li>
+<li><p>Download Eclipse from <a target="_blank" rel="noopener" href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a> and click eclipse.exe</p>
+</li>
+</ol>
+<h3 id="For-Linux"><a href="#For-Linux" class="headerlink" title="For Linux"></a>For Linux</h3><ol>
+<li><p>Install JDK</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update // depending on the needed java version</span><br><span class="line">sudo apt-get install openjdk-7-jdk</span><br><span class="line">or sudo apt-get install openjdk-8-jre openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Download Eclipse and unpack</p>
+</li>
+<li><p>Create a new file eclipse.desktop in /usr/share/applications/ and add the below code </p>
+ <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   [Desktop Entry]</span><br><span class="line">   Name=Eclipse</span><br><span class="line">Comment=Eclipse IDE</span><br><span class="line">Exec=/home/liniu/Program_Files/Eclipse/eclipse/eclipse</span><br><span class="line">Icon=/home/ivan/Eclipse/icon.xpm</span><br><span class="line">Categories=Application;Development;Java;IDE</span><br><span class="line">Type=Application</span><br><span class="line">Terminal=0</span><br></pre></td></tr></table></figure>
+<p>and then run</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo desktop-file-install /usr/share/applications/eclipse.desktop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add to the path:  <code>sudo ln -s /opt/eclipse/eclipse /usr/local/bin/</code></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1154,115 +1267,6 @@ Sample code of generating tfrecord dataset and reading data via queue can downlo
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parameter_count = tf.reduce_sum([tf.reduce_prod(tf.shape(v)) <span class="keyword">for</span> v <span class="keyword">in</span> tf.trainable_variables()])</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/TensorFlow/TensorFlow%20Input%20Data%20with%20Queue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/programming_language/TensorFlow/TensorFlow%20Input%20Data%20with%20Queue/" class="post-title-link" itemprop="url">TensorFlow Input Data with Queue</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li><p>Input raw data (e.g., text, image address). There are many different implementations of queue.</p>
-<ul>
-<li><p>feature-label pair: <a href="\code\TensorFlow\queue\feature_label_pair\customize_enqueue_op.py">[enqueue-op]</a> <a href="\code\TensorFlow\queue\feature_label_pair\customize_prefetch_func.py">[fetch-func]</a> <a href="\code\TensorFlow\queue\feature_label_pair\slice_input_producer.py">[slice-input-producer]</a> <a href="\code\TensorFlow\queue\feature_label_pair\string_input_producer.py">[string-input-producer]</a></p>
-</li>
-<li><p>image-image pair: <a href="\code\TensorFlow\queue\image_image_pair\slice_input_producer.py">[slice-input-producer]</a><a href="\code\TensorFlow\queue\image_image_pair\string_input_producer.py">[string-input-producer]</a></p>
-</li>
-</ul>
-</li>
-<li><p>A more elegant way is converting raw data to tfrecord format.</p>
-</li>
-</ol>
-<p><strong>Tips:</strong></p>
-<ol>
-<li><p>setting large number_of_threading (e.g., 10) is helpful.</p>
-</li>
-<li><p>shuffle the training samples to avoid homogenuity when necessary.</p>
-</li>
-<li><p>place the training data in local disk instead of removable disk (consider I/O speed).</p>
-</li>
-</ol>
 
       
     </div>

@@ -171,18 +171,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">245</span>
+          <span class="site-state-item-count">246</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">115</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,113 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/machine_learning/Incremental%20SVM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/machine_learning/Incremental%20SVM/" class="post-title-link" itemprop="url">Incremental SVM</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1) Approximate incremental SVM: pass through the dataset many times</p>
+<ul>
+<li><p>Pegasos: select a training batch in each iteration</p>
+<ul>
+<li>python: <a target="_blank" rel="noopener" href="https://github.com/ejlb/pegasos">https://github.com/ejlb/pegasos</a><pre><code>   https://github.com/avaitla/Pegasos
+</code></pre></li>
+<li>C: <a target="_blank" rel="noopener" href="https://www.cs.huji.ac.il/~shais/code/index.html">https://www.cs.huji.ac.il/~shais/code/index.html</a></li>
+<li>matlab: <a target="_blank" rel="noopener" href="https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function">https://www.mathworks.com/matlabcentral/fileexchange/31401-pegasos-primal-estimated-sub-gradient-solver-for-svm?focused=5188208&amp;tab=function</a></li>
+</ul>
+</li>
+<li><p>sklearn.linear_model: SGD</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clf= sklearn.linear_model.SGDClassifier(learning_rate = <span class="string">&#x27;constant&#x27;</span>, eta0 = <span class="number">0.1</span>, shuffle = <span class="literal">False</span>, n_iter = <span class="number">1</span>)</span><br><span class="line"><span class="comment"># get x1, y1 as a new instance</span></span><br><span class="line">clf.partial_fit(x1, y1)</span><br><span class="line"><span class="comment"># get x2, y2</span></span><br><span class="line"><span class="comment"># update accuracy if needed</span></span><br><span class="line">clf.partial_fit(x2, y2)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2) Exact incremental or decremental SVM: only pass through the dataset once</p>
+<ul>
+<li><p>Incremental and Decremental Support Vector Machine Learning<br><a target="_blank" rel="noopener" href="http://www.isn.ucsd.edu/svm/incremental">http://www.isn.ucsd.edu/svm/incremental</a></p>
+</li>
+<li><p>SVM Incremental Learning, Adaptation and Optimization: extend the work above<br>matlab: <a target="_blank" rel="noopener" href="https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB">https://github.com/diehl/Incremental-SVM-Learning-in-MATLAB</a></p>
+</li>
+<li><p>Incremental and decremental training for linear classification: extension of liblinear focusing on linear problem<br><a target="_blank" rel="noopener" href="http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html">http://www.csie.ntu.edu.tw/~cjlin/papers/ws/index.html</a></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1143,114 +1250,6 @@
 <p>[3] Wang, Lin, and Kuk-Jin Yoon. “Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks.” arXiv preprint arXiv:2004.05937 (2020).</p>
 <p>[4] Nguyen, Timothy, Zhourong Chen, and Jaehoon Lee. “Dataset Meta-Learning from Kernel Ridge-Regression.” arXiv preprint arXiv:2011.00050 (2020).</p>
 <p>[5] Nguyen, Timothy, et al. “Dataset distillation with infinitely wide convolutional networks.” Advances in Neural Information Processing Systems 34 (2021).</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/machine_learning/Data%20Augmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/machine_learning/Data%20Augmentation/" class="post-title-link" itemprop="url">Data Augmentation</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li><p>Traditional data augmentation</p>
-<ul>
-<li><p>color, hue, illumination</p>
-</li>
-<li><p>flip, crop, shear, rotation, (piecewise) affine transformation, Cutout, RandErasing, HideAndSeek, GridMask</p>
-</li>
-</ul>
-</li>
-<li><p>Mixtures:  Mixup <a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=r1Ddp1-Rb">[1]</a>, CutMix <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1905.04899.pdf">[2]</a> (Mixture in spatial domain), GridMask <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2001.04086.pdf">[6]</a>, FMix <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2002.12047.pdf">[3]</a> (Mixture in frequency)</p>
-</li>
-<li><p>Learn optimal data augmentation strategy: <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf">[4]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1712.04621.pdf">[5]</a>, AutoAugment, RandAugment, Fast AutoAugment, Faster AutoAugment, Greedy Augment.</p>
-</li>
-<li><p>Semantic augmentation: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2007.10538">[7]</a></p>
-</li>
-</ol>
-<p>A summary of existing data augmentation methods <a target="_blank" rel="noopener" href="https://github.com/AgaMiko/data-augmentation-review">[link]</a></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] mixup: Beyond empirical risk minimization</p>
-<p>[2] Cutmix: Regularization strategy to train strong classifiers with localizable features</p>
-<p>[3] Understanding and Enhancing Mixed Sample Data Augmentation</p>
-<p>[4] AutoAugment: Learning Augmentation Strategies from Data</p>
-<p>[5] The Effectiveness of Data Augmentation in Image Classification using Deep Learning</p>
-<p>[6] GridMask Data Augmentation</p>
-<p>[7] Regularizing Deep Networks with Semantic Data Augmentation</p>
 
       
     </div>

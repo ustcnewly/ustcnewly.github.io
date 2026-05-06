@@ -171,18 +171,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">245</span>
+          <span class="site-state-item-count">246</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">115</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,115 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/TensorFlow/TensorFlow%20Input%20Data%20with%20Queue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/programming_language/TensorFlow/TensorFlow%20Input%20Data%20with%20Queue/" class="post-title-link" itemprop="url">TensorFlow Input Data with Queue</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li><p>Input raw data (e.g., text, image address). There are many different implementations of queue.</p>
+<ul>
+<li><p>feature-label pair: <a href="\code\TensorFlow\queue\feature_label_pair\customize_enqueue_op.py">[enqueue-op]</a> <a href="\code\TensorFlow\queue\feature_label_pair\customize_prefetch_func.py">[fetch-func]</a> <a href="\code\TensorFlow\queue\feature_label_pair\slice_input_producer.py">[slice-input-producer]</a> <a href="\code\TensorFlow\queue\feature_label_pair\string_input_producer.py">[string-input-producer]</a></p>
+</li>
+<li><p>image-image pair: <a href="\code\TensorFlow\queue\image_image_pair\slice_input_producer.py">[slice-input-producer]</a><a href="\code\TensorFlow\queue\image_image_pair\string_input_producer.py">[string-input-producer]</a></p>
+</li>
+</ul>
+</li>
+<li><p>A more elegant way is converting raw data to tfrecord format.</p>
+</li>
+</ol>
+<p><strong>Tips:</strong></p>
+<ol>
+<li><p>setting large number_of_threading (e.g., 10) is helpful.</p>
+</li>
+<li><p>shuffle the training samples to avoid homogenuity when necessary.</p>
+</li>
+<li><p>place the training data in local disk instead of removable disk (consider I/O speed).</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1304,117 +1413,6 @@
 <p>For OpenCV in Anaconda, it sometimes fails in reading from video but succeeds in reading from camera. In this case, <code>/usr/bin/python</code> is recommended. imageio and OpenCV are comparable here.</p>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/Python2/Anaconda/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/programming_language/Python2/Anaconda/" class="post-title-link" itemprop="url">Anaconda</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>python virtual environment: creat an isolated environment for each python version set, similar with pyenv.</p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><p><strong>For Windows:</strong></p>
-<p>Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment.</p>
-<p>Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment.</p>
-<p><strong>For Linux:</strong></p>
-<pre><code>bash Anaconda2-4.3.1-Linux-x86_64.sh
-</code></pre><h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p>list: conda info —envs</p>
-<p>create: <code>conda create --name $newenv python=2.7</code> (if copy, use —clone $oldenv)</p>
-<p>activate: source activate $newenv</p>
-<p>revert: source deactivate</p>
-<p>delete: conda remove —name $newenv —all</p>
-<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>list: conda list</p>
-<p>search: conda search pack</p>
-<p>install new packages:</p>
-<ol>
-<li>conda install pack</li>
-<li>conda install pack=1.8.2 # install certain version</li>
-<li>conda install —name env pack</li>
-<li>search on <a target="_blank" rel="noopener" href="http://anaconda.org/">http://anaconda.org/</a>, no need to register</li>
-<li>pip install pack</li>
-<li>install from local pack</li>
-</ol>
-<p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
 
       
     </div>

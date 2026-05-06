@@ -171,18 +171,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">245</span>
+          <span class="site-state-item-count">246</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">115</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,105 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/image_video_synthesis/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/image_video_synthesis/Few-Shot%20Image%20Generation%20From%20Base%20Categories%20to%20Novel%20Categories/" class="post-title-link" itemprop="url">Few-Shot Image Generation From Base Categories to Novel Categories</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-09 09:57:42" itemprop="dateModified" datetime="2022-04-09T09:57:42+08:00">2022-04-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li><p>Fusion-based method: Generative Matching Network (GMN) <a target="_blank" rel="noopener" href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf">[1]</a> (VAE with matching network for generator and recognizer). MatchingGAN <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2003.03497.pdf">[3]</a> learns reasonable interpolation coefficients. F2GAN <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2008.01999.pdf">[5]</a> first fuses high-level features and then fills in low-level details. </p>
+</li>
+<li><p>Optimization-based method: FIGR <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1901.02199v1.pdf">[2]</a> is based on Reptile. DAWSON <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2001.00576.pdf">[4]</a> is based on MAML. </p>
+</li>
+<li><p>Transformation-based method: DAGAN <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1711.04340.pdf">[6]</a> samples random vectors to generate new images. DeltaGAN <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2009.08753.pdf">[7]</a> learns sample-specific delta. </p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Bartunov, Sergey, and Dmitry Vetrov. “Few-shot generative modelling with generative matching networks.” , 2018.</p>
+<p>[2] Clouâtre, Louis, and Marc Demers. “FIGR: Few-shot ImASTATISage Generation with Reptile.” arXiv preprint arXiv:1901.02199 (2019).</p>
+<p>[3] Yan Hong, Li Niu, Jianfu Zhang, Liqing Zhang, “MatchingGAN: Matching-based Few-shot Image Generation”, ICME, 2020</p>
+<p>[4] Weixin Liang, Zixuan Liu, Can Liu: “DAWSON: A Domain Adaptive Few Shot Generation Framework.” CoRR abs/2001.00576 (2020)</p>
+<p>[5] Yan Hong, Li Niu, Jianfu Zhang, Weijie Zhao, Chen Fu, Liqing Zhang: “F2GAN: Fusing-and-Filling GAN for Few-shot Image Generation.” ACM MM (2020)</p>
+<p>[6] Antreas Antoniou, Amos J. Storkey, Harrison Edwards: “Data Augmentation Generative Adversarial Networks.” stat (2018)</p>
+<p>[7] Yan Hong, Li Niu, Jianfu Zhang, Jing Liang, Liqing Zhang: “DeltaGAN: Towards Diverse Few-shot Image Generation with Sample-Specific Delta.” CoRR abs/2009.08753 (2020)</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1151,99 +1250,6 @@
 </ol>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[1] Ostyakov, Pavel, et al. “SEIGAN: Towards Compositional Image Generation by Simultaneously Learning to Segment, Enhance, and Inpaint.” arXiv preprint arXiv:1811.07630 (2018).</p>
 <p>[2] Remez, Tal, Jonathan Huang, and Matthew Brown. “Learning to segment via cut-and-paste.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/image_video_synthesis/Consistent%20Video%20Editing/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/image_video_synthesis/Consistent%20Video%20Editing/" class="post-title-link" itemprop="url">Consistent Video Editing</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 20:34:50" itemprop="dateModified" datetime="2022-09-20T20:34:50+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li>Template based: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2109.11418.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ye_Deformable_Sprites_for_Unsupervised_Video_Decomposition_CVPR_2022_paper.pdf">[2]</a></li>
-</ul>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
-<li><p>Kasten, Yoni, et al. “Layered neural atlases for consistent video editing.” ACM Transactions on Graphics (TOG) 40.6 (2021): 1-12.</p>
-</li>
-<li><p>Ye, Vickie, et al. “Deformable Sprites for Unsupervised Video Decomposition.” CVPR, 2022.</p>
-</li>
-</ol>
 
       
     </div>

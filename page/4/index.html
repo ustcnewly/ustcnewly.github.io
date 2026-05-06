@@ -171,18 +171,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">245</span>
+          <span class="site-state-item-count">246</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">115</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,117 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/Python2/Anaconda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/programming_language/Python2/Anaconda/" class="post-title-link" itemprop="url">Anaconda</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:26" itemprop="dateModified" datetime="2022-04-08T07:14:26+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>python virtual environment: creat an isolated environment for each python version set, similar with pyenv.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h3><p><strong>For Windows:</strong></p>
+<p>Anaconda navigator is a visualization tool for setting up environment and installing packages under each environment.</p>
+<p>Python IDEs like Jupyter notebook and spyder can all be treated as packages under each environment.</p>
+<p><strong>For Linux:</strong></p>
+<pre><code>bash Anaconda2-4.3.1-Linux-x86_64.sh
+</code></pre><h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p>list: conda info —envs</p>
+<p>create: <code>conda create --name $newenv python=2.7</code> (if copy, use —clone $oldenv)</p>
+<p>activate: source activate $newenv</p>
+<p>revert: source deactivate</p>
+<p>delete: conda remove —name $newenv —all</p>
+<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>list: conda list</p>
+<p>search: conda search pack</p>
+<p>install new packages:</p>
+<ol>
+<li>conda install pack</li>
+<li>conda install pack=1.8.2 # install certain version</li>
+<li>conda install —name env pack</li>
+<li>search on <a target="_blank" rel="noopener" href="http://anaconda.org/">http://anaconda.org/</a>, no need to register</li>
+<li>pip install pack</li>
+<li>install from local pack</li>
+</ol>
+<p><strong>Tips:</strong> check available pythons: conda search —full-name python</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1212,112 +1323,6 @@ c) set the event attribute for certain elements:   <figure class="highlight java
 <ol>
 <li>x64 and x86 conflicts: Linker-&gt;advanced-&gt;target machine</li>
 <li>build-&gt;configuration manager</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/programming_language/C++/boost/Boost_file_system/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/programming_language/C++/boost/Boost_file_system/" class="post-title-link" itemprop="url">Boost_file_system</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/programming-language/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt; boost/filesystem.hpp&gt;</span>  </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::filesystem; </span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>file name operation    </p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Note the difference between /= and +=, /= means appending directory， += means string concatenation </span></span><br><span class="line"><span class="function">path <span class="title">dir</span><span class="params">(<span class="string">&quot;C:\\Windows&quot;</span>)</span></span>;</span><br><span class="line">dir /= <span class="string">&quot;System32&quot;</span>;       </span><br><span class="line">dir /= <span class="string">&quot;services.exe&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; dir.<span class="built_in">string</span>() &lt;&lt; std::endl;           </span><br><span class="line">std::cout &lt;&lt; dir.<span class="built_in">parent_path</span>()&lt;&lt; std::endl;        /C:\Windows\System32</span><br><span class="line">std::cout &lt;&lt; dir.<span class="built_in">filename</span>()&lt;&lt; std::endl;           /services.exe</span><br><span class="line">std::cout &lt;&lt; dir.<span class="built_in">stem</span>()&lt;&lt; std::endl;               <span class="comment">//services</span></span><br><span class="line">std::cout &lt;&lt; dir.<span class="built_in">extension</span>()&lt;&lt; std::endl;          <span class="comment">//.exe </span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>file operation: rename, remove, copy</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exists</span>(path);                               </span><br><span class="line"><span class="built_in">is_directory</span>(path); </span><br><span class="line"><span class="built_in">is_regular_file</span>(path);                    </span><br><span class="line">                                          </span><br><span class="line"><span class="built_in">remove_all</span>(<span class="type">const</span> Path&amp; p);  <span class="comment">//remove all files recursively                                                              </span></span><br><span class="line"><span class="built_in">rename</span>(<span class="type">const</span> Path1&amp; from_p, <span class="type">const</span> Path2&amp; to_p);                        </span><br><span class="line"><span class="built_in">copy_file</span>(<span class="type">const</span> Path1&amp; from_fp, <span class="type">const</span> Path2&amp; to_fp);                    </span><br><span class="line"><span class="built_in">create_directory</span>(<span class="type">const</span> Path &amp; p);</span><br><span class="line"><span class="built_in">create_directories</span>(<span class="type">const</span> Path &amp; p); <span class="comment">//make directory recursively&lt;/pre&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shallow visit directory</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">&quot;c:\\Windows\\System32&quot;</span>)</span></span>;</span><br><span class="line">directory_iterator end;</span><br><span class="line"><span class="keyword">for</span> (directory_iterator <span class="built_in">pos</span>(dir2); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">	std::cout &lt;&lt; *pos &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>deep visit directory: like DFS, stack push&amp;&amp;pop</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> recursive_directory_iterator rd_iterator;</span><br><span class="line"><span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">&quot;E:\\Student&quot;</span>)</span></span>;</span><br><span class="line">rd_iterator end;</span><br><span class="line"><span class="keyword">for</span> (rd_iterator <span class="built_in">pos</span>(dir); pos != end; pos++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">is_directory</span>(*pos) &amp;&amp; pos.<span class="built_in">level</span>() &gt; <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.<span class="built_in">no_push</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (*pos == <span class="string">&quot;nofind.txt&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pos.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt; pos-&gt;<span class="built_in">path</span>().<span class="built_in">filename</span>().<span class="built_in">string</span>()&lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>catch error</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">path <span class="title">dir2</span><span class="params">(<span class="string">&quot;c:\\Windows\\System32&quot;</span>)</span></span>;</span><br><span class="line">    <span class="built_in">assert</span>(<span class="built_in">is_directory</span>(dir2));          </span><br><span class="line">    <span class="built_in">assert</span>(<span class="built_in">exists</span>(dir2));          </span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span>(filesystem_error&amp; e)</span><br><span class="line">&#123;</span><br><span class="line">    std::cout &lt;&lt; e.<span class="built_in">path1</span>() &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; e.<span class="built_in">what</span>() &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
 </ol>
 
       
