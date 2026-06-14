@@ -171,7 +171,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">246</span>
+          <span class="site-state-item-count">247</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -199,6 +199,187 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Domain%20Adaptation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/deep_learning/Domain%20Adaptation/" class="post-title-link" itemprop="url">Domain Adaptation</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 07:14:22" itemprop="dateModified" datetime="2022-04-08T07:14:22+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>Methods</strong></p>
+<ol>
+<li><p>learn projection matrix: F(PXs, QXt)</p>
+<ul>
+<li>project to common subspace<ul>
+<li>TCA <a target="_blank" rel="noopener" href="http://www.aaai.org/ocs/index.php/IJCAI/IJCAI-09/paper/download/294/962">[pdf]</a></li>
+<li>SA <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Fernando_Unsupervised_Visual_Domain_2013_ICCV_paper.pdf">[pdf]</a></li>
+<li>LSSA: extension of SA <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Aljundi_Landmarks-Based_Kernelized_Subspace_2015_CVPR_paper.pdf">[pdf]</a></li>
+<li>DIP <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Baktashmotlagh_Unsupervised_Domain_Adaptation_2013_ICCV_paper.pdf">[pdf]</a></li>
+<li>CORAL <a target="_blank" rel="noopener" href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12443/11842">[pdf]</a></li>
+<li>deep CORAL <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1607.01719.pdf">[pdf]</a></li>
+<li>other deep feature-based methods <a target="_blank" rel="noopener" href="http://proceedings.mlr.press/v37/long15.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1409.7495.pdf">[2]</a></li>
+</ul>
+</li>
+<li>interpolation on the manifold<ul>
+<li>SGF <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.300.3323&amp;rep=rep1&amp;type=pdf">[pdf]</a></li>
+<li>GFK <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.373.2677&amp;rep=rep1&amp;type=pdf">[pdf]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>sample selection: learn sample weights</p>
+<ul>
+<li>KMM <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/3075-correcting-sample-selection-bias-by-unlabeled-data.pdf">[pdf]</a></li>
+<li>STM <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chu_Selective_Transfer_Machine_2013_CVPR_paper.pdf">[pdf]</a></li>
+<li>DASVM <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4803844">[pdf]</a></li>
+<li>weighted adversarial network <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Importance_Weighted_Adversarial_CVPR_2018_paper.pdf">[1]</a><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1224.pdf">[2]</a></li>
+</ul>
+</li>
+<li><p>domain-invariant and domain-specific components</p>
+<ul>
+<li>SDDL <a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shekhar_Generalized_Domain-Adaptive_Dictionaries_2013_CVPR_paper.pdf">[pdf]</a></li>
+<li>Domain Separation Network <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/6254-domain-separation-networks.pdf">[pdf]</a></li>
+<li>low-rank DL <a target="_blank" rel="noopener" href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8053784">[pdf]</a></li>
+</ul>
+</li>
+<li><p>low-rank reconstruction</p>
+<ul>
+<li>LTSL <a target="_blank" rel="noopener" href="https://search.proquest.com/docview/1531888211?pq-origsite=gscholar">[pdf]</a></li>
+<li>RDALR <a target="_blank" rel="noopener" href="http://www.ee.columbia.edu/ln/dvmm/publications/12/DomainAdaptation.pdf">[pdf]</a></li>
+</ul>
+</li>
+<li><p>pixel-level image to image translation</p>
+<ul>
+<li>paired input: conditional GAN <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf">[pdf]</a></li>
+<li>unpaired input: cycling GAN <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1703.10593.pdf">[pdf]</a>, GAN with content-similarity loss <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1612.05424.pdf">[pdf]</a>, UNIT <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/6672-unsupervised-image-to-image-translation-networks.pdf">[pdf]</a></li>
+<li>combine with feature-based method: GraspGAN <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1709.07857.pdf">[pdf]</a></li>
+<li>A unified framework <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Murez_Image_to_Image_CVPR_2018_paper.pdf">[pdf]</a></li>
+</ul>
+</li>
+<li><p>adversarial network <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tzeng_Adversarial_Discriminative_Domain_CVPR_2017_paper.pdf">[1]</a>: classification and domain confusion. The domain separation and confusion problem, which is a min-max problem, can be solved like GAN or using <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1409.7495.pdf">reverse gradient (RevGrad) algorithm</a>.  </p>
+</li>
+<li><p>meta-learning</p>
+<ul>
+<li>gradients on two domains should be consistent <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1710.03463.pdf">[pdf]</a></li>
+</ul>
+</li>
+<li><p>domain alignment layer (batch normalization): <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Carlucci_AutoDIAL_Automatic_DomaIn_ICCV_2017_paper.pdf">[1]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1603.04779">[2]</a></p>
+</li>
+<li><p>guided learning: tutor guides students and get feedback from students. <a target="_blank" rel="noopener" href="http://www.leizhang.tk/publications%20and%20codes.html">ACM-MM18 paper</a></p>
+</li>
+<li><p>ensemble transfer learning: aggregate multiple transfer learning approaches <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1708.05629.pdf">[1]</a></p>
+</li>
+</ol>
+<p><strong>Settings</strong></p>
+<ol>
+<li><p>open-set domain adaptation or partial transfer learning: <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Busto_Open_Set_Domain_ICCV_2017_paper.pdf">[1]</a><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_Partial_Transfer_Learning_CVPR_2018_paper.pdf">[2]</a><a target="_blank" rel="noopener" href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Tzeng_Simultaneous_Deep_Transfer_ICCV_2015_paper.pdf">[3]</a></p>
+</li>
+<li><p>distant domain adaptation (two domains are too distant, so the transfer between them relies on transition domains): <a target="_blank" rel="noopener" href="https://dl.acm.org/ft_gateway.cfm?id=2783295&amp;ftid=1613048&amp;dwn=1&amp;CFID=49856439&amp;CFTOKEN=825d8eea3c707e8-BF658D58-A3BB-2ACB-19DC13C6B3291336">Transitive transfer learning</a>, <a target="_blank" rel="noopener" href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14446/14451">distant domain transfer learning</a>  </p>
+</li>
+<li><p>open compound domain adaptation <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1909.03403.pdf">[1]</a></p>
+</li>
+</ol>
+<p><strong>Domain adaptation for diverse applications</strong></p>
+<ol>
+<li><p>pose estimation <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8245864">[1]</a></p>
+</li>
+<li><p>person re-identification <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7018030">[1]</a></p>
+</li>
+<li><p>objection detection <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Domain_Adaptive_Faster_CVPR_2018_paper.pdf">[1]</a></p>
+</li>
+<li><p>segmentation <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Curriculum_Domain_Adaptation_ICCV_2017_paper.pdf">[1]</a></p>
+</li>
+<li><p>VQA <a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chao_Cross-Dataset_Adaptation_for_CVPR_2018_paper.pdf">[1]</a></p>
+</li>
+</ol>
+<p><strong>Domain difference metric</strong>: To measure data distribution mismatch, the most commonly used metric is MMD and its extensions such as <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1405.2664.pdf">fast MMD</a>, conditional MMD <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1606.04218.pdf">[1]</a><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1503.00591.pdf">[2]</a> and <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1605.06636.pdf">joint MMD</a>. There are also some other metrics like KL divergence, HSIC criterion, Bregman divergence, manifold criterion, and second-order statistic.</p>
+<p><strong>Theories</strong>: <a target="_blank" rel="noopener" href="http://bcmi.sjtu.edu.cn/home/niuli/download/Transfer_Learning_Theories_and_Algorithms.pdf">A summary of related theories</a></p>
+<p><strong>Survey</strong>: </p>
+<ol>
+<li>An old survey of transfer learning <a target="_blank" rel="noopener" href="http://www.cs.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf">[pdf]</a></li>
+<li>Recent advance on domain adaptation <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7078994">[pdf]</a></li>
+<li>My survey of old deep learning domain adaptation methods <a target="_blank" rel="noopener" href="http://bcmi.sjtu.edu.cn/home/niuli/download/deep_learning_for_domain_adaptation.pdf">[pdf]</a></li>
+<li>A Chinese version of transfer learning tutorial <a target="_blank" rel="noopener" href="http://jd92.wang/assets/files/transfer_learning_tutorial_wjd.pdf">[pdf]</a></li>
+<li>Datasets and code: <a target="_blank" rel="noopener" href="https://github.com/jindongwang/transferlearning">[1]</a></li>
+<li>A Comprehensive Survey on Transfer Learning <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1911.02685.pdf">[pdf]</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1102,100 +1283,6 @@
 <li>The performance difference using or without using this sample</li>
 </ul>
 <p>c) learn the weights of training samples: train with weighted loss and test on the validation test </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Color%20Mapping/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/deep_learning/Color%20Mapping/" class="post-title-link" itemprop="url">Color Mapping</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-09 08:53:15" itemprop="dateModified" datetime="2022-09-09T08:53:15+08:00">2022-09-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="Global-color-mapping"><a href="#Global-color-mapping" class="headerlink" title="Global color mapping:"></a>Global color mapping:</h4><ul>
-<li>3D LUT: <a target="_blank" rel="noopener" href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf">[1]</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2204.13983.pdf">[2]</a> non-uniform LUT</li>
-<li>curve function: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2109.05750.pdf">[1]</a></li>
-<li>linear transformation: <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf">[1]</a></li>
-</ul>
-<h4 id="Local-color-mapping"><a href="#Local-color-mapping" class="headerlink" title="Local color mapping:"></a>Local color mapping:</h4><ul>
-<li>3D LUT: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2108.08697.pdf">[1]</a></li>
-<li>curve function: <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Song_StarEnhancer_Learning_Real-Time_and_Style-Aware_Image_Enhancement_ICCV_2021_paper.pdf">[1]</a>, DCE<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2001.06826.pdf">[2]</a></li>
-<li>linear transformation: HDRNet<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1707.02880">[1]</a></li>
-</ul>
 
       
     </div>
