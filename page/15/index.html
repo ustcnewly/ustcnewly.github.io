@@ -171,7 +171,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">247</span>
+          <span class="site-state-item-count">249</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -182,7 +182,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">117</span>
+        <span class="site-state-item-count">119</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -199,6 +199,200 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/image_video_synthesis/Diffusion%20Model%20for%20Sketches/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/image_video_synthesis/Diffusion%20Model%20for%20Sketches/" class="post-title-link" itemprop="url">Diffusion Model for Sketches</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-10-23 16:24:42" itemprop="dateModified" datetime="2023-10-23T16:24:42+08:00">2023-10-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="text-to-sketch"><a href="#text-to-sketch" class="headerlink" title="text-to-sketch"></a>text-to-sketch</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2306.14685.pdf">[1]</a>[SVG]: a) use text-to-image model to generate an image. Align image and sketch through CLIP. b) Align text and sketch through diffusion model.  </li>
+<li><a target="_blank" rel="noopener" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/21f76686538a5f06dc431efea5f475f5-Paper-Conference.pdf">[2]</a>[SVG]: a) Align text and sketch through CLIP</li>
+<li><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Jain_VectorFusion_Text-to-SVG_by_Abstracting_Pixel-Based_Diffusion_Models_CVPR_2023_paper.pdf">[3]</a>[SVG]: a) Align text and sketch through diffusion model</li>
+</ul>
+<h2 id="image-to-sketch"><a href="#image-to-sketch" class="headerlink" title="image-to-sketch"></a>image-to-sketch</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Vinker_CLIPascene_Scene_Sketching_with_Different_Types_and_Levels_of_Abstraction_ICCV_2023_paper.pdf">[4]</a>[SVG]: Align image and sketch. Use MLP to predict offsets from initial points. </li>
+<li><a target="_blank" rel="noopener" href="https://dl.acm.org/doi/pdf/10.1145/3528223.3530068">[5]</a>[SVG]:  Align image and sketch. Use saliency for initialization. </li>
+</ul>
+<p>SVG:  Scalable Vector Graphics<br>SDS: score distillation sampling </p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Xing, Ximing, et al. “DiffSketcher: Text Guided Vector Sketch Synthesis through Latent Diffusion Models.” arXiv preprint arXiv:2306.14685 (2023).</p>
+<p>[2] Frans, Kevin, Lisa Soros, and Olaf Witkowski. “Clipdraw: Exploring text-to-drawing synthesis through language-image encoders.” Advances in Neural Information Processing Systems 35 (2022): 5207-5218.</p>
+<p>[3] Jain, Ajay, Amber Xie, and Pieter Abbeel. “Vectorfusion: Text-to-svg by abstracting pixel-based diffusion models.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.</p>
+<p>[4] Vinker, Yael, et al. “Clipascene: Scene sketching with different types and levels of abstraction.” Proceedings of the IEEE/CVF International Conference on Computer Vision. 2023.</p>
+<p>[5] Vinker, Yael, et al. “Clipasso: Semantically-aware object sketching.” ACM Transactions on Graphics (TOG) 41.4 (2022): 1-11.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/image_video_synthesis/Diffusion%20Model%20Acceleration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li Niu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Newly Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/03/17/image_video_synthesis/Diffusion%20Model%20Acceleration/" class="post-title-link" itemprop="url">Diffusion Model Acceleration</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-21 10:17:57" itemprop="dateModified" datetime="2023-12-21T10:17:57+08:00">2023-12-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Simplify model architecture: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2306.00980.pdf">[3]</a></p>
+<p>Reduce sampling times: DDIM <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.02502.pdf">[1]</a>, PLMS <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2202.09778.pdf">[2]</a></p>
+<p>Step distillation: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2306.00980.pdf">[3]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2202.00512.pdf">[4]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2101.02388.pdf">[5]</a> <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2210.03142.pdf">[6]</a></p>
+<p>Adversarial distillation: <a target="_blank" rel="noopener" href="https://static1.squarespace.com/static/6213c340453c3f502425776e/t/65663480a92fba51d0e1023f/1701197769659/adversarial_diffusion_distillation.pdf">[7]</a></p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] Song, Jiaming, Chenlin Meng, and Stefano Ermon. “Denoising diffusion implicit models.” arXiv preprint arXiv:2010.02502 (2020).</p>
+<p>[2] Liu, Luping, et al. “Pseudo numerical methods for diffusion models on manifolds.” ICLR, (2022).</p>
+<p>[3] Li, Yanyu, et al. “SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds.” NeurIPS(2023).</p>
+<p>[4] Salimans, Tim, and Jonathan Ho. “Progressive distillation for fast sampling of diffusion models.” ICLR, 2022. </p>
+<p>[5] Luhman, Eric, and Troy Luhman. “Knowledge distillation in iterative generative models for improved sampling speed.” arXiv preprint arXiv:2101.02388 (2021).</p>
+<p>[6] Meng, Chenlin, et al. “On distillation of guided diffusion models.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.</p>
+<p>[7] <a target="_blank" rel="noopener" href="https://stability.ai/research/adversarial-diffusion-distillation">https://stability.ai/research/adversarial-diffusion-distillation</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -866,7 +1060,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-06-29 18:37:58" itemprop="dateModified" datetime="2026-06-29T18:37:58+08:00">2026-06-29</time>
+      <time title="Modified: 2026-08-02 11:25:32" itemprop="dateModified" datetime="2026-08-02T11:25:32+08:00">2026-08-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -901,6 +1095,7 @@
 <h3 id="Extra-Guidance"><a href="#Extra-Guidance" class="headerlink" title="Extra Guidance"></a>Extra Guidance</h3><p>[1] Xie, Rui, et al. “GUIDE: Resolving Domain Bias in GUI Agents through Real-Time Web Video Retrieval and Plug-and-Play Annotation.” arXiv preprint arXiv:2603.26266 (2026). <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2603.26266">[pdf]</a> <a target="_blank" rel="noopener" href="https://github.com/sharryXR/GUIDE">[code]</a></p>
 <p>[2] Liu, Jingjing, et al. “DocOS: Towards Proactive Document-Guided Actions in GUI Agents.” ICML, 2026. <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2605.18048">[pdf]</a> <a target="_blank" rel="noopener" href="https://github.com/BUAA-IRIP-LLM/DocOS">[code]</a></p>
 <p>[3] Einsia. “Scalable Behaviour Cloning on Browser Using via Skill Distillation.” <a target="_blank" rel="noopener" href="https://lab.einsia.ai/browserbc/assets/paper.pdf">[pdf]</a> <a target="_blank" rel="noopener" href="https://github.com/Einsia/Browser-BC">[code]</a></p>
+<p>[4] Zhao, Zirui, et al. “GPA: Learning GUI Process Automation from Demonstrations.” arXiv preprint arXiv:2604.01676 (2026). <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2604.01676">[pdf]</a></p>
 <h3 id="New-Domain"><a href="#New-Domain" class="headerlink" title="New Domain"></a>New Domain</h3><p>[1] Li, Yang, et al. “Gui-ceval: A hierarchical and comprehensive chinese benchmark for mobile gui agents.” CVPR, 2026. <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Li_GUI-CEval_A_Hierarchical_and_Comprehensive_Chinese_Benchmark_for_Mobile_GUI_CVPR_2026_paper.pdf">[pdf]</a></p>
 <p>[2] Chen, Yuxi, et al. “CAPTCHA Solving for Native GUI Agents: Automated Reasoning-Action Data Generation and Self-Corrective Training.” ICML, 2026. <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2603.23559">[pdf]</a> <a target="_blank" rel="noopener" href="https://github.com/ASTRAL-Group/ReCAP-Agent">[code]</a></p>
 <p>[3] Liu, Ziwei, et al. “Continual GUI Agents.” ICML, 2026. <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2601.20732">[pdf]</a> <a target="_blank" rel="noopener" href="https://github.com/xavierliu34/GUI-AiF">[code]</a></p>
@@ -1018,211 +1213,6 @@
 <p>[2] Zheng, Heliang, et al. “Learning multi-attention convolutional neural network for fine-grained image recognition.” ICCV, 2017.</p>
 <p>[3] Recasens, Adria, et al. “Learning to zoom: a saliency-based sampling layer for neural networks.” ECCV, 2018.</p>
 <p>[4] Zheng, Heliang, et al. “Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-grained Image Recognition.” arXiv preprint arXiv:1903.06150 (2019).</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Word%20Vector/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/deep_learning/Word%20Vector/" class="post-title-link" itemprop="url">Word Vector</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:24" itemprop="dateModified" datetime="2022-04-08T07:14:24+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Survey"><a href="#Survey" class="headerlink" title="Survey"></a>Survey</h2><p>For a brief survey summarizing <a target="_blank" rel="noopener" href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">skip-gram</a>, <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1301.3781.pdf?">CBOW</a>, <a target="_blank" rel="noopener" href="http://www.aclweb.org/anthology/D14-1162">GloVe</a>, etc, please refer to <a target="_blank" rel="noopener" href="http://bcmi.sjtu.edu.cn/home/niuli/download/word_vector_survey.pdf">this</a>.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>word2vec: <a target="_blank" rel="noopener" href="https://github.com/tensorflow/models/tree/master/tutorials/embedding">TensorFlow</a></p>
-<p>GloVe: <a target="_blank" rel="noopener" href="https://github.com/stanfordnlp/GloVe">C</a>, <a target="_blank" rel="noopener" href="https://github.com/shashankg7/glove-tensorflow">TensorFlow</a></p>
-<h2 id="WikiCorpus"><a href="#WikiCorpus" class="headerlink" title="WikiCorpus"></a>WikiCorpus</h2><p>Download the <a target="_blank" rel="noopener" href="https://dumps.wikimedia.org/enwiki/">WikiCorpus</a> and use the <a href="\code\shellscript\get-wikimedia.sh">shellscript</a> to process (e.g., remove numbers, invalide chars, urls), leading to sequence of pure words.</p>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li>English word vectors: <a target="_blank" rel="noopener" href="https://github.com/3Top/word2vec-api">https://github.com/3Top/word2vec-api</a></li>
-<li>Non-English word vectors: <a target="_blank" rel="noopener" href="https://github.com/Kyubyong/wordvectors">https://github.com/Kyubyong/wordvectors</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/17/deep_learning/Visual%20Object%20Tracking/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Li Niu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Newly Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/03/17/deep_learning/Visual%20Object%20Tracking/" class="post-title-link" itemprop="url">Visual Object Tracking</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-03-17 11:25:43" itemprop="dateCreated datePublished" datetime="2026-03-17T11:25:43+08:00">2026-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-08 07:14:22" itemprop="dateModified" datetime="2022-04-08T07:14:22+08:00">2022-04-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/paper-note/" itemprop="url" rel="index"><span itemprop="name">paper note</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Tracking is challenging due to the following factors: deformation, illumination variation, blur&amp;fast motion, background clutter, rotation, scale, boundary effect</p>
-<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><p>Tracking methods can be roughly categorized into generative methods and discriminative methods(feature+machine learning). Recently, correlation filter based methods and deep learning methods are dominant. </p>
-<ul>
-<li>Meanshift: density based, ASMS <a target="_blank" rel="noopener" href="https://github.com/vojirt/asms">https://github.com/vojirt/asms</a></li>
-<li>Particle filter: particle based statistical method</li>
-<li>Optical flow: match feature points between neighboring frames</li>
-<li>correlation filter: KCF, DCF, CSK, CN, DSST, SRDCF, ECO. Basic CF methods are sensitive to deformation, fast motion, and boundary effect.</li>
-<li>deep learning: GOTURN, MDNet, TCNN, SiamFC</li>
-</ul>
-<p>Two research groups contribute to CF methods most:</p>
-<ul>
-<li>Oxford: <a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~luca/">https://www.robots.ox.ac.uk/~luca/</a>, </li>
-<li>Linkoping: <a target="_blank" rel="noopener" href="http://users.isy.liu.se/en/cvl/marda26/">http://users.isy.liu.se/en/cvl/marda26/</a></li>
-</ul>
-<p><strong>Comparison of Speed and Performance</strong><br><img src="http://bcmi.sjtu.edu.cn/~niuli/github_images/LsTWGvk.jpg" alt=""></p>
-<h3 id="Survey-papers"><a href="#Survey-papers" class="headerlink" title="Survey papers"></a>Survey papers</h3><ul>
-<li>Object tracking: A survey, 2006</li>
-<li>Object tracking benchmark, 2015</li>
-</ul>
-<h3 id="Benchmark"><a href="#Benchmark" class="headerlink" title="Benchmark"></a>Benchmark</h3><ul>
-<li>OTB50/100: <a target="_blank" rel="noopener" href="http://cvlab.hanyang.ac.kr/tracker_benchmark/">http://cvlab.hanyang.ac.kr/tracker_benchmark/</a></li>
-<li>VOT2016: <a target="_blank" rel="noopener" href="http://www.votchallenge.net/vot2016/dataset.html">http://www.votchallenge.net/vot2016/dataset.html</a> </li>
-</ul>
-<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><ul>
-<li>Visual Object Tracking (VOT) challenge:<br><a target="_blank" rel="noopener" href="http://www.votchallenge.net/challenges.html">http://www.votchallenge.net/challenges.html</a><br>VOT2016 has released the code of many trackers: <a target="_blank" rel="noopener" href="http://votchallenge.net/vot2016/trackers.html">http://votchallenge.net/vot2016/trackers.html</a></li>
-<li>Multiple Object Tracking Challenge (MOT) challenge:<br><a target="_blank" rel="noopener" href="https://motchallenge.net/">https://motchallenge.net/</a></li>
-</ul>
-<h3 id="Detection-based-Tracking"><a href="#Detection-based-Tracking" class="headerlink" title="Detection based Tracking"></a>Detection based Tracking</h3><p>Detection based tracking is also named as  tracking by detection or multiple object tracking. (MOT Challenge)</p>
-<p>TLD (tracking-learning-detection): update tracker and detector during learning<br><a target="_blank" rel="noopener" href="http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html">http://personal.ee.surrey.ac.uk/Personal/Z.Kalal/tld.html</a></p>
 
       
     </div>
